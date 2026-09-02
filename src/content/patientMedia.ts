@@ -12,23 +12,23 @@
 
 /** Genel galeri havuzu — tüm fotoğraflar (Hasta Deneyimleri sayfası). */
 export const patientPhotos: string[] = [
-  '/patients/IMG_9562.jpg',
-  '/patients/IMG_9544.jpg',
-  '/patients/IMG_9376.jpg',
-  '/patients/IMG_9360.jpg',
-  '/patients/IMG_9352.jpg',
-  '/patients/IMG_9349.jpg',
-  '/patients/IMG_9222.jpg',
-  '/patients/IMG_8423.jpg',
-  '/patients/IMG_8257.jpg',
-  '/patients/IMG_7293.jpg',
-  '/patients/IMG_7009.jpg',
-  '/patients/IMG_6753.jpg',
-  '/patients/IMG_3324.jpg',
-  '/patients/IMG_1884.jpg',
-  '/patients/IMG_1207.jpg',
-  '/patients/patient-fc98.jpg',
-  '/patients/patient-untitled.png'
+  '/patients/robotik-prostatektomi-hasta-1.jpg',
+  '/patients/robotik-prostatektomi-hasta-2.jpg',
+  '/patients/robotik-prostatektomi-hasta-3.jpg',
+  '/patients/bobrek-tasi-hasta-1.jpg',
+  '/patients/bobrek-tasi-hasta-2.jpg',
+  '/patients/bobrek-tasi-hasta-3.jpg',
+  '/patients/bph-prostat-tedavisi-hasta-1.jpg',
+  '/patients/bph-prostat-tedavisi-hasta-2.jpg',
+  '/patients/bph-prostat-tedavisi-hasta-3.jpg',
+  '/patients/uroonkoloji-hasta-1.jpg',
+  '/patients/uroonkoloji-hasta-2.jpg',
+  '/patients/uroonkoloji-hasta-3.jpg',
+  '/patients/kadin-urolojisi-hasta-1.jpg',
+  '/patients/kadin-urolojisi-hasta-2.jpg',
+  '/patients/kadin-urolojisi-hasta-3.jpg',
+  '/patients/meurology-mutlu-hasta-1.jpg',
+  '/patients/meurology-klinik-1.jpg'
 ];
 
 // Fotoğraf gösterilebilen tedaviler (androloji + rekonstrüktif HARİÇ).
@@ -42,11 +42,11 @@ const PHOTO_ELIGIBLE = new Set([
 
 // Her uygun tedaviye ayrı 3 fotoğraf (aynı görsel genel galeride de bulunur).
 const PER_TREATMENT: Record<string, string[]> = {
-  'robotik-prostatektomi': ['/patients/IMG_9562.jpg', '/patients/IMG_9544.jpg', '/patients/IMG_9376.jpg'],
-  'bobrek-tasi': ['/patients/IMG_9360.jpg', '/patients/IMG_9352.jpg', '/patients/IMG_9349.jpg'],
-  'bph-prostat-buyumesi': ['/patients/IMG_9222.jpg', '/patients/IMG_8423.jpg', '/patients/IMG_8257.jpg'],
-  uroonkoloji: ['/patients/IMG_7293.jpg', '/patients/IMG_7009.jpg', '/patients/IMG_6753.jpg'],
-  'kadin-urolojisi': ['/patients/IMG_3324.jpg', '/patients/IMG_1884.jpg', '/patients/IMG_1207.jpg']
+  'robotik-prostatektomi': ['/patients/robotik-prostatektomi-hasta-1.jpg', '/patients/robotik-prostatektomi-hasta-2.jpg', '/patients/robotik-prostatektomi-hasta-3.jpg'],
+  'bobrek-tasi': ['/patients/bobrek-tasi-hasta-1.jpg', '/patients/bobrek-tasi-hasta-2.jpg', '/patients/bobrek-tasi-hasta-3.jpg'],
+  'bph-prostat-buyumesi': ['/patients/bph-prostat-tedavisi-hasta-1.jpg', '/patients/bph-prostat-tedavisi-hasta-2.jpg', '/patients/bph-prostat-tedavisi-hasta-3.jpg'],
+  uroonkoloji: ['/patients/uroonkoloji-hasta-1.jpg', '/patients/uroonkoloji-hasta-2.jpg', '/patients/uroonkoloji-hasta-3.jpg'],
+  'kadin-urolojisi': ['/patients/kadin-urolojisi-hasta-1.jpg', '/patients/kadin-urolojisi-hasta-2.jpg', '/patients/kadin-urolojisi-hasta-3.jpg']
 };
 
 /**
