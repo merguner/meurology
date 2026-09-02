@@ -54,7 +54,54 @@ function esc(v: unknown): string {
     .replace(/"/g, '&quot;');
 }
 
+/**
+ * BASİT IP BAZLI HIZ SINIRLAMA (sabit pencere).
+ * Honeypot'u aşan spam/flood trafiğini de azaltır.
+ * NOT: Bellek-içi (Map) — tek sunucu süreci için çalışır. Vercel/serverless veya
+ * çok örnekli dağıtımda örnekler arası paylaşılmaz; o durumda Upstash Redis vb.
+ * merkezî bir depo gerekir (aşağıdaki mantığı oraya taşıyın).
+ */
+const RATE_LIMIT_MAX = 5; // pencere başına izinli istek
+const RATE_LIMIT_WINDOW_MS = 60_000; // 1 dakika
+const rateHits = new Map<string, { count: number; resetAt: number }>();
+
+function checkRateLimit(ip: string): { ok: boolean; retryAfter: number } {
+  const now = Date.now();
+  // Sızıntıyı önlemek için ara sıra süresi geçmiş kayıtları temizle.
+  if (rateHits.size > 5000) {
+    for (const [k, v] of rateHits) if (now > v.resetAt) rateHits.delete(k);
+  }
+  const entry = rateHits.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateHits.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return { ok: true, retryAfter: 0 };
+  }
+  if (entry.count >= RATE_LIMIT_MAX) {
+    return { ok: false, retryAfter: Math.ceil((entry.resetAt - now) / 1000) };
+  }
+  entry.count++;
+  return { ok: true, retryAfter: 0 };
+}
+
+/** İstemci IP'sini proxy başlıklarından çıkarır (yoksa 'unknown'). */
+function clientIp(request: Request): string {
+  const xff = request.headers.get('x-forwarded-for');
+  if (xff) return xff.split(',')[0].trim();
+  return request.headers.get('x-real-ip') || 'unknown';
+}
+
 export async function POST(request: Request) {
+  // Hız sınırı — ağır işlemden ve gövde ayrıştırmadan ÖNCE, ucuzca reddet.
+  const ip = clientIp(request);
+  const rl = checkRateLimit(ip);
+  if (!rl.ok) {
+    console.warn(`[on-degerlendirme] hız sınırı aşıldı — IP: ${ip}, ${rl.retryAfter}s sonra tekrar`);
+    return NextResponse.json(
+      { ok: false, error: 'rate_limited' },
+      { status: 429, headers: { 'Retry-After': String(rl.retryAfter) } }
+    );
+  }
+
   let data: Partial<PreAssessmentPayload>;
   try {
     data = await request.json();

@@ -82,7 +82,10 @@ export async function SiteFooter() {
           <h3 className="text-sm font-semibold text-fg">{t('quickLinks')}</h3>
           <ul className="mt-3 space-y-2">
             <li>
-              <Link href="/ozel-danismanlik" className="text-sm font-medium text-accent transition-colors hover:text-accent/80">
+              <Link
+                href="/ozel-danismanlik"
+                className="text-sm font-semibold text-[rgb(var(--c-accent-ink))] transition-opacity hover:opacity-80"
+              >
                 {consult.navLabel}
               </Link>
             </li>

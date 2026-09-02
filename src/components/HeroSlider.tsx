@@ -72,6 +72,8 @@ export function HeroSlider() {
           const c = slide.i18n[locale] ?? slide.i18n.tr!;
           const active = i === index;
           const href = slide.cta.type === 'whatsapp' ? whatsappLink(c.title) : slide.cta.href ?? '/';
+          // SEO: sayfada tek <h1> — yalnızca ilk slide h1, diğerleri h2 (görsel olarak aynı).
+          const Heading = i === 0 ? 'h1' : 'h2';
           return (
             <div
               key={slide.id}
@@ -100,9 +102,9 @@ export function HeroSlider() {
               ) : null}
 
               <div className="container-content relative flex min-h-[460px] flex-col justify-center py-16 md:min-h-[540px] md:py-24">
-                <h1 className="max-w-3xl text-3xl font-bold leading-[1.22] md:text-5xl md:leading-[1.18]">
+                <Heading className="max-w-3xl text-3xl font-bold leading-[1.22] md:text-5xl md:leading-[1.18]">
                   {c.title}
-                </h1>
+                </Heading>
                 <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">{c.subtitle}</p>
                 <div className="mt-8">
                   {slide.cta.type === 'whatsapp' ? (
@@ -111,7 +113,7 @@ export function HeroSlider() {
                       target="_blank"
                       rel="noopener noreferrer"
                       tabIndex={active ? 0 : -1}
-                      className="btn bg-[#25D366] text-white hover:bg-[#1ebe5b]"
+                      className="btn bg-[#25D366] text-[#062b14] hover:bg-[#1fb457]"
                     >
                       <Icon name="whatsapp" size={20} />
                       {c.ctaLabel}

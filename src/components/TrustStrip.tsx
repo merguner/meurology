@@ -31,20 +31,20 @@ export async function TrustStrip({ locale }: { locale: Locale }) {
     <section className="border-b border-border bg-surface">
       <div className="container-content grid gap-8 py-8 lg:grid-cols-[auto,1fr] lg:items-center lg:gap-12">
         {/* İstatistikler */}
+        {/* dl > div > (dt, dd) — geçerli tanım listesi yapısı (axe definition-list).
+            flex-col-reverse ile sayı görsel olarak üstte, etiket altta durur. */}
         <dl className="flex gap-8 sm:gap-10">
-          <div>
-            <dt className="sr-only">{ts('totalLabel')}</dt>
+          <div className="flex flex-col-reverse">
+            <dt className="mt-1 text-xs font-medium text-muted">{ts('totalLabel')}</dt>
             <dd className="font-mono text-3xl font-bold text-primary md:text-4xl">
               {fmt.format(TOTAL_PROCEDURES)}+
             </dd>
-            <p className="mt-1 text-xs font-medium text-muted">{ts('totalLabel')}</p>
           </div>
-          <div>
-            <dt className="sr-only">{ts('yearsLabel')}</dt>
+          <div className="flex flex-col-reverse">
+            <dt className="mt-1 text-xs font-medium text-muted">{ts('yearsLabel')}</dt>
             <dd className="font-mono text-3xl font-bold text-primary md:text-4xl">
               {fmt.format(YEARS_EXPERIENCE)}
             </dd>
-            <p className="mt-1 text-xs font-medium text-muted">{ts('yearsLabel')}</p>
           </div>
         </dl>
 
