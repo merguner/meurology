@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  RENK TOKEN'LARI (RGB kanalları — Tailwind rgb(var(--x) / <alpha>) ile kullanır)
+  Palet: derin çam yeşili/teal (ana), sıcak pirinç/altın (vurgu), soğuk beyaz-gri.
+  Açık tema varsayılan; sistem koyu tercihi ve manuel [data-theme] geçişi desteklenir.
+*/
+:root {
+  /* Marka mavisi #0A5CA8 = rgb(10 92 168) — ME Urology Clinic */
+  --c-bg: 246 248 249;
+  --c-surface: 255 255 255;
+  --c-surface-2: 238 243 247;
+  --c-border: 214 224 234;
+  --c-fg: 14 27 42;
+  --c-muted: 86 101 117;
+  --c-primary: 10 92 168;
+  --c-primary-strong: 8 71 130; /* ~%18 koyu — hover/aktif */
+  --c-primary-fg: 255 255 255;
+  --c-primary-soft: 224 237 248;
+  --c-accent: 202 128 26; /* sıcak amber — CTA maviden ayrışsın */
+  --c-accent-fg: 33 18 3;
+  --c-ring: 10 92 168;
+  --c-success: 21 122 60;
+  --c-danger: 176 42 42;
+  /* Başlık ve wordmark de Poppins kullansın (tek marka fontu). */
+  --font-serif: var(--font-sans);
+  --font-brand: var(--font-sans);
+}
+
+/* Sistem koyu tercihi — kullanıcı manuel açık seçmediyse uygulanır (JS'siz de çalışır). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    /* Koyu lacivert/antrasit zemin + açık marka mavisi #4FA0E0 (AA korunur) */
+    --c-bg: 11 20 32;
+    --c-surface: 17 28 43;
+    --c-surface-2: 24 41 61;
+    --c-border: 38 56 77;
+    --c-fg: 230 238 247;
+    --c-muted: 147 163 181;
+    --c-primary: 79 160 224;
+    --c-primary-strong: 108 179 232; /* koyu temada hover = biraz daha açık */
+    --c-primary-fg: 5 20 33;
+    --c-primary-soft: 18 48 71;
+    --c-accent: 224 165 66;
+    --c-accent-fg: 26 15 3;
+    --c-ring: 79 160 224;
+    --c-success: 74 200 130;
+    --c-danger: 240 128 128;
+  }
+}
+
+/* Manuel koyu tema (toggle) — sistem tercihinden bağımsız kazanır. */
+:root[data-theme='dark'] {
+  --c-bg: 11 20 32;
+  --c-surface: 17 28 43;
+  --c-surface-2: 24 41 61;
+  --c-border: 38 56 77;
+  --c-fg: 230 238 247;
+  --c-muted: 147 163 181;
+  --c-primary: 79 160 224;
+  --c-primary-strong: 108 179 232;
+  --c-primary-fg: 5 20 33;
+  --c-primary-soft: 18 48 71;
+  --c-accent: 224 165 66;
+  --c-accent-fg: 26 15 3;
+  --c-ring: 79 160 224;
+  --c-success: 74 200 130;
+  --c-danger: 240 128 128;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: rgb(var(--c-bg));
+    color: rgb(var(--c-fg));
+    font-feature-settings: 'kern';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif), Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+  /* Klavye erişilebilirliği: görünür odak halkası */
+  :focus-visible {
+    outline: 2px solid rgb(var(--c-ring));
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  ::selection {
+    background: rgb(var(--c-primary) / 0.22);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-bg disabled:opacity-60 disabled:pointer-events-none;
+  }
+  .btn-primary {
+    @apply btn bg-primary text-primary-fg hover:bg-primary-strong;
+  }
+  .btn-accent {
+    @apply btn bg-accent text-accent-fg hover:bg-accent/90;
+  }
+  .btn-outline {
+    @apply btn border border-border bg-surface text-fg hover:bg-surface-2;
+  }
+  .btn-whatsapp {
+    @apply btn bg-[#25D366] text-[#062b14] hover:bg-[#1fb457];
+  }
+  .card {
+    @apply rounded-xl border border-border bg-surface shadow-card;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-border bg-surface-2 px-3 py-1 text-xs font-medium text-muted;
+  }
+  .label-mono {
+    @apply font-mono text-xs uppercase tracking-wider text-muted;
+  }
+  .prose-content p {
+    @apply leading-relaxed text-fg/90;
+  }
+  .form-input {
+    @apply w-full rounded-lg border border-border bg-surface px-3.5 py-2.5 text-sm text-fg placeholder:text-muted/70 transition-colors focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/40 disabled:cursor-not-allowed disabled:opacity-70;
+  }
+}

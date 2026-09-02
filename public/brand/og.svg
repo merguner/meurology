@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="ME Urology Clinic">
+  <!-- OG görseli — logo amblem karesinden türetilmiş. -->
+  <rect width="1200" height="630" fill="#F6F8F9"/>
+  <g transform="translate(516.22,120.7) scale(1.6667)">
+    <rect x="-15.73" y="-12.423" width="132" height="132" rx="30" fill="#0A5CA8"/>
+    <g fill="#ffffff">
+      <path transform="translate(6.304958,73.194123)" d="M 4.703125 -39.234375 L 14.015625 -39.234375 L 24.328125 -22.640625 L 34.640625 -39.234375 L 43.9375 -39.234375 L 43.9375 0 L 35.359375 0 L 35.359375 -25.609375 L 24.328125 -8.859375 L 24.09375 -8.859375 L 13.171875 -25.453125 L 13.171875 0 L 4.703125 0 Z"/>
+      <path transform="translate(54.953542,73.194123)" d="M 4.703125 -39.234375 L 34.296875 -39.234375 L 34.296875 -31.546875 L 13.28125 -31.546875 L 13.28125 -23.59375 L 31.78125 -23.59375 L 31.78125 -15.921875 L 13.28125 -15.921875 L 13.28125 -7.671875 L 34.578125 -7.671875 L 34.578125 0 L 4.703125 0 Z"/>
+    </g>
+  </g>
+  <text x="600" y="440" text-anchor="middle" font-family="Poppins, 'Nunito Sans', 'Segoe UI', system-ui, sans-serif" font-size="70" font-weight="700" letter-spacing="-1" fill="#0A5CA8">ME Urology Clinic</text>
+  <text x="600" y="492" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" fill="#566575">International Urological Surgery</text>
+</svg>
