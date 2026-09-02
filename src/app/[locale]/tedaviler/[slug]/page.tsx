@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { buildAlternates } from '@/i18n/navigation';
+import { buildAlternates, getPathname } from '@/i18n/navigation';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -85,7 +85,7 @@ export default async function TreatmentPage({
         name: c.metaTitle,
         description: c.metaDescription,
         inLanguage: locale,
-        url: `${siteConfig.domain}/${locale}/tedaviler/${slug}`,
+        url: `${siteConfig.domain}${getPathname({ locale, href: { pathname: '/tedaviler/[slug]', params: { slug } } })}`,
         about: { '@type': 'MedicalProcedure', name: c.title },
         lastReviewed: new Date().toISOString().slice(0, 10)
       },
@@ -93,7 +93,7 @@ export default async function TreatmentPage({
         '@type': 'Physician',
         name: surgeonFullName(locale),
         medicalSpecialty: 'Urology',
-        url: `${siteConfig.domain}/${locale}/cerrah`
+        url: `${siteConfig.domain}${getPathname({ locale, href: '/cerrah' })}`
       },
       {
         '@type': 'FAQPage',

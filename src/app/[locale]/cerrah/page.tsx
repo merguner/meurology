@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { buildAlternates } from '@/i18n/navigation';
+import { buildAlternates, getPathname } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
 import { surgeon, surgeonReconstructive } from '@/content/surgeon';
@@ -73,7 +73,7 @@ export default async function SurgeonPage({
     name: c.fullName,
     jobTitle: c.title,
     medicalSpecialty: 'Urology',
-    url: `${siteConfig.domain}/${locale}/cerrah`,
+    url: `${siteConfig.domain}${getPathname({ locale, href: '/cerrah' })}`,
     knowsLanguage: surgeon.languages,
     ...(c.awards && c.awards.length ? { award: c.awards.map((a) => a.item) } : {})
   };

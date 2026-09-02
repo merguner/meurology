@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { buildAlternates } from '@/i18n/navigation';
+import { buildAlternates, getPathname } from '@/i18n/navigation';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -58,7 +58,7 @@ export default async function BlogPostPage({
     description: c.metaDescription,
     inLanguage: locale,
     datePublished: post.date,
-    url: `${siteConfig.domain}/${locale}/blog/${slug}`,
+    url: `${siteConfig.domain}${getPathname({ locale, href: { pathname: '/blog/[slug]', params: { slug } } })}`,
     publisher: { '@type': 'Organization', name: siteConfig.name }
   };
 

@@ -5,7 +5,7 @@
  */
 export const siteConfig = {
   name: 'ME Urology Clinic', // Marka adı — tüm dillerde sabit (çevrilmez)
-  domain: 'https://ornek-klinik.com', // PLACEHOLDER: Canlı alan adı (sitemap/SEO için)
+  domain: 'https://www.meurology.com', // Canlı alan adı (kanonik: www). apex → www 301 yönlendirmesi hosting/DNS'te yapılmalı.
   // wa.me linkleri için uluslararası formatta, sadece rakam.
   whatsappNumber: '905320630969',
   phone: '0532 063 09 69', // yurt içi görünüm

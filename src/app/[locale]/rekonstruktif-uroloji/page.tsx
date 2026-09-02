@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { buildAlternates } from '@/i18n/navigation';
+import { buildAlternates, getPathname } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
@@ -45,7 +45,7 @@ export default async function ReconstructivePage({
     name: c.title,
     description: c.intro[0],
     inLanguage: locale,
-    url: `${siteConfig.domain}/${locale}/rekonstruktif-uroloji`
+    url: `${siteConfig.domain}${getPathname({ locale, href: '/rekonstruktif-uroloji' })}`
   };
 
   return (
