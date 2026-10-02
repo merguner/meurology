@@ -11,7 +11,7 @@ export const siteConfig = {
   phone: '0532 063 09 69', // yurt içi görünüm
   phoneIntl: '+905320630969', // tel: linki için
   // Mevcut siteden alınan gerçek e-posta (doğrulanmadı; yanlışsa güncellenecek).
-  email: 'info@meurology.com',
+  email: 'muslumergun@gmail.com',
   // PLACEHOLDER: USHAŞ (Uluslararası Sağlık Hizmetleri A.Ş.) yetki belge no
   ushasLicenseNo: 'USHAŞ-XXXX-XXXX',
   /**

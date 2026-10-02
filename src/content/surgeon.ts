@@ -122,7 +122,7 @@ const awards: SurgeonTimelineItem[] = [
 export const surgeon: SurgeonProfile = {
   // Dil-nötr ad (JSON-LD Person.name için); görüntüde dile göre fullName kullanılır.
   name: 'Müslüm Ergün',
-  photo: undefined, // PLACEHOLDER: /public/surgeon.jpg ekleyin
+  photo: '/dr-muslum-ergun.jpg', // Doç. Dr. Müslüm Ergün — cerrah portresi
   // PLACEHOLDER (doğrulanmamış varsayım): CV'de açık dil listesi yok — değiştirmeyin.
   languages: ['tr', 'en'],
   diplomaRegistryNo: 'PLACEHOLDER: 000000', // Sağlık Bakanlığı diploma tescil no (CV'de yok)

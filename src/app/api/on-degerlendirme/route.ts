@@ -156,7 +156,9 @@ export async function POST(request: Request) {
       auth: { user: SMTP_USER, pass: SMTP_PASS }
     });
 
-    const to = process.env.LEAD_NOTIFICATION_EMAIL || SMTP_USER;
+    // Bildirim alıcısı: kliniğin görünen e-postası (siteConfig.email = muslumergun@gmail.com).
+    // SMTP_USER yalnızca gönderen/kimlik doğrulama hesabıdır (info@meurology.com).
+    const to = process.env.LEAD_NOTIFICATION_EMAIL || siteConfig.email;
     const locale = (data.locale as Locale) || 'tr';
     const treatment = data.treatment ? getTreatment(data.treatment) : undefined;
     const treatmentTitle = treatment ? resolveContent(treatment, locale).title : data.treatment || '—';

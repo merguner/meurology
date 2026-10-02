@@ -23,7 +23,7 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'Veri Sorumlusu',
           paragraphs: [
-            'Veri sorumlusu Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. İletişim: info@meurology.com / 0532 063 09 69.'
+            'Veri sorumlusu Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. İletişim: muslumergun@gmail.com / 0532 063 09 69.'
           ]
         },
         {
@@ -60,7 +60,7 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'Haklarınız (KVKK m.11 / GDPR)',
           paragraphs: [
-            'KVKK m.11 kapsamındaki haklarınız için info@meurology.com adresine başvurabilirsiniz. GDPR uygulanıyorsa ilgili erişim, düzeltme, silme, kısıtlama ve itiraz hakları da geçerli olabilir. Açık rızanızı aynı adrese yazarak geri çekebilirsiniz; bu, önceki hukuka uygun işlemleri etkilemez.'
+            'KVKK m.11 kapsamındaki haklarınız için muslumergun@gmail.com adresine başvurabilirsiniz. GDPR uygulanıyorsa ilgili erişim, düzeltme, silme, kısıtlama ve itiraz hakları da geçerli olabilir. Açık rızanızı aynı adrese yazarak geri çekebilirsiniz; bu, önceki hukuka uygun işlemleri etkilemez.'
           ]
         }
       ]
@@ -72,7 +72,7 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'Data Controller',
           paragraphs: [
-            'The data controller is Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. Contact: info@meurology.com / 0532 063 09 69.'
+            'The data controller is Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. Contact: muslumergun@gmail.com / 0532 063 09 69.'
           ]
         },
         {
@@ -109,7 +109,7 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'Your Rights (KVKK Art.11 / GDPR)',
           paragraphs: [
-            'Contact info@meurology.com to exercise rights under KVKK Art. 11. If GDPR applies, relevant access, rectification, erasure, restriction and objection rights may also apply. You may withdraw explicit consent by writing to the same address; this does not affect earlier lawful processing.'
+            'Contact muslumergun@gmail.com to exercise rights under KVKK Art. 11. If GDPR applies, relevant access, rectification, erasure, restriction and objection rights may also apply. You may withdraw explicit consent by writing to the same address; this does not affect earlier lawful processing.'
           ]
         }
       ]
@@ -121,7 +121,7 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'المتحكم في البيانات',
           paragraphs: [
-            'المتحكم في البيانات هو Doç. Dr. Müslüm Ergün (ME Urology Clinic)، Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. للتواصل: info@meurology.com / 0532 063 09 69.'
+            'المتحكم في البيانات هو Doç. Dr. Müslüm Ergün (ME Urology Clinic)، Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. للتواصل: muslumergun@gmail.com / 0532 063 09 69.'
           ]
         },
         {
@@ -158,7 +158,7 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'حقوقك (المادة 11 من KVKK / GDPR)',
           paragraphs: [
-            'يمكنك التواصل عبر info@meurology.com لممارسة حقوقك بموجب المادة 11 من KVKK. وإذا انطبق GDPR، فقد تنطبق أيضاً حقوق الوصول والتصحيح والمحو وتقييد المعالجة والاعتراض. ويمكنك سحب موافقتك الصريحة عبر العنوان نفسه دون التأثير في مشروعية المعالجة السابقة.'
+            'يمكنك التواصل عبر muslumergun@gmail.com لممارسة حقوقك بموجب المادة 11 من KVKK. وإذا انطبق GDPR، فقد تنطبق أيضاً حقوق الوصول والتصحيح والمحو وتقييد المعالجة والاعتراض. ويمكنك سحب موافقتك الصريحة عبر العنوان نفسه دون التأثير في مشروعية المعالجة السابقة.'
           ]
         }
       ]
@@ -170,7 +170,7 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'Verantwortlicher',
           paragraphs: [
-            'Verantwortlicher ist Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. Kontakt: info@meurology.com / 0532 063 09 69.'
+            'Verantwortlicher ist Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. Kontakt: muslumergun@gmail.com / 0532 063 09 69.'
           ]
         },
         {
@@ -207,7 +207,7 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'Ihre Rechte (KVKK Art. 11 / DSGVO)',
           paragraphs: [
-            'Für Rechte nach KVKK Art. 11 wenden Sie sich an info@meurology.com. Soweit die DSGVO gilt, können auch Auskunfts-, Berichtigungs-, Löschungs-, Einschränkungs- und Widerspruchsrechte bestehen. Ihre Einwilligung können Sie an dieselbe Adresse widerrufen; frühere rechtmäßige Verarbeitungen bleiben davon unberührt.'
+            'Für Rechte nach KVKK Art. 11 wenden Sie sich an muslumergun@gmail.com. Soweit die DSGVO gilt, können auch Auskunfts-, Berichtigungs-, Löschungs-, Einschränkungs- und Widerspruchsrechte bestehen. Ihre Einwilligung können Sie an dieselbe Adresse widerrufen; frühere rechtmäßige Verarbeitungen bleiben davon unberührt.'
           ]
         }
       ]
@@ -219,7 +219,7 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'Оператор данных',
           paragraphs: [
-            'Оператор данных — Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. Контакт: info@meurology.com / 0532 063 09 69.'
+            'Оператор данных — Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. Контакт: muslumergun@gmail.com / 0532 063 09 69.'
           ]
         },
         {
@@ -256,7 +256,7 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'Ваши права (ст. 11 KVKK / GDPR)',
           paragraphs: [
-            'Для реализации прав по ст. 11 KVKK пишите на info@meurology.com. Если применяется GDPR, могут действовать права доступа, исправления, удаления, ограничения обработки и возражения. Явное согласие можно отозвать по тому же адресу; это не влияет на законность предыдущей обработки.'
+            'Для реализации прав по ст. 11 KVKK пишите на muslumergun@gmail.com. Если применяется GDPR, могут действовать права доступа, исправления, удаления, ограничения обработки и возражения. Явное согласие можно отозвать по тому же адресу; это не влияет на законность предыдущей обработки.'
           ]
         }
       ]
@@ -275,7 +275,7 @@ export const consentDoc: LegalDoc = {
           heading: 'Açık Rıza Beyanı',
           paragraphs: [
             'Formdaki tedavi seçimi ve isteğe bağlı mesajımda yer alan sağlık bilgilerinin, Doç. Dr. Müslüm Ergün tarafından ön değerlendirme amacıyla işlenmesine açık rıza veriyorum.',
-            'Bu rızayı info@meurology.com adresine yazarak geri çekebileceğimi biliyorum. Geri çekme, önceki hukuka uygun işlemleri etkilemez.'
+            'Bu rızayı muslumergun@gmail.com adresine yazarak geri çekebileceğimi biliyorum. Geri çekme, önceki hukuka uygun işlemleri etkilemez.'
           ]
         }
       ]
@@ -288,7 +288,7 @@ export const consentDoc: LegalDoc = {
           heading: 'Explicit Consent Statement',
           paragraphs: [
             'I explicitly consent to Doç. Dr. Müslüm Ergün processing health information in my treatment selection and optional message for pre-assessment.',
-            'I can withdraw this consent by writing to info@meurology.com. Withdrawal does not affect earlier lawful processing.'
+            'I can withdraw this consent by writing to muslumergun@gmail.com. Withdrawal does not affect earlier lawful processing.'
           ]
         }
       ]
@@ -301,7 +301,7 @@ export const consentDoc: LegalDoc = {
           heading: 'إقرار الموافقة الصريحة',
           paragraphs: [
             'أوافق صراحةً على معالجة المعلومات الصحية الواردة في اختيار العلاج والرسالة الاختيارية بواسطة Doç. Dr. Müslüm Ergün لغرض التقييم الأولي.',
-            'يمكنني سحب هذه الموافقة بالكتابة إلى info@meurology.com، ولا يؤثر السحب في مشروعية المعالجة السابقة.'
+            'يمكنني سحب هذه الموافقة بالكتابة إلى muslumergun@gmail.com، ولا يؤثر السحب في مشروعية المعالجة السابقة.'
           ]
         }
       ]
@@ -314,7 +314,7 @@ export const consentDoc: LegalDoc = {
           heading: 'Erklärung der ausdrücklichen Einwilligung',
           paragraphs: [
             'Ich willige ausdrücklich ein, dass Doç. Dr. Müslüm Ergün Gesundheitsangaben in meiner Behandlungsauswahl und freiwilligen Nachricht zur Vorabbewertung verarbeitet.',
-            'Ich kann diese Einwilligung über info@meurology.com widerrufen. Der Widerruf berührt eine frühere rechtmäßige Verarbeitung nicht.'
+            'Ich kann diese Einwilligung über muslumergun@gmail.com widerrufen. Der Widerruf berührt eine frühere rechtmäßige Verarbeitung nicht.'
           ]
         }
       ]
@@ -327,7 +327,7 @@ export const consentDoc: LegalDoc = {
           heading: 'Заявление о явном согласии',
           paragraphs: [
             'Я явно соглашаюсь на обработку Doç. Dr. Müslüm Ergün сведений о здоровье в выбранном направлении лечения и необязательном сообщении для предварительной оценки.',
-            'Я могу отозвать согласие, написав на info@meurology.com. Отзыв не влияет на законность предыдущей обработки.'
+            'Я могу отозвать согласие, написав на muslumergun@gmail.com. Отзыв не влияет на законность предыдущей обработки.'
           ]
         }
       ]

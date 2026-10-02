@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { buildAlternates, getPathname } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
@@ -75,6 +76,7 @@ export default async function SurgeonPage({
     medicalSpecialty: 'Urology',
     url: `${siteConfig.domain}${getPathname({ locale, href: '/cerrah' })}`,
     knowsLanguage: surgeon.languages,
+    ...(surgeon.photo ? { image: `${siteConfig.domain}${surgeon.photo}` } : {}),
     ...(c.awards && c.awards.length ? { award: c.awards.map((a) => a.item) } : {})
   };
 
@@ -210,21 +212,33 @@ export default async function SurgeonPage({
 
         {/* Yan panel */}
         <aside className="space-y-5">
-          {/* Cerrah görseli. TODO: surgeon.photo eklenince next/image ile değiştir.
-              Şimdilik markalı baş-harf avatarı (nötr, "eksik" hissettirmeyen tasarım). */}
+          {/* Cerrah görseli — foto varsa next/image, yoksa markalı baş-harf avatarı. */}
           <div className="card overflow-hidden">
-            <div className="relative flex aspect-[4/5] flex-col items-center justify-center gap-4 bg-gradient-to-br from-primary-soft via-surface to-surface p-6 text-center">
-              <span
-                aria-hidden="true"
-                className="flex h-28 w-28 items-center justify-center rounded-full bg-primary font-brand text-4xl font-bold tracking-tight text-primary-fg shadow-card"
-              >
-                {surgeonInitials}
-              </span>
-              <div>
-                <p className="font-semibold text-fg">{c.fullName}</p>
-                <p className="mt-0.5 text-sm text-muted">{c.title}</p>
+            {surgeon.photo ? (
+              <div className="relative aspect-[4/5] bg-surface-2">
+                <Image
+                  src={surgeon.photo}
+                  alt={c.fullName}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 360px"
+                  className="object-cover"
+                />
               </div>
-            </div>
+            ) : (
+              <div className="relative flex aspect-[4/5] flex-col items-center justify-center gap-4 bg-gradient-to-br from-primary-soft via-surface to-surface p-6 text-center">
+                <span
+                  aria-hidden="true"
+                  className="flex h-28 w-28 items-center justify-center rounded-full bg-primary font-brand text-4xl font-bold tracking-tight text-primary-fg shadow-card"
+                >
+                  {surgeonInitials}
+                </span>
+                <div>
+                  <p className="font-semibold text-fg">{c.fullName}</p>
+                  <p className="mt-0.5 text-sm text-muted">{c.title}</p>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Konuştuğu diller */}
