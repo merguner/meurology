@@ -2,7 +2,6 @@ import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
 import type { LegalDoc } from '@/content/legal';
 import { PageHero } from './PageHero';
-import { Icon } from './Icon';
 
 export async function LegalDocView({
   doc,
@@ -20,12 +19,6 @@ export async function LegalDocView({
     <>
       <PageHero title={title} />
       <div className="container-content max-w-3xl py-12">
-        {/* Şablon uyarısı */}
-        <div className="mb-8 flex gap-3 rounded-lg border border-accent/40 bg-accent/10 p-4">
-          <Icon name="alert" size={20} className="mt-0.5 shrink-0 text-accent" />
-          <p className="text-sm text-fg/90">{t('placeholderNotice')}</p>
-        </div>
-
         <p className="label-mono mb-6">
           {t('lastUpdated')}:{' '}
           {new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(doc.lastUpdated))}

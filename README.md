@@ -66,7 +66,7 @@ Gerçek/hassas veri üretilmedi. Yayına almadan önce doldurun (kod içinde `PL
 | `src/content/treatments.ts` | **Fiyat aralıkları** (`price.from/to`), **vaka sayıları**, paket gece sayıları, hasta videosu embed URL'leri |
 | `src/content/trust.ts` | Akreditasyon belge no'ları/logoları, hastane adı/teknoloji bilgisi |
 | `src/content/experiences.ts` | **Gerçek, KVKK açık rızalı hasta yorumları/videoları** (mevcut kayıtlar yapı örneğidir) |
-| `src/content/legal.ts` | KVKK/GDPR ve açık rıza metinleri — **hukuk danışmanıyla nihai hâle getirin** |
+| `src/content/legal.ts` | Ön değerlendirme formuna özel KVKK/GDPR aydınlatması ve ayrı sağlık verisi rızası güncellendi; canlı veri akışı, saklama uygulaması ve sınır ötesi hizmet sağlayıcılar için hukuk uzmanı kontrolü gerekir |
 
 ## Fiyat davranışı
 

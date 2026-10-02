@@ -8,11 +8,12 @@ import { Icon } from './Icon';
  * anlatan 1 cümlelik açıklama ile gösterilir. (Logolar eklendiğinde
  * `logo` alanı üzerinden next/image ile değiştirilebilir.)
  */
-export function AccreditationBadges() {
+export function AccreditationBadges({ only }: { only?: string[] }) {
   const locale = useLocale() as Locale;
+  const items = only ? accreditations.filter((a) => only.includes(a.id)) : accreditations;
   return (
-    <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      {accreditations.map((a) => {
+    <ul className={only ? 'grid max-w-xl gap-4' : 'grid gap-4 sm:grid-cols-2 lg:grid-cols-4'}>
+      {items.map((a) => {
         const c = a.i18n[locale] ?? a.i18n.en ?? a.i18n.tr!;
         return (
           <li key={a.id} className="card flex flex-col gap-2 p-5">

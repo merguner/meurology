@@ -1,10 +1,7 @@
 import type { Locale } from '@/i18n/routing';
 
 /**
- * YASAL METİN ŞABLONLARI — KVKK/GDPR aydınlatma ve açık rıza.
- * ÖNEMLİ: Bunlar ŞABLONDUR, hukuki tavsiye değildir. Yayına almadan önce
- * veri sorumlusu bilgileri (unvan, adres, VERBİS no, DPO iletişimi) doldurulmalı
- * ve bir hukuk danışmanınca onaylanmalıdır. PLACEHOLDER alanları değiştirin.
+ * Ön değerlendirme formuna ilişkin aydınlatma ve ayrı açık rıza metinleri.
  */
 export interface LegalSection {
   heading: string;
@@ -17,249 +14,249 @@ export interface LegalDoc {
 }
 
 export const kvkkDoc: LegalDoc = {
-  lastUpdated: '2026-01-01',
+  lastUpdated: '2026-09-21',
   i18n: {
     tr: {
       intro:
-        'ME Urology Clinic (Doç. Dr. Müslüm Ergün) olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve AB Genel Veri Koruma Tüzüğü (GDPR) kapsamında kişisel verilerinizi aşağıda açıklanan çerçevede işliyoruz.',
+        'Bu metin, web sitesindeki ön değerlendirme formuyla paylaştığınız bilgiler içindir. 6698 sayılı KVKK uygulanır; GDPR hakları, işleme faaliyetine uygulanabildiği ölçüde ayrıca geçerlidir.',
       sections: [
         {
           heading: 'Veri Sorumlusu',
           paragraphs: [
-            'Veri sorumlusu ME Urology Clinic (Doç. Dr. Müslüm Ergün), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul, VERBİS No: —, İletişim: info@meurology.com / 0532 063 09 69.'
+            'Veri sorumlusu Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. İletişim: info@meurology.com / 0532 063 09 69.'
           ]
         },
         {
           heading: 'İşlenen Kişisel Veriler',
           paragraphs: [
-            'Kimlik ve iletişim bilgileri (ad, ülke, e-posta, telefon), sağlık verileri (tahlil/görüntüleme, tıbbi öykü) ve form üzerinden ilettiğiniz diğer bilgiler.',
-            'Sağlık verileri özel nitelikli kişisel veri olup yalnızca açık rızanıza dayanarak işlenir.'
+            'Form aracılığıyla adınızı, ülkenizi, e-posta adresinizi veya telefon numaranızı, tedavi seçiminizi ve isteğe bağlı mesajınızı doğrudan sizden toplarız. Mesajınıza sağlık bilgisi yazabilirsiniz; form dosya yüklemez. Başvuru site sunucusunda işlenir ve kliniğin e-posta adresine iletilir.',
+            'Tedavi seçimi ve mesajınız sağlık bilgisi içeriyorsa bu özel nitelikli veriler ayrı açık rızanıza dayanarak ön değerlendirme için işlenir.'
           ]
         },
         {
           heading: 'İşleme Amaçları',
           paragraphs: [
-            'Ön değerlendirme yapılması, tedavi planı ve fiyat teklifi sunulması, randevu ve seyahat koordinasyonu, yasal yükümlülüklerin yerine getirilmesi.'
+            'Başvurunuza yanıt verilmesi ve talebiniz doğrultusunda ön değerlendirme yapılması. Tedavi ve seyahat koordinasyonu, ancak bu yönde devam etmek istediğinizde yürütülür.'
           ]
         },
         {
           heading: 'Hukuki Sebep',
           paragraphs: [
-            'Açık rıza, sözleşmenin kurulması/ifası ve ilgili mevzuattan doğan hukuki yükümlülükler.'
+            'İletişim verileri, talebiniz üzerine olası sağlık hizmeti ilişkisini kurmaya yönelik adımlar için KVKK m.5/2-c kapsamında; sağlık bilgileri ayrı açık rızanızla KVKK m.6/3-a kapsamında işlenir. Uygulanabilir yasal yükümlülükler ayrıca ilgili kayıtların işlenmesini gerektirebilir.'
           ]
         },
         {
           heading: 'Aktarım',
           paragraphs: [
-            'Verileriniz, hizmetin ifası için ilgili sağlık kuruluşu, tercüman ve seyahat hizmet sağlayıcılarıyla; yalnızca gerekli ölçüde ve gizlilik yükümlülüğü altında paylaşılabilir.'
+            'Başvurular, teknik barındırma ve e-posta iletim hizmeti sağlayıcıları tarafından işlenebilir. Tedavi veya seyahat koordinasyonu talep ederseniz gerekli bilgiler ilgili sağlık kuruluşu veya hizmet sağlayıcısıyla paylaşılabilir. WhatsApp bağlantısını seçerseniz orada paylaştığınız bilgiler ayrı bir hizmet üzerinden iletilir; form WhatsApp ile gönderilmez.'
           ]
         },
         {
           heading: 'Saklama Süresi',
           paragraphs: [
-            'Kişisel verileriniz ilgili mevzuatta öngörülen süreler ve işleme amacının gerektirdiği süre boyunca saklanır.'
+            'Başvuru e-postaları talebinizi sonuçlandırmak ve varsa ilgili yasal yükümlülükleri karşılamak için gerekli olduğu sürece saklanır. Bu amaçlar sona erdiğinde silme veya anonimleştirme değerlendirilir.'
           ]
         },
         {
           heading: 'Haklarınız (KVKK m.11 / GDPR)',
           paragraphs: [
-            'Verilerinize erişme, düzeltme, silme, işlemeye itiraz ve veri taşınabilirliği gibi haklara sahipsiniz. Talepleriniz için info@meurology.com üzerinden bize ulaşabilirsiniz.'
+            'KVKK m.11 kapsamındaki haklarınız için info@meurology.com adresine başvurabilirsiniz. GDPR uygulanıyorsa ilgili erişim, düzeltme, silme, kısıtlama ve itiraz hakları da geçerli olabilir. Açık rızanızı aynı adrese yazarak geri çekebilirsiniz; bu, önceki hukuka uygun işlemleri etkilemez.'
           ]
         }
       ]
     },
     en: {
       intro:
-        'As ME Urology Clinic (Doç. Dr. Müslüm Ergün), we process your personal data under the Turkish Personal Data Protection Law (KVKK No. 6698) and the EU General Data Protection Regulation (GDPR) as described below.',
+        'This notice covers information submitted through the website pre-assessment form. Turkish Law No. 6698 (KVKK) applies; GDPR rights also apply where the processing falls within its scope.',
       sections: [
         {
           heading: 'Data Controller',
           paragraphs: [
-            'The data controller is ME Urology Clinic (Doç. Dr. Müslüm Ergün), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul, registry no: —, contact: info@meurology.com / 0532 063 09 69.'
+            'The data controller is Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. Contact: info@meurology.com / 0532 063 09 69.'
           ]
         },
         {
           heading: 'Personal Data Processed',
           paragraphs: [
-            'Identity and contact data (name, country, email, phone), health data (test results/imaging, medical history) and other information you provide via the form.',
-            'Health data is special-category personal data and is processed only on the basis of your explicit consent.'
+            'We collect directly from you through the form your name, country, email address or phone number, treatment selection and optional message. You may include health information in the message; the form does not upload files. The site server processes the submission and sends it to the clinic email inbox.',
+            'If your selection or message contains health data, this special-category data is used for pre-assessment on the basis of your separate explicit consent.'
           ]
         },
         {
           heading: 'Purposes of Processing',
           paragraphs: [
-            'Performing a pre-assessment, providing a treatment plan and quote, coordinating appointments and travel, and fulfilling legal obligations.'
+            'Responding to your enquiry and carrying out a pre-assessment at your request. Treatment and travel coordination take place only if you choose to proceed.'
           ]
         },
         {
           heading: 'Legal Basis',
           paragraphs: [
-            'Explicit consent, establishment/performance of a contract, and legal obligations arising from applicable legislation.'
+            'Contact details are processed to take steps toward a possible healthcare service relationship at your request (KVKK Art. 5(2)(c)); health data is processed on your separate explicit consent (KVKK Art. 6(3)(a)). Applicable legal obligations may also require processing of relevant records.'
           ]
         },
         {
           heading: 'Transfers',
           paragraphs: [
-            'Your data may be shared, only to the extent necessary and under confidentiality obligations, with the relevant healthcare institution, interpreters and travel service providers for the provision of the service.'
+            'Technical hosting and email delivery providers may process submissions. If you request treatment or travel coordination, necessary information may be shared with the relevant healthcare institution or service provider. If you choose a WhatsApp link, information you send there is handled by that separate service; the form is not submitted through WhatsApp.'
           ]
         },
         {
           heading: 'Retention Period',
           paragraphs: [
-            'Your personal data is retained for the periods prescribed by applicable legislation and as required by the purpose of processing.'
+            'Enquiry emails are kept for as long as needed to conclude your request and meet any applicable legal obligations. When those purposes end, deletion or anonymisation is assessed.'
           ]
         },
         {
           heading: 'Your Rights (KVKK Art.11 / GDPR)',
           paragraphs: [
-            'You have rights including access, rectification, erasure, objection to processing and data portability. To exercise them, contact us via info@meurology.com.'
+            'Contact info@meurology.com to exercise rights under KVKK Art. 11. If GDPR applies, relevant access, rectification, erasure, restriction and objection rights may also apply. You may withdraw explicit consent by writing to the same address; this does not affect earlier lawful processing.'
           ]
         }
       ]
     },
     ar: {
       intro:
-        'هذه الترجمة لأغراض التوعية فقط؛ ويجب أن يعتمد محامٍ النصّ الساري وفقًا للقانون التركي/اللائحة العامة لحماية البيانات (GDPR). بصفتنا ME Urology Clinic (Doç. Dr. Müslüm Ergün)، نعالج بياناتك الشخصية وفق قانون حماية البيانات الشخصية التركي (KVKK رقم 6698) واللائحة العامة لحماية البيانات في الاتحاد الأوروبي (GDPR) على النحو الموضّح أدناه.',
+        'يتعلق هذا الإشعار بالمعلومات التي ترسلها عبر نموذج التقييم الأولي. ينطبق القانون التركي رقم 6698 (KVKK)، وتنطبق حقوق GDPR أيضاً إذا كانت المعالجة ضمن نطاقه.',
       sections: [
         {
           heading: 'المتحكم في البيانات',
           paragraphs: [
-            'المتحكم في البيانات هو ME Urology Clinic (Doç. Dr. Müslüm Ergün)، Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul، رقم السجل: —، للتواصل: info@meurology.com / 0532 063 09 69.'
+            'المتحكم في البيانات هو Doç. Dr. Müslüm Ergün (ME Urology Clinic)، Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. للتواصل: info@meurology.com / 0532 063 09 69.'
           ]
         },
         {
           heading: 'البيانات الشخصية المعالَجة',
           paragraphs: [
-            'بيانات الهوية والتواصل (الاسم، الدولة، البريد الإلكتروني، الهاتف)، والبيانات الصحية (التحاليل/الصور، التاريخ الطبي)، وأي معلومات أخرى تقدّمها عبر النموذج.',
-            'البيانات الصحية بيانات شخصية ذات طبيعة خاصة وتُعالَج فقط استنادًا إلى موافقتك الصريحة.'
+            'نجمع منك مباشرة عبر النموذج الاسم والبلد والبريد الإلكتروني أو الهاتف ومجال العلاج المختار والرسالة الاختيارية. قد تتضمن الرسالة بيانات صحية؛ ولا يتيح النموذج رفع ملفات. يعالج خادم الموقع الطلب ويرسله إلى بريد العيادة.',
+            'إذا احتوى اختيار العلاج أو الرسالة على بيانات صحية، تُستخدم هذه البيانات الخاصة للتقييم الأولي بناءً على موافقتك الصريحة المنفصلة.'
           ]
         },
         {
           heading: 'أغراض المعالجة',
           paragraphs: [
-            'إجراء تقييم أولي، وتقديم خطة علاج وعرض سعر، وتنسيق المواعيد والسفر، والوفاء بالالتزامات القانونية.'
+            'الرد على طلبك وإجراء تقييم أولي بناءً عليه. لا يبدأ تنسيق العلاج أو السفر إلا إذا اخترت متابعة الإجراءات.'
           ]
         },
         {
           heading: 'الأساس القانوني',
           paragraphs: [
-            'الموافقة الصريحة، وإنشاء/تنفيذ العقد، والالتزامات القانونية الناشئة عن التشريعات المعمول بها.'
+            'تُعالج بيانات التواصل لاتخاذ خطوات نحو علاقة علاجية محتملة بناءً على طلبك (المادة 5/2-c من KVKK)، وتُعالج البيانات الصحية بناءً على موافقتك الصريحة المنفصلة (المادة 6/3-a). وقد تستلزم الالتزامات القانونية معالجة سجلات ذات صلة.'
           ]
         },
         {
           heading: 'نقل البيانات',
           paragraphs: [
-            'قد تُشارَك بياناتك، بالقدر اللازم فقط وتحت التزامات السرية، مع المؤسسة الصحية المعنية والمترجمين ومزوّدي خدمات السفر لأجل تقديم الخدمة.'
+            'قد يعالج مزودو الاستضافة والبريد الإلكتروني الطلبات لأغراض تقنية. وإذا طلبت تنسيق العلاج أو السفر، فقد تُشارك المعلومات اللازمة مع المؤسسة الصحية أو مقدم الخدمة المعني. وتخضع المعلومات التي ترسلها عبر رابط WhatsApp لذلك التطبيق المنفصل؛ ولا يُرسل النموذج عبر WhatsApp.'
           ]
         },
         {
           heading: 'مدة الاحتفاظ',
           paragraphs: [
-            'يُحتفَظ ببياناتك الشخصية للمدد المنصوص عليها في التشريعات المعمول بها وبقدر ما يتطلّبه غرض المعالجة.'
+            'تُحتفظ رسائل الطلبات للمدة اللازمة لإنهاء طلبك والوفاء بأي التزامات قانونية واجبة التطبيق. وبعد انتهاء هذه الأغراض، يُنظر في حذفها أو إخفاء هويتها.'
           ]
         },
         {
           heading: 'حقوقك (المادة 11 من KVKK / GDPR)',
           paragraphs: [
-            'لك حقوق تشمل الوصول والتصحيح والمحو والاعتراض على المعالجة وقابلية نقل البيانات. لممارستها، تواصل معنا عبر info@meurology.com.'
+            'يمكنك التواصل عبر info@meurology.com لممارسة حقوقك بموجب المادة 11 من KVKK. وإذا انطبق GDPR، فقد تنطبق أيضاً حقوق الوصول والتصحيح والمحو وتقييد المعالجة والاعتراض. ويمكنك سحب موافقتك الصريحة عبر العنوان نفسه دون التأثير في مشروعية المعالجة السابقة.'
           ]
         }
       ]
     },
     de: {
       intro:
-        'Diese Übersetzung dient nur zu Informationszwecken; der verbindliche Text muss von einem Anwalt nach geltendem türkischem Recht/der DSGVO bestätigt werden. Als ME Urology Clinic (Doç. Dr. Müslüm Ergün) verarbeiten wir Ihre personenbezogenen Daten gemäß dem türkischen Datenschutzgesetz (KVKK Nr. 6698) und der EU-Datenschutz-Grundverordnung (DSGVO) wie nachfolgend beschrieben.',
+        'Diese Information betrifft Angaben im Vorabbewertungsformular der Website. Es gilt das türkische Datenschutzgesetz Nr. 6698 (KVKK); Rechte nach der DSGVO gelten zusätzlich, soweit deren Anwendungsbereich eröffnet ist.',
       sections: [
         {
           heading: 'Verantwortlicher',
           paragraphs: [
-            'Verantwortlicher ist ME Urology Clinic (Doç. Dr. Müslüm Ergün), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul, Registernr.: —, Kontakt: info@meurology.com / 0532 063 09 69.'
+            'Verantwortlicher ist Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. Kontakt: info@meurology.com / 0532 063 09 69.'
           ]
         },
         {
           heading: 'Verarbeitete personenbezogene Daten',
           paragraphs: [
-            'Identitäts- und Kontaktdaten (Name, Land, E-Mail, Telefon), Gesundheitsdaten (Befunde/Bildgebung, Krankengeschichte) und weitere über das Formular übermittelte Angaben.',
-            'Gesundheitsdaten sind besondere Kategorien personenbezogener Daten und werden nur auf Grundlage Ihrer ausdrücklichen Einwilligung verarbeitet.'
+            'Über das Formular erheben wir direkt von Ihnen Name, Land, E-Mail-Adresse oder Telefonnummer, ausgewählten Behandlungsbereich und eine freiwillige Nachricht. Die Nachricht kann Gesundheitsangaben enthalten; ein Datei-Upload ist nicht möglich. Der Server sendet die Anfrage an das E-Mail-Postfach der Klinik.',
+            'Gesundheitsangaben in Behandlungsauswahl oder Nachricht werden nur zur Vorabbewertung auf Grundlage Ihrer gesonderten ausdrücklichen Einwilligung verarbeitet.'
           ]
         },
         {
           heading: 'Verarbeitungszwecke',
           paragraphs: [
-            'Durchführung einer Vorabbewertung, Erstellung eines Behandlungsplans und Angebots, Koordination von Terminen und Reise sowie Erfüllung gesetzlicher Pflichten.'
+            'Beantwortung Ihrer Anfrage und Vorabbewertung auf Ihren Wunsch. Eine Behandlungs- oder Reisekoordination erfolgt erst, wenn Sie das Verfahren fortsetzen möchten.'
           ]
         },
         {
           heading: 'Rechtsgrundlage',
           paragraphs: [
-            'Ausdrückliche Einwilligung, Anbahnung/Erfüllung eines Vertrags sowie gesetzliche Pflichten aus den geltenden Vorschriften.'
+            'Kontaktdaten werden zur Vorbereitung eines möglichen Behandlungsverhältnisses auf Ihre Anfrage verarbeitet (KVKK Art. 5 Abs. 2 lit. c); Gesundheitsangaben auf Grundlage Ihrer gesonderten ausdrücklichen Einwilligung (KVKK Art. 6 Abs. 3 lit. a). Gesetzliche Pflichten können die Verarbeitung relevanter Aufzeichnungen erfordern.'
           ]
         },
         {
           heading: 'Übermittlung',
           paragraphs: [
-            'Ihre Daten können, nur im erforderlichen Umfang und unter Vertraulichkeitspflichten, zur Leistungserbringung an die betreffende Gesundheitseinrichtung, Dolmetscher und Reisedienstleister weitergegeben werden.'
+            'Technische Hosting- und E-Mail-Dienstleister können Anfragen verarbeiten. Wenn Sie eine Behandlungs- oder Reisekoordination wünschen, können dafür erforderliche Angaben an die betreffende Gesundheitseinrichtung oder Dienstleister weitergegeben werden. Angaben, die Sie über einen WhatsApp-Link senden, betreffen diesen separaten Dienst; das Formular wird nicht über WhatsApp versandt.'
           ]
         },
         {
           heading: 'Speicherdauer',
           paragraphs: [
-            'Ihre personenbezogenen Daten werden für die gesetzlich vorgeschriebenen Zeiträume und solange, wie es der Verarbeitungszweck erfordert, gespeichert.'
+            'Anfrage-E-Mails werden aufbewahrt, solange dies zur Bearbeitung der Anfrage und zur Erfüllung etwaiger gesetzlicher Pflichten erforderlich ist. Danach wird ihre Löschung oder Anonymisierung geprüft.'
           ]
         },
         {
           heading: 'Ihre Rechte (KVKK Art. 11 / DSGVO)',
           paragraphs: [
-            'Sie haben Rechte wie Auskunft, Berichtigung, Löschung, Widerspruch gegen die Verarbeitung und Datenübertragbarkeit. Zur Ausübung kontaktieren Sie uns über info@meurology.com.'
+            'Für Rechte nach KVKK Art. 11 wenden Sie sich an info@meurology.com. Soweit die DSGVO gilt, können auch Auskunfts-, Berichtigungs-, Löschungs-, Einschränkungs- und Widerspruchsrechte bestehen. Ihre Einwilligung können Sie an dieselbe Adresse widerrufen; frühere rechtmäßige Verarbeitungen bleiben davon unberührt.'
           ]
         }
       ]
     },
     ru: {
       intro:
-        'Этот перевод носит информационный характер; обязательный к применению текст должен быть утверждён юристом в соответствии с действующим турецким законодательством/GDPR. Как ME Urology Clinic (Doç. Dr. Müslüm Ergün), мы обрабатываем ваши персональные данные в соответствии с турецким Законом о защите персональных данных (KVKK № 6698) и Общим регламентом ЕС по защите данных (GDPR), как описано ниже.',
+        'Это уведомление касается данных, отправленных через форму предварительной оценки на сайте. Применяется турецкий закон № 6698 (KVKK); права по GDPR также действуют, если обработка входит в сферу его применения.',
       sections: [
         {
           heading: 'Оператор данных',
           paragraphs: [
-            'Оператор данных — ME Urology Clinic (Doç. Dr. Müslüm Ergün), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul, рег. №: —, контакт: info@meurology.com / 0532 063 09 69.'
+            'Оператор данных — Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. Контакт: info@meurology.com / 0532 063 09 69.'
           ]
         },
         {
           heading: 'Обрабатываемые персональные данные',
           paragraphs: [
-            'Идентификационные и контактные данные (имя, страна, эл. почта, телефон), данные о здоровье (анализы/снимки, история болезни) и иные сведения, предоставленные через форму.',
-            'Данные о здоровье относятся к особой категории персональных данных и обрабатываются только на основании вашего явного согласия.'
+            'Через форму мы получаем непосредственно от вас имя, страну, адрес электронной почты или телефон, выбранное направление лечения и необязательное сообщение. Сообщение может содержать сведения о здоровье; загрузка файлов недоступна. Сервер отправляет заявку на почту клиники.',
+            'Сведения о здоровье в выбранном направлении или сообщении используются для предварительной оценки на основании вашего отдельного явного согласия.'
           ]
         },
         {
           heading: 'Цели обработки',
           paragraphs: [
-            'Проведение предварительной оценки, предоставление плана лечения и предложения по цене, координация приёмов и поездки, выполнение юридических обязанностей.'
+            'Ответ на ваш запрос и проведение предварительной оценки по вашему желанию. Координация лечения или поездки начинается только если вы решите продолжить.'
           ]
         },
         {
           heading: 'Правовое основание',
           paragraphs: [
-            'Явное согласие, заключение/исполнение договора и юридические обязанности, вытекающие из применимого законодательства.'
+            'Контактные данные обрабатываются для подготовки возможного оказания медицинских услуг по вашему запросу (KVKK, ст. 5/2-c); сведения о здоровье — на основании отдельного явного согласия (KVKK, ст. 6/3-a). Применимые юридические обязанности могут требовать обработки соответствующих записей.'
           ]
         },
         {
           heading: 'Передача данных',
           paragraphs: [
-            'Ваши данные могут передаваться только в необходимом объёме и с обязательствами конфиденциальности соответствующему медицинскому учреждению, переводчикам и поставщикам туристических услуг для оказания услуги.'
+            'Технические поставщики хостинга и электронной почты могут обрабатывать заявки. При запросе координации лечения или поездки необходимые сведения могут передаваться соответствующей клинике или поставщику услуг. Информация, отправленная вами через ссылку WhatsApp, обрабатывается этим отдельным сервисом; форма через WhatsApp не отправляется.'
           ]
         },
         {
           heading: 'Срок хранения',
           paragraphs: [
-            'Ваши персональные данные хранятся в течение сроков, предусмотренных применимым законодательством, и столько, сколько требует цель обработки.'
+            'Письма с заявками хранятся столько, сколько нужно для завершения запроса и выполнения применимых юридических обязанностей. Затем рассматривается удаление или обезличивание.'
           ]
         },
         {
           heading: 'Ваши права (ст. 11 KVKK / GDPR)',
           paragraphs: [
-            'Вы имеете права на доступ, исправление, удаление, возражение против обработки и переносимость данных. Для их реализации свяжитесь с нами через info@meurology.com.'
+            'Для реализации прав по ст. 11 KVKK пишите на info@meurology.com. Если применяется GDPR, могут действовать права доступа, исправления, удаления, ограничения обработки и возражения. Явное согласие можно отозвать по тому же адресу; это не влияет на законность предыдущей обработки.'
           ]
         }
       ]
@@ -268,69 +265,69 @@ export const kvkkDoc: LegalDoc = {
 };
 
 export const consentDoc: LegalDoc = {
-  lastUpdated: '2026-01-01',
+  lastUpdated: '2026-09-21',
   i18n: {
     tr: {
       intro:
-        'Aşağıdaki açık rıza metni, ön değerlendirme formu aracılığıyla paylaştığınız sağlık verilerinin işlenmesine ilişkindir.',
+        'Bu açık rıza, ön değerlendirme formunda paylaşmayı seçtiğiniz sağlık bilgileri içindir; aydınlatma metninden ayrıdır.',
       sections: [
         {
           heading: 'Açık Rıza Beyanı',
           paragraphs: [
-            'KVKK/GDPR aydınlatma metnini okudum ve anladım. Ad, iletişim ve sağlık verilerimin (tahlil, görüntüleme, tıbbi öykü dâhil); ön değerlendirme, tedavi planlaması ve seyahat koordinasyonu amaçlarıyla, gerekli ölçüde ilgili sağlık ve hizmet sağlayıcılarıyla paylaşılmak üzere işlenmesine açık rıza veriyorum.',
-            'Bu rızayı dilediğim zaman info@meurology.com üzerinden geri çekebileceğimi biliyorum.'
+            'Formdaki tedavi seçimi ve isteğe bağlı mesajımda yer alan sağlık bilgilerinin, Doç. Dr. Müslüm Ergün tarafından ön değerlendirme amacıyla işlenmesine açık rıza veriyorum.',
+            'Bu rızayı info@meurology.com adresine yazarak geri çekebileceğimi biliyorum. Geri çekme, önceki hukuka uygun işlemleri etkilemez.'
           ]
         }
       ]
     },
     en: {
       intro:
-        'The explicit consent text below concerns the processing of the health data you share via the pre-assessment form.',
+        'This consent concerns health information you choose to share in the pre-assessment form; it is separate from the privacy notice.',
       sections: [
         {
           heading: 'Explicit Consent Statement',
           paragraphs: [
-            'I have read and understood the KVKK/GDPR privacy notice. I give my explicit consent to the processing of my name, contact and health data (including test results, imaging and medical history) for the purposes of pre-assessment, treatment planning and travel coordination, to be shared to the necessary extent with the relevant healthcare and service providers.',
-            'I understand that I may withdraw this consent at any time via info@meurology.com.'
+            'I explicitly consent to Doç. Dr. Müslüm Ergün processing health information in my treatment selection and optional message for pre-assessment.',
+            'I can withdraw this consent by writing to info@meurology.com. Withdrawal does not affect earlier lawful processing.'
           ]
         }
       ]
     },
     ar: {
       intro:
-        'هذه الترجمة لأغراض التوعية فقط؛ ويجب أن يعتمد محامٍ النصّ الساري وفقًا للقانون التركي/اللائحة العامة لحماية البيانات (GDPR). يتعلّق نص الموافقة الصريحة أدناه بمعالجة البيانات الصحية التي تشاركها عبر نموذج التقييم الأولي.',
+        'تتعلق هذه الموافقة بالمعلومات الصحية التي تختار مشاركتها في نموذج التقييم الأولي، وهي منفصلة عن إشعار الخصوصية.',
       sections: [
         {
           heading: 'إقرار الموافقة الصريحة',
           paragraphs: [
-            'قرأت إشعار الخصوصية KVKK/GDPR وفهمته. وأمنح موافقتي الصريحة على معالجة اسمي وبيانات تواصلي وبياناتي الصحية (بما فيها التحاليل والصور والتاريخ الطبي) لأغراض التقييم الأولي وتخطيط العلاج وتنسيق السفر، على أن تُشارَك بالقدر اللازم مع مقدّمي الرعاية والخدمات المعنيين.',
-            'وأعلم أنه يمكنني سحب هذه الموافقة في أي وقت عبر info@meurology.com.'
+            'أوافق صراحةً على معالجة المعلومات الصحية الواردة في اختيار العلاج والرسالة الاختيارية بواسطة Doç. Dr. Müslüm Ergün لغرض التقييم الأولي.',
+            'يمكنني سحب هذه الموافقة بالكتابة إلى info@meurology.com، ولا يؤثر السحب في مشروعية المعالجة السابقة.'
           ]
         }
       ]
     },
     de: {
       intro:
-        'Diese Übersetzung dient nur zu Informationszwecken; der verbindliche Text muss von einem Anwalt nach geltendem türkischem Recht/der DSGVO bestätigt werden. Der nachstehende Einwilligungstext betrifft die Verarbeitung der Gesundheitsdaten, die Sie über das Vorabbewertungsformular teilen.',
+        'Diese Einwilligung betrifft Gesundheitsangaben, die Sie im Vorabbewertungsformular mitteilen; sie ist von der Datenschutzerklärung getrennt.',
       sections: [
         {
           heading: 'Erklärung der ausdrücklichen Einwilligung',
           paragraphs: [
-            'Ich habe die KVKK/DSGVO-Datenschutzerklärung gelesen und verstanden. Ich willige ausdrücklich in die Verarbeitung meines Namens, meiner Kontakt- und Gesundheitsdaten (einschließlich Befunde, Bildgebung und Krankengeschichte) zu den Zwecken der Vorabbewertung, Behandlungsplanung und Reisekoordination ein, wobei diese im erforderlichen Umfang an die betreffenden Gesundheits- und Dienstleister weitergegeben werden.',
-            'Mir ist bewusst, dass ich diese Einwilligung jederzeit über info@meurology.com widerrufen kann.'
+            'Ich willige ausdrücklich ein, dass Doç. Dr. Müslüm Ergün Gesundheitsangaben in meiner Behandlungsauswahl und freiwilligen Nachricht zur Vorabbewertung verarbeitet.',
+            'Ich kann diese Einwilligung über info@meurology.com widerrufen. Der Widerruf berührt eine frühere rechtmäßige Verarbeitung nicht.'
           ]
         }
       ]
     },
     ru: {
       intro:
-        'Этот перевод носит информационный характер; обязательный к применению текст должен быть утверждён юристом в соответствии с действующим турецким законодательством/GDPR. Приведённый ниже текст согласия касается обработки данных о здоровье, которые вы передаёте через форму предварительной оценки.',
+        'Это согласие касается сведений о здоровье, которые вы решите указать в форме предварительной оценки; оно отдельно от уведомления о конфиденциальности.',
       sections: [
         {
           heading: 'Заявление о явном согласии',
           paragraphs: [
-            'Я прочитал(а) и понял(а) уведомление о конфиденциальности KVKK/GDPR. Я даю явное согласие на обработку моих имени, контактных данных и данных о здоровье (включая анализы, снимки и историю болезни) в целях предварительной оценки, планирования лечения и координации поездки, с передачей в необходимом объёме соответствующим медицинским и сервисным поставщикам.',
-            'Я понимаю, что могу отозвать это согласие в любое время через info@meurology.com.'
+            'Я явно соглашаюсь на обработку Doç. Dr. Müslüm Ergün сведений о здоровье в выбранном направлении лечения и необязательном сообщении для предварительной оценки.',
+            'Я могу отозвать согласие, написав на info@meurology.com. Отзыв не влияет на законность предыдущей обработки.'
           ]
         }
       ]

@@ -47,6 +47,7 @@
     "heroPrimaryCta": "Kostenlose Bewertung über WhatsApp",
     "heroSecondaryCta": "Behandlungen ansehen",
     "accreditationsTitle": "Akkreditierung und Sicherheit",
+    "membershipTitle": "Fachmitgliedschaft",
     "treatmentsTitle": "Behandlungsbereiche",
     "treatmentsSubtitle": "Erreichen Sie schnell die passende Behandlungsseite.",
     "whyTitle": "Warum Patienten uns wählen",
@@ -58,7 +59,7 @@
       "supportTitle": "Rundum-Betreuung",
       "supportBody": "Dolmetscher, Transfers, Unterkunft und Online-Nachsorge nach der Entlassung.",
       "trustTitle": "Überprüfbares Vertrauen",
-      "trustBody": "Approbation, Mitgliedschaften und Akkreditierungen werden offen angegeben."
+      "trustBody": "Wir informieren klar über die chirurgische Erfahrung und den Behandlungsablauf."
     },
     "processTitle": "So funktioniert es",
     "processCtaTitle": "Lassen Sie uns gemeinsam den richtigen Weg für Ihren Fall finden",
@@ -207,7 +208,8 @@
     "messagePlaceholder": "Ihre Beschwerden oder Fragen",
     "file": "Befunde / Datei hochladen",
     "filePlaceholder": "Der Datei-Upload wird bald aktiviert. Vorerst können Sie Dateien über WhatsApp senden.",
-    "consent": "Ich willige ausdrücklich ein, dass meine personenbezogenen Daten gemäß der KVKK/DSGVO-Datenschutzerklärung verarbeitet werden.",
+    "privacyLinksIntro": "Lesen Sie vor dem Absenden, wie Ihre Daten verarbeitet werden:",
+    "consent": "Ich willige ausdrücklich in die Verarbeitung der Gesundheitsangaben ein, die ich für die Vorabbewertung mitteile.",
     "consentRequired": "Zum Fortfahren ist eine ausdrückliche Einwilligung erforderlich.",
     "submit": "Formular senden",
     "submitting": "Wird gesendet...",
@@ -222,8 +224,7 @@
   "Legal": {
     "kvkkTitle": "KVKK / DSGVO-Datenschutzerklärung",
     "consentTitle": "Ausdrückliche Einwilligung",
-    "lastUpdated": "Zuletzt aktualisiert",
-    "placeholderNotice": "Dieser Text ist eine Vorlage. Finalisieren Sie ihn vor der Veröffentlichung mit Ihrem Rechtsbeistand."
+    "lastUpdated": "Zuletzt aktualisiert"
   },
   "Footer": {
     "tagline": "Urologische Chirurgie und Gesundheitstourismus für internationale Patienten.",

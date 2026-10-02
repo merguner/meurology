@@ -14,8 +14,8 @@ export const runtime = 'nodejs';
  * Gelen veriyi doğrular ve kliniğin kendi SMTP hesabı üzerinden (info@meurology.com)
  * kendine bir bildirim e-postası gönderir (nodemailer). Üçüncü parti servis yok.
  *
- * E-posta gönderimi başarısız olsa bile hasta tarafında HATA GÖSTERİLMEZ
- * (başvuru kaybolmasın); hata sunucu loguna yazılır.
+ * E-posta gönderimi başarısızsa başvuru başarılı sayılmaz; hasta tekrar
+ * deneyebilir veya doğrudan iletişim kanalına geçebilir.
  *
  * Ortam değişkenleri (.env.local) — KODA YAZILMAZ:
  *  - SMTP_HOST    (ör. mail.meurology.com)
@@ -129,19 +129,16 @@ export async function POST(request: Request) {
   }
 
   const at = new Date().toISOString();
+  const consentTextVersion = '2026-09-21';
 
-  // Her hâlükârda sunucu loguna yaz (PII olmadan özet).
+  // Sunucu logunda hasta kimliği ve iletişim bilgilerini tutma.
   console.info('[on-degerlendirme] Yeni başvuru alındı:', {
-    name: data.name,
-    country: data.country,
-    treatment: data.treatment,
     hasEmail,
     hasPhone,
-    locale: data.locale,
     at
   });
 
-  // SMTP ile e-posta bildirimi. Başarısız olsa da hasta tarafında hata gösterme.
+  // SMTP ile e-posta bildirimi.
   try {
     const { SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS } = process.env;
     if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
@@ -218,6 +215,7 @@ export async function POST(request: Request) {
         <tr><td style="padding:6px 0;color:#555;">Başvuru zamanı</td><td style="padding:6px 0;">${esc(
           at
         )}</td></tr>
+        <tr><td style="padding:6px 0;color:#555;">Sağlık verisi rızası</td><td style="padding:6px 0;">Onaylandı (metin sürümü: ${consentTextVersion})</td></tr>
       </table>
       <div style="margin-top:16px;">
         <p style="margin:0 0 4px;color:#555;font-size:14px;">Mesaj</p>
@@ -238,6 +236,7 @@ export async function POST(request: Request) {
       !hasEmail ? 'NOT: Hasta e-posta bırakmadı — WhatsApp’tan yazabilirsiniz.' : null,
       `Dil: ${data.locale || 'tr'}`,
       `Başvuru zamanı: ${at}`,
+      `Sağlık verisi rızası: Onaylandı (metin sürümü: ${consentTextVersion})`,
       '',
       `Mesaj: ${data.message || '—'}`
     ].filter(Boolean);
@@ -252,8 +251,8 @@ export async function POST(request: Request) {
       ...(hasEmail ? { replyTo: data.email as string } : {})
     });
   } catch (err) {
-    // Hasta deneyimini bozmadan hatayı loga yaz — böylece arıza fark edilir.
     console.error('[on-degerlendirme] E-posta bildirimi gönderilemedi:', err);
+    return NextResponse.json({ ok: false, error: 'delivery_failed' }, { status: 503 });
   }
 
   return NextResponse.json({ ok: true });

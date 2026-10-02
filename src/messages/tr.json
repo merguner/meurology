@@ -47,6 +47,7 @@
     "heroPrimaryCta": "WhatsApp'tan ücretsiz değerlendirme",
     "heroSecondaryCta": "Tedavileri incele",
     "accreditationsTitle": "Akreditasyon ve güvence",
+    "membershipTitle": "Mesleki üyelik",
     "treatmentsTitle": "Tedavi alanları",
     "treatmentsSubtitle": "İhtiyacınıza uygun tedavi sayfasına hızlıca ulaşın.",
     "whyTitle": "Neden bizi tercih ediyorlar?",
@@ -58,7 +59,7 @@
       "supportTitle": "Uçtan uca destek",
       "supportBody": "Tercüman, transfer, konaklama ve taburculuk sonrası online takip.",
       "trustTitle": "Doğrulanabilir güven",
-      "trustBody": "Diploma tescili, dernek üyelikleri ve akreditasyonlar açıkça belirtilir."
+      "trustBody": "Cerrahi deneyim ve tedavi süreci hakkında açık bilgi paylaşılır."
     },
     "processTitle": "Nasıl çalışır?",
     "processCtaTitle": "Durumunuza uygun yol haritasını birlikte çıkaralım",
@@ -207,7 +208,8 @@
     "messagePlaceholder": "Şikâyetiniz veya sorularınız",
     "file": "Tahlil / dosya yükleme",
     "filePlaceholder": "Dosya yükleme yakında etkinleşecek. Şimdilik dosyalarınızı WhatsApp'tan iletebilirsiniz.",
-    "consent": "Kişisel verilerimin KVKK/GDPR aydınlatma metni kapsamında işlenmesine açık rıza veriyorum.",
+    "privacyLinksIntro": "Başvurmadan önce veri işleme bilgilerini okuyun:",
+    "consent": "Ön değerlendirme için paylaşmayı seçtiğim sağlık bilgilerimin işlenmesine açık rıza veriyorum.",
     "consentRequired": "Devam etmek için açık rıza gereklidir.",
     "submit": "Formu gönder",
     "submitting": "Gönderiliyor...",
@@ -222,8 +224,7 @@
   "Legal": {
     "kvkkTitle": "KVKK / GDPR Aydınlatma Metni",
     "consentTitle": "Açık Rıza Metni",
-    "lastUpdated": "Son güncelleme",
-    "placeholderNotice": "Bu metin bir şablondur. Yayına almadan önce hukuk danışmanınızla nihai hâline getirin."
+    "lastUpdated": "Son güncelleme"
   },
   "Footer": {
     "tagline": "Uluslararası hastalar için ürolojik cerrahi ve sağlık turizmi.",

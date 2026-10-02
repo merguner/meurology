@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { treatments } from '@/content/treatments';
 import { resolveContent } from '@/content/types';
 import type { Locale } from '@/i18n/routing';
@@ -16,6 +17,7 @@ export function PreAssessmentForm({
   defaultTreatment?: string;
 }) {
   const t = useTranslations('Form');
+  const tl = useTranslations('Legal');
   const locale = useLocale() as Locale;
   const [status, setStatus] = useState<Status>('idle');
   const [clientError, setClientError] = useState<string | null>(null);
@@ -134,6 +136,17 @@ export function PreAssessmentForm({
         <input id="file" name="file" type="file" disabled aria-describedby="file-note" className="form-input file:mr-3 file:rounded file:border-0 file:bg-surface-2 file:px-3 file:py-1.5 file:text-sm" />
         <p id="file-note" className="mt-1 text-xs text-muted">{t('filePlaceholder')}</p>
       </Field>
+
+      <p className="text-sm text-muted">
+        {t('privacyLinksIntro')}{' '}
+        <Link href="/yasal/kvkk" className="font-medium text-primary underline underline-offset-2">
+          {tl('kvkkTitle')}
+        </Link>{' '}
+        ·{' '}
+        <Link href="/yasal/acik-riza" className="font-medium text-primary underline underline-offset-2">
+          {tl('consentTitle')}
+        </Link>
+      </p>
 
       <label className="flex items-start gap-3 text-sm">
         <input type="checkbox" name="consent" className="mt-1 h-4 w-4 shrink-0 rounded border-border accent-[rgb(var(--c-primary))]" required />

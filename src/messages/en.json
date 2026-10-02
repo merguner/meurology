@@ -47,6 +47,7 @@
     "heroPrimaryCta": "Free assessment on WhatsApp",
     "heroSecondaryCta": "Explore treatments",
     "accreditationsTitle": "Accreditation and assurance",
+    "membershipTitle": "Professional membership",
     "treatmentsTitle": "Treatment areas",
     "treatmentsSubtitle": "Quickly reach the treatment page that fits your needs.",
     "whyTitle": "Why patients choose us",
@@ -58,7 +59,7 @@
       "supportTitle": "End-to-end support",
       "supportBody": "Interpreter, transfers, accommodation and post-discharge online follow-up.",
       "trustTitle": "Verifiable trust",
-      "trustBody": "Diploma registration, society memberships and accreditations are stated openly."
+      "trustBody": "Clear information is provided about surgical experience and the treatment process."
     },
     "processTitle": "How it works",
     "processCtaTitle": "Let's map out the right pathway for your case together",
@@ -207,7 +208,8 @@
     "messagePlaceholder": "Your symptoms or questions",
     "file": "Upload test results / file",
     "filePlaceholder": "File upload will be enabled soon. For now you can send files via WhatsApp.",
-    "consent": "I give explicit consent for my personal data to be processed under the KVKK/GDPR privacy notice.",
+    "privacyLinksIntro": "Before submitting, read how your data is processed:",
+    "consent": "I explicitly consent to the processing of health information I choose to share for pre-assessment.",
     "consentRequired": "Explicit consent is required to continue.",
     "submit": "Send form",
     "submitting": "Sending...",
@@ -222,8 +224,7 @@
   "Legal": {
     "kvkkTitle": "KVKK / GDPR Privacy Notice",
     "consentTitle": "Explicit Consent Text",
-    "lastUpdated": "Last updated",
-    "placeholderNotice": "This text is a template. Finalize it with your legal counsel before going live."
+    "lastUpdated": "Last updated"
   },
   "Footer": {
     "tagline": "Urological surgery and health tourism for international patients.",

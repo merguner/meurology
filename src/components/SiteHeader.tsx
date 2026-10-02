@@ -64,6 +64,22 @@ export async function SiteHeader() {
           <MobileNav />
         </div>
       </div>
+      <nav aria-label="Ana menü" className="border-t border-border/80 min-[1200px]:hidden">
+        <ul className="mx-auto flex max-w-[1600px] items-center gap-1 overflow-x-auto px-3 py-2 sm:px-5">
+          {navItems
+            .filter((item) => item.href !== '/')
+            .map((item) => (
+              <li key={item.href} className="shrink-0">
+                <Link
+                  href={item.href}
+                  className="block whitespace-nowrap rounded-lg px-3 py-2 text-sm font-medium text-fg/85 hover:bg-surface-2 hover:text-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                >
+                  {t(item.key)}
+                </Link>
+              </li>
+            ))}
+        </ul>
+      </nav>
     </header>
   );
 }

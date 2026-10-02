@@ -37,12 +37,12 @@ export default async function HomePage({
       {/* SABİT GÜVEN ŞERİDİ — kaymaz; istatistik + öne çıkan Google yorumları */}
       <TrustStrip locale={locale} />
 
-      {/* AKREDİTASYONLAR */}
+      {/* MESLEKİ ÜYELİK */}
       <section className="container-content py-14">
         <h2 className="mb-6 text-xl font-bold md:text-2xl">
-          {t('accreditationsTitle')}
+          {t('membershipTitle')}
         </h2>
-        <AccreditationBadges />
+        <AccreditationBadges only={['eau']} />
       </section>
 
       {/* RAKAMLARLA — cerrahi deneyim (sayaç animasyonlu) */}
