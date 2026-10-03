@@ -114,7 +114,8 @@
       "catheter": "مدة القسطرة",
       "returnToWork": "العودة إلى العمل",
       "flightClearance": "الإذن بالسفر جوًا"
-    }
+    },
+    "subPagesTitle": "العلاجات ضمن هذه الفئة"
   },
   "Surgeon": {
     "title": "الملف الشخصي للجرّاح",

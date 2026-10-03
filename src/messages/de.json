@@ -114,7 +114,8 @@
       "catheter": "Katheterdauer",
       "returnToWork": "Rückkehr zur Arbeit",
       "flightClearance": "Flugfreigabe"
-    }
+    },
+    "subPagesTitle": "Behandlungen in dieser Kategorie"
   },
   "Surgeon": {
     "title": "Chirurgenprofil",

@@ -114,7 +114,8 @@
       "catheter": "Sonda süresi",
       "returnToWork": "İşe dönüş",
       "flightClearance": "Uçuşa izin"
-    }
+    },
+    "subPagesTitle": "Bu kategorideki tedaviler"
   },
   "Surgeon": {
     "title": "Cerrah Profili",

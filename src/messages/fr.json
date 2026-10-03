@@ -114,7 +114,8 @@
       "catheter": "Durée de la sonde",
       "returnToWork": "Reprise du travail",
       "flightClearance": "Autorisation de vol"
-    }
+    },
+    "subPagesTitle": "Traitements de cette catégorie"
   },
   "Surgeon": {
     "title": "Profil du chirurgien",

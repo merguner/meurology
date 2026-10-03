@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { routing, type Locale } from '@/i18n/routing';
-import { getTreatment, publishedTreatments } from '@/content/treatments';
+import { getTreatment, publishedTreatments, childTreatments } from '@/content/treatments';
 import { resolveContent, treatmentCategory, isPlaceholder } from '@/content/types';
 import { resolveConsultation } from '@/content/consultation';
 import { siteConfig, formatPriceRangeEUR, whatsappMessageFor } from '@/config/site';
@@ -104,12 +104,26 @@ export default async function TreatmentPage({
         new Date(`${treatment.lastReviewed}T00:00:00`)
       )
     : null;
-  const patientStories = storiesForTreatment(slug);
-  // İlgili tedaviler aynı kategoriden; yetmezse genelle tamamla.
+  /**
+   * DİKKAT: Burada DAİMA `canonical` (Türkçe iç anahtar) kullanılır, `slug` DEĞİL.
+   * `slug` route'tan gelen LOKALİZE slug'dır (ör. "kidney-stones"); içerik
+   * dosyaları iç anahtarla eşleşir. Karıştırılırsa yabancı dillerde hasta
+   * yorumları kaybolur ve sayfa kendini "ilgili tedavi" olarak listeler.
+   */
+  const patientStories = storiesForTreatment(canonical);
+
+  /** Hub ise alt sayfaları; değilse aynı kategoriden ilgili tedaviler. */
+  const children = childTreatments(canonical);
   const sameCat = publishedTreatments.filter(
-    (tr) => tr.slug !== slug && treatmentCategory(tr) === treatmentCategory(treatment)
+    (tr) => tr.slug !== canonical && treatmentCategory(tr) === treatmentCategory(treatment)
   );
-  const related = (sameCat.length >= 3 ? sameCat : publishedTreatments.filter((tr) => tr.slug !== slug)).slice(0, 3);
+  const related =
+    children.length > 0
+      ? children
+      : (sameCat.length >= 3
+          ? sameCat
+          : publishedTreatments.filter((tr) => tr.slug !== canonical)
+        ).slice(0, 3);
 
   // JSON-LD: MedicalWebPage + FAQPage + ilişkili Physician.
   const jsonLd = {
@@ -638,7 +652,9 @@ export default async function TreatmentPage({
 
       {/* İlgili tedaviler */}
       <section className="container-content py-14">
-        <h2 className="mb-6 text-xl font-bold md:text-2xl">{t('relatedTitle')}</h2>
+        <h2 className="mb-6 text-xl font-bold md:text-2xl">
+          {children.length > 0 ? t('subPagesTitle') : t('relatedTitle')}
+        </h2>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {related.map((tr) => {
             const rc = resolveContent(tr, locale);
