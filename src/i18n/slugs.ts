@@ -24,6 +24,14 @@ export const treatmentSlugMap = {
     ru: 'roboticheskaya-prostatektomiya',
     ar: 'robotic-prostatectomy'
   },
+  'prostat-kanseri': {
+    tr: 'prostat-kanseri',
+    en: 'prostate-cancer',
+    de: 'prostatakrebs',
+    fr: 'cancer-de-la-prostate',
+    ru: 'rak-prostaty',
+    ar: 'prostate-cancer'
+  },
   'sinir-koruyucu-cerrahi': {
     tr: 'sinir-koruyucu-cerrahi',
     en: 'nerve-sparing-surgery',

@@ -15,6 +15,216 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
+     * TASLAK — cerrah onayına sunuldu.
+     * HUB SAYFASI (prompt m.4.1). Tek bir işlemi değil, prostat kanserinde
+     * KARAR SÜRECİNİ anlatır: tanıdan risk grubuna, risk grubundan tedavi
+     * seçimine. Alt sayfalara yönlendirir.
+     * Şablon alanları hub'a uyarlandı: "riskler" = karar sürecinin riskleri
+     * (aşırı/eksik tedavi), "alternatifler" = tedavi seçenekleri,
+     * "süreç" = tanıdan tedaviye hasta yolculuğu.
+     * Onaylanınca robotik-prostatektomi ve sinir-koruyucu-cerrahi bu hub'ın
+     * altına taşınacak (parent güncellenecek).
+     * Kaynak: EAU Prostate Cancer kılavuzu. Kaynaksız oran YAZILMAMIŞTIR.
+     */
+    draft: true,
+    slug: 'prostat-kanseri',
+    lastReviewed: '2026-10-04',
+    icon: 'prostate',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'Prostat Kanseri: Tanıdan Tedavi Kararına',
+        summary:
+          'Prostat kanseri tek bir hastalık değildir. Risk grubunuz, tedavi seçenekleriniz ve kararı neyin belirlediği üzerine bir yol haritası.',
+        metaTitle: 'Prostat Kanseri | Tanı, Risk Grupları ve Tedavi Seçenekleri',
+        metaDescription:
+          'Prostat kanserinde tanı süreci, risk grupları ve tedavi seçenekleri: aktif izlem, cerrahi ve radyoterapi. Kararı neyin belirlediğine dair kapsamlı rehber.',
+        definition: [
+          'Prostat kanseri erkeklerde en sık görülen kanserlerden biridir. Önemli bir özelliği, çoğu olguda YAVAŞ İLERLEMESİDİR. Bu nedenle her prostat kanseri aynı aciliyeti taşımaz ve her hastaya aynı tedavi uygulanmaz.',
+          'Bu sayfanın amacı size bir tedavi satmak değil, karar sürecini anlaşılır kılmaktır. Çünkü prostat kanserinde en sık yapılan hata, risk grubuna bakmadan "kanser var, hemen alınsın" diye düşünmek veya tersine, gerçekten tedavi gerektiren bir hastalığı ertelemektir.',
+          'TANI NASIL KONUR: Süreç genellikle yükselen bir PSA değeri veya parmakla muayenede saptanan bir sertlikle başlar. Günümüzde doğrudan biyopsiye geçilmez; önce multiparametrik prostat MR çekilir. MR şüpheli bir alan gösterirse, bu alandan hedefli örnek alınır (füzyon biyopsi). Bu yaklaşım, gereksiz biyopsileri azaltır ve önemli kanserlerin atlanmasını önler.',
+          'BİYOPSİ SONUCU NE ANLATIR: Patolog, kanser hücrelerinin mikroskop altında ne kadar saldırgan göründüğünü Gleason skoruyla puanlar; bu skor ISUP derecesi olarak 1–5 arası beş gruba sadeleştirilir. ISUP 1 en yavaş seyirli, ISUP 5 en saldırgan gruptur. Ayrıca kaç örnekte ve hangi bölgelerde tümör bulunduğu da kaydedilir.',
+          'RİSK GRUBU: PSA değeri, ISUP derecesi ve tümörün evresi birlikte değerlendirilerek hastalık düşük, orta veya yüksek riskli olarak sınıflandırılır. Tedavi kararının temelini bu sınıflandırma oluşturur. Gerekli görülürse hastalığın yayılıp yayılmadığını araştırmak için ek görüntüleme (kemik sintigrafisi, PSMA PET gibi) istenir.',
+          'KARARI NE BELİRLER: Risk grubunuz tek başına yeterli değildir. Yaşınız, beklenen yaşam süreniz, eşlik eden hastalıklarınız, idrar ve cinsel işlevleriniz ve kendi önceliğiniz birlikte değerlendirilir. Aynı risk grubundaki iki hastaya farklı tedaviler önerilebilir; bu bir tutarsızlık değil, kişiye özel karar vermenin doğal sonucudur.'
+        ],
+        eligibility: {
+          suitable: [
+            'PSA değeri yükselen veya parmakla muayenesinde şüphe saptanan erkekler',
+            'Biyopsiyle prostat kanseri tanısı konmuş ve tedavi seçeneklerini değerlendirmek isteyenler',
+            'Başka bir merkezde tedavi önerilmiş ve ikinci görüş arayan hastalar',
+            'Aktif izlem önerilmiş ancak süreci anlamak isteyen düşük riskli hastalar',
+            'Tedavi sonrası PSA’sı yeniden yükselen (biyokimyasal nüks) hastalar'
+          ],
+          notSuitable: [
+            'Henüz PSA ölçümü veya muayenesi yapılmamış kişiler — önce temel değerlendirme gerekir',
+            'Yalnızca idrar şikâyeti olan ve kanser şüphesi bulunmayan hastalar — bu durumda iyi huylu prostat büyümesi değerlendirilmelidir',
+            'Acil müdahale gerektiren durumlar (idrar yapamama, böbrek yetmezliği bulguları) — öncelik acil tedavidir',
+            'Tanısı doğrulanmamış, yalnızca tek bir yüksek PSA değeri olan kişiler — PSA tek başına tanı koydurmaz'
+          ]
+        },
+        technology: [
+          'Multiparametrik prostat MR — biyopsi öncesi şüpheli alanın belirlenmesi',
+          'MR füzyon biyopsi — hedefli örnekleme',
+          'PSMA PET (gerekli görülen olgularda) — yayılımın değerlendirilmesi',
+          'da Vinci robotik sistem — cerrahi tercih edilirse'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Robotik radikal prostatektomi ve üroonkolojik cerrahi, Doç. Dr. Müslüm Ergün’ün çalışma alanları arasındadır. Tedavi kararı, risk grubu ve hastanın öncelikleri birlikte değerlendirilerek verilir; gerekli olgularda çok disiplinli konsey görüşü alınır.'
+        },
+        timeline: [
+          {
+            when: '1. adım',
+            title: 'PSA ve muayene',
+            body: 'Yükselen PSA veya muayene bulgusu süreci başlatır. Tek bir yüksek PSA değeri tanı koydurmaz; enfeksiyon ve iyi huylu büyüme de PSA’yı yükseltebilir, bu nedenle değer tekrarlanır.'
+          },
+          {
+            when: '2. adım',
+            title: 'Multiparametrik MR',
+            body: 'Biyopsiden ÖNCE çekilir. Şüpheli alan varsa yerini ve kapsülle ilişkisini gösterir; yoksa gereksiz biyopsiden kaçınılabilir.'
+          },
+          {
+            when: '3. adım',
+            title: 'Hedefli biyopsi',
+            body: 'MR’da işaretlenen alandan füzyon tekniğiyle örnek alınır. Sonuç ISUP derecesi olarak raporlanır.'
+          },
+          {
+            when: '4. adım',
+            title: 'Risk grubu ve evreleme',
+            body: 'PSA, ISUP derecesi ve evre birlikte değerlendirilerek risk grubu belirlenir. Gerekliyse yayılım araştırması yapılır.'
+          },
+          {
+            when: '5. adım',
+            title: 'Tedavi kararı',
+            body: 'Risk grubu, yaşınız, eşlik eden hastalıklarınız ve önceliğiniz birlikte konuşularak karar verilir. Bu aşamada ikinci görüş almak tamamen makuldür.'
+          }
+        ],
+        risks: [
+          'AŞIRI TEDAVİ: Düşük riskli, yavaş seyirli bir kanserin gereksiz ameliyat veya radyoterapiyle tedavi edilmesi; yan etkiler oluşur ama yaşam süresine katkı sınırlıdır',
+          'EKSİK TEDAVİ: Gerçekten tedavi gerektiren bir hastalığın izleme bırakılması veya ertelenmesi',
+          'Tek bir PSA değerine dayanarak karar vermek — PSA enfeksiyon ve iyi huylu büyümeyle de yükselir',
+          'MR çekilmeden doğrudan biyopsiye geçmek — önemli tümörlerin atlanma olasılığı artar',
+          'Tedavi yan etkilerinin (idrar kaçırma, cinsel işlev değişiklikleri) ameliyat öncesinde konuşulmaması'
+        ],
+        alternatives: [
+          'Aktif izlem — düşük riskli, seçilmiş hastalarda düzenli PSA, MR ve biyopsi ile yakın takip',
+          'Radikal prostatektomi — cerrahi olarak prostatın alınması (robotik veya açık)',
+          'Radyoterapi — dış ışın tedavisi veya brakiterapi',
+          'Fokal tedaviler — seçilmiş olgularda tümörlü alanın hedeflenmesi; kanıt düzeyi gelişmektedir',
+          'Hormon tedavisi — ileri evrede, genellikle diğer tedavilerle birlikte'
+        ],
+        comparison: {
+          title: 'Risk grubuna göre öne çıkan seçenekler',
+          columns: ['Risk grubu', 'Tipik bulgular', 'Öne çıkan seçenekler', 'Dikkat edilecek'],
+          rows: [
+            {
+              label: 'Düşük risk',
+              values: [
+                'PSA düşük, ISUP 1, sınırlı tutulum',
+                'Aktif izlem öncelikli; cerrahi ve radyoterapi de seçenek',
+                'Aşırı tedaviden kaçınmak; izleme uyum şart'
+              ]
+            },
+            {
+              label: 'Orta risk',
+              values: [
+                'ISUP 2–3 veya PSA orta düzeyde yüksek',
+                'Radikal prostatektomi veya radyoterapi',
+                'Sinir koruma olasılığı bu grupta ayrıca değerlendirilir'
+              ]
+            },
+            {
+              label: 'Yüksek risk',
+              values: [
+                'ISUP 4–5, yüksek PSA veya ileri evre',
+                'Cerrahi veya radyoterapi, sıklıkla ek tedaviyle',
+                'Onkolojik güvenlik önceliklidir; yayılım araştırması gerekir'
+              ]
+            }
+          ],
+          note:
+            'Bu tablo karar mantığını özetler, bireysel öneri değildir. Nihai karar yaşınız, eşlik eden hastalıklarınız ve önceliğinizle birlikte verilir.'
+        },
+        recovery: [
+          {
+            period: 'Tanı aşaması',
+            body: 'Bu dönemde en çok ihtiyaç duyulan şey zaman ve doğru bilgidir. Prostat kanserinin çoğu formu, birkaç hafta içinde karar vermenize izin verecek kadar yavaş seyreder; aceleyle karar vermek zorunda değilsiniz.'
+          },
+          {
+            period: 'Karar aşaması',
+            body: 'Seçeneklerin yan etkilerini kendi yaşam önceliklerinizle karşılaştırın. İdrar tutma ve cinsel işlev beklentilerinizi açıkça konuşun; bu, sonradan yaşanan hayal kırıklıklarının çoğunu önler.'
+          },
+          {
+            period: 'Tedavi sonrası',
+            body: 'Hangi tedavi seçilirse seçilsin düzenli PSA takibi yapılır. PSA’nın beklenen düzeyde seyretmesi, tedavinin etkili olduğunu gösteren en pratik ölçüttür.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat seçilen tedaviye göre değişir ve ilgili tedavi sayfasında belirtilir. Kesin teklif, risk grubu ve tedavi planı netleştikten sonra verilir.'
+        },
+        packageIncludes: [
+          'Dosya değerlendirmesi ve risk grubunun belirlenmesi',
+          'Gerekli görüntüleme ve patoloji incelemelerinin gözden geçirilmesi',
+          'Tedavi seçeneklerinin ayrıntılı anlatıldığı görüşme',
+          'Seçilen tedaviye ait ameliyat/işlem ve hastane süreci',
+          'Havalimanı–hastane–otel transferleri ve konaklama',
+          'Tıbbi tercüman ve hasta koordinatörü',
+          'Tedavi sonrası PSA takibi ve online kontroller'
+        ],
+        faqs: [
+          {
+            q: 'Prostat kanseri tanısı aldım, hemen ameliyat olmam gerekir mi?',
+            a: 'Çoğu olguda hayır. Prostat kanserinin önemli bir bölümü yavaş seyreder ve karar vermek için birkaç haftanız vardır. Önce risk grubunuzun netleşmesi gerekir. Düşük riskli hastalarda hemen tedavi yerine aktif izlem daha doğru olabilir.'
+          },
+          {
+            q: 'PSA’m yüksek çıktı, kanser miyim?',
+            a: 'Mutlaka değil. PSA prostat dokusunun ürettiği bir proteindir ve iltihap, iyi huylu büyüme, hatta yakın zamanda yapılan bazı işlemler değeri yükseltebilir. Bu nedenle tek bir yüksek değerle tanı konmaz; değer tekrarlanır ve gerekirse MR ile ilerlenir.'
+          },
+          {
+            q: 'Biyopsiden önce neden MR çekiliyor?',
+            a: 'Multiparametrik MR, şüpheli alanı önceden gösterir. Böylece biyopsi rastgele değil hedefli yapılır; önemli kanserlerin atlanma olasılığı azalır ve bazı hastalarda gereksiz biyopsiden kaçınılabilir.'
+          },
+          {
+            q: 'Cerrahi mi radyoterapi mi daha iyi?',
+            a: 'Orta ve yüksek riskli lokalize hastalıkta her ikisi de kabul edilen seçeneklerdir ve birinin diğerine kesin üstünlüğünden söz edilmez. Fark yan etki profillerindedir: cerrahide idrar kaçırma erken dönemde daha belirgindir, radyoterapide bağırsak ve mesane şikâyetleri zamanla ortaya çıkabilir. Seçim yaşınız, eşlik eden hastalıklarınız ve önceliğinizle birlikte yapılır.'
+          },
+          {
+            q: 'Aktif izlem "hiçbir şey yapmamak" mı demek?',
+            a: 'Hayır. Aktif izlem planlı bir programdır: belirli aralıklarla PSA ölçümü, MR ve gerektiğinde tekrar biyopsi yapılır. Amaç, hastalık ilerleme belirtisi gösterirse zamanında tedaviye geçmek ve bu arada gereksiz yan etkilerden korunmaktır. İzleme uyum sağlayamayacak hastalar için uygun değildir.'
+          },
+          {
+            q: 'Cinsel işlevim ve idrar tutmam etkilenir mi?',
+            a: 'Her iki ana tedavi de bu işlevleri etkileyebilir. Cerrahide sinir koruyucu teknik uygulanabiliyorsa cinsel işlev için şans artar; idrar tutma genellikle haftalar içinde düzelir. Beklentinizi tedavi öncesinde net konuşmanız önemlidir.'
+          },
+          {
+            q: 'İkinci görüş almak isterim, dosyamı nasıl gönderebilirim?',
+            a: 'MR görüntülerinizi, biyopsi/patoloji raporunuzu ve PSA değerlerinizi paylaşmanız yeterlidir. Dosyanızı yalnızca ikinci görüş için de gönderebilirsiniz; bu sizi tedavi almaya mecbur bırakmaz.'
+          },
+          {
+            q: 'Tedaviden sonra PSA’m yeniden yükselirse ne olur?',
+            a: 'Buna biyokimyasal nüks denir ve görüntülemede hastalık görünmeden önce ortaya çıkabilir. Yükselme hızı, ilk tedavi ve risk grubu değerlendirilerek ek tedavi veya yakın izlem planlanır. Erken saptanması seçenekleri genişletir.'
+          },
+          {
+            q: 'Ailemde prostat kanseri var, ne yapmalıyım?',
+            a: 'Birinci derece akrabasında prostat kanseri olan erkeklerde değerlendirmeye daha erken başlanması önerilir. Hangi yaşta başlanacağı ve hangi sıklıkta tekrarlanacağı kişisel risk profilinize göre belirlenir; bunu hekiminizle konuşmanız doğru olur.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Prostate Cancer — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      }
+    }
+  },
+  {
+    /**
      * Cerrah tarafından 4 Ekim 2026 tarihinde onaylandı ve yayına alındı.
      * KARAR SAYFASI: ayrı ameliyat değil, radikal prostatektomi içindeki teknik.
      * Onkolojik güvenliğin cinsel işlevin önünde geldiği açıkça yazılıdır;
