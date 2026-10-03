@@ -229,11 +229,6 @@ export const treatments: Treatment[] = [
             label:
               'EAU Guidelines on Sexual and Reproductive Health — Avrupa Üroloji Derneği',
             url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
-          },
-          {
-            label:
-              'Mohamed H, Abdelshafi A, Ahmed A, Deameh MG, Mohamed T, Ramez M, Raheem O. Impact of cavernous tissue-sparing techniques on postoperative outcomes in penile prosthesis surgery: a systematic review and meta-analysis. The Journal of Sexual Medicine, 2026;23(2):qdag006.',
-            url: 'https://doi.org/10.1093/jsxmed/qdag006'
           }
         ]
       }
@@ -261,9 +256,10 @@ export const treatments: Treatment[] = [
      * aquadisseksiyona atfetmez.
      *
      * TODO-DOGRULA (cerrahtan):
-     *   1) Kullanılan sıvı ve varsa ek madde
-     *   2) Rutin mi, yalnızca fibrotik olgularda mı uygulanıyor
-     *   3) Cerrahın bu teknikle kendi yayını/bildirisi varsa eklenecek
+     *   1) Kullanılan sıvı ve varsa ek madde (tek açık soru)
+     * CEVAPLANDI (4 Eki 2026): Cerrahın bu teknikle kendi yayını YOK — bu
+     * nedenle sayfada yalnızca destekleyici literatüre atıf var. Teknik rutin
+     * değil, seçilmiş ve uygun olgularda uygulanıyor; metin buna göre yazıldı.
      */
     draft: true,
     slug: 'penil-protez',
@@ -296,7 +292,7 @@ export const treatments: Treatment[] = [
           'Bu bulgu şu anlama GELMEZ: protez takıldıktan sonra cihazsız, ilişkiye yetecek bir ereksiyonunuz olacağı. Korunan şey kısmi dolgunluk ve damar işlevidir; sertliği yine protez sağlar. Karar yine kalıcıdır. Bu nedenle penil protez, diğer tedavi seçenekleri gerçekten denendikten sonra ve beklentiler ayrıntılı konuşulduktan sonra önerilir.',
           'İki temel protez tipi vardır. Üç parçalı şişirilebilir protezde silindirler, skrotuma yerleştirilen küçük bir pompa ve karın içine konan bir sıvı rezervuarı bulunur; pompa sıkılarak sertlik sağlanır, işlem bitince sıvı geri boşaltılır ve penis yumuşak hâle döner. Bükülebilir (malleable) protezde ise penis sürekli yarı sert kalır ve elle istenen konuma getirilir.',
           'Avrupa Üroloji Derneği kılavuzları, uygun şekilde seçilmiş hastalarda penil protez cerrahisinin hasta ve eş memnuniyetinin yüksek bildirildiği bir tedavi olduğunu belirtir. Bu memnuniyetin en güçlü belirleyicisi, ameliyat öncesinde beklentilerin doğru konuşulmuş olmasıdır.',
-          'AQUADİSSEKSİYON (SIVI YARDIMLI DİSEKSİYON): Yukarıda anlatılan doku koruyucu yaklaşımın bir uygulama biçimidir. Korpus kavernozumun içi metal dilatatörlerle mekanik olarak zorlanmak yerine, doku planları basınçlı sıvı verilerek ayrılır. Amaç, genişletme sırasında kavernöz dokuya, tünikaya ve üretraya binen mekanik zorlamayı azaltmaktır. Kliniğimizde uygun görülen olgularda bu teknik kullanılmaktadır.',
+          'AQUADİSSEKSİYON (SIVI YARDIMLI DİSEKSİYON): Yukarıda anlatılan doku koruyucu yaklaşımın bir uygulama biçimidir. Korpus kavernozumun içi metal dilatatörlerle mekanik olarak zorlanmak yerine, doku planları basınçlı sıvı verilerek ayrılır. Amaç, genişletme sırasında kavernöz dokuya, tünikaya ve üretraya binen mekanik zorlamayı azaltmaktır. Kliniğimizde bu teknik, değerlendirme sonrasında uygun bulunan seçilmiş olgularda kullanılmaktadır; her hastada rutin olarak uygulanmaz.',
           'Aquadisseksiyonun özellikle anlamlı olabildiği durumlar, korpus dokusunun sertleşip daraldığı (fibrotik) olgulardır: uzamış priapizm sonrası, daha önce yerleştirilmiş bir protezin enfeksiyon nedeniyle çıkarılmasının ardından veya ileri Peyronie hastalığında. Bu olgularda mekanik genişletme teknik olarak zordur ve yaralanma riski artar.'
         ],
         eligibility: {
@@ -341,7 +337,7 @@ export const treatments: Treatment[] = [
           {
             when: '2. gün',
             title: 'Ameliyat',
-            body: 'İşlem genel veya spinal anestezi altında, genellikle 60–90 dakikada tamamlanır. Kesi skrotum veya penis kökü bölgesinden yapılır. Korpusların genişletilmesinde uygun olgularda aquadisseksiyon tekniği kullanılır.'
+            body: 'İşlem genel veya spinal anestezi altında, genellikle 60–90 dakikada tamamlanır. Kesi skrotum veya penis kökü bölgesinden yapılır. Korpusların genişletilmesinde, seçilmiş ve uygun bulunan olgularda aquadisseksiyon tekniği kullanılır.'
           },
           {
             when: '3. gün',
@@ -475,6 +471,11 @@ export const treatments: Treatment[] = [
             label:
               'EAU Guidelines on Sexual and Reproductive Health — Avrupa Üroloji Derneği',
             url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          },
+          {
+            label:
+              'Mohamed H, Abdelshafi A, Ahmed A, Deameh MG, Mohamed T, Ramez M, Raheem O. Impact of cavernous tissue-sparing techniques on postoperative outcomes in penile prosthesis surgery: a systematic review and meta-analysis. The Journal of Sexual Medicine, 2026;23(2):qdag006.',
+            url: 'https://doi.org/10.1093/jsxmed/qdag006'
           }
         ]
       }

@@ -36,7 +36,7 @@ Bu bulgu şu anlama GELMEZ: protez takıldıktan sonra cihazsız, ilişkiye yete
 
 Avrupa Üroloji Derneği kılavuzları, uygun şekilde seçilmiş hastalarda penil protez cerrahisinin hasta ve eş memnuniyetinin yüksek bildirildiği bir tedavi olduğunu belirtir. Bu memnuniyetin en güçlü belirleyicisi, ameliyat öncesinde beklentilerin doğru konuşulmuş olmasıdır.
 
-AQUADİSSEKSİYON (SIVI YARDIMLI DİSEKSİYON): Yukarıda anlatılan doku koruyucu yaklaşımın bir uygulama biçimidir. Korpus kavernozumun içi metal dilatatörlerle mekanik olarak zorlanmak yerine, doku planları basınçlı sıvı verilerek ayrılır. Amaç, genişletme sırasında kavernöz dokuya, tünikaya ve üretraya binen mekanik zorlamayı azaltmaktır. Kliniğimizde uygun görülen olgularda bu teknik kullanılmaktadır.
+AQUADİSSEKSİYON (SIVI YARDIMLI DİSEKSİYON): Yukarıda anlatılan doku koruyucu yaklaşımın bir uygulama biçimidir. Korpus kavernozumun içi metal dilatatörlerle mekanik olarak zorlanmak yerine, doku planları basınçlı sıvı verilerek ayrılır. Amaç, genişletme sırasında kavernöz dokuya, tünikaya ve üretraya binen mekanik zorlamayı azaltmaktır. Kliniğimizde bu teknik, değerlendirme sonrasında uygun bulunan seçilmiş olgularda kullanılmaktadır; her hastada rutin olarak uygulanmaz.
 
 Aquadisseksiyonun özellikle anlamlı olabildiği durumlar, korpus dokusunun sertleşip daraldığı (fibrotik) olgulardır: uzamış priapizm sonrası, daha önce yerleştirilmiş bir protezin enfeksiyon nedeniyle çıkarılmasının ardından veya ileri Peyronie hastalığında. Bu olgularda mekanik genişletme teknik olarak zordur ve yaralanma riski artar.
 
@@ -68,7 +68,7 @@ Androloji ve penil protez cerrahisi, Doç. Dr. Müslüm Ergün’ün çalışma 
 ## Adım adım süreç
 - **Uzaktan — Gizli ön değerlendirme:** Şikâyetin süresi, daha önce denenmiş tedaviler, diyabet ve kalp-damar durumu, geçirilmiş ameliyatlar ve kullandığınız ilaçlar gizlilik içinde değerlendirilir.
 - **1. gün — Muayene ve beklenti görüşmesi:** Yüz yüze muayene, gerekli tetkikler ve protez tipinin seçimi. Bu görüşmede cihazın ne sağladığı ve neyi sağlamadığı ayrıntılı konuşulur.
-- **2. gün — Ameliyat:** İşlem genel veya spinal anestezi altında, genellikle 60–90 dakikada tamamlanır. Kesi skrotum veya penis kökü bölgesinden yapılır. Korpusların genişletilmesinde uygun olgularda aquadisseksiyon tekniği kullanılır.
+- **2. gün — Ameliyat:** İşlem genel veya spinal anestezi altında, genellikle 60–90 dakikada tamamlanır. Kesi skrotum veya penis kökü bölgesinden yapılır. Korpusların genişletilmesinde, seçilmiş ve uygun bulunan olgularda aquadisseksiyon tekniği kullanılır.
 - **3. gün — Sonda alımı ve taburculuk:** Sonda genellikle ertesi gün alınır. Pansuman ve ilaç düzeni anlatılarak taburculuk planlanır.
 - **7–10. gün — Kontrol ve dönüş:** Yara kontrolü yapılır, dikişler değerlendirilir ve dönüş uçuşu için onay verilir. Cihaz bu aşamada HENÜZ KULLANILMAZ.
 - **4–6. hafta — Cihazın aktivasyonu ve kullanım eğitimi:** Ödem geçtikten sonra cihaz aktive edilir ve kullanımı adım adım öğretilir. Bu eğitim gerekirse online olarak da yapılabilir.
@@ -139,10 +139,11 @@ Evet, kural olarak öyledir. Protez, basamaklı tedavinin son aşamasıdır. İl
 
 ## Bilimsel kaynaklar
 - EAU Guidelines on Sexual and Reproductive Health — Avrupa Üroloji Derneği
+- Mohamed H, Abdelshafi A, Ahmed A, Deameh MG, Mohamed T, Ramez M, Raheem O. Impact of cavernous tissue-sparing techniques on postoperative outcomes in penile prosthesis surgery: a systematic review and meta-analysis. The Journal of Sexual Medicine, 2026;23(2):qdag006.
 
 ---
 
-*Yaklaşık kelime sayısı: 1514*
+*Yaklaşık kelime sayısı: 1564*
 
 ## Onayınızı beklediğim noktalar
 
