@@ -32,6 +32,10 @@ Penil protez, bu basamakların yeterli sonuç vermediği durumlarda gündeme gel
 
 Avrupa Üroloji Derneği kılavuzları, uygun şekilde seçilmiş hastalarda penil protez cerrahisinin hasta ve eş memnuniyetinin yüksek bildirildiği bir tedavi olduğunu belirtir. Bu memnuniyetin en güçlü belirleyicisi, ameliyat öncesinde beklentilerin doğru konuşulmuş olmasıdır.
 
+AQUADİSSEKSİYON (SIVI YARDIMLI DİSEKSİYON): Protez silindirlerinin yerleştirilebilmesi için korpus kavernozumun içinin genişletilmesi gerekir. Bu aşama klasik olarak metal dilatatörlerle, yani mekanik olarak yapılır. Aquadisseksiyonda ise doku planları basınçlı sıvı verilerek ayrılır. Amaç, genişletme sırasında tünikaya, üretraya ve çevre dokuya uygulanan mekanik zorlamayı azaltmaktır. Kliniğimizde uygun görülen olgularda bu teknik kullanılmaktadır.
+
+Aquadisseksiyonun özellikle anlamlı olabildiği durumlar, korpus dokusunun sertleşip daraldığı (fibrotik) olgulardır: uzamış priapizm sonrası, daha önce yerleştirilmiş bir protezin enfeksiyon nedeniyle çıkarılmasının ardından veya ileri Peyronie hastalığında. Bu olgularda mekanik genişletme teknik olarak zordur ve yaralanma riski artar.
+
 ## Kimlere uygundur
 **Uygun olabilir**
 - İlaç, enjeksiyon ve vakum cihazı denenmiş ancak yeterli sonuç alınamamış kalıcı sertleşme sorunu
@@ -48,6 +52,7 @@ Avrupa Üroloji Derneği kılavuzları, uygun şekilde seçilmiş hastalarda pen
 - Nedeni ağırlıklı olarak psikolojik olan sertleşme sorunları — öncelik danışmanlık ve medikal tedavidir
 
 ## Kullanılan teknoloji
+- Aquadisseksiyon (sıvı yardımlı diseksiyon) ile korpus genişletme
 - Üç parçalı şişirilebilir protez (silindirler + skrotal pompa + rezervuar)
 - Bükülebilir (malleable) protez
 - Enfeksiyon riskini azaltmaya yönelik antibiyotik kaplı/emdirilmiş cihazlar
@@ -59,7 +64,7 @@ Androloji ve penil protez cerrahisi, Doç. Dr. Müslüm Ergün’ün çalışma 
 ## Adım adım süreç
 - **Uzaktan — Gizli ön değerlendirme:** Şikâyetin süresi, daha önce denenmiş tedaviler, diyabet ve kalp-damar durumu, geçirilmiş ameliyatlar ve kullandığınız ilaçlar gizlilik içinde değerlendirilir.
 - **1. gün — Muayene ve beklenti görüşmesi:** Yüz yüze muayene, gerekli tetkikler ve protez tipinin seçimi. Bu görüşmede cihazın ne sağladığı ve neyi sağlamadığı ayrıntılı konuşulur.
-- **2. gün — Ameliyat:** İşlem genel veya spinal anestezi altında, genellikle 60–90 dakikada tamamlanır. Kesi skrotum veya penis kökü bölgesinden yapılır.
+- **2. gün — Ameliyat:** İşlem genel veya spinal anestezi altında, genellikle 60–90 dakikada tamamlanır. Kesi skrotum veya penis kökü bölgesinden yapılır. Korpusların genişletilmesinde uygun olgularda aquadisseksiyon tekniği kullanılır.
 - **3. gün — Sonda alımı ve taburculuk:** Sonda genellikle ertesi gün alınır. Pansuman ve ilaç düzeni anlatılarak taburculuk planlanır.
 - **7–10. gün — Kontrol ve dönüş:** Yara kontrolü yapılır, dikişler değerlendirilir ve dönüş uçuşu için onay verilir. Cihaz bu aşamada HENÜZ KULLANILMAZ.
 - **4–6. hafta — Cihazın aktivasyonu ve kullanım eğitimi:** Ödem geçtikten sonra cihaz aktive edilir ve kullanımı adım adım öğretilir. Bu eğitim gerekirse online olarak da yapılabilir.
@@ -92,35 +97,39 @@ Androloji ve penil protez cerrahisi, Doç. Dr. Müslüm Ergün’ün çalışma 
 
 Hayır. Protez yerleştirilirken penisin süngerimsi dokusunun içi genişletildiği için doğal, kendiliğinden ereksiyon artık oluşmaz. Cihaz çıkarılsa bile önceki duruma dönülemez. Bu, ameliyatın geri dönüşsüz yanıdır ve kararınızı vermeden önce net olarak bilmeniz gerekir.
 
-**2. Boşalma ve orgazm etkilenir mi?**
+**2. Aquadisseksiyon nedir, benim için farkı ne olur?**
+
+Protez yerleştirilmeden önce penisin süngerimsi dokusunun içi genişletilir. Klasik yöntemde bu, metal dilatatörlerle mekanik olarak yapılır; aquadisseksiyonda ise doku planları basınçlı sıvı verilerek ayrılır. Hedef, bu aşamada dokuya uygulanan mekanik zorlamayı azaltmaktır. Teknik özellikle dokunun sertleşip daraldığı olgularda — uzamış priapizm sonrası, enfeksiyon nedeniyle protezi çıkarılmış hastalarda veya ileri Peyronie hastalığında — teknik kolaylık sağlayabilir. Sizin olgunuzda uygun olup olmadığı muayene ve görüntüleme sonrasında değerlendirilir.
+
+**3. Boşalma ve orgazm etkilenir mi?**
 
 Hayır. Protez yalnızca sertliği sağlar; boşalma ve orgazm farklı mekanizmalarla gerçekleşir ve genellikle korunur. Daha önce prostat ameliyatı geçirdiyseniz boşalmayla ilgili durum o ameliyata bağlıdır, protezden kaynaklanmaz.
 
-**3. Dışarıdan belli olur mu?**
+**4. Dışarıdan belli olur mu?**
 
 Üç parçalı şişirilebilir protez, kullanılmadığında penis yumuşak kaldığı için giysi altında fark edilmez. Bükülebilir protezde penis sürekli yarı sert olduğundan gizlenmesi biraz daha zordur; bu, tip seçiminde konuşulan konulardan biridir.
 
-**4. Enfeksiyon riski nedir, nasıl azaltılır?**
+**5. Enfeksiyon riski nedir, nasıl azaltılır?**
 
 Enfeksiyon, protez cerrahisinin en önemli komplikasyonudur ve geliştiğinde çoğu zaman cihazın çıkarılmasını gerektirir. Riski azaltmak için antibiyotik kaplı cihazlar, sıkı sterilite protokolü ve dokunmasız yerleştirme tekniği kullanılır. Kan şekerinin ameliyat öncesi düzenlenmesi ve sigaranın bırakılması riski azaltan en önemli iki etkendir.
 
-**5. Protez ne kadar dayanır?**
+**6. Protez ne kadar dayanır?**
 
 Protezler uzun yıllar kullanılmak üzere tasarlanır; ancak mekanik bir cihaz olduğu için zamanla arıza ihtimali vardır ve bu durumda revizyon ameliyatı gerekebilir. Üretici garantisi ve takip koşulları ameliyat öncesinde size açıklanır.
 
-**6. Penisim kısalır mı?**
+**7. Penisim kısalır mı?**
 
 Protez penisi uzatmaz. Bazı hastalar ameliyat sonrasında boyun kısaldığı hissine kapılır; bunun nedeni genellikle doğal ereksiyondaki tam uzamanın yerini cihazın sağladığı sertliğin almasıdır. Bu beklenti ameliyat öncesinde mutlaka konuşulur.
 
-**7. Ne zaman cinsel ilişkiye girebilirim?**
+**8. Ne zaman cinsel ilişkiye girebilirim?**
 
 Genellikle 4–6 hafta sonra cihaz aktive edilir ve kullanım eğitimi verilir; cinsel aktiviteye hekim onayıyla bu dönemden sonra başlanır. Erken kullanım yara iyileşmesini olumsuz etkileyebilir.
 
-**8. Süreç gizli yürütülüyor mu?**
+**9. Süreç gizli yürütülüyor mu?**
 
 Evet. Androloji başvurularında tüm görüşme ve koordinasyon gizlilik esasıyla yürütülür. Paylaştığınız bilgiler yalnızca değerlendirme amacıyla işlenir. Dilerseniz ücretli online danışmanlık ile kliniğe gelmeden birebir görüşebilirsiniz.
 
-**9. Önce daha basit tedavileri denemem şart mı?**
+**10. Önce daha basit tedavileri denemem şart mı?**
 
 Evet, kural olarak öyledir. Protez, basamaklı tedavinin son aşamasıdır. İlaç, enjeksiyon veya vakum cihazı denenmeden protez önerilmez; çünkü bu seçenekler geri dönüşlüdür, protez ise değildir.
 
@@ -129,7 +138,7 @@ Evet, kural olarak öyledir. Protez, basamaklı tedavinin son aşamasıdır. İl
 
 ---
 
-*Yaklaşık kelime sayısı: 1150*
+*Yaklaşık kelime sayısı: 1325*
 
 ## Onayınızı beklediğim noktalar
 
