@@ -110,6 +110,12 @@ export async function SiteFooter() {
                 {consult.navLabel}
               </Link>
             </li>
+            {/* Sözlük ana menüde değil (menü kalabalığı); footer'dan erişilir. */}
+            <li>
+              <Link href="/sozluk" className="text-sm text-muted transition-colors hover:text-fg">
+                {tn('glossary')}
+              </Link>
+            </li>
             {navItems.slice(1).map((item) => (
               <li key={item.href}>
                 <Link

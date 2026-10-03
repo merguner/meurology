@@ -83,6 +83,14 @@ export const pathnames = {
     ar: '/online-consultation',
     fr: '/consultation-en-ligne'
   },
+  '/sozluk': {
+    tr: '/sozluk',
+    en: '/glossary',
+    de: '/glossar',
+    ru: '/glossary',
+    ar: '/glossary',
+    fr: '/glossaire'
+  },
   '/blog': '/blog',
   '/blog/[slug]': '/blog/[slug]',
   '/iletisim': {

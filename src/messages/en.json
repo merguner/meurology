@@ -21,7 +21,8 @@
     "piyeloplasti": "Pyeloplasty",
     "fistul": "Fistula Repair",
     "ureterRekon": "Ureteral Reconstruction",
-    "toggleSubmenu": "Toggle submenu"
+    "toggleSubmenu": "Toggle submenu",
+    "glossary": "Urology Glossary"
   },
   "Common": {
     "whatsappCta": "Message us on WhatsApp",
@@ -275,5 +276,21 @@
     "cardCta": "Pay by card (international)",
     "comingSoon": "Card payment is currently unavailable. Please use bank transfer and send the receipt via WhatsApp.",
     "error": "Something went wrong, please try again."
+  },
+  "Glossary": {
+    "title": "Urology Glossary",
+    "subtitle": "Plain-language explanations of the terms you meet in your reports or consultation.",
+    "jumpTo": "Jump to category",
+    "relatedLink": "Related treatment",
+    "disclaimer": "This glossary is for general information only and is not a substitute for medical advice. Diagnosis and treatment require examination by a physician.",
+    "categories": {
+      "prostate": "Prostate and prostate cancer",
+      "bph": "Benign prostatic enlargement (BPH)",
+      "stones": "Kidney and urinary stones",
+      "andrology": "Andrology and men’s health",
+      "femaleUrology": "Female urology",
+      "reconstructive": "Reconstructive urology",
+      "general": "General urology terms"
+    }
   }
 }

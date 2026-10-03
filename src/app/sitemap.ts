@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/hastane',
     '/uluslararasi-hasta',
     '/deneyimler',
+    '/sozluk',
     '/blog',
     '/iletisim',
     '/yasal/kvkk',

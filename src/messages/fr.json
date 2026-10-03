@@ -21,7 +21,8 @@
     "piyeloplasti": "Pyéloplastie",
     "fistul": "Réparation de fistule",
     "ureterRekon": "Reconstruction urétérale",
-    "toggleSubmenu": "Afficher le sous-menu"
+    "toggleSubmenu": "Afficher le sous-menu",
+    "glossary": "Glossaire d’urologie"
   },
   "Common": {
     "whatsappCta": "Écrivez-nous sur WhatsApp",
@@ -275,5 +276,21 @@
     "cardCta": "Payer par carte (international)",
     "comingSoon": "Le paiement par carte n'est pas disponible actuellement. Veuillez utiliser le virement bancaire et envoyer le reçu via WhatsApp.",
     "error": "Une erreur est survenue, veuillez réessayer."
+  },
+  "Glossary": {
+    "title": "Glossaire d’urologie",
+    "subtitle": "Des explications en langage clair des termes rencontrés dans vos comptes rendus ou en consultation.",
+    "jumpTo": "Aller à la catégorie",
+    "relatedLink": "Traitement associé",
+    "disclaimer": "Ce glossaire est fourni à titre d’information générale et ne remplace pas un avis médical. Le diagnostic et le traitement nécessitent un examen par un médecin.",
+    "categories": {
+      "prostate": "Prostate et cancer de la prostate",
+      "bph": "Hypertrophie bénigne de la prostate (HBP)",
+      "stones": "Calculs rénaux et urinaires",
+      "andrology": "Andrologie et santé masculine",
+      "femaleUrology": "Urologie féminine",
+      "reconstructive": "Urologie reconstructrice",
+      "general": "Termes généraux d’urologie"
+    }
   }
 }

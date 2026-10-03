@@ -34,6 +34,7 @@ const LOCALIZED: Record<string, Record<string, string>> = {
     ru: 'online-consultation',
     ar: 'online-consultation', fr: 'consultation-en-ligne'
   },
+  sozluk: { en: 'glossary', de: 'glossar', ru: 'glossary', ar: 'glossary', fr: 'glossaire' },
   iletisim: { en: 'contact', de: 'kontakt', ru: 'contact', ar: 'contact', fr: 'contact' },
   'yasal/kvkk': { en: 'legal/privacy', de: 'rechtliches/datenschutz', ru: 'legal/privacy', ar: 'legal/privacy', fr: 'mentions-legales/confidentialite' },
   'yasal/acik-riza': {

@@ -21,7 +21,8 @@
     "piyeloplasti": "Piyeloplasti",
     "fistul": "Fistül Onarımı",
     "ureterRekon": "Üreter Rekonstrüksiyonu",
-    "toggleSubmenu": "Alt menüyü aç/kapat"
+    "toggleSubmenu": "Alt menüyü aç/kapat",
+    "glossary": "Üroloji Sözlüğü"
   },
   "Common": {
     "whatsappCta": "Hemen WhatsApp'tan yaz",
@@ -275,5 +276,21 @@
     "cardCta": "Kartla öde (uluslararası)",
     "comingSoon": "Kartlı ödeme şu anda kullanılamıyor. Banka havalesi + WhatsApp dekont yöntemini kullanabilirsiniz.",
     "error": "Bir sorun oluştu, lütfen tekrar deneyin."
+  },
+  "Glossary": {
+    "title": "Üroloji Sözlüğü",
+    "subtitle": "Raporunuzda veya muayenede karşılaştığınız terimlerin sade dille açıklaması.",
+    "jumpTo": "Kategoriye git",
+    "relatedLink": "İlgili tedavi",
+    "disclaimer": "Bu sözlük genel bilgilendirme amaçlıdır ve tıbbi tavsiye yerine geçmez. Tanı ve tedavi için hekim muayenesi gerekir.",
+    "categories": {
+      "prostate": "Prostat ve prostat kanseri",
+      "bph": "İyi huylu prostat büyümesi (BPH)",
+      "stones": "Böbrek ve üriner sistem taşları",
+      "andrology": "Androloji ve erkek sağlığı",
+      "femaleUrology": "Kadın ürolojisi",
+      "reconstructive": "Rekonstrüktif üroloji",
+      "general": "Genel üroloji terimleri"
+    }
   }
 }

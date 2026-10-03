@@ -21,7 +21,8 @@
     "piyeloplasti": "Nierenbeckenplastik",
     "fistul": "Fistelverschluss",
     "ureterRekon": "Harnleiter-Rekonstruktion",
-    "toggleSubmenu": "Untermenü umschalten"
+    "toggleSubmenu": "Untermenü umschalten",
+    "glossary": "Urologie-Glossar"
   },
   "Common": {
     "whatsappCta": "Schreiben Sie uns auf WhatsApp",
@@ -275,5 +276,21 @@
     "cardCta": "Mit Karte zahlen (international)",
     "comingSoon": "Kartenzahlung ist derzeit nicht verfügbar. Bitte nutzen Sie die Banküberweisung und senden Sie den Beleg per WhatsApp.",
     "error": "Ein Fehler ist aufgetreten, bitte erneut versuchen."
+  },
+  "Glossary": {
+    "title": "Urologie-Glossar",
+    "subtitle": "Verständliche Erklärungen der Begriffe aus Ihren Befunden oder dem Arztgespräch.",
+    "jumpTo": "Zur Kategorie springen",
+    "relatedLink": "Zugehörige Behandlung",
+    "disclaimer": "Dieses Glossar dient der allgemeinen Information und ersetzt keine ärztliche Beratung. Diagnose und Behandlung erfordern eine ärztliche Untersuchung.",
+    "categories": {
+      "prostate": "Prostata und Prostatakrebs",
+      "bph": "Gutartige Prostatavergrößerung (BPH)",
+      "stones": "Nieren- und Harnsteine",
+      "andrology": "Andrologie und Männergesundheit",
+      "femaleUrology": "Urologie der Frau",
+      "reconstructive": "Rekonstruktive Urologie",
+      "general": "Allgemeine urologische Begriffe"
+    }
   }
 }
