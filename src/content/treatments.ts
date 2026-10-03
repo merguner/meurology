@@ -15,6 +15,222 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
+     * TASLAK — cerrah onayına sunuldu.
+     * Bu bir KARAR SAYFASIDIR: ayrı bir ameliyat değil, radikal prostatektomi
+     * içinde uygulanan bir tekniktir. Sayfanın ekseni "size uygulanabilir mi
+     * ve ne beklemelisiniz" sorusudur.
+     * Prompt m.4.1'de prostat-kanseri hub'ının alt sayfası olarak geçer; hub
+     * henüz yazılmadığı için şimdilik robotik-prostatektomi'nin altındadır.
+     * Hub yazıldığında parent güncellenecek.
+     * Kaynak: EAU Prostate Cancer kılavuzu. Kaynaksız oran YAZILMAMIŞTIR.
+     */
+    draft: true,
+    slug: 'sinir-koruyucu-cerrahi',
+    parent: 'robotik-prostatektomi',
+    lastReviewed: '2026-10-04',
+    icon: 'prostate',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'Sinir Koruyucu Cerrahi: Kimlere Uygulanabilir?',
+        summary:
+          'Radikal prostatektomi sırasında ereksiyondan sorumlu sinir demetlerinin korunması; kime uygulanabilir, neyi değiştirir ve neyi garanti etmez.',
+        metaTitle: 'Sinir Koruyucu Cerrahi | Prostat Ameliyatında Sinir Koruma',
+        metaDescription:
+          'Prostat kanseri ameliyatında sinir koruyucu teknik: kimlere uygundur, kararı ne belirler, iyileşme ne kadar sürer ve neyi garanti etmez.',
+        quickFacts: {
+          duration: 'Radikal prostatektomi içinde uygulanır',
+          anesthesia: 'Genel anestezi (ana ameliyatla aynı)',
+          hospitalStay: '2–3 gece',
+          stayInTurkey: '7–10 gün',
+          catheter: '7–10 gün',
+          returnToWork: '3–4 hafta',
+          flightClearance: '10. günden sonra'
+        },
+        definition: [
+          'Prostatın hemen yanından, arka-yan tarafından, ereksiyondan sorumlu sinir ve damarların oluşturduğu iki demet geçer. Bunlara nörovasküler demet denir. Prostat alınırken bu demetler prostata çok yakın olduğu için zarar görebilir; zarar görmeleri hâlinde ereksiyon işlevi kaybolur.',
+          'Sinir koruyucu cerrahi, radikal prostatektomi sırasında bu demetleri prostattan ayırarak yerinde bırakma tekniğidir. Ayrı bir ameliyat değildir; ana ameliyatın içinde uygulanan bir yaklaşımdır. Robotik sistemin yüksek çözünürlüklü üç boyutlu görüntüsü ve milimetrik hareket kabiliyeti, bu ince diseksiyonu kolaylaştırır.',
+          'EN ÖNEMLİ KURAL — ONKOLOJİK GÜVENLİK ÖNCE GELİR: Sinir koruma, kanserin tam olarak çıkarılması pahasına yapılmaz. Tümör sinir demetine komşuysa veya o bölgeye uzanıyorsa, demet korunmaya çalışıldığında geride kanser hücresi kalma (pozitif cerrahi sınır) riski artar. Böyle bir durumda doğru karar, sinir korumaktan vazgeçmektir. Cinsel işlev önemlidir; ancak hastalığın kontrolü önceliklidir.',
+          'Sinir koruma bir "evet-hayır" seçeneği değildir, derecelidir. İki taraflı tam koruma, tek taraflı koruma ve kısmi koruma mümkündür. Cerrah, prostatı saran fasya katmanlarının hangisinden geçeceğine karar verir; bu plan ne kadar prostata yakın olursa sinirler o kadar çok korunur, ancak onkolojik güvenlik payı o kadar azalır.',
+          'Kararı belirleyen başlıca etkenler: tümörün multiparametrik MR’daki yeri ve kapsülle ilişkisi, biyopsi sonucu (ISUP derecesi ve hangi kadranlarda tümör olduğu), PSA değeri, parmakla muayene bulgusu ve ameliyat öncesi ereksiyon işleviniz. Bu değerlendirme ameliyat öncesinde yapılır, ancak ameliyat sırasında görülen anatomiye göre güncellenebilir.',
+          'DÜRÜST BEKLENTİ: Sinirlerin korunması, ereksiyon işlevinin geri dönme ŞANSINI artırır; geri döneceğini GARANTİ ETMEZ. Sonucu belirleyen başka etkenler de vardır: yaşınız, ameliyat öncesi ereksiyon kaliteniz, diyabet ve kalp-damar hastalığı varlığı, sigara kullanımı ve korumanın tek mi çift taraflı mı yapılabildiği. Toparlanma aylar sürer ve genellikle kademeli olur.'
+        ],
+        eligibility: {
+          suitable: [
+            'Tümörü prostat içinde sınırlı (lokalize) olan hastalar',
+            'MR ve biyopsi bulgularına göre tümörün sinir demetlerinden uzak olduğu olgular',
+            'Ameliyat öncesi ereksiyon işlevi iyi veya kabul edilebilir düzeyde olan hastalar',
+            'Daha genç yaş grubu — toparlanma şansı yaşla birlikte azalır',
+            'Cinsel aktif kalmayı önceliklendiren ve bu konuda gerçekçi beklentisi olan hastalar'
+          ],
+          notSuitable: [
+            'Tümörün sinir demetine komşu olduğu veya kapsülü aştığı olgular — onkolojik güvenlik önceliklidir',
+            'Yüksek riskli veya ileri evre hastalık',
+            'Parmakla muayenede o tarafta belirgin tümör saptanan olgular',
+            'Ameliyat öncesinde zaten ileri derecede ve tedaviye yanıtsız erektil disfonksiyonu olan hastalar — beklenen kazanç sınırlıdır',
+            'Cinsel işlevin öncelik olmadığı, onkolojik güvenliği maksimize etmek isteyen hastalar'
+          ]
+        },
+        technology: [
+          'da Vinci robotik sistem — yüksek çözünürlüklü 3B görüntü ve milimetrik hareket',
+          'Fasyal planların tanımlanması (intrafasyal, interfasyal, ekstrafasyal)',
+          'Sinir demeti çevresinde ısı (koter) kullanımının sınırlanması',
+          'Ameliyat öncesi multiparametrik MR ile planlama'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Robotik radikal prostatektomi ve sinir koruyucu teknik, Doç. Dr. Müslüm Ergün’ün çalışma alanları arasındadır. Karar, her hasta için MR, biyopsi ve ameliyat öncesi işlev değerlendirmesiyle birlikte verilir.'
+        },
+        timeline: [
+          {
+            when: 'Uzaktan',
+            title: 'Dosya değerlendirmesi',
+            body: 'Multiparametrik MR, biyopsi raporu (ISUP derecesi ve tutulan bölgeler) ve PSA değeriniz incelenir. Ameliyat öncesi ereksiyon işleviniz de sorgulanır; bu, beklentinin belirlenmesinde kritiktir.'
+          },
+          {
+            when: '1–2. gün',
+            title: 'Muayene ve planın netleşmesi',
+            body: 'Yüz yüze muayene ve eksik tetkiklerin tamamlanması. Sinir korumanın tek taraflı mı, çift taraflı mı yoksa kısmi mi planlandığı sizinle açıkça konuşulur.'
+          },
+          {
+            when: '3. gün',
+            title: 'Ameliyat',
+            body: 'Robotik radikal prostatektomi uygulanır. Sinir koruma kararı, ameliyat sırasında görülen anatomiye ve dokunun tümörle ilişkisine göre güncellenebilir; bu, onkolojik güvenlik adına alınan bir karardır.'
+          },
+          {
+            when: 'Patoloji sonrası',
+            title: 'Cerrahi sınır değerlendirmesi',
+            body: 'Patoloji raporu, cerrahi sınırın temiz olup olmadığını gösterir. Bu sonuç hem takip planını hem de gerekirse ek tedavi kararını belirler.'
+          },
+          {
+            when: '3–24. ay',
+            title: 'İşlevsel takip',
+            body: 'Ereksiyon işlevi düzenli aralıklarla değerlendirilir. Toparlanma bu dönem boyunca sürebilir; gerekirse destekleyici tedaviler eklenir.'
+          }
+        ],
+        risks: [
+          'Sinirler korunsa bile ereksiyon işlevinin geri dönmemesi — en sık yaşanan hayal kırıklığı budur',
+          'Sinir korumanın zorlanması hâlinde pozitif cerrahi sınır riskinin artması; bu nedenle onkolojik güvenlik her zaman önceliklidir',
+          'Toparlanmanın beklenenden uzun sürmesi (12–24 aya yayılabilir)',
+          'Tek taraflı koruma yapılabildiğinde sonucun çift taraflıya göre daha sınırlı olması',
+          'Ameliyat sırasında planın değişmesi ve korumadan vazgeçilmesi olasılığı'
+        ],
+        alternatives: [
+          'Sinir koruyucu olmayan (ekstrafasyal) radikal prostatektomi — onkolojik güvenliğin öncelikli olduğu olgularda',
+          'Radyoterapi (dış ışın veya brakiterapi)',
+          'Aktif izlem — seçilmiş düşük riskli hastalarda',
+          'Ameliyat sonrası erektil disfonksiyon tedavileri: PDE5 inhibitörleri, penis içi enjeksiyon, vakum cihazı',
+          'Penil protez — diğer tedavilere yanıt alınamayan olgularda son basamak'
+        ],
+        comparison: {
+          title: 'Sinir koruma derecelerine göre beklenti',
+          columns: ['Derece', 'Ne yapılır', 'Kime uygun', 'Beklenti'],
+          rows: [
+            {
+              label: 'İki taraflı tam koruma',
+              values: ['Her iki sinir demeti yerinde bırakılır', 'Tümör her iki demetten de uzaksa', 'İşlev dönüşü için en yüksek şans']
+            },
+            {
+              label: 'Tek taraflı koruma',
+              values: ['Yalnızca tümörsüz taraftaki demet korunur', 'Tümör tek tarafta demete yakınsa', 'Şans vardır ancak çift taraflıya göre daha sınırlı']
+            },
+            {
+              label: 'Kısmi koruma',
+              values: ['Demetin bir bölümü korunur', 'Tümörün sınırlı temas gösterdiği olgular', 'Değişken; olguya göre değerlendirilir']
+            },
+            {
+              label: 'Koruma yapılmaz',
+              values: ['Demetler prostatla birlikte alınır', 'Tümör demete komşu veya kapsülü aşmışsa', 'Doğal ereksiyon beklenmez; ED tedavileri planlanır']
+            }
+          ],
+          note:
+            'Bu tablo karar mantığını gösterir, sonuç vaadi değildir. Hangi derecenin uygulanabileceği MR, biyopsi ve ameliyat sırasındaki anatomik bulgularla belirlenir.'
+        },
+        recovery: [
+          {
+            period: '0–3. ay',
+            body: 'Bu dönemde ereksiyon genellikle yoktur veya çok zayıftır; bu beklenen bir durumdur ve kalıcı sonuç anlamına gelmez. Hekiminizin önerdiği destekleyici tedaviler bu dönemde başlatılabilir.'
+          },
+          {
+            period: '3–6. ay',
+            body: 'Kısmi yanıtlar başlayabilir. Gece ve sabah ereksiyonlarının geri gelmesi olumlu bir işarettir.'
+          },
+          {
+            period: '6–12. ay',
+            body: 'Toparlanmanın en belirgin olduğu dönemdir. İlaç desteğiyle ilişkiye yeterli sertlik bu dönemde sağlanabilir.'
+          },
+          {
+            period: '12–24. ay',
+            body: 'Toparlanma bu süre boyunca devam edebilir. Bu noktada hâlâ yetersizse enjeksiyon, vakum cihazı veya penil protez seçenekleri değerlendirilir.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Sinir koruyucu teknik ayrı bir işlem olarak ücretlendirilmez; radikal prostatektomi fiyatlandırmasının içindedir.'
+        },
+        packageIncludes: [
+          'Radikal prostatektomi ve hastane yatışı',
+          'Anestezi ve ameliyathane',
+          'Ameliyat öncesi değerlendirme ve MR incelemesi',
+          'Patolojik inceleme ve cerrahi sınır raporu',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve hasta koordinatörü',
+          'Taburculuk sonrası işlevsel takip ve online kontroller'
+        ],
+        faqs: [
+          {
+            q: 'Sinir koruyucu cerrahi her hastaya uygulanabilir mi?',
+            a: 'Hayır. Uygulanabilirliği tümörün yerine ve yaygınlığına bağlıdır. Tümör sinir demetine komşuysa veya kapsülü aşmışsa, demeti korumaya çalışmak geride kanser hücresi kalma riskini artırır. Böyle bir durumda doğru karar korumadan vazgeçmektir. Onkolojik güvenlik her zaman önce gelir.'
+          },
+          {
+            q: 'Sinirler korunursa ereksiyonum kesin geri döner mi?',
+            a: 'Hayır, garanti yoktur. Sinir koruma geri dönme şansını artırır, ancak sonucu yaşınız, ameliyat öncesi ereksiyon kaliteniz, diyabet ve kalp-damar hastalığı varlığı, sigara kullanımı ve korumanın tek mi çift taraflı mı yapılabildiği birlikte belirler. Bu nedenle beklentiyi ameliyat öncesinde açıkça konuşmak önemlidir.'
+          },
+          {
+            q: 'Toparlanma ne kadar sürer?',
+            a: 'Genellikle aylar sürer ve kademelidir. İlk üç ayda ereksiyon olmaması beklenen bir durumdur. En belirgin toparlanma 6–12. aylarda görülür ve 24. aya kadar devam edebilir. Bu süreyi kısaltmaya çalışmak yerine takibi sürdürmek daha doğrudur.'
+          },
+          {
+            q: 'Kararı ne belirliyor?',
+            a: 'Multiparametrik MR’da tümörün yeri ve kapsülle ilişkisi, biyopsi sonucunuz (ISUP derecesi ve hangi bölgelerde tümör olduğu), PSA değeriniz, parmakla muayene bulgusu ve ameliyat öncesi ereksiyon işleviniz. Bu beş veri birlikte değerlendirilir.'
+          },
+          {
+            q: 'Tek taraflı koruma işe yarar mı?',
+            a: 'Evet, işlev dönüşü için bir şans sağlar; ancak iki taraflı korumaya göre daha sınırlıdır. Tümör tek tarafta demete yakınsa, o taraftan vazgeçip diğer tarafı korumak makul ve sık uygulanan bir yaklaşımdır.'
+          },
+          {
+            q: 'Ameliyat sırasında karar değişebilir mi?',
+            a: 'Evet. Plan ameliyat öncesinde yapılır, ancak ameliyat sırasında görülen anatomi ve dokunun tümörle ilişkisi planı değiştirebilir. Bu değişiklik her zaman onkolojik güvenlik adına yapılır ve patoloji sonucuyla birlikte size açıklanır.'
+          },
+          {
+            q: 'Ereksiyon geri dönmezse ne yapılır?',
+            a: 'Basamaklı bir yaklaşım izlenir: önce ağızdan ilaçlar, yanıt yoksa penis içi enjeksiyon veya vakum cihazı. Bunlardan da sonuç alınamazsa penil protez kalıcı bir çözüm sunar. Yani ereksiyonun dönmemesi, çözümsüzlük anlamına gelmez.'
+          },
+          {
+            q: 'Sinir korumanın idrar kaçırmayla ilişkisi var mı?',
+            a: 'Sinir demetleri öncelikle ereksiyondan sorumludur. Bununla birlikte, bu bölgede yapılan özenli diseksiyonun idrar tutmanın geri kazanılmasına da katkı sağlayabileceği bildirilmektedir. Ancak idrar tutma esas olarak sfinkter yapısının korunmasıyla ilgilidir.'
+          },
+          {
+            q: 'Ameliyattan önce yapabileceğim bir şey var mı?',
+            a: 'Evet. Sigarayı bırakmak, kan şekerini ve tansiyonu düzenlemek, fiziksel aktiviteyi artırmak damar sağlığını destekler ve toparlanma şansını olumlu etkiler. Ameliyat öncesi ereksiyon kaliteniz, ameliyat sonrası sonucun en güçlü belirleyicilerinden biridir.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Prostate Cancer — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      }
+    }
+  },
+  {
+    /**
      * Cerrah tarafından 4 Ekim 2026 tarihinde onaylandı ve yayına alındı.
      * HASSAS SAYFA: kanıt düzeyi merkezli, beklenti düzeltici bilgilendirme.
      * Kılavuzların normal ölçümlü erkeklerde kozmetik büyütmeyi önermediği

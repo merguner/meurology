@@ -24,6 +24,14 @@ export const treatmentSlugMap = {
     ru: 'roboticheskaya-prostatektomiya',
     ar: 'robotic-prostatectomy'
   },
+  'sinir-koruyucu-cerrahi': {
+    tr: 'sinir-koruyucu-cerrahi',
+    en: 'nerve-sparing-surgery',
+    de: 'nervenschonende-operation',
+    fr: 'chirurgie-preservation-nerveuse',
+    ru: 'nervosberegayushchaya-operaciya',
+    ar: 'nerve-sparing-surgery'
+  },
   'bobrek-tasi': {
     tr: 'bobrek-tasi',
     en: 'kidney-stones',
