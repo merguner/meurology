@@ -15,16 +15,13 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
-     * TASLAK — cerrah onayına sunuldu.
-     * Bu bir KARAR SAYFASIDIR: ayrı bir ameliyat değil, radikal prostatektomi
-     * içinde uygulanan bir tekniktir. Sayfanın ekseni "size uygulanabilir mi
-     * ve ne beklemelisiniz" sorusudur.
-     * Prompt m.4.1'de prostat-kanseri hub'ının alt sayfası olarak geçer; hub
-     * henüz yazılmadığı için şimdilik robotik-prostatektomi'nin altındadır.
-     * Hub yazıldığında parent güncellenecek.
-     * Kaynak: EAU Prostate Cancer kılavuzu. Kaynaksız oran YAZILMAMIŞTIR.
+     * Cerrah tarafından 4 Ekim 2026 tarihinde onaylandı ve yayına alındı.
+     * KARAR SAYFASI: ayrı ameliyat değil, radikal prostatektomi içindeki teknik.
+     * Onkolojik güvenliğin cinsel işlevin önünde geldiği açıkça yazılıdır;
+     * garanti verilmez. Kaynak: EAU Prostate Cancer kılavuzu.
+     * NOT: prompt m.4.1 bu sayfayı prostat-kanseri hub\u2019ının altına koyar;
+     * hub yazıldığında parent güncellenecek.
      */
-    draft: true,
     slug: 'sinir-koruyucu-cerrahi',
     parent: 'robotik-prostatektomi',
     lastReviewed: '2026-10-04',
@@ -223,6 +220,986 @@ export const treatments: Treatment[] = [
         sources: [
           {
             label: 'EAU Guidelines on Prostate Cancer — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      en: {
+        title: 'Nerve-Sparing Surgery: Who Is It Possible For?',
+        summary:
+          'Preserving the nerve bundles responsible for erection during radical prostatectomy — who it is possible for, what it changes and what it does not guarantee.',
+        metaTitle: 'Nerve-Sparing Surgery | Nerve Preservation in Prostate Surgery',
+        metaDescription:
+          'Nerve-sparing technique in prostate cancer surgery: who is suitable, what determines the decision, how long recovery takes and what it does not guarantee.',
+        quickFacts: {
+          duration: 'Performed within radical prostatectomy',
+          anesthesia: 'General anesthesia (same as the main operation)',
+          hospitalStay: '2–3 nights',
+          stayInTurkey: '7–10 days',
+          catheter: '7–10 days',
+          returnToWork: '3–4 weeks',
+          flightClearance: 'From day 10'
+        },
+        definition: [
+          'Two bundles of nerves and vessels responsible for erection run immediately alongside the prostate, on its postero-lateral aspect. These are called the neurovascular bundles. Because they lie so close to the prostate, they can be damaged when it is removed; if they are, erectile function is lost.',
+          'Nerve-sparing surgery is the technique of separating these bundles from the prostate and leaving them in place during radical prostatectomy. It is not a separate operation but an approach applied within the main procedure. The high-definition three-dimensional view and millimetric movement of the robotic system make this fine dissection easier.',
+          'THE MOST IMPORTANT RULE — ONCOLOGICAL SAFETY COMES FIRST: nerve preservation is not carried out at the cost of removing the cancer completely. If the tumour lies next to a nerve bundle or extends towards it, attempting to preserve the bundle increases the risk of leaving cancer cells behind (a positive surgical margin). In that situation the correct decision is to give up nerve preservation. Sexual function matters; but control of the disease takes priority.',
+          'Nerve-sparing is not a yes-or-no choice but a matter of degree. Bilateral full preservation, unilateral preservation and partial preservation are all possible. The surgeon decides which of the fascial layers surrounding the prostate to dissect through; the closer that plane is to the prostate, the more nerve tissue is preserved — but the smaller the oncological safety margin.',
+          'The main factors determining the decision are: the location of the tumour on multiparametric MRI and its relationship to the capsule, the biopsy result (ISUP grade and which quadrants are involved), the PSA value, the digital rectal examination finding and your erectile function before surgery. This assessment is made before the operation but can be revised according to the anatomy seen during it.',
+          'AN HONEST EXPECTATION: preserving the nerves increases the CHANCE that erectile function returns; it does not GUARANTEE that it will. Other factors also shape the outcome: your age, the quality of your erections before surgery, the presence of diabetes or cardiovascular disease, smoking, and whether preservation could be achieved on one side or both. Recovery takes months and is usually gradual.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients whose tumour is confined to the prostate (localized)',
+            'Cases in which MRI and biopsy findings show the tumour to be away from the nerve bundles',
+            'Patients whose erectile function before surgery is good or acceptable',
+            'Younger patients — the chance of recovery decreases with age',
+            'Patients who prioritise remaining sexually active and hold realistic expectations about it'
+          ],
+          notSuitable: [
+            'Cases where the tumour lies next to a nerve bundle or extends beyond the capsule — oncological safety takes priority',
+            'High-risk or advanced disease',
+            'Cases with a clearly palpable tumour on that side at rectal examination',
+            'Patients who already have severe, treatment-resistant erectile dysfunction before surgery — the expected gain is limited',
+            'Patients for whom sexual function is not a priority and who wish to maximise oncological safety'
+          ]
+        },
+        technology: [
+          'da Vinci robotic system — high-definition 3D vision and millimetric movement',
+          'Definition of the fascial planes (intrafascial, interfascial, extrafascial)',
+          'Limiting the use of heat (cautery) around the nerve bundle',
+          'Planning with pre-operative multiparametric MRI'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Robotic radical prostatectomy and the nerve-sparing technique are among Assoc. Prof. Dr. Müslüm Ergün’s fields of work. The decision is made for each patient together with the MRI, the biopsy and an assessment of pre-operative function.'
+        },
+        timeline: [
+          {
+            when: 'Remote',
+            title: 'File assessment',
+            body: 'Your multiparametric MRI, biopsy report (ISUP grade and the areas involved) and PSA value are reviewed. Your erectile function before surgery is also asked about; this is critical in setting expectations.'
+          },
+          {
+            when: 'Day 1–2',
+            title: 'Examination and finalising the plan',
+            body: 'In-person examination and completion of any missing tests. Whether nerve preservation is planned on one side, both sides or partially is discussed openly with you.'
+          },
+          {
+            when: 'Day 3',
+            title: 'Surgery',
+            body: 'Robotic radical prostatectomy is performed. The nerve-sparing decision can be revised according to the anatomy seen during surgery and the relationship of the tissue to the tumour; this is a decision taken in the interest of oncological safety.'
+          },
+          {
+            when: 'After pathology',
+            title: 'Surgical margin assessment',
+            body: 'The pathology report shows whether the surgical margin is clear. This result determines both the follow-up plan and, if needed, the decision about additional treatment.'
+          },
+          {
+            when: 'Month 3–24',
+            title: 'Functional follow-up',
+            body: 'Erectile function is assessed at regular intervals. Recovery can continue throughout this period; supportive treatments are added if needed.'
+          }
+        ],
+        risks: [
+          'Erectile function may not return even when the nerves are preserved — this is the most commonly experienced disappointment',
+          'If nerve preservation is forced, the risk of a positive surgical margin rises; this is why oncological safety always takes priority',
+          'Recovery taking longer than expected (it can extend over 12–24 months)',
+          'Where only unilateral preservation is possible, a more limited result than with bilateral preservation',
+          'The possibility that the plan changes during surgery and preservation is abandoned'
+        ],
+        alternatives: [
+          'Non-nerve-sparing (extrafascial) radical prostatectomy — where oncological safety is the priority',
+          'Radiotherapy (external beam or brachytherapy)',
+          'Active surveillance — in selected low-risk patients',
+          'Erectile dysfunction treatments after surgery: PDE5 inhibitors, intracavernosal injection, vacuum device',
+          'Penile prosthesis — the final step where other treatments do not give a response'
+        ],
+        comparison: {
+          title: 'Expectation by degree of nerve preservation',
+          columns: ['Degree', 'What is done', 'Who it suits', 'Expectation'],
+          rows: [
+            {
+              label: 'Bilateral full preservation',
+              values: ['Both nerve bundles are left in place', 'If the tumour is away from both bundles', 'The highest chance of functional return']
+            },
+            {
+              label: 'Unilateral preservation',
+              values: ['Only the bundle on the tumour-free side is preserved', 'If the tumour is close to a bundle on one side', 'There is a chance, but more limited than bilateral']
+            },
+            {
+              label: 'Partial preservation',
+              values: ['Part of the bundle is preserved', 'Cases where the tumour shows limited contact', 'Variable; assessed case by case']
+            },
+            {
+              label: 'No preservation',
+              values: ['The bundles are removed with the prostate', 'If the tumour is adjacent to or beyond the capsule', 'Natural erection is not expected; ED treatments are planned']
+            }
+          ],
+          note:
+            'This table shows the logic of the decision, not a promise of outcome. Which degree can be applied is determined by MRI, biopsy and the anatomical findings during surgery.'
+        },
+        recovery: [
+          {
+            period: 'Months 0–3',
+            body: 'In this period there is usually no erection, or it is very weak; this is expected and does not indicate the final result. Supportive treatments recommended by your physician may be started during this time.'
+          },
+          {
+            period: 'Months 3–6',
+            body: 'Partial responses may begin. The return of night-time and morning erections is a positive sign.'
+          },
+          {
+            period: 'Months 6–12',
+            body: 'This is the period of most marked recovery. Rigidity sufficient for intercourse with medication support can be achieved in this window.'
+          },
+          {
+            period: 'Months 12–24',
+            body: 'Recovery can continue throughout this time. If it is still insufficient at this point, injection therapy, a vacuum device or a penile prosthesis are considered.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The nerve-sparing technique is not priced as a separate procedure; it is included in the price of radical prostatectomy.'
+        },
+        packageIncludes: [
+          'Radical prostatectomy and hospital stay',
+          'Anesthesia and operating room',
+          'Pre-operative assessment and MRI review',
+          'Pathological examination and surgical margin report',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and patient coordinator',
+          'Post-discharge functional follow-up and online reviews'
+        ],
+        faqs: [
+          {
+            q: 'Can nerve-sparing surgery be performed in every patient?',
+            a: 'No. Whether it is possible depends on the location and extent of the tumour. If the tumour lies next to a nerve bundle or has gone beyond the capsule, trying to preserve the bundle increases the risk of leaving cancer cells behind. In that situation the correct decision is to give up preservation. Oncological safety always comes first.'
+          },
+          {
+            q: 'If the nerves are preserved, will my erections definitely return?',
+            a: 'No, there is no guarantee. Nerve preservation increases the chance of return, but the outcome is shaped together by your age, the quality of your erections before surgery, the presence of diabetes or cardiovascular disease, smoking, and whether preservation was possible on one side or both. That is why discussing expectations openly before surgery matters.'
+          },
+          {
+            q: 'How long does recovery take?',
+            a: 'It usually takes months and is gradual. Having no erection in the first three months is expected. The most marked recovery is seen between months 6 and 12 and can continue up to month 24. Rather than trying to shorten this period, it is better to maintain follow-up.'
+          },
+          {
+            q: 'What determines the decision?',
+            a: 'The location of the tumour on multiparametric MRI and its relationship to the capsule, your biopsy result (ISUP grade and the areas involved), your PSA value, the digital rectal examination finding and your erectile function before surgery. These five pieces of information are assessed together.'
+          },
+          {
+            q: 'Does unilateral preservation help?',
+            a: 'Yes, it offers a chance of functional return, though more limited than with bilateral preservation. If the tumour is close to the bundle on one side, giving up that side and preserving the other is a reasonable and frequently used approach.'
+          },
+          {
+            q: 'Can the decision change during surgery?',
+            a: 'Yes. The plan is made before the operation, but the anatomy seen during surgery and the relationship of the tissue to the tumour can change it. Such a change is always made in the interest of oncological safety and is explained to you along with the pathology result.'
+          },
+          {
+            q: 'What happens if erections do not return?',
+            a: 'A stepwise approach is followed: first oral medication, then intracavernosal injection or a vacuum device if there is no response. If those also fail, a penile prosthesis offers a lasting solution. In other words, erections not returning does not mean there is no solution.'
+          },
+          {
+            q: 'Is nerve preservation related to urinary incontinence?',
+            a: 'The nerve bundles are primarily responsible for erection. That said, careful dissection in this area is reported to contribute to the recovery of urinary continence as well. Continence, however, depends mainly on preservation of the sphincter structures.'
+          },
+          {
+            q: 'Is there anything I can do before surgery?',
+            a: 'Yes. Stopping smoking, controlling blood sugar and blood pressure and increasing physical activity support vascular health and favour the chance of recovery. The quality of your erections before surgery is one of the strongest predictors of the outcome afterwards.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Prostate Cancer — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      de: {
+        title: 'Nervenschonende Operation: Für wen ist sie möglich?',
+        summary:
+          'Erhalt der für die Erektion zuständigen Nervenbündel bei der radikalen Prostatektomie — für wen möglich, was sie verändert und was sie nicht garantiert.',
+        metaTitle: 'Nervenschonende Operation | Nervenerhalt bei Prostata-OP',
+        metaDescription:
+          'Nervenschonende Technik bei Prostatakrebs: für wen geeignet, was die Entscheidung bestimmt, wie lange die Genesung dauert und was nicht garantiert wird.',
+        quickFacts: {
+          duration: 'Wird innerhalb der radikalen Prostatektomie durchgeführt',
+          anesthesia: 'Vollnarkose (wie bei der Hauptoperation)',
+          hospitalStay: '2–3 Nächte',
+          stayInTurkey: '7–10 Tage',
+          catheter: '7–10 Tage',
+          returnToWork: '3–4 Wochen',
+          flightClearance: 'Ab Tag 10'
+        },
+        definition: [
+          'Unmittelbar neben der Prostata, an ihrer hinteren Seitenfläche, verlaufen zwei Bündel aus Nerven und Gefäßen, die für die Erektion zuständig sind. Man nennt sie neurovaskuläre Bündel. Da sie der Prostata sehr nahe liegen, können sie bei deren Entfernung geschädigt werden; geschieht das, geht die Erektionsfähigkeit verloren.',
+          'Die nervenschonende Operation ist die Technik, diese Bündel bei der radikalen Prostatektomie von der Prostata zu lösen und an Ort und Stelle zu belassen. Sie ist keine eigene Operation, sondern ein Vorgehen innerhalb des Haupteingriffs. Die hochauflösende dreidimensionale Sicht und die millimetergenaue Beweglichkeit des Robotersystems erleichtern diese feine Präparation.',
+          'DIE WICHTIGSTE REGEL — DIE ONKOLOGISCHE SICHERHEIT HAT VORRANG: Der Nervenerhalt erfolgt nicht auf Kosten der vollständigen Entfernung des Tumors. Liegt der Tumor neben einem Nervenbündel oder reicht er dorthin, steigt beim Versuch, das Bündel zu erhalten, das Risiko zurückbleibender Krebszellen (positiver Schnittrand). In einer solchen Lage ist es richtig, auf den Nervenerhalt zu verzichten. Die Sexualfunktion ist wichtig; die Kontrolle der Erkrankung hat jedoch Vorrang.',
+          'Nervenerhalt ist keine Ja-oder-Nein-Entscheidung, sondern eine Frage des Grades. Beidseitiger vollständiger Erhalt, einseitiger Erhalt und teilweiser Erhalt sind möglich. Der Operateur entscheidet, durch welche der die Prostata umgebenden Faszienschichten er präpariert; je näher diese Ebene an der Prostata liegt, desto mehr Nervengewebe bleibt erhalten — desto kleiner ist aber der onkologische Sicherheitsabstand.',
+          'Die wichtigsten Faktoren für die Entscheidung sind: Lage des Tumors im multiparametrischen MRT und sein Verhältnis zur Kapsel, der Biopsiebefund (ISUP-Grad und betroffene Quadranten), der PSA-Wert, der Tastbefund und Ihre Erektionsfähigkeit vor der Operation. Diese Beurteilung erfolgt vor dem Eingriff, kann aber nach der während der Operation gesehenen Anatomie angepasst werden.',
+          'EINE EHRLICHE ERWARTUNG: Der Erhalt der Nerven erhöht die CHANCE, dass die Erektionsfähigkeit zurückkehrt; er GARANTIERT sie nicht. Das Ergebnis wird auch von anderen Faktoren bestimmt: Ihrem Alter, der Qualität Ihrer Erektionen vor der Operation, dem Vorliegen von Diabetes oder Herz-Kreislauf-Erkrankungen, dem Rauchen und davon, ob der Erhalt einseitig oder beidseitig gelang. Die Erholung dauert Monate und verläuft meist schrittweise.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patienten, deren Tumor auf die Prostata begrenzt (lokalisiert) ist',
+            'Fälle, in denen MRT- und Biopsiebefunde den Tumor fern der Nervenbündel zeigen',
+            'Patienten mit guter oder akzeptabler Erektionsfähigkeit vor der Operation',
+            'Jüngere Patienten — die Chance auf Erholung nimmt mit dem Alter ab',
+            'Patienten, denen sexuelle Aktivität wichtig ist und die dazu realistische Erwartungen haben'
+          ],
+          notSuitable: [
+            'Fälle, in denen der Tumor an ein Nervenbündel grenzt oder die Kapsel überschreitet — die onkologische Sicherheit hat Vorrang',
+            'Hochrisiko- oder fortgeschrittene Erkrankung',
+            'Fälle mit deutlich tastbarem Tumor auf dieser Seite',
+            'Patienten, die bereits vor der Operation eine schwere, therapieresistente erektile Dysfunktion haben — der erwartete Gewinn ist gering',
+            'Patienten, für die die Sexualfunktion keine Priorität hat und die die onkologische Sicherheit maximieren möchten'
+          ]
+        },
+        technology: [
+          'da Vinci Robotersystem — hochauflösende 3D-Sicht und millimetergenaue Bewegung',
+          'Definition der Faszienebenen (intrafaszial, interfaszial, extrafaszial)',
+          'Begrenzung des Hitzeeinsatzes (Kauter) rund um das Nervenbündel',
+          'Planung mit präoperativem multiparametrischem MRT'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Die robotische radikale Prostatektomie und die nervenschonende Technik gehören zu den Arbeitsgebieten von Doz. Dr. Müslüm Ergün. Die Entscheidung wird für jeden Patienten gemeinsam mit MRT, Biopsie und der Beurteilung der präoperativen Funktion getroffen.'
+        },
+        timeline: [
+          {
+            when: 'Aus der Ferne',
+            title: 'Unterlagenprüfung',
+            body: 'Ihr multiparametrisches MRT, der Biopsiebefund (ISUP-Grad und betroffene Areale) und Ihr PSA-Wert werden geprüft. Auch Ihre Erektionsfähigkeit vor der Operation wird erfragt; sie ist für die Erwartung entscheidend.'
+          },
+          {
+            when: 'Tag 1–2',
+            title: 'Untersuchung und Festlegung des Plans',
+            body: 'Persönliche Untersuchung und Nachholen fehlender Befunde. Ob der Nervenerhalt einseitig, beidseitig oder teilweise geplant ist, wird offen mit Ihnen besprochen.'
+          },
+          {
+            when: 'Tag 3',
+            title: 'Operation',
+            body: 'Es erfolgt die robotische radikale Prostatektomie. Die Entscheidung zum Nervenerhalt kann nach der während der Operation gesehenen Anatomie und dem Verhältnis des Gewebes zum Tumor angepasst werden; das geschieht stets im Interesse der onkologischen Sicherheit.'
+          },
+          {
+            when: 'Nach der Pathologie',
+            title: 'Beurteilung des Schnittrands',
+            body: 'Der Pathologiebefund zeigt, ob der Schnittrand frei ist. Dieses Ergebnis bestimmt sowohl den Nachsorgeplan als auch gegebenenfalls die Entscheidung über eine zusätzliche Therapie.'
+          },
+          {
+            when: 'Monat 3–24',
+            title: 'Funktionelle Nachsorge',
+            body: 'Die Erektionsfähigkeit wird in regelmäßigen Abständen beurteilt. Die Erholung kann sich über diesen Zeitraum erstrecken; bei Bedarf werden unterstützende Therapien ergänzt.'
+          }
+        ],
+        risks: [
+          'Die Erektionsfähigkeit kehrt möglicherweise auch bei erhaltenen Nerven nicht zurück — das ist die häufigste Enttäuschung',
+          'Wird der Nervenerhalt erzwungen, steigt das Risiko eines positiven Schnittrands; deshalb hat die onkologische Sicherheit immer Vorrang',
+          'Eine längere Erholung als erwartet (sie kann sich über 12–24 Monate erstrecken)',
+          'Wenn nur ein einseitiger Erhalt möglich ist, ein begrenzteres Ergebnis als beim beidseitigen',
+          'Die Möglichkeit, dass der Plan während der Operation geändert und auf den Erhalt verzichtet wird'
+        ],
+        alternatives: [
+          'Nicht nervenschonende (extrafasziale) radikale Prostatektomie — wenn die onkologische Sicherheit Vorrang hat',
+          'Strahlentherapie (perkutan oder Brachytherapie)',
+          'Aktive Überwachung — bei ausgewählten Niedrigrisikopatienten',
+          'Therapie der erektilen Dysfunktion nach der Operation: PDE5-Hemmer, Schwellkörperinjektion, Vakuumpumpe',
+          'Penisprothese — letzte Stufe, wenn andere Behandlungen nicht ansprechen'
+        ],
+        comparison: {
+          title: 'Erwartung je nach Grad des Nervenerhalts',
+          columns: ['Grad', 'Was geschieht', 'Für wen geeignet', 'Erwartung'],
+          rows: [
+            {
+              label: 'Beidseitiger vollständiger Erhalt',
+              values: ['Beide Nervenbündel bleiben erhalten', 'Wenn der Tumor von beiden Bündeln entfernt liegt', 'Höchste Chance auf Rückkehr der Funktion']
+            },
+            {
+              label: 'Einseitiger Erhalt',
+              values: ['Nur das Bündel der tumorfreien Seite bleibt erhalten', 'Wenn der Tumor einseitig nahe am Bündel liegt', 'Es besteht eine Chance, aber geringer als beidseitig']
+            },
+            {
+              label: 'Teilweiser Erhalt',
+              values: ['Ein Teil des Bündels bleibt erhalten', 'Fälle mit begrenztem Tumorkontakt', 'Variabel; wird im Einzelfall beurteilt']
+            },
+            {
+              label: 'Kein Erhalt',
+              values: ['Die Bündel werden mit der Prostata entfernt', 'Wenn der Tumor angrenzt oder die Kapsel überschreitet', 'Natürliche Erektion ist nicht zu erwarten; ED-Therapien werden geplant']
+            }
+          ],
+          note:
+            'Diese Tabelle zeigt die Entscheidungslogik, kein Ergebnisversprechen. Welcher Grad möglich ist, bestimmen MRT, Biopsie und die anatomischen Befunde während der Operation.'
+        },
+        recovery: [
+          {
+            period: 'Monat 0–3',
+            body: 'In dieser Zeit besteht meist keine oder nur eine sehr schwache Erektion; das ist zu erwarten und sagt nichts über das Endergebnis. Von Ihrem Arzt empfohlene unterstützende Maßnahmen können jetzt begonnen werden.'
+          },
+          {
+            period: 'Monat 3–6',
+            body: 'Teilweise Reaktionen können einsetzen. Die Rückkehr nächtlicher und morgendlicher Erektionen ist ein gutes Zeichen.'
+          },
+          {
+            period: 'Monat 6–12',
+            body: 'Dies ist die Phase der deutlichsten Erholung. Eine für den Verkehr ausreichende Steifigkeit mit medikamentöser Unterstützung kann in diesem Zeitraum erreicht werden.'
+          },
+          {
+            period: 'Monat 12–24',
+            body: 'Die Erholung kann in dieser Zeit weiter fortschreiten. Reicht sie dann noch nicht aus, werden Injektionstherapie, Vakuumpumpe oder eine Penisprothese erwogen.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Die nervenschonende Technik wird nicht gesondert berechnet; sie ist im Preis der radikalen Prostatektomie enthalten.'
+        },
+        packageIncludes: [
+          'Radikale Prostatektomie und Krankenhausaufenthalt',
+          'Anästhesie und Operationssaal',
+          'Präoperative Beurteilung und MRT-Auswertung',
+          'Pathologische Untersuchung und Schnittrandbefund',
+          'Transfers Flughafen–Krankenhaus–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und Patientenkoordinator',
+          'Funktionelle Nachsorge und Online-Kontrollen nach der Entlassung'
+        ],
+        faqs: [
+          {
+            q: 'Kann die nervenschonende Operation bei jedem Patienten durchgeführt werden?',
+            a: 'Nein. Ob sie möglich ist, hängt von Lage und Ausdehnung des Tumors ab. Liegt der Tumor neben einem Nervenbündel oder hat er die Kapsel überschritten, erhöht der Versuch des Erhalts das Risiko zurückbleibender Krebszellen. Dann ist der Verzicht auf den Erhalt die richtige Entscheidung. Die onkologische Sicherheit hat immer Vorrang.'
+          },
+          {
+            q: 'Kehrt meine Erektion sicher zurück, wenn die Nerven erhalten bleiben?',
+            a: 'Nein, eine Garantie gibt es nicht. Der Nervenerhalt erhöht die Chance, doch das Ergebnis wird gemeinsam von Ihrem Alter, der Qualität Ihrer Erektionen vor der Operation, Diabetes oder Herz-Kreislauf-Erkrankungen, dem Rauchen und davon bestimmt, ob der Erhalt ein- oder beidseitig möglich war. Deshalb ist ein offenes Erwartungsgespräch vorab wichtig.'
+          },
+          {
+            q: 'Wie lange dauert die Erholung?',
+            a: 'Meist Monate, und sie verläuft schrittweise. Dass in den ersten drei Monaten keine Erektion auftritt, ist zu erwarten. Die deutlichste Erholung zeigt sich zwischen Monat 6 und 12 und kann bis Monat 24 anhalten. Statt diese Zeit verkürzen zu wollen, ist es besser, die Nachsorge fortzuführen.'
+          },
+          {
+            q: 'Was bestimmt die Entscheidung?',
+            a: 'Lage des Tumors im multiparametrischen MRT und sein Verhältnis zur Kapsel, Ihr Biopsiebefund (ISUP-Grad und betroffene Areale), Ihr PSA-Wert, der Tastbefund und Ihre Erektionsfähigkeit vor der Operation. Diese fünf Angaben werden gemeinsam bewertet.'
+          },
+          {
+            q: 'Bringt ein einseitiger Erhalt etwas?',
+            a: 'Ja, er bietet eine Chance auf Rückkehr der Funktion, allerdings geringer als beim beidseitigen Erhalt. Liegt der Tumor einseitig nahe am Bündel, ist der Verzicht auf diese Seite bei Erhalt der Gegenseite ein sinnvolles und häufig gewähltes Vorgehen.'
+          },
+          {
+            q: 'Kann sich die Entscheidung während der Operation ändern?',
+            a: 'Ja. Der Plan entsteht vor dem Eingriff, doch die während der Operation gesehene Anatomie und das Verhältnis des Gewebes zum Tumor können ihn ändern. Eine solche Änderung erfolgt stets im Interesse der onkologischen Sicherheit und wird Ihnen zusammen mit dem Pathologiebefund erläutert.'
+          },
+          {
+            q: 'Was geschieht, wenn die Erektion nicht zurückkehrt?',
+            a: 'Es wird stufenweise vorgegangen: zunächst orale Medikamente, bei fehlendem Ansprechen Schwellkörperinjektion oder Vakuumpumpe. Führt auch das nicht zum Ziel, bietet eine Penisprothese eine dauerhafte Lösung. Dass die Erektion ausbleibt, bedeutet also nicht, dass es keine Lösung gibt.'
+          },
+          {
+            q: 'Hat der Nervenerhalt mit Harninkontinenz zu tun?',
+            a: 'Die Nervenbündel sind in erster Linie für die Erektion zuständig. Es wird jedoch berichtet, dass eine sorgfältige Präparation in diesem Bereich auch zur Wiedererlangung der Kontinenz beitragen kann. Die Kontinenz hängt allerdings vor allem vom Erhalt der Schließmuskelstrukturen ab.'
+          },
+          {
+            q: 'Kann ich vor der Operation etwas tun?',
+            a: 'Ja. Rauchstopp, gute Einstellung von Blutzucker und Blutdruck sowie mehr körperliche Aktivität unterstützen die Gefäßgesundheit und begünstigen die Erholungschance. Die Qualität Ihrer Erektionen vor der Operation ist einer der stärksten Vorhersagefaktoren für das Ergebnis danach.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU-Leitlinie Prostatakarzinom — Europäische Gesellschaft für Urologie',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      fr: {
+        title: 'Chirurgie avec préservation nerveuse : pour qui est-elle possible ?',
+        summary:
+          'Préserver les bandelettes nerveuses de l’érection lors de la prostatectomie radicale : pour qui c’est possible, ce que cela change et ce que cela ne garantit pas.',
+        metaTitle: 'Préservation nerveuse | Chirurgie de la prostate',
+        metaDescription:
+          'Technique de préservation nerveuse dans le cancer de la prostate : à qui elle convient, ce qui détermine la décision, la durée de récupération et ce qu’elle ne garantit pas.',
+        quickFacts: {
+          duration: 'Réalisée au cours de la prostatectomie radicale',
+          anesthesia: 'Anesthésie générale (celle de l’intervention principale)',
+          hospitalStay: '2 à 3 nuits',
+          stayInTurkey: '7 à 10 jours',
+          catheter: '7 à 10 jours',
+          returnToWork: '3 à 4 semaines',
+          flightClearance: 'À partir du 10e jour'
+        },
+        definition: [
+          'Juste à côté de la prostate, sur sa face postéro-latérale, cheminent deux faisceaux de nerfs et de vaisseaux responsables de l’érection. On les appelle bandelettes neurovasculaires. Parce qu’elles sont très proches de la prostate, elles peuvent être lésées lors de son ablation ; si elles le sont, la fonction érectile est perdue.',
+          'La chirurgie avec préservation nerveuse consiste à détacher ces bandelettes de la prostate et à les laisser en place pendant la prostatectomie radicale. Ce n’est pas une intervention distincte, mais une approche mise en œuvre au sein de l’opération principale. La vision tridimensionnelle haute définition et la précision millimétrique du système robotique facilitent cette dissection fine.',
+          'LA RÈGLE LA PLUS IMPORTANTE — LA SÉCURITÉ ONCOLOGIQUE PASSE D’ABORD : la préservation nerveuse ne se fait pas au prix de l’ablation complète du cancer. Si la tumeur est au contact d’une bandelette ou s’étend vers elle, tenter de la préserver augmente le risque de laisser des cellules cancéreuses (marge chirurgicale positive). Dans cette situation, la bonne décision est de renoncer à la préservation. La fonction sexuelle compte ; mais le contrôle de la maladie prime.',
+          'La préservation nerveuse n’est pas un choix binaire, c’est une question de degré. Une préservation bilatérale complète, unilatérale ou partielle est possible. Le chirurgien décide de la couche fasciale par laquelle il va disséquer ; plus ce plan est proche de la prostate, plus le tissu nerveux est préservé — mais plus la marge de sécurité oncologique se réduit.',
+          'Les principaux éléments de décision sont : la localisation de la tumeur à l’IRM multiparamétrique et son rapport à la capsule, le résultat de la biopsie (grade ISUP et quadrants atteints), le taux de PSA, le toucher rectal et votre fonction érectile avant l’intervention. Cette évaluation est faite avant l’opération mais peut être révisée selon l’anatomie constatée pendant celle-ci.',
+          'UNE ATTENTE HONNÊTE : préserver les nerfs augmente la CHANCE que la fonction érectile revienne ; cela ne la GARANTIT pas. D’autres facteurs pèsent sur le résultat : votre âge, la qualité de vos érections avant l’intervention, la présence d’un diabète ou d’une maladie cardiovasculaire, le tabac, et le fait que la préservation ait pu être unilatérale ou bilatérale. La récupération prend des mois et se fait généralement par étapes.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients dont la tumeur est limitée à la prostate (localisée)',
+            'Cas où l’IRM et la biopsie montrent une tumeur éloignée des bandelettes',
+            'Patients dont la fonction érectile avant l’intervention est bonne ou acceptable',
+            'Patients plus jeunes — la probabilité de récupération diminue avec l’âge',
+            'Patients pour qui rester sexuellement actif est une priorité et qui ont des attentes réalistes'
+          ],
+          notSuitable: [
+            'Cas où la tumeur est au contact d’une bandelette ou franchit la capsule — la sécurité oncologique prime',
+            'Maladie à haut risque ou évoluée',
+            'Cas avec une tumeur nettement palpable de ce côté au toucher rectal',
+            'Patients présentant déjà avant l’intervention une dysfonction érectile sévère et résistante — le bénéfice attendu est limité',
+            'Patients pour qui la fonction sexuelle n’est pas prioritaire et qui souhaitent maximiser la sécurité oncologique'
+          ]
+        },
+        technology: [
+          'Système robotique da Vinci — vision 3D haute définition et mouvement millimétrique',
+          'Définition des plans fasciaux (intrafascial, interfascial, extrafascial)',
+          'Limitation de l’usage de la chaleur (coagulation) autour de la bandelette',
+          'Planification par IRM multiparamétrique préopératoire'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'La prostatectomie radicale robotique et la technique de préservation nerveuse font partie des domaines d’activité du Dr Müslüm Ergün. La décision est prise pour chaque patient à partir de l’IRM, de la biopsie et de l’évaluation de la fonction préopératoire.'
+        },
+        timeline: [
+          {
+            when: 'À distance',
+            title: 'Évaluation du dossier',
+            body: 'Votre IRM multiparamétrique, votre compte rendu de biopsie (grade ISUP et zones atteintes) et votre PSA sont examinés. Votre fonction érectile préopératoire est également évaluée ; elle est déterminante pour fixer les attentes.'
+          },
+          {
+            when: 'Jours 1–2',
+            title: 'Examen et finalisation du plan',
+            body: 'Examen clinique et complément du bilan. Le caractère unilatéral, bilatéral ou partiel de la préservation envisagée est discuté ouvertement avec vous.'
+          },
+          {
+            when: 'Jour 3',
+            title: 'Intervention',
+            body: 'La prostatectomie radicale robotique est réalisée. La décision de préservation peut être révisée selon l’anatomie constatée et le rapport du tissu à la tumeur ; cette révision se fait toujours au nom de la sécurité oncologique.'
+          },
+          {
+            when: 'Après l’anatomopathologie',
+            title: 'Évaluation des marges chirurgicales',
+            body: 'Le compte rendu indique si la marge est saine. Ce résultat détermine le plan de suivi et, si nécessaire, la décision d’un traitement complémentaire.'
+          },
+          {
+            when: 'Mois 3 à 24',
+            title: 'Suivi fonctionnel',
+            body: 'La fonction érectile est évaluée à intervalles réguliers. La récupération peut se poursuivre durant toute cette période ; des traitements de soutien sont ajoutés si besoin.'
+          }
+        ],
+        risks: [
+          'La fonction érectile peut ne pas revenir même lorsque les nerfs ont été préservés — c’est la déception la plus fréquente',
+          'Forcer la préservation augmente le risque de marge chirurgicale positive ; c’est pourquoi la sécurité oncologique prime toujours',
+          'Une récupération plus longue qu’attendu (elle peut s’étendre sur 12 à 24 mois)',
+          'Lorsque seule une préservation unilatérale est possible, un résultat plus limité qu’avec une préservation bilatérale',
+          'La possibilité que le plan change pendant l’intervention et que la préservation soit abandonnée'
+        ],
+        alternatives: [
+          'Prostatectomie radicale sans préservation (extrafasciale) — lorsque la sécurité oncologique prime',
+          'Radiothérapie (externe ou curiethérapie)',
+          'Surveillance active — chez des patients sélectionnés à faible risque',
+          'Traitements de la dysfonction érectile après l’intervention : inhibiteurs de la PDE5, injections intracaverneuses, pompe à vide',
+          'Prothèse pénienne — dernière étape lorsque les autres traitements ne donnent pas de réponse'
+        ],
+        comparison: {
+          title: 'Attente selon le degré de préservation nerveuse',
+          columns: ['Degré', 'Ce qui est fait', 'À qui cela convient', 'Attente'],
+          rows: [
+            {
+              label: 'Préservation bilatérale complète',
+              values: ['Les deux bandelettes sont laissées en place', 'Si la tumeur est éloignée des deux bandelettes', 'Meilleure probabilité de retour fonctionnel']
+            },
+            {
+              label: 'Préservation unilatérale',
+              values: ['Seule la bandelette du côté sain est préservée', 'Si la tumeur est proche d’une bandelette d’un côté', 'Une chance existe, mais plus limitée qu’en bilatéral']
+            },
+            {
+              label: 'Préservation partielle',
+              values: ['Une partie de la bandelette est préservée', 'Cas où le contact tumoral est limité', 'Variable ; évaluée au cas par cas']
+            },
+            {
+              label: 'Pas de préservation',
+              values: ['Les bandelettes sont retirées avec la prostate', 'Si la tumeur est au contact ou franchit la capsule', 'Pas d’érection naturelle attendue ; traitements de la DE planifiés']
+            }
+          ],
+          note:
+            'Ce tableau illustre la logique de décision, il ne promet pas un résultat. Le degré applicable est déterminé par l’IRM, la biopsie et les constatations anatomiques peropératoires.'
+        },
+        recovery: [
+          {
+            period: 'Mois 0–3',
+            body: 'Durant cette période, l’érection est généralement absente ou très faible ; c’est attendu et cela ne préjuge pas du résultat final. Les traitements de soutien conseillés par votre médecin peuvent débuter.'
+          },
+          {
+            period: 'Mois 3–6',
+            body: 'Des réponses partielles peuvent apparaître. Le retour des érections nocturnes et matinales est un signe favorable.'
+          },
+          {
+            period: 'Mois 6–12',
+            body: 'C’est la période de récupération la plus nette. Une rigidité suffisante pour un rapport, avec aide médicamenteuse, peut être obtenue à ce stade.'
+          },
+          {
+            period: 'Mois 12–24',
+            body: 'La récupération peut se poursuivre. Si elle reste insuffisante, les injections, la pompe à vide ou une prothèse pénienne sont envisagées.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'La technique de préservation nerveuse n’est pas facturée séparément ; elle est comprise dans le tarif de la prostatectomie radicale.'
+        },
+        packageIncludes: [
+          'Prostatectomie radicale et séjour hospitalier',
+          'Anesthésie et bloc opératoire',
+          'Évaluation préopératoire et lecture de l’IRM',
+          'Examen anatomopathologique et compte rendu des marges',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et coordinateur patient',
+          'Suivi fonctionnel et contrôles en ligne après la sortie'
+        ],
+        faqs: [
+          {
+            q: 'La préservation nerveuse est-elle possible chez tous les patients ?',
+            a: 'Non. Sa faisabilité dépend de la localisation et de l’étendue de la tumeur. Si celle-ci est au contact d’une bandelette ou a franchi la capsule, tenter de la préserver augmente le risque de laisser des cellules cancéreuses. Dans ce cas, la bonne décision est d’y renoncer. La sécurité oncologique passe toujours d’abord.'
+          },
+          {
+            q: 'Si les nerfs sont préservés, mes érections reviendront-elles à coup sûr ?',
+            a: 'Non, il n’y a pas de garantie. La préservation augmente la probabilité, mais le résultat dépend aussi de votre âge, de la qualité de vos érections avant l’intervention, d’un éventuel diabète ou d’une maladie cardiovasculaire, du tabac, et du caractère uni- ou bilatéral de la préservation. C’est pourquoi il importe d’en parler franchement avant l’opération.'
+          },
+          {
+            q: 'Combien de temps dure la récupération ?',
+            a: 'Généralement des mois, et de façon progressive. L’absence d’érection durant les trois premiers mois est attendue. La récupération la plus nette s’observe entre le 6e et le 12e mois et peut se poursuivre jusqu’au 24e. Plutôt que de chercher à raccourcir ce délai, mieux vaut maintenir le suivi.'
+          },
+          {
+            q: 'Qu’est-ce qui détermine la décision ?',
+            a: 'La localisation de la tumeur à l’IRM multiparamétrique et son rapport à la capsule, votre résultat de biopsie (grade ISUP et zones atteintes), votre PSA, le toucher rectal et votre fonction érectile préopératoire. Ces cinq éléments sont évalués ensemble.'
+          },
+          {
+            q: 'Une préservation unilatérale sert-elle à quelque chose ?',
+            a: 'Oui, elle offre une chance de retour fonctionnel, plus limitée toutefois qu’en bilatéral. Si la tumeur est proche de la bandelette d’un côté, y renoncer tout en préservant l’autre côté est une approche raisonnable et fréquemment retenue.'
+          },
+          {
+            q: 'La décision peut-elle changer pendant l’intervention ?',
+            a: 'Oui. Le plan est établi avant l’opération, mais l’anatomie constatée et le rapport du tissu à la tumeur peuvent le modifier. Un tel changement se fait toujours au nom de la sécurité oncologique et vous est expliqué avec le résultat anatomopathologique.'
+          },
+          {
+            q: 'Que faire si les érections ne reviennent pas ?',
+            a: 'On procède par paliers : d’abord les traitements oraux, puis, en l’absence de réponse, les injections intracaverneuses ou la pompe à vide. Si cela ne suffit pas, la prothèse pénienne offre une solution durable. L’absence de retour des érections ne signifie donc pas une absence de solution.'
+          },
+          {
+            q: 'La préservation nerveuse a-t-elle un lien avec l’incontinence urinaire ?',
+            a: 'Les bandelettes sont avant tout responsables de l’érection. Il est toutefois rapporté qu’une dissection soigneuse dans cette région peut aussi favoriser la récupération de la continence. Celle-ci dépend néanmoins surtout de la préservation des structures sphinctériennes.'
+          },
+          {
+            q: 'Puis-je faire quelque chose avant l’intervention ?',
+            a: 'Oui. Arrêter de fumer, équilibrer la glycémie et la tension et augmenter l’activité physique soutiennent la santé vasculaire et favorisent les chances de récupération. La qualité de vos érections avant l’intervention est l’un des meilleurs prédicteurs du résultat.'
+          }
+        ],
+        sources: [
+          {
+            label: 'Recommandations EAU sur le cancer de la prostate — Association européenne d’urologie',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      ru: {
+        title: 'Нервосберегающая операция: кому она возможна?',
+        summary:
+          'Сохранение нервных пучков, отвечающих за эрекцию, при радикальной простатэктомии: кому возможно, что это меняет и чего не гарантирует.',
+        metaTitle: 'Нервосберегающая операция | Сохранение нервов при операции',
+        metaDescription:
+          'Нервосберегающая методика при раке простаты: кому подходит, что определяет решение, сколько длится восстановление и чего она не гарантирует.',
+        quickFacts: {
+          duration: 'Выполняется в рамках радикальной простатэктомии',
+          anesthesia: 'Общая анестезия (как при основной операции)',
+          hospitalStay: '2–3 ночи',
+          stayInTurkey: '7–10 дней',
+          catheter: '7–10 дней',
+          returnToWork: '3–4 недели',
+          flightClearance: 'С 10-го дня'
+        },
+        definition: [
+          'Непосредственно рядом с простатой, по её задне-боковой поверхности, проходят два пучка нервов и сосудов, отвечающих за эрекцию. Их называют сосудисто-нервными пучками. Поскольку они расположены очень близко к простате, при её удалении они могут быть повреждены; в этом случае эректильная функция утрачивается.',
+          'Нервосберегающая операция — это методика отделения этих пучков от простаты и сохранения их на месте во время радикальной простатэктомии. Это не отдельная операция, а подход, применяемый внутри основного вмешательства. Трёхмерное изображение высокого разрешения и миллиметровая точность движений роботической системы облегчают эту тонкую диссекцию.',
+          'ГЛАВНОЕ ПРАВИЛО — ОНКОЛОГИЧЕСКАЯ БЕЗОПАСНОСТЬ ПРЕЖДЕ ВСЕГО: сохранение нервов не выполняется ценой неполного удаления опухоли. Если опухоль прилежит к нервному пучку или распространяется в его сторону, попытка сохранить пучок повышает риск оставить опухолевые клетки (положительный хирургический край). В такой ситуации правильное решение — отказаться от сохранения нервов. Половая функция важна, но контроль заболевания имеет приоритет.',
+          'Сохранение нервов — не выбор «да или нет», а вопрос степени. Возможны двустороннее полное сохранение, одностороннее и частичное. Хирург решает, через какой из фасциальных слоёв, окружающих простату, пройти; чем ближе эта плоскость к простате, тем больше нервной ткани сохраняется, но тем меньше запас онкологической безопасности.',
+          'Основные факторы, определяющие решение: расположение опухоли по данным мультипараметрической МРТ и её отношение к капсуле, результат биопсии (степень по ISUP и поражённые секторы), уровень ПСА, данные пальцевого ректального исследования и ваша эректильная функция до операции. Эта оценка проводится до вмешательства, но может быть пересмотрена с учётом анатомии, увиденной во время операции.',
+          'ЧЕСТНОЕ ОЖИДАНИЕ: сохранение нервов повышает ШАНС возвращения эректильной функции, но не ГАРАНТИРУЕТ его. На результат влияют и другие факторы: ваш возраст, качество эрекций до операции, наличие диабета или сердечно-сосудистых заболеваний, курение, а также удалось ли сохранить нервы с одной стороны или с обеих. Восстановление занимает месяцы и обычно происходит постепенно.'
+        ],
+        eligibility: {
+          suitable: [
+            'Пациенты с опухолью, ограниченной простатой (локализованной)',
+            'Случаи, когда по данным МРТ и биопсии опухоль расположена вдали от нервных пучков',
+            'Пациенты с хорошей или приемлемой эректильной функцией до операции',
+            'Пациенты более молодого возраста — вероятность восстановления снижается с возрастом',
+            'Пациенты, для которых сохранение половой активности в приоритете и у кого реалистичные ожидания'
+          ],
+          notSuitable: [
+            'Случаи, когда опухоль прилежит к нервному пучку или выходит за капсулу — приоритет у онкологической безопасности',
+            'Заболевание высокого риска или распространённая стадия',
+            'Случаи с отчётливо пальпируемой опухолью с этой стороны',
+            'Пациенты, у которых ещё до операции имеется тяжёлая и резистентная эректильная дисфункция — ожидаемая польза ограничена',
+            'Пациенты, для которых половая функция не является приоритетом и которые хотят максимально обеспечить онкологическую безопасность'
+          ]
+        },
+        technology: [
+          'Роботическая система da Vinci — 3D-изображение высокого разрешения и миллиметровая точность',
+          'Определение фасциальных плоскостей (интрафасциальная, интерфасциальная, экстрафасциальная)',
+          'Ограничение использования термического воздействия вокруг нервного пучка',
+          'Планирование по предоперационной мультипараметрической МРТ'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Роботическая радикальная простатэктомия и нервосберегающая методика входят в сферу работы доцента, д-ра Мюслюма Эргюна. Решение принимается для каждого пациента вместе с данными МРТ, биопсии и оценкой дооперационной функции.'
+        },
+        timeline: [
+          {
+            when: 'Дистанционно',
+            title: 'Оценка документов',
+            body: 'Изучаются ваша мультипараметрическая МРТ, заключение биопсии (степень по ISUP и поражённые зоны) и уровень ПСА. Также уточняется эректильная функция до операции; это важно для формирования ожиданий.'
+          },
+          {
+            when: '1–2-й день',
+            title: 'Осмотр и уточнение плана',
+            body: 'Очный осмотр и дообследование. С вами открыто обсуждается, планируется ли сохранение нервов с одной стороны, с обеих или частично.'
+          },
+          {
+            when: '3-й день',
+            title: 'Операция',
+            body: 'Выполняется роботическая радикальная простатэктомия. Решение о сохранении нервов может быть пересмотрено по увиденной анатомии и отношению ткани к опухоли; это делается ради онкологической безопасности.'
+          },
+          {
+            when: 'После гистологии',
+            title: 'Оценка хирургического края',
+            body: 'Заключение показывает, чист ли хирургический край. Этот результат определяет план наблюдения и при необходимости решение о дополнительном лечении.'
+          },
+          {
+            when: '3–24-й месяц',
+            title: 'Функциональное наблюдение',
+            body: 'Эректильная функция оценивается через регулярные промежутки. Восстановление может продолжаться весь этот период; при необходимости добавляется поддерживающая терапия.'
+          }
+        ],
+        risks: [
+          'Эректильная функция может не вернуться даже при сохранённых нервах — это самое частое разочарование',
+          'При форсировании сохранения нервов возрастает риск положительного хирургического края; поэтому приоритет всегда у онкологической безопасности',
+          'Более долгое восстановление, чем ожидалось (может растянуться на 12–24 месяца)',
+          'При возможности только одностороннего сохранения результат более ограничен, чем при двустороннем',
+          'Вероятность того, что план изменится во время операции и от сохранения придётся отказаться'
+        ],
+        alternatives: [
+          'Радикальная простатэктомия без сохранения нервов (экстрафасциальная) — когда приоритет у онкологической безопасности',
+          'Лучевая терапия (дистанционная или брахитерапия)',
+          'Активное наблюдение — у отобранных пациентов низкого риска',
+          'Лечение эректильной дисфункции после операции: ингибиторы ФДЭ-5, интракавернозные инъекции, вакуумное устройство',
+          'Фаллопротез — последняя ступень при отсутствии ответа на другие методы'
+        ],
+        comparison: {
+          title: 'Ожидания в зависимости от степени сохранения нервов',
+          columns: ['Степень', 'Что выполняется', 'Кому подходит', 'Ожидание'],
+          rows: [
+            {
+              label: 'Двустороннее полное сохранение',
+              values: ['Оба нервных пучка остаются на месте', 'Если опухоль удалена от обоих пучков', 'Наибольший шанс возврата функции']
+            },
+            {
+              label: 'Одностороннее сохранение',
+              values: ['Сохраняется пучок только со здоровой стороны', 'Если опухоль близка к пучку с одной стороны', 'Шанс есть, но он меньше, чем при двустороннем']
+            },
+            {
+              label: 'Частичное сохранение',
+              values: ['Сохраняется часть пучка', 'Случаи ограниченного контакта с опухолью', 'Переменное; оценивается индивидуально']
+            },
+            {
+              label: 'Сохранение не выполняется',
+              values: ['Пучки удаляются вместе с простатой', 'Если опухоль прилежит или вышла за капсулу', 'Естественная эрекция не ожидается; планируется лечение ЭД']
+            }
+          ],
+          note:
+            'Таблица показывает логику решения, а не обещание результата. Какая степень применима, определяют МРТ, биопсия и анатомические находки во время операции.'
+        },
+        recovery: [
+          {
+            period: '0–3-й месяц',
+            body: 'В этот период эрекции обычно нет или она очень слабая; это ожидаемо и не означает окончательного результата. Рекомендованная врачом поддерживающая терапия может быть начата в это время.'
+          },
+          {
+            period: '3–6-й месяц',
+            body: 'Могут появиться частичные ответы. Возвращение ночных и утренних эрекций — благоприятный признак.'
+          },
+          {
+            period: '6–12-й месяц',
+            body: 'Период наиболее заметного восстановления. Достаточная для близости ригидность при медикаментозной поддержке может быть достигнута именно в это время.'
+          },
+          {
+            period: '12–24-й месяц',
+            body: 'Восстановление может продолжаться. Если его по-прежнему недостаточно, рассматриваются инъекции, вакуумное устройство или фаллопротез.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Нервосберегающая методика не тарифицируется отдельно; она входит в стоимость радикальной простатэктомии.'
+        },
+        packageIncludes: [
+          'Радикальная простатэктомия и пребывание в больнице',
+          'Анестезия и операционная',
+          'Предоперационная оценка и анализ МРТ',
+          'Гистологическое исследование и заключение о хирургическом крае',
+          'Трансферы аэропорт–больница–отель',
+          'Проживание (пациент + 1 сопровождающий)',
+          'Медицинский переводчик и координатор пациента',
+          'Функциональное наблюдение и онлайн-контроль после выписки'
+        ],
+        faqs: [
+          {
+            q: 'Можно ли выполнить нервосберегающую операцию каждому пациенту?',
+            a: 'Нет. Возможность зависит от расположения и распространённости опухоли. Если опухоль прилежит к нервному пучку или вышла за капсулу, попытка сохранить пучок повышает риск оставить опухолевые клетки. В такой ситуации правильно отказаться от сохранения. Онкологическая безопасность всегда важнее.'
+          },
+          {
+            q: 'Если нервы сохранены, эрекция точно вернётся?',
+            a: 'Нет, гарантии нет. Сохранение нервов повышает шанс, но результат определяется совокупно вашим возрастом, качеством эрекций до операции, наличием диабета или сердечно-сосудистых заболеваний, курением и тем, удалось ли сохранить нервы с одной стороны или с обеих. Поэтому важно открыто обсудить ожидания до операции.'
+          },
+          {
+            q: 'Сколько длится восстановление?',
+            a: 'Обычно месяцы, и происходит оно постепенно. Отсутствие эрекции в первые три месяца — ожидаемое явление. Наиболее заметное восстановление наблюдается с 6-го по 12-й месяц и может продолжаться до 24-го. Вместо попыток сократить этот срок правильнее продолжать наблюдение.'
+          },
+          {
+            q: 'Что определяет решение?',
+            a: 'Расположение опухоли на мультипараметрической МРТ и её отношение к капсуле, результат биопсии (степень по ISUP и поражённые зоны), уровень ПСА, данные пальцевого исследования и эректильная функция до операции. Эти пять параметров оцениваются вместе.'
+          },
+          {
+            q: 'Помогает ли одностороннее сохранение?',
+            a: 'Да, оно даёт шанс на возврат функции, хотя и меньший, чем двустороннее. Если опухоль близка к пучку с одной стороны, отказ от этой стороны при сохранении противоположной — разумный и часто применяемый подход.'
+          },
+          {
+            q: 'Может ли решение измениться во время операции?',
+            a: 'Да. План составляется до операции, но увиденная анатомия и отношение ткани к опухоли могут его изменить. Такое изменение всегда делается ради онкологической безопасности и разъясняется вам вместе с результатом гистологии.'
+          },
+          {
+            q: 'Что делать, если эрекция не вернётся?',
+            a: 'Применяется ступенчатый подход: сначала препараты внутрь, при отсутствии ответа — интракавернозные инъекции или вакуумное устройство. Если и это не помогает, фаллопротез даёт устойчивое решение. То есть отсутствие возврата эрекции не означает безвыходность.'
+          },
+          {
+            q: 'Связано ли сохранение нервов с недержанием мочи?',
+            a: 'Нервные пучки отвечают прежде всего за эрекцию. Вместе с тем сообщается, что бережная диссекция в этой зоне может способствовать и восстановлению удержания мочи. Однако удержание зависит главным образом от сохранения сфинктерных структур.'
+          },
+          {
+            q: 'Могу ли я что-то сделать до операции?',
+            a: 'Да. Отказ от курения, нормализация уровня глюкозы и давления, повышение физической активности поддерживают здоровье сосудов и улучшают шансы на восстановление. Качество ваших эрекций до операции — один из самых сильных предикторов результата после неё.'
+          }
+        ],
+        sources: [
+          {
+            label: 'Рекомендации EAU по раку предстательной железы — Европейская ассоциация урологии',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      ar: {
+        title: 'جراحة الحفاظ على الأعصاب: لمن تُمكن؟',
+        summary:
+          'الحفاظ على الحزم العصبية المسؤولة عن الانتصاب أثناء الاستئصال الجذري للبروستاتا: لمن تُمكن، وما الذي تغيّره، وما الذي لا تضمنه.',
+        metaTitle: 'جراحة الحفاظ على الأعصاب | حفظ الأعصاب في جراحة البروستاتا',
+        metaDescription:
+          'تقنية الحفاظ على الأعصاب في سرطان البروستاتا: لمن تناسب، وما الذي يحدّد القرار، وكم يستغرق التعافي، وما الذي لا تضمنه.',
+        quickFacts: {
+          duration: 'تُطبَّق ضمن الاستئصال الجذري للبروستاتا',
+          anesthesia: 'تخدير عام (نفس العملية الأساسية)',
+          hospitalStay: '2–3 ليالٍ',
+          stayInTurkey: '7–10 أيام',
+          catheter: '7–10 أيام',
+          returnToWork: '3–4 أسابيع',
+          flightClearance: 'بدءًا من اليوم العاشر'
+        },
+        definition: [
+          'إلى جوار البروستاتا مباشرةً، على سطحها الخلفي الجانبي، تمرّ حزمتان من الأعصاب والأوعية المسؤولة عن الانتصاب، وتُسمَّيان الحزمتين الوعائيتين العصبيتين. ولقربهما الشديد من البروستاتا قد تتضرّران عند استئصالها؛ وفي حال تضرّرهما تُفقَد وظيفة الانتصاب.',
+          'جراحة الحفاظ على الأعصاب هي تقنية فصل هاتين الحزمتين عن البروستاتا وإبقاؤهما في مكانهما أثناء الاستئصال الجذري. وهي ليست عملية منفصلة بل نهج يُطبَّق داخل العملية الأساسية. ويسهّل هذا التشريح الدقيق ما يوفّره النظام الروبوتي من رؤية ثلاثية الأبعاد عالية الوضوح وحركة بدقة ميليمترية.',
+          'القاعدة الأهم — السلامة الأورامية أولًا: لا يُجرى الحفاظ على الأعصاب على حساب استئصال السرطان بالكامل. فإن كان الورم ملاصقًا للحزمة العصبية أو ممتدًّا نحوها، فإن محاولة الحفاظ عليها ترفع خطر بقاء خلايا سرطانية (حافة جراحية إيجابية). وفي هذه الحالة يكون القرار الصحيح هو التخلّي عن الحفاظ على الأعصاب. فالوظيفة الجنسية مهمة، لكن السيطرة على المرض لها الأولوية.',
+          'الحفاظ على الأعصاب ليس خيارًا بين «نعم» و«لا»، بل مسألة درجة. فهناك حفاظ ثنائي كامل، وحفاظ أحادي الجانب، وحفاظ جزئي. ويقرّر الجرّاح من أي طبقة من اللفافات المحيطة بالبروستاتا يمرّ؛ وكلما اقتربت هذه الطبقة من البروستاتا زاد النسيج العصبي المحفوظ، لكن قلّ هامش السلامة الأورامية.',
+          'أهم ما يحدّد القرار: موضع الورم في الرنين المغناطيسي متعدّد المعايير وعلاقته بالمحفظة، ونتيجة الخزعة (درجة ISUP والمناطق المصابة)، وقيمة PSA، ونتيجة الفحص بالإصبع، ووظيفة الانتصاب لديكم قبل العملية. ويُجرى هذا التقييم قبل الجراحة، لكنه قد يُعدَّل بحسب التشريح المُلاحَظ أثناءها.',
+          'توقّع صادق: الحفاظ على الأعصاب يرفع فرصة عودة وظيفة الانتصاب، لكنه لا يضمنها. فهناك عوامل أخرى تحدّد النتيجة: عمركم، وجودة الانتصاب قبل العملية، ووجود السكري أو أمراض القلب والأوعية، والتدخين، وما إذا أمكن الحفاظ من جانب واحد أم من الجانبين. ويستغرق التعافي أشهرًا ويكون تدريجيًا في الغالب.'
+        ],
+        eligibility: {
+          suitable: [
+            'المرضى الذين ينحصر الورم لديهم داخل البروستاتا (موضعي)',
+            'الحالات التي يُظهر فيها الرنين المغناطيسي والخزعة بُعد الورم عن الحزم العصبية',
+            'المرضى الذين تكون وظيفة الانتصاب لديهم قبل العملية جيدة أو مقبولة',
+            'المرضى الأصغر سنًا — إذ تقلّ فرصة التعافي مع التقدّم في العمر',
+            'المرضى الذين يضعون استمرار النشاط الجنسي في الأولوية ولديهم توقعات واقعية'
+          ],
+          notSuitable: [
+            'الحالات التي يلاصق فيها الورم حزمة عصبية أو يتجاوز المحفظة — الأولوية للسلامة الأورامية',
+            'المرض عالي الخطورة أو المتقدّم',
+            'الحالات التي يُجَسّ فيها ورم واضح في ذلك الجانب',
+            'المرضى الذين لديهم أصلًا قبل العملية ضعف انتصاب شديد ومقاوم للعلاج — فالمكسب المتوقَّع محدود',
+            'المرضى الذين لا تمثّل الوظيفة الجنسية أولوية لديهم ويرغبون في تعظيم السلامة الأورامية'
+          ]
+        },
+        technology: [
+          'نظام da Vinci الروبوتي — رؤية ثلاثية الأبعاد عالية الوضوح وحركة ميليمترية',
+          'تحديد المستويات اللفافية (داخل اللفافة، بين اللفافات، خارج اللفافة)',
+          'الحدّ من استخدام الحرارة (الكي) حول الحزمة العصبية',
+          'التخطيط بالرنين المغناطيسي متعدّد المعايير قبل العملية'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'الاستئصال الجذري الروبوتي للبروستاتا وتقنية الحفاظ على الأعصاب من مجالات عمل الأستاذ المشارك د. مسلم إرغن. ويُتَّخذ القرار لكل مريض بالاستناد إلى الرنين المغناطيسي والخزعة وتقييم الوظيفة قبل العملية.'
+        },
+        timeline: [
+          {
+            when: 'عن بُعد',
+            title: 'تقييم الملف',
+            body: 'يُراجَع الرنين المغناطيسي متعدّد المعايير وتقرير الخزعة (درجة ISUP والمناطق المصابة) وقيمة PSA. ويُسأل أيضًا عن وظيفة الانتصاب قبل العملية؛ وهي حاسمة في تحديد التوقعات.'
+          },
+          {
+            when: 'اليوم 1–2',
+            title: 'الفحص وتحديد الخطة',
+            body: 'فحص سريري مباشر واستكمال ما ينقص من فحوص. ويُناقَش معكم بوضوح ما إذا كان الحفاظ مخطّطًا من جانب واحد أم من الجانبين أم جزئيًا.'
+          },
+          {
+            when: 'اليوم الثالث',
+            title: 'العملية',
+            body: 'يُجرى الاستئصال الجذري الروبوتي للبروستاتا. وقد يُعدَّل قرار الحفاظ بحسب التشريح المُلاحَظ أثناء العملية وعلاقة النسيج بالورم؛ وهذا قرار يُتَّخذ لصالح السلامة الأورامية.'
+          },
+          {
+            when: 'بعد الفحص النسيجي',
+            title: 'تقييم الحافة الجراحية',
+            body: 'يبيّن تقرير علم الأمراض ما إذا كانت الحافة الجراحية سليمة. وتحدّد هذه النتيجة خطة المتابعة وقرار العلاج الإضافي عند اللزوم.'
+          },
+          {
+            when: 'الشهر 3–24',
+            title: 'المتابعة الوظيفية',
+            body: 'تُقيَّم وظيفة الانتصاب على فترات منتظمة. وقد يستمر التعافي طوال هذه المدة؛ وتُضاف علاجات داعمة عند الحاجة.'
+          }
+        ],
+        risks: [
+          'قد لا تعود وظيفة الانتصاب حتى مع الحفاظ على الأعصاب — وهذا أكثر ما يسبّب خيبة الأمل',
+          'إن جرى إجبار الحفاظ على الأعصاب ارتفع خطر الحافة الجراحية الإيجابية؛ ولهذا تبقى السلامة الأورامية في المقدّمة دائمًا',
+          'أن يستغرق التعافي وقتًا أطول من المتوقَّع (قد يمتد 12–24 شهرًا)',
+          'عند إمكان الحفاظ من جانب واحد فقط، تكون النتيجة أكثر محدودية مقارنةً بالحفاظ الثنائي',
+          'احتمال تغيّر الخطة أثناء العملية والتخلّي عن الحفاظ'
+        ],
+        alternatives: [
+          'الاستئصال الجذري دون حفاظ على الأعصاب (خارج اللفافة) — حين تكون السلامة الأورامية هي الأولوية',
+          'العلاج الإشعاعي (الخارجي أو المعالجة الكثبية)',
+          'المراقبة النشطة — لدى مرضى مختارين منخفضي الخطورة',
+          'علاجات ضعف الانتصاب بعد العملية: مثبطات PDE5، الحقن داخل الأجسام الكهفية، جهاز الشفط',
+          'دعامة القضيب — الخطوة الأخيرة عند عدم الاستجابة للعلاجات الأخرى'
+        ],
+        comparison: {
+          title: 'التوقعات بحسب درجة الحفاظ على الأعصاب',
+          columns: ['الدرجة', 'ما يُجرى', 'لمن تناسب', 'التوقع'],
+          rows: [
+            {
+              label: 'حفاظ ثنائي كامل',
+              values: ['تُترك الحزمتان في مكانهما', 'إذا كان الورم بعيدًا عن الحزمتين', 'أعلى فرصة لعودة الوظيفة']
+            },
+            {
+              label: 'حفاظ أحادي الجانب',
+              values: ['تُحفَظ الحزمة في الجانب الخالي من الورم فقط', 'إذا كان الورم قريبًا من حزمة في جانب واحد', 'توجد فرصة لكنها أقل من الثنائي']
+            },
+            {
+              label: 'حفاظ جزئي',
+              values: ['يُحفَظ جزء من الحزمة', 'الحالات ذات التماس المحدود مع الورم', 'متغيّر؛ يُقيَّم حالة بحالة']
+            },
+            {
+              label: 'لا يُجرى حفاظ',
+              values: ['تُزال الحزمتان مع البروستاتا', 'إذا كان الورم ملاصقًا أو متجاوزًا للمحفظة', 'لا يُتوقَّع انتصاب طبيعي؛ ويُخطَّط لعلاجات ضعف الانتصاب']
+            }
+          ],
+          note:
+            'يوضّح هذا الجدول منطق القرار لا وعدًا بالنتيجة. وتحدّد الدرجة الممكنة نتائجُ الرنين المغناطيسي والخزعة والمعطيات التشريحية أثناء العملية.'
+        },
+        recovery: [
+          {
+            period: 'الشهر 0–3',
+            body: 'في هذه الفترة لا يوجد انتصاب عادةً أو يكون ضعيفًا جدًا؛ وهذا متوقَّع ولا يعني النتيجة النهائية. ويمكن بدء العلاجات الداعمة التي يوصي بها طبيبكم في هذه المرحلة.'
+          },
+          {
+            period: 'الشهر 3–6',
+            body: 'قد تبدأ استجابات جزئية. وعودة الانتصاب الليلي والصباحي علامة إيجابية.'
+          },
+          {
+            period: 'الشهر 6–12',
+            body: 'هي فترة التعافي الأوضح. ويمكن في هذه المرحلة بلوغ صلابة كافية للعلاقة بدعم دوائي.'
+          },
+          {
+            period: 'الشهر 12–24',
+            body: 'قد يستمر التعافي خلال هذه المدة. وإن بقي غير كافٍ عندها، تُقيَّم خيارات الحقن أو جهاز الشفط أو دعامة القضيب.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'لا تُحتسَب تقنية الحفاظ على الأعصاب كإجراء منفصل؛ فهي ضمن تسعير الاستئصال الجذري للبروستاتا.'
+        },
+        packageIncludes: [
+          'الاستئصال الجذري للبروستاتا والإقامة في المستشفى',
+          'التخدير وغرفة العمليات',
+          'التقييم قبل العملية وقراءة الرنين المغناطيسي',
+          'الفحص النسيجي وتقرير الحافة الجراحية',
+          'تنقّلات المطار–المستشفى–الفندق',
+          'الإقامة (المريض + مرافق واحد)',
+          'مترجم طبي ومنسّق للمرضى',
+          'المتابعة الوظيفية والمراقبة عبر الإنترنت بعد الخروج'
+        ],
+        faqs: [
+          {
+            q: 'هل يمكن إجراء جراحة الحفاظ على الأعصاب لكل مريض؟',
+            a: 'لا. فإمكانها تتوقّف على موضع الورم وامتداده. فإن كان ملاصقًا لحزمة عصبية أو تجاوز المحفظة، فإن محاولة الحفاظ ترفع خطر بقاء خلايا سرطانية. وفي هذه الحالة يكون التخلّي عن الحفاظ هو القرار الصحيح. فالسلامة الأورامية تأتي دائمًا أولًا.'
+          },
+          {
+            q: 'إذا حُفِظت الأعصاب، هل يعود الانتصاب حتمًا؟',
+            a: 'لا، لا توجد ضمانة. فالحفاظ يرفع الفرصة، لكن النتيجة تتحدّد مجتمعةً بعمركم وجودة الانتصاب قبل العملية ووجود السكري أو أمراض القلب والأوعية والتدخين وما إذا أمكن الحفاظ من جانب واحد أم من الجانبين. ولهذا تهمّ مناقشة التوقعات بصراحة قبل العملية.'
+          },
+          {
+            q: 'كم يستغرق التعافي؟',
+            a: 'يستغرق عادةً أشهرًا ويكون تدريجيًا. وغياب الانتصاب في الأشهر الثلاثة الأولى أمر متوقَّع. ويُلاحَظ أوضح تعافٍ بين الشهرين السادس والثاني عشر وقد يستمر حتى الشهر الرابع والعشرين. وبدل محاولة اختصار هذه المدة، الأصحّ هو الاستمرار في المتابعة.'
+          },
+          {
+            q: 'ما الذي يحدّد القرار؟',
+            a: 'موضع الورم في الرنين المغناطيسي متعدّد المعايير وعلاقته بالمحفظة، ونتيجة خزعتكم (درجة ISUP والمناطق المصابة)، وقيمة PSA، ونتيجة الفحص بالإصبع، ووظيفة الانتصاب قبل العملية. تُقيَّم هذه المعطيات الخمسة معًا.'
+          },
+          {
+            q: 'هل يفيد الحفاظ من جانب واحد؟',
+            a: 'نعم، فهو يمنح فرصة لعودة الوظيفة، وإن كانت أقل من الحفاظ الثنائي. فإن كان الورم قريبًا من الحزمة في جانب واحد، فإن التخلّي عن ذلك الجانب مع الحفاظ على الآخر نهج معقول وشائع.'
+          },
+          {
+            q: 'هل يمكن أن يتغيّر القرار أثناء العملية؟',
+            a: 'نعم. تُوضَع الخطة قبل العملية، لكن التشريح المُلاحَظ أثناءها وعلاقة النسيج بالورم قد يغيّرانها. ويُتَّخذ هذا التغيير دائمًا لصالح السلامة الأورامية ويُشرَح لكم مع نتيجة الفحص النسيجي.'
+          },
+          {
+            q: 'ماذا يحدث إن لم يعد الانتصاب؟',
+            a: 'يُتَّبع نهج تدريجي: أولًا الأدوية الفموية، وعند عدم الاستجابة الحقن داخل الأجسام الكهفية أو جهاز الشفط. وإن لم تُجدِ، تقدّم دعامة القضيب حلًا دائمًا. أي أن عدم عودة الانتصاب لا يعني انعدام الحل.'
+          },
+          {
+            q: 'هل للحفاظ على الأعصاب علاقة بسلس البول؟',
+            a: 'الحزم العصبية مسؤولة في المقام الأول عن الانتصاب. ومع ذلك يُذكَر أن التشريح الدقيق في هذه المنطقة قد يسهم أيضًا في استعادة التحكّم بالبول. غير أن التحكّم يعتمد أساسًا على الحفاظ على بنى العضلة العاصرة.'
+          },
+          {
+            q: 'هل هناك ما يمكنني فعله قبل العملية؟',
+            a: 'نعم. الإقلاع عن التدخين وضبط سكر الدم وضغط الدم وزيادة النشاط البدني تدعم صحة الأوعية وتحسّن فرصة التعافي. وجودة الانتصاب لديكم قبل العملية من أقوى العوامل المنبئة بالنتيجة بعدها.'
+          }
+        ],
+        sources: [
+          {
+            label: 'إرشادات EAU حول سرطان البروستاتا — الجمعية الأوروبية للمسالك البولية',
             url: 'https://uroweb.org/guidelines/prostate-cancer'
           }
         ]
