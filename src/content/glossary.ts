@@ -171,7 +171,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'holep',
     category: 'bph',
-    related: 'bph-prostat-buyumesi',
+    related: 'holep',
     i18n: {
       tr: { term: 'HoLEP', definition: 'Holmiyum lazerle büyümüş prostat dokusunun bütün olarak çıkarıldığı, büyük prostatlarda da uygulanabilen endoskopik yöntem.' },
       en: { term: 'HoLEP', definition: 'An endoscopic method in which enlarged prostate tissue is enucleated whole with a holmium laser; it is also applicable to large prostates.' },

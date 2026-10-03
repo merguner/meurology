@@ -15,13 +15,9 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
-     * TASLAK — cerrah onayına sunuldu, onaylanana kadar yayında görünmez.
-     * ThuLEP sayfasıyla YİNELENEN İÇERİK OLMAMASI için vurgu bilinçli olarak
-     * farklı: burada kılavuz konumu, uzun dönem veriler ve hacimden bağımsızlık
-     * öne çıkar; karşılaştırma tablosu da farklıdır (HoLEP / TURP / açık cerrahi).
-     * Kaynak: EAU non-neurogenic male LUTS kılavuzu. Kaynaksız oran YAZILMAMIŞTIR.
+     * Cerrah tarafından 4 Ekim 2026 tarihinde onaylandı ve yayına alındı.
+     * Kaynak: EAU non-neurogenic male LUTS kılavuzu.
      */
-    draft: true,
     slug: 'holep',
     parent: 'bph-prostat-buyumesi',
     lastReviewed: '2026-10-04',
@@ -222,6 +218,966 @@ export const treatments: Treatment[] = [
           {
             label:
               'EAU Guidelines on Management of Non-Neurogenic Male LUTS — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts'
+          }
+        ]
+      },
+      en: {
+        title: 'HoLEP (Holmium Laser Enucleation of the Prostate)',
+        summary:
+          'Enucleation of the obstructing prostate tissue with a holmium laser — the enucleation method with the largest body of long-term follow-up data.',
+        metaTitle: 'HoLEP: Holmium Laser Enucleation of the Prostate',
+        metaDescription:
+          'HoLEP surgery for benign prostatic enlargement: who it suits, how it is performed, risks, recovery and how it differs from TURP and open prostatectomy.',
+        quickFacts: {
+          duration: '60–150 minutes',
+          anesthesia: 'General or spinal anesthesia',
+          hospitalStay: '1 night',
+          stayInTurkey: '5–7 days',
+          catheter: '1–2 days',
+          returnToWork: '2–3 weeks',
+          flightClearance: 'From day 7'
+        },
+        definition: [
+          'The prostate is a gland that sits just below the bladder and surrounds the urinary channel. As it enlarges with age it compresses that channel from outside, and the bladder has to work progressively harder to push urine out. Symptoms usually build slowly: first a thinner stream and waking at night, then a sense of incomplete emptying, and at an advanced stage inability to pass urine or dependence on a catheter.',
+          'HoLEP is a closed operation in which this obstructing tissue is separated from its capsule with a holmium laser and removed as a whole. The holmium laser is pulsed: it cuts tissue with energy delivered in very short bursts while controlling bleeding at the same time. The entire procedure is performed through the urinary channel, with no incision in the body.',
+          'What distinguishes HoLEP most is that it can be used INDEPENDENTLY OF PROSTATE SIZE. In the guidelines of the European Association of Urology it appears as an alternative to TURP in small prostates and to open (simple) prostatectomy in large ones. HoLEP is also the enucleation technique with the broadest long-term follow-up data.',
+          'The removed tissue is reduced inside the bladder with a morcellator and sent in full for pathology. Methods that vaporise tissue make this examination impossible; with HoLEP, an unexpected focus of cancer can still be diagnosed.',
+          'A known feature of HoLEP is that the learning curve is steep for the surgeon. Outcomes are directly related to the experience of the operating team, which makes the choice of centre as important as the choice of method.'
+        ],
+        eligibility: {
+          suitable: [
+            'Prostates of any volume — especially glands above 80 ml that are not well suited to TURP',
+            'Patients who do not benefit from medication or who stop it because of side effects',
+            'Patients who have become catheter-dependent or who experience recurrent urinary retention',
+            'Patients with bladder stones or recurrent infection caused by prostate enlargement',
+            'Patients who have been offered open prostatectomy but are looking for a closed option'
+          ],
+          notSuitable: [
+            'Patients with an active urinary tract infection — the infection is treated first',
+            'Patients with confirmed prostate cancer — the treatment plan differs; HoLEP is considered only in limited situations for obstruction',
+            'Patients whose bladder muscle has largely lost its contractile strength may not see full relief even once obstruction is removed',
+            'Patients at high anesthetic risk with severe comorbidities',
+            'Patients planning to father children — the possibility of retrograde ejaculation must be discussed beforehand'
+          ]
+        },
+        technology: [
+          'Holmium laser system (pulsed energy)',
+          'Enucleation technique applicable independently of prostate volume',
+          'Removal of tissue from the bladder with a morcellator',
+          'Full pathological examination of the removed tissue'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Assoc. Prof. Dr. Müslüm Ergün works with laser enucleation techniques and has peer-reviewed publications in this field. The method is selected after assessing prostate volume and any accompanying conditions.'
+        },
+        timeline: [
+          {
+            when: 'Remote',
+            title: 'File assessment',
+            body: 'Prostate volume (ultrasound or MRI), uroflowmetry, IPSS score, PSA and post-void residual are reviewed. Where the volume is large, the particular advantage HoLEP offers is assessed separately.'
+          },
+          {
+            when: 'Day 1',
+            title: 'Arrival and preparation',
+            body: 'Examination, completion of any missing tests and anesthesia assessment. If you take blood thinners, their management is planned at this stage.'
+          },
+          {
+            when: 'Day 2',
+            title: 'Surgery',
+            body: 'HoLEP is performed under general or spinal anesthesia. The duration is proportional to prostate volume; in large glands the procedure can take longer.'
+          },
+          {
+            when: 'Day 3',
+            title: 'Catheter removal and discharge',
+            body: 'The catheter is removed once the urine is clear. You are discharged after you are seen to pass urine on your own.'
+          },
+          {
+            when: 'Day 7–10',
+            title: 'Review and pathology',
+            body: 'Follow-up examination, review of the pathology result and clearance for the return flight.'
+          }
+        ],
+        risks: [
+          'Burning and sudden urgency when passing urine in the early period after surgery',
+          'Temporary stress-type leakage — it can occur in the first weeks after enucleation and settles in most patients',
+          'Retrograde ejaculation: common, harmless to health, but it affects fertility',
+          'Urinary tract infection',
+          'Urethral stricture or bladder neck contracture — uncommon; treated with an additional procedure if needed',
+          'Bleeding; bladder injury during morcellation (rare)',
+          'General risks related to anesthesia'
+        ],
+        alternatives: [
+          'ThuLEP — enucleation with a thulium laser (same principle, different laser)',
+          'TURP — classic endoscopic resection (in small and medium volumes)',
+          'Rezūm — volume reduction with water vapour (in small prostates, less invasive)',
+          'Medication (alpha blockers, 5-alpha reductase inhibitors)',
+          'Open (simple) prostatectomy — the classic option HoLEP is increasingly replacing'
+        ],
+        comparison: {
+          title: 'HoLEP, TURP and open prostatectomy compared',
+          columns: ['Criterion', 'HoLEP', 'TURP', 'Open prostatectomy'],
+          rows: [
+            { label: 'Prostate volume limit', values: ['Independent of volume', 'Usually below 80 ml', 'Large volumes'] },
+            { label: 'Incision', values: ['None (via urinary channel)', 'None (via urinary channel)', 'Lower abdominal incision'] },
+            { label: 'Average catheter time', values: ['1–2 days', '2–3 days', '4–7 days'] },
+            { label: 'Hospital stay', values: ['1 night', '1–2 nights', '3–5 nights'] },
+            { label: 'Tissue sent for pathology', values: ['Yes', 'Yes', 'Yes'] },
+            { label: 'Surgeon’s learning curve', values: ['Steep — experience is decisive', 'Established, widespread', 'Established'] }
+          ],
+          note:
+            'This table is for general information. The method is chosen individually after assessing prostate volume, comorbidities, clotting status and the patient’s priorities.'
+        },
+        recovery: [
+          {
+            period: 'First 48 hours',
+            body: 'The catheter is in place and bladder irrigation may be used. A pink tinge in the urine is an expected finding; plenty of fluids are advised.'
+          },
+          {
+            period: 'Week 1',
+            body: 'The catheter has been removed. Urinary flow clearly eases, although burning and urgency may persist for a while. Heavy lifting and straining are not advised.'
+          },
+          {
+            period: 'Weeks 2–3',
+            body: 'Returning to desk work is usually possible. Pelvic floor exercises support the recovery of any leakage.'
+          },
+          {
+            period: 'Weeks 4–6',
+            body: 'Urinary control largely settles. Heavy physical activity and sexual intercourse await your physician’s approval.'
+          },
+          {
+            period: 'Month 3 onwards',
+            body: 'The IPSS score and uroflowmetry are repeated so the improvement is measured objectively. Long-term follow-up is advised to monitor durability.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies with prostate volume, procedure time, any accompanying interventions and length of stay. A firm quote follows file assessment.'
+        },
+        packageIncludes: [
+          'Surgery and hospital stay',
+          'Anesthesia and operating room',
+          'Pre-operative tests',
+          'Pathological examination',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and patient coordinator',
+          'Post-discharge online follow-ups'
+        ],
+        faqs: [
+          {
+            q: 'Why is HoLEP described as an alternative to both TURP and open surgery?',
+            a: 'Because it can be used independently of prostate volume. TURP is limited in large glands by operating time and safety, while open surgery requires an incision and a longer recovery. HoLEP overcomes both constraints by removing the obstructing tissue as a whole. The European Association of Urology guidelines place the method in exactly this position.'
+          },
+          {
+            q: 'How is the choice made between HoLEP and ThuLEP?',
+            a: 'Both follow the same enucleation principle; the difference is the laser. Holmium is pulsed, thulium produces a continuous wave. From the patient’s side the process and expected outcomes are largely similar. The choice is made by weighing prostate volume, clotting status, equipment availability and the surgeon’s experience together.'
+          },
+          {
+            q: 'My prostate is over 100 ml — is open surgery unavoidable?',
+            a: 'No. This is precisely the range where HoLEP offers its clearest advantage; it can be treated without an incision. A recommendation specific to you follows the assessment of your file.'
+          },
+          {
+            q: 'HoLEP is said to have a difficult learning curve — how does that affect me?',
+            a: 'It means outcomes are sensitive to the experience of the operating team. In practical terms for you: with HoLEP, the choice of centre and surgeon matters as much as the choice of method. You are welcome to ask about this openly in your pre-operative consultation.'
+          },
+          {
+            q: 'Will repeat surgery be needed in the long term?',
+            a: 'Because enucleation removes the obstructing tissue as a whole it aims for a durable result, and HoLEP has the longest follow-up data in this respect. Even so, no method guarantees that repeat treatment will never be required; regular follow-up is advised.'
+          },
+          {
+            q: 'How long does the catheter stay and when am I discharged?',
+            a: 'The catheter usually stays 1–2 days and is removed once the urine is clear. After you are seen to pass urine on your own, you are generally discharged following a one-night stay.'
+          },
+          {
+            q: 'How will my sexual function be affected?',
+            a: 'Erectile function is usually preserved. Retrograde ejaculation — semen passing into the bladder — is a common change and affects fertility. If you plan to have children this must be discussed before surgery.'
+          },
+          {
+            q: 'Will I have urinary leakage, and is it permanent?',
+            a: 'Stress-type leakage can occur in the first weeks after enucleation. In most patients it improves gradually, and pelvic floor exercises speed this up. Permanent leakage is uncommon; your individual risk is discussed separately during pre-operative assessment.'
+          },
+          {
+            q: 'I take blood thinners — is HoLEP suitable?',
+            a: 'The bleeding control of laser enucleation makes the method worth considering in these patients. However, whether your medication is stopped is decided together with the physician who follows you; do not stop it on your own.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'EAU Guidelines on Management of Non-Neurogenic Male LUTS — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts'
+          }
+        ]
+      },
+      de: {
+        title: 'HoLEP (Holmium-Laser-Enukleation der Prostata)',
+        summary:
+          'Enukleation des obstruierenden Prostatagewebes mit dem Holmiumlaser — das Enukleationsverfahren mit der umfangreichsten Langzeitdatenlage.',
+        metaTitle: 'HoLEP: Holmium-Laser-Enukleation der Prostata',
+        metaDescription:
+          'HoLEP bei gutartiger Prostatavergrößerung: für wen geeignet, Ablauf, Risiken, Genesung und Unterschiede zu TURP und offener Prostatektomie.',
+        quickFacts: {
+          duration: '60–150 Minuten',
+          anesthesia: 'Vollnarkose oder Spinalanästhesie',
+          hospitalStay: '1 Nacht',
+          stayInTurkey: '5–7 Tage',
+          catheter: '1–2 Tage',
+          returnToWork: '2–3 Wochen',
+          flightClearance: 'Ab Tag 7'
+        },
+        definition: [
+          'Die Prostata liegt direkt unterhalb der Blase und umschließt die Harnröhre. Vergrößert sie sich mit dem Alter, engt sie diesen Kanal von außen ein, und die Blase muss immer mehr Kraft aufwenden, um den Urin auszutreiben. Die Beschwerden entwickeln sich meist langsam: zuerst ein dünnerer Strahl und nächtliches Aufstehen, dann das Gefühl der unvollständigen Entleerung und im fortgeschrittenen Stadium Harnverhalt oder Katheterabhängigkeit.',
+          'HoLEP ist eine geschlossene Operation, bei der dieses obstruierende Gewebe mit dem Holmiumlaser von seiner Kapsel gelöst und im Ganzen entfernt wird. Der Holmiumlaser arbeitet gepulst: Er schneidet das Gewebe mit sehr kurzen Energieimpulsen und kontrolliert zugleich die Blutung. Der gesamte Eingriff erfolgt über die Harnröhre, ohne Hautschnitt.',
+          'Das wichtigste Unterscheidungsmerkmal von HoLEP ist, dass es UNABHÄNGIG VOM PROSTATAVOLUMEN eingesetzt werden kann. In den Leitlinien der Europäischen Gesellschaft für Urologie erscheint es als Alternative zur TURP bei kleinen und zur offenen (einfachen) Prostatektomie bei großen Prostatae. HoLEP ist zudem die Enukleationstechnik mit der breitesten Langzeitdatenlage.',
+          'Das entfernte Gewebe wird in der Blase mit einem Morcellator zerkleinert und vollständig zur Pathologie geschickt. Bei Verfahren, die Gewebe verdampfen, ist diese Untersuchung nicht möglich; bei HoLEP kann ein unerwarteter Krebsherd dennoch diagnostiziert werden.',
+          'Ein bekanntes Merkmal von HoLEP ist die steile Lernkurve für den Operateur. Die Ergebnisse hängen unmittelbar von der Erfahrung des Teams ab — damit ist die Wahl des Zentrums ebenso wichtig wie die Wahl der Methode.'
+        ],
+        eligibility: {
+          suitable: [
+            'Prostatae jeder Größe — insbesondere Drüsen über 80 ml, die für eine TURP weniger geeignet sind',
+            'Patienten, die von Medikamenten nicht profitieren oder diese wegen Nebenwirkungen absetzen',
+            'Patienten mit Katheterabhängigkeit oder wiederholtem Harnverhalt',
+            'Patienten mit Blasensteinen oder wiederkehrenden Infekten infolge der Prostatavergrößerung',
+            'Patienten, denen eine offene Prostatektomie empfohlen wurde, die aber eine geschlossene Option suchen'
+          ],
+          notSuitable: [
+            'Patienten mit aktivem Harnwegsinfekt — der Infekt wird zuerst behandelt',
+            'Patienten mit gesichertem Prostatakrebs — der Behandlungsplan unterscheidet sich; HoLEP kommt nur in begrenzten Situationen zur Entlastung infrage',
+            'Patienten, deren Blasenmuskel weitgehend an Kontraktionskraft verloren hat, erleben auch nach Beseitigung der Obstruktion möglicherweise keine vollständige Besserung',
+            'Patienten mit hohem Narkoserisiko und schweren Begleiterkrankungen',
+            'Patienten mit Kinderwunsch — die Möglichkeit einer retrograden Ejakulation muss vorab besprochen werden'
+          ]
+        },
+        technology: [
+          'Holmium-Lasersystem (gepulste Energie)',
+          'Enukleationstechnik, unabhängig vom Prostatavolumen einsetzbar',
+          'Entfernung des Gewebes aus der Blase mit dem Morcellator',
+          'Vollständige pathologische Untersuchung des entfernten Gewebes'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Doz. Dr. Müslüm Ergün arbeitet mit Laser-Enukleationstechniken und hat begutachtete Publikationen auf diesem Gebiet. Die Methode wird nach Beurteilung von Prostatavolumen und Begleiterkrankungen ausgewählt.'
+        },
+        timeline: [
+          {
+            when: 'Aus der Ferne',
+            title: 'Unterlagenprüfung',
+            body: 'Prostatavolumen (Ultraschall oder MRT), Uroflowmetrie, IPSS-Score, PSA und Restharn werden geprüft. Bei großem Volumen wird der besondere Vorteil von HoLEP gesondert beurteilt.'
+          },
+          {
+            when: 'Tag 1',
+            title: 'Ankunft und Vorbereitung',
+            body: 'Untersuchung, Nachholen fehlender Befunde und Narkosevorbereitung. Wenn Sie Blutverdünner nehmen, wird deren Handhabung jetzt geplant.'
+          },
+          {
+            when: 'Tag 2',
+            title: 'Operation',
+            body: 'HoLEP erfolgt in Vollnarkose oder Spinalanästhesie. Die Dauer verhält sich proportional zum Prostatavolumen; bei großen Drüsen kann der Eingriff länger dauern.'
+          },
+          {
+            when: 'Tag 3',
+            title: 'Katheterentfernung und Entlassung',
+            body: 'Der Katheter wird entfernt, sobald der Urin klar ist. Die Entlassung erfolgt, nachdem Sie selbstständig Wasser gelassen haben.'
+          },
+          {
+            when: 'Tag 7–10',
+            title: 'Kontrolle und Pathologie',
+            body: 'Kontrolluntersuchung, Besprechung des Pathologiebefunds und Freigabe für den Rückflug.'
+          }
+        ],
+        risks: [
+          'Brennen und plötzlicher Harndrang in der frühen Phase nach der Operation',
+          'Vorübergehender Belastungsharnverlust — in den ersten Wochen nach Enukleation möglich, bessert sich bei den meisten Patienten',
+          'Retrograde Ejakulation: häufig, gesundheitlich unbedenklich, beeinflusst aber die Fruchtbarkeit',
+          'Harnwegsinfekt',
+          'Harnröhrenstriktur oder Blasenhalsenge — selten; bei Bedarf mit einem weiteren Eingriff behandelbar',
+          'Blutung; Blasenverletzung während der Morcellation (selten)',
+          'Allgemeine Risiken der Narkose'
+        ],
+        alternatives: [
+          'ThuLEP — Enukleation mit dem Thuliumlaser (gleiches Prinzip, anderer Laser)',
+          'TURP — klassische endoskopische Resektion (bei kleinen und mittleren Volumina)',
+          'Rezūm — Volumenreduktion mit Wasserdampf (bei kleinen Prostatae, weniger invasiv)',
+          'Medikamentöse Therapie (Alphablocker, 5-Alpha-Reduktase-Hemmer)',
+          'Offene (einfache) Prostatektomie — die klassische Option, die HoLEP zunehmend ersetzt'
+        ],
+        comparison: {
+          title: 'HoLEP, TURP und offene Prostatektomie im Vergleich',
+          columns: ['Kriterium', 'HoLEP', 'TURP', 'Offene Prostatektomie'],
+          rows: [
+            { label: 'Grenze des Prostatavolumens', values: ['Unabhängig vom Volumen', 'Meist unter 80 ml', 'Große Volumina'] },
+            { label: 'Schnitt', values: ['Keiner (über die Harnröhre)', 'Keiner (über die Harnröhre)', 'Unterbauchschnitt'] },
+            { label: 'Durchschnittliche Katheterdauer', values: ['1–2 Tage', '2–3 Tage', '4–7 Tage'] },
+            { label: 'Krankenhausaufenthalt', values: ['1 Nacht', '1–2 Nächte', '3–5 Nächte'] },
+            { label: 'Gewebe zur Pathologie', values: ['Ja', 'Ja', 'Ja'] },
+            { label: 'Lernkurve des Operateurs', values: ['Steil — Erfahrung entscheidet', 'Etabliert, weit verbreitet', 'Etabliert'] }
+          ],
+          note:
+            'Diese Tabelle dient der allgemeinen Information. Die Methode wird individuell nach Prostatavolumen, Begleiterkrankungen, Gerinnungsstatus und den Prioritäten des Patienten gewählt.'
+        },
+        recovery: [
+          {
+            period: 'Erste 48 Stunden',
+            body: 'Der Katheter liegt, eine Blasenspülung kann erfolgen. Eine rosa Färbung des Urins ist ein erwarteter Befund; reichlich Trinken wird empfohlen.'
+          },
+          {
+            period: 'Woche 1',
+            body: 'Der Katheter ist entfernt. Der Harnstrahl bessert sich deutlich, Brennen und Harndrang können jedoch noch eine Weile anhalten. Schweres Heben und Pressen werden nicht empfohlen.'
+          },
+          {
+            period: 'Woche 2–3',
+            body: 'Die Rückkehr zur Bürotätigkeit ist meist möglich. Beckenbodenübungen unterstützen die Rückbildung eines etwaigen Harnverlusts.'
+          },
+          {
+            period: 'Woche 4–6',
+            body: 'Die Harnkontrolle stabilisiert sich weitgehend. Für schwere körperliche Aktivität und Geschlechtsverkehr wird die ärztliche Freigabe abgewartet.'
+          },
+          {
+            period: 'Ab Monat 3',
+            body: 'IPSS-Score und Uroflowmetrie werden wiederholt, um die Besserung objektiv zu messen. Eine Langzeitnachsorge wird empfohlen, um die Dauerhaftigkeit zu verfolgen.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Der Preis hängt von Prostatavolumen, Eingriffsdauer, begleitenden Maßnahmen und Aufenthaltsdauer ab. Ein verbindliches Angebot folgt nach der Unterlagenprüfung.'
+        },
+        packageIncludes: [
+          'Operation und Krankenhausaufenthalt',
+          'Anästhesie und Operationssaal',
+          'Präoperative Untersuchungen',
+          'Pathologische Untersuchung',
+          'Transfers Flughafen–Krankenhaus–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und Patientenkoordinator',
+          'Online-Nachsorge nach der Entlassung'
+        ],
+        faqs: [
+          {
+            q: 'Warum gilt HoLEP als Alternative sowohl zur TURP als auch zur offenen Operation?',
+            a: 'Weil es unabhängig vom Prostatavolumen einsetzbar ist. Die TURP stößt bei großen Drüsen an Grenzen von Operationszeit und Sicherheit, die offene Operation erfordert einen Schnitt und eine längere Genesung. HoLEP überwindet beide Einschränkungen, indem es das obstruierende Gewebe im Ganzen entfernt. Die Leitlinien der Europäischen Gesellschaft für Urologie ordnen das Verfahren genau so ein.'
+          },
+          {
+            q: 'Wie wird zwischen HoLEP und ThuLEP entschieden?',
+            a: 'Beide folgen demselben Enukleationsprinzip; der Unterschied liegt im Laser. Holmium ist gepulst, Thulium erzeugt eine Dauerstrichwelle. Aus Patientensicht sind Ablauf und zu erwartende Ergebnisse weitgehend ähnlich. Die Wahl erfolgt nach Abwägung von Prostatavolumen, Gerinnungsstatus, verfügbarer Ausstattung und Erfahrung des Operateurs.'
+          },
+          {
+            q: 'Meine Prostata ist über 100 ml — ist eine offene Operation unvermeidlich?',
+            a: 'Nein. Genau in diesem Bereich bietet HoLEP seinen deutlichsten Vorteil; die Behandlung ist ohne Schnitt möglich. Eine auf Sie zugeschnittene Empfehlung folgt nach Prüfung Ihrer Unterlagen.'
+          },
+          {
+            q: 'HoLEP soll eine schwierige Lernkurve haben — was bedeutet das für mich?',
+            a: 'Es bedeutet, dass die Ergebnisse von der Erfahrung des Teams abhängen. Praktisch heißt das für Sie: Bei HoLEP ist die Wahl von Zentrum und Operateur ebenso wichtig wie die Wahl der Methode. Sie dürfen dies im Vorgespräch offen ansprechen.'
+          },
+          {
+            q: 'Ist langfristig eine erneute Operation nötig?',
+            a: 'Da die Enukleation das obstruierende Gewebe im Ganzen entfernt, zielt sie auf ein dauerhaftes Ergebnis, und HoLEP verfügt hierzu über die längsten Verlaufsdaten. Dennoch garantiert kein Verfahren, dass nie eine erneute Behandlung nötig wird; regelmäßige Kontrollen werden empfohlen.'
+          },
+          {
+            q: 'Wie lange bleibt der Katheter und wann werde ich entlassen?',
+            a: 'Der Katheter bleibt meist 1–2 Tage und wird entfernt, sobald der Urin klar ist. Nachdem Sie selbstständig Wasser gelassen haben, werden Sie in der Regel nach einer Nacht entlassen.'
+          },
+          {
+            q: 'Wie wird meine Sexualfunktion beeinflusst?',
+            a: 'Die Erektionsfähigkeit bleibt in der Regel erhalten. Die retrograde Ejakulation — der Samen gelangt in die Blase — ist eine häufige Veränderung und beeinflusst die Fruchtbarkeit. Bei Kinderwunsch muss dies vor der Operation besprochen werden.'
+          },
+          {
+            q: 'Kommt es zu Harnverlust, und ist er dauerhaft?',
+            a: 'In den ersten Wochen nach der Enukleation kann Belastungsharnverlust auftreten. Bei den meisten Patienten bessert er sich allmählich, Beckenbodenübungen beschleunigen dies. Dauerhafter Harnverlust ist selten; Ihr persönliches Risiko wird im Vorgespräch gesondert besprochen.'
+          },
+          {
+            q: 'Ich nehme Blutverdünner — ist HoLEP geeignet?',
+            a: 'Die Blutungskontrolle der Laser-Enukleation macht das Verfahren bei diesen Patienten erwägenswert. Ob Ihre Medikation abgesetzt wird, entscheidet jedoch der behandelnde Arzt gemeinsam mit Ihnen; setzen Sie sie nicht eigenmächtig ab.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'EAU-Leitlinie zum Management nicht-neurogener männlicher LUTS — Europäische Gesellschaft für Urologie',
+            url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts'
+          }
+        ]
+      },
+      fr: {
+        title: 'HoLEP (énucléation de la prostate au laser holmium)',
+        summary:
+          'Énucléation du tissu prostatique obstructif au laser holmium — la technique d’énucléation disposant du plus vaste recul à long terme.',
+        metaTitle: 'HoLEP : énucléation de la prostate au laser holmium',
+        metaDescription:
+          'Chirurgie HoLEP de l’hypertrophie bénigne de la prostate : indications, déroulement, risques, récupération et différences avec la RTUP et l’adénomectomie ouverte.',
+        quickFacts: {
+          duration: '60 à 150 minutes',
+          anesthesia: 'Anesthésie générale ou rachidienne',
+          hospitalStay: '1 nuit',
+          stayInTurkey: '5 à 7 jours',
+          catheter: '1 à 2 jours',
+          returnToWork: '2 à 3 semaines',
+          flightClearance: 'À partir du 7e jour'
+        },
+        definition: [
+          'La prostate est une glande située juste sous la vessie et qui entoure l’urètre. Lorsqu’elle grossit avec l’âge, elle comprime ce conduit de l’extérieur et la vessie doit fournir un effort croissant pour évacuer l’urine. Les symptômes s’installent le plus souvent lentement : d’abord un jet plus fin et des levers nocturnes, puis une sensation de vidange incomplète et, à un stade avancé, une impossibilité d’uriner ou une dépendance à la sonde.',
+          'La HoLEP est une intervention endoscopique au cours de laquelle ce tissu obstructif est séparé de sa capsule au laser holmium et retiré en bloc. Le laser holmium est pulsé : il découpe le tissu par impulsions d’énergie très brèves tout en contrôlant le saignement. Toute l’intervention se fait par les voies urinaires, sans aucune incision cutanée.',
+          'Ce qui distingue le plus la HoLEP, c’est qu’elle s’applique INDÉPENDAMMENT DU VOLUME PROSTATIQUE. Dans les recommandations de l’Association européenne d’urologie, elle figure comme alternative à la RTUP pour les petites prostates et à l’adénomectomie ouverte pour les grosses. La HoLEP est aussi la technique d’énucléation bénéficiant du recul à long terme le plus large.',
+          'Le tissu retiré est fragmenté dans la vessie à l’aide d’un morcellateur et adressé en totalité à l’anatomopathologie. Les techniques de vaporisation rendent cet examen impossible ; avec la HoLEP, un foyer cancéreux inattendu peut malgré tout être diagnostiqué.',
+          'Une caractéristique connue de la HoLEP est sa courbe d’apprentissage abrupte pour le chirurgien. Les résultats dépendent directement de l’expérience de l’équipe, ce qui rend le choix du centre aussi important que celui de la méthode.'
+        ],
+        eligibility: {
+          suitable: [
+            'Prostates de tout volume — en particulier les glandes de plus de 80 ml, peu adaptées à la RTUP',
+            'Patients ne tirant pas de bénéfice du traitement médical ou l’arrêtant en raison des effets indésirables',
+            'Patients devenus dépendants d’une sonde ou présentant des rétentions urinaires répétées',
+            'Patients développant des calculs vésicaux ou des infections récidivantes liés à l’hypertrophie',
+            'Patients à qui une adénomectomie ouverte a été proposée mais qui cherchent une option endoscopique'
+          ],
+          notSuitable: [
+            'Patients présentant une infection urinaire active — l’infection est traitée d’abord',
+            'Patients avec un cancer de la prostate confirmé — la prise en charge diffère ; la HoLEP n’est envisagée que dans des situations limitées, à visée de désobstruction',
+            'Patients dont le muscle vésical a largement perdu sa force de contraction : la levée de l’obstacle peut ne pas suffire à faire disparaître les troubles',
+            'Patients à risque anesthésique élevé avec comorbidités sévères',
+            'Patients ayant un projet de paternité — la possibilité d’une éjaculation rétrograde doit être abordée au préalable'
+          ]
+        },
+        technology: [
+          'Système laser holmium (énergie pulsée)',
+          'Technique d’énucléation applicable quel que soit le volume prostatique',
+          'Retrait du tissu depuis la vessie à l’aide d’un morcellateur',
+          'Examen anatomopathologique complet du tissu retiré'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Le Dr Müslüm Ergün pratique les techniques d’énucléation au laser et a publié dans des revues à comité de lecture sur ce sujet. La méthode est choisie après évaluation du volume prostatique et des affections associées.'
+        },
+        timeline: [
+          {
+            when: 'À distance',
+            title: 'Évaluation du dossier',
+            body: 'Le volume prostatique (échographie ou IRM), la débitmétrie, le score IPSS, le PSA et le résidu post-mictionnel sont examinés. Si le volume est important, l’avantage particulier de la HoLEP est évalué séparément.'
+          },
+          {
+            when: 'Jour 1',
+            title: 'Arrivée et préparation',
+            body: 'Examen clinique, complément du bilan et consultation d’anesthésie. Si vous prenez des anticoagulants, leur gestion est planifiée à ce stade.'
+          },
+          {
+            when: 'Jour 2',
+            title: 'Intervention',
+            body: 'La HoLEP est réalisée sous anesthésie générale ou rachidienne. La durée est proportionnelle au volume prostatique ; elle peut être plus longue pour les grosses glandes.'
+          },
+          {
+            when: 'Jour 3',
+            title: 'Retrait de la sonde et sortie',
+            body: 'La sonde est retirée dès que les urines sont claires. Vous sortez après vérification que vous urinez spontanément.'
+          },
+          {
+            when: 'Jours 7–10',
+            title: 'Contrôle et anatomopathologie',
+            body: 'Consultation de contrôle, examen du résultat anatomopathologique et autorisation pour le vol retour.'
+          }
+        ],
+        risks: [
+          'Brûlures et urgences mictionnelles dans les premiers temps après l’intervention',
+          'Fuites d’effort transitoires — possibles dans les premières semaines après énucléation, elles régressent chez la plupart des patients',
+          'Éjaculation rétrograde : fréquente, sans danger pour la santé, mais elle affecte la fertilité',
+          'Infection urinaire',
+          'Sténose urétrale ou sclérose du col vésical — peu fréquentes ; traitées par un geste complémentaire si nécessaire',
+          'Saignement ; lésion vésicale pendant la morcellation (rare)',
+          'Risques généraux liés à l’anesthésie'
+        ],
+        alternatives: [
+          'ThuLEP — énucléation au laser thulium (même principe, laser différent)',
+          'RTUP — résection endoscopique classique (volumes petits et moyens)',
+          'Rezūm — réduction de volume par vapeur d’eau (petites prostates, moins invasif)',
+          'Traitement médicamenteux (alphabloquants, inhibiteurs de la 5-alpha-réductase)',
+          'Adénomectomie ouverte — l’option classique que la HoLEP remplace progressivement'
+        ],
+        comparison: {
+          title: 'Comparaison HoLEP, RTUP et adénomectomie ouverte',
+          columns: ['Critère', 'HoLEP', 'RTUP', 'Adénomectomie ouverte'],
+          rows: [
+            { label: 'Limite de volume prostatique', values: ['Indépendante du volume', 'Généralement sous 80 ml', 'Gros volumes'] },
+            { label: 'Incision', values: ['Aucune (voies urinaires)', 'Aucune (voies urinaires)', 'Incision sous-ombilicale'] },
+            { label: 'Durée moyenne de sondage', values: ['1 à 2 jours', '2 à 3 jours', '4 à 7 jours'] },
+            { label: 'Séjour hospitalier', values: ['1 nuit', '1 à 2 nuits', '3 à 5 nuits'] },
+            { label: 'Tissu adressé en anatomopathologie', values: ['Oui', 'Oui', 'Oui'] },
+            { label: 'Courbe d’apprentissage du chirurgien', values: ['Abrupte — l’expérience est déterminante', 'Établie, répandue', 'Établie'] }
+          ],
+          note:
+            'Ce tableau est fourni à titre d’information générale. La méthode est choisie au cas par cas selon le volume prostatique, les comorbidités, l’état de la coagulation et les priorités du patient.'
+        },
+        recovery: [
+          {
+            period: '48 premières heures',
+            body: 'La sonde est en place et un lavage vésical peut être mis en œuvre. Une coloration rosée des urines est attendue ; une hydratation abondante est conseillée.'
+          },
+          {
+            period: 'Semaine 1',
+            body: 'La sonde est retirée. Le jet urinaire s’améliore nettement, même si brûlures et urgences peuvent persister un temps. Le port de charges et les efforts de poussée sont déconseillés.'
+          },
+          {
+            period: 'Semaines 2–3',
+            body: 'La reprise d’un travail de bureau est généralement possible. La rééducation périnéale favorise la récupération en cas de fuites.'
+          },
+          {
+            period: 'Semaines 4–6',
+            body: 'Le contrôle urinaire se stabilise largement. L’activité physique intense et les rapports sexuels attendent l’accord du médecin.'
+          },
+          {
+            period: 'À partir du 3e mois',
+            body: 'Le score IPSS et la débitmétrie sont répétés pour mesurer objectivement l’amélioration. Un suivi au long cours est conseillé pour apprécier la durabilité.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Le prix varie selon le volume prostatique, la durée de l’intervention, les gestes associés et la durée du séjour. Un devis ferme est établi après évaluation du dossier.'
+        },
+        packageIncludes: [
+          'Intervention et séjour hospitalier',
+          'Anesthésie et bloc opératoire',
+          'Bilan préopératoire',
+          'Examen anatomopathologique',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et coordinateur patient',
+          'Contrôles en ligne après la sortie'
+        ],
+        faqs: [
+          {
+            q: 'Pourquoi la HoLEP est-elle présentée comme une alternative à la fois à la RTUP et à la chirurgie ouverte ?',
+            a: 'Parce qu’elle s’applique indépendamment du volume prostatique. La RTUP est limitée sur les grosses glandes par la durée opératoire et la sécurité, tandis que la chirurgie ouverte impose une incision et une récupération plus longue. La HoLEP lève ces deux contraintes en retirant le tissu obstructif en bloc. Les recommandations de l’Association européenne d’urologie situent la méthode exactement à cette place.'
+          },
+          {
+            q: 'Comment choisit-on entre HoLEP et ThuLEP ?',
+            a: 'Les deux suivent le même principe d’énucléation ; la différence tient au laser. L’holmium est pulsé, le thulium délivre une onde continue. Du point de vue du patient, le déroulement et les résultats attendus sont très proches. Le choix résulte de la prise en compte conjointe du volume prostatique, de l’état de la coagulation, du matériel disponible et de l’expérience du chirurgien.'
+          },
+          {
+            q: 'Ma prostate dépasse 100 ml : la chirurgie ouverte est-elle inévitable ?',
+            a: 'Non. C’est précisément dans cette fourchette que la HoLEP offre son avantage le plus net ; le traitement est possible sans incision. Une recommandation personnalisée vous est adressée après évaluation de votre dossier.'
+          },
+          {
+            q: 'On dit que la HoLEP a une courbe d’apprentissage difficile : en quoi cela me concerne-t-il ?',
+            a: 'Cela signifie que les résultats dépendent de l’expérience de l’équipe opératoire. Concrètement pour vous : avec la HoLEP, le choix du centre et du chirurgien compte autant que celui de la méthode. Vous pouvez aborder ce point ouvertement lors de la consultation préopératoire.'
+          },
+          {
+            q: 'Une nouvelle intervention sera-t-elle nécessaire à long terme ?',
+            a: 'Parce que l’énucléation retire le tissu obstructif en bloc, elle vise un résultat durable, et la HoLEP dispose à cet égard du recul le plus long. Aucune méthode ne garantit toutefois qu’un nouveau traitement ne sera jamais nécessaire ; un suivi régulier est recommandé.'
+          },
+          {
+            q: 'Combien de temps la sonde reste-t-elle et quand sortirai-je ?',
+            a: 'La sonde reste généralement 1 à 2 jours et est retirée dès que les urines sont claires. Après vérification que vous urinez spontanément, la sortie intervient le plus souvent après une nuit d’hospitalisation.'
+          },
+          {
+            q: 'Comment ma fonction sexuelle sera-t-elle affectée ?',
+            a: 'La fonction érectile est généralement préservée. L’éjaculation rétrograde — le sperme reflue vers la vessie — est un changement fréquent qui affecte la fertilité. Si vous avez un projet de paternité, cela doit être discuté avant l’intervention.'
+          },
+          {
+            q: 'Aurai-je des fuites urinaires, et seront-elles définitives ?',
+            a: 'Des fuites d’effort peuvent survenir dans les premières semaines après l’énucléation. Chez la plupart des patients elles s’améliorent progressivement, et la rééducation périnéale accélère ce processus. Les fuites définitives sont rares ; votre risque personnel est abordé séparément lors de l’évaluation préopératoire.'
+          },
+          {
+            q: 'Je prends des anticoagulants : la HoLEP est-elle adaptée ?',
+            a: 'Le contrôle du saignement propre à l’énucléation au laser rend la méthode envisageable chez ces patients. La décision d’interrompre votre traitement revient toutefois au médecin qui vous suit ; ne l’arrêtez pas de votre propre initiative.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'Recommandations EAU sur la prise en charge des TUBA masculins non neurogènes — Association européenne d’urologie',
+            url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts'
+          }
+        ]
+      },
+      ru: {
+        title: 'HoLEP (энуклеация простаты гольмиевым лазером)',
+        summary:
+          'Энуклеация обтурирующей ткани простаты гольмиевым лазером — методика с наиболее обширными данными длительного наблюдения.',
+        metaTitle: 'HoLEP: энуклеация простаты гольмиевым лазером',
+        metaDescription:
+          'Операция HoLEP при доброкачественной гиперплазии простаты: кому подходит, как проводится, риски, восстановление и отличия от ТУРП и открытой аденомэктомии.',
+        quickFacts: {
+          duration: '60–150 минут',
+          anesthesia: 'Общая или спинальная анестезия',
+          hospitalStay: '1 ночь',
+          stayInTurkey: '5–7 дней',
+          catheter: '1–2 дня',
+          returnToWork: '2–3 недели',
+          flightClearance: 'С 7-го дня'
+        },
+        definition: [
+          'Простата расположена сразу под мочевым пузырём и окружает мочеиспускательный канал. Увеличиваясь с возрастом, она сдавливает этот канал снаружи, и мочевому пузырю приходится работать со всё большим усилием. Симптомы обычно нарастают медленно: сначала более слабая струя и ночные подъёмы, затем ощущение неполного опорожнения, а на поздней стадии — задержка мочи или зависимость от катетера.',
+          'HoLEP — закрытая операция, при которой эта обтурирующая ткань отделяется от капсулы гольмиевым лазером и удаляется целиком. Гольмиевый лазер работает импульсно: он рассекает ткань очень короткими импульсами энергии, одновременно контролируя кровотечение. Всё вмешательство выполняется через мочеиспускательный канал, разрезов на теле нет.',
+          'Главная отличительная черта HoLEP — применимость НЕЗАВИСИМО ОТ ОБЪЁМА ПРОСТАТЫ. В рекомендациях Европейской ассоциации урологии метод указан как альтернатива ТУРП при небольших железах и открытой (простой) аденомэктомии при больших. HoLEP также обладает самой широкой базой данных длительного наблюдения среди методик энуклеации.',
+          'Удалённая ткань измельчается в мочевом пузыре морцеллятором и полностью направляется на гистологию. При методах с испарением ткани такое исследование невозможно; при HoLEP неожиданный очаг рака всё же может быть выявлен.',
+          'Известная особенность HoLEP — крутая кривая обучения для хирурга. Результаты напрямую связаны с опытом оперирующей команды, поэтому выбор центра не менее важен, чем выбор метода.'
+        ],
+        eligibility: {
+          suitable: [
+            'Простата любого объёма — особенно железы более 80 мл, мало подходящие для ТУРП',
+            'Пациенты, не получающие пользы от лекарств или прекращающие их из-за побочных эффектов',
+            'Пациенты, ставшие зависимыми от катетера, или с повторными задержками мочи',
+            'Пациенты с камнями мочевого пузыря или рецидивирующими инфекциями на фоне гиперплазии',
+            'Пациенты, которым предложена открытая аденомэктомия, но которые ищут закрытый вариант'
+          ],
+          notSuitable: [
+            'Пациенты с активной инфекцией мочевых путей — сначала лечат инфекцию',
+            'Пациенты с подтверждённым раком простаты — план лечения иной; HoLEP рассматривается лишь в ограниченных ситуациях для устранения обструкции',
+            'Пациенты, у которых мышца мочевого пузыря во многом утратила сократительную силу: даже после устранения обструкции жалобы могут сохраняться',
+            'Пациенты с высоким анестезиологическим риском и тяжёлыми сопутствующими заболеваниями',
+            'Пациенты, планирующие зачатие, — вероятность ретроградной эякуляции необходимо обсудить заранее'
+          ]
+        },
+        technology: [
+          'Гольмиевая лазерная система (импульсная энергия)',
+          'Методика энуклеации, применимая независимо от объёма простаты',
+          'Извлечение ткани из мочевого пузыря морцеллятором',
+          'Полное гистологическое исследование удалённой ткани'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Доцент, д-р Мюслюм Эргюн работает с методиками лазерной энуклеации и имеет рецензируемые публикации в этой области. Метод выбирается после оценки объёма простаты и сопутствующих состояний.'
+        },
+        timeline: [
+          {
+            when: 'Дистанционно',
+            title: 'Оценка документов',
+            body: 'Оцениваются объём простаты (УЗИ или МРТ), урофлоуметрия, балл IPSS, ПСА и остаточная моча. При большом объёме отдельно рассматривается преимущество, которое даёт HoLEP.'
+          },
+          {
+            when: '1-й день',
+            title: 'Приезд и подготовка',
+            body: 'Осмотр, дообследование и консультация анестезиолога. Если вы принимаете антикоагулянты, их ведение планируется на этом этапе.'
+          },
+          {
+            when: '2-й день',
+            title: 'Операция',
+            body: 'HoLEP выполняется под общей или спинальной анестезией. Длительность пропорциональна объёму простаты; при больших железах вмешательство может занять больше времени.'
+          },
+          {
+            when: '3-й день',
+            title: 'Удаление катетера и выписка',
+            body: 'Катетер удаляют, когда моча становится прозрачной. Выписка — после того как вы начнёте мочиться самостоятельно.'
+          },
+          {
+            when: '7–10-й день',
+            title: 'Контроль и гистология',
+            body: 'Контрольный осмотр, разбор результата гистологии и разрешение на обратный перелёт.'
+          }
+        ],
+        risks: [
+          'Жжение и внезапные позывы при мочеиспускании в раннем периоде после операции',
+          'Временное стрессовое подтекание — возможно в первые недели после энуклеации, у большинства пациентов проходит',
+          'Ретроградная эякуляция: встречается часто, безвредна для здоровья, но влияет на фертильность',
+          'Инфекция мочевых путей',
+          'Стриктура уретры или склероз шейки мочевого пузыря — нечасто; при необходимости устраняются дополнительным вмешательством',
+          'Кровотечение; травма мочевого пузыря при морцелляции (редко)',
+          'Общие риски, связанные с анестезией'
+        ],
+        alternatives: [
+          'ThuLEP — энуклеация тулиевым лазером (тот же принцип, другой лазер)',
+          'ТУРП — классическая эндоскопическая резекция (малые и средние объёмы)',
+          'Rezūm — уменьшение объёма водяным паром (небольшие простаты, менее инвазивно)',
+          'Лекарственная терапия (альфа-блокаторы, ингибиторы 5-альфа-редуктазы)',
+          'Открытая (простая) аденомэктомия — классический вариант, который HoLEP постепенно вытесняет'
+        ],
+        comparison: {
+          title: 'Сравнение HoLEP, ТУРП и открытой аденомэктомии',
+          columns: ['Критерий', 'HoLEP', 'ТУРП', 'Открытая аденомэктомия'],
+          rows: [
+            { label: 'Ограничение по объёму простаты', values: ['Не зависит от объёма', 'Обычно менее 80 мл', 'Большие объёмы'] },
+            { label: 'Разрез', values: ['Нет (через уретру)', 'Нет (через уретру)', 'Разрез внизу живота'] },
+            { label: 'Средний срок катетера', values: ['1–2 дня', '2–3 дня', '4–7 дней'] },
+            { label: 'Пребывание в больнице', values: ['1 ночь', '1–2 ночи', '3–5 ночей'] },
+            { label: 'Ткань направляется на гистологию', values: ['Да', 'Да', 'Да'] },
+            { label: 'Кривая обучения хирурга', values: ['Крутая — опыт решает', 'Устоявшаяся, распространённая', 'Устоявшаяся'] }
+          ],
+          note:
+            'Таблица носит общий информационный характер. Метод подбирается индивидуально с учётом объёма простаты, сопутствующих заболеваний, состояния свёртывания и приоритетов пациента.'
+        },
+        recovery: [
+          {
+            period: 'Первые 48 часов',
+            body: 'Катетер установлен, может применяться промывание мочевого пузыря. Розоватый оттенок мочи ожидаем; рекомендуется обильное питьё.'
+          },
+          {
+            period: '1-я неделя',
+            body: 'Катетер удалён. Струя заметно улучшается, однако жжение и позывы могут сохраняться некоторое время. Подъём тяжестей и натуживание не рекомендуются.'
+          },
+          {
+            period: '2–3-я неделя',
+            body: 'Возвращение к офисной работе обычно возможно. Упражнения для тазового дна способствуют восстановлению при подтекании.'
+          },
+          {
+            period: '4–6-я неделя',
+            body: 'Контроль мочеиспускания в основном налаживается. Для тяжёлых нагрузок и половой жизни дожидаются разрешения врача.'
+          },
+          {
+            period: 'С 3-го месяца',
+            body: 'Повторяют балл IPSS и урофлоуметрию, чтобы объективно измерить улучшение. Рекомендуетсядлительное наблюдение для оценки стойкости результата.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Стоимость зависит от объёма простаты, длительности вмешательства, сопутствующих манипуляций и срока пребывания. Точное предложение даётся после оценки документов.'
+        },
+        packageIncludes: [
+          'Операция и пребывание в больнице',
+          'Анестезия и операционная',
+          'Предоперационное обследование',
+          'Гистологическое исследование',
+          'Трансферы аэропорт–больница–отель',
+          'Проживание (пациент + 1 сопровождающий)',
+          'Медицинский переводчик и координатор пациента',
+          'Онлайн-наблюдение после выписки'
+        ],
+        faqs: [
+          {
+            q: 'Почему HoLEP называют альтернативой и ТУРП, и открытой операции?',
+            a: 'Потому что метод применим независимо от объёма простаты. ТУРП при больших железах ограничена временем операции и соображениями безопасности, а открытая операция требует разреза и более долгого восстановления. HoLEP снимает оба ограничения, удаляя обтурирующую ткань целиком. Рекомендации Европейской ассоциации урологии отводят методу именно такое место.'
+          },
+          {
+            q: 'Как выбирают между HoLEP и ThuLEP?',
+            a: 'Оба метода следуют одному принципу энуклеации; различие в лазере. Гольмий работает импульсно, тулий даёт непрерывную волну. С точки зрения пациента ход операции и ожидаемые результаты во многом схожи. Выбор делается с учётом объёма простаты, состояния свёртывания, доступного оборудования и опыта хирурга.'
+          },
+          {
+            q: 'У меня простата более 100 мл — открытая операция неизбежна?',
+            a: 'Нет. Именно в этом диапазоне HoLEP даёт наиболее выраженное преимущество; лечение возможно без разреза. Индивидуальная рекомендация направляется вам после оценки документов.'
+          },
+          {
+            q: 'Говорят, у HoLEP сложная кривая обучения — как это касается меня?',
+            a: 'Это означает, что результаты зависят от опыта оперирующей команды. Практический вывод для вас: при HoLEP выбор центра и хирурга важен не меньше выбора метода. Этот вопрос можно открыто задать на предоперационной консультации.'
+          },
+          {
+            q: 'Понадобится ли повторная операция в отдалённом периоде?',
+            a: 'Поскольку энуклеация удаляет обтурирующую ткань целиком, она нацелена на стойкий результат, и у HoLEP самые длительные данные наблюдения. Тем не менее ни один метод не гарантирует, что повторное лечение никогда не потребуется; рекомендуется регулярное наблюдение.'
+          },
+          {
+            q: 'Сколько времени стоит катетер и когда меня выпишут?',
+            a: 'Катетер обычно стоит 1–2 дня и удаляется, когда моча становится прозрачной. После того как вы начнёте мочиться самостоятельно, выписка, как правило, происходит после одной ночи в стационаре.'
+          },
+          {
+            q: 'Как это отразится на половой функции?',
+            a: 'Эрекция, как правило, сохраняется. Ретроградная эякуляция — попадание семени в мочевой пузырь — встречается часто и влияет на фертильность. Если вы планируете детей, это необходимо обсудить до операции.'
+          },
+          {
+            q: 'Будет ли недержание и останется ли оно навсегда?',
+            a: 'Стрессовое подтекание возможно в первые недели после энуклеации. У большинства пациентов оно постепенно проходит, а упражнения для тазового дна ускоряют этот процесс. Стойкое недержание встречается редко; ваш индивидуальный риск обсуждается отдельно при предоперационной оценке.'
+          },
+          {
+            q: 'Я принимаю антикоагулянты — подходит ли мне HoLEP?',
+            a: 'Контроль кровотечения при лазерной энуклеации делает метод заслуживающим рассмотрения у таких пациентов. Однако решение об отмене препарата принимает наблюдающий вас врач; не прекращайте приём самостоятельно.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'Рекомендации EAU по ведению ненейрогенных СНМП у мужчин — Европейская ассоциация урологии',
+            url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts'
+          }
+        ]
+      },
+      ar: {
+        title: 'HoLEP (استئصال البروستاتا بليزر الهولميوم)',
+        summary:
+          'استئصال النسيج المسبّب للانسداد بليزر الهولميوم — وهي تقنية الاستئصال التي تحظى بأوسع بيانات متابعة طويلة الأمد.',
+        metaTitle: 'HoLEP: استئصال البروستاتا بليزر الهولميوم',
+        metaDescription:
+          'جراحة HoLEP لتضخم البروستاتا الحميد: لمن تناسب، وكيف تُجرى، والمخاطر، والتعافي، والفروق عن TURP والجراحة المفتوحة.',
+        quickFacts: {
+          duration: '60–150 دقيقة',
+          anesthesia: 'تخدير عام أو نصفي',
+          hospitalStay: 'ليلة واحدة',
+          stayInTurkey: '5–7 أيام',
+          catheter: '1–2 يوم',
+          returnToWork: '2–3 أسابيع',
+          flightClearance: 'بدءًا من اليوم السابع'
+        },
+        definition: [
+          'البروستاتا غدة تقع أسفل المثانة مباشرةً وتحيط بمجرى البول. وحين تكبر مع التقدّم في العمر تضغط على هذا المجرى من الخارج، فتضطر المثانة إلى بذل جهد متزايد لدفع البول. وتتطوّر الأعراض عادةً ببطء: أولًا ضعف التدفق والاستيقاظ ليلًا، ثم الإحساس بعدم الإفراغ الكامل، وفي المرحلة المتقدّمة عجز عن التبول أو اعتماد على القسطرة.',
+          'HoLEP عملية مغلقة يُفصَل فيها هذا النسيج المسبّب للانسداد عن محفظته بليزر الهولميوم ويُزال ككتلة واحدة. ويعمل ليزر الهولميوم بنبضات: فهو يقطع النسيج بنبضات طاقة قصيرة جدًا ويتحكّم في النزف في الوقت نفسه. وتُجرى العملية بالكامل عبر مجرى البول دون أي شق في الجسم.',
+          'وأهم ما يميّز HoLEP أنها قابلة للتطبيق بصرف النظر عن حجم البروستاتا. وتَرِد في إرشادات الجمعية الأوروبية للمسالك البولية بوصفها بديلًا عن TURP في البروستاتا الصغيرة، وعن الاستئصال المفتوح (البسيط) في البروستاتا الكبيرة. كما أنها تقنية الاستئصال ذات أوسع بيانات متابعة طويلة الأمد.',
+          'يُفتَّت النسيج المستأصل داخل المثانة بالمفتّت ويُرسَل بكامله إلى الفحص النسيجي. أما الطرق التي تبخّر النسيج فلا تتيح هذا الفحص؛ وفي HoLEP يمكن تشخيص بؤرة سرطانية غير متوقّعة.',
+          'ومن الخصائص المعروفة لـ HoLEP أن منحنى التعلّم لدى الجرّاح شديد الانحدار. فالنتائج ترتبط مباشرةً بخبرة الفريق الجراحي، ما يجعل اختيار المركز لا يقلّ أهمية عن اختيار الطريقة.'
+        ],
+        eligibility: {
+          suitable: [
+            'البروستاتا بكل الأحجام — خصوصًا ما يزيد على 80 مل وهي غير مناسبة تمامًا لـ TURP',
+            'المرضى الذين لا يستفيدون من الدواء أو يتوقفون عنه بسبب آثاره الجانبية',
+            'المرضى الذين أصبحوا معتمدين على القسطرة أو يعانون احتباسًا بوليًا متكرّرًا',
+            'المرضى الذين تتكوّن لديهم حصوات المثانة أو تتكرّر الالتهابات بسبب التضخم',
+            'المرضى الذين عُرض عليهم الاستئصال المفتوح لكنهم يبحثون عن خيار مغلق'
+          ],
+          notSuitable: [
+            'المصابون بالتهاب بولي نشط — يُعالَج الالتهاب أولًا',
+            'المرضى المشخّصون بسرطان البروستاتا — خطة العلاج مختلفة، ولا تُعتبر HoLEP إلا في حالات محدودة لرفع الانسداد',
+            'من فقدت عضلة المثانة لديهم جزءًا كبيرًا من قوة الانقباض؛ فقد لا تزول الشكاوى تمامًا حتى بعد رفع الانسداد',
+            'المرضى ذوو الخطورة التخديرية العالية مع أمراض مصاحبة شديدة',
+            'من لديهم رغبة في الإنجاب — يجب مناقشة احتمال القذف الرجوعي مسبقًا'
+          ]
+        },
+        technology: [
+          'منظومة ليزر الهولميوم (طاقة نبضية)',
+          'تقنية استئصال قابلة للتطبيق بصرف النظر عن حجم البروستاتا',
+          'إخراج النسيج من المثانة باستخدام المفتّت',
+          'فحص نسيجي كامل للنسيج المستأصل'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'يعمل الأستاذ المشارك د. مسلم إرغن بتقنيات الاستئصال بالليزر وله أبحاث محكّمة في هذا المجال. وتُختار الطريقة بعد تقييم حجم البروستاتا والحالات المصاحبة.'
+        },
+        timeline: [
+          {
+            when: 'عن بُعد',
+            title: 'تقييم الملف',
+            body: 'يُراجَع حجم البروستاتا (بالموجات فوق الصوتية أو الرنين)، وقياس تدفق البول، ومؤشر IPSS، وPSA، والبول المتبقي. وإذا كان الحجم كبيرًا، تُقيَّم ميزة HoLEP على حدة.'
+          },
+          {
+            when: 'اليوم الأول',
+            title: 'الوصول والتحضير',
+            body: 'فحص سريري واستكمال ما ينقص من فحوص وتقييم التخدير. وإن كنتم تتناولون أدوية سيولة الدم، يُخطَّط للتعامل معها في هذه المرحلة.'
+          },
+          {
+            when: 'اليوم الثاني',
+            title: 'العملية',
+            body: 'تُجرى HoLEP تحت تخدير عام أو نصفي. وتتناسب المدة مع حجم البروستاتا؛ وقد تطول في الغدد الكبيرة.'
+          },
+          {
+            when: 'اليوم الثالث',
+            title: 'إزالة القسطرة والخروج',
+            body: 'تُزال القسطرة عندما يصفو البول. وتخرجون بعد التأكد من قدرتكم على التبول تلقائيًا.'
+          },
+          {
+            when: 'اليوم 7–10',
+            title: 'المتابعة والنتيجة النسيجية',
+            body: 'فحص متابعة ومراجعة نتيجة الفحص النسيجي وإذن برحلة العودة.'
+          }
+        ],
+        risks: [
+          'حرقة وإلحاح مفاجئ عند التبول في الفترة المبكرة بعد العملية',
+          'تسرّب بولي جهدي مؤقّت — قد يحدث في الأسابيع الأولى بعد الاستئصال ويتحسّن لدى معظم المرضى',
+          'القذف الرجوعي: شائع وغير ضار بالصحة لكنه يؤثر في الخصوبة',
+          'التهاب المسالك البولية',
+          'تضيّق الإحليل أو تصلّب عنق المثانة — غير شائع؛ ويُعالَج بإجراء إضافي عند الحاجة',
+          'النزف؛ وإصابة المثانة أثناء التفتيت (نادرة)',
+          'المخاطر العامة المرتبطة بالتخدير'
+        ],
+        alternatives: [
+          'ThuLEP — الاستئصال بليزر الثوليوم (المبدأ نفسه بليزر مختلف)',
+          'TURP — الاستئصال التنظيري التقليدي (في الأحجام الصغيرة والمتوسطة)',
+          'Rezūm — تقليل الحجم ببخار الماء (للبروستاتا الصغيرة، أقل توغلًا)',
+          'العلاج الدوائي (حاصرات ألفا، مثبطات 5-ألفا ريدكتاز)',
+          'الاستئصال المفتوح (البسيط) — الخيار التقليدي الذي تحلّ HoLEP محلّه تدريجيًا'
+        ],
+        comparison: {
+          title: 'مقارنة HoLEP وTURP والاستئصال المفتوح',
+          columns: ['المعيار', 'HoLEP', 'TURP', 'الاستئصال المفتوح'],
+          rows: [
+            { label: 'حدّ حجم البروستاتا', values: ['مستقل عن الحجم', 'غالبًا أقل من 80 مل', 'الأحجام الكبيرة'] },
+            { label: 'الشق الجراحي', values: ['لا يوجد (عبر مجرى البول)', 'لا يوجد (عبر مجرى البول)', 'شق أسفل البطن'] },
+            { label: 'متوسط مدة القسطرة', values: ['1–2 يوم', '2–3 أيام', '4–7 أيام'] },
+            { label: 'الإقامة في المستشفى', values: ['ليلة واحدة', 'ليلة إلى ليلتين', '3–5 ليالٍ'] },
+            { label: 'إرسال النسيج للفحص النسيجي', values: ['نعم', 'نعم', 'نعم'] },
+            { label: 'منحنى تعلّم الجرّاح', values: ['شديد الانحدار — الخبرة حاسمة', 'راسخ وواسع الانتشار', 'راسخ'] }
+          ],
+          note:
+            'هذا الجدول لأغراض التوعية العامة. وتُختار الطريقة لكل حالة بحسب حجم البروستاتا والأمراض المصاحبة وحالة التخثر وأولويات المريض.'
+        },
+        recovery: [
+          {
+            period: 'أول 48 ساعة',
+            body: 'القسطرة موضوعة وقد يُستخدَم غسيل المثانة. واللون الوردي في البول نتيجة متوقّعة؛ ويُنصح بشرب كميات وافرة من السوائل.'
+          },
+          {
+            period: 'الأسبوع الأول',
+            body: 'أُزيلت القسطرة. ويتحسّن تدفق البول بوضوح، وإن كانت الحرقة والإلحاح قد تستمر فترة. ولا يُنصح برفع الأثقال أو الإجهاد.'
+          },
+          {
+            period: 'الأسبوع 2–3',
+            body: 'العودة إلى العمل المكتبي ممكنة عادةً. وتدعم تمارين قاع الحوض تحسّن التسرّب إن وُجد.'
+          },
+          {
+            period: 'الأسبوع 4–6',
+            body: 'يستقرّ التحكّم بالبول إلى حدٍّ كبير. ويُنتظر إذن الطبيب لممارسة النشاط البدني الشاق والعلاقة الزوجية.'
+          },
+          {
+            period: 'من الشهر الثالث',
+            body: 'يُعاد قياس مؤشر IPSS وتدفق البول لقياس التحسّن موضوعيًا. ويُنصح بمتابعة طويلة الأمد لرصد ثبات النتيجة.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'تختلف التكلفة بحسب حجم البروستاتا ومدة العملية والإجراءات المرافقة ومدة الإقامة. ويُقدَّم عرض نهائي بعد تقييم الملف.'
+        },
+        packageIncludes: [
+          'العملية والإقامة في المستشفى',
+          'التخدير وغرفة العمليات',
+          'الفحوص قبل العملية',
+          'الفحص النسيجي',
+          'تنقّلات المطار–المستشفى–الفندق',
+          'الإقامة (المريض + مرافق واحد)',
+          'مترجم طبي ومنسّق للمرضى',
+          'متابعة عبر الإنترنت بعد الخروج'
+        ],
+        faqs: [
+          {
+            q: 'لماذا تُوصَف HoLEP بأنها بديل عن TURP والجراحة المفتوحة معًا؟',
+            a: 'لأنها قابلة للتطبيق بصرف النظر عن حجم البروستاتا. فـ TURP محدودة في الغدد الكبيرة من حيث مدة العملية والسلامة، بينما تتطلّب الجراحة المفتوحة شقًّا وتعافيًا أطول. وتتجاوز HoLEP كلا القيدين بإزالة النسيج المسبّب للانسداد ككتلة واحدة. وإرشادات الجمعية الأوروبية للمسالك البولية تضع الطريقة في هذا الموضع تحديدًا.'
+          },
+          {
+            q: 'كيف يُختار بين HoLEP وThuLEP؟',
+            a: 'كلتاهما تتبع مبدأ الاستئصال نفسه؛ والفرق في الليزر. فالهولميوم نبضي، والثوليوم يعطي موجة مستمرة. ومن وجهة نظر المريض فإن سير العملية والنتائج المتوقّعة متقاربة. ويُتَّخذ القرار بمراعاة حجم البروستاتا وحالة التخثر والأجهزة المتاحة وخبرة الجرّاح معًا.'
+          },
+          {
+            q: 'حجم بروستاتي يتجاوز 100 مل، فهل الجراحة المفتوحة حتمية؟',
+            a: 'لا. فهذا تحديدًا هو النطاق الذي تقدّم فيه HoLEP أوضح ميزة؛ ويمكن العلاج دون شق. وتُرسَل إليكم توصية خاصة بحالتكم بعد تقييم الملف.'
+          },
+          {
+            q: 'يُقال إن منحنى التعلّم في HoLEP صعب، فكيف يعنيني ذلك؟',
+            a: 'يعني أن النتائج حسّاسة لخبرة الفريق الجراحي. والخلاصة العملية بالنسبة لكم: في HoLEP يكون اختيار المركز والجرّاح بأهمية اختيار الطريقة نفسها. ويمكنكم طرح هذا الأمر بصراحة في استشارة ما قبل العملية.'
+          },
+          {
+            q: 'هل ستلزم عملية أخرى على المدى الطويل؟',
+            a: 'لأن الاستئصال يزيل النسيج المسبّب للانسداد كاملًا، فهو يستهدف نتيجة دائمة، ولـ HoLEP أطول بيانات متابعة في هذا الصدد. ومع ذلك لا تضمن أي طريقة عدم الحاجة إلى علاج لاحق؛ ويُنصَح بالمتابعة المنتظمة.'
+          },
+          {
+            q: 'كم تبقى القسطرة ومتى أخرج من المستشفى؟',
+            a: 'تبقى القسطرة عادةً يومًا إلى يومين وتُزال عندما يصفو البول. وبعد التأكد من قدرتكم على التبول تلقائيًا، يكون الخروج غالبًا بعد مبيت ليلة واحدة.'
+          },
+          {
+            q: 'كيف تتأثر وظيفتي الجنسية؟',
+            a: 'يُحافَظ على الانتصاب عادةً. أما القذف الرجوعي — انتقال السائل المنوي إلى المثانة — فتغيّر شائع يؤثر في الخصوبة. وإن كانت لديكم رغبة في الإنجاب فيجب مناقشة ذلك قبل العملية.'
+          },
+          {
+            q: 'هل يحدث تسرّب بولي وهل يكون دائمًا؟',
+            a: 'قد يحدث تسرّب جهدي في الأسابيع الأولى بعد الاستئصال. ويتحسّن تدريجيًا لدى معظم المرضى، وتسرّع تمارين قاع الحوض هذا التحسّن. أما التسرّب الدائم فنادر؛ وتُناقَش مخاطرتكم الشخصية على حدة في التقييم قبل العملية.'
+          },
+          {
+            q: 'أتناول أدوية سيولة الدم، فهل تناسبني HoLEP؟',
+            a: 'السيطرة على النزف في الاستئصال بالليزر تجعل الطريقة جديرة بالنظر لدى هؤلاء المرضى. غير أن قرار إيقاف الدواء يعود إلى الطبيب المتابع لحالتكم؛ فلا توقفوه من تلقاء أنفسكم.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'إرشادات EAU حول التعامل مع أعراض الجهاز البولي السفلي غير العصبية لدى الرجال — الجمعية الأوروبية للمسالك البولية',
             url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts'
           }
         ]
