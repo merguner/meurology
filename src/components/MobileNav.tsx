@@ -2,13 +2,15 @@
 
 import { useState, useEffect } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { Link, usePathname } from '@/i18n/navigation';
+import type { Locale } from '@/i18n/routing';
+import { Link, usePathname, treatmentHref } from '@/i18n/navigation';
 import { navItemsFor } from '@/config/nav';
 import { SocialLinks } from './SocialLinks';
 
 export function MobileNav() {
   const t = useTranslations('Nav');
-  const navItems = navItemsFor(useLocale());
+  const locale = useLocale() as Locale;
+  const navItems = navItemsFor(locale);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -83,7 +85,7 @@ export function MobileNav() {
                       {item.children.map((child) => (
                         <li key={child.slug}>
                           <Link
-                            href={{ pathname: '/tedaviler/[slug]', params: { slug: child.slug } }}
+                            href={treatmentHref(child.slug, locale)}
                             className="block rounded-lg px-3 py-2 text-sm text-muted transition-colors hover:bg-surface-2 hover:text-primary"
                           >
                             {t(child.key)}

@@ -434,6 +434,79 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
     waitingTitle: 'Следующий шаг',
     waitingBody:
       'Ваша запись оформлена. После оплаты отправьте чек в WhatsApp. Как только наша команда подтвердит чек, мы позвоним вам по видео WhatsApp во время записи.'
+  },
+  fr: {
+    navLabel: 'Consultation privée en ligne',
+    badge: 'Séance privée payante',
+    eyebrow: 'Confidentialité avant tout, sur rendez-vous',
+    title: 'Consultation privée en ligne',
+    summary:
+      'Une consultation vidéo individuelle et privée, sur rendez-vous, sans vous déplacer à la clinique. Particulièrement adaptée aux patients attachés à leur intimité.',
+    heroDescription: [
+      'La consultation privée en ligne est un entretien vidéo payant, individuel, réservé à l’avance avec le chirurgien, sans déplacement à la clinique. Elle est distincte et indépendante du parcours gratuit par WhatsApp ou formulaire.',
+      'La consultation se déroule par appel vidéo WhatsApp ; aucune autre plateforme (Zoom, Meet, etc.) n’est nécessaire. Il vous suffit d’avoir accès à WhatsApp à l’heure du rendez-vous.'
+    ],
+    forWhom:
+      'Pour les sujets sensibles comme l’andrologie et la santé sexuelle, elle offre un cadre privé et individuel, sur rendez-vous, où vous pouvez vous exprimer en confiance.',
+    howTitle: 'Comment ça se passe',
+    how: [
+      { title: '1. Réservez un créneau', body: 'Choisissez un jour et une heure (les horaires sont affichés en heure d’Istanbul).' },
+      { title: '2. Quelques informations', body: 'Nom, pays et une courte note — le strict nécessaire.' },
+      { title: '3. Réglez par virement', body: 'Recevez votre code de rendez-vous ; virez le montant sur l’IBAN en indiquant le code en référence.' },
+      { title: '4. Envoyez le reçu sur WhatsApp', body: 'Un seul clic ouvre WhatsApp avec votre code déjà renseigné.' },
+      { title: '5. Consultation vidéo', body: 'Une fois le reçu confirmé, nous vous appelons en vidéo WhatsApp à l’heure convenue.' }
+    ],
+    priceLabel: 'Tarif',
+    priceNote: 'Entretien d’évaluation individuel de {duration} minutes',
+    vatIncluded: 'TVA incluse',
+    priceDomesticNotice: 'Prestation payante ; le montant est communiqué lors de la prise de rendez-vous.',
+    fxNote: '',
+    internationalNote:
+      'Si vous êtes un patient international : le virement ne pouvant se faire que vers un compte bancaire en Türkiye, contactez-nous sur WhatsApp afin de convenir ensemble du moyen de paiement.',
+    ctaBook: 'Prendre rendez-vous',
+    step1Title: 'Choisissez un jour et une heure',
+    timezoneLabel: 'Votre fuseau horaire',
+    clinicTimeNote: 'Les horaires sont affichés en heure de Türkiye (Istanbul).',
+    yourTimeLabel: 'heure locale',
+    selectDate: 'Date',
+    selectTime: 'Heure (Istanbul)',
+    step2Title: 'Vos informations',
+    nameLabel: 'Nom et prénom',
+    namePlaceholder: 'Votre nom et prénom',
+    countryLabel: 'Pays',
+    countryPlaceholder: 'Pays de résidence',
+    noteLabel: 'Note courte (facultatif)',
+    notePlaceholder: 'Ce dont vous souhaitez parler — quelques mots suffisent',
+    legalTitle: 'Avant la consultation',
+    legalText: [
+      'Cette consultation est une PRÉ-CONSULTATION à distance ; elle ne remplace pas un examen en présentiel, un diagnostic définitif, un traitement ou une prescription. Un examen en personne pourra être recommandé si nécessaire.',
+      'La consultation se déroule par appel vidéo WhatsApp ; vous devez avoir accès à WhatsApp à l’heure du rendez-vous.',
+      'KVKK/RGPD : les informations que vous partagez sont traitées uniquement pour cette consultation. La séance n’est PAS enregistrée.'
+    ],
+    consentLabel: 'J’ai lu et j’accepte les informations ci-dessus.',
+    consentRequired: 'Veuillez accepter les informations pour continuer.',
+    validationName: 'Veuillez saisir votre nom.',
+    validationSlot: 'Veuillez choisir un jour et une heure.',
+    back: 'Retour',
+    next: 'Continuer',
+    create: 'Créer le rendez-vous',
+    step3Title: 'Votre rendez-vous est confirmé',
+    codeLabel: 'Code de rendez-vous',
+    dateTimeLabel: 'Jour et heure',
+    amountLabel: 'Montant',
+    referenceLabel: 'Référence / motif',
+    bankTitle: 'Coordonnées bancaires',
+    accountHolderLabel: 'Titulaire du compte',
+    bankNameLabel: 'Banque',
+    ibanLabel: 'IBAN',
+    instructions:
+      'Lors du virement, indiquez votre code de rendez-vous dans le champ référence. Après le paiement, envoyez le reçu sur WhatsApp.',
+    whatsappReceiptCta: 'Envoyer le reçu sur WhatsApp',
+    whatsappMessage:
+      'Bonjour, je vous envoie le reçu de paiement pour le code de rendez-vous {code}. Montant : {amount}.',
+    waitingTitle: 'Prochaine étape',
+    waitingBody:
+      'Votre rendez-vous est enregistré. Après avoir effectué le paiement, envoyez le reçu sur WhatsApp. Dès que notre équipe l’aura confirmé, nous vous appellerons en vidéo WhatsApp à l’heure convenue.'
   }
 };
 

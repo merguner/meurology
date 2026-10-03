@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
-import { getPathname } from '@/i18n/navigation';
+import { getPathname, treatmentHref } from '@/i18n/navigation';
 import { siteConfig } from '@/config/site';
 import { features } from '@/config/features';
 import { treatmentSlugs } from '@/content/treatments';
@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ] as const;
 
   const dynamicHrefs = [
-    ...treatmentSlugs.map((slug) => ({ pathname: '/tedaviler/[slug]', params: { slug } }) as const),
+    // Tedaviler aşağıda dil bazlı slug ile ayrıca eklenir (bkz. treatmentEntries).
     ...blogPosts.map((p) => ({ pathname: '/blog/[slug]', params: { slug: p.slug } }) as const)
   ];
 
@@ -49,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         .map((l) => [l, `${base}${getPathname({ locale: l, href })}`])
     );
 
-  return routing.locales.flatMap((locale) =>
+  const staticEntries = routing.locales.flatMap((locale) =>
     allHrefs
       .filter((href) => isPublished(locale, href))
       .map((href) => ({
@@ -60,4 +60,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: { languages: languagesFor(href) }
       }))
   );
+
+  /**
+   * TEDAVİ SAYFALARI — her dil KENDİ slug'ıyla.
+   * hreflang karşılıkları da dil bazlı slug taşır (ör. en: kidney-stones,
+   * de: nierensteine), yoksa Google karşılıklı referansı doğrulayamaz.
+   */
+  const treatmentEntries = routing.locales.flatMap((locale) =>
+    treatmentSlugs.map((canonical) => ({
+      url: `${base}${getPathname({ locale, href: treatmentHref(canonical, locale) })}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+      alternates: {
+        languages: {
+          ...Object.fromEntries(
+            routing.locales.map((l) => [
+              l,
+              `${base}${getPathname({ locale: l, href: treatmentHref(canonical, l) })}`
+            ])
+          ),
+          'x-default': `${base}${getPathname({ locale: 'en', href: treatmentHref(canonical, 'en') })}`
+        }
+      }
+    }))
+  );
+
+  return [...staticEntries, ...treatmentEntries];
 }

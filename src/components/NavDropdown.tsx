@@ -1,13 +1,15 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
-import { Link, usePathname } from '@/i18n/navigation';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link, usePathname, treatmentHref } from '@/i18n/navigation';
 import type { NavItem } from '@/config/nav';
+import type { Locale } from '@/i18n/routing';
 import { Icon } from './Icon';
 
 /** Masaüstü üst-kategori açılır menüsü (hover + klavye erişimli). */
 export function NavDropdown({ item }: { item: NavItem }) {
+  const locale = useLocale() as Locale;
   const t = useTranslations('Nav');
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLLIElement>(null);
@@ -74,7 +76,7 @@ export function NavDropdown({ item }: { item: NavItem }) {
           {item.children.map((child) => (
             <li key={child.slug}>
               <Link
-                href={{ pathname: '/tedaviler/[slug]', params: { slug: child.slug } }}
+                href={treatmentHref(child.slug, locale)}
                 className="block whitespace-nowrap px-4 py-2.5 text-sm text-fg/90 transition-colors hover:bg-surface-2 hover:text-primary"
               >
                 {t(child.key)}

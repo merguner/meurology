@@ -31,7 +31,7 @@ export const treatments: Treatment[] = [
           'Amaç kanserin kontrol altına alınmasının yanında, mümkün olduğunda idrar tutma ve cinsel işlevi koruyan sinir koruyucu tekniğin uygulanmasıdır.'
         ],
         surgeonExperience: {
-          caseVolume: '145+ robotik prostatektomi vakası',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
         },
         timeline: [
@@ -117,7 +117,7 @@ export const treatments: Treatment[] = [
           'The goal is cancer control while, where feasible, preserving urinary continence and sexual function through nerve-sparing technique.'
         ],
         surgeonExperience: {
-          caseVolume: '145+ robotic prostatectomy cases',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
         },
         timeline: [
@@ -201,7 +201,7 @@ export const treatments: Treatment[] = [
           'الهدف هو السيطرة على السرطان مع الحفاظ قدر الإمكان على التحكم في التبول والوظيفة الجنسية من خلال تقنية الحفاظ على الأعصاب.'
         ],
         surgeonExperience: {
-          caseVolume: 'أكثر من 145 عملية استئصال بروستاتا بالروبوت',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'يعكس عدد الحالات إجمالي الخبرة الجراحية للأستاذ المشارك د. مسلم إرغن في هذا المجال.'
         },
         timeline: [
@@ -255,7 +255,7 @@ export const treatments: Treatment[] = [
           'Ziel ist die Tumorkontrolle bei möglichst weitgehendem Erhalt von Harnkontinenz und Sexualfunktion durch die nervenschonende Technik.'
         ],
         surgeonExperience: {
-          caseVolume: 'über 145 robotische Prostatektomien',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
         },
         timeline: [
@@ -309,7 +309,7 @@ export const treatments: Treatment[] = [
           'Цель — контроль над опухолью при максимально возможном сохранении удержания мочи и половой функции с помощью нервосберегающей техники.'
         ],
         surgeonExperience: {
-          caseVolume: 'более 145 роботических простатэктомий',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Число операций отражает общий хирургический опыт доцента д-ра Мюслюма Эргюна в этой области.'
         },
         timeline: [
@@ -351,6 +351,92 @@ export const treatments: Treatment[] = [
           { q: 'Подхожу ли я для нервосберегающей операции?', a: 'Это зависит от расположения и стадии опухоли и уточняется после предоперационного обследования.' },
           { q: 'Когда можно лететь после операции?', a: 'Большинству пациентов разрешают перелёт после контроля и удаления катетера, обычно с 10-го дня.' }
         ]
+      },
+      fr: {
+        title: 'Prostatectomie radicale robotique / laparoscopique',
+        summary:
+          'Ablation de la prostate assistée par robot, par voie mini-invasive, dans le cancer de la prostate.',
+        metaTitle: 'Prostatectomie robotique | Chirurgie du cancer de la prostate',
+        metaDescription:
+          'Prostatectomie radicale assistée par robot pour le cancer de la prostate : déroulement, risques, alternatives, fourchette de prix et questions fréquentes.',
+        definition: [
+          'La prostatectomie radicale consiste à retirer complètement la glande prostatique et une partie des tissus environnants lorsque le cancer est limité à la glande.',
+          'Dans l’approche assistée par robot, le chirurgien pilote des bras robotisés depuis une console avec une précision millimétrique. De petites incisions entraînent généralement moins de saignement, moins de douleur et une récupération plus rapide qu’en chirurgie ouverte.',
+          'L’objectif est le contrôle du cancer tout en préservant, lorsque c’est possible, la continence urinaire et la fonction sexuelle grâce à la technique de préservation nerveuse.'
+        ],
+        surgeonExperience: {
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
+          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+        },
+        timeline: [
+          {
+            when: 'À distance',
+            title: 'Pré-évaluation',
+            body: 'Vous transmettez en ligne vos résultats de PSA, de biopsie et d’imagerie ; l’équipe évalue l’indication.'
+          },
+          {
+            when: 'Jours 1–2',
+            title: 'Arrivée et examen',
+            body: 'Arrivée à Istanbul, examen clinique, consultation d’anesthésie et bilan préopératoire.'
+          },
+          {
+            when: 'Jour 3',
+            title: 'Intervention',
+            body: 'Prostatectomie assistée par robot ; généralement 2 à 4 heures, sans séjour systématique en soins intensifs.'
+          },
+          {
+            when: 'Jours 4–5',
+            title: 'Sortie',
+            body: 'Sortie avec sonde ; reprise de la marche et d’une activité légère.'
+          },
+          {
+            when: 'Jours 7–10',
+            title: 'Contrôle et retrait de la sonde',
+            body: 'Consultation de contrôle, retrait de la sonde et analyse anatomopathologique ; puis autorisation de prendre l’avion.'
+          }
+        ],
+        risks: [
+          'Incontinence urinaire transitoire ou définitive',
+          'Modification de la fonction érectile (risque réduit par la technique de préservation nerveuse)',
+          'Saignement, infection et risques généraux liés à la chirurgie et à l’anesthésie',
+          'Rarement, lésion d’un organe voisin'
+        ],
+        alternatives: [
+          'Surveillance active (chez des patients sélectionnés à faible risque)',
+          'Radiothérapie (externe ou curiethérapie)',
+          'Traitements focaux (dans des cas sélectionnés)',
+          'Hormonothérapie (en complément aux stades avancés)'
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'La fourchette de prix varie selon le stade, les gestes associés et la durée du séjour. Un devis ferme est établi après la pré-évaluation.'
+        },
+        packageIncludes: [
+          'Intervention et séjour hospitalier',
+          'Anesthésie et bloc opératoire',
+          'Bilan préopératoire',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et coordinateur patient',
+          'Contrôles en ligne après la sortie'
+        ],
+        faqs: [
+          {
+            q: 'Combien de temps dois-je rester en Türkiye ?',
+            a: 'Généralement 7 à 10 jours ; la durée exacte dépend de votre récupération et du moment du retrait de la sonde.'
+          },
+          {
+            q: 'Suis-je candidat à une chirurgie avec préservation nerveuse ?',
+            a: 'Cela dépend de la localisation et du stade de la tumeur ; la décision est confirmée après l’imagerie et l’examen préopératoires.'
+          },
+          {
+            q: 'Quand puis-je prendre l’avion après l’intervention ?',
+            a: 'La plupart des patients sont autorisés à voyager après le contrôle et le retrait de la sonde, généralement à partir du 10e jour.'
+          }
+        ]
       }
     }
   },
@@ -371,7 +457,7 @@ export const treatments: Treatment[] = [
           'Tedavi yöntemi taşın boyutu, sertliği ve konumuna göre seçilir. Küçük taşlarda ses dalgası, orta boy taşlarda esnek üreteroskopi ile lazer, büyük taşlarda perkütan (deriden) cerrahi öne çıkar.'
         ],
         surgeonExperience: {
-          caseVolume: '1.350+ endoürolojik vaka',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
         },
         timeline: [
@@ -432,7 +518,7 @@ export const treatments: Treatment[] = [
           'The treatment method is chosen according to the size, hardness and location of the stone. Shock waves are used for small stones, flexible ureteroscopy with laser for medium stones, and percutaneous (through the skin) surgery for large stones.'
         ],
         surgeonExperience: {
-          caseVolume: '1,350+ endourological cases',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
         },
         timeline: [
@@ -493,7 +579,7 @@ export const treatments: Treatment[] = [
           'يُختار أسلوب العلاج حسب حجم الحصاة وصلابتها وموقعها. تُستخدَم الموجات الصادمة للحصوات الصغيرة، وتنظير الحالب المرن بالليزر للحصوات المتوسطة، والجراحة عبر الجلد للحصوات الكبيرة.'
         ],
         surgeonExperience: {
-          caseVolume: 'أكثر من 1,350 حالة بالمنظار الداخلي',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'يعكس عدد الحالات إجمالي الخبرة الجراحية للأستاذ المشارك د. مسلم إرغن في هذا المجال.'
         },
         timeline: [
@@ -554,7 +640,7 @@ export const treatments: Treatment[] = [
           'Das Verfahren richtet sich nach Größe, Härte und Lage des Steins. Bei kleinen Steinen kommen Stoßwellen zum Einsatz, bei mittleren die flexible Ureteroskopie mit Laser, bei großen die perkutane (durch die Haut) Chirurgie.'
         ],
         surgeonExperience: {
-          caseVolume: 'über 1.350 endourologische Fälle',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
         },
         timeline: [
@@ -615,7 +701,7 @@ export const treatments: Treatment[] = [
           'Метод лечения выбирают по размеру, плотности и расположению камня. При мелких камнях применяют ударные волны, при средних — гибкую уретероскопию с лазером, при крупных — чрескожную (через кожу) операцию.'
         ],
         surgeonExperience: {
-          caseVolume: 'более 1 350 эндоурологических случаев',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Число операций отражает общий хирургический опыт доцента д-ра Мюслюма Эргюна в этой области.'
         },
         timeline: [
@@ -665,6 +751,69 @@ export const treatments: Treatment[] = [
           { q: 'Процедура болезненна?', a: 'Процедуры проводятся под анестезией; после возможен лёгкий дискомфорт.' },
           { q: 'Будет ли установлен стент?', a: 'В некоторых случаях нужен временный стент; обычно его удаляют вскоре.' }
         ]
+      },
+      fr: {
+        title: 'Traitement des calculs rénaux (RIRS, NLPC, LEC)',
+        summary:
+          'Une méthode adaptée à la taille et à la localisation du calcul : fragmentation laser, chirurgie percutanée ou ondes de choc.',
+        metaTitle: 'Traitement des calculs rénaux | Comparatif RIRS, NLPC, LEC',
+        metaDescription:
+          'Comparaison du RIRS (laser), de la NLPC (percutanée) et de la LEC (ondes de choc) pour les calculs rénaux : déroulement, risques et fourchette de prix.',
+        definition: [
+          'Les calculs rénaux se forment lorsque des minéraux présents dans l’urine cristallisent et s’agglomèrent ; ils peuvent provoquer de fortes douleurs lombaires, du sang dans les urines ou une infection.',
+          'La méthode de traitement est choisie en fonction de la taille, de la dureté et de la localisation du calcul. Les ondes de choc sont utilisées pour les petits calculs, l’urétéroscopie souple avec laser pour les calculs de taille moyenne, et la chirurgie percutanée (à travers la peau) pour les calculs volumineux.'
+        ],
+        surgeonExperience: {
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
+          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+        },
+        timeline: [
+          { when: 'À distance', title: 'Pré-évaluation', body: 'Votre scanner ou échographie et vos analyses de sang et d’urine sont examinés, puis la méthode adaptée est planifiée.' },
+          { when: 'Jour 1', title: 'Arrivée et examens', body: 'Examen clinique, imagerie nécessaire et consultation d’anesthésie.' },
+          { when: 'Jour 2', title: 'Intervention', body: 'Intervention selon la méthode retenue ; le plus souvent en ambulatoire ou avec une nuit d’hospitalisation.' },
+          { when: 'Jours 3–4', title: 'Contrôle', body: 'Vérification de l’absence de calcul résiduel, évaluation de la sonde JJ si nécessaire et autorisation de retour.' }
+        ],
+        risks: [
+          'Saignement et infection urinaire',
+          'Brûlures mictionnelles ou sang dans les urines, transitoires',
+          'Situations nécessitant la pose d’une sonde JJ',
+          'Élimination incomplète du calcul et nécessité d’une seconde intervention'
+        ],
+        alternatives: [
+          'Expulsion du calcul sous traitement médical (petits calculs)',
+          'Surveillance simple (petits calculs asymptomatiques)',
+          'Chirurgie ouverte ou laparoscopique (rarement, dans les cas complexes)'
+        ],
+        comparison: {
+          title: 'RIRS vs NLPC vs LEC',
+          columns: ['Critère', 'RIRS (laser)', 'NLPC (percutanée)', 'LEC (ondes de choc)'],
+          rows: [
+            { label: 'Taille de calcul adaptée', values: ['Jusqu’à ~2 cm', '2 cm et plus', 'Jusqu’à ~1 cm'] },
+            { label: 'Incision', values: ['Aucune (voies urinaires)', 'Petite incision cutanée', 'Aucune (externe)'] },
+            { label: 'Anesthésie', values: ['Générale / rachidienne', 'Générale', 'Sédation le plus souvent'] },
+            { label: 'Séjour', values: ['Ambulatoire – 1 nuit', '1 à 2 nuits', 'Ambulatoire'] },
+            { label: 'Taux sans calcul résiduel', values: ['Élevé', 'Très élevé', 'Modéré'] }
+          ],
+          note: 'Ce tableau est fourni à titre d’information générale ; la méthode définitive est déterminée au cas par cas.'
+        },
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer: 'Varie selon la méthode et la charge lithiasique ; un devis ferme est établi après évaluation.'
+        },
+        packageIncludes: [
+          'Intervention et séjour hospitalier',
+          'Anesthésie et examens nécessaires',
+          'Transferts et hébergement',
+          'Interprète médical et coordinateur',
+          'Contrôle et suivi en ligne'
+        ],
+        faqs: [
+          { q: 'Quelle méthode me convient ?', a: 'Cela dépend de la taille, de la dureté et de la localisation du calcul ; le choix se précise après l’imagerie.' },
+          { q: 'L’intervention est-elle douloureuse ?', a: 'Les interventions sont réalisées sous anesthésie ; une gêne légère peut suivre.' },
+          { q: 'Une sonde JJ sera-t-elle posée ?', a: 'Certains cas nécessitent une sonde temporaire ; elle est généralement retirée peu de temps après.' }
+        ]
       }
     }
   },
@@ -685,7 +834,7 @@ export const treatments: Treatment[] = [
           'Modern yöntemler, prostat dokusunu lazerle çıkarma (HoLEP), buhar enerjisiyle küçültme (Rezūm) veya klasik endoskopik rezeksiyon (TURP) seçeneklerini içerir. Seçim prostat boyutuna ve hasta önceliğine göre yapılır.'
         ],
         surgeonExperience: {
-          caseVolume: '489+ BPH cerrahisi vakası',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
         },
         timeline: [
@@ -746,7 +895,7 @@ export const treatments: Treatment[] = [
           'Modern methods include laser enucleation of prostate tissue (HoLEP), steam-energy shrinking (Rezūm) or classic endoscopic resection (TURP). The choice is made according to prostate size and patient priorities.'
         ],
         surgeonExperience: {
-          caseVolume: '489+ BPH surgery cases',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
         },
         timeline: [
@@ -807,7 +956,7 @@ export const treatments: Treatment[] = [
           'تشمل الطرق الحديثة استئصال نسيج البروستاتا بالليزر (HoLEP)، أو تقليصه بطاقة البخار (Rezūm)، أو الاستئصال بالمنظار التقليدي (TURP). ويُحدَّد الاختيار حسب حجم البروستاتا وأولويات المريض.'
         ],
         surgeonExperience: {
-          caseVolume: 'أكثر من 489 عملية لتضخم البروستاتا الحميد',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'يعكس عدد الحالات إجمالي الخبرة الجراحية للأستاذ المشارك د. مسلم إرغن في هذا المجال.'
         },
         timeline: [
@@ -868,7 +1017,7 @@ export const treatments: Treatment[] = [
           'Moderne Verfahren umfassen die Laser-Enukleation des Prostatagewebes (HoLEP), die Verkleinerung mit Dampfenergie (Rezūm) oder die klassische endoskopische Resektion (TURP). Die Wahl richtet sich nach Prostatagröße und Patientenpräferenz.'
         ],
         surgeonExperience: {
-          caseVolume: 'über 489 BPH-Eingriffe',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
         },
         timeline: [
@@ -929,7 +1078,7 @@ export const treatments: Treatment[] = [
           'Современные методы включают лазерную энуклеацию ткани простаты (HoLEP), уменьшение паровой энергией (Rezūm) или классическую эндоскопическую резекцию (TURP). Выбор зависит от размера простаты и приоритетов пациента.'
         ],
         surgeonExperience: {
-          caseVolume: 'более 489 операций при ДГПЖ',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Число операций отражает общий хирургический опыт доцента д-ра Мюслюма Эргюна в этой области.'
         },
         timeline: [
@@ -979,6 +1128,67 @@ export const treatments: Treatment[] = [
           { q: 'Какой метод долговечнее?', a: 'HoLEP даёт стойкий результат при крупной простате; Rezūm менее инвазивен. Выбор делается индивидуально.' },
           { q: 'Сколько времени стоит катетер?', a: 'Обычно 1–3 дня; зависит от метода.' }
         ]
+      },
+      fr: {
+        title: 'HBP / Hypertrophie bénigne de la prostate (HoLEP, Rezūm, RTUP)',
+        summary: 'Des méthodes modernes et préservant les tissus pour l’hypertrophie bénigne de la prostate à l’origine de troubles urinaires.',
+        metaTitle: 'Traitement de l’HBP | Comparatif HoLEP, Rezūm et RTUP',
+        metaDescription: 'Méthodes HoLEP, Rezūm et RTUP pour l’hypertrophie bénigne de la prostate (HBP) : déroulement, risques, alternatives et fourchette de prix.',
+        definition: [
+          'L’hypertrophie bénigne de la prostate (HBP) est l’augmentation de volume de la prostate liée à l’âge, qui gêne l’écoulement des urines. Elle provoque un jet faible, des mictions fréquentes et des levers nocturnes.',
+          'Les méthodes modernes comprennent l’énucléation du tissu prostatique au laser (HoLEP), la réduction par vapeur d’eau (Rezūm) ou la résection endoscopique classique (RTUP). Le choix dépend du volume prostatique et des priorités du patient.'
+        ],
+        surgeonExperience: {
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
+          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+        },
+        timeline: [
+          { when: 'À distance', title: 'Pré-évaluation', body: 'Votre débitmétrie urinaire, votre PSA et votre volume prostatique sont examinés.' },
+          { when: 'Jour 1', title: 'Arrivée et examen', body: 'Examen clinique, débitmétrie et bilan nécessaire.' },
+          { when: 'Jour 2', title: 'Intervention', body: 'Intervention selon la méthode retenue ; généralement une nuit d’hospitalisation.' },
+          { when: 'Jours 3–4', title: 'Contrôle', body: 'Évaluation de la sonde, sortie et autorisation de retour.' }
+        ],
+        risks: [
+          'Brûlures mictionnelles ou sang dans les urines, transitoires',
+          'Éjaculation rétrograde (diminution du sperme émis)',
+          'Infection urinaire',
+          'Rarement, nécessité d’une seconde intervention'
+        ],
+        alternatives: [
+          'Traitement médicamenteux (alphabloquants, inhibiteurs de la 5-alpha-réductase)',
+          'Modifications du mode de vie (troubles légers)',
+          'Endoprothèse prostatique ou UroLift (dans des cas sélectionnés)'
+        ],
+        comparison: {
+          title: 'HoLEP vs Rezūm vs RTUP',
+          columns: ['Critère', 'HoLEP (laser)', 'Rezūm (vapeur)', 'RTUP (endoscopique)'],
+          rows: [
+            { label: 'Volume prostatique adapté', values: ['Tous volumes, surtout les gros', 'Petit à moyen', 'Petit à moyen'] },
+            { label: 'Anesthésie', values: ['Générale / rachidienne', 'Sédation / locale', 'Générale / rachidienne'] },
+            { label: 'Préservation de la fonction sexuelle', values: ['Bonne', 'Élevée', 'Modérée'] },
+            { label: 'Séjour', values: ['1 nuit', 'Ambulatoire', '1 à 2 nuits'] },
+            { label: 'Durabilité', values: ['Élevée', 'Modérée', 'Élevée'] }
+          ],
+          note: 'Ce tableau est fourni à titre d’information générale ; la méthode définitive est déterminée au cas par cas.'
+        },
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer: 'Varie selon la méthode et le volume prostatique.'
+        },
+        packageIncludes: [
+          'Intervention et séjour hospitalier',
+          'Anesthésie et examens',
+          'Transferts et hébergement',
+          'Interprète médical et coordinateur',
+          'Contrôle et suivi en ligne'
+        ],
+        faqs: [
+          { q: 'Ma fonction sexuelle sera-t-elle affectée ?', a: 'Les méthodes visent à préserver la fonction sexuelle ; la modification la plus fréquente est l’éjaculation rétrograde.' },
+          { q: 'Quelle méthode est la plus durable ?', a: 'La HoLEP donne des résultats durables sur les grosses prostates ; le Rezūm est moins invasif. Le choix est adapté à votre situation.' },
+          { q: 'Combien de temps la sonde reste-t-elle en place ?', a: 'Généralement 1 à 3 jours ; cela varie selon la méthode.' }
+        ]
       }
     }
   },
@@ -999,7 +1209,7 @@ export const treatments: Treatment[] = [
           'Uygulamalar arasında şişirilebilir penil protez, mikrocerrahi varikoselektomi, penil uzatma/kalınlaştırma ve seçili erektil disfonksiyon cerrahileri yer alır. Doğru prosedür ayrıntılı değerlendirme sonrası belirlenir.'
         ],
         surgeonExperience: {
-          caseVolume: '583+ androloji vakası',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
         },
         timeline: [
@@ -1050,7 +1260,7 @@ export const treatments: Treatment[] = [
           'Procedures include the inflatable penile implant, microsurgical varicocelectomy, penile lengthening/girth enhancement and selected erectile dysfunction surgeries. The right procedure is determined after a detailed assessment.'
         ],
         surgeonExperience: {
-          caseVolume: '583+ andrology cases',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
         },
         timeline: [
@@ -1101,7 +1311,7 @@ export const treatments: Treatment[] = [
           'تشمل الإجراءات الدعامة الذكرية القابلة للنفخ، واستئصال دوالي الخصية بالجراحة الدقيقة، وإطالة/تكبير القضيب، وجراحات مختارة لضعف الانتصاب. ويُحدَّد الإجراء المناسب بعد تقييم مفصّل.'
         ],
         surgeonExperience: {
-          caseVolume: 'أكثر من 583 عملية في طب الذكورة',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'يعكس عدد الحالات إجمالي الخبرة الجراحية للأستاذ المشارك د. مسلم إرغن في هذا المجال.'
         },
         timeline: [
@@ -1152,7 +1362,7 @@ export const treatments: Treatment[] = [
           'Zu den Eingriffen zählen das aufblasbare Penisimplantat, die mikrochirurgische Varikozelektomie, Penisverlängerung/-verdickung sowie ausgewählte Operationen bei erektiler Dysfunktion. Der passende Eingriff wird nach einer ausführlichen Bewertung festgelegt.'
         ],
         surgeonExperience: {
-          caseVolume: 'über 583 andrologische Eingriffe',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
         },
         timeline: [
@@ -1203,7 +1413,7 @@ export const treatments: Treatment[] = [
           'Процедуры включают надувной пенильный имплант, микрохирургическую варикоцелэктомию, удлинение/утолщение полового члена и отдельные операции при эректильной дисфункции. Подходящая процедура определяется после подробной оценки.'
         ],
         surgeonExperience: {
-          caseVolume: 'более 583 андрологических операций',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Число операций отражает общий хирургический опыт доцента д-ра Мюслюма Эргюна в этой области.'
         },
         timeline: [
@@ -1243,6 +1453,57 @@ export const treatments: Treatment[] = [
           { q: 'Какова половая функция после пенильного импланта?', a: 'Имплант даёт постоянное решение при проблемах эрекции, не поддающихся лекарствам; проводится обучение пользованию.' },
           { q: 'Исправляет ли операция при варикоцеле бесплодие?', a: 'Микрохирургическая варикоцелэктомия может улучшить показатели спермы у отдельных пациентов.' }
         ]
+      },
+      fr: {
+        title: 'Andrologie (prothèse pénienne, varicocèle, dysfonction érectile)',
+        summary: 'Santé sexuelle masculine et chirurgie de la reproduction : prothèse pénienne, varicocèle, dysfonction érectile et interventions esthétiques.',
+        metaTitle: 'Andrologie | Prothèse pénienne, varicocèle, chirurgie de la DE',
+        metaDescription: 'Chirurgie andrologique : prothèse pénienne, allongement et augmentation de circonférence du pénis, varicocèle et traitement de la dysfonction érectile ; déroulement, risques et fourchette de prix.',
+        definition: [
+          'L’andrologie est la surspécialité urologique consacrée à la santé sexuelle et reproductive masculine. Elle propose des options chirurgicales en cas de dysfonction érectile résistante aux médicaments, d’infertilité liée à une varicocèle ou de troubles de la fonction sexuelle.',
+          'Les interventions comprennent la prothèse pénienne gonflable, la varicocélectomie microchirurgicale, l’allongement ou l’augmentation de circonférence du pénis et certaines chirurgies de la dysfonction érectile. L’intervention adaptée est déterminée après une évaluation détaillée.'
+        ],
+        surgeonExperience: {
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
+          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+        },
+        timeline: [
+          { when: 'À distance', title: 'Pré-consultation confidentielle', body: 'Vos résultats hormonaux et vasculaires sont examinés en toute confidentialité.' },
+          { when: 'Jour 1', title: 'Arrivée et examen', body: 'Examen clinique, bilan nécessaire et planification de l’intervention.' },
+          { when: 'Jour 2', title: 'Intervention', body: 'L’intervention retenue ; le plus souvent avec une nuit d’hospitalisation.' },
+          { when: 'Jours 3–5', title: 'Contrôle', body: 'Pansement, informations et autorisation de retour ; apprentissage de l’utilisation en cas de prothèse.' }
+        ],
+        risks: [
+          'Infection (en particulier en chirurgie prothétique)',
+          'Œdème, ecchymoses et modification transitoire de la sensibilité',
+          'Possibilité de dysfonctionnement mécanique de la prothèse (à long terme)',
+          'Nécessité de garder des attentes réalistes'
+        ],
+        alternatives: [
+          'Traitement oral (inhibiteurs de la PDE5)',
+          'Injection intracaverneuse ou pompe à vide',
+          'Ondes de choc (dans des cas sélectionnés)',
+          'Adaptation du mode de vie et correction hormonale'
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer: 'Varie selon la marque de la prothèse et l’intervention.'
+        },
+        packageIncludes: [
+          'Intervention et séjour hospitalier',
+          'Anesthésie et examens',
+          '(Le cas échéant) dispositif de prothèse',
+          'Transferts et hébergement',
+          'Interprète médical et coordination confidentielle',
+          'Contrôle et suivi en ligne'
+        ],
+        faqs: [
+          { q: 'Le parcours reste-t-il confidentiel ?', a: 'Oui ; toutes les consultations et la coordination sont menées selon le principe de confidentialité.' },
+          { q: 'Comment est la fonction sexuelle après une prothèse pénienne ?', a: 'La prothèse apporte une solution durable aux troubles de l’érection ne répondant pas aux médicaments ; une formation à son utilisation est dispensée.' },
+          { q: 'La chirurgie de la varicocèle corrige-t-elle l’infertilité ?', a: 'La varicocélectomie microchirurgicale peut améliorer les paramètres spermatiques chez des patients sélectionnés.' }
+        ]
       }
     }
   },
@@ -1262,7 +1523,7 @@ export const treatments: Treatment[] = [
           'Uygun vakalarda organ koruyucu (ör. kısmi nefrektomi) ve minimal invaziv robotik/laparoskopik teknikler tercih edilir. Tedavi, multidisipliner tümör konseyi kararıyla planlanır.'
         ],
         surgeonExperience: {
-          caseVolume: '653+ üroonkoloji vakası',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
         },
         timeline: [
@@ -1313,7 +1574,7 @@ export const treatments: Treatment[] = [
           'In suitable cases, organ-preserving (e.g., partial nephrectomy) and minimally invasive robotic/laparoscopic techniques are preferred. Treatment is planned by a multidisciplinary tumor board.'
         ],
         surgeonExperience: {
-          caseVolume: '653+ uro-oncology cases',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
         },
         timeline: [
@@ -1364,7 +1625,7 @@ export const treatments: Treatment[] = [
           'في الحالات المناسبة تُفضَّل التقنيات المحافِظة على العضو (مثل الاستئصال الجزئي للكلية) والأساليب الروبوتية/بالمنظار قليلة التوغل. ويُخطَّط للعلاج بقرار من مجلس أورام متعدد التخصصات.'
         ],
         surgeonExperience: {
-          caseVolume: 'أكثر من 653 حالة في أورام المسالك البولية',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'يعكس عدد الحالات إجمالي الخبرة الجراحية للأستاذ المشارك د. مسلم إرغن في هذا المجال.'
         },
         timeline: [
@@ -1415,7 +1676,7 @@ export const treatments: Treatment[] = [
           'In geeigneten Fällen werden organerhaltende (z. B. partielle Nephrektomie) und minimalinvasive robotische/laparoskopische Techniken bevorzugt. Die Behandlung wird von einem interdisziplinären Tumorboard geplant.'
         ],
         surgeonExperience: {
-          caseVolume: 'über 653 uroonkologische Fälle',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
         },
         timeline: [
@@ -1466,7 +1727,7 @@ export const treatments: Treatment[] = [
           'В подходящих случаях предпочтительны органосохраняющие (например, частичная нефрэктомия) и малоинвазивные роботические/лапароскопические методики. Лечение планирует мультидисциплинарный онкологический консилиум.'
         ],
         surgeonExperience: {
-          caseVolume: 'более 653 онкоурологических случаев',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Число операций отражает общий хирургический опыт доцента д-ра Мюслюма Эргюна в этой области.'
         },
         timeline: [
@@ -1506,6 +1767,57 @@ export const treatments: Treatment[] = [
           { q: 'Понадобится ли дополнительное лечение после операции?', a: 'Зависит от гистологии и стадии; планируется консилиумом.' },
           { q: 'Как проводится наблюдение?', a: 'С помощью регулярной визуализации и анализов крови; предоставляется дистанционная поддержка наблюдения.' }
         ]
+      },
+      fr: {
+        title: 'Uro-oncologie (chirurgie des tumeurs de la vessie, du rein et du testicule)',
+        summary: 'Chirurgie mini-invasive et préservant les organes pour les cancers de l’appareil urinaire et des organes reproducteurs masculins.',
+        metaTitle: 'Uro-oncologie | Chirurgie des cancers de la vessie, du rein et du testicule',
+        metaDescription: 'Chirurgie uro-oncologique : techniques robotiques/laparoscopiques et préservant les organes pour les tumeurs de la vessie, du rein et du testicule ; déroulement, risques et fourchette de prix.',
+        definition: [
+          'L’uro-oncologie traite chirurgicalement les cancers de l’appareil urinaire et de l’appareil reproducteur masculin : rein, vessie, prostate et testicule.',
+          'Lorsque cela est possible, les techniques préservant l’organe (par exemple la néphrectomie partielle) et les approches mini-invasives robotiques ou laparoscopiques sont privilégiées. Le traitement est planifié en réunion de concertation pluridisciplinaire.'
+        ],
+        surgeonExperience: {
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
+          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+        },
+        timeline: [
+          { when: 'À distance', title: 'Concertation pluridisciplinaire', body: 'Vos résultats anatomopathologiques et votre imagerie sont examinés en réunion de concertation.' },
+          { when: 'Jours 1–2', title: 'Arrivée et examens', body: 'Examen clinique, bilan d’extension et consultation d’anesthésie.' },
+          { when: 'Jour 3', title: 'Intervention', body: 'Chirurgie robotique, laparoscopique ou ouverte ; la durée du séjour dépend de l’étendue du geste.' },
+          { when: 'Jours 5–7', title: 'Contrôle et anatomopathologie', body: 'Résultat anatomopathologique, plan de suite et autorisation de retour.' }
+        ],
+        risks: [
+          'Saignement, infection et risques chirurgicaux généraux',
+          'Modification de la fonction de l’organe (selon l’étendue du geste)',
+          'Nécessité éventuelle d’un traitement complémentaire (chimiothérapie, immunothérapie)',
+          'Nécessité d’une surveillance de la récidive'
+        ],
+        alternatives: [
+          'Surveillance active (petites tumeurs sélectionnées)',
+          'Techniques d’ablation (tumeurs rénales sélectionnées)',
+          'Radiothérapie ou traitement systémique (selon le stade)',
+          'Protocoles de préservation vésicale (dans des cas sélectionnés)'
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer: 'Varie selon le type de tumeur, le stade et l’étendue du geste chirurgical.'
+        },
+        packageIncludes: [
+          'Intervention et séjour hospitalier',
+          'Anesthésie et bilan d’extension',
+          'Examen anatomopathologique',
+          'Transferts et hébergement',
+          'Interprète médical et coordinateur',
+          'Contrôle et suivi en ligne'
+        ],
+        faqs: [
+          { q: 'Mon rein sera-t-il retiré en totalité ?', a: 'Dans les cas favorables, seule la partie tumorale est retirée (néphrectomie partielle) ; la décision est prise après l’imagerie.' },
+          { q: 'Aurai-je besoin d’un traitement complémentaire après la chirurgie ?', a: 'Cela dépend de l’anatomopathologie et du stade ; la décision est prise en concertation pluridisciplinaire.' },
+          { q: 'Comment se déroule le suivi ?', a: 'Par imagerie et analyses sanguines régulières ; un accompagnement à distance est assuré.' }
+        ]
       }
     }
   },
@@ -1525,7 +1837,7 @@ export const treatments: Treatment[] = [
           'Tedavi; pelvik taban egzersizlerinden minimal invaziv sling ameliyatlarına ve pelvik taban onarımına kadar uzanır. Yöntem, şikâyetin tipine ve şiddetine göre seçilir.'
         ],
         surgeonExperience: {
-          caseVolume: '311+ kadın ürolojisi vakası',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
         },
         timeline: [
@@ -1575,7 +1887,7 @@ export const treatments: Treatment[] = [
           'Treatment ranges from pelvic floor exercises to minimally invasive sling operations and pelvic floor repair. The method is chosen according to the type and severity of the complaint.'
         ],
         surgeonExperience: {
-          caseVolume: '311+ female urology cases',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
         },
         timeline: [
@@ -1625,7 +1937,7 @@ export const treatments: Treatment[] = [
           'يمتد العلاج من تمارين قاع الحوض إلى عمليات الشريط (السلينج) قليلة التوغل وترميم قاع الحوض. ويُختار الأسلوب حسب نوع الشكوى وشدّتها.'
         ],
         surgeonExperience: {
-          caseVolume: 'أكثر من 311 حالة في مسالك النساء',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'يعكس عدد الحالات إجمالي الخبرة الجراحية للأستاذ المشارك د. مسلم إرغن في هذا المجال.'
         },
         timeline: [
@@ -1675,7 +1987,7 @@ export const treatments: Treatment[] = [
           'Die Behandlung reicht von Beckenbodenübungen über minimalinvasive Schlingenoperationen bis zur Beckenbodenrekonstruktion. Das Verfahren wird nach Art und Schweregrad der Beschwerden gewählt.'
         ],
         surgeonExperience: {
-          caseVolume: 'über 311 frauenurologische Fälle',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
         },
         timeline: [
@@ -1725,7 +2037,7 @@ export const treatments: Treatment[] = [
           'Лечение варьируется от упражнений для тазового дна до малоинвазивных слинговых операций и реконструкции тазового дна. Метод выбирают по типу и тяжести жалоб.'
         ],
         surgeonExperience: {
-          caseVolume: 'более 311 операций в женской урологии',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Число операций отражает общий хирургический опыт доцента д-ра Мюслюма Эргюна в этой области.'
         },
         timeline: [
@@ -1764,6 +2076,56 @@ export const treatments: Treatment[] = [
           { q: 'Сколько длится восстановление?', a: 'К лёгкой повседневной активности вы возвращаетесь за несколько дней; тяжёлые нагрузки откладываются на несколько недель.' },
           { q: 'Могу ли я запросить женский медицинский персонал?', a: 'Да; по запросу предоставляются переводчица и женская координационная поддержка.' }
         ]
+      },
+      fr: {
+        title: 'Urologie féminine (incontinence, chirurgie du plancher pelvien)',
+        summary: 'Des solutions modernes pour l’incontinence urinaire et les troubles du plancher pelvien, permettant un retour rapide à la vie quotidienne.',
+        metaTitle: 'Urologie féminine | Incontinence et chirurgie du plancher pelvien',
+        metaDescription: 'Urologie féminine : bandelette sous-urétrale et chirurgie du plancher pelvien pour l’incontinence urinaire et le prolapsus ; déroulement, risques et fourchette de prix.',
+        definition: [
+          'L’urologie féminine prend en charge le diagnostic et le traitement de l’incontinence urinaire d’effort, de l’hyperactivité vésicale et du prolapsus des organes pelviens.',
+          'Le traitement va de la rééducation périnéale aux bandelettes sous-urétrales mini-invasives et à la réparation du plancher pelvien. La méthode est choisie selon le type et la sévérité des troubles.'
+        ],
+        surgeonExperience: {
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
+          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+        },
+        timeline: [
+          { when: 'À distance', title: 'Pré-évaluation', body: 'Votre historique de symptômes et, le cas échéant, votre bilan urodynamique sont évalués.' },
+          { when: 'Jour 1', title: 'Arrivée et examen', body: 'Examen clinique, bilan nécessaire et planification.' },
+          { when: 'Jour 2', title: 'Intervention', body: 'Bandelette mini-invasive ou réparation ; le plus souvent en ambulatoire ou avec une nuit.' },
+          { when: 'Jours 3–4', title: 'Contrôle', body: 'Contrôle, informations et autorisation de retour.' }
+        ],
+        risks: [
+          'Difficulté transitoire à uriner',
+          'Infection urinaire',
+          'Douleur ou œdème (transitoires)',
+          'Rarement, nécessité d’une seconde intervention'
+        ],
+        alternatives: [
+          'Rééducation périnéale (exercices de Kegel)',
+          'Rééducation vésicale et modifications du mode de vie',
+          'Traitement médicamenteux (hyperactivité vésicale)',
+          'Pessaire (en cas de prolapsus)'
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer: 'Varie selon le type d’intervention.'
+        },
+        packageIncludes: [
+          'Intervention et séjour hospitalier',
+          'Anesthésie et examens',
+          'Transferts et hébergement',
+          'Interprète médicale (sur demande)',
+          'Contrôle et suivi en ligne'
+        ],
+        faqs: [
+          { q: 'La chirurgie par bandelette est-elle définitive ?', a: 'Elle apporte une amélioration durable chez la plupart des patientes ; le résultat varie selon le type de trouble.' },
+          { q: 'Combien de temps dure la récupération ?', a: 'Vous reprenez une activité quotidienne légère en quelques jours ; les efforts importants sont différés de quelques semaines.' },
+          { q: 'Puis-je demander un personnel médical féminin ?', a: 'Oui ; sur demande, une interprète et un accompagnement féminins sont proposés.' }
+        ]
       }
     }
   },
@@ -1782,7 +2144,7 @@ export const treatments: Treatment[] = [
           'Üretroplasti, darlığın kalıcı olarak onarıldığı rekonstrüktif ameliyattır. Darlığın yeri (bulber/penil), uzunluğu ve daha önce geçirilmiş girişimler cerrahiyi belirler. Uzun segment ve tekrarlayan (redo) vakalar özel deneyim gerektirir ve genellikle bu cerrahiyi güvenle yapabilen az sayıda merkeze yönlendirilir.'
         ],
         surgeonExperience: {
-          caseVolume: '347+ rekonstrüktif vaka (kompleks ve redo vakalar dâhil)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
         },
         expertise: {
@@ -1838,7 +2200,7 @@ export const treatments: Treatment[] = [
           'Urethroplasty is the reconstructive operation that repairs the stricture durably. The location (bulbar/penile), length and any previous attempts determine the surgery. Long-segment and recurrent (redo) cases require special experience and are typically referred to the few centers that can perform them safely.'
         ],
         surgeonExperience: {
-          caseVolume: '347+ reconstructive cases (including complex and redo cases)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
         },
         expertise: {
@@ -1894,7 +2256,7 @@ export const treatments: Treatment[] = [
           'رأب الإحليل هو الجراحة الترميمية التي تُصلح التضيّق بشكل دائم. يحدّد موقع التضيّق (بصلي/قضيبي) وطوله والمحاولات السابقة نوع الجراحة. تتطلب الحالات الطويلة والمتكررة (redo) خبرة خاصة، وعادةً ما تُحال إلى عدد قليل من المراكز القادرة على إجرائها بأمان.'
         ],
         surgeonExperience: {
-          caseVolume: 'أكثر من 347 حالة ترميمية (بما في ذلك الحالات المعقدة والمُعادة)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'يعكس عدد الحالات إجمالي الخبرة الجراحية للأستاذ المشارك د. مسلم إرغن في هذا المجال.'
         },
         expertise: {
@@ -1950,7 +2312,7 @@ export const treatments: Treatment[] = [
           'Die Urethroplastik ist die rekonstruktive Operation, die die Striktur dauerhaft repariert. Lage (bulbär/penil), Länge und frühere Versuche bestimmen den Eingriff. Langstreckige und wiederkehrende (Redo-)Fälle erfordern besondere Erfahrung und werden meist an die wenigen Zentren überwiesen, die sie sicher durchführen können.'
         ],
         surgeonExperience: {
-          caseVolume: 'über 347 rekonstruktive Fälle (komplexe und Redo-Fälle inbegriffen)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
         },
         expertise: {
@@ -2006,7 +2368,7 @@ export const treatments: Treatment[] = [
           'Уретропластика — реконструктивная операция, которая стойко устраняет стриктуру. Локализация (бульбарная/пенильная), длина и предыдущие попытки определяют операцию. Протяжённые и повторные (redo) случаи требуют особого опыта и обычно направляются в немногие центры, способные выполнить их безопасно.'
         ],
         surgeonExperience: {
-          caseVolume: 'более 347 реконструктивных случаев (включая сложные и повторные)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Число операций отражает общий хирургический опыт доцента д-ра Мюслюма Эргюна в этой области.'
         },
         expertise: {
@@ -2051,6 +2413,62 @@ export const treatments: Treatment[] = [
           { q: 'Почему уретропластика, а не внутренняя уретротомия/бужирование?', a: 'Бужирование и внутренняя уретротомия при большинстве стриктур вскоре дают рецидив. Уретропластика — единственный метод, дающий стойкое решение в подходящих случаях.' },
           { q: 'Как долго стоит катетер и сколько длится восстановление?', a: 'Обычно 2–3 недели с катетером. К лёгкой повседневной активности возвращаются быстро; тяжёлая активность и оценка долгосрочного успеха занимают несколько недель.' }
         ]
+      },
+      fr: {
+        title: 'Urétroplastie (chirurgie du rétrécissement de l’urètre)',
+        summary: 'Chirurgie reconstructrice offrant une solution durable au rétrécissement urétral ; cas bulbaires, péniens, étendus et reprises (redo) inclus.',
+        metaTitle: 'Urétroplastie | Chirurgie du rétrécissement de l’urètre (bulbaire, pénien, redo)',
+        metaDescription: 'Urétroplastie pour rétrécissement urétral : sténose bulbaire et pénienne, sténose étendue ou complexe et urétroplastie de reprise après échec. Expérience des cas complexes et rares.',
+        definition: [
+          'Le rétrécissement urétral est un resserrement du canal urinaire (urètre) par du tissu cicatriciel, responsable d’un jet faible, d’efforts de poussée et d’infections à répétition. Les gestes simples (dilatation, urétrotomie interne) soulagent à court terme, mais la sténose récidive le plus souvent.',
+          'L’urétroplastie est l’intervention reconstructrice qui répare durablement la sténose. La localisation (bulbaire ou pénienne), la longueur et les tentatives antérieures déterminent le geste. Les sténoses étendues et récidivantes (redo) exigent une expérience particulière et sont généralement adressées aux rares centres capables de les traiter en toute sécurité.'
+        ],
+        surgeonExperience: {
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
+          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+        },
+        expertise: {
+          redoRate: 'Une part importante des cas sont des reprises adressées après un échec ou une lésion iatrogène survenus dans un autre centre.',
+          complexCase: 'Les sténoses étendues, pan-urétrales, liées au lichen scléreux et les échecs répétés relèvent des cas complexes.',
+          advancedTechnique: 'Urétroplastie d’élargissement par greffe de muqueuse buccale (jugale) ; reconstruction en deux temps si nécessaire.'
+        },
+        timeline: [
+          { when: 'À distance', title: 'Évaluation du dossier', body: 'Votre urétrographie (rétrograde et mictionnelle), votre débitmétrie et vos comptes rendus opératoires antérieurs sont examinés par le chirurgien. Une pré-évaluation détaillée est indispensable dans ces cas.' },
+          { when: 'Jours 1–2', title: 'Arrivée et examens avancés', body: 'Examen clinique, urétroscopie et imagerie si nécessaire ; la longueur et le siège de la sténose sont précisés.' },
+          { when: 'Jours 2–3', title: 'Intervention', body: 'Urétroplastie par excision-anastomose ou par greffe d’élargissement, selon le type de sténose.' },
+          { when: 'Ensuite', title: 'Période de sondage', body: 'Une sonde urétrale reste en place 2 à 3 semaines ; une imagerie de contrôle est réalisée avant son retrait.' },
+          { when: 'Suivi', title: 'Suivi à long terme', body: 'Débitmétrie et suivi des symptômes, plus fréquents la première année ; le succès se juge sur la perméabilité à long terme.' }
+        ],
+        risks: [
+          'Récidive de la sténose — surtout dans les cas étendus ou complexes',
+          'Modification transitoire de la sensibilité au site de prélèvement du greffon (face interne de la joue)',
+          'Infection, saignement et fuite urinaire',
+          'Dans les reprises, qualité tissulaire pouvant influencer le résultat'
+        ],
+        alternatives: [
+          'Dilatation ou urétrotomie interne (court terme ; récidive fréquente)',
+          'Auto-sondage intermittent (entretien temporaire)',
+          'Reconstruction en deux temps (cas très complexes)'
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer: 'Aucune fourchette de prix fixe n’est indiquée dans cette catégorie ; le prix est communiqué après évaluation du dossier, selon la complexité du cas et la technique requise.'
+        },
+        packageIncludes: [
+          'Intervention et séjour hospitalier',
+          'Anesthésie et bilan préopératoire avancé',
+          'Prélèvement du greffon inclus si nécessaire',
+          'Transferts et hébergement',
+          'Interprète médical et coordinateur patient',
+          'Retrait de la sonde et suivi en ligne à long terme'
+        ],
+        faqs: [
+          { q: 'J’ai été opéré dans un autre centre et cela a échoué ; une reprise est-elle possible ?', a: 'Oui. L’urétroplastie de reprise est un domaine dans lequel ce centre est particulièrement expérimenté. Vos comptes rendus opératoires et votre imagerie actuelle sont examinés ; selon l’état des tissus, une greffe ou une approche en deux temps est planifiée.' },
+          { q: 'Pourquoi une urétroplastie plutôt qu’une urétrotomie interne ou une dilatation ?', a: 'La dilatation et l’urétrotomie interne récidivent rapidement dans la plupart des sténoses. L’urétroplastie est la seule méthode offrant une solution durable dans les cas qui s’y prêtent.' },
+          { q: 'Combien de temps la sonde reste-t-elle et combien dure la récupération ?', a: 'Généralement 2 à 3 semaines de sondage. L’activité quotidienne légère reprend rapidement ; les efforts importants et l’évaluation du résultat à long terme demandent quelques semaines.' }
+        ]
       }
     }
   },
@@ -2069,7 +2487,7 @@ export const treatments: Treatment[] = [
           'Piyeloplasti, darlığın çıkarılıp bileşkenin yeniden şekillendirildiği böbrek koruyucu rekonstrüktif ameliyattır. Robotik ve laparoskopik yaklaşımlar minimal invazivdir; daha önce başarısız girişim geçirmiş (redo) veya çapraz damar/taş eşlik eden kompleks vakalar özel deneyim gerektirir.'
         ],
         surgeonExperience: {
-          caseVolume: '347+ rekonstrüktif vaka (kompleks ve redo vakalar dâhil)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
         },
         expertise: {
@@ -2137,7 +2555,7 @@ export const treatments: Treatment[] = [
           'Pyeloplasty is the kidney-preserving reconstructive operation that removes the narrowing and reshapes the junction. Robotic and laparoscopic approaches are minimally invasive; cases with prior failed attempts (redo) or a crossing vessel/stone require special experience.'
         ],
         surgeonExperience: {
-          caseVolume: '347+ reconstructive cases (including complex and redo cases)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
         },
         expertise: {
@@ -2205,7 +2623,7 @@ export const treatments: Treatment[] = [
           'رأب حوض الكلية هو الجراحة الترميمية المحافِظة على الكلية التي تزيل التضيّق وتعيد تشكيل الوصل. الأساليب الروبوتية وبالمنظار قليلة التوغل؛ وتتطلب الحالات التي سبق لها محاولة فاشلة (redo) أو المصحوبة بوعاء دموي متصالب/حصاة خبرة خاصة.'
         ],
         surgeonExperience: {
-          caseVolume: 'أكثر من 347 حالة ترميمية (بما في ذلك الحالات المعقدة والمُعادة)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'يعكس عدد الحالات إجمالي الخبرة الجراحية للأستاذ المشارك د. مسلم إرغن في هذا المجال.'
         },
         expertise: {
@@ -2273,7 +2691,7 @@ export const treatments: Treatment[] = [
           'Die Nierenbeckenplastik ist die nierenerhaltende rekonstruktive Operation, die die Verengung entfernt und den Übergang neu formt. Robotische und laparoskopische Zugänge sind minimalinvasiv; Fälle mit früheren fehlgeschlagenen Versuchen (Redo) oder einem kreuzenden Gefäß/Stein erfordern besondere Erfahrung.'
         ],
         surgeonExperience: {
-          caseVolume: 'über 347 rekonstruktive Fälle (komplexe und Redo-Fälle inbegriffen)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
         },
         expertise: {
@@ -2341,7 +2759,7 @@ export const treatments: Treatment[] = [
           'Пиелопластика — почкосохраняющая реконструктивная операция, устраняющая сужение и заново формирующая сегмент. Роботические и лапароскопические доступы малоинвазивны; случаи с прежними неудачными попытками (redo) или добавочным сосудом/камнем требуют особого опыта.'
         ],
         surgeonExperience: {
-          caseVolume: 'более 347 реконструктивных случаев (включая сложные и повторные)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Число операций отражает общий хирургический опыт доцента д-ра Мюслюма Эргюна в этой области.'
         },
         expertise: {
@@ -2398,6 +2816,74 @@ export const treatments: Treatment[] = [
           { q: 'Что лучше — роботическая или открытая?', a: 'Роботический метод в большинстве случаев даёт точность шва и быстрое восстановление; но метод определяется типом стриктуры, предыдущей операцией и анатомией.' },
           { q: 'Можно ли сохранить мою почку?', a: 'Цель — сохранить почку. Сколько функции удастся сохранить, оценивается по сцинтиграфии; нефрэктомия — крайняя мера только при нефункционирующей почке.' }
         ]
+      },
+      fr: {
+        title: 'Pyéloplastie (chirurgie du syndrome de la jonction pyélo-urétérale)',
+        summary: 'Chirurgie reconstructrice préservant le rein pour l’obstruction de la jonction pyélo-urétérale (JPU) ; options ouverte, laparoscopique et robotique.',
+        metaTitle: 'Pyéloplastie | Chirurgie de la jonction pyélo-urétérale (JPU)',
+        metaDescription: 'Pyéloplastie pour syndrome de la jonction pyélo-urétérale : comparaison des méthodes ouverte, laparoscopique et robotique, déroulement, risques et résultats à long terme. Expérience des reprises et des cas complexes.',
+        definition: [
+          'L’obstruction de la jonction pyélo-urétérale (JPU) est un obstacle à la sortie du conduit qui évacue l’urine du rein ; elle entraîne une dilatation (hydronéphrose), des douleurs et, avec le temps, une perte de fonction rénale.',
+          'La pyéloplastie est l’intervention reconstructrice préservant le rein qui supprime le rétrécissement et remodèle la jonction. Les voies robotique et laparoscopique sont mini-invasives ; les cas avec échec antérieur (redo), vaisseau polaire croisant ou calcul associé exigent une expérience particulière.'
+        ],
+        surgeonExperience: {
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
+          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+        },
+        expertise: {
+          redoRate: 'Une part importante des cas sont des reprises adressées après un échec ou une lésion iatrogène survenus dans un autre centre.',
+          complexCase: 'Compression par vaisseau croisant, calcul rénal associé, variantes anatomiques telles que le rein en fer à cheval et reprises relèvent des cas complexes.',
+          advancedTechnique: 'Pyéloplastie démembrée assistée par robot ; reconstruction en tissu cicatriciel dense dans les reprises.'
+        },
+        timeline: [
+          { when: 'À distance', title: 'Évaluation du dossier', body: 'Votre uro-scanner et votre scintigraphie rénale (MAG3) sont examinés ; l’obstruction et la fonction rénale sont évaluées.' },
+          { when: 'Jours 1–2', title: 'Arrivée et examens', body: 'Examen clinique, complément d’imagerie si nécessaire et consultation d’anesthésie.' },
+          { when: 'Jour 3', title: 'Intervention', body: 'Pyéloplastie démembrée robotique, laparoscopique ou ouverte ; généralement 2 à 3 nuits d’hospitalisation.' },
+          { when: 'Ensuite', title: 'Période de sonde JJ', body: 'Une sonde JJ reste en place 4 à 6 semaines, puis est retirée lors d’un geste court.' },
+          { when: 'Suivi', title: 'Suivi fonctionnel', body: 'Le drainage et la fonction rénale sont surveillés par scintigraphie et échographie ; le succès se juge sur le drainage à long terme.' }
+        ],
+        risks: [
+          'Symptômes transitoires liés à la sonde JJ',
+          'Fuite urinaire',
+          'Récidive du rétrécissement (plus fréquente dans les reprises)',
+          'Infection et saignement'
+        ],
+        alternatives: [
+          'Endopyélotomie (cas sélectionnés ; taux de succès plus faible)',
+          'Surveillance (cas sélectionnés, asymptomatiques, à fonction conservée)',
+          'Néphrectomie (uniquement pour un rein non fonctionnel, en dernier recours)'
+        ],
+        comparison: {
+          title: 'Pyéloplastie ouverte vs laparoscopique vs robotique',
+          columns: ['Critère', 'Ouverte', 'Laparoscopique', 'Robotique'],
+          rows: [
+            { label: 'Caractère invasif', values: ['Grande incision', 'Petites incisions', 'Petites incisions'] },
+            { label: 'Précision des sutures', values: ['Bonne', 'Techniquement difficile', 'Très élevée'] },
+            { label: 'Récupération', values: ['Plus longue', 'Courte', 'Courte'] },
+            { label: 'Adaptation aux reprises / cas complexes', values: ['Sélective', 'Limitée', 'Élevée'] },
+            { label: 'Séjour', values: ['3 à 5 nuits', '2 à 3 nuits', '2 à 3 nuits'] }
+          ],
+          note: 'La méthode est choisie au cas par cas selon le type de rétrécissement, les interventions antérieures et l’anatomie.'
+        },
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer: 'Aucune fourchette de prix fixe n’est indiquée dans cette catégorie ; le prix est communiqué après évaluation du dossier, selon la complexité du cas et la technique requise.'
+        },
+        packageIncludes: [
+          'Intervention et séjour hospitalier',
+          'Anesthésie et examens',
+          'Sonde JJ et son retrait',
+          'Transferts et hébergement',
+          'Interprète médical et coordinateur',
+          'Suivi fonctionnel à long terme'
+        ],
+        faqs: [
+          { q: 'J’ai eu une endopyélotomie ou une pyéloplastie et l’obstruction est revenue ; que peut-on faire ?', a: 'Une pyéloplastie de reprise est possible et constitue un domaine d’expérience de ce centre. Malgré le tissu cicatriciel, une reconstruction préservant le rein est planifiée ; rarement, une approche en deux temps est nécessaire.' },
+          { q: 'Robotique ou ouverte, que choisir ?', a: 'La voie robotique offre une précision de suture et une récupération rapide dans la plupart des cas ; le choix dépend toutefois du type de rétrécissement, des interventions antérieures et de l’anatomie.' },
+          { q: 'Mon rein peut-il être préservé ?', a: 'L’objectif est de préserver le rein. La part de fonction récupérable est évaluée par scintigraphie ; la néphrectomie n’est envisagée qu’en dernier recours, pour un rein non fonctionnel.' }
+        ]
       }
     }
   },
@@ -2416,7 +2902,7 @@ export const treatments: Treatment[] = [
           'Bu durum tıbbi olarak tamamen onarılabilir bir sorundur ve yaşanan sıkıntı bir utanç kaynağı değildir. Rekonstrüktif cerrahi, fistülün kapatılıp normal idrar tutmanın yeniden sağlanmasını hedefler. Uygun zamanlama, doku kalitesi ve fistülün yeri sonucu belirler; tekrarlayan (başarısız onarım sonrası) vakalar özel deneyim gerektirir.'
         ],
         surgeonExperience: {
-          caseVolume: '347+ rekonstrüktif vaka (kompleks ve redo vakalar dâhil)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
         },
         expertise: {
@@ -2472,7 +2958,7 @@ export const treatments: Treatment[] = [
           'This is a medically repairable condition and the distress it causes is not a source of shame. Reconstructive surgery aims to close the fistula and restore normal continence. Timing, tissue quality and the fistula’s location determine the outcome; recurrent cases (after a failed repair) require special experience.'
         ],
         surgeonExperience: {
-          caseVolume: '347+ reconstructive cases (including complex and redo cases)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
         },
         expertise: {
@@ -2528,7 +3014,7 @@ export const treatments: Treatment[] = [
           'هذه حالة قابلة للإصلاح طبيًا تمامًا، وما تعانينه ليس مدعاة للخجل. تهدف الجراحة الترميمية إلى إغلاق الناسور واستعادة التحكم الطبيعي في البول. يحدّد التوقيت المناسب وجودة الأنسجة وموقع الناسور النتيجة؛ وتتطلب الحالات المتكررة (بعد إصلاح فاشل) خبرة خاصة. ونحرص على أن تُدار رعايتك بكامل الاحترام والخصوصية.'
         ],
         surgeonExperience: {
-          caseVolume: 'أكثر من 347 حالة ترميمية (بما في ذلك الحالات المعقدة والمُعادة)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'يعكس عدد الحالات إجمالي الخبرة الجراحية للأستاذ المشارك د. مسلم إرغن في هذا المجال.'
         },
         expertise: {
@@ -2584,7 +3070,7 @@ export const treatments: Treatment[] = [
           'Dies ist ein medizinisch vollständig reparabler Zustand, und die damit verbundene Belastung ist kein Grund zur Scham. Die rekonstruktive Chirurgie zielt darauf ab, die Fistel zu verschließen und die normale Kontinenz wiederherzustellen. Zeitpunkt, Gewebequalität und Lage der Fistel bestimmen das Ergebnis; wiederkehrende Fälle (nach fehlgeschlagenem Verschluss) erfordern besondere Erfahrung. Ihre Behandlung erfolgt mit vollem Respekt und in Vertraulichkeit.'
         ],
         surgeonExperience: {
-          caseVolume: 'über 347 rekonstruktive Fälle (komplexe und Redo-Fälle inbegriffen)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
         },
         expertise: {
@@ -2640,7 +3126,7 @@ export const treatments: Treatment[] = [
           'Это состояние полностью поддаётся хирургическому исправлению, и связанные с ним переживания — не повод для стыда. Реконструктивная операция направлена на закрытие свища и восстановление нормального удержания мочи. Правильное время, качество тканей и расположение свища определяют результат; повторные случаи (после неудачной пластики) требуют особого опыта. Ваше лечение ведётся с полным уважением и в условиях конфиденциальности.'
         ],
         surgeonExperience: {
-          caseVolume: 'более 347 реконструктивных случаев (включая сложные и повторные)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Число операций отражает общий хирургический опыт доцента д-ра Мюслюма Эргюна в этой области.'
         },
         expertise: {
@@ -2685,6 +3171,62 @@ export const treatments: Treatment[] = [
           { q: 'Это навсегда, это то, чего нужно стыдиться?', a: 'Нет. Свищ — медицинское осложнение, а не личный недостаток, и в большинстве случаев полностью устраним. Весь процесс ведётся с уважением к вашей частной жизни и конфиденциально.' },
           { q: 'Сохраняется ли конфиденциальность и могу ли я запросить женский персонал?', a: 'Да. Консультации и координация следуют принципу конфиденциальности; по запросу предоставляются переводчица и поддержка.' }
         ]
+      },
+      fr: {
+        title: 'Réparation des fistules vésico-vaginales et urétéro-vaginales',
+        summary: 'Réparation des fistules responsables de fuites d’urine — y compris celles survenues après un accouchement ou une chirurgie pelvienne ou gynécologique. Une prise en charge respectueuse et confidentielle.',
+        metaTitle: 'Réparation de fistule | Chirurgie des fistules vésico-vaginales et urétéro-vaginales',
+        metaDescription: 'Réparation des fistules vésico-vaginales et urétéro-vaginales : chirurgie reconstructrice des fistules entraînant des fuites d’urine permanentes. Une approche respectueuse et confidentielle pour les patientes adressées de l’étranger.',
+        definition: [
+          'Une fistule est une communication anormale entre la vessie ou l’uretère et le vagin, provoquant une fuite d’urine continue et incontrôlable. Elle survient le plus souvent après un accouchement difficile, une chirurgie pelvienne ou gynécologique, ou une radiothérapie.',
+          'Il s’agit d’une affection médicalement réparable, et la gêne qu’elle occasionne n’a rien de honteux. La chirurgie reconstructrice vise à fermer la fistule et à rétablir une continence normale. Le moment de l’intervention, la qualité des tissus et la localisation de la fistule déterminent le résultat ; les cas récidivants, après une réparation ayant échoué, exigent une expérience particulière.'
+        ],
+        surgeonExperience: {
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
+          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+        },
+        expertise: {
+          redoRate: 'Une part importante des cas sont des reprises adressées après un échec ou une lésion iatrogène survenus dans un autre centre.',
+          complexCase: 'Les fistules post-radiques, les fistules étendues ou multifocales et les réparations ayant échoué à plusieurs reprises relèvent des cas complexes.',
+          advancedTechnique: 'Réparation par voie vaginale ou abdominale avec interposition tissulaire (par exemple lambeau de Martius) ; réimplantation urétérale.'
+        },
+        timeline: [
+          { when: 'À distance', title: 'Évaluation confidentielle du dossier', body: 'Vos antécédents, vos comptes rendus opératoires et votre imagerie sont examinés en toute confidentialité ; le moment opportun de la réparation est déterminé.' },
+          { when: 'Jours 1–2', title: 'Arrivée et examen', body: 'Examen clinique, cystoscopie et imagerie précisent la localisation et la taille de la fistule.' },
+          { when: 'Jours 2–3', title: 'Intervention', body: 'Réparation par voie vaginale ou abdominale selon la localisation ; interposition tissulaire (lambeau) si nécessaire.' },
+          { when: 'Ensuite', title: 'Période de sondage', body: 'Une sonde reste en place 2 à 3 semaines pour permettre la cicatrisation ; les efforts importants et les rapports sexuels sont évités au début.' },
+          { when: 'Suivi', title: 'Contrôle', body: 'Un contrôle avant le retrait de la sonde confirme la disparition complète de la fuite, et le suivi est planifié.' }
+        ],
+        risks: [
+          'Réouverture de la réparation (récidive) — surtout dans les cas post-radiques ou complexes',
+          'Infection et saignement',
+          'Difficulté transitoire à uriner',
+          'Rarement, nécessité d’une réparation complémentaire'
+        ],
+        alternatives: [
+          'Tentative de fermeture spontanée sous sondage prolongé pour les petites fistules récentes (cas sélectionnés)',
+          'Attente de la cicatrisation tissulaire avant la réparation (choix du bon moment)',
+          'Dérivation urinaire dans les cas complexes (en dernier recours)'
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer: 'Aucune fourchette de prix fixe n’est indiquée dans cette catégorie ; le prix est communiqué après évaluation du dossier, selon la complexité du cas et la technique requise.'
+        },
+        packageIncludes: [
+          'Intervention et séjour hospitalier',
+          'Anesthésie et examens',
+          'Interposition tissulaire (lambeau) incluse si nécessaire',
+          'Interprète médicale et coordination confidentielle (sur demande)',
+          'Transferts et hébergement',
+          'Retrait de la sonde et suivi en ligne'
+        ],
+        faqs: [
+          { q: 'Une réparation a été tentée dans un autre pays ou centre sans succès ; peut-elle être refaite ?', a: 'Oui. Les cas récidivants après une réparation ayant échoué constituent un domaine d’expérience de ce centre. Selon l’état des tissus, le moment opportun et, si nécessaire, une technique avec soutien tissulaire (lambeau) sont planifiés.' },
+          { q: 'Est-ce définitif, est-ce honteux ?', a: 'Non. Une fistule est une complication médicale, non une faute personnelle, et elle est réparable dans la grande majorité des cas. L’ensemble du parcours est mené dans le respect de votre intimité et en toute confidentialité.' },
+          { q: 'Le parcours reste-t-il confidentiel et puis-je demander un personnel féminin ?', a: 'Oui. Les consultations et la coordination suivent le principe de confidentialité ; sur demande, une interprète et un accompagnement féminins sont proposés.' }
+        ]
       }
     }
   },
@@ -2703,7 +3245,7 @@ export const treatments: Treatment[] = [
           'Kısa darlıklar basit tekniklerle onarılabilirken, uzun segment darlıklar ileri rekonstrüksiyon gerektirir. Buccal mukoza grefti, ileal interpozisyon (barsak segmenti ile köprüleme) veya böbreğin aşağı indirilmesi gibi teknikler, böbreği korumak için deneyimli merkezlerde uygulanır.'
         ],
         surgeonExperience: {
-          caseVolume: '347+ rekonstrüktif vaka (kompleks ve redo vakalar dâhil)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
         },
         expertise: {
@@ -2761,7 +3303,7 @@ export const treatments: Treatment[] = [
           'While short strictures can be repaired with simple techniques, long-segment strictures require advanced reconstruction. Techniques such as buccal mucosa graft, ileal interposition (bridging with a bowel segment) or bringing the kidney down are performed in experienced centers to preserve the kidney.'
         ],
         surgeonExperience: {
-          caseVolume: '347+ reconstructive cases (including complex and redo cases)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
         },
         expertise: {
@@ -2819,7 +3361,7 @@ export const treatments: Treatment[] = [
           'بينما تُصلَح التضيّقات القصيرة بتقنيات بسيطة، تتطلب التضيّقات طويلة المقطع إعادة بناء متقدّمة. وتُطبَّق تقنيات مثل طُعم الغشاء المخاطي للخد، والإحلال اللفائفي (الجسر بمقطع معوي)، أو إنزال الكلية، للحفاظ على الكلية في مراكز ذات خبرة.'
         ],
         surgeonExperience: {
-          caseVolume: 'أكثر من 347 حالة ترميمية (بما في ذلك الحالات المعقدة والمُعادة)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'يعكس عدد الحالات إجمالي الخبرة الجراحية للأستاذ المشارك د. مسلم إرغن في هذا المجال.'
         },
         expertise: {
@@ -2877,7 +3419,7 @@ export const treatments: Treatment[] = [
           'Während kurze Strikturen mit einfachen Techniken repariert werden, erfordern langstreckige Strikturen eine fortgeschrittene Rekonstruktion. Techniken wie Mundschleimhaut-Transplantat, Ileuminterposition (Überbrückung mit einem Darmsegment) oder das Herabholen der Niere werden in erfahrenen Zentren durchgeführt, um die Niere zu erhalten.'
         ],
         surgeonExperience: {
-          caseVolume: 'über 347 rekonstruktive Fälle (komplexe und Redo-Fälle inbegriffen)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
         },
         expertise: {
@@ -2935,7 +3477,7 @@ export const treatments: Treatment[] = [
           'Короткие стриктуры устраняются простыми методами, а протяжённые требуют продвинутой реконструкции. Такие методики, как трансплантат слизистой щеки, кишечная интерпозиция (замещение сегментом кишки) или низведение почки, выполняются в опытных центрах для сохранения почки.'
         ],
         surgeonExperience: {
-          caseVolume: 'более 347 реконструктивных случаев (включая сложные и повторные)',
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
           note: 'Число операций отражает общий хирургический опыт доцента д-ра Мюслюма Эргюна в этой области.'
         },
         expertise: {
@@ -2981,6 +3523,64 @@ export const treatments: Treatment[] = [
           { q: 'У меня длинная стриктура мочеточника, и мне сказали, что «это невозможно»; есть ли варианты?', a: 'Протяжённые стриктуры в большинстве случаев можно устранить продвинутыми методиками, такими как трансплантат слизистой щеки или кишечная интерпозиция. Ваши документы оцениваются, и составляется почкосохраняющий план.' },
           { q: 'Можно ли повторить попытку после неудачной операции?', a: 'Да; повторная (redo) реконструкция после ятрогенного повреждения или неудачной пластики — область опыта этого центра. Несмотря на рубцовую ткань, планируются почкосохраняющие методики.' },
           { q: 'Сколько длятся восстановление и наблюдение?', a: 'Пребывание и период стента дольше, чем при других видах лечения; долгосрочный успех оценивается регулярным наблюдением функции. Наблюдение критично в этих случаях.' }
+        ]
+      },
+      fr: {
+        title: 'Reconstruction urétérale (sténose ou lésion étendue)',
+        summary: 'Reconstruction avancée pour une sténose ou une lésion urétérale étendue : techniques telles que la greffe de muqueuse buccale et l’interposition iléale.',
+        metaTitle: 'Reconstruction urétérale | Chirurgie des sténoses urétérales étendues',
+        metaDescription: 'Reconstruction avancée pour sténose ou lésion urétérale étendue : greffe de muqueuse buccale, interposition iléale, réimplantation urétérale. Expérience des cas complexes et des reprises.',
+        definition: [
+          'L’uretère est le conduit qui relie le rein à la vessie. Une sténose ou une lésion étendue peut survenir après une chirurgie de calcul, une chirurgie pelvienne ou gynécologique, une radiothérapie ou un traumatisme, et met le rein en danger.',
+          'Si les sténoses courtes se réparent par des techniques simples, les sténoses étendues nécessitent une reconstruction avancée. Des techniques telles que la greffe de muqueuse buccale, l’interposition iléale (pontage par un segment intestinal) ou l’abaissement rénal sont réalisées dans des centres expérimentés afin de préserver le rein.'
+        ],
+        surgeonExperience: {
+          caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
+          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+        },
+        expertise: {
+          redoRate: 'Une part importante des cas sont des reprises adressées après un échec ou une lésion iatrogène survenus dans un autre centre.',
+          complexCase: 'Les sténoses étendues ou pan-urétérales, les situations post-radiques et les patients à rein unique relèvent des cas complexes.',
+          advancedTechnique: 'Urétéroplastie par greffe de muqueuse buccale, interposition iléale et reconstruction assistée par robot.'
+        },
+        timeline: [
+          { when: 'À distance', title: 'Évaluation du dossier', body: 'Votre uro-scanner, votre scintigraphie rénale et vos comptes rendus opératoires antérieurs sont examinés en détail ; la longueur de la sténose et la fonction rénale sont déterminées.' },
+          { when: 'Jours 1–2', title: 'Arrivée et examens avancés', body: 'Examen clinique, urétéroscopie ou imagerie si nécessaire ; le plan de reconstruction est arrêté.' },
+          { when: 'Jour 3', title: 'Intervention', body: 'Greffe, interposition ou réimplantation selon la longueur du segment ; séjour généralement de plusieurs jours.' },
+          { when: 'Ensuite', title: 'Période de sonde', body: 'Une sonde JJ et/ou une sonde vésicale restent en place un certain temps ; le drainage est confirmé par imagerie de contrôle.' },
+          { when: 'Suivi', title: 'Suivi à long terme', body: 'La fonction et le drainage sont surveillés par scintigraphie et échographie ; le suivi est particulièrement déterminant dans ces cas.' }
+        ],
+        risks: [
+          'Récidive de la sténose et nécessité d’un geste complémentaire',
+          'Effets métaboliques et production de mucus liés au segment intestinal en cas d’interposition iléale',
+          'Fuite urinaire, infection et saignement',
+          'Modification de la fonction rénale'
+        ],
+        alternatives: [
+          'Entretien par sonde JJ au long cours ou néphrostomie (patients non opérables)',
+          'Réparation bout à bout ou réimplantation pour les sténoses courtes',
+          'Autotransplantation (dans des cas complexes sélectionnés)',
+          'Néphrectomie (uniquement pour un rein non fonctionnel, en dernier recours)'
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer: 'Aucune fourchette de prix fixe n’est indiquée dans cette catégorie ; le prix est communiqué après évaluation du dossier, selon la complexité du cas et la technique requise.'
+        },
+        packageIncludes: [
+          'Intervention et séjour hospitalier',
+          'Anesthésie et examens avancés',
+          'Inclus lorsqu’une greffe ou une interposition est nécessaire',
+          'Sonde et son retrait',
+          'Transferts et hébergement',
+          'Interprète médical et coordinateur',
+          'Suivi fonctionnel à long terme'
+        ],
+        faqs: [
+          { q: 'J’ai une sténose urétérale étendue et on m’a dit que « ce n’était pas opérable » ; existe-t-il des solutions ?', a: 'Les sténoses étendues peuvent être réparées dans la plupart des cas grâce à des techniques avancées telles que la greffe de muqueuse buccale ou l’interposition iléale. Votre dossier est évalué et un plan préservant le rein est établi.' },
+          { q: 'Une nouvelle tentative est-elle possible après un échec ?', a: 'Oui ; la reconstruction de reprise après une lésion iatrogène ou une réparation ayant échoué fait partie des domaines d’expérience de ce centre. Des techniques préservant le rein sont planifiées malgré le tissu cicatriciel.' },
+          { q: 'Combien de temps durent la récupération et le suivi ?', a: 'Le séjour et la durée de sondage sont plus longs que pour les autres traitements ; le succès à long terme se juge par un suivi fonctionnel régulier, déterminant dans ces cas.' }
         ]
       }
     }

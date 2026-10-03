@@ -70,7 +70,9 @@ export function HeroSlider() {
     >
       <div className="relative min-h-[460px] md:min-h-[540px]">
         {heroSlides.map((slide, i) => {
-          const c = slide.i18n[locale] ?? slide.i18n.tr!;
+          // Eksik çeviride İngilizce'ye düşer (Türkçe'ye değil): yabancı dildeki
+          // ziyaretçiye Türkçe metin göstermek kabul edilemez.
+          const c = slide.i18n[locale] ?? slide.i18n.en ?? slide.i18n.tr!;
           const active = i === index;
           // Ön-dolu mesaj: slayt BAŞLIĞI değil, anlaşılır bir soru + kaynak kodu.
           const href =

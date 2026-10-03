@@ -1,5 +1,6 @@
-import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link, treatmentHref } from '@/i18n/navigation';
+import type { Locale } from '@/i18n/routing';
 import { Icon, type IconName } from './Icon';
 
 export function TreatmentCard({
@@ -14,9 +15,10 @@ export function TreatmentCard({
   summary: string;
 }) {
   const t = useTranslations('Common');
+  const locale = useLocale() as Locale;
   return (
     <Link
-      href={{ pathname: '/tedaviler/[slug]', params: { slug } }}
+      href={treatmentHref(slug, locale)}
       className="card group flex flex-col p-6 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg"
     >
       <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-soft text-primary">

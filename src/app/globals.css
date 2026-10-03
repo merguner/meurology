@@ -30,6 +30,16 @@
   --font-brand: var(--font-sans);
 }
 
+/**
+ * ARAPÇA: Poppins Arap alfabesini kapsamaz. <html lang="ar"> olduğunda gövde
+ * fontu IBM Plex Sans Arabic'e geçer; marka wordmark'ı (Latin "ME Urology")
+ * Poppins kalır. Mono (rakam/etiket) değişmez.
+ */
+:root:lang(ar) {
+  --font-sans: var(--font-sans-arabic);
+  --font-serif: var(--font-sans-arabic);
+}
+
 /* Sistem koyu tercihi — kullanıcı manuel açık seçmediyse uygulanır (JS'siz de çalışır). */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {

@@ -260,6 +260,55 @@ export const kvkkDoc: LegalDoc = {
           ]
         }
       ]
+    },
+    fr: {
+      intro:
+        'Le présent avis couvre les informations transmises via le formulaire de pré-évaluation du site. La loi turque n° 6698 (KVKK) s’applique ; les droits issus du RGPD s’appliquent également lorsque le traitement entre dans son champ.',
+      sections: [
+        {
+          heading: 'Responsable du traitement',
+          paragraphs: [
+            'Le responsable du traitement est le Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. Contact : info@meurology.com / 0532 063 09 69.'
+          ]
+        },
+        {
+          heading: 'Données personnelles traitées',
+          paragraphs: [
+            'Nous recueillons directement auprès de vous, via le formulaire, vos nom et prénom, pays, adresse e-mail ou numéro de téléphone, le traitement sélectionné et un message facultatif. Vous pouvez mentionner des informations de santé dans ce message ; le formulaire ne permet pas d’envoyer de fichiers. Le serveur du site traite l’envoi et le transmet à la boîte e-mail de la clinique.',
+            'Si votre sélection ou votre message contient des données de santé, ces données sensibles sont utilisées à des fins de pré-évaluation sur le fondement de votre consentement explicite distinct.'
+          ]
+        },
+        {
+          heading: 'Finalités du traitement',
+          paragraphs: [
+            'Répondre à votre demande et réaliser une pré-évaluation à votre demande. La coordination du traitement et du voyage n’intervient que si vous décidez de poursuivre.'
+          ]
+        },
+        {
+          heading: 'Base légale',
+          paragraphs: [
+            'Les coordonnées sont traitées pour prendre, à votre demande, des mesures préalables à une éventuelle relation de soins (art. 5(2)(c) KVKK) ; les données de santé sont traitées sur la base de votre consentement explicite distinct (art. 6(3)(a) KVKK). Des obligations légales applicables peuvent également imposer le traitement de certains enregistrements.'
+          ]
+        },
+        {
+          heading: 'Transferts',
+          paragraphs: [
+            'Les prestataires d’hébergement technique et d’acheminement des e-mails peuvent traiter les envois. Si vous demandez une coordination du traitement ou du voyage, les informations nécessaires peuvent être communiquées à l’établissement de santé ou au prestataire concerné. Si vous utilisez un lien WhatsApp, les informations que vous y envoyez relèvent de ce service distinct ; le formulaire n’est pas transmis via WhatsApp.'
+          ]
+        },
+        {
+          heading: 'Durée de conservation',
+          paragraphs: [
+            'Les e-mails de demande sont conservés aussi longtemps que nécessaire pour traiter votre demande et satisfaire aux obligations légales applicables. Lorsque ces finalités prennent fin, la suppression ou l’anonymisation est évaluée.'
+          ]
+        },
+        {
+          heading: 'Vos droits (art. 11 KVKK / RGPD)',
+          paragraphs: [
+            'Écrivez à info@meurology.com pour exercer vos droits au titre de l’article 11 de la KVKK. Si le RGPD s’applique, les droits d’accès, de rectification, d’effacement, de limitation et d’opposition peuvent également s’appliquer. Vous pouvez retirer votre consentement explicite à la même adresse ; ce retrait n’affecte pas la licéité du traitement antérieur.'
+          ]
+        }
+      ]
     }
   }
 };
@@ -328,6 +377,19 @@ export const consentDoc: LegalDoc = {
           paragraphs: [
             'Я явно соглашаюсь на обработку Doç. Dr. Müslüm Ergün сведений о здоровье в выбранном направлении лечения и необязательном сообщении для предварительной оценки.',
             'Я могу отозвать согласие, написав на info@meurology.com. Отзыв не влияет на законность предыдущей обработки.'
+          ]
+        }
+      ]
+    },
+    fr: {
+      intro:
+        'Ce consentement porte sur les informations de santé que vous choisissez de partager dans le formulaire de pré-évaluation ; il est distinct de l’avis de confidentialité.',
+      sections: [
+        {
+          heading: 'Déclaration de consentement explicite',
+          paragraphs: [
+            'Je consens expressément à ce que le Doç. Dr. Müslüm Ergün traite, à des fins de pré-évaluation, les informations de santé figurant dans le traitement que j’ai sélectionné et dans mon message facultatif.',
+            'Je peux retirer ce consentement en écrivant à info@meurology.com. Ce retrait n’affecte pas la licéité du traitement antérieur.'
           ]
         }
       ]

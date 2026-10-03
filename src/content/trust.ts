@@ -31,6 +31,11 @@ export const accreditations: Accreditation[] = [
         explainer:
           'اللجنة الدولية المشتركة (Joint Commission International) — المعيار الذهبي العالمي لسلامة المرضى وجودة الرعاية.'
       },
+      fr: {
+        name: 'Accréditation JCI',
+        explainer:
+          'Norme internationale de qualité et de sécurité des soins (Joint Commission International).'
+      },
       de: {
         name: 'JCI-Akkreditierung',
         explainer:
@@ -67,6 +72,11 @@ export const accreditations: Accreditation[] = [
         explainer:
           'المستشفى الذي تُجرى فيه العمليات حاصل على شهادة تصريح السياحة الصحية الدولية الصادرة عن وزارة الصحة التركية.'
       },
+      fr: {
+        name: 'Autorisation de tourisme médical',
+        explainer:
+          'L’hôpital où sont réalisées les interventions est titulaire du certificat d’autorisation de tourisme médical international délivré par le ministère de la Santé de la République de Türkiye.'
+      },
       de: {
         name: 'Zulassung Gesundheitstourismus',
         explainer:
@@ -93,6 +103,11 @@ export const accreditations: Accreditation[] = [
       ar: {
         name: 'ISO 9001',
         explainer: 'شهادة نظام إدارة الجودة — عمليات خدمة موحّدة وقابلة للتتبّع.'
+      },
+      fr: {
+        name: 'ISO 9001',
+        explainer:
+          'Certification du management de la qualité — des processus de service normalisés et traçables.'
       },
       de: {
         name: 'ISO 9001',
@@ -158,6 +173,19 @@ export const hospital = {
         'منصّة الليزر Quanta (HoLEP / ThuLEP)',
         'عناية مركزة وبنية غرف عمليات متكاملة',
         'وحدة المرضى الدوليين وخدمة الترجمة'
+      ]
+    },
+    fr: {
+      name: 'Medical Park Bahçelievler · LİV Hospital Topkapı',
+      intro: [
+        'Les interventions de ME Urology Clinic sont réalisées à l’hôpital Medical Park Bahçelievler et au LİV Hospital Topkapı, à Istanbul.',
+        'Ces deux établissements privés à service complet offrent une infrastructure chirurgicale moderne, des soins intensifs et des services dédiés aux patients internationaux.'
+      ],
+      features: [
+        'Système de chirurgie robotique da Vinci',
+        'Plateforme laser Quanta (HoLEP / ThuLEP)',
+        'Soins intensifs et infrastructure complète de blocs opératoires',
+        'Unité patients internationaux et service d’interprétariat'
       ]
     },
     de: {

@@ -47,6 +47,13 @@ export const insuranceInfo: Partial<Record<Locale, InsuranceInfo>> = {
       'للمرضى الدوليين، تُقدَّم الإجراءات ضمن السياحة العلاجية ولا يغطّيها الضمان الاجتماعي التركي (SGK).',
       'أما المرضى المحليون فقد تختلف تغطية SGK أو التأمين الخاص حسب الإجراء؛ يُرجى التواصل معنا للتفاصيل.'
     ]
+  },
+  fr: {
+    title: 'Assurance / Prise en charge',
+    body: [
+      'Pour les patients internationaux, les interventions relèvent du tourisme médical et ne sont pas prises en charge par la sécurité sociale turque (SGK).',
+      'Pour les patients résidant en Türkiye, la prise en charge par la SGK ou une assurance privée varie selon l’intervention ; contactez-nous pour en savoir plus.'
+    ]
   }
 };
 

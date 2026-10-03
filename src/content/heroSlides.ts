@@ -73,6 +73,13 @@ export const heroSlides: HeroSlide[] = [
           'تنسيق من نقطة واحدة للجراحة الروبوتية والطفيفة التوغل: التقييم والعلاج والإقامة والمتابعة.',
         ctaLabel: 'راسلنا على واتساب',
         ctaTopic: 'خيارات علاج المسالك البولية'
+      },
+      fr: {
+        title: 'Expérience, transparence et normes internationales en chirurgie urologique',
+        subtitle:
+          'Une coordination unique pour la chirurgie urologique robotique et mini-invasive : évaluation, traitement, hébergement et suivi.',
+        ctaLabel: 'Écrivez-nous sur WhatsApp',
+        ctaTopic: 'les options de traitement urologique'
       }
     }
   },
@@ -110,6 +117,12 @@ export const heroSlides: HeroSlide[] = [
         subtitle:
           'استشارة فردية خاصة عبر الإنترنت تحترم خصوصيتك. احجز موعدك بثقة.',
         ctaLabel: 'احجز استشارة عبر الإنترنت'
+      },
+      fr: {
+        title: 'Consultation d’andrologie en ligne',
+        subtitle:
+          'Une consultation en ligne individuelle et confidentielle, respectueuse de votre intimité. Réservez votre rendez-vous en toute sérénité.',
+        ctaLabel: 'Réserver une consultation en ligne'
       }
     }
   }

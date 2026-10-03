@@ -268,6 +268,34 @@ export const surgeon: SurgeonProfile = {
       ],
       awards,
       publications
+    },
+    fr: {
+      fullName: 'Pr. ass. Dr Müslüm Ergün',
+      title: 'Urologue',
+      role: 'Service d’urologie — Altınbaş Üniversitesi',
+      bio: [
+        'Le Pr. ass. Dr Müslüm Ergün est spécialiste en urologie. Son activité couvre la chirurgie robotique et laparoscopique, l’endo-urologie et la chirurgie des calculs, l’andrologie, l’uro-oncologie ainsi que l’urologie fonctionnelle et reconstructrice. Il exerce actuellement au service d’urologie de l’Altınbaş Üniversitesi et opère au Medical Park Bahçelievler et au LİV Hospital Topkapı, à Istanbul.',
+        'Il propose aux patients internationaux un parcours transparent, une approche fondée sur les données probantes et des plans de traitement individualisés, avec une expérience particulière des cas complexes et des reprises chirurgicales (redo).'
+      ],
+      education: [
+        { year: '2004', item: 'Diplôme de la faculté de médecine — Uludağ Üniversitesi' },
+        {
+          year: '2009–2014',
+          item: 'Internat d’urologie — Antalya Eğitim ve Araştırma Hastanesi',
+          note: 'Thèse : « Effet de la longueur des carottes de biopsie prostatique sur le diagnostic du cancer de la prostate » (Directeur : Murat Savaş)'
+        },
+        { year: '2019', item: 'Maître de conférences — İstanbul Atlas Üniversitesi' },
+        { year: '2025', item: 'Chef du service d’urologie — İstanbul Atlas Üniversitesi' },
+        { year: 'Janvier 2026', item: 'Titre de professeur associé (doçentlik)' },
+        { year: '2026', item: 'Service d’urologie — Altınbaş Üniversitesi' }
+      ],
+      courses: [
+        { year: '2024', item: 'Atelier pratique de neuromodulation sacrée — 33e Congrès national d’urologie, Antalya' },
+        { year: '2009', item: 'Cours d’urodynamique de base — 1er Congrès national d’urologie féminine et fonctionnelle, Antalya' },
+        { year: '2014', item: 'Cours de formation URS souple — Réunion régionale de formation en endo-urologie, Van' }
+      ],
+      awards,
+      publications
     }
   }
 };
@@ -287,7 +315,7 @@ export const surgeonReconstructive: Partial<
   tr: {
     body: 'Cerrahımız rekonstrüktif ürolojide (üretroplasti, piyeloplasti, fistül onarımı ve üreter rekonstrüksiyonu) yoğun deneyime sahiptir. Bu alanda öne çıkan gösterge vaka sayısı değil; karmaşık, nadir ve daha önce başka merkezde başarısız olmuş (redo) vakalardaki sonuçtur.',
     points: [
-      '347+ rekonstrüktif vaka (üretroplasti, piyeloplasti, fistül onarımı ve üreter rekonstrüksiyonu)',
+      'Üretroplasti, piyeloplasti, fistül onarımı ve üreter rekonstrüksiyonunda cerrahi deneyim',
       'Kompleks, nadir ve başka merkezde başarısız olmuş (redo) vakalarda yoğun deneyim',
       'Buccal mukoza grefti ve ileal interpozisyon gibi ileri tekniklerde deneyim'
     ]
@@ -295,7 +323,7 @@ export const surgeonReconstructive: Partial<
   en: {
     body: 'Our surgeon has extensive experience in reconstructive urology (urethroplasty, pyeloplasty, fistula repair and ureteral reconstruction). What stands out here is not case volume but outcomes in complex, rare and previously failed (redo) cases referred from other centers.',
     points: [
-      '347+ reconstructive cases (urethroplasty, pyeloplasty, fistula repair and ureteral reconstruction)',
+      'Surgical experience in urethroplasty, pyeloplasty, fistula repair and ureteral reconstruction',
       'Substantial experience in complex, rare and previously failed (redo) cases referred from other centers',
       'Experience in advanced techniques such as buccal mucosa graft and ileal interposition'
     ]
@@ -303,7 +331,7 @@ export const surgeonReconstructive: Partial<
   ar: {
     body: 'يتمتّع جرّاحنا بخبرة واسعة في المسالك البولية الترميمية (رأب الإحليل، ورأب حوض الكلية، وإصلاح الناسور، وإعادة بناء الحالب). والمؤشّر البارز هنا ليس عدد الحالات، بل النتيجة في الحالات المعقّدة والنادرة والتي سبق أن فشلت في مركز آخر (redo).',
     points: [
-      'أكثر من 347 حالة ترميمية (رأب الإحليل، رأب حوض الكلية، إصلاح الناسور، وإعادة بناء الحالب)',
+      'خبرة جراحية في رأب الإحليل ورأب حوض الكلية وإصلاح الناسور وإعادة بناء الحالب',
       'خبرة واسعة في الحالات المعقدة والنادرة والتي سبق أن فشلت في مركز آخر (redo)',
       'خبرة في التقنيات المتقدّمة مثل طُعم الغشاء المخاطي للخد والإحلال اللفائفي'
     ]
@@ -311,7 +339,7 @@ export const surgeonReconstructive: Partial<
   de: {
     body: 'Unser Chirurg verfügt über umfangreiche Erfahrung in der rekonstruktiven Urologie (Urethroplastik, Nierenbeckenplastik, Fistelverschluss und Harnleiter-Rekonstruktion). Entscheidend ist hier nicht die Fallzahl, sondern das Ergebnis in komplexen, seltenen und andernorts zuvor gescheiterten (Redo-)Fällen.',
     points: [
-      'über 347 rekonstruktive Fälle (Urethroplastik, Nierenbeckenplastik, Fistelverschluss und Harnleiter-Rekonstruktion)',
+      'Chirurgische Erfahrung in Urethroplastik, Nierenbeckenplastik, Fistelverschluss und Harnleiter-Rekonstruktion',
       'Umfangreiche Erfahrung bei komplexen, seltenen und andernorts zuvor gescheiterten (Redo-)Fällen',
       'Erfahrung mit fortgeschrittenen Techniken wie Mundschleimhaut-Transplantat und Ileuminterposition'
     ]
@@ -319,9 +347,17 @@ export const surgeonReconstructive: Partial<
   ru: {
     body: 'Наш хирург обладает большим опытом в реконструктивной урологии (уретропластика, пиелопластика, пластика свища и реконструкция мочеточника). Здесь важно не число операций, а результат в сложных, редких и ранее неудавшихся в другом месте (redo) случаях.',
     points: [
-      'более 347 реконструктивных случаев (уретропластика, пиелопластика, пластика свища и реконструкция мочеточника)',
+      'Хирургический опыт в уретропластике, пиелопластике, пластике свища и реконструкции мочеточника',
       'Большой опыт в сложных, редких и ранее неудавшихся в другом месте (redo) случаях',
       'Опыт в продвинутых методиках, таких как трансплантат слизистой щеки и кишечная интерпозиция'
+    ]
+  },
+  fr: {
+    body: 'Notre chirurgien possède une expérience approfondie en urologie reconstructrice (urétroplastie, pyéloplastie, réparation de fistule et reconstruction urétérale). Ce qui compte ici n’est pas le nombre d’interventions, mais le résultat obtenu dans des cas complexes, rares ou ayant échoué dans un autre centre (redo).',
+    points: [
+      'Expérience chirurgicale en urétroplastie, pyéloplastie, réparation de fistule et reconstruction urétérale',
+      'Expérience approfondie des cas complexes, rares et des reprises (redo) adressées par d’autres centres',
+      'Maîtrise de techniques avancées telles que la greffe de muqueuse buccale et l’interposition iléale'
     ]
   }
 };

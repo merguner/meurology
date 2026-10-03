@@ -78,8 +78,10 @@ function validateContent(slug: string, locale: string, c: TreatmentContent): voi
   });
 
   // surgeonExperience
-  if (!isNonEmptyString(c.surgeonExperience?.caseVolume) || !isNonEmptyString(c.surgeonExperience?.note)) {
-    fail(slug, locale, 'surgeonExperience (caseVolume/note) eksik.');
+  // caseVolume artık ZORUNLU DEĞİL: vaka sayıları doğrulanana kadar yayınlanmıyor
+  // ve tek kaynak content/caseStats.ts olacak (bkz. config/features.ts caseNumbers).
+  if (!isNonEmptyString(c.surgeonExperience?.note)) {
+    fail(slug, locale, 'surgeonExperience.note eksik.');
   }
 
   // expertise opsiyonel; varsa tüm alanları dolu olmalı (rekonstrüktif tedaviler)

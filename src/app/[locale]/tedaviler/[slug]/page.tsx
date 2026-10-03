@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { buildAlternates, getPathname } from '@/i18n/navigation';
+import { buildTreatmentAlternates, treatmentHref, getPathname } from '@/i18n/navigation';
+import { canonicalSlug, localizedSlug, slugsForLocale } from '@/i18n/slugs';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -23,8 +24,9 @@ import { features } from '@/config/features';
 
 // Tüm dil + slug kombinasyonlarını statik üret (hız için).
 export function generateStaticParams() {
+  // Her dil KENDİ slug'larıyla üretilir (ör. /en/treatments/kidney-stones).
   return routing.locales.flatMap((locale) =>
-    treatmentSlugs.map((slug) => ({ locale, slug }))
+    slugsForLocale(locale).map((slug) => ({ locale, slug }))
   );
 }
 
@@ -34,13 +36,14 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const treatment = getTreatment(slug);
-  if (!treatment) return {};
+  const canonical = canonicalSlug(slug, locale);
+  const treatment = canonical ? getTreatment(canonical) : undefined;
+  if (!treatment || !canonical) return {};
   const c = resolveContent(treatment, locale);
   return {
     title: c.metaTitle,
     description: c.metaDescription,
-    alternates: buildAlternates(locale, { pathname: '/tedaviler/[slug]', params: { slug } }),
+    alternates: buildTreatmentAlternates(locale, canonical),
     openGraph: { title: c.metaTitle, description: c.metaDescription, type: 'article' }
   };
 }
@@ -52,8 +55,10 @@ export default async function TreatmentPage({
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
-  const treatment = getTreatment(slug);
-  if (!treatment) notFound();
+  // Dış (lokalize) slug'ı iç anahtara çevir; başka dilin slug'ı da kabul edilir.
+  const canonical = canonicalSlug(slug, locale);
+  const treatment = canonical ? getTreatment(canonical) : undefined;
+  if (!treatment || !canonical) notFound();
 
   const c = resolveContent(treatment, locale);
   const t = await getTranslations('Treatment');
@@ -86,7 +91,7 @@ export default async function TreatmentPage({
         name: c.metaTitle,
         description: c.metaDescription,
         inLanguage: locale,
-        url: `${siteConfig.domain}${getPathname({ locale, href: { pathname: '/tedaviler/[slug]', params: { slug } } })}`,
+        url: `${siteConfig.domain}${getPathname({ locale, href: treatmentHref(canonical, locale) })}`,
         about: { '@type': 'MedicalProcedure', name: c.title },
         lastReviewed: new Date().toISOString().slice(0, 10)
       },

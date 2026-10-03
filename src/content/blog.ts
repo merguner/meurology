@@ -174,6 +174,35 @@ export const blogPosts: BlogPost[] = [
             ]
           }
         ]
+      },
+      fr: {
+        title: 'Cancer de la prostate : symptômes et options thérapeutiques',
+        excerpt:
+          'Un aperçu de l’importance du dépistage précoce, du dosage du PSA et des options de traitement, dont la chirurgie robotique.',
+        metaTitle: 'Cancer de la prostate : symptômes et options de traitement',
+        metaDescription:
+          'Un guide informatif sur les symptômes du cancer de la prostate, le dosage du PSA, la démarche diagnostique et les options thérapeutiques dont la prostatectomie robotique.',
+        sections: [
+          {
+            heading: 'Qu’est-ce que le cancer de la prostate ?',
+            paragraphs: [
+              'Le cancer de la prostate est l’un des cancers les plus fréquents chez l’homme et ne provoque souvent aucun symptôme à un stade précoce : c’est pourquoi un suivi régulier est important.'
+            ]
+          },
+          {
+            heading: 'Symptômes et diagnostic',
+            paragraphs: [
+              'Les signes possibles sont des difficultés à uriner, des mictions fréquentes ou du sang dans les urines. Le diagnostic repose sur le dosage sanguin du PSA, l’examen clinique, l’imagerie et, si nécessaire, une biopsie.'
+            ]
+          },
+          {
+            heading: 'Options thérapeutiques',
+            paragraphs: [
+              'Le traitement est planifié selon le stade, l’âge et la préférence du patient. Les options comprennent la surveillance active, la chirurgie (prostatectomie robotique) et la radiothérapie.',
+              'Ce contenu est fourni à titre d’information générale et ne remplace pas un avis médical. Contactez notre équipe pour une évaluation personnalisée.'
+            ]
+          }
+        ]
       }
     }
   },
@@ -285,6 +314,28 @@ export const blogPosts: BlogPost[] = [
             paragraphs: [
               'Достаточное потребление воды, баланс соли и животного белка и регулярное наблюдение могут снизить риск образования камней.',
               'Этот материал носит общий информационный характер. При повторяющихся камнях свяжитесь с нами для оценки.'
+            ]
+          }
+        ]
+      },
+      fr: {
+        title: 'Comment se forment les calculs rénaux et comment les prévenir',
+        excerpt: 'Causes de formation des calculs rénaux, facteurs de risque et mesures préventives au quotidien.',
+        metaTitle: 'Comment se forment les calculs rénaux ? Conseils de prévention',
+        metaDescription:
+          'Un guide informatif sur les causes de formation des calculs rénaux, les facteurs de risque, les conseils alimentaires et les méthodes de traitement.',
+        sections: [
+          {
+            heading: 'Pourquoi les calculs rénaux se forment-ils ?',
+            paragraphs: [
+              'Les calculs rénaux se forment lorsque certains minéraux présents dans l’urine se concentrent et cristallisent. Un apport insuffisant en eau est l’un des principaux facteurs de risque.'
+            ]
+          },
+          {
+            heading: 'Conseils de prévention',
+            paragraphs: [
+              'Boire suffisamment d’eau, équilibrer les apports en sel et en protéines animales et assurer un suivi régulier réduisent le risque de récidive.',
+              'Ce contenu est fourni à titre d’information générale. En cas de calculs récidivants, contactez-nous pour une évaluation.'
             ]
           }
         ]

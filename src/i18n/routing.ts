@@ -1,6 +1,6 @@
 import { defineRouting } from 'next-intl/routing';
 
-export const locales = ['tr', 'en', 'ar', 'de', 'ru'] as const;
+export const locales = ['tr', 'en', 'ar', 'de', 'ru', 'fr'] as const;
 export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = 'tr';
@@ -24,56 +24,64 @@ export const pathnames = {
     en: '/treatments',
     de: '/behandlungen',
     ru: '/treatments',
-    ar: '/treatments'
+    ar: '/treatments',
+    fr: '/traitements'
   },
   '/tedaviler/[slug]': {
     tr: '/tedaviler/[slug]',
     en: '/treatments/[slug]',
     de: '/behandlungen/[slug]',
     ru: '/treatments/[slug]',
-    ar: '/treatments/[slug]'
+    ar: '/treatments/[slug]',
+    fr: '/traitements/[slug]'
   },
   '/rekonstruktif-uroloji': {
     tr: '/rekonstruktif-uroloji',
     en: '/reconstructive-urology',
     de: '/rekonstruktive-urologie',
     ru: '/reconstructive-urology',
-    ar: '/reconstructive-urology'
+    ar: '/reconstructive-urology',
+    fr: '/urologie-reconstructrice'
   },
   '/cerrah': {
     tr: '/cerrah',
     en: '/surgeon',
     de: '/chirurg',
     ru: '/surgeon',
-    ar: '/surgeon'
+    ar: '/surgeon',
+    fr: '/chirurgien'
   },
   '/hastane': {
     tr: '/hastane',
     en: '/hospital',
     de: '/krankenhaus',
     ru: '/hospital',
-    ar: '/hospital'
+    ar: '/hospital',
+    fr: '/hopital'
   },
   '/uluslararasi-hasta': {
     tr: '/uluslararasi-hasta',
     en: '/international-patients',
     de: '/internationale-patienten',
     ru: '/international-patients',
-    ar: '/international-patients'
+    ar: '/international-patients',
+    fr: '/patients-internationaux'
   },
   '/deneyimler': {
     tr: '/deneyimler',
     en: '/experiences',
     de: '/erfahrungen',
     ru: '/experiences',
-    ar: '/experiences'
+    ar: '/experiences',
+    fr: '/temoignages'
   },
   '/ozel-danismanlik': {
     tr: '/ozel-danismanlik',
     en: '/online-consultation',
     de: '/online-beratung',
     ru: '/online-consultation',
-    ar: '/online-consultation'
+    ar: '/online-consultation',
+    fr: '/consultation-en-ligne'
   },
   '/blog': '/blog',
   '/blog/[slug]': '/blog/[slug]',
@@ -82,21 +90,24 @@ export const pathnames = {
     en: '/contact',
     de: '/kontakt',
     ru: '/contact',
-    ar: '/contact'
+    ar: '/contact',
+    fr: '/contact'
   },
   '/yasal/kvkk': {
     tr: '/yasal/kvkk',
     en: '/legal/privacy',
     de: '/rechtliches/datenschutz',
     ru: '/legal/privacy',
-    ar: '/legal/privacy'
+    ar: '/legal/privacy',
+    fr: '/mentions-legales/confidentialite'
   },
   '/yasal/acik-riza': {
     tr: '/yasal/acik-riza',
     en: '/legal/consent',
     de: '/rechtliches/einwilligung',
     ru: '/legal/consent',
-    ar: '/legal/consent'
+    ar: '/legal/consent',
+    fr: '/mentions-legales/consentement'
   }
 } as const;
 

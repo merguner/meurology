@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { buildAlternates, getPathname } from '@/i18n/navigation';
+import { buildAlternates, getPathname, treatmentHref } from '@/i18n/navigation';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -82,7 +82,7 @@ export default async function BlogPostPage({
 
         {relatedTreatment && relatedTitle && (
           <Link
-            href={{ pathname: '/tedaviler/[slug]', params: { slug: relatedTreatment.slug } }}
+            href={treatmentHref(relatedTreatment.slug, locale)}
             className="mt-5 inline-flex items-center gap-2 rounded-lg border border-border bg-surface-2 px-3 py-2 text-sm hover:border-primary/40"
           >
             <Icon name="arrow" size={16} className="text-primary rtl:rotate-180" />

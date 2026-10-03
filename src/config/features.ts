@@ -72,6 +72,13 @@ const FEATURES: Record<Locale, ContentFeatures> = {
     patientPhotos: false,
     superlatives: false,
     caseNumbers: false
+  },
+  fr: {
+    prices: true,
+    testimonials: true,
+    patientPhotos: false,
+    superlatives: false,
+    caseNumbers: false
   }
 };
 
