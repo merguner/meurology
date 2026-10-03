@@ -15,18 +15,11 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
-     * TASLAK — cerrah onayına sunuldu.
-     * HUB SAYFASI (prompt m.4.1). Tek bir işlemi değil, prostat kanserinde
-     * KARAR SÜRECİNİ anlatır: tanıdan risk grubuna, risk grubundan tedavi
-     * seçimine. Alt sayfalara yönlendirir.
-     * Şablon alanları hub'a uyarlandı: "riskler" = karar sürecinin riskleri
-     * (aşırı/eksik tedavi), "alternatifler" = tedavi seçenekleri,
-     * "süreç" = tanıdan tedaviye hasta yolculuğu.
-     * Onaylanınca robotik-prostatektomi ve sinir-koruyucu-cerrahi bu hub'ın
-     * altına taşınacak (parent güncellenecek).
-     * Kaynak: EAU Prostate Cancer kılavuzu. Kaynaksız oran YAZILMAMIŞTIR.
+     * Prostat kanseri HUB sayfası (prompt m.4.1). Tanıdan tedavi kararına
+     * giden süreci anlatır; alt sayfalara yönlendirir.
+     * Cerrahi ile radyoterapi arasında ÜSTÜNLÜK İDDİA EDİLMEZ.
+     * Kaynak: EAU Prostate Cancer kılavuzu.
      */
-    draft: true,
     slug: 'prostat-kanseri',
     lastReviewed: '2026-10-04',
     icon: 'prostate',
@@ -220,6 +213,951 @@ export const treatments: Treatment[] = [
             url: 'https://uroweb.org/guidelines/prostate-cancer'
           }
         ]
+      },
+      en: {
+        title: 'Prostate Cancer: From Diagnosis to Treatment Decision',
+        summary:
+          'Prostate cancer is not a single disease. A roadmap through your risk group, your treatment options and what actually determines the decision.',
+        metaTitle: 'Prostate Cancer | Diagnosis, Risk Groups and Treatment Options',
+        metaDescription:
+          'The diagnostic pathway, risk groups and treatment options in prostate cancer: active surveillance, surgery and radiotherapy. A guide to what determines the decision.',
+        definition: [
+          'Prostate cancer is one of the most common cancers in men. An important feature is that in most cases it PROGRESSES SLOWLY. For that reason not every prostate cancer carries the same urgency, and not every patient receives the same treatment.',
+          'The purpose of this page is not to sell you a treatment but to make the decision process understandable. In prostate cancer the most common mistake is to think "there is cancer, take it out now" without looking at the risk group — or, conversely, to delay a disease that genuinely requires treatment.',
+          'HOW THE DIAGNOSIS IS MADE: the process usually begins with a rising PSA or a firmness found on digital rectal examination. Today a biopsy is not performed straight away; a multiparametric prostate MRI is done first. If the MRI shows a suspicious area, a targeted sample is taken from it (fusion biopsy). This approach reduces unnecessary biopsies and helps avoid missing significant cancers.',
+          'WHAT THE BIOPSY RESULT TELLS YOU: the pathologist scores how aggressive the cancer cells look under the microscope using the Gleason score; this is simplified into the ISUP grade, five groups from 1 to 5. ISUP 1 is the most indolent group, ISUP 5 the most aggressive. The number of cores involved and which areas they come from are also recorded.',
+          'RISK GROUP: the PSA value, the ISUP grade and the stage of the tumour are assessed together, and the disease is classified as low, intermediate or high risk. This classification forms the basis of the treatment decision. If needed, further imaging (such as a bone scan or PSMA PET) is requested to look for spread.',
+          'WHAT DETERMINES THE DECISION: your risk group alone is not enough. Your age, life expectancy, accompanying conditions, urinary and sexual function and your own priorities are weighed together. Two patients in the same risk group may be offered different treatments; this is not an inconsistency but the natural result of deciding case by case.'
+        ],
+        eligibility: {
+          suitable: [
+            'Men with a rising PSA or a suspicious finding on rectal examination',
+            'Patients diagnosed with prostate cancer on biopsy who wish to review their treatment options',
+            'Patients who have been offered treatment elsewhere and are seeking a second opinion',
+            'Low-risk patients who have been offered active surveillance and want to understand the process',
+            'Patients whose PSA is rising again after treatment (biochemical recurrence)'
+          ],
+          notSuitable: [
+            'People who have not yet had a PSA test or examination — basic assessment comes first',
+            'Patients with urinary symptoms only and no suspicion of cancer — benign prostatic enlargement should be assessed instead',
+            'Situations requiring urgent intervention (inability to pass urine, signs of kidney failure) — urgent treatment takes priority',
+            'People with a single high PSA value and no confirmed diagnosis — PSA alone does not make a diagnosis'
+          ]
+        },
+        technology: [
+          'Multiparametric prostate MRI — identifying the suspicious area before biopsy',
+          'MRI fusion biopsy — targeted sampling',
+          'PSMA PET (in selected cases) — assessment of spread',
+          'da Vinci robotic system — if surgery is chosen'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Robotic radical prostatectomy and uro-oncological surgery are among Assoc. Prof. Dr. Müslüm Ergün’s fields of work. The treatment decision is made by weighing the risk group together with the patient’s priorities; in cases that require it, a multidisciplinary board opinion is obtained.'
+        },
+        timeline: [
+          {
+            when: 'Step 1',
+            title: 'PSA and examination',
+            body: 'A rising PSA or an examination finding starts the process. A single high PSA does not make a diagnosis; infection and benign enlargement can also raise it, so the value is repeated.'
+          },
+          {
+            when: 'Step 2',
+            title: 'Multiparametric MRI',
+            body: 'Performed BEFORE biopsy. If there is a suspicious area it shows its location and its relationship to the capsule; if there is not, an unnecessary biopsy may be avoided.'
+          },
+          {
+            when: 'Step 3',
+            title: 'Targeted biopsy',
+            body: 'A sample is taken from the area marked on MRI using the fusion technique. The result is reported as an ISUP grade.'
+          },
+          {
+            when: 'Step 4',
+            title: 'Risk group and staging',
+            body: 'PSA, ISUP grade and stage are assessed together to determine the risk group. If necessary, a search for spread is carried out.'
+          },
+          {
+            when: 'Step 5',
+            title: 'Treatment decision',
+            body: 'The decision is reached by discussing your risk group, age, accompanying conditions and priorities together. Seeking a second opinion at this stage is entirely reasonable.'
+          }
+        ],
+        risks: [
+          'OVERTREATMENT: treating a low-risk, slow-growing cancer with unnecessary surgery or radiotherapy; side effects occur while the gain in life expectancy is limited',
+          'UNDERTREATMENT: leaving a disease that genuinely needs treatment under surveillance, or delaying it',
+          'Deciding on the basis of a single PSA value — PSA also rises with infection and benign enlargement',
+          'Going straight to biopsy without an MRI — the chance of missing significant tumours increases',
+          'Not discussing the side effects of treatment (urinary leakage, changes in sexual function) before surgery'
+        ],
+        alternatives: [
+          'Active surveillance — close follow-up with regular PSA, MRI and biopsy in selected low-risk patients',
+          'Radical prostatectomy — surgical removal of the prostate (robotic or open)',
+          'Radiotherapy — external beam treatment or brachytherapy',
+          'Focal therapies — targeting the tumour-bearing area in selected cases; the evidence base is developing',
+          'Hormone therapy — in advanced disease, usually alongside other treatments'
+        ],
+        comparison: {
+          title: 'Prominent options by risk group',
+          columns: ['Risk group', 'Typical findings', 'Prominent options', 'Points to watch'],
+          rows: [
+            {
+              label: 'Low risk',
+              values: [
+                'Low PSA, ISUP 1, limited involvement',
+                'Active surveillance first; surgery and radiotherapy also options',
+                'Avoiding overtreatment; adherence to follow-up is essential'
+              ]
+            },
+            {
+              label: 'Intermediate risk',
+              values: [
+                'ISUP 2–3 or moderately raised PSA',
+                'Radical prostatectomy or radiotherapy',
+                'The possibility of nerve-sparing is assessed separately in this group'
+              ]
+            },
+            {
+              label: 'High risk',
+              values: [
+                'ISUP 4–5, high PSA or advanced stage',
+                'Surgery or radiotherapy, often with additional treatment',
+                'Oncological safety takes priority; a search for spread is needed'
+              ]
+            }
+          ],
+          note:
+            'This table summarises the logic of the decision; it is not individual advice. The final decision is made together with your age, accompanying conditions and priorities.'
+        },
+        recovery: [
+          {
+            period: 'Diagnostic phase',
+            body: 'What is most needed in this period is time and accurate information. Most forms of prostate cancer progress slowly enough to allow you a few weeks to decide; you do not have to decide in haste.'
+          },
+          {
+            period: 'Decision phase',
+            body: 'Compare the side effects of the options with your own priorities in life. Discuss your expectations about continence and sexual function openly; this prevents most of the disappointment experienced later.'
+          },
+          {
+            period: 'After treatment',
+            body: 'Whichever treatment is chosen, regular PSA follow-up is carried out. A PSA that stays at the expected level is the most practical measure that the treatment is working.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies with the treatment chosen and is stated on the relevant treatment page. A firm quote is given once the risk group and treatment plan are clear.'
+        },
+        packageIncludes: [
+          'File assessment and determination of the risk group',
+          'Review of the necessary imaging and pathology',
+          'A consultation in which the treatment options are explained in detail',
+          'The operation or procedure and hospital process for the chosen treatment',
+          'Airport–hospital–hotel transfers and accommodation',
+          'Medical interpreter and patient coordinator',
+          'Post-treatment PSA follow-up and online reviews'
+        ],
+        faqs: [
+          {
+            q: 'I have been diagnosed with prostate cancer — do I need surgery straight away?',
+            a: 'In most cases, no. A large proportion of prostate cancers progress slowly and you have a few weeks to decide. Your risk group needs to be established first. In low-risk patients, active surveillance may be more appropriate than immediate treatment.'
+          },
+          {
+            q: 'My PSA came back high — do I have cancer?',
+            a: 'Not necessarily. PSA is a protein produced by prostate tissue, and inflammation, benign enlargement or even some recent procedures can raise it. A diagnosis is therefore not made on a single high value; the test is repeated and, if needed, an MRI follows.'
+          },
+          {
+            q: 'Why is an MRI done before biopsy?',
+            a: 'A multiparametric MRI shows the suspicious area in advance. The biopsy can then be targeted rather than random; the chance of missing significant cancers falls, and in some patients an unnecessary biopsy can be avoided.'
+          },
+          {
+            q: 'Which is better, surgery or radiotherapy?',
+            a: 'In intermediate- and high-risk localized disease both are accepted options and neither has a definitive advantage over the other. The difference lies in their side-effect profiles: with surgery, urinary leakage is more prominent early on; with radiotherapy, bowel and bladder symptoms can appear over time. The choice is made together with your age, accompanying conditions and priorities.'
+          },
+          {
+            q: 'Does active surveillance mean "doing nothing"?',
+            a: 'No. Active surveillance is a planned programme: PSA measurement at set intervals, MRI and, when needed, repeat biopsy. The aim is to move to treatment in good time if the disease shows signs of progression, while avoiding unnecessary side effects in the meantime. It is not suitable for patients who cannot keep to the follow-up.'
+          },
+          {
+            q: 'Will my sexual function and continence be affected?',
+            a: 'Both main treatments can affect these functions. In surgery, if a nerve-sparing technique can be applied the chance for sexual function improves; continence usually recovers within weeks. It is important to discuss your expectations clearly before treatment.'
+          },
+          {
+            q: 'I would like a second opinion — how do I send my file?',
+            a: 'Sharing your MRI images, your biopsy/pathology report and your PSA values is enough. You may send your file for a second opinion only; this does not oblige you to receive treatment.'
+          },
+          {
+            q: 'What if my PSA rises again after treatment?',
+            a: 'This is called biochemical recurrence and can appear before the disease is visible on imaging. The rate of rise, the initial treatment and the risk group are assessed, and either additional treatment or close surveillance is planned. Detecting it early widens the options.'
+          },
+          {
+            q: 'There is prostate cancer in my family — what should I do?',
+            a: 'In men with a first-degree relative affected by prostate cancer, starting assessment earlier is advised. At what age to begin and how often to repeat it depends on your personal risk profile; this is worth discussing with your physician.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Prostate Cancer — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      de: {
+        title: 'Prostatakrebs: Von der Diagnose zur Therapieentscheidung',
+        summary:
+          'Prostatakrebs ist nicht eine einzige Erkrankung. Ein Wegweiser zu Ihrer Risikogruppe, Ihren Behandlungsoptionen und dem, was die Entscheidung wirklich bestimmt.',
+        metaTitle: 'Prostatakrebs | Diagnose, Risikogruppen und Therapieoptionen',
+        metaDescription:
+          'Diagnoseweg, Risikogruppen und Therapieoptionen bei Prostatakrebs: aktive Überwachung, Operation und Strahlentherapie. Ein Leitfaden dazu, was die Entscheidung bestimmt.',
+        definition: [
+          'Prostatakrebs gehört zu den häufigsten Krebserkrankungen des Mannes. Ein wichtiges Merkmal ist, dass er in den meisten Fällen LANGSAM FORTSCHREITET. Deshalb hat nicht jeder Prostatakrebs dieselbe Dringlichkeit, und nicht jeder Patient erhält dieselbe Behandlung.',
+          'Ziel dieser Seite ist nicht, Ihnen eine Therapie zu verkaufen, sondern den Entscheidungsweg verständlich zu machen. Der häufigste Fehler bei Prostatakrebs ist, ohne Blick auf die Risikogruppe zu denken „es ist Krebs, er muss sofort raus“ — oder umgekehrt, eine wirklich behandlungsbedürftige Erkrankung aufzuschieben.',
+          'WIE DIE DIAGNOSE GESTELLT WIRD: Der Weg beginnt meist mit einem steigenden PSA-Wert oder einer Verhärtung bei der Tastuntersuchung. Heute wird nicht sofort biopsiert; zuerst erfolgt ein multiparametrisches Prostata-MRT. Zeigt es ein verdächtiges Areal, wird daraus gezielt eine Probe entnommen (Fusionsbiopsie). Das verringert unnötige Biopsien und hilft, bedeutsame Karzinome nicht zu übersehen.',
+          'WAS DER BIOPSIEBEFUND AUSSAGT: Der Pathologe bewertet mit dem Gleason-Score, wie aggressiv die Krebszellen unter dem Mikroskop erscheinen; daraus wird der ISUP-Grad abgeleitet, fünf Gruppen von 1 bis 5. ISUP 1 ist die am wenigsten aggressive, ISUP 5 die aggressivste Gruppe. Zudem wird festgehalten, wie viele Stanzen betroffen sind und aus welchen Arealen sie stammen.',
+          'RISIKOGRUPPE: PSA-Wert, ISUP-Grad und Tumorstadium werden gemeinsam bewertet und die Erkrankung als Niedrig-, Mittel- oder Hochrisiko eingestuft. Diese Einteilung bildet die Grundlage der Therapieentscheidung. Bei Bedarf wird zusätzliche Bildgebung (etwa Knochenszintigraphie oder PSMA-PET) zur Suche nach Streuung veranlasst.',
+          'WAS DIE ENTSCHEIDUNG BESTIMMT: Die Risikogruppe allein genügt nicht. Ihr Alter, Ihre Lebenserwartung, Begleiterkrankungen, Harn- und Sexualfunktion sowie Ihre eigenen Prioritäten werden gemeinsam abgewogen. Zwei Patienten derselben Risikogruppe können unterschiedliche Empfehlungen erhalten; das ist kein Widerspruch, sondern Folge einer individuellen Entscheidung.'
+        ],
+        eligibility: {
+          suitable: [
+            'Männer mit steigendem PSA-Wert oder auffälligem Tastbefund',
+            'Patienten mit bioptisch gesichertem Prostatakrebs, die ihre Therapieoptionen prüfen möchten',
+            'Patienten, denen andernorts eine Therapie empfohlen wurde und die eine Zweitmeinung suchen',
+            'Niedrigrisikopatienten, denen aktive Überwachung empfohlen wurde und die den Ablauf verstehen möchten',
+            'Patienten, deren PSA nach der Behandlung erneut ansteigt (biochemisches Rezidiv)'
+          ],
+          notSuitable: [
+            'Personen ohne bisherige PSA-Bestimmung oder Untersuchung — zuerst ist eine Basisabklärung nötig',
+            'Patienten mit ausschließlich Harnbeschwerden und ohne Krebsverdacht — hier ist die gutartige Prostatavergrößerung abzuklären',
+            'Situationen, die eine Notfallbehandlung erfordern (Harnverhalt, Zeichen eines Nierenversagens) — die Akutbehandlung hat Vorrang',
+            'Personen mit einem einzelnen erhöhten PSA-Wert ohne gesicherte Diagnose — PSA allein stellt keine Diagnose'
+          ]
+        },
+        technology: [
+          'Multiparametrisches Prostata-MRT — Identifikation des verdächtigen Areals vor der Biopsie',
+          'MRT-Fusionsbiopsie — gezielte Probenentnahme',
+          'PSMA-PET (in ausgewählten Fällen) — Beurteilung einer Streuung',
+          'da Vinci Robotersystem — falls eine Operation gewählt wird'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Die robotische radikale Prostatektomie und die uroonkologische Chirurgie gehören zu den Arbeitsgebieten von Doz. Dr. Müslüm Ergün. Die Therapieentscheidung erfolgt durch Abwägung von Risikogruppe und Patientenprioritäten; in geeigneten Fällen wird eine interdisziplinäre Tumorkonferenz hinzugezogen.'
+        },
+        timeline: [
+          {
+            when: 'Schritt 1',
+            title: 'PSA und Untersuchung',
+            body: 'Ein steigender PSA-Wert oder ein Tastbefund startet den Prozess. Ein einzelner hoher PSA-Wert ist keine Diagnose; auch Infektion und gutartige Vergrößerung erhöhen ihn, daher wird der Wert wiederholt.'
+          },
+          {
+            when: 'Schritt 2',
+            title: 'Multiparametrisches MRT',
+            body: 'Erfolgt VOR der Biopsie. Liegt ein verdächtiges Areal vor, zeigt es dessen Lage und Verhältnis zur Kapsel; andernfalls lässt sich eine unnötige Biopsie vermeiden.'
+          },
+          {
+            when: 'Schritt 3',
+            title: 'Gezielte Biopsie',
+            body: 'Aus dem im MRT markierten Areal wird mittels Fusionstechnik eine Probe entnommen. Das Ergebnis wird als ISUP-Grad berichtet.'
+          },
+          {
+            when: 'Schritt 4',
+            title: 'Risikogruppe und Staging',
+            body: 'PSA, ISUP-Grad und Stadium werden gemeinsam bewertet und die Risikogruppe bestimmt. Bei Bedarf erfolgt eine Ausbreitungsdiagnostik.'
+          },
+          {
+            when: 'Schritt 5',
+            title: 'Therapieentscheidung',
+            body: 'Die Entscheidung entsteht im Gespräch über Risikogruppe, Alter, Begleiterkrankungen und Ihre Prioritäten. Eine Zweitmeinung einzuholen ist in dieser Phase völlig angemessen.'
+          }
+        ],
+        risks: [
+          'ÜBERTHERAPIE: Ein langsam wachsender Niedrigrisikokrebs wird unnötig operiert oder bestrahlt; Nebenwirkungen treten auf, der Gewinn an Lebenszeit bleibt gering',
+          'UNTERTHERAPIE: Eine wirklich behandlungsbedürftige Erkrankung wird nur überwacht oder aufgeschoben',
+          'Eine Entscheidung auf Basis eines einzelnen PSA-Werts — PSA steigt auch bei Infektion und gutartiger Vergrößerung',
+          'Direkt ohne MRT zur Biopsie überzugehen — die Gefahr, bedeutsame Tumoren zu übersehen, steigt',
+          'Nebenwirkungen der Therapie (Harnverlust, Veränderungen der Sexualfunktion) nicht vor der Operation zu besprechen'
+        ],
+        alternatives: [
+          'Aktive Überwachung — engmaschige Kontrolle mit regelmäßigem PSA, MRT und Biopsie bei ausgewählten Niedrigrisikopatienten',
+          'Radikale Prostatektomie — operative Entfernung der Prostata (robotisch oder offen)',
+          'Strahlentherapie — perkutane Bestrahlung oder Brachytherapie',
+          'Fokale Therapien — gezielte Behandlung des tumortragenden Areals in ausgewählten Fällen; die Datenlage entwickelt sich',
+          'Hormontherapie — im fortgeschrittenen Stadium, meist zusammen mit anderen Verfahren'
+        ],
+        comparison: {
+          title: 'Bevorzugte Optionen nach Risikogruppe',
+          columns: ['Risikogruppe', 'Typische Befunde', 'Bevorzugte Optionen', 'Worauf zu achten ist'],
+          rows: [
+            {
+              label: 'Niedriges Risiko',
+              values: [
+                'Niedriger PSA, ISUP 1, begrenzter Befall',
+                'Zunächst aktive Überwachung; Operation und Bestrahlung ebenfalls möglich',
+                'Übertherapie vermeiden; die Einhaltung der Kontrollen ist entscheidend'
+              ]
+            },
+            {
+              label: 'Mittleres Risiko',
+              values: [
+                'ISUP 2–3 oder mäßig erhöhter PSA',
+                'Radikale Prostatektomie oder Strahlentherapie',
+                'Die Möglichkeit des Nervenerhalts wird in dieser Gruppe gesondert geprüft'
+              ]
+            },
+            {
+              label: 'Hohes Risiko',
+              values: [
+                'ISUP 4–5, hoher PSA oder fortgeschrittenes Stadium',
+                'Operation oder Bestrahlung, häufig mit Zusatztherapie',
+                'Die onkologische Sicherheit hat Vorrang; eine Ausbreitungsdiagnostik ist nötig'
+              ]
+            }
+          ],
+          note:
+            'Diese Tabelle fasst die Entscheidungslogik zusammen und ist keine individuelle Empfehlung. Die endgültige Entscheidung erfolgt gemeinsam mit Ihrem Alter, Ihren Begleiterkrankungen und Ihren Prioritäten.'
+        },
+        recovery: [
+          {
+            period: 'Diagnosephase',
+            body: 'Am meisten braucht es in dieser Zeit Ruhe und verlässliche Informationen. Die meisten Formen des Prostatakrebses schreiten langsam genug fort, dass Ihnen einige Wochen für die Entscheidung bleiben; Sie müssen nicht überstürzt handeln.'
+          },
+          {
+            period: 'Entscheidungsphase',
+            body: 'Vergleichen Sie die Nebenwirkungen der Optionen mit Ihren eigenen Lebensprioritäten. Sprechen Sie Erwartungen an Kontinenz und Sexualfunktion offen an; das verhindert einen Großteil späterer Enttäuschungen.'
+          },
+          {
+            period: 'Nach der Behandlung',
+            body: 'Unabhängig von der gewählten Therapie erfolgt eine regelmäßige PSA-Kontrolle. Ein PSA-Wert im erwarteten Bereich ist das praktischste Maß dafür, dass die Behandlung wirkt.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Der Preis richtet sich nach der gewählten Therapie und ist auf der jeweiligen Behandlungsseite angegeben. Ein verbindliches Angebot erfolgt, sobald Risikogruppe und Therapieplan feststehen.'
+        },
+        packageIncludes: [
+          'Unterlagenprüfung und Bestimmung der Risikogruppe',
+          'Durchsicht der erforderlichen Bildgebung und Pathologie',
+          'Ein Gespräch, in dem die Therapieoptionen ausführlich erläutert werden',
+          'Operation bzw. Eingriff und Krankenhausablauf der gewählten Therapie',
+          'Transfers Flughafen–Krankenhaus–Hotel und Unterkunft',
+          'Medizinischer Dolmetscher und Patientenkoordinator',
+          'PSA-Nachsorge und Online-Kontrollen nach der Behandlung'
+        ],
+        faqs: [
+          {
+            q: 'Ich habe die Diagnose Prostatakrebs — muss ich sofort operiert werden?',
+            a: 'In den meisten Fällen nein. Ein großer Teil der Prostatakarzinome wächst langsam, und Sie haben einige Wochen Zeit für die Entscheidung. Zuerst muss Ihre Risikogruppe feststehen. Bei Niedrigrisikopatienten kann eine aktive Überwachung sinnvoller sein als die sofortige Therapie.'
+          },
+          {
+            q: 'Mein PSA ist erhöht — habe ich Krebs?',
+            a: 'Nicht zwangsläufig. PSA ist ein von Prostatagewebe gebildetes Eiweiß; Entzündung, gutartige Vergrößerung und sogar bestimmte kürzlich erfolgte Eingriffe können den Wert erhöhen. Deshalb wird keine Diagnose aus einem einzelnen Wert gestellt; er wird wiederholt und bei Bedarf folgt ein MRT.'
+          },
+          {
+            q: 'Warum wird vor der Biopsie ein MRT gemacht?',
+            a: 'Das multiparametrische MRT zeigt das verdächtige Areal im Voraus. So kann die Biopsie gezielt statt zufällig erfolgen; die Gefahr, bedeutsame Karzinome zu übersehen, sinkt, und bei manchen Patienten lässt sich eine unnötige Biopsie vermeiden.'
+          },
+          {
+            q: 'Was ist besser, Operation oder Bestrahlung?',
+            a: 'Bei lokalisierter Erkrankung mittleren und hohen Risikos sind beide anerkannte Optionen, und keine hat einen eindeutigen Vorteil gegenüber der anderen. Der Unterschied liegt im Nebenwirkungsprofil: Bei der Operation ist der Harnverlust früh deutlicher, bei der Bestrahlung können Darm- und Blasenbeschwerden mit der Zeit auftreten. Die Wahl erfolgt gemeinsam mit Ihrem Alter, Ihren Begleiterkrankungen und Ihren Prioritäten.'
+          },
+          {
+            q: 'Heißt aktive Überwachung „nichts tun“?',
+            a: 'Nein. Die aktive Überwachung ist ein geplantes Programm: PSA-Bestimmung in festen Abständen, MRT und bei Bedarf erneute Biopsie. Ziel ist es, bei Zeichen eines Fortschreitens rechtzeitig zu behandeln und in der Zwischenzeit unnötige Nebenwirkungen zu vermeiden. Für Patienten, die die Kontrollen nicht einhalten können, ist sie nicht geeignet.'
+          },
+          {
+            q: 'Werden meine Sexualfunktion und Kontinenz beeinträchtigt?',
+            a: 'Beide Haupttherapien können diese Funktionen beeinflussen. Lässt sich bei der Operation eine nervenschonende Technik anwenden, steigt die Chance für die Sexualfunktion; die Kontinenz erholt sich meist binnen Wochen. Ihre Erwartungen sollten Sie vor der Behandlung klar ansprechen.'
+          },
+          {
+            q: 'Ich möchte eine Zweitmeinung — wie sende ich meine Unterlagen?',
+            a: 'Es genügt, Ihre MRT-Bilder, den Biopsie- bzw. Pathologiebefund und Ihre PSA-Werte zu übermitteln. Sie können Ihre Unterlagen auch nur für eine Zweitmeinung schicken; das verpflichtet Sie zu keiner Behandlung.'
+          },
+          {
+            q: 'Was, wenn mein PSA nach der Behandlung wieder steigt?',
+            a: 'Das nennt man biochemisches Rezidiv; es kann auftreten, bevor die Erkrankung in der Bildgebung sichtbar wird. Anstiegsgeschwindigkeit, Ersttherapie und Risikogruppe werden bewertet, und es wird eine Zusatztherapie oder engmaschige Überwachung geplant. Eine frühe Erkennung erweitert die Optionen.'
+          },
+          {
+            q: 'In meiner Familie gibt es Prostatakrebs — was soll ich tun?',
+            a: 'Bei Männern mit einem erstgradig betroffenen Angehörigen wird ein früherer Beginn der Abklärung empfohlen. Ab welchem Alter und in welchen Abständen, richtet sich nach Ihrem persönlichen Risikoprofil; besprechen Sie das mit Ihrem Arzt.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU-Leitlinie Prostatakarzinom — Europäische Gesellschaft für Urologie',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      fr: {
+        title: 'Cancer de la prostate : du diagnostic à la décision thérapeutique',
+        summary:
+          'Le cancer de la prostate n’est pas une maladie unique. Une feuille de route sur votre groupe de risque, vos options de traitement et ce qui détermine réellement la décision.',
+        metaTitle: 'Cancer de la prostate | Diagnostic, groupes de risque et traitements',
+        metaDescription:
+          'Parcours diagnostique, groupes de risque et options thérapeutiques dans le cancer de la prostate : surveillance active, chirurgie et radiothérapie.',
+        definition: [
+          'Le cancer de la prostate est l’un des cancers les plus fréquents chez l’homme. Une caractéristique importante est que, dans la plupart des cas, il ÉVOLUE LENTEMENT. C’est pourquoi tous les cancers de la prostate n’ont pas la même urgence et tous les patients ne reçoivent pas le même traitement.',
+          'L’objectif de cette page n’est pas de vous vendre un traitement, mais de rendre le processus de décision compréhensible. L’erreur la plus fréquente dans ce cancer est de penser « il y a un cancer, il faut l’enlever tout de suite » sans regarder le groupe de risque — ou, à l’inverse, de différer une maladie qui nécessite réellement un traitement.',
+          'COMMENT LE DIAGNOSTIC EST POSÉ : le parcours commence généralement par une élévation du PSA ou une induration au toucher rectal. Aujourd’hui on ne passe pas directement à la biopsie ; une IRM prostatique multiparamétrique est réalisée d’abord. Si elle montre une zone suspecte, un prélèvement ciblé y est effectué (biopsie de fusion). Cette approche réduit les biopsies inutiles et aide à ne pas méconnaître les cancers significatifs.',
+          'CE QUE DIT LE RÉSULTAT DE LA BIOPSIE : le pathologiste cote, avec le score de Gleason, le caractère agressif des cellules au microscope ; ce score est simplifié en grade ISUP, cinq groupes de 1 à 5. ISUP 1 correspond au groupe le plus indolent, ISUP 5 au plus agressif. Le nombre de carottes atteintes et les zones concernées sont également consignés.',
+          'GROUPE DE RISQUE : le PSA, le grade ISUP et le stade sont évalués ensemble, et la maladie est classée à risque faible, intermédiaire ou élevé. Cette classification fonde la décision thérapeutique. Si nécessaire, une imagerie complémentaire (scintigraphie osseuse, TEP-PSMA) est demandée pour rechercher une extension.',
+          'CE QUI DÉTERMINE LA DÉCISION : le groupe de risque ne suffit pas à lui seul. Votre âge, votre espérance de vie, vos maladies associées, vos fonctions urinaire et sexuelle et vos propres priorités sont pesés ensemble. Deux patients du même groupe de risque peuvent se voir proposer des traitements différents ; ce n’est pas une incohérence, mais la conséquence naturelle d’une décision individualisée.'
+        ],
+        eligibility: {
+          suitable: [
+            'Hommes dont le PSA s’élève ou chez qui le toucher rectal est suspect',
+            'Patients avec un cancer de la prostate confirmé par biopsie souhaitant examiner leurs options',
+            'Patients à qui un traitement a été proposé ailleurs et qui cherchent un deuxième avis',
+            'Patients à faible risque à qui une surveillance active a été proposée et qui veulent en comprendre le déroulement',
+            'Patients dont le PSA remonte après traitement (récidive biochimique)'
+          ],
+          notSuitable: [
+            'Personnes n’ayant encore eu ni dosage du PSA ni examen — un bilan de base est nécessaire d’abord',
+            'Patients présentant uniquement des troubles urinaires sans suspicion de cancer — il faut alors évaluer une hypertrophie bénigne',
+            'Situations nécessitant une prise en charge urgente (rétention d’urine, signes d’insuffisance rénale) — l’urgence prime',
+            'Personnes avec un seul PSA élevé et sans diagnostic confirmé — le PSA seul ne pose pas de diagnostic'
+          ]
+        },
+        technology: [
+          'IRM prostatique multiparamétrique — repérage de la zone suspecte avant la biopsie',
+          'Biopsie de fusion IRM — prélèvement ciblé',
+          'TEP-PSMA (dans des cas sélectionnés) — évaluation de l’extension',
+          'Système robotique da Vinci — si la chirurgie est retenue'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'La prostatectomie radicale robotique et la chirurgie uro-oncologique font partie des domaines d’activité du Dr Müslüm Ergün. La décision thérapeutique résulte de la mise en balance du groupe de risque et des priorités du patient ; dans les cas qui le justifient, un avis de réunion de concertation pluridisciplinaire est recueilli.'
+        },
+        timeline: [
+          {
+            when: 'Étape 1',
+            title: 'PSA et examen',
+            body: 'Une élévation du PSA ou une anomalie à l’examen déclenche le parcours. Un seul PSA élevé ne pose pas de diagnostic ; une infection ou une hypertrophie bénigne peuvent aussi l’augmenter, le dosage est donc répété.'
+          },
+          {
+            when: 'Étape 2',
+            title: 'IRM multiparamétrique',
+            body: 'Réalisée AVANT la biopsie. S’il existe une zone suspecte, elle en montre la localisation et le rapport à la capsule ; sinon, une biopsie inutile peut être évitée.'
+          },
+          {
+            when: 'Étape 3',
+            title: 'Biopsie ciblée',
+            body: 'Un prélèvement est réalisé dans la zone repérée à l’IRM par technique de fusion. Le résultat est rendu sous forme de grade ISUP.'
+          },
+          {
+            when: 'Étape 4',
+            title: 'Groupe de risque et bilan d’extension',
+            body: 'PSA, grade ISUP et stade sont évalués ensemble pour déterminer le groupe de risque. Si nécessaire, une recherche d’extension est menée.'
+          },
+          {
+            when: 'Étape 5',
+            title: 'Décision thérapeutique',
+            body: 'La décision se construit en discutant du groupe de risque, de votre âge, de vos maladies associées et de vos priorités. Demander un deuxième avis à ce stade est tout à fait raisonnable.'
+          }
+        ],
+        risks: [
+          'SURTRAITEMENT : traiter par chirurgie ou radiothérapie un cancer à faible risque d’évolution lente ; des effets indésirables surviennent alors que le gain en espérance de vie reste limité',
+          'SOUS-TRAITEMENT : laisser sous surveillance ou différer une maladie qui nécessite réellement un traitement',
+          'Décider sur la base d’un seul PSA — il s’élève aussi avec l’infection et l’hypertrophie bénigne',
+          'Passer directement à la biopsie sans IRM — le risque de méconnaître des tumeurs significatives augmente',
+          'Ne pas aborder avant l’intervention les effets indésirables (fuites urinaires, modifications de la fonction sexuelle)'
+        ],
+        alternatives: [
+          'Surveillance active — suivi rapproché par PSA, IRM et biopsies chez des patients sélectionnés à faible risque',
+          'Prostatectomie radicale — ablation chirurgicale de la prostate (robotique ou ouverte)',
+          'Radiothérapie — irradiation externe ou curiethérapie',
+          'Traitements focaux — ciblage de la zone tumorale dans des cas sélectionnés ; le niveau de preuve progresse',
+          'Hormonothérapie — au stade avancé, le plus souvent associée à d’autres traitements'
+        ],
+        comparison: {
+          title: 'Options privilégiées selon le groupe de risque',
+          columns: ['Groupe de risque', 'Constatations typiques', 'Options privilégiées', 'Points de vigilance'],
+          rows: [
+            {
+              label: 'Risque faible',
+              values: [
+                'PSA bas, ISUP 1, atteinte limitée',
+                'Surveillance active en priorité ; chirurgie et radiothérapie possibles',
+                'Éviter le surtraitement ; l’adhésion au suivi est essentielle'
+              ]
+            },
+            {
+              label: 'Risque intermédiaire',
+              values: [
+                'ISUP 2–3 ou PSA modérément élevé',
+                'Prostatectomie radicale ou radiothérapie',
+                'La possibilité de préservation nerveuse est évaluée spécifiquement dans ce groupe'
+              ]
+            },
+            {
+              label: 'Risque élevé',
+              values: [
+                'ISUP 4–5, PSA élevé ou stade avancé',
+                'Chirurgie ou radiothérapie, souvent avec un traitement complémentaire',
+                'La sécurité oncologique prime ; un bilan d’extension est nécessaire'
+              ]
+            }
+          ],
+          note:
+            'Ce tableau résume la logique de décision ; il ne constitue pas un avis individuel. La décision finale se prend avec votre âge, vos maladies associées et vos priorités.'
+        },
+        recovery: [
+          {
+            period: 'Phase diagnostique',
+            body: 'Ce dont on a le plus besoin à ce stade, c’est de temps et d’informations justes. La plupart des cancers de la prostate évoluent assez lentement pour vous laisser quelques semaines de réflexion ; vous n’avez pas à décider dans l’urgence.'
+          },
+          {
+            period: 'Phase de décision',
+            body: 'Comparez les effets indésirables des options à vos propres priorités de vie. Exprimez clairement vos attentes sur la continence et la fonction sexuelle ; cela évite la plupart des déceptions ultérieures.'
+          },
+          {
+            period: 'Après le traitement',
+            body: 'Quel que soit le traitement retenu, un suivi régulier du PSA est réalisé. Un PSA au niveau attendu est l’indicateur le plus simple que le traitement fonctionne.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Le prix dépend du traitement retenu et figure sur la page de traitement correspondante. Un devis ferme est établi une fois le groupe de risque et le plan thérapeutique précisés.'
+        },
+        packageIncludes: [
+          'Évaluation du dossier et détermination du groupe de risque',
+          'Relecture de l’imagerie et des comptes rendus anatomopathologiques nécessaires',
+          'Une consultation détaillant les options thérapeutiques',
+          'L’intervention et le parcours hospitalier du traitement retenu',
+          'Transferts aéroport–hôpital–hôtel et hébergement',
+          'Interprète médical et coordinateur patient',
+          'Suivi du PSA après traitement et contrôles en ligne'
+        ],
+        faqs: [
+          {
+            q: 'On m’a diagnostiqué un cancer de la prostate : dois-je être opéré tout de suite ?',
+            a: 'Dans la plupart des cas, non. Une grande partie des cancers de la prostate évolue lentement et vous disposez de quelques semaines pour décider. Votre groupe de risque doit d’abord être établi. Chez les patients à faible risque, la surveillance active peut être plus appropriée qu’un traitement immédiat.'
+          },
+          {
+            q: 'Mon PSA est élevé : ai-je un cancer ?',
+            a: 'Pas nécessairement. Le PSA est une protéine produite par le tissu prostatique ; une inflammation, une hypertrophie bénigne, voire certains gestes récents peuvent l’élever. On ne pose donc pas de diagnostic sur une seule valeur élevée ; le dosage est répété et, si besoin, une IRM suit.'
+          },
+          {
+            q: 'Pourquoi une IRM avant la biopsie ?',
+            a: 'L’IRM multiparamétrique montre à l’avance la zone suspecte. La biopsie peut alors être ciblée plutôt qu’aléatoire ; le risque de méconnaître un cancer significatif diminue et, chez certains patients, une biopsie inutile peut être évitée.'
+          },
+          {
+            q: 'Chirurgie ou radiothérapie, qu’est-ce qui est mieux ?',
+            a: 'Dans la maladie localisée à risque intermédiaire ou élevé, les deux sont des options reconnues et aucune n’a d’avantage net sur l’autre. La différence tient au profil d’effets indésirables : après chirurgie les fuites urinaires sont plus marquées au début ; après radiothérapie, des troubles intestinaux et vésicaux peuvent apparaître avec le temps. Le choix se fait avec votre âge, vos maladies associées et vos priorités.'
+          },
+          {
+            q: 'La surveillance active signifie-t-elle « ne rien faire » ?',
+            a: 'Non. C’est un programme planifié : dosages du PSA à intervalles définis, IRM et, si nécessaire, nouvelle biopsie. L’objectif est de passer au traitement à temps si la maladie montre des signes de progression, tout en évitant entre-temps des effets indésirables inutiles. Elle ne convient pas aux patients qui ne pourraient pas suivre ce calendrier.'
+          },
+          {
+            q: 'Ma fonction sexuelle et ma continence seront-elles affectées ?',
+            a: 'Les deux traitements principaux peuvent les affecter. En chirurgie, si une technique de préservation nerveuse est possible, les chances pour la fonction sexuelle augmentent ; la continence se rétablit généralement en quelques semaines. Il est important d’exprimer clairement vos attentes avant le traitement.'
+          },
+          {
+            q: 'Je souhaite un deuxième avis : comment envoyer mon dossier ?',
+            a: 'Il suffit de transmettre vos images d’IRM, votre compte rendu de biopsie ou d’anatomopathologie et vos valeurs de PSA. Vous pouvez l’envoyer uniquement pour un deuxième avis ; cela ne vous engage à aucun traitement.'
+          },
+          {
+            q: 'Et si mon PSA remonte après le traitement ?',
+            a: 'On parle de récidive biochimique ; elle peut survenir avant que la maladie ne soit visible en imagerie. La vitesse de remontée, le traitement initial et le groupe de risque sont évalués, puis un traitement complémentaire ou une surveillance rapprochée est planifié. Une détection précoce élargit les options.'
+          },
+          {
+            q: 'Il y a des cancers de la prostate dans ma famille : que faire ?',
+            a: 'Chez les hommes ayant un parent au premier degré atteint, il est conseillé de commencer l’évaluation plus tôt. L’âge de début et le rythme dépendent de votre profil de risque personnel ; il convient d’en parler avec votre médecin.'
+          }
+        ],
+        sources: [
+          {
+            label: 'Recommandations EAU sur le cancer de la prostate — Association européenne d’urologie',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      ru: {
+        title: 'Рак предстательной железы: от диагноза к решению о лечении',
+        summary:
+          'Рак простаты — не одна болезнь. Дорожная карта по вашей группе риска, вариантам лечения и тому, что на самом деле определяет решение.',
+        metaTitle: 'Рак простаты | Диагностика, группы риска и варианты лечения',
+        metaDescription:
+          'Путь диагностики, группы риска и варианты лечения рака простаты: активное наблюдение, операция и лучевая терапия. Что определяет решение.',
+        definition: [
+          'Рак предстательной железы — один из самых частых видов рака у мужчин. Важная его особенность в том, что в большинстве случаев он ПРОГРЕССИРУЕТ МЕДЛЕННО. Поэтому не каждый рак простаты одинаково срочен и не каждому пациенту назначают одинаковое лечение.',
+          'Цель этой страницы — не продать вам лечение, а сделать процесс принятия решения понятным. Самая частая ошибка при раке простаты — думать «рак есть, нужно срочно удалять», не глядя на группу риска, или, наоборот, откладывать болезнь, которая действительно требует лечения.',
+          'КАК СТАВИТСЯ ДИАГНОЗ: процесс обычно начинается с роста ПСА или уплотнения, обнаруженного при пальцевом исследовании. Сегодня к биопсии не переходят сразу; сначала выполняют мультипараметрическую МРТ простаты. Если МРТ показывает подозрительный участок, из него берут прицельный материал (фьюжн-биопсия). Такой подход сокращает ненужные биопсии и помогает не пропустить значимый рак.',
+          'ЧТО ГОВОРИТ РЕЗУЛЬТАТ БИОПСИИ: патолог по шкале Глисона оценивает, насколько агрессивно выглядят клетки под микроскопом; эта оценка упрощается до степени ISUP — пять групп от 1 до 5. ISUP 1 — наиболее вялотекущая группа, ISUP 5 — наиболее агрессивная. Также фиксируют, в скольких столбиках и в каких зонах обнаружена опухоль.',
+          'ГРУППА РИСКА: уровень ПСА, степень ISUP и стадия оцениваются вместе, и болезнь относят к низкому, промежуточному или высокому риску. Эта классификация составляет основу решения о лечении. При необходимости назначают дополнительную визуализацию (сцинтиграфию костей, ПСМА-ПЭТ) для поиска распространения.',
+          'ЧТО ОПРЕДЕЛЯЕТ РЕШЕНИЕ: одной группы риска недостаточно. Учитываются ваш возраст, ожидаемая продолжительность жизни, сопутствующие заболевания, мочевая и половая функции и ваши собственные приоритеты. Двум пациентам одной группы риска могут предложить разное лечение; это не противоречие, а естественное следствие индивидуального решения.'
+        ],
+        eligibility: {
+          suitable: [
+            'Мужчины с растущим ПСА или подозрительными данными пальцевого исследования',
+            'Пациенты с подтверждённым биопсией раком простаты, желающие рассмотреть варианты лечения',
+            'Пациенты, которым лечение предложено в другом центре и которые ищут второе мнение',
+            'Пациенты низкого риска, которым предложено активное наблюдение и которые хотят понять процесс',
+            'Пациенты, у которых ПСА снова растёт после лечения (биохимический рецидив)'
+          ],
+          notSuitable: [
+            'Люди, которым ещё не выполняли ПСА или осмотр — сначала нужна базовая оценка',
+            'Пациенты только с мочевыми жалобами и без подозрения на рак — в этом случае оценивают доброкачественную гиперплазию',
+            'Состояния, требующие неотложной помощи (невозможность мочеиспускания, признаки почечной недостаточности) — приоритет у неотложного лечения',
+            'Люди с единственным высоким ПСА без подтверждённого диагноза — ПСА сам по себе диагноза не ставит'
+          ]
+        },
+        technology: [
+          'Мультипараметрическая МРТ простаты — выявление подозрительного участка до биопсии',
+          'Фьюжн-биопсия под МРТ — прицельный забор материала',
+          'ПСМА-ПЭТ (в отдельных случаях) — оценка распространения',
+          'Роботическая система da Vinci — если выбрана операция'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Роботическая радикальная простатэктомия и онкоурологическая хирургия входят в сферу работы доцента, д-ра Мюслюма Эргюна. Решение о лечении принимается с учётом группы риска и приоритетов пациента; в необходимых случаях запрашивается мнение мультидисциплинарного консилиума.'
+        },
+        timeline: [
+          {
+            when: 'Шаг 1',
+            title: 'ПСА и осмотр',
+            body: 'Процесс запускает рост ПСА или находка при осмотре. Единственный высокий ПСА диагноза не ставит; его повышают также инфекция и доброкачественная гиперплазия, поэтому анализ повторяют.'
+          },
+          {
+            when: 'Шаг 2',
+            title: 'Мультипараметрическая МРТ',
+            body: 'Выполняется ДО биопсии. Если есть подозрительный участок, она показывает его расположение и отношение к капсуле; если нет — можно избежать ненужной биопсии.'
+          },
+          {
+            when: 'Шаг 3',
+            title: 'Прицельная биопсия',
+            body: 'Из отмеченного на МРТ участка берут материал методом совмещения. Результат описывают как степень ISUP.'
+          },
+          {
+            when: 'Шаг 4',
+            title: 'Группа риска и стадирование',
+            body: 'ПСА, степень ISUP и стадию оценивают вместе и определяют группу риска. При необходимости проводят поиск распространения.'
+          },
+          {
+            when: 'Шаг 5',
+            title: 'Решение о лечении',
+            body: 'Решение принимают, обсуждая группу риска, ваш возраст, сопутствующие заболевания и приоритеты. Получить второе мнение на этом этапе совершенно разумно.'
+          }
+        ],
+        risks: [
+          'ИЗБЫТОЧНОЕ ЛЕЧЕНИЕ: операция или облучение при медленно растущем раке низкого риска; побочные эффекты возникают, а выигрыш в продолжительности жизни ограничен',
+          'НЕДОСТАТОЧНОЕ ЛЕЧЕНИЕ: оставление под наблюдением или откладывание болезни, действительно требующей лечения',
+          'Решение на основании единственного значения ПСА — он повышается и при инфекции, и при доброкачественной гиперплазии',
+          'Переход к биопсии без МРТ — возрастает вероятность пропустить значимую опухоль',
+          'Отсутствие обсуждения побочных эффектов лечения (подтекание мочи, изменения половой функции) до операции'
+        ],
+        alternatives: [
+          'Активное наблюдение — тщательный контроль с регулярным ПСА, МРТ и биопсией у отобранных пациентов низкого риска',
+          'Радикальная простатэктомия — хирургическое удаление простаты (роботическое или открытое)',
+          'Лучевая терапия — дистанционное облучение или брахитерапия',
+          'Фокальные методы — воздействие на зону опухоли у отобранных пациентов; доказательная база развивается',
+          'Гормональная терапия — на поздних стадиях, обычно в сочетании с другими методами'
+        ],
+        comparison: {
+          title: 'Предпочтительные варианты по группам риска',
+          columns: ['Группа риска', 'Типичные данные', 'Предпочтительные варианты', 'На что обратить внимание'],
+          rows: [
+            {
+              label: 'Низкий риск',
+              values: [
+                'Низкий ПСА, ISUP 1, ограниченное поражение',
+                'В приоритете активное наблюдение; операция и облучение тоже возможны',
+                'Избегать избыточного лечения; соблюдение графика наблюдения обязательно'
+              ]
+            },
+            {
+              label: 'Промежуточный риск',
+              values: [
+                'ISUP 2–3 или умеренно повышенный ПСА',
+                'Радикальная простатэктомия или лучевая терапия',
+                'Возможность нервосбережения в этой группе оценивается отдельно'
+              ]
+            },
+            {
+              label: 'Высокий риск',
+              values: [
+                'ISUP 4–5, высокий ПСА или поздняя стадия',
+                'Операция или облучение, часто с дополнительным лечением',
+                'Приоритет у онкологической безопасности; нужен поиск распространения'
+              ]
+            }
+          ],
+          note:
+            'Таблица обобщает логику решения и не является индивидуальной рекомендацией. Окончательное решение принимается с учётом возраста, сопутствующих заболеваний и ваших приоритетов.'
+        },
+        recovery: [
+          {
+            period: 'Этап диагностики',
+            body: 'Больше всего в этот период нужны время и достоверная информация. Большинство форм рака простаты прогрессируют достаточно медленно, чтобы дать вам несколько недель на решение; торопиться не обязательно.'
+          },
+          {
+            period: 'Этап принятия решения',
+            body: 'Сопоставьте побочные эффекты вариантов со своими жизненными приоритетами. Открыто обсудите ожидания по удержанию мочи и половой функции; это предотвращает большую часть позднейших разочарований.'
+          },
+          {
+            period: 'После лечения',
+            body: 'Какое бы лечение ни было выбрано, проводится регулярный контроль ПСА. Удержание ПСА на ожидаемом уровне — самый практичный показатель того, что лечение работает.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Стоимость зависит от выбранного лечения и указана на соответствующей странице. Точное предложение даётся после определения группы риска и плана лечения.'
+        },
+        packageIncludes: [
+          'Оценка документов и определение группы риска',
+          'Пересмотр необходимой визуализации и гистологии',
+          'Консультация с подробным разбором вариантов лечения',
+          'Операция или процедура и больничный процесс выбранного лечения',
+          'Трансферы аэропорт–больница–отель и проживание',
+          'Медицинский переводчик и координатор пациента',
+          'Контроль ПСА после лечения и онлайн-наблюдение'
+        ],
+        faqs: [
+          {
+            q: 'Мне поставили рак простаты — нужно ли сразу оперироваться?',
+            a: 'В большинстве случаев нет. Значительная часть раков простаты растёт медленно, и у вас есть несколько недель на решение. Сначала должна быть определена группа риска. У пациентов низкого риска активное наблюдение может быть уместнее немедленного лечения.'
+          },
+          {
+            q: 'У меня высокий ПСА — это рак?',
+            a: 'Не обязательно. ПСА — белок, вырабатываемый тканью простаты; воспаление, доброкачественное увеличение и даже некоторые недавние процедуры могут его повысить. Поэтому диагноз не ставят по одному высокому значению; анализ повторяют и при необходимости выполняют МРТ.'
+          },
+          {
+            q: 'Почему МРТ делают до биопсии?',
+            a: 'Мультипараметрическая МРТ заранее показывает подозрительный участок. Биопсия тогда становится прицельной, а не случайной; вероятность пропустить значимый рак снижается, а у части пациентов удаётся избежать ненужной биопсии.'
+          },
+          {
+            q: 'Что лучше — операция или лучевая терапия?',
+            a: 'При локализованной болезни промежуточного и высокого риска оба метода признаны, и ни один не имеет однозначного преимущества. Различие — в профиле побочных эффектов: после операции подтекание мочи заметнее в раннем периоде; после облучения со временем могут появиться кишечные и мочепузырные жалобы. Выбор делается с учётом возраста, сопутствующих болезней и ваших приоритетов.'
+          },
+          {
+            q: 'Активное наблюдение — это «ничего не делать»?',
+            a: 'Нет. Это спланированная программа: измерение ПСА через определённые промежутки, МРТ и при необходимости повторная биопсия. Цель — вовремя перейти к лечению при признаках прогрессирования и при этом избежать ненужных побочных эффектов. Пациентам, которые не смогут соблюдать график, она не подходит.'
+          },
+          {
+            q: 'Пострадают ли половая функция и удержание мочи?',
+            a: 'Оба основных метода могут на них повлиять. При операции, если удаётся применить нервосберегающую технику, шансы для половой функции выше; удержание мочи обычно восстанавливается за недели. Важно чётко обсудить свои ожидания до лечения.'
+          },
+          {
+            q: 'Я хочу второе мнение — как прислать документы?',
+            a: 'Достаточно прислать снимки МРТ, заключение биопсии или гистологии и значения ПСА. Вы можете прислать документы только ради второго мнения; это не обязывает вас лечиться.'
+          },
+          {
+            q: 'Что если ПСА снова вырастет после лечения?',
+            a: 'Это называют биохимическим рецидивом; он может появиться до того, как болезнь станет видна при визуализации. Оценивают скорость роста, первичное лечение и группу риска, после чего планируют дополнительное лечение или тщательное наблюдение. Раннее выявление расширяет возможности.'
+          },
+          {
+            q: 'В моей семье был рак простаты — что делать?',
+            a: 'Мужчинам, у которых родственник первой степени болел раком простаты, рекомендуется начинать обследование раньше. С какого возраста и как часто — зависит от вашего личного профиля риска; это стоит обсудить с врачом.'
+          }
+        ],
+        sources: [
+          {
+            label: 'Рекомендации EAU по раку предстательной железы — Европейская ассоциация урологии',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      ar: {
+        title: 'سرطان البروستاتا: من التشخيص إلى قرار العلاج',
+        summary:
+          'سرطان البروستاتا ليس مرضًا واحدًا. خارطة طريق حول مجموعة الخطورة لديكم، وخيارات العلاج، وما الذي يحدّد القرار فعلًا.',
+        metaTitle: 'سرطان البروستاتا | التشخيص ومجموعات الخطورة وخيارات العلاج',
+        metaDescription:
+          'مسار التشخيص ومجموعات الخطورة وخيارات العلاج في سرطان البروستاتا: المراقبة النشطة والجراحة والعلاج الإشعاعي، وما الذي يحدّد القرار.',
+        definition: [
+          'سرطان البروستاتا من أكثر أنواع السرطان شيوعًا لدى الرجال. ومن أهم خصائصه أنه يتطوّر ببطء في معظم الحالات. ولذلك لا تحمل كل حالات سرطان البروستاتا الدرجة نفسها من الاستعجال، ولا يتلقّى كل مريض العلاج نفسه.',
+          'الغرض من هذه الصفحة ليس بيع علاج لكم، بل جعل عملية اتخاذ القرار مفهومة. فأكثر الأخطاء شيوعًا في سرطان البروستاتا هو التفكير «هناك سرطان، فليُستأصل فورًا» دون النظر إلى مجموعة الخطورة؛ أو على العكس، تأجيل مرض يحتاج فعلًا إلى علاج.',
+          'كيف يُوضع التشخيص: يبدأ المسار عادةً بارتفاع قيمة PSA أو بتصلّب يُكتشَف بالفحص بالإصبع. واليوم لا يُنتقَل مباشرةً إلى الخزعة؛ بل يُجرى أولًا رنين مغناطيسي متعدّد المعايير للبروستاتا. فإن أظهر منطقة مشبوهة، تُؤخذ منها عيّنة موجّهة (خزعة الدمج). ويقلّل هذا النهج الخزعات غير الضرورية ويساعد على عدم إغفال السرطانات المهمة.',
+          'ماذا تقول نتيجة الخزعة: يمنح اختصاصي علم الأمراض درجة غليسون بحسب مدى عدوانية الخلايا تحت المجهر؛ وتُبسَّط هذه الدرجة إلى درجة ISUP ضمن خمس مجموعات من 1 إلى 5. فالمجموعة 1 هي الأبطأ سيرًا، والمجموعة 5 هي الأكثر عدوانية. كما يُسجَّل عدد العيّنات المصابة والمناطق التي أُخذت منها.',
+          'مجموعة الخطورة: تُقيَّم قيمة PSA ودرجة ISUP ومرحلة الورم معًا، ويُصنَّف المرض منخفض أو متوسط أو عالي الخطورة. ويشكّل هذا التصنيف أساس قرار العلاج. وعند الحاجة تُطلَب صور إضافية (مثل مسح العظام أو PSMA PET) للبحث عن انتشار.',
+          'ما الذي يحدّد القرار: مجموعة الخطورة وحدها لا تكفي. فعمركم، والعمر المتوقَّع، والأمراض المصاحبة، ووظيفتا التبول والجنس، وأولوياتكم الشخصية تُوزَن جميعًا معًا. وقد يُقترَح على مريضين من المجموعة نفسها علاجان مختلفان؛ وهذا ليس تناقضًا بل نتيجة طبيعية لاتخاذ قرار مخصّص لكل شخص.'
+        ],
+        eligibility: {
+          suitable: [
+            'الرجال الذين ترتفع لديهم قيمة PSA أو يُشتبَه بشيء في الفحص بالإصبع',
+            'المرضى المشخّصون بسرطان البروستاتا بالخزعة ويرغبون في مراجعة خيارات العلاج',
+            'المرضى الذين عُرض عليهم علاج في مركز آخر ويبحثون عن رأي ثانٍ',
+            'مرضى الخطورة المنخفضة الذين اقتُرحت لهم المراقبة النشطة ويريدون فهم المسار',
+            'المرضى الذين يعاود PSA لديهم الارتفاع بعد العلاج (انتكاس بيوكيميائي)'
+          ],
+          notSuitable: [
+            'من لم يُجرِ بعدُ قياس PSA أو فحصًا سريريًا — فالتقييم الأساسي يأتي أولًا',
+            'المرضى الذين لديهم شكاوى بولية فقط دون شبهة سرطان — يُقيَّم لديهم تضخم البروستاتا الحميد',
+            'الحالات التي تتطلّب تدخلًا عاجلًا (احتباس البول، علامات قصور كلوي) — الأولوية للعلاج الطارئ',
+            'من لديهم قيمة PSA مرتفعة واحدة دون تشخيص مؤكَّد — فـ PSA وحده لا يضع تشخيصًا'
+          ]
+        },
+        technology: [
+          'رنين مغناطيسي متعدّد المعايير للبروستاتا — تحديد المنطقة المشبوهة قبل الخزعة',
+          'خزعة الدمج بالرنين المغناطيسي — أخذ عيّنة موجّهة',
+          'PSMA PET (في حالات مختارة) — تقييم الانتشار',
+          'نظام da Vinci الروبوتي — إن اختير الحلّ الجراحي'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'الاستئصال الجذري الروبوتي للبروستاتا وجراحة أورام المسالك البولية من مجالات عمل الأستاذ المشارك د. مسلم إرغن. ويُتَّخذ قرار العلاج بموازنة مجموعة الخطورة مع أولويات المريض؛ ويُستشار المجلس متعدّد التخصّصات في الحالات التي تستدعي ذلك.'
+        },
+        timeline: [
+          {
+            when: 'الخطوة 1',
+            title: 'PSA والفحص',
+            body: 'يبدأ المسار بارتفاع PSA أو بنتيجة فحص لافتة. والقيمة المرتفعة الواحدة لا تضع تشخيصًا؛ فالالتهاب والتضخم الحميد يرفعانها أيضًا، لذا يُعاد القياس.'
+          },
+          {
+            when: 'الخطوة 2',
+            title: 'الرنين المغناطيسي متعدّد المعايير',
+            body: 'يُجرى قبل الخزعة. فإن وُجدت منطقة مشبوهة بيّن موضعها وعلاقتها بالمحفظة؛ وإن لم تُوجد أمكن تجنّب خزعة غير ضرورية.'
+          },
+          {
+            when: 'الخطوة 3',
+            title: 'الخزعة الموجّهة',
+            body: 'تُؤخذ عيّنة من المنطقة المحدّدة في الرنين بتقنية الدمج. وتُسجَّل النتيجة بدرجة ISUP.'
+          },
+          {
+            when: 'الخطوة 4',
+            title: 'مجموعة الخطورة والمرحلة',
+            body: 'تُقيَّم قيمة PSA ودرجة ISUP والمرحلة معًا لتحديد مجموعة الخطورة. وعند اللزوم يُجرى بحث عن الانتشار.'
+          },
+          {
+            when: 'الخطوة 5',
+            title: 'قرار العلاج',
+            body: 'يُتَّخذ القرار بمناقشة مجموعة الخطورة وعمركم وأمراضكم المصاحبة وأولوياتكم. وطلب رأي ثانٍ في هذه المرحلة أمر معقول تمامًا.'
+          }
+        ],
+        risks: [
+          'الإفراط في العلاج: علاج سرطان بطيء منخفض الخطورة بجراحة أو إشعاع لا لزوم لهما؛ فتظهر الآثار الجانبية بينما تبقى الفائدة في العمر محدودة',
+          'نقص العلاج: ترك مرض يحتاج فعلًا إلى علاج تحت المراقبة أو تأجيله',
+          'اتخاذ القرار بناءً على قيمة PSA واحدة — فهي ترتفع أيضًا مع الالتهاب والتضخم الحميد',
+          'الانتقال إلى الخزعة دون رنين مغناطيسي — فيزداد احتمال إغفال أورام مهمة',
+          'عدم مناقشة الآثار الجانبية للعلاج (تسرّب البول، تغيّرات الوظيفة الجنسية) قبل العملية'
+        ],
+        alternatives: [
+          'المراقبة النشطة — متابعة دقيقة بـ PSA والرنين المغناطيسي والخزعة لدى مرضى مختارين منخفضي الخطورة',
+          'الاستئصال الجذري للبروستاتا — إزالة الغدة جراحيًا (روبوتيًا أو مفتوحًا)',
+          'العلاج الإشعاعي — إشعاع خارجي أو معالجة كثبية',
+          'العلاجات الموضعية — استهداف المنطقة الحاملة للورم في حالات مختارة؛ والأدلة في تطوّر',
+          'العلاج الهرموني — في المراحل المتقدّمة، وغالبًا مع علاجات أخرى'
+        ],
+        comparison: {
+          title: 'الخيارات البارزة بحسب مجموعة الخطورة',
+          columns: ['مجموعة الخطورة', 'المعطيات النموذجية', 'الخيارات البارزة', 'ما ينبغي الانتباه له'],
+          rows: [
+            {
+              label: 'خطورة منخفضة',
+              values: [
+                'PSA منخفض، ISUP 1، إصابة محدودة',
+                'المراقبة النشطة أولًا؛ والجراحة والإشعاع خياران أيضًا',
+                'تجنّب الإفراط في العلاج؛ والالتزام بالمتابعة ضروري'
+              ]
+            },
+            {
+              label: 'خطورة متوسطة',
+              values: [
+                'ISUP 2–3 أو PSA مرتفع باعتدال',
+                'الاستئصال الجذري أو العلاج الإشعاعي',
+                'تُقيَّم إمكانية الحفاظ على الأعصاب في هذه المجموعة على حدة'
+              ]
+            },
+            {
+              label: 'خطورة عالية',
+              values: [
+                'ISUP 4–5، PSA مرتفع أو مرحلة متقدّمة',
+                'جراحة أو إشعاع، وغالبًا مع علاج إضافي',
+                'الأولوية للسلامة الأورامية؛ ويلزم البحث عن الانتشار'
+              ]
+            }
+          ],
+          note:
+            'يلخّص هذا الجدول منطق القرار وليس توصية فردية. ويُتَّخذ القرار النهائي مع مراعاة عمركم وأمراضكم المصاحبة وأولوياتكم.'
+        },
+        recovery: [
+          {
+            period: 'مرحلة التشخيص',
+            body: 'أكثر ما يُحتاج إليه في هذه المرحلة هو الوقت والمعلومة الصحيحة. فمعظم أشكال سرطان البروستاتا تتطوّر ببطء يكفي لمنحكم أسابيع لاتخاذ القرار؛ ولستم مضطرين للتسرّع.'
+          },
+          {
+            period: 'مرحلة القرار',
+            body: 'قارنوا الآثار الجانبية للخيارات بأولوياتكم في الحياة. وناقشوا بصراحة توقعاتكم بشأن التحكّم بالبول والوظيفة الجنسية؛ فذلك يمنع معظم خيبات الأمل اللاحقة.'
+          },
+          {
+            period: 'بعد العلاج',
+            body: 'أيًّا كان العلاج المختار تُجرى متابعة منتظمة لـ PSA. وبقاء القيمة عند المستوى المتوقَّع هو أبسط مؤشّر على نجاح العلاج.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'تختلف التكلفة بحسب العلاج المختار وتُذكَر في صفحة العلاج المعنية. ويُقدَّم عرض نهائي بعد اتضاح مجموعة الخطورة وخطة العلاج.'
+        },
+        packageIncludes: [
+          'تقييم الملف وتحديد مجموعة الخطورة',
+          'مراجعة الصور والفحوص النسيجية اللازمة',
+          'جلسة يُشرَح فيها خيارات العلاج بالتفصيل',
+          'العملية أو الإجراء ومسار المستشفى للعلاج المختار',
+          'تنقّلات المطار–المستشفى–الفندق والإقامة',
+          'مترجم طبي ومنسّق للمرضى',
+          'متابعة PSA بعد العلاج والمراقبة عبر الإنترنت'
+        ],
+        faqs: [
+          {
+            q: 'شُخِّصت بسرطان البروستاتا، فهل يجب أن أُجري العملية فورًا؟',
+            a: 'في معظم الحالات لا. فجزء كبير من سرطانات البروستاتا بطيء السير ولديكم بضعة أسابيع لاتخاذ القرار. ويجب أولًا أن تتضح مجموعة الخطورة لديكم. وفي المرضى منخفضي الخطورة قد تكون المراقبة النشطة أنسب من العلاج الفوري.'
+          },
+          {
+            q: 'ارتفع PSA لديّ، فهل أنا مصاب بالسرطان؟',
+            a: 'ليس بالضرورة. فـ PSA بروتين تنتجه أنسجة البروستاتا، وقد يرفعه الالتهاب أو التضخم الحميد أو حتى بعض الإجراءات الحديثة. ولذلك لا يُوضع تشخيص بقيمة مرتفعة واحدة؛ بل يُعاد القياس ويُستكمَل بالرنين عند الحاجة.'
+          },
+          {
+            q: 'لماذا يُجرى الرنين قبل الخزعة؟',
+            a: 'لأن الرنين متعدّد المعايير يُظهر المنطقة المشبوهة مسبقًا. فتصبح الخزعة موجّهة بدل أن تكون عشوائية؛ ويقلّ احتمال إغفال سرطان مهم، وقد يُتجنَّب لدى بعض المرضى إجراء خزعة لا لزوم لها.'
+          },
+          {
+            q: 'أيّهما أفضل: الجراحة أم العلاج الإشعاعي؟',
+            a: 'في المرض الموضعي متوسط وعالي الخطورة كلاهما خيار معترف به، ولا يُقال بتفوّق قاطع لأحدهما. والفرق في نمط الآثار الجانبية: ففي الجراحة يكون تسرّب البول أوضح في المرحلة المبكرة، وفي الإشعاع قد تظهر شكاوى معوية ومثانية مع الوقت. ويُتَّخذ الاختيار مع مراعاة عمركم وأمراضكم المصاحبة وأولوياتكم.'
+          },
+          {
+            q: 'هل تعني المراقبة النشطة «عدم فعل شيء»؟',
+            a: 'لا. فهي برنامج مخطَّط: قياس PSA على فترات محدّدة، ورنين مغناطيسي، وخزعة متكرّرة عند الحاجة. والهدف الانتقال إلى العلاج في الوقت المناسب إن ظهرت علامات تقدّم، مع تجنّب الآثار الجانبية غير الضرورية في الأثناء. وهي لا تناسب من لا يستطيع الالتزام بالمتابعة.'
+          },
+          {
+            q: 'هل تتأثر وظيفتي الجنسية وتحكّمي بالبول؟',
+            a: 'قد يؤثر العلاجان الرئيسيان في هاتين الوظيفتين. ففي الجراحة، إن أمكن تطبيق تقنية الحفاظ على الأعصاب ارتفعت فرص الوظيفة الجنسية؛ ويتحسّن التحكّم بالبول عادةً خلال أسابيع. ومن المهم أن تناقشوا توقعاتكم بوضوح قبل العلاج.'
+          },
+          {
+            q: 'أريد رأيًا ثانيًا، كيف أرسل ملفي؟',
+            a: 'يكفي أن ترسلوا صور الرنين وتقرير الخزعة أو علم الأمراض وقيم PSA. ويمكنكم إرسال الملف لغرض الرأي الثاني فقط؛ وهذا لا يلزمكم بتلقّي العلاج.'
+          },
+          {
+            q: 'ماذا لو عاد PSA للارتفاع بعد العلاج؟',
+            a: 'يُسمّى ذلك انتكاسًا بيوكيميائيًا وقد يسبق ظهور المرض في الصور. وتُقيَّم سرعة الارتفاع والعلاج الأول ومجموعة الخطورة، ثم يُخطَّط لعلاج إضافي أو متابعة لصيقة. والاكتشاف المبكر يوسّع الخيارات.'
+          },
+          {
+            q: 'في عائلتي إصابة بسرطان البروستاتا، فماذا أفعل؟',
+            a: 'يُنصَح الرجال الذين لديهم قريب من الدرجة الأولى مصاب ببدء التقييم في سنّ أبكر. أما سنّ البدء وتواتر الفحص فيتحدّدان بحسب ملف الخطورة الشخصي لديكم؛ ومن المناسب مناقشة ذلك مع طبيبكم.'
+          }
+        ],
+        sources: [
+          {
+            label: 'إرشادات EAU حول سرطان البروستاتا — الجمعية الأوروبية للمسالك البولية',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
       }
     }
   },
@@ -233,7 +1171,7 @@ export const treatments: Treatment[] = [
      * hub yazıldığında parent güncellenecek.
      */
     slug: 'sinir-koruyucu-cerrahi',
-    parent: 'robotik-prostatektomi',
+    parent: 'prostat-kanseri',
     lastReviewed: '2026-10-04',
     icon: 'prostate',
     offersConsultation: false,
@@ -6264,6 +7202,7 @@ export const treatments: Treatment[] = [
   },
   {
     slug: 'robotik-prostatektomi',
+    parent: 'prostat-kanseri',
     lastReviewed: '2026-10-03',
     // TODO-DOGRULA: robotik prostatektomi EUR fiyat aralığı girilecek (priceRangeEUR).
     icon: 'robot',
