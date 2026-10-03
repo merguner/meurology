@@ -15,16 +15,12 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
-     * TASLAK — cerrah onayına sunuldu.
-     * HASSAS SAYFA. Prompt m.1: uydurma yok, başarı garantisi yasak.
-     * Prompt m.4.2/9: oran verilirken literatür kaynağı şart.
-     * Yönetmelik: "talep yaratma" riski nedeniyle metin bilinçli olarak
-     * TANITIM DEĞİL BİLGİLENDİRME tonunda; kılavuzların kozmetik amaçlı
-     * büyütmeyi önermediği AÇIKÇA yazıldı ve psikolojik değerlendirme
-     * öne çıkarıldı. Bu, hastayı yanlış beklentiden koruyan tek dürüst yoldur.
+     * Cerrah tarafından 4 Ekim 2026 tarihinde onaylandı ve yayına alındı.
+     * HASSAS SAYFA: kanıt düzeyi merkezli, beklenti düzeltici bilgilendirme.
+     * Kılavuzların normal ölçümlü erkeklerde kozmetik büyütmeyi önermediği
+     * açıkça yazılıdır; "hiçbir şey yaptırmamak" alternatifler arasındadır.
      * Kaynak: EAU Sexual and Reproductive Health kılavuzu.
      */
-    draft: true,
     slug: 'penis-buyutme',
     parent: 'androloji',
     lastReviewed: '2026-10-04',
@@ -228,6 +224,936 @@ export const treatments: Treatment[] = [
           {
             label:
               'EAU Guidelines on Sexual and Reproductive Health — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      en: {
+        title: 'Penile Enlargement Procedures: What Is and Is Not Possible',
+        summary:
+          'An honest briefing on length and girth procedures, their level of evidence, the genuine medical indications and the risks.',
+        metaTitle: 'Penile Enlargement: Methods, Level of Evidence and Risks',
+        metaDescription:
+          'Evidence-based information on penile enlargement: which methods exist, what the guidelines say, who has a genuine medical indication, and what the risks are.',
+        quickFacts: {
+          duration: '45–120 minutes depending on method',
+          anesthesia: 'Local, sedation or general, depending on method',
+          hospitalStay: 'Day case or 1 night',
+          stayInTurkey: '7–10 days',
+          returnToWork: '1–2 weeks',
+          flightClearance: 'Day 7–10'
+        },
+        definition: [
+          'This page is not a promotion of penile enlargement procedures but an honest briefing meant to help you decide. This is one of the areas where expectations drift furthest from reality and where patients are most often misled.',
+          'THE MOST IMPORTANT POINT FIRST: leading urological guidelines, including those of the European Association of Urology, do NOT routinely recommend cosmetic enlargement procedures in men whose penile size is WITHIN NORMAL LIMITS. The level of evidence for the effectiveness and long-term safety of these procedures is limited. This does not mean the procedures are never performed; it means they are confined to selected and properly assessed situations.',
+          'In a significant proportion of the men who present, measurement falls within the normal range. If a man nevertheless perceives his size as inadequate, this is termed penile dysmorphophobia and calls for psychosexual assessment rather than surgery. An operation does not resolve a perception-based concern; more often it sustains the dissatisfaction.',
+          'Genuine medical indications are a separate matter and do deserve surgical assessment: micropenis, buried penis, loss of length after trauma or previous surgery, and shortening and curvature due to Peyronie’s disease.',
+          'The main approaches are as follows. FOR LENGTH: release of the suspensory ligament — this aims to increase the visible flaccid length by bringing out the portion of the penis that lies within the body; it does not increase erect length. FOR GIRTH: fat injection, dermal graft or fillers — an increase in girth is intended, but resorption, asymmetry and nodule formation can occur.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients with a measurement-confirmed diagnosis of micropenis',
+            'Patients with functional and hygiene problems due to buried penis',
+            'Patients who have lost length after trauma or previous surgery',
+            'Patients with shortening and curvature from Peyronie’s disease for whom reconstructive surgery is planned',
+            'Selected patients with realistic expectations who have undergone psychosexual assessment'
+          ],
+          notSuitable: [
+            'Men whose measurement is within the normal range and who present on cosmetic grounds alone — psychosexual counselling comes first',
+            'Patients whose dissatisfaction is perception-based, suggesting penile dysmorphophobia',
+            'Patients expecting a marked gain in length or in sexual performance — these procedures do not promise that',
+            'Patients with active infection or an uncontrolled condition that would impair wound healing',
+            'Patients with untreated erectile dysfunction — the erection problem is addressed first'
+          ]
+        },
+        technology: [
+          'Suspensory ligament release — aims at a visible gain in flaccid length',
+          'Autologous fat injection — girth increase using your own fat tissue',
+          'Dermal graft application',
+          'Reconstructive techniques in Peyronie’s disease or buried penis'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Assoc. Prof. Dr. Müslüm Ergün works in andrology and reconstructive urology. In this area the approach is first to establish the correct indication; surgery comes into question only in genuinely appropriate cases.'
+        },
+        timeline: [
+          {
+            when: 'Remote',
+            title: 'Confidential pre-assessment',
+            body: 'Your complaint, your expectation and any previous procedures are assessed in confidence. At this stage the most useful outcome is often simply clarity about whether surgery is right for you.'
+          },
+          {
+            when: 'Day 1',
+            title: 'Examination, measurement and expectations consultation',
+            body: 'A standard measurement is taken, erectile function is assessed and expectations are discussed openly. Psychosexual counselling is recommended where appropriate.'
+          },
+          {
+            when: 'Day 2',
+            title: 'Procedure (if found suitable)',
+            body: 'Performed under local anesthesia, sedation or general anesthesia depending on the method chosen. A day case or a one-night stay may be required.'
+          },
+          {
+            when: 'Day 7–10',
+            title: 'Review and return',
+            body: 'Wound check, assessment of swelling and clearance to return. The result takes weeks to settle; the early appearance is not the final outcome.'
+          },
+          {
+            when: 'Month 3',
+            title: 'Assessment of the result',
+            body: 'With fat injection in particular, the result becomes clear at this point because of resorption; a further session is considered if needed.'
+          }
+        ],
+        risks: [
+          'Expectations not being met — dissatisfaction is the most frequently reported problem in this area',
+          'Scarring and firmness of the skin',
+          'With fat injection: resorption, asymmetry and nodule formation; a further session may be needed',
+          'Change or reduction in sensation',
+          'Infection and wound healing problems',
+          'With suspensory ligament release: a downward shift of the erection angle and reduced stability',
+          'With fillers: migration and granuloma; permanent fillers carry additional risk',
+          'Rarely, an adverse effect on erectile function'
+        ],
+        alternatives: [
+          'Psychosexual counselling — the first option in patients whose measurement is normal',
+          'Weight loss and reduction of the pubic fat pad — can give a clear benefit where the appearance is buried',
+          'Treating erectile dysfunction first, if present — as rigidity improves, perceived size increases too',
+          'Curvature-correcting surgery in Peyronie’s disease',
+          'Doing nothing at all — with normal measurements this is often the most appropriate choice'
+        ],
+        comparison: {
+          title: 'Aim, level of evidence and main risk by method',
+          columns: ['Method', 'Aim', 'Level of evidence', 'Main risk'],
+          rows: [
+            { label: 'Suspensory ligament release', values: ['Visible flaccid length', 'Limited; does not increase erect length', 'Lowering of the erection angle'] },
+            { label: 'Fat injection', values: ['Girth', 'Limited; resorption variable', 'Asymmetry, nodules, need for a further session'] },
+            { label: 'Dermal graft', values: ['Girth', 'Limited; selected cases', 'Graft contraction, scarring'] },
+            { label: 'Fillers', values: ['Girth', 'Limited; risk higher with permanent fillers', 'Migration, granuloma'] },
+            { label: 'Reconstructive surgery', values: ['Buried penis, Peyronie’s, trauma', 'Established where there is a medical indication', 'General surgical risks'] }
+          ],
+          note:
+            'The level of evidence for cosmetic methods is limited, and guidelines do not routinely recommend them in men with normal measurements. Reconstructive procedures with a medical indication are assessed separately from this table.'
+        },
+        recovery: [
+          {
+            period: 'Week 1',
+            body: 'Swelling and bruising are expected findings. Heavy activity and sexual intercourse are avoided; wound care is carried out regularly.'
+          },
+          {
+            period: 'Weeks 2–3',
+            body: 'Swelling decreases and returning to desk work is usually possible. The appearance is not yet final at this stage.'
+          },
+          {
+            period: 'Weeks 4–6',
+            body: 'A gradual return to sexual activity is considered with your physician’s approval.'
+          },
+          {
+            period: 'Month 3',
+            body: 'With fat injection in particular, resorption is complete and the result becomes clear. A further session is discussed at this point if needed.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies with the method chosen and the materials used. A quote is given only once surgical suitability has been confirmed.'
+        },
+        packageIncludes: [
+          'Assessment, measurement and expectations consultation',
+          'Procedure and anesthesia',
+          'Inpatient stay if required',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Confidentiality-based coordination and medical interpreter',
+          'Review and online follow-up'
+        ],
+        faqs: [
+          {
+            q: 'Is my penile size normal — how do I know?',
+            a: 'Measurement is taken under standard conditions, in the stretched state and from the bone to the tip. The literature describes a wide range as normal, and in a significant proportion of men who present the measurement lies within it. An accurate measurement is often the first step that prevents an unnecessary operation.'
+          },
+          {
+            q: 'Why do the guidelines not recommend these procedures?',
+            a: 'Because the evidence for the effectiveness and long-term safety of cosmetic enlargement procedures is limited, while reports of dissatisfaction and complications are not negligible. For that reason they are not routinely recommended in men with normal measurements.'
+          },
+          {
+            q: 'Does suspensory ligament release increase erect length?',
+            a: 'No. The procedure aims to increase the visible flaccid length; it does not lengthen the erect penis. Releasing the ligament can also cause the erection angle to point further downwards.'
+          },
+          {
+            q: 'Is the result of fat injection permanent?',
+            a: 'Part of the injected fat is resorbed over time, and the rate of resorption varies from person to person. The result usually becomes clear at three months; some patients need a further session. Asymmetry and nodule formation are among the reported problems.'
+          },
+          {
+            q: 'Will my sexual performance improve?',
+            a: 'No. These procedures do not improve erection quality, desire or performance. If you have an erection problem, the solution is treatment of erectile dysfunction, not these procedures.'
+          },
+          {
+            q: 'Does it make a difference to my partner?',
+            a: 'The literature reports that partner satisfaction is not directly related to size, and that communication, sexual function and the quality of the relationship are more decisive. We would encourage you to frame your expectations in those terms.'
+          },
+          {
+            q: 'Why is a psychological assessment requested?',
+            a: 'Because in a proportion of cases the problem lies not in the measurement but in perception. Surgery then does not resolve the dissatisfaction and often sustains it. Psychosexual assessment is intended to protect you from an unnecessary procedure that is difficult to reverse.'
+          },
+          {
+            q: 'Is doing nothing an option?',
+            a: 'Yes, and in men with normal measurements it is often the most appropriate one. We say this plainly because this is the subject on which patients in this field are most often misled.'
+          },
+          {
+            q: 'Will my enquiry remain confidential?',
+            a: 'Yes. For andrology enquiries all consultation and coordination are conducted on the principle of confidentiality. You can speak one to one through the paid online consultation before coming to the clinic.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      de: {
+        title: 'Penisvergrößerung: Was möglich ist und was nicht',
+        summary:
+          'Eine ehrliche Aufklärung über Verfahren zur Längen- und Umfangszunahme, ihre Evidenzlage, die echten medizinischen Indikationen und die Risiken.',
+        metaTitle: 'Penisvergrößerung: Verfahren, Evidenzlage und Risiken',
+        metaDescription:
+          'Evidenzbasierte Information zur Penisvergrößerung: welche Verfahren es gibt, was die Leitlinien sagen, für wen eine medizinische Indikation besteht und welche Risiken bestehen.',
+        quickFacts: {
+          duration: 'Je nach Verfahren 45–120 Minuten',
+          anesthesia: 'Je nach Verfahren lokal, Sedierung oder Vollnarkose',
+          hospitalStay: 'Ambulant oder 1 Nacht',
+          stayInTurkey: '7–10 Tage',
+          returnToWork: '1–2 Wochen',
+          flightClearance: 'Tag 7–10'
+        },
+        definition: [
+          'Diese Seite ist keine Werbung für Verfahren zur Penisvergrößerung, sondern eine ehrliche Aufklärung, die Ihnen die Entscheidung erleichtern soll. Denn dies ist einer der Bereiche, in denen Erwartungen am weitesten von der Realität abweichen und Patienten am häufigsten fehlgeleitet werden.',
+          'ZUERST DAS WICHTIGSTE: Führende urologische Leitlinien, darunter die der Europäischen Gesellschaft für Urologie, empfehlen kosmetische Vergrößerungsverfahren bei Männern mit Penisgröße IM NORMBEREICH NICHT routinemäßig. Die Evidenz zu Wirksamkeit und Langzeitsicherheit dieser Eingriffe ist begrenzt. Das heißt nicht, dass sie niemals durchgeführt werden; es heißt, dass sie auf ausgewählte und sorgfältig beurteilte Situationen beschränkt bleiben.',
+          'Bei einem erheblichen Teil der Männer, die sich vorstellen, liegt die Messung im Normbereich. Empfindet jemand seine Größe dennoch als unzureichend, spricht man von penisbezogener Dysmorphophobie; sie erfordert eine psychosexuelle Abklärung und keine Operation. Ein Eingriff löst ein wahrnehmungsbedingtes Problem nicht — meist hält er die Unzufriedenheit aufrecht.',
+          'Echte medizinische Indikationen sind davon zu trennen und rechtfertigen eine chirurgische Beurteilung: Mikropenis, vergrabener Penis (buried penis), Längenverlust nach Trauma oder früherer Operation sowie Verkürzung und Verkrümmung bei Induratio penis plastica.',
+          'Die wichtigsten Ansätze sind folgende. FÜR DIE LÄNGE: Durchtrennung des Aufhängebandes (Ligamentum suspensorium) — sie zielt darauf, den im Körper liegenden Anteil des Penis nach außen zu verlagern und so die sichtbare Länge im schlaffen Zustand zu vergrößern; die Länge bei Erektion nimmt dadurch nicht zu. FÜR DEN UMFANG: Eigenfettinjektion, Dermistransplantat oder Filler — angestrebt wird eine Umfangszunahme, möglich sind jedoch Resorption, Asymmetrie und Knotenbildung.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patienten mit messtechnisch gesicherter Diagnose eines Mikropenis',
+            'Patienten mit funktionellen und hygienischen Problemen durch einen vergrabenen Penis',
+            'Patienten mit Längenverlust nach Trauma oder früherer Operation',
+            'Patienten mit Verkürzung und Verkrümmung bei Induratio penis plastica, bei denen eine rekonstruktive Operation geplant ist',
+            'Ausgewählte Patienten mit realistischen Erwartungen nach psychosexueller Abklärung'
+          ],
+          notSuitable: [
+            'Männer mit Messwerten im Normbereich, die sich allein aus kosmetischen Gründen vorstellen — Vorrang hat die psychosexuelle Beratung',
+            'Patienten mit wahrnehmungsbedingter Unzufriedenheit im Sinne einer Dysmorphophobie',
+            'Patienten, die eine deutliche Längenzunahme oder eine bessere sexuelle Leistungsfähigkeit erwarten — das versprechen diese Eingriffe nicht',
+            'Patienten mit aktiver Infektion oder einer unkontrollierten Erkrankung, die die Wundheilung stört',
+            'Patienten mit unbehandelter erektiler Dysfunktion — zuerst wird die Erektionsstörung angegangen'
+          ]
+        },
+        technology: [
+          'Durchtrennung des Aufhängebandes — Ziel ist eine sichtbare Längenzunahme im schlaffen Zustand',
+          'Autologe Fettinjektion — Umfangszunahme mit körpereigenem Fettgewebe',
+          'Anwendung eines Dermistransplantats',
+          'Rekonstruktive Techniken bei Induratio penis plastica oder vergrabenem Penis'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Doz. Dr. Müslüm Ergün arbeitet in der Andrologie und der rekonstruktiven Urologie. In diesem Themenfeld steht zunächst die Feststellung der richtigen Indikation im Vordergrund; eine Operation kommt nur bei wirklich geeigneten Fällen in Betracht.'
+        },
+        timeline: [
+          {
+            when: 'Aus der Ferne',
+            title: 'Vertrauliche Vorabbeurteilung',
+            body: 'Ihr Anliegen, Ihre Erwartung und etwaige frühere Eingriffe werden vertraulich beurteilt. Das nützlichste Ergebnis dieser Phase ist oft die Klarheit darüber, ob eine Operation für Sie überhaupt infrage kommt.'
+          },
+          {
+            when: 'Tag 1',
+            title: 'Untersuchung, Messung und Erwartungsgespräch',
+            body: 'Es erfolgt eine standardisierte Messung, die Erektionsfähigkeit wird beurteilt und die Erwartungen werden offen besprochen. Bei Bedarf wird eine psychosexuelle Beratung empfohlen.'
+          },
+          {
+            when: 'Tag 2',
+            title: 'Eingriff (sofern geeignet)',
+            body: 'Je nach gewähltem Verfahren in Lokalanästhesie, Sedierung oder Vollnarkose. Ein ambulanter Eingriff oder eine Übernachtung kann erforderlich sein.'
+          },
+          {
+            when: 'Tag 7–10',
+            title: 'Kontrolle und Rückreise',
+            body: 'Wundkontrolle, Beurteilung der Schwellung und Freigabe zur Rückreise. Bis sich das Ergebnis setzt, vergehen Wochen; das frühe Erscheinungsbild ist nicht das Endergebnis.'
+          },
+          {
+            when: 'Monat 3',
+            title: 'Beurteilung des Ergebnisses',
+            body: 'Besonders bei der Fettinjektion wird das Ergebnis aufgrund der Resorption erst jetzt deutlich; bei Bedarf wird eine weitere Sitzung erwogen.'
+          }
+        ],
+        risks: [
+          'Nichterfüllung der Erwartungen — Unzufriedenheit ist das in diesem Bereich am häufigsten berichtete Problem',
+          'Narbenbildung und Verhärtung der Haut',
+          'Bei Fettinjektion: Resorption, Asymmetrie und Knotenbildung; eine weitere Sitzung kann nötig werden',
+          'Veränderte oder verminderte Empfindung',
+          'Infektion und Wundheilungsstörungen',
+          'Bei Durchtrennung des Aufhängebandes: Absinken des Erektionswinkels und geringere Stabilität',
+          'Bei Fillern: Migration und Granulombildung; permanente Filler bergen zusätzliche Risiken',
+          'Selten eine Beeinträchtigung der Erektionsfähigkeit'
+        ],
+        alternatives: [
+          'Psychosexuelle Beratung — erste Option bei Patienten mit normalem Messwert',
+          'Gewichtsabnahme und Verringerung des Schamfettpolsters — kann bei vergrabenem Erscheinungsbild deutlich helfen',
+          'Zuerst Behandlung einer bestehenden erektilen Dysfunktion — mit besserer Steifigkeit steigt auch die wahrgenommene Größe',
+          'Begradigende Operation bei Induratio penis plastica',
+          'Gar nichts tun — bei normalen Messwerten ist das häufig die richtigste Entscheidung'
+        ],
+        comparison: {
+          title: 'Ziel, Evidenzlage und Hauptrisiko nach Verfahren',
+          columns: ['Verfahren', 'Ziel', 'Evidenzlage', 'Hauptrisiko'],
+          rows: [
+            { label: 'Durchtrennung des Aufhängebandes', values: ['Sichtbare Länge im schlaffen Zustand', 'Begrenzt; keine Zunahme der Erektionslänge', 'Absinken des Erektionswinkels'] },
+            { label: 'Fettinjektion', values: ['Umfang', 'Begrenzt; Resorption variabel', 'Asymmetrie, Knoten, weitere Sitzung nötig'] },
+            { label: 'Dermistransplantat', values: ['Umfang', 'Begrenzt; ausgewählte Fälle', 'Schrumpfung des Transplantats, Narben'] },
+            { label: 'Filler', values: ['Umfang', 'Begrenzt; höheres Risiko bei permanenten Fillern', 'Migration, Granulom'] },
+            { label: 'Rekonstruktive Chirurgie', values: ['Vergrabener Penis, Peyronie, Trauma', 'Bei medizinischer Indikation etabliert', 'Allgemeine chirurgische Risiken'] }
+          ],
+          note:
+            'Die Evidenz für kosmetische Verfahren ist begrenzt, und die Leitlinien empfehlen sie bei Männern mit normalen Messwerten nicht routinemäßig. Rekonstruktive Eingriffe mit medizinischer Indikation werden getrennt von dieser Tabelle beurteilt.'
+        },
+        recovery: [
+          {
+            period: 'Woche 1',
+            body: 'Schwellung und Blutergüsse sind zu erwarten. Anstrengende Aktivität und Geschlechtsverkehr werden vermieden; die Wundpflege erfolgt regelmäßig.'
+          },
+          {
+            period: 'Woche 2–3',
+            body: 'Die Schwellung lässt nach, die Rückkehr zur Bürotätigkeit ist meist möglich. Das Erscheinungsbild ist zu diesem Zeitpunkt noch nicht endgültig.'
+          },
+          {
+            period: 'Woche 4–6',
+            body: 'Eine schrittweise Rückkehr zur sexuellen Aktivität wird mit ärztlicher Freigabe erwogen.'
+          },
+          {
+            period: 'Monat 3',
+            body: 'Besonders bei der Fettinjektion ist die Resorption abgeschlossen und das Ergebnis wird deutlich. Bei Bedarf wird jetzt eine weitere Sitzung besprochen.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Der Preis richtet sich nach dem gewählten Verfahren und dem verwendeten Material. Ein Angebot erfolgt erst, wenn die chirurgische Eignung bestätigt ist.'
+        },
+        packageIncludes: [
+          'Beurteilung, Messung und Erwartungsgespräch',
+          'Eingriff und Anästhesie',
+          'Stationäre Aufnahme, falls erforderlich',
+          'Transfers Flughafen–Krankenhaus–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Vertrauliche Koordination und medizinischer Dolmetscher',
+          'Kontrolle und Online-Nachsorge'
+        ],
+        faqs: [
+          {
+            q: 'Ist meine Penisgröße normal — woran erkenne ich das?',
+            a: 'Gemessen wird unter standardisierten Bedingungen, im gedehnten Zustand und vom Knochen bis zur Spitze. In der Literatur gilt ein weiter Bereich als normal, und bei einem erheblichen Teil der Männer, die sich vorstellen, liegt die Messung darin. Eine korrekte Messung ist oft der erste Schritt, der vor einer unnötigen Operation schützt.'
+          },
+          {
+            q: 'Warum empfehlen die Leitlinien diese Eingriffe nicht?',
+            a: 'Weil die Evidenz zu Wirksamkeit und Langzeitsicherheit kosmetischer Vergrößerungsverfahren begrenzt ist, während Berichte über Unzufriedenheit und Komplikationen nicht unerheblich sind. Deshalb werden sie bei Männern mit normalen Messwerten nicht routinemäßig empfohlen.'
+          },
+          {
+            q: 'Vergrößert die Durchtrennung des Aufhängebandes die Länge bei Erektion?',
+            a: 'Nein. Der Eingriff zielt auf die sichtbare Länge im schlaffen Zustand; die Länge bei Erektion nimmt nicht zu. Zudem kann die Durchtrennung dazu führen, dass der Erektionswinkel weiter nach unten zeigt.'
+          },
+          {
+            q: 'Ist das Ergebnis der Fettinjektion dauerhaft?',
+            a: 'Ein Teil des eingebrachten Fetts wird mit der Zeit resorbiert, und das Ausmaß ist individuell unterschiedlich. Das Ergebnis zeigt sich meist nach drei Monaten; manche Patienten benötigen eine weitere Sitzung. Asymmetrie und Knotenbildung gehören zu den berichteten Problemen.'
+          },
+          {
+            q: 'Verbessert sich meine sexuelle Leistungsfähigkeit?',
+            a: 'Nein. Diese Eingriffe verbessern weder die Erektionsqualität noch das Verlangen oder die Leistungsfähigkeit. Besteht eine Erektionsstörung, liegt die Lösung in deren Behandlung, nicht in diesen Verfahren.'
+          },
+          {
+            q: 'Macht es für meine Partnerin einen Unterschied?',
+            a: 'Die Literatur berichtet, dass die Zufriedenheit der Partnerin nicht unmittelbar mit der Größe zusammenhängt und dass Kommunikation, Sexualfunktion und Beziehungsqualität entscheidender sind. Wir empfehlen, Ihre Erwartungen in diesem Rahmen zu betrachten.'
+          },
+          {
+            q: 'Warum wird eine psychologische Abklärung verlangt?',
+            a: 'Weil bei einem Teil der Anfragen das Problem nicht in der Messung, sondern in der Wahrnehmung liegt. Eine Operation löst die Unzufriedenheit dann nicht, sondern hält sie meist aufrecht. Die psychosexuelle Abklärung soll Sie vor einem unnötigen und schwer umkehrbaren Eingriff schützen.'
+          },
+          {
+            q: 'Ist es eine Option, gar nichts zu tun?',
+            a: 'Ja, und bei Männern mit normalen Messwerten ist es häufig die richtigste. Wir sagen das deutlich, weil dies der Punkt ist, an dem Patienten in diesem Bereich am häufigsten fehlgeleitet werden.'
+          },
+          {
+            q: 'Bleibt meine Anfrage vertraulich?',
+            a: 'Ja. Bei andrologischen Anfragen werden alle Gespräche und die Koordination nach dem Grundsatz der Vertraulichkeit geführt. Vor einem Besuch in der Klinik können Sie über die kostenpflichtige Online-Beratung persönlich sprechen.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'EAU Guidelines on Sexual and Reproductive Health — Europäische Gesellschaft für Urologie',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      fr: {
+        title: 'Agrandissement pénien : ce qui est possible et ce qui ne l’est pas',
+        summary:
+          'Une information honnête sur les techniques d’allongement et d’élargissement, leur niveau de preuve, les véritables indications médicales et les risques.',
+        metaTitle: 'Agrandissement pénien : méthodes, niveau de preuve et risques',
+        metaDescription:
+          'Information fondée sur les preuves à propos de l’agrandissement pénien : quelles méthodes existent, que disent les recommandations, qui relève d’une indication médicale et quels sont les risques.',
+        quickFacts: {
+          duration: '45 à 120 minutes selon la méthode',
+          anesthesia: 'Locale, sédation ou générale selon la méthode',
+          hospitalStay: 'Ambulatoire ou 1 nuit',
+          stayInTurkey: '7 à 10 jours',
+          returnToWork: '1 à 2 semaines',
+          flightClearance: 'Jours 7 à 10'
+        },
+        definition: [
+          'Cette page n’est pas une promotion des techniques d’agrandissement pénien, mais une information honnête destinée à vous aider à décider. Car c’est l’un des domaines où les attentes s’éloignent le plus de la réalité et où les patients sont le plus souvent mal orientés.',
+          'LE POINT LE PLUS IMPORTANT D’ABORD : les principales recommandations urologiques, dont celles de l’Association européenne d’urologie, ne préconisent PAS en routine les interventions d’agrandissement à visée esthétique chez les hommes dont la taille se situe DANS LES LIMITES DE LA NORMALE. Le niveau de preuve concernant l’efficacité et la sécurité à long terme de ces gestes est limité. Cela ne signifie pas qu’ils ne sont jamais réalisés, mais qu’ils restent réservés à des situations sélectionnées et correctement évaluées.',
+          'Chez une proportion importante des hommes qui consultent, la mesure se situe dans la normale. Si la personne perçoit malgré tout sa taille comme insuffisante, on parle de dysmorphophobie pénienne : cela relève d’une évaluation psychosexuelle et non d’une chirurgie. Une opération ne résout pas un trouble de la perception ; le plus souvent, elle entretient l’insatisfaction.',
+          'Les véritables indications médicales sont distinctes et justifient une évaluation chirurgicale : micropénis, pénis enfoui (buried penis), perte de longueur après un traumatisme ou une chirurgie antérieure, raccourcissement et courbure liés à la maladie de La Peyronie.',
+          'Les principales approches sont les suivantes. POUR LA LONGUEUR : section du ligament suspenseur — elle vise à augmenter la longueur visible au repos en extériorisant la portion du pénis située dans le corps ; elle n’augmente pas la longueur en érection. POUR LA CIRCONFÉRENCE : injection de graisse, greffe dermique ou produits de comblement — un gain de circonférence est recherché, mais résorption, asymétrie et formation de nodules peuvent survenir.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients chez qui un micropénis a été confirmé par la mesure',
+            'Patients présentant des troubles fonctionnels et d’hygiène liés à un pénis enfoui',
+            'Patients ayant perdu de la longueur après un traumatisme ou une chirurgie antérieure',
+            'Patients présentant un raccourcissement et une courbure liés à la maladie de La Peyronie, chez qui une chirurgie reconstructrice est prévue',
+            'Patients sélectionnés, aux attentes réalistes, ayant bénéficié d’une évaluation psychosexuelle'
+          ],
+          notSuitable: [
+            'Hommes dont la mesure est normale et qui consultent pour un motif uniquement esthétique — la priorité va à l’accompagnement psychosexuel',
+            'Patients dont l’insatisfaction repose sur la perception, évoquant une dysmorphophobie pénienne',
+            'Patients attendant un gain net de longueur ou de performance sexuelle — ces gestes ne le promettent pas',
+            'Patients présentant une infection active ou une affection non contrôlée compromettant la cicatrisation',
+            'Patients ayant une dysfonction érectile non traitée — le trouble de l’érection est pris en charge en premier'
+          ]
+        },
+        technology: [
+          'Section du ligament suspenseur — vise un gain de longueur visible au repos',
+          'Injection de graisse autologue — gain de circonférence avec votre propre tissu adipeux',
+          'Greffe dermique',
+          'Techniques reconstructrices en cas de maladie de La Peyronie ou de pénis enfoui'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Le Dr Müslüm Ergün exerce en andrologie et en urologie reconstructrice. Dans ce domaine, la démarche consiste d’abord à établir la bonne indication ; la chirurgie n’est envisagée que dans les cas réellement appropriés.'
+        },
+        timeline: [
+          {
+            when: 'À distance',
+            title: 'Pré-évaluation confidentielle',
+            body: 'Votre motif, votre attente et vos éventuelles interventions antérieures sont évalués en toute confidentialité. À ce stade, le résultat le plus utile est souvent de savoir clairement si la chirurgie vous convient.'
+          },
+          {
+            when: 'Jour 1',
+            title: 'Examen, mesure et entretien sur les attentes',
+            body: 'Une mesure standardisée est réalisée, la fonction érectile est évaluée et les attentes sont discutées ouvertement. Un accompagnement psychosexuel est proposé si nécessaire.'
+          },
+          {
+            when: 'Jour 2',
+            title: 'Intervention (si jugée adaptée)',
+            body: 'Réalisée sous anesthésie locale, sédation ou anesthésie générale selon la méthode retenue. Une prise en charge ambulatoire ou une nuit d’hospitalisation peut être nécessaire.'
+          },
+          {
+            when: 'Jours 7–10',
+            title: 'Contrôle et retour',
+            body: 'Contrôle de la cicatrice, évaluation de l’œdème et autorisation de retour. Le résultat met des semaines à se stabiliser ; l’aspect précoce n’est pas le résultat final.'
+          },
+          {
+            when: 'Mois 3',
+            title: 'Évaluation du résultat',
+            body: 'Avec l’injection de graisse en particulier, le résultat se précise à ce stade en raison de la résorption ; une séance complémentaire est envisagée si besoin.'
+          }
+        ],
+        risks: [
+          'Attentes non satisfaites — l’insatisfaction est le problème le plus fréquemment rapporté dans ce domaine',
+          'Cicatrices et induration cutanée',
+          'Avec l’injection de graisse : résorption, asymétrie et formation de nodules ; une séance complémentaire peut être nécessaire',
+          'Modification ou diminution de la sensibilité',
+          'Infection et troubles de la cicatrisation',
+          'Avec la section du ligament suspenseur : abaissement de l’angle d’érection et moindre stabilité',
+          'Avec les produits de comblement : migration et granulome ; les produits permanents comportent un risque supplémentaire',
+          'Rarement, altération de la fonction érectile'
+        ],
+        alternatives: [
+          'Accompagnement psychosexuel — première option chez les patients dont la mesure est normale',
+          'Perte de poids et réduction du capiton pubien — peut apporter un bénéfice net lorsque l’aspect est enfoui',
+          'Traiter d’abord une dysfonction érectile si elle existe — avec une meilleure rigidité, la taille perçue augmente aussi',
+          'Chirurgie de redressement dans la maladie de La Peyronie',
+          'Ne rien faire — avec des mesures normales, c’est souvent le choix le plus juste'
+        ],
+        comparison: {
+          title: 'Objectif, niveau de preuve et risque principal par méthode',
+          columns: ['Méthode', 'Objectif', 'Niveau de preuve', 'Risque principal'],
+          rows: [
+            { label: 'Section du ligament suspenseur', values: ['Longueur visible au repos', 'Limité ; n’augmente pas la longueur en érection', 'Abaissement de l’angle d’érection'] },
+            { label: 'Injection de graisse', values: ['Circonférence', 'Limité ; résorption variable', 'Asymétrie, nodules, séance complémentaire'] },
+            { label: 'Greffe dermique', values: ['Circonférence', 'Limité ; cas sélectionnés', 'Rétraction du greffon, cicatrices'] },
+            { label: 'Produits de comblement', values: ['Circonférence', 'Limité ; risque accru avec les produits permanents', 'Migration, granulome'] },
+            { label: 'Chirurgie reconstructrice', values: ['Pénis enfoui, Peyronie, traumatisme', 'Établie en présence d’une indication médicale', 'Risques chirurgicaux généraux'] }
+          ],
+          note:
+            'Le niveau de preuve des méthodes esthétiques est limité et les recommandations ne les préconisent pas en routine chez les hommes aux mesures normales. Les gestes reconstructeurs avec indication médicale sont évalués séparément de ce tableau.'
+        },
+        recovery: [
+          {
+            period: 'Semaine 1',
+            body: 'Œdème et ecchymoses sont attendus. L’activité intense et les rapports sexuels sont évités ; les soins de cicatrice sont réguliers.'
+          },
+          {
+            period: 'Semaines 2–3',
+            body: 'L’œdème diminue et la reprise d’un travail de bureau est généralement possible. L’aspect n’est pas encore définitif à ce stade.'
+          },
+          {
+            period: 'Semaines 4–6',
+            body: 'Une reprise progressive de l’activité sexuelle est envisagée avec l’accord du médecin.'
+          },
+          {
+            period: 'Mois 3',
+            body: 'Avec l’injection de graisse en particulier, la résorption est achevée et le résultat se précise. Une séance complémentaire est discutée à ce moment si nécessaire.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Le prix varie selon la méthode retenue et le matériel utilisé. Un devis n’est établi qu’une fois l’indication chirurgicale confirmée.'
+        },
+        packageIncludes: [
+          'Évaluation, mesure et entretien sur les attentes',
+          'Intervention et anesthésie',
+          'Hospitalisation si nécessaire',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Coordination confidentielle et interprète médical',
+          'Contrôle et suivi en ligne'
+        ],
+        faqs: [
+          {
+            q: 'Ma taille est-elle normale — comment le savoir ?',
+            a: 'La mesure se fait dans des conditions standardisées, en traction et de l’os jusqu’à l’extrémité. La littérature retient une fourchette large comme normale, et chez une part importante des hommes qui consultent la mesure s’y situe. Une mesure correcte est souvent le premier pas qui évite une opération inutile.'
+          },
+          {
+            q: 'Pourquoi les recommandations ne préconisent-elles pas ces gestes ?',
+            a: 'Parce que le niveau de preuve concernant l’efficacité et la sécurité à long terme des techniques esthétiques est limité, alors que les signalements d’insatisfaction et de complications ne sont pas négligeables. Ils ne sont donc pas recommandés en routine chez les hommes aux mesures normales.'
+          },
+          {
+            q: 'La section du ligament suspenseur augmente-t-elle la longueur en érection ?',
+            a: 'Non. Ce geste vise la longueur visible au repos ; il n’allonge pas le pénis en érection. La section du ligament peut en outre faire pointer l’angle d’érection davantage vers le bas.'
+          },
+          {
+            q: 'Le résultat de l’injection de graisse est-il durable ?',
+            a: 'Une partie de la graisse injectée se résorbe avec le temps, et le taux de résorption varie d’une personne à l’autre. Le résultat se précise généralement au troisième mois ; certains patients ont besoin d’une séance complémentaire. L’asymétrie et les nodules font partie des problèmes rapportés.'
+          },
+          {
+            q: 'Ma performance sexuelle va-t-elle s’améliorer ?',
+            a: 'Non. Ces gestes n’améliorent ni la qualité de l’érection, ni le désir, ni la performance. En cas de trouble de l’érection, la solution est son traitement, pas ces interventions.'
+          },
+          {
+            q: 'Cela change-t-il quelque chose pour ma partenaire ?',
+            a: 'La littérature indique que la satisfaction de la partenaire n’est pas directement liée à la taille et que la communication, la fonction sexuelle et la qualité de la relation sont plus déterminantes. Nous vous invitons à situer vos attentes dans ce cadre.'
+          },
+          {
+            q: 'Pourquoi demande-t-on une évaluation psychologique ?',
+            a: 'Parce que dans une partie des demandes le problème ne tient pas à la mesure mais à la perception. La chirurgie ne résout alors pas l’insatisfaction et l’entretient souvent. L’évaluation psychosexuelle vise à vous protéger d’un geste inutile et difficilement réversible.'
+          },
+          {
+            q: 'Ne rien faire est-il une option ?',
+            a: 'Oui, et chez les hommes aux mesures normales c’est souvent la plus juste. Nous le disons clairement parce que c’est sur ce point que les patients de ce domaine sont le plus souvent mal orientés.'
+          },
+          {
+            q: 'Ma demande restera-t-elle confidentielle ?',
+            a: 'Oui. Pour les demandes d’andrologie, l’ensemble des échanges et de la coordination suit le principe de confidentialité. Vous pouvez échanger en tête-à-tête via la consultation en ligne payante avant de venir à la clinique.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'EAU Guidelines on Sexual and Reproductive Health — Association européenne d’urologie',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      ru: {
+        title: 'Процедуры увеличения полового члена: что возможно, а что нет',
+        summary:
+          'Честная информация о методах увеличения длины и окружности, их уровне доказательности, реальных медицинских показаниях и рисках.',
+        metaTitle: 'Увеличение полового члена: методы, доказательность, риски',
+        metaDescription:
+          'Информация, основанная на доказательствах: какие методы существуют, что говорят рекомендации, у кого есть медицинские показания и каковы риски.',
+        quickFacts: {
+          duration: '45–120 минут в зависимости от метода',
+          anesthesia: 'Местная, седация или общая — в зависимости от метода',
+          hospitalStay: 'Амбулаторно или 1 ночь',
+          stayInTurkey: '7–10 дней',
+          returnToWork: '1–2 недели',
+          flightClearance: '7–10-й день'
+        },
+        definition: [
+          'Эта страница не реклама процедур увеличения полового члена, а честная информация, которая должна помочь вам принять решение. Ведь это одна из областей, где ожидания дальше всего расходятся с реальностью и где пациентов чаще всего вводят в заблуждение.',
+          'САМОЕ ВАЖНОЕ В ПЕРВУЮ ОЧЕРЕДЬ: ведущие урологические рекомендации, в том числе Европейской ассоциации урологии, НЕ советуют рутинно выполнять косметические операции по увеличению у мужчин, у которых размер находится В ПРЕДЕЛАХ НОРМЫ. Уровень доказательности эффективности и долгосрочной безопасности таких вмешательств ограничен. Это не значит, что их никогда не выполняют; это значит, что они ограничены отобранными и правильно оценёнными ситуациями.',
+          'У значительной части обратившихся мужчин измерение попадает в границы нормы. Если человек всё же воспринимает свой размер как недостаточный, это называют пенильной дисморфофобией, и она требует психосексуальной оценки, а не операции. Вмешательство не решает проблему восприятия; чаще всего оно лишь поддерживает неудовлетворённость.',
+          'Настоящие медицинские показания — это отдельная категория, и они заслуживают хирургической оценки: микропенис, скрытый половой член, потеря длины после травмы или перенесённой операции, а также укорочение и искривление при болезни Пейрони.',
+          'Основные подходы таковы. ДЛЯ ДЛИНЫ: рассечение поддерживающей связки — цель в том, чтобы вывести наружу часть полового члена, скрытую в теле, и увеличить видимую длину в спокойном состоянии; длину при эрекции это не увеличивает. ДЛЯ ОКРУЖНОСТИ: инъекция жира, дермальный трансплантат или филлеры — задача состоит в увеличении толщины, однако возможны резорбция, асимметрия и образование узлов.'
+        ],
+        eligibility: {
+          suitable: [
+            'Пациенты с подтверждённым измерением диагнозом микропениса',
+            'Пациенты с функциональными и гигиеническими проблемами из-за скрытого полового члена',
+            'Пациенты с потерей длины после травмы или перенесённой операции',
+            'Пациенты с укорочением и искривлением при болезни Пейрони, которым планируется реконструктивная операция',
+            'Отобранные пациенты с реалистичными ожиданиями, прошедшие психосексуальную оценку'
+          ],
+          notSuitable: [
+            'Мужчины с нормальным измерением, обращающиеся исключительно по косметическим мотивам — в приоритете психосексуальное консультирование',
+            'Пациенты, чья неудовлетворённость основана на восприятии, что указывает на пенильную дисморфофобию',
+            'Пациенты, ожидающие заметного прироста длины или улучшения сексуальной функции — такие вмешательства этого не обещают',
+            'Пациенты с активной инфекцией или неконтролируемым заболеванием, нарушающим заживление',
+            'Пациенты с нелеченной эректильной дисфункцией — сначала занимаются нарушением эрекции'
+          ]
+        },
+        technology: [
+          'Рассечение поддерживающей связки — цель: видимый прирост длины в спокойном состоянии',
+          'Инъекция собственного жира — увеличение окружности собственной жировой тканью',
+          'Применение дермального трансплантата',
+          'Реконструктивные методики при болезни Пейрони или скрытом половом члене'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Доцент, д-р Мюслюм Эргюн работает в области андрологии и реконструктивной урологии. В этой теме подход прежде всего состоит в определении правильного показания; операция рассматривается только в действительно подходящих случаях.'
+        },
+        timeline: [
+          {
+            when: 'Дистанционно',
+            title: 'Конфиденциальная предварительная оценка',
+            body: 'Ваша жалоба, ожидания и перенесённые ранее вмешательства оцениваются конфиденциально. На этом этапе самым полезным результатом нередко оказывается ясность в вопросе, подходит ли вам операция вообще.'
+          },
+          {
+            when: '1-й день',
+            title: 'Осмотр, измерение и беседа об ожиданиях',
+            body: 'Выполняется стандартное измерение, оценивается эректильная функция, ожидания обсуждаются открыто. При необходимости рекомендуется психосексуальное консультирование.'
+          },
+          {
+            when: '2-й день',
+            title: 'Вмешательство (если признано подходящим)',
+            body: 'Выполняется под местной анестезией, седацией или общим наркозом в зависимости от выбранного метода. Возможна амбулаторная форма или одна ночь в стационаре.'
+          },
+          {
+            when: '7–10-й день',
+            title: 'Контроль и возвращение',
+            body: 'Осмотр раны, оценка отёка и разрешение на возвращение. На стабилизацию результата уходят недели; ранний вид не является итоговым.'
+          },
+          {
+            when: '3-й месяц',
+            title: 'Оценка результата',
+            body: 'Особенно при инъекции жира результат проясняется именно к этому сроку из-за резорбции; при необходимости рассматривается дополнительный сеанс.'
+          }
+        ],
+        risks: [
+          'Неоправдавшиеся ожидания — неудовлетворённость является самой частой жалобой в этой области',
+          'Рубцы и уплотнение кожи',
+          'При инъекции жира: резорбция, асимметрия и образование узлов; может потребоваться дополнительный сеанс',
+          'Изменение или снижение чувствительности',
+          'Инфекция и нарушения заживления раны',
+          'При рассечении поддерживающей связки: смещение угла эрекции вниз и снижение устойчивости',
+          'При филлерах: миграция и гранулёма; перманентные филлеры несут дополнительный риск',
+          'Редко — неблагоприятное влияние на эректильную функцию'
+        ],
+        alternatives: [
+          'Психосексуальное консультирование — первый вариант у пациентов с нормальным измерением',
+          'Снижение веса и уменьшение лобковой жировой подушки — может дать заметный эффект при скрытом виде',
+          'Сначала лечение эректильной дисфункции, если она есть — с улучшением ригидности растёт и воспринимаемый размер',
+          'Операция по выпрямлению при болезни Пейрони',
+          'Не делать ничего — при нормальных показателях это нередко самый правильный выбор'
+        ],
+        comparison: {
+          title: 'Цель, уровень доказательности и основной риск по методам',
+          columns: ['Метод', 'Цель', 'Уровень доказательности', 'Основной риск'],
+          rows: [
+            { label: 'Рассечение поддерживающей связки', values: ['Видимая длина в покое', 'Ограниченный; длину при эрекции не увеличивает', 'Снижение угла эрекции'] },
+            { label: 'Инъекция жира', values: ['Окружность', 'Ограниченный; резорбция переменная', 'Асимметрия, узлы, необходимость повторного сеанса'] },
+            { label: 'Дермальный трансплантат', values: ['Окружность', 'Ограниченный; отобранные случаи', 'Сморщивание трансплантата, рубцы'] },
+            { label: 'Филлеры', values: ['Окружность', 'Ограниченный; при перманентных риск выше', 'Миграция, гранулёма'] },
+            { label: 'Реконструктивная хирургия', values: ['Скрытый половой член, Пейрони, травма', 'При наличии медицинских показаний устоявшаяся', 'Общие хирургические риски'] }
+          ],
+          note:
+            'Уровень доказательности косметических методов ограничен, и рекомендации не советуют их рутинно при нормальных показателях. Реконструктивные вмешательства с медицинскими показаниями оцениваются отдельно от этой таблицы.'
+        },
+        recovery: [
+          {
+            period: '1-я неделя',
+            body: 'Отёк и синяки ожидаемы. Исключаются тяжёлые нагрузки и половая жизнь; уход за раной проводится регулярно.'
+          },
+          {
+            period: '2–3-я неделя',
+            body: 'Отёк уменьшается, возвращение к офисной работе обычно возможно. Вид на этом этапе ещё не окончательный.'
+          },
+          {
+            period: '4–6-я неделя',
+            body: 'Постепенное возвращение к половой жизни рассматривается с разрешения врача.'
+          },
+          {
+            period: '3-й месяц',
+            body: 'Особенно при инъекции жира резорбция завершается и результат становится ясным. При необходимости на этом этапе обсуждается дополнительный сеанс.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Стоимость зависит от выбранного метода и используемых материалов. Предложение даётся только после подтверждения показаний к операции.'
+        },
+        packageIncludes: [
+          'Оценка, измерение и беседа об ожиданиях',
+          'Вмешательство и анестезия',
+          'Госпитализация при необходимости',
+          'Трансферы аэропорт–больница–отель',
+          'Проживание (пациент + 1 сопровождающий)',
+          'Конфиденциальная координация и медицинский переводчик',
+          'Контроль и онлайн-наблюдение'
+        ],
+        faqs: [
+          {
+            q: 'Нормальный ли у меня размер — как это понять?',
+            a: 'Измерение проводят в стандартных условиях, в растянутом состоянии и от кости до кончика. В литературе нормой считается широкий диапазон, и у значительной части обратившихся мужчин измерение в него попадает. Правильное измерение нередко оказывается первым шагом, который избавляет от ненужной операции.'
+          },
+          {
+            q: 'Почему рекомендации не советуют эти вмешательства?',
+            a: 'Потому что уровень доказательности эффективности и долгосрочной безопасности косметических методов увеличения ограничен, тогда как сообщения о неудовлетворённости и осложнениях не единичны. Поэтому у мужчин с нормальными показателями их не советуют рутинно.'
+          },
+          {
+            q: 'Увеличивает ли рассечение связки длину при эрекции?',
+            a: 'Нет. Это вмешательство направлено на видимую длину в спокойном состоянии; длину при эрекции оно не увеличивает. Кроме того, рассечение связки может привести к тому, что угол эрекции будет направлен ниже.'
+          },
+          {
+            q: 'Долговечен ли результат инъекции жира?',
+            a: 'Часть введённого жира со временем резорбируется, и степень резорбции индивидуальна. Результат обычно проясняется к третьему месяцу; части пациентов требуется дополнительный сеанс. Асимметрия и образование узлов относятся к описанным проблемам.'
+          },
+          {
+            q: 'Улучшится ли моя сексуальная функция?',
+            a: 'Нет. Эти вмешательства не улучшают качество эрекции, влечение или функцию. Если у вас есть нарушение эрекции, решением является его лечение, а не эти процедуры.'
+          },
+          {
+            q: 'Имеет ли это значение для партнёрши?',
+            a: 'В литературе отмечается, что удовлетворённость партнёрши напрямую не связана с размером, а более значимыми оказываются общение, сексуальная функция и качество отношений. Рекомендуем рассматривать свои ожидания в этих рамках.'
+          },
+          {
+            q: 'Зачем требуется психологическая оценка?',
+            a: 'Потому что в части обращений проблема не в измерении, а в восприятии. Операция в таком случае не устраняет неудовлетворённость и чаще всего её поддерживает. Психосексуальная оценка призвана уберечь вас от ненужного и трудно обратимого вмешательства.'
+          },
+          {
+            q: 'Является ли вариантом не делать ничего?',
+            a: 'Да, и у мужчин с нормальными показателями это нередко самый правильный выбор. Мы говорим об этом прямо, потому что именно в этом вопросе пациентов данной области чаще всего вводят в заблуждение.'
+          },
+          {
+            q: 'Останется ли моё обращение конфиденциальным?',
+            a: 'Да. При обращениях по андрологии все консультации и координация ведутся по принципу конфиденциальности. До приезда в клинику вы можете поговорить один на один через платную онлайн-консультацию.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'Рекомендации EAU по сексуальному и репродуктивному здоровью — Европейская ассоциация урологии',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      ar: {
+        title: 'إجراءات تكبير القضيب: ما الممكن وما غير الممكن',
+        summary:
+          'معلومات صادقة عن طرق زيادة الطول والمحيط، ومستوى الأدلة، والدواعي الطبية الحقيقية، والمخاطر.',
+        metaTitle: 'تكبير القضيب: الطرق ومستوى الأدلة والمخاطر',
+        metaDescription:
+          'معلومات قائمة على الأدلة حول تكبير القضيب: ما الطرق المتاحة، وماذا تقول الإرشادات، ولمن توجد دواعٍ طبية، وما المخاطر.',
+        quickFacts: {
+          duration: '45–120 دقيقة بحسب الطريقة',
+          anesthesia: 'موضعي أو تخدير واعٍ أو عام بحسب الطريقة',
+          hospitalStay: 'في اليوم نفسه أو ليلة واحدة',
+          stayInTurkey: '7–10 أيام',
+          returnToWork: '1–2 أسبوع',
+          flightClearance: 'اليوم 7–10'
+        },
+        definition: [
+          'هذه الصفحة ليست ترويجًا لإجراءات تكبير القضيب، بل معلومات صادقة تساعدكم على اتخاذ القرار. فهذا من المجالات التي تبتعد فيها التوقعات أكثر ما تبتعد عن الواقع، ويُضلَّل فيها المرضى أكثر من غيرها.',
+          'الأهم أولًا: الإرشادات البولية الرائدة، ومنها إرشادات الجمعية الأوروبية للمسالك البولية، لا توصي روتينيًا بإجراءات التكبير التجميلية لدى الرجال الذين يقع حجمهم ضمن الحدود الطبيعية. فمستوى الأدلة على فعالية هذه الإجراءات وسلامتها على المدى الطويل محدود. وهذا لا يعني أنها لا تُجرى أبدًا؛ بل يعني أنها تقتصر على حالات مختارة ومُقيَّمة بدقة.',
+          'لدى نسبة كبيرة من الرجال الذين يراجعون، يقع القياس ضمن المدى الطبيعي. ومع ذلك إن كان الشخص يرى حجمه غير كافٍ، فهذا يُسمّى اضطراب تشوّه صورة القضيب، ويستدعي تقييمًا نفسيًا جنسيًا لا جراحة. فالعملية لا تحلّ اضطرابًا قائمًا على الإدراك؛ بل غالبًا ما تُبقي عدم الرضا قائمًا.',
+          'أما الدواعي الطبية الحقيقية فهي منفصلة وتستحق تقييمًا جراحيًا: صغر القضيب، والقضيب المدفون، وفقدان الطول بعد رضّ أو جراحة سابقة، والقِصَر والانحناء الناجمان عن مرض بيروني.',
+          'والمقاربات الأساسية هي: للطول — تحرير الرباط المعلِّق، ويهدف إلى زيادة الطول الظاهر في حالة الارتخاء بإخراج الجزء المختفي داخل الجسم؛ وهو لا يزيد الطول أثناء الانتصاب. للمحيط — حقن الدهون أو الطعم الجلدي أو مواد الحشو؛ والهدف زيادة السماكة، لكن قد يحدث امتصاص وعدم تناظر وتكوّن عُقد.'
+        ],
+        eligibility: {
+          suitable: [
+            'المرضى المشخّصون بصغر القضيب بتأكيد القياس',
+            'المرضى الذين يعانون مشكلات وظيفية وصحية بسبب القضيب المدفون',
+            'المرضى الذين فقدوا طولًا بعد رضّ أو جراحة سابقة',
+            'المرضى ذوو القِصَر والانحناء بسبب مرض بيروني والمخطَّط لهم جراحة ترميمية',
+            'مرضى مختارون ذوو توقعات واقعية خضعوا لتقييم نفسي جنسي'
+          ],
+          notSuitable: [
+            'الرجال الذين يقع قياسهم ضمن الطبيعي ويراجعون لدافع تجميلي فقط — الأولوية للإرشاد النفسي الجنسي',
+            'المرضى الذين ينبع عدم رضاهم من الإدراك، بما يوحي باضطراب تشوّه صورة القضيب',
+            'المرضى الذين يتوقعون زيادة ملحوظة في الطول أو في الأداء الجنسي — فهذه الإجراءات لا تَعِد بذلك',
+            'المصابون بعدوى نشطة أو بحالة غير منضبطة تعيق التئام الجرح',
+            'المرضى الذين لديهم ضعف انتصاب غير معالَج — يُعالَج اضطراب الانتصاب أولًا'
+          ]
+        },
+        technology: [
+          'تحرير الرباط المعلِّق — يهدف إلى زيادة الطول الظاهر في الارتخاء',
+          'حقن الدهون الذاتية — زيادة المحيط باستخدام نسيجكم الدهني',
+          'تطبيق الطعم الجلدي',
+          'تقنيات ترميمية في مرض بيروني أو القضيب المدفون'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'يعمل الأستاذ المشارك د. مسلم إرغن في طب الذكورة والمسالك البولية الترميمية. والنهج في هذا الموضوع هو تحديد الاستطباب الصحيح أولًا؛ ولا تُطرح الجراحة إلا في الحالات المناسبة فعلًا.'
+        },
+        timeline: [
+          {
+            when: 'عن بُعد',
+            title: 'تقييم مبدئي سرّي',
+            body: 'تُقيَّم شكواكم وتوقعاتكم وأي إجراءات سابقة بسرّية. وفي هذه المرحلة غالبًا ما تكون أنفع نتيجة هي اتضاح ما إذا كانت الجراحة مناسبة لكم أصلًا.'
+          },
+          {
+            when: 'اليوم الأول',
+            title: 'الفحص والقياس وحوار التوقعات',
+            body: 'يُجرى قياس معياري وتُقيَّم وظيفة الانتصاب وتُناقَش التوقعات بصراحة. ويُوصى بالإرشاد النفسي الجنسي عند الحاجة.'
+          },
+          {
+            when: 'اليوم الثاني',
+            title: 'الإجراء (إن وُجد مناسبًا)',
+            body: 'يُطبَّق تحت تخدير موضعي أو واعٍ أو عام بحسب الطريقة المختارة. وقد يلزم إجراؤه في اليوم نفسه أو مع مبيت ليلة.'
+          },
+          {
+            when: 'اليوم 7–10',
+            title: 'المتابعة والعودة',
+            body: 'فحص الجرح وتقييم التورّم والإذن بالعودة. ويستغرق استقرار النتيجة أسابيع؛ والمظهر المبكر ليس النتيجة النهائية.'
+          },
+          {
+            when: 'الشهر الثالث',
+            title: 'تقييم النتيجة',
+            body: 'في حقن الدهون خصوصًا تتضح النتيجة في هذه المرحلة بسبب الامتصاص؛ ويُنظَر في جلسة إضافية عند اللزوم.'
+          }
+        ],
+        risks: [
+          'عدم تحقّق التوقعات — وعدم الرضا هو أكثر ما يُبلَّغ عنه في هذا المجال',
+          'الندبات وتصلّب الجلد',
+          'في حقن الدهون: الامتصاص وعدم التناظر وتكوّن العُقد؛ وقد تلزم جلسة إضافية',
+          'تغيّر الإحساس أو نقصه',
+          'العدوى ومشكلات التئام الجرح',
+          'في تحرير الرباط المعلِّق: انخفاض زاوية الانتصاب وتراجع ثباته',
+          'في مواد الحشو: الهجرة والورم الحبيبي؛ والمواد الدائمة تحمل خطرًا إضافيًا',
+          'نادرًا تأثّر وظيفة الانتصاب سلبًا'
+        ],
+        alternatives: [
+          'الإرشاد النفسي الجنسي — الخيار الأول لدى من قياسهم طبيعي',
+          'إنقاص الوزن وتقليل الوسادة الدهنية العانية — قد يفيد بوضوح في المظهر المدفون',
+          'علاج ضعف الانتصاب أولًا إن وُجد — فمع تحسّن الصلابة يزداد الحجم المُدرَك أيضًا',
+          'جراحة تصحيح الانحناء في مرض بيروني',
+          'عدم إجراء أي شيء — وعند القياسات الطبيعية يكون هذا غالبًا الخيار الأصوب'
+        ],
+        comparison: {
+          title: 'الهدف ومستوى الأدلة والخطر الرئيسي بحسب الطريقة',
+          columns: ['الطريقة', 'الهدف', 'مستوى الأدلة', 'الخطر الرئيسي'],
+          rows: [
+            { label: 'تحرير الرباط المعلِّق', values: ['الطول الظاهر في الارتخاء', 'محدود؛ لا يزيد طول الانتصاب', 'انخفاض زاوية الانتصاب'] },
+            { label: 'حقن الدهون', values: ['المحيط', 'محدود؛ الامتصاص متغيّر', 'عدم تناظر، عُقد، حاجة لجلسة إضافية'] },
+            { label: 'الطعم الجلدي', values: ['المحيط', 'محدود؛ حالات مختارة', 'انكماش الطعم، ندبات'] },
+            { label: 'مواد الحشو', values: ['المحيط', 'محدود؛ الخطر أعلى مع الدائمة', 'الهجرة، ورم حبيبي'] },
+            { label: 'الجراحة الترميمية', values: ['القضيب المدفون، بيروني، الرضّ', 'راسخة عند وجود داعٍ طبي', 'المخاطر الجراحية العامة'] }
+          ],
+          note:
+            'مستوى الأدلة في الطرق التجميلية محدود، والإرشادات لا توصي بها روتينيًا لدى الرجال ذوي القياسات الطبيعية. أما التدخلات الترميمية ذات الدواعي الطبية فتُقيَّم بمعزل عن هذا الجدول.'
+        },
+        recovery: [
+          {
+            period: 'الأسبوع الأول',
+            body: 'التورّم والكدمات متوقّعان. ويُتجنَّب النشاط الشاق والعلاقة الزوجية؛ وتُجرى العناية بالجرح بانتظام.'
+          },
+          {
+            period: 'الأسبوع 2–3',
+            body: 'يقلّ التورّم والعودة إلى العمل المكتبي ممكنة عادةً. والمظهر في هذه المرحلة ليس نهائيًا بعد.'
+          },
+          {
+            period: 'الأسبوع 4–6',
+            body: 'يُنظَر في العودة التدريجية إلى العلاقة الزوجية بإذن الطبيب.'
+          },
+          {
+            period: 'الشهر الثالث',
+            body: 'في حقن الدهون خصوصًا يكتمل الامتصاص وتتضح النتيجة. وتُناقَش جلسة إضافية في هذه المرحلة عند اللزوم.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'تختلف التكلفة بحسب الطريقة المختارة والمواد المستخدمة. ولا يُقدَّم عرض إلا بعد تأكيد ملاءمة الجراحة.'
+        },
+        packageIncludes: [
+          'التقييم والقياس وحوار التوقعات',
+          'الإجراء والتخدير',
+          'المبيت عند اللزوم',
+          'تنقّلات المطار–المستشفى–الفندق',
+          'الإقامة (المريض + مرافق واحد)',
+          'تنسيق قائم على السرّية ومترجم طبي',
+          'المتابعة والمراقبة عبر الإنترنت'
+        ],
+        faqs: [
+          {
+            q: 'هل حجمي طبيعي، وكيف أعرف؟',
+            a: 'يُجرى القياس في ظروف معيارية، في وضع الشدّ، ومن العظم حتى الطرف. وتعتبر المراجع العلمية مدًى واسعًا طبيعيًا، ويقع قياس نسبة كبيرة من المراجعين ضمنه. والقياس الصحيح غالبًا ما يكون الخطوة الأولى التي تَقي من عملية لا لزوم لها.'
+          },
+          {
+            q: 'لماذا لا توصي الإرشادات بهذه الإجراءات؟',
+            a: 'لأن مستوى الأدلة على فعالية إجراءات التكبير التجميلية وسلامتها على المدى الطويل محدود، في حين أن بلاغات عدم الرضا والمضاعفات ليست قليلة. ولهذا لا يُوصى بها روتينيًا لدى الرجال ذوي القياسات الطبيعية.'
+          },
+          {
+            q: 'هل يزيد تحرير الرباط المعلِّق الطول أثناء الانتصاب؟',
+            a: 'لا. فهذا الإجراء يستهدف الطول الظاهر في الارتخاء ولا يُطيل القضيب أثناء الانتصاب. كما قد يؤدي تحرير الرباط إلى اتجاه زاوية الانتصاب نحو الأسفل أكثر.'
+          },
+          {
+            q: 'هل نتيجة حقن الدهون دائمة؟',
+            a: 'يُمتَصّ جزء من الدهون المحقونة مع الوقت، وتختلف نسبة الامتصاص من شخص لآخر. وتتضح النتيجة عادةً في الشهر الثالث؛ ويحتاج بعض المرضى إلى جلسة إضافية. ويُعدّ عدم التناظر وتكوّن العُقد من المشكلات المُبلَّغ عنها.'
+          },
+          {
+            q: 'هل يتحسّن أدائي الجنسي؟',
+            a: 'لا. فهذه الإجراءات لا تحسّن جودة الانتصاب ولا الرغبة ولا الأداء. وإن كان لديكم اضطراب في الانتصاب فالحلّ هو علاجه، لا هذه الإجراءات.'
+          },
+          {
+            q: 'هل يُحدث ذلك فرقًا لدى الشريكة؟',
+            a: 'تشير المراجع إلى أن رضا الشريكة لا يرتبط مباشرةً بالحجم، وأن التواصل والوظيفة الجنسية ونوعية العلاقة أكثر تأثيرًا. ونقترح النظر إلى توقعاتكم ضمن هذا الإطار.'
+          },
+          {
+            q: 'لماذا يُطلب تقييم نفسي؟',
+            a: 'لأن المشكلة في جزء من المراجعات لا تكون في القياس بل في الإدراك. وعندها لا تحلّ الجراحة عدم الرضا، بل تُبقيه غالبًا. ويهدف التقييم النفسي الجنسي إلى حمايتكم من إجراء لا لزوم له ويصعب التراجع عنه.'
+          },
+          {
+            q: 'هل عدم إجراء أي شيء خيار؟',
+            a: 'نعم، وهو غالبًا الخيار الأصوب لدى الرجال ذوي القياسات الطبيعية. ونقول ذلك بوضوح لأن هذه هي النقطة التي يُضلَّل فيها مرضى هذا المجال أكثر من غيرها.'
+          },
+          {
+            q: 'هل تبقى مراجعتي سرّية؟',
+            a: 'نعم. في مراجعات طب الذكورة تُدار جميع المحادثات والتنسيق وفق مبدأ السرّية. ويمكنكم التحدّث وجهًا لوجه عبر الاستشارة المدفوعة عبر الإنترنت قبل القدوم إلى العيادة.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'إرشادات EAU حول الصحة الجنسية والإنجابية — الجمعية الأوروبية للمسالك البولية',
             url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
           }
         ]
