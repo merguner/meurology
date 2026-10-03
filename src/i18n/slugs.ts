@@ -40,6 +40,14 @@ export const treatmentSlugMap = {
     ru: 'dgpzh-adenoma-prostaty',
     ar: 'enlarged-prostate'
   },
+  holep: {
+    tr: 'holep',
+    en: 'holep',
+    de: 'holep',
+    fr: 'holep',
+    ru: 'holep',
+    ar: 'holep'
+  },
   thulep: {
     tr: 'thulep',
     en: 'thulep',

@@ -15,6 +15,221 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
+     * TASLAK — cerrah onayına sunuldu, onaylanana kadar yayında görünmez.
+     * ThuLEP sayfasıyla YİNELENEN İÇERİK OLMAMASI için vurgu bilinçli olarak
+     * farklı: burada kılavuz konumu, uzun dönem veriler ve hacimden bağımsızlık
+     * öne çıkar; karşılaştırma tablosu da farklıdır (HoLEP / TURP / açık cerrahi).
+     * Kaynak: EAU non-neurogenic male LUTS kılavuzu. Kaynaksız oran YAZILMAMIŞTIR.
+     */
+    draft: true,
+    slug: 'holep',
+    parent: 'bph-prostat-buyumesi',
+    lastReviewed: '2026-10-04',
+    icon: 'prostate',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'HoLEP (Holmiyum Lazerle Prostat Enükleasyonu)',
+        summary:
+          'Tıkayıcı prostat dokusunun holmiyum lazerle bütün olarak çıkarıldığı; enükleasyon yöntemleri içinde uzun dönem sonuçları en çok çalışılmış olan ameliyat.',
+        metaTitle: 'HoLEP Nedir? Holmiyum Lazerle Prostat Enükleasyonu',
+        metaDescription:
+          'HoLEP ile iyi huylu prostat büyümesi cerrahisi: kimlere uygun, nasıl yapılır, riskler, iyileşme ve TURP ile açık cerrahiye göre farkları.',
+        quickFacts: {
+          duration: '60–150 dakika',
+          anesthesia: 'Genel veya spinal anestezi',
+          hospitalStay: '1 gece',
+          stayInTurkey: '5–7 gün',
+          catheter: '1–2 gün',
+          returnToWork: '2–3 hafta',
+          flightClearance: '7. günden sonra'
+        },
+        definition: [
+          'Prostat, mesanenin hemen altında idrar kanalını çepeçevre saran bir bezdir. Yaşla birlikte büyüdüğünde kanalı dıştan sıkıştırır ve mesane, idrarı dışarı atabilmek için giderek daha fazla zorlanır. Şikâyetler çoğu zaman yavaş ilerler: önce akımda incelme ve gece kalkmalar, sonra tam boşaltamama hissi, ileri aşamada ise idrar yapamama veya sondaya bağımlılık.',
+          'HoLEP, bu tıkayıcı dokunun holmiyum lazer yardımıyla kapsülünden ayrılıp bütün hâlinde çıkarıldığı kapalı bir ameliyattır. Holmiyum lazer darbeli (pulsed) çalışır; dokuyu çok kısa aralıklarla gönderilen enerji darbeleriyla keser ve aynı anda kanamayı kontrol eder. İşlem tamamen idrar kanalından yapılır, vücutta kesi açılmaz.',
+          'HoLEP’i diğer yöntemlerden ayıran en önemli özellik, PROSTAT HACMİNDEN BAĞIMSIZ uygulanabilmesidir. Avrupa Üroloji Derneği kılavuzlarında, küçük prostatlarda TURP’a ve büyük prostatlarda açık (basit) prostatektomiye alternatif olarak yer alır. Enükleasyon teknikleri arasında uzun dönem takip verisi en geniş olan yöntem de HoLEP’tir.',
+          'Çıkarılan doku mesane içinde morselatörle küçültülerek alınır ve tamamı patolojiye gönderilir. Dokuyu buharlaştıran yöntemlerde bu inceleme mümkün olmaz; HoLEP’te ise beklenmedik bir kanser odağı varsa tanı konulabilir.',
+          'HoLEP’in bilinen bir özelliği, cerrah açısından öğrenme eğrisinin dik olmasıdır. Yöntemin sonuçları, uygulayan ekibin deneyimiyle doğrudan ilişkilidir; bu nedenle merkez seçimi, yöntem seçimi kadar önemlidir.'
+        ],
+        eligibility: {
+          suitable: [
+            'Her hacimdeki prostat — özellikle 80 ml üzerindeki, TURP için uygun olmayan büyük bezler',
+            'İlaç tedavisinden fayda görmeyen veya yan etkiler nedeniyle ilacı bırakan hastalar',
+            'Sondaya bağımlı hâle gelmiş veya tekrarlayan idrar retansiyonu yaşayan hastalar',
+            'Prostat büyümesine bağlı mesane taşı ya da tekrarlayan enfeksiyon gelişen hastalar',
+            'Açık prostatektomi önerilmiş ancak kapalı bir seçenek arayan hastalar'
+          ],
+          notSuitable: [
+            'Aktif idrar yolu enfeksiyonu olanlar — önce enfeksiyon tedavi edilir',
+            'Prostat kanseri tanısı doğrulanmış hastalar — tedavi planı farklıdır, HoLEP tıkanıklık amaçlı sınırlı durumlarda değerlendirilir',
+            'Mesane kası kasılma gücünü büyük ölçüde kaybetmiş hastalarda tıkanıklık giderilse bile şikâyetler tam düzelmeyebilir',
+            'Anestezi riski yüksek, eşlik eden ağır hastalığı olan hastalar',
+            'Çocuk sahibi olmayı planlayanlar — retrograd ejakülasyon olasılığı ameliyat öncesi konuşulmalıdır'
+          ]
+        },
+        technology: [
+          'Holmiyum lazer sistemi (darbeli enerji)',
+          'Prostat hacminden bağımsız uygulanabilen enükleasyon tekniği',
+          'Morselatör ile dokunun mesaneden çıkarılması',
+          'Çıkarılan dokunun tamamının patolojik incelemesi'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Doç. Dr. Müslüm Ergün lazer enükleasyon teknikleriyle çalışmakta ve bu alanda hakemli yayını bulunmaktadır. Yöntem seçimi, prostat hacmi ve eşlik eden durumlar değerlendirilerek yapılır.'
+        },
+        timeline: [
+          {
+            when: 'Uzaktan',
+            title: 'Dosya değerlendirmesi',
+            body: 'Prostat hacmi (ultrason veya MR), üroflowmetri, IPSS skoru, PSA ve işeme sonrası kalan idrar incelenir. Hacim büyükse HoLEP’in sağladığı avantaj ayrıca değerlendirilir.'
+          },
+          {
+            when: '1. gün',
+            title: 'Varış ve hazırlık',
+            body: 'Muayene, eksik tetkiklerin tamamlanması ve anestezi değerlendirmesi yapılır. Kan sulandırıcı kullanıyorsanız yönetimi bu aşamada planlanır.'
+          },
+          {
+            when: '2. gün',
+            title: 'Ameliyat',
+            body: 'HoLEP genel veya spinal anestezi altında uygulanır. Süre prostat hacmiyle doğru orantılıdır; büyük bezlerde işlem daha uzun sürebilir.'
+          },
+          {
+            when: '3. gün',
+            title: 'Sonda alımı ve taburculuk',
+            body: 'İdrar berraklaştığında sonda alınır. Kendiliğinden idrar yapıldığı görüldükten sonra taburcu olursunuz.'
+          },
+          {
+            when: '7–10. gün',
+            title: 'Kontrol ve patoloji',
+            body: 'Kontrol muayenesi, patoloji sonucunun değerlendirilmesi ve dönüş uçuşu için onay.'
+          }
+        ],
+        risks: [
+          'Ameliyat sonrası ilk dönemde idrar yaparken yanma ve ani sıkışma hissi',
+          'Geçici stres tipi idrar kaçırma — enükleasyon yöntemlerinde ilk haftalarda görülebilir, çoğu hastada geriler',
+          'Retrograd ejakülasyon: sık görülür, zararsızdır ancak doğurganlığı etkiler',
+          'İdrar yolu enfeksiyonu',
+          'Üretra darlığı veya mesane boynu darlığı — seyrek; gerekirse ek işlemle giderilir',
+          'Kanama; morselasyon sırasında mesane yaralanması (nadir)',
+          'Anesteziye bağlı genel riskler'
+        ],
+        alternatives: [
+          'ThuLEP — tulyum lazerle enükleasyon (aynı mantık, farklı lazer)',
+          'TURP — klasik endoskopik rezeksiyon (küçük ve orta hacimlerde)',
+          'Rezūm — su buharıyla hacim küçültme (küçük prostatlarda, daha az invaziv)',
+          'İlaç tedavisi (alfa blokerler, 5-alfa redüktaz inhibitörleri)',
+          'Açık (basit) prostatektomi — HoLEP’in giderek yerini aldığı klasik seçenek'
+        ],
+        comparison: {
+          title: 'HoLEP, TURP ve açık prostatektomi karşılaştırması',
+          columns: ['Ölçüt', 'HoLEP', 'TURP', 'Açık prostatektomi'],
+          rows: [
+            {
+              label: 'Prostat hacmi sınırı',
+              values: ['Hacimden bağımsız', 'Genellikle 80 ml altı', 'Büyük hacimler']
+            },
+            { label: 'Kesi', values: ['Yok (idrar kanalından)', 'Yok (idrar kanalından)', 'Karın alt kesisi'] },
+            { label: 'Ortalama sonda süresi', values: ['1–2 gün', '2–3 gün', '4–7 gün'] },
+            { label: 'Hastanede kalış', values: ['1 gece', '1–2 gece', '3–5 gece'] },
+            { label: 'Doku patolojiye gönderilir', values: ['Evet', 'Evet', 'Evet'] },
+            {
+              label: 'Cerrahın öğrenme eğrisi',
+              values: ['Dik — deneyim belirleyici', 'Yerleşik, yaygın', 'Yerleşik']
+            }
+          ],
+          note:
+            'Tablo genel bilgilendirme içindir. Yöntem; prostat hacmi, eşlik eden hastalıklar, pıhtılaşma durumu ve hastanın öncelikleri değerlendirilerek kişiye özel seçilir.'
+        },
+        recovery: [
+          {
+            period: 'İlk 48 saat',
+            body: 'Sonda takılıdır ve mesane yıkaması uygulanabilir. İdrarda pembe renk beklenen bir bulgudur; bol sıvı alımı önerilir.'
+          },
+          {
+            period: '1. hafta',
+            body: 'Sonda alınmıştır. İdrar akımı belirgin biçimde rahatlar, buna karşılık yanma ve sıkışma hissi bir süre devam edebilir. Ağır kaldırma ve zorlanma önerilmez.'
+          },
+          {
+            period: '2–3. hafta',
+            body: 'Masa başı işe dönüş genellikle mümkündür. Pelvik taban egzersizleri, varsa kaçırmanın düzelmesini destekler.'
+          },
+          {
+            period: '4–6. hafta',
+            body: 'İdrar kontrolü büyük ölçüde oturur. Ağır fiziksel aktivite ve cinsel ilişki için hekim onayı beklenir.'
+          },
+          {
+            period: '3. ay ve sonrası',
+            body: 'IPSS skoru ve üroflowmetri tekrarlanarak düzelme nesnel olarak ölçülür. Uzun dönem takip, yöntemin kalıcılığını izlemek için önerilir.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat; prostat hacmi, işlem süresi, eşlik eden girişimler ve kalış süresine göre değişir. Kesin teklif dosya değerlendirmesi sonrasında verilir.'
+        },
+        packageIncludes: [
+          'Ameliyat ve hastane yatışı',
+          'Anestezi ve ameliyathane',
+          'Ameliyat öncesi tetkikler',
+          'Patolojik inceleme',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve hasta koordinatörü',
+          'Taburculuk sonrası online kontroller'
+        ],
+        faqs: [
+          {
+            q: 'HoLEP neden TURP’a ve açık ameliyata alternatif olarak anılıyor?',
+            a: 'Çünkü prostat hacminden bağımsız uygulanabilir. TURP büyük bezlerde süre ve güvenlik açısından sınırlanırken, açık ameliyat kesi gerektirir ve iyileşme uzar. HoLEP her iki sınırlamayı da aşarak tıkayıcı dokunun bütün hâlinde çıkarılmasını sağlar. Avrupa Üroloji Derneği kılavuzları da yöntemi bu konumda değerlendirir.'
+          },
+          {
+            q: 'HoLEP ile ThuLEP arasında nasıl seçim yapılıyor?',
+            a: 'İkisi de aynı enükleasyon mantığını izler; fark lazerdedir. Holmiyum darbeli, tulyum sürekli dalga üretir. Hasta açısından süreç ve beklenen sonuçlar büyük ölçüde benzerdir. Seçim; prostat hacmi, pıhtılaşma durumu, cihaz uygunluğu ve cerrahın deneyimi birlikte değerlendirilerek yapılır.'
+          },
+          {
+            q: 'Prostatım 100 ml’nin üzerinde, açık ameliyat şart mı?',
+            a: 'Hayır. Bu hacimler HoLEP’in en belirgin avantaj sağladığı aralıktır; kesi yapılmadan tedavi edilebilir. Dosyanız değerlendirildikten sonra size özel öneri iletilir.'
+          },
+          {
+            q: 'HoLEP’in öğrenme eğrisi zor deniyor; bu beni nasıl etkiler?',
+            a: 'Bu, yöntemin sonuçlarının uygulayan ekibin deneyimine duyarlı olduğu anlamına gelir. Hasta açısından pratik sonucu şudur: HoLEP’te merkez ve cerrah seçimi, yöntemin kendisi kadar belirleyicidir. Ameliyat öncesi görüşmede bu konuyu açıkça sorabilirsiniz.'
+          },
+          {
+            q: 'Uzun dönemde tekrar ameliyat gerekir mi?',
+            a: 'Enükleasyon tıkayıcı dokuyu bütün hâlinde çıkardığı için kalıcı sonuç hedefler ve HoLEP bu açıdan en uzun takip verisine sahip yöntemdir. Yine de hiçbir yöntem tekrar gerekmeyeceğini garanti etmez; düzenli kontrol önerilir.'
+          },
+          {
+            q: 'Sonda ne kadar kalır, ne zaman taburcu olurum?',
+            a: 'Sonda genellikle 1–2 gün kalır; idrar berraklaştığında alınır. Kendiliğinden idrar yapabildiğiniz görüldükten sonra, çoğunlukla 1 gecelik yatışın ardından taburcu olursunuz.'
+          },
+          {
+            q: 'Cinsel işlevim nasıl etkilenir?',
+            a: 'Ereksiyon işlevi genellikle korunur. Retrograd ejakülasyon — menin mesaneye gitmesi — ise sık görülen bir değişikliktir ve doğurganlığı etkiler. Çocuk sahibi olma planınız varsa ameliyat öncesi mutlaka konuşulmalıdır.'
+          },
+          {
+            q: 'İdrar kaçırma olur mu, kalıcı mıdır?',
+            a: 'Enükleasyon sonrası ilk haftalarda stres tipi kaçırma görülebilir. Çoğu hastada kademeli olarak düzelir ve pelvik taban egzersizleri bu süreci hızlandırır. Kalıcı kaçırma seyrektir; riskiniz ameliyat öncesi değerlendirmede ayrıca konuşulur.'
+          },
+          {
+            q: 'Kan sulandırıcı kullanıyorum, HoLEP uygun mu?',
+            a: 'Lazer enükleasyonun kanama kontrolü, bu hastalarda yöntemi değerlendirilebilir kılar. Ancak ilacın kesilip kesilmeyeceğine sizi takip eden hekimle birlikte karar verilir; kendi başınıza bırakmayın.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'EAU Guidelines on Management of Non-Neurogenic Male LUTS — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts'
+          }
+        ]
+      }
+    }
+  },
+  {
+    /**
      * Cerrah tarafından 4 Ekim 2026 tarihinde onaylandı ve yayına alındı.
      * Kaynaklar: EAU non-neurogenic male LUTS kılavuzu + cerrahın 2025 ThuLEP yayını.
      */

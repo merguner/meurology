@@ -184,7 +184,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'thulep',
     category: 'bph',
-    related: 'bph-prostat-buyumesi',
+    related: 'thulep',
     i18n: {
       tr: { term: 'ThuLEP', definition: 'Tulyum lazer kullanılarak prostat dokusunun çıkarıldığı, HoLEP’e benzer endoskopik enükleasyon yöntemi.' },
       en: { term: 'ThuLEP', definition: 'An endoscopic enucleation method similar to HoLEP in which prostate tissue is removed using a thulium laser.' },
