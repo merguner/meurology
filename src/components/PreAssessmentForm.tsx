@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { treatments } from '@/content/treatments';
+import { publishedTreatments } from '@/content/treatments';
 import { resolveContent } from '@/content/types';
 import type { Locale } from '@/i18n/routing';
 import { Icon } from './Icon';
@@ -119,7 +119,7 @@ export function PreAssessmentForm({
       <Field label={t('treatment')} htmlFor="treatment">
         <select id="treatment" name="treatment" defaultValue={defaultTreatment ?? ''} className="form-input">
           <option value="">{t('treatmentPlaceholder')}</option>
-          {treatments.map((tr) => (
+          {publishedTreatments.map((tr) => (
             <option key={tr.slug} value={tr.slug}>
               {resolveContent(tr, locale).title}
             </option>
