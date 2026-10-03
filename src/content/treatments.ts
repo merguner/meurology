@@ -229,6 +229,11 @@ export const treatments: Treatment[] = [
             label:
               'EAU Guidelines on Sexual and Reproductive Health — Avrupa Üroloji Derneği',
             url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          },
+          {
+            label:
+              'Mohamed H, Abdelshafi A, Ahmed A, Deameh MG, Mohamed T, Ramez M, Raheem O. Impact of cavernous tissue-sparing techniques on postoperative outcomes in penile prosthesis surgery: a systematic review and meta-analysis. The Journal of Sexual Medicine, 2026;23(2):qdag006.',
+            url: 'https://doi.org/10.1093/jsxmed/qdag006'
           }
         ]
       }
@@ -242,15 +247,23 @@ export const treatments: Treatment[] = [
      * Kaynak: EAU Sexual and Reproductive Health kılavuzu.
      * Kaynaksız memnuniyet/başarı yüzdesi YAZILMAMIŞTIR (prompt m.1).
      *
-     * AQUADİSSEKSİYON: Cerrahın bildirimiyle eklendi. Metin yalnızca tekniğin
-     * NE YAPTIĞINI (sıvı ile doku planlarının ayrılması) ve NE AMAÇLADIĞINI
-     * anlatır. Karşılaştırmalı üstünlük, başarı oranı veya komplikasyon azalma
-     * yüzdesi İDDİA EDİLMEMİŞTİR — bunlar kaynak gerektirir.
+     * AQUADİSSEKSİYON: Kavernöz doku koruyucu (cavernous-sparing) yaklaşımın
+     * bir uygulama biçimidir. Rakamlar J Sex Med 2026 meta-analizinden alınmıştır
+     * ve KAYNAK GÖSTERİLEREK verilmiştir (prompt m.4.2/9).
+     *
+     * ⚠️ Bu meta-analiz CERRAHIN KENDİ YAYINI DEĞİLDİR (yazarlar: Mohamed,
+     * Abdelshafi, Ahmed, Deameh, Mohamed, Ramez, Raheem). Sayfada yazarlık
+     * ima edilmemiştir; destekleyici literatür olarak gösterilir.
+     *
+     * ⚠️ Meta-analiz "kavernöz doku koruyucu teknikler" başlığı altındadır;
+     * özetinde aquadisseksiyon adı geçmez. Bu nedenle metin, aquadisseksiyonu
+     * bu YAKLAŞIMIN bir uygulaması olarak konumlandırır, rakamları doğrudan
+     * aquadisseksiyona atfetmez.
+     *
      * TODO-DOGRULA (cerrahtan):
-     *   1) Kullanılan sıvı ve varsa ek madde (ör. serum fizyolojik ± lokal anestezik)
-     *   2) Hangi hastalarda özellikle tercih ediliyor (fibrotik korpus, priapizm
-     *      sonrası, enfekte protez çıkarımı sonrası, Peyronie?)
-     *   3) Yayınlanmış bir çalışma/sunum var mı — varsa kaynaklara eklenecek
+     *   1) Kullanılan sıvı ve varsa ek madde
+     *   2) Rutin mi, yalnızca fibrotik olgularda mı uygulanıyor
+     *   3) Cerrahın bu teknikle kendi yayını/bildirisi varsa eklenecek
      */
     draft: true,
     slug: 'penil-protez',
@@ -278,10 +291,12 @@ export const treatments: Treatment[] = [
         definition: [
           'Erektil disfonksiyon, cinsel ilişki için yeterli sertleşmenin sağlanamaması veya sürdürülememesidir. Tedavide basamaklı bir yaklaşım izlenir: önce yaşam tarzı ve varsa hormonal düzenleme, ardından ağızdan alınan ilaçlar (PDE5 inhibitörleri), sonra penis içi enjeksiyon veya vakum cihazı denenir.',
           'Penil protez, bu basamakların yeterli sonuç vermediği durumlarda gündeme gelen cerrahi çözümdür. Penisin sertleşmeden sorumlu süngerimsi dokularının (korpus kavernozum) içine, sertliği sağlayan silindirler yerleştirilir. Cihaz, hastanın kendi kontrolünde ve istediği zaman kullanabileceği bir sertlik sağlar.',
-          'ÖNEMLİ VE GERİ DÖNÜŞSÜZ BİR KARAR: Protez yerleştirilirken korpus kavernozumun içi genişletilir. Bu nedenle ameliyattan sonra doğal (kendiliğinden) ereksiyon artık mümkün olmaz. Protez çıkarılsa bile önceki duruma dönülemez. Bu yüzden penil protez, diğer tedavi seçenekleri gerçekten denendikten sonra ve beklentiler ayrıntılı konuşulduktan sonra önerilir.',
+          'ÖNEMLİ VE KALICI BİR KARAR: Protez yerleştirilmesi geri alınabilir bir işlem değildir. Klasik yöntemde korpus kavernozum metal dilatatörlerle seri biçimde genişletilir; bu sırada sertleşmeden sorumlu doku önemli ölçüde zarar görür ve ameliyattan sonra doğal (kendiliğinden) ereksiyon beklenmez. Protez çıkarılsa bile önceki duruma dönülemez.',
+          'Son yıllarda bu noktada bir ayrım oluşmuştur. Kavernöz dokuyu koruyan (cavernous-sparing) yaklaşımlar, genişletme sırasında kavernöz dokuyu ve arteri olabildiğince korumayı hedefler. 2026 tarihli bir sistematik derleme ve meta-analiz, doku koruyucu teknikle ameliyat edilen hastalarda kavernöz arter korunmasının ve ameliyat sonrası kısmi dolgunluğun (rezidüel tümesans) klasik seri genişletmeye göre belirgin biçimde daha sık görüldüğünü, komplikasyon oranlarının ise iki teknik arasında istatistiksel olarak benzer olduğunu bildirmiştir. Bu kanıt 4 randomize çalışma ve toplam 193 hastaya dayanmaktadır; yani umut verici olmakla birlikte hasta sayısı henüz sınırlıdır.',
+          'Bu bulgu şu anlama GELMEZ: protez takıldıktan sonra cihazsız, ilişkiye yetecek bir ereksiyonunuz olacağı. Korunan şey kısmi dolgunluk ve damar işlevidir; sertliği yine protez sağlar. Karar yine kalıcıdır. Bu nedenle penil protez, diğer tedavi seçenekleri gerçekten denendikten sonra ve beklentiler ayrıntılı konuşulduktan sonra önerilir.',
           'İki temel protez tipi vardır. Üç parçalı şişirilebilir protezde silindirler, skrotuma yerleştirilen küçük bir pompa ve karın içine konan bir sıvı rezervuarı bulunur; pompa sıkılarak sertlik sağlanır, işlem bitince sıvı geri boşaltılır ve penis yumuşak hâle döner. Bükülebilir (malleable) protezde ise penis sürekli yarı sert kalır ve elle istenen konuma getirilir.',
           'Avrupa Üroloji Derneği kılavuzları, uygun şekilde seçilmiş hastalarda penil protez cerrahisinin hasta ve eş memnuniyetinin yüksek bildirildiği bir tedavi olduğunu belirtir. Bu memnuniyetin en güçlü belirleyicisi, ameliyat öncesinde beklentilerin doğru konuşulmuş olmasıdır.',
-          'AQUADİSSEKSİYON (SIVI YARDIMLI DİSEKSİYON): Protez silindirlerinin yerleştirilebilmesi için korpus kavernozumun içinin genişletilmesi gerekir. Bu aşama klasik olarak metal dilatatörlerle, yani mekanik olarak yapılır. Aquadisseksiyonda ise doku planları basınçlı sıvı verilerek ayrılır. Amaç, genişletme sırasında tünikaya, üretraya ve çevre dokuya uygulanan mekanik zorlamayı azaltmaktır. Kliniğimizde uygun görülen olgularda bu teknik kullanılmaktadır.',
+          'AQUADİSSEKSİYON (SIVI YARDIMLI DİSEKSİYON): Yukarıda anlatılan doku koruyucu yaklaşımın bir uygulama biçimidir. Korpus kavernozumun içi metal dilatatörlerle mekanik olarak zorlanmak yerine, doku planları basınçlı sıvı verilerek ayrılır. Amaç, genişletme sırasında kavernöz dokuya, tünikaya ve üretraya binen mekanik zorlamayı azaltmaktır. Kliniğimizde uygun görülen olgularda bu teknik kullanılmaktadır.',
           'Aquadisseksiyonun özellikle anlamlı olabildiği durumlar, korpus dokusunun sertleşip daraldığı (fibrotik) olgulardır: uzamış priapizm sonrası, daha önce yerleştirilmiş bir protezin enfeksiyon nedeniyle çıkarılmasının ardından veya ileri Peyronie hastalığında. Bu olgularda mekanik genişletme teknik olarak zordur ve yaralanma riski artar.'
         ],
         eligibility: {
@@ -416,11 +431,11 @@ export const treatments: Treatment[] = [
         faqs: [
           {
             q: 'Protezden sonra doğal ereksiyon mümkün olur mu?',
-            a: 'Hayır. Protez yerleştirilirken penisin süngerimsi dokusunun içi genişletildiği için doğal, kendiliğinden ereksiyon artık oluşmaz. Cihaz çıkarılsa bile önceki duruma dönülemez. Bu, ameliyatın geri dönüşsüz yanıdır ve kararınızı vermeden önce net olarak bilmeniz gerekir.'
+            a: 'Sertliği her durumda protez sağlar; cihazsız, ilişkiye yetecek bir ereksiyon beklenmemelidir. Klasik seri genişletme yönteminde sertleşme dokusu önemli ölçüde zarar gördüğü için kendiliğinden dolgunluk da büyük oranda kaybolur. Doku koruyucu yaklaşımlarda ise kavernöz doku ve arter olabildiğince korunur; 2026 tarihli bir meta-analiz bu hastalarda kısmi dolgunluğun (rezidüel tümesans) klasik yönteme kıyasla belirgin biçimde daha sık korunduğunu bildirmiştir. Yine de kararın kalıcı olduğu değişmez: protez takıldıktan sonra geri dönüş yoktur.'
           },
           {
             q: 'Aquadisseksiyon nedir, benim için farkı ne olur?',
-            a: 'Protez yerleştirilmeden önce penisin süngerimsi dokusunun içi genişletilir. Klasik yöntemde bu, metal dilatatörlerle mekanik olarak yapılır; aquadisseksiyonda ise doku planları basınçlı sıvı verilerek ayrılır. Hedef, bu aşamada dokuya uygulanan mekanik zorlamayı azaltmaktır. Teknik özellikle dokunun sertleşip daraldığı olgularda — uzamış priapizm sonrası, enfeksiyon nedeniyle protezi çıkarılmış hastalarda veya ileri Peyronie hastalığında — teknik kolaylık sağlayabilir. Sizin olgunuzda uygun olup olmadığı muayene ve görüntüleme sonrasında değerlendirilir.'
+            a: 'Protez yerleştirilmeden önce penisin süngerimsi dokusunun içi genişletilir. Klasik yöntemde bu metal dilatatörlerle mekanik olarak yapılır; aquadisseksiyonda ise doku planları basınçlı sıvı verilerek ayrılır. Bu, kavernöz dokuyu koruma amacı güden yaklaşımların bir uygulamasıdır. 2026 tarihli bir sistematik derleme ve meta-analiz, doku koruyucu tekniklerle kavernöz arter korunmasının ve ameliyat sonrası kısmi dolgunluğun klasik genişletmeye göre daha sık görüldüğünü, komplikasyon oranlarının ise benzer olduğunu bildirmiştir; bu kanıt 4 randomize çalışma ve 193 hastaya dayanır. Tekniğin özellikle anlamlı olabildiği durumlar, dokunun sertleşip daraldığı (fibrotik) olgulardır. Sizin olgunuzda uygun olup olmadığı muayene ve görüntüleme sonrasında değerlendirilir.'
           },
           {
             q: 'Boşalma ve orgazm etkilenir mi?',
