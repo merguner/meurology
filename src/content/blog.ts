@@ -12,10 +12,38 @@ export interface BlogSection {
   paragraphs: string[];
 }
 
+/** Blog kategorileri (prompt m.4.7). Etiketler messages Blog.categories.* altında. */
+export type BlogCategory =
+  | 'prostate'
+  | 'bph'
+  | 'andrology'
+  | 'stones'
+  | 'oncology'
+  | 'femaleUrology'
+  | 'healthTourism';
+
+/** Kaynakça maddesi. */
+export interface BlogSource {
+  label: string;
+  url?: string;
+}
+
 export interface BlogPost {
   slug: string;
-  date: string; // ISO
+  /** İlk yayın tarihi (ISO). */
+  date: string;
+  /** Son güncelleme tarihi (ISO). Yoksa date kullanılır. */
+  updated?: string;
+  /** Kategori — liste filtreleme ve iç linkleme için. */
+  category: BlogCategory;
   treatmentSlug?: string; // ilgili tedavi (opsiyonel)
+  /**
+   * TASLAK. true iken yazı yayında görünmez (liste, sitemap, statik üretim).
+   * Tıbbi metinler cerrah onayına kadar true kalır (prompt m.8.3).
+   */
+  draft?: boolean;
+  /** Kaynakça — tüm dillerde aynı (başlıklar çoğunlukla İngilizce). */
+  sources?: BlogSource[];
   i18n: Partial<
     Record<
       Locale,
@@ -30,10 +58,33 @@ export interface BlogPost {
   >;
 }
 
+/**
+ * Okuma süresini (dakika) içerikten hesaplar — elle girilmez.
+ * Dakikada ~200 kelime varsayımı; en az 1 dakika.
+ */
+export function readingMinutes(post: BlogPost, locale: Locale): number {
+  const c = post.i18n[locale] ?? post.i18n.en ?? post.i18n.tr;
+  if (!c) return 1;
+  const words = c.sections
+    .flatMap((s) => [s.heading, ...s.paragraphs])
+    .join(' ')
+    .trim()
+    .split(/\s+/).length;
+  return Math.max(1, Math.round(words / 200));
+}
+
 export const blogPosts: BlogPost[] = [
   {
     slug: 'prostat-kanseri-belirtileri-ve-tedavi-secenekleri',
     date: '2026-01-15',
+    updated: '2026-10-03',
+    category: 'prostate',
+    sources: [
+      {
+        label: 'EAU Guidelines on Prostate Cancer — European Association of Urology',
+        url: 'https://uroweb.org/guidelines/prostate-cancer'
+      }
+    ],
     treatmentSlug: 'robotik-prostatektomi',
     i18n: {
       tr: {
@@ -209,6 +260,14 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'bobrek-tasi-nasil-olusur-ve-korunma-yollari',
     date: '2026-02-10',
+    updated: '2026-10-03',
+    category: 'stones',
+    sources: [
+      {
+        label: 'EAU Guidelines on Urolithiasis — European Association of Urology',
+        url: 'https://uroweb.org/guidelines/urolithiasis'
+      }
+    ],
     treatmentSlug: 'bobrek-tasi',
     i18n: {
       tr: {
@@ -344,6 +403,20 @@ export const blogPosts: BlogPost[] = [
   }
 ];
 
-export function getBlogPost(slug: string): BlogPost | undefined {
-  return blogPosts.find((p) => p.slug === slug);
+/** Yayındaki yazılar — taslaklar hariç. Liste, sitemap ve statik üretim bunu kullanır. */
+export const publishedPosts = blogPosts
+  .filter((p) => !p.draft)
+  .sort((a, b) => (a.date < b.date ? 1 : -1));
+
+/** Slug ile yazı getirir; taslaklar yalnızca includeDrafts ile döner. */
+export function getBlogPost(slug: string, includeDrafts = false): BlogPost | undefined {
+  const p = blogPosts.find((x) => x.slug === slug);
+  if (!p) return undefined;
+  if (p.draft && !includeDrafts) return undefined;
+  return p;
+}
+
+/** Belirli kategorideki yayındaki yazılar. */
+export function postsByCategory(category: BlogCategory): BlogPost[] {
+  return publishedPosts.filter((p) => p.category === category);
 }

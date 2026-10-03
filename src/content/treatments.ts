@@ -15,6 +15,7 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     slug: 'robotik-prostatektomi',
+    lastReviewed: '2026-10-03',
     // TODO-DOGRULA: robotik prostatektomi EUR fiyat aralığı girilecek (priceRangeEUR).
     icon: 'robot',
     i18n: {
@@ -25,10 +26,46 @@ export const treatments: Treatment[] = [
         metaTitle: 'Robotik Prostatektomi | Prostat Kanseri Cerrahisi',
         metaDescription:
           'Robot destekli radikal prostatektomi ile prostat kanseri tedavisi: süreç, riskler, alternatifler, fiyat aralığı ve sık sorulan sorular.',
+        quickFacts: {
+          duration: '2–4 saat',
+          anesthesia: 'Genel anestezi',
+          hospitalStay: '2–3 gece',
+          stayInTurkey: '7–10 gün',
+          catheter: '7–10 gün',
+          returnToWork: '3–4 hafta',
+          flightClearance: '10. günden sonra'
+        },
         definition: [
           'Radikal prostatektomi, prostat kanserinin bez içinde sınırlı olduğu durumlarda prostat bezinin ve çevresindeki bir miktar dokunun tamamen alınması işlemidir.',
           'Robot destekli yöntemde cerrah, konsol başından yönettiği robotik kollar aracılığıyla milimetrik hassasiyetle çalışır. Küçük kesiler sayesinde kan kaybı, ağrı ve iyileşme süresi genellikle açık cerrahiye göre daha azdır.',
           'Amaç kanserin kontrol altına alınmasının yanında, mümkün olduğunda idrar tutma ve cinsel işlevi koruyan sinir koruyucu tekniğin uygulanmasıdır.'
+        ],
+        eligibility: {
+          suitable: [
+            'Kanserin prostat bezi içinde sınırlı olduğu (lokalize) hastalar',
+            'Genel sağlık durumu ameliyat ve genel anesteziye uygun olanlar',
+            'Beklenen yaşam süresi uzun, aktif tedavi tercih eden hastalar'
+          ],
+          notSuitable: [
+            'Yaygın metastaz varlığında (öncelik sistemik tedavi)',
+            'Ağır kalp/akciğer hastalığı nedeniyle anestezi riski yüksek olanlar',
+            'Çok düşük riskli, aktif izlem için uygun seçilmiş hastalar'
+          ]
+        },
+        technology: [
+          'da Vinci robotik cerrahi sistemi',
+          'Sinir koruyucu (nerve-sparing) teknik',
+          'Yüksek çözünürlüklü 3B görüntüleme ile milimetrik diseksiyon'
+        ],
+        recovery: [
+          { period: '1. hafta', body: 'Sonda ile taburculuk; kısa yürüyüşler önerilir, ağır kaldırmaktan kaçınılır.' },
+          { period: '2. hafta', body: 'Sonda alınır. İdrar kaçırma bu dönemde beklenebilir; pelvik taban egzersizlerine başlanır.' },
+          { period: '3–4. hafta', body: 'Günlük yaşama ve masa başı işe dönüş. Kontinans kademeli olarak düzelir.' },
+          { period: '2–3. ay', body: 'İdrar kontrolü hastaların çoğunda belirgin düzelir; ilk PSA kontrolü yapılır.' },
+          { period: '6–12. ay', body: 'Cinsel işlevin toparlanması bu döneme yayılır; sinir koruyucu cerrahide şans daha yüksektir.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Prostate Cancer — Avrupa Üroloji Derneği', url: 'https://uroweb.org/guidelines/prostate-cancer' }
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
@@ -111,10 +148,46 @@ export const treatments: Treatment[] = [
         metaTitle: 'Robotic Prostatectomy | Prostate Cancer Surgery',
         metaDescription:
           'Robot-assisted radical prostatectomy for prostate cancer: process, risks, alternatives, price range and frequently asked questions.',
+        quickFacts: {
+          duration: '2–4 hours',
+          anesthesia: 'General anesthesia',
+          hospitalStay: '2–3 nights',
+          stayInTurkey: '7–10 days',
+          catheter: '7–10 days',
+          returnToWork: '3–4 weeks',
+          flightClearance: 'From day 10'
+        },
         definition: [
           'Radical prostatectomy is the complete removal of the prostate gland and some surrounding tissue when cancer is confined to the gland.',
           'In the robot-assisted approach the surgeon operates robotic arms from a console with millimetric precision. Small incisions typically mean less blood loss, less pain and faster recovery than open surgery.',
           'The goal is cancer control while, where feasible, preserving urinary continence and sexual function through nerve-sparing technique.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients whose cancer is confined to the prostate gland (localized)',
+            'Those whose general health is suitable for surgery and general anesthesia',
+            'Patients with a long life expectancy who prefer active treatment'
+          ],
+          notSuitable: [
+            'Presence of widespread metastasis (systemic therapy takes priority)',
+            'High anesthetic risk due to severe heart or lung disease',
+            'Selected very-low-risk patients suitable for active surveillance'
+          ]
+        },
+        technology: [
+          'da Vinci robotic surgery system',
+          'Nerve-sparing technique',
+          'Millimetric dissection with high-definition 3D vision'
+        ],
+        recovery: [
+          { period: 'Week 1', body: 'Discharge with catheter; short walks are encouraged, heavy lifting is avoided.' },
+          { period: 'Week 2', body: 'The catheter is removed. Some urinary leakage is expected; pelvic floor exercises begin.' },
+          { period: 'Weeks 3–4', body: 'Return to daily life and desk work. Continence improves gradually.' },
+          { period: 'Months 2–3', body: 'Urinary control improves markedly in most patients; the first PSA check is done.' },
+          { period: 'Months 6–12', body: 'Recovery of sexual function occurs over this period; chances are higher after nerve-sparing surgery.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
@@ -195,10 +268,46 @@ export const treatments: Treatment[] = [
         summary: 'إزالة غدة البروستاتا بأسلوب دقيق قليل التوغل بمساعدة الروبوت لعلاج سرطان البروستاتا.',
         metaTitle: 'استئصال البروستاتا بالروبوت | جراحة سرطان البروستاتا',
         metaDescription: 'علاج سرطان البروستاتا باستئصال جذري بمساعدة الروبوت: مسار العلاج، المخاطر، البدائل، نطاق السعر والأسئلة الشائعة.',
+        quickFacts: {
+          duration: '2–4 ساعات',
+          anesthesia: 'تخدير عام',
+          hospitalStay: '2–3 ليالٍ',
+          stayInTurkey: '7–10 أيام',
+          catheter: '7–10 أيام',
+          returnToWork: '3–4 أسابيع',
+          flightClearance: 'بدءًا من اليوم العاشر'
+        },
         definition: [
           'استئصال البروستاتا الجذري هو إزالة غدة البروستاتا بالكامل مع جزء من الأنسجة المحيطة عندما يكون السرطان محصورًا داخل الغدة.',
           'في الأسلوب المعتمد على الروبوت يتحكم الجرّاح بأذرع روبوتية من وحدة تحكم بدقة تصل إلى المليمتر. وبفضل الشقوق الصغيرة يكون فقدان الدم والألم ومدة التعافي عادةً أقل مقارنةً بالجراحة المفتوحة.',
           'الهدف هو السيطرة على السرطان مع الحفاظ قدر الإمكان على التحكم في التبول والوظيفة الجنسية من خلال تقنية الحفاظ على الأعصاب.'
+        ],
+        eligibility: {
+          suitable: [
+            'المرضى الذين ينحصر لديهم السرطان داخل غدة البروستاتا (موضعي)',
+            'من تسمح حالتهم الصحية العامة بالجراحة والتخدير العام',
+            'المرضى ذوو العمر المتوقع الطويل الذين يفضّلون العلاج الفعّال'
+          ],
+          notSuitable: [
+            'وجود نقائل منتشرة (الأولوية للعلاج الجهازي)',
+            'ارتفاع خطر التخدير بسبب أمراض قلبية أو رئوية شديدة',
+            'مرضى مختارون منخفضو الخطورة جدًا ومناسبون للمراقبة النشطة'
+          ]
+        },
+        technology: [
+          'نظام الجراحة الروبوتية da Vinci',
+          'تقنية الحفاظ على الأعصاب',
+          'تشريح بدقة ميليمترية مع رؤية ثلاثية الأبعاد عالية الوضوح'
+        ],
+        recovery: [
+          { period: 'الأسبوع الأول', body: 'الخروج مع القسطرة؛ يُنصح بالمشي القصير وتجنّب رفع الأثقال.' },
+          { period: 'الأسبوع الثاني', body: 'تُزال القسطرة. قد يحدث تسرّب بولي؛ تبدأ تمارين قاع الحوض.' },
+          { period: 'الأسبوع 3–4', body: 'العودة إلى الحياة اليومية والعمل المكتبي. يتحسّن التحكّم بالبول تدريجيًا.' },
+          { period: 'الشهر 2–3', body: 'يتحسّن التحكّم بالبول بوضوح لدى معظم المرضى؛ ويُجرى أول فحص PSA.' },
+          { period: 'الشهر 6–12', body: 'يمتد تعافي الوظيفة الجنسية على هذه الفترة؛ وتكون الفرص أعلى بعد جراحة الحفاظ على الأعصاب.' }
+        ],
+        sources: [
+          { label: 'إرشادات EAU حول سرطان البروستاتا — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/prostate-cancer' }
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
@@ -249,10 +358,46 @@ export const treatments: Treatment[] = [
         summary: 'Robotergestützte, minimalinvasive Entfernung der Prostata bei Prostatakrebs.',
         metaTitle: 'Robotische Prostatektomie | Prostatakrebs-Chirurgie',
         metaDescription: 'Robotergestützte radikale Prostatektomie bei Prostatakrebs: Ablauf, Risiken, Alternativen, Preisspanne und häufige Fragen.',
+        quickFacts: {
+          duration: '2–4 Stunden',
+          anesthesia: 'Vollnarkose',
+          hospitalStay: '2–3 Nächte',
+          stayInTurkey: '7–10 Tage',
+          catheter: '7–10 Tage',
+          returnToWork: '3–4 Wochen',
+          flightClearance: 'Ab Tag 10'
+        },
         definition: [
           'Die radikale Prostatektomie ist die vollständige Entfernung der Prostata samt etwas umliegendem Gewebe, wenn der Krebs auf die Drüse begrenzt ist.',
           'Beim robotergestützten Verfahren steuert der Chirurg von einer Konsole aus Roboterarme mit millimetergenauer Präzision. Durch kleine Schnitte sind Blutverlust, Schmerzen und Erholungszeit in der Regel geringer als bei offener Chirurgie.',
           'Ziel ist die Tumorkontrolle bei möglichst weitgehendem Erhalt von Harnkontinenz und Sexualfunktion durch die nervenschonende Technik.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patienten, deren Krebs auf die Prostata begrenzt ist (lokalisiert)',
+            'Patienten, deren Allgemeinzustand Operation und Vollnarkose zulässt',
+            'Patienten mit langer Lebenserwartung, die eine aktive Therapie bevorzugen'
+          ],
+          notSuitable: [
+            'Bei ausgedehnter Metastasierung (systemische Therapie hat Vorrang)',
+            'Hohes Narkoserisiko bei schwerer Herz- oder Lungenerkrankung',
+            'Ausgewählte Patienten mit sehr niedrigem Risiko, geeignet für aktive Überwachung'
+          ]
+        },
+        technology: [
+          'da Vinci Robotik-Chirurgiesystem',
+          'Nervenschonende Technik',
+          'Millimetergenaue Präparation mit hochauflösender 3D-Sicht'
+        ],
+        recovery: [
+          { period: 'Woche 1', body: 'Entlassung mit Katheter; kurze Spaziergänge werden empfohlen, schweres Heben vermieden.' },
+          { period: 'Woche 2', body: 'Der Katheter wird entfernt. Etwas Harnverlust ist zu erwarten; Beckenbodenübungen beginnen.' },
+          { period: 'Woche 3–4', body: 'Rückkehr in den Alltag und zur Bürotätigkeit. Die Kontinenz bessert sich schrittweise.' },
+          { period: 'Monat 2–3', body: 'Die Harnkontrolle bessert sich bei den meisten Patienten deutlich; die erste PSA-Kontrolle erfolgt.' },
+          { period: 'Monat 6–12', body: 'Die Erholung der Sexualfunktion erstreckt sich über diesen Zeitraum; nach nervenschonender Operation sind die Chancen höher.' }
+        ],
+        sources: [
+          { label: 'EAU-Leitlinie Prostatakarzinom — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/prostate-cancer' }
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
@@ -303,10 +448,46 @@ export const treatments: Treatment[] = [
         summary: 'Роботизированное малоинвазивное удаление предстательной железы при раке простаты.',
         metaTitle: 'Роботическая простатэктомия | Хирургия рака простаты',
         metaDescription: 'Радикальная простатэктомия с помощью робота при раке простаты: процесс, риски, альтернативы, диапазон цен и часто задаваемые вопросы.',
+        quickFacts: {
+          duration: '2–4 часа',
+          anesthesia: 'Общая анестезия',
+          hospitalStay: '2–3 ночи',
+          stayInTurkey: '7–10 дней',
+          catheter: '7–10 дней',
+          returnToWork: '3–4 недели',
+          flightClearance: 'С 10-го дня'
+        },
         definition: [
           'Радикальная простатэктомия — это полное удаление предстательной железы и части окружающих тканей, когда рак ограничен пределами железы.',
           'При роботизированном подходе хирург управляет роботическими манипуляторами с консоли с точностью до миллиметра. Благодаря небольшим разрезам кровопотеря, боль и время восстановления обычно меньше, чем при открытой операции.',
           'Цель — контроль над опухолью при максимально возможном сохранении удержания мочи и половой функции с помощью нервосберегающей техники.'
+        ],
+        eligibility: {
+          suitable: [
+            'Пациенты, у которых опухоль ограничена предстательной железой (локализованная)',
+            'Пациенты, чьё общее состояние допускает операцию и общую анестезию',
+            'Пациенты с длительной ожидаемой продолжительностью жизни, выбирающие активное лечение'
+          ],
+          notSuitable: [
+            'Наличие распространённых метастазов (приоритет — системная терапия)',
+            'Высокий анестезиологический риск при тяжёлых заболеваниях сердца или лёгких',
+            'Отдельные пациенты очень низкого риска, подходящие для активного наблюдения'
+          ]
+        },
+        technology: [
+          'Роботическая хирургическая система da Vinci',
+          'Нервосберегающая техника',
+          'Миллиметровая диссекция с 3D-визуализацией высокого разрешения'
+        ],
+        recovery: [
+          { period: '1-я неделя', body: 'Выписка с катетером; рекомендуются короткие прогулки, подъём тяжестей исключён.' },
+          { period: '2-я неделя', body: 'Катетер удаляют. Возможно подтекание мочи; начинают упражнения для мышц тазового дна.' },
+          { period: '3–4-я неделя', body: 'Возвращение к повседневной жизни и офисной работе. Удержание мочи постепенно улучшается.' },
+          { period: '2–3-й месяц', body: 'У большинства пациентов контроль мочеиспускания заметно улучшается; выполняется первый контроль PSA.' },
+          { period: '6–12-й месяц', body: 'Восстановление половой функции занимает этот период; после нервосберегающей операции шансы выше.' }
+        ],
+        sources: [
+          { label: 'Рекомендации EAU по раку предстательной железы — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/prostate-cancer' }
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
@@ -359,10 +540,46 @@ export const treatments: Treatment[] = [
         metaTitle: 'Prostatectomie robotique | Chirurgie du cancer de la prostate',
         metaDescription:
           'Prostatectomie radicale assistée par robot pour le cancer de la prostate : déroulement, risques, alternatives, fourchette de prix et questions fréquentes.',
+        quickFacts: {
+          duration: '2 à 4 heures',
+          anesthesia: 'Anesthésie générale',
+          hospitalStay: '2 à 3 nuits',
+          stayInTurkey: '7 à 10 jours',
+          catheter: '7 à 10 jours',
+          returnToWork: '3 à 4 semaines',
+          flightClearance: 'À partir du 10e jour'
+        },
         definition: [
           'La prostatectomie radicale consiste à retirer complètement la glande prostatique et une partie des tissus environnants lorsque le cancer est limité à la glande.',
           'Dans l’approche assistée par robot, le chirurgien pilote des bras robotisés depuis une console avec une précision millimétrique. De petites incisions entraînent généralement moins de saignement, moins de douleur et une récupération plus rapide qu’en chirurgie ouverte.',
           'L’objectif est le contrôle du cancer tout en préservant, lorsque c’est possible, la continence urinaire et la fonction sexuelle grâce à la technique de préservation nerveuse.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients dont le cancer est limité à la prostate (localisé)',
+            'Patients dont l’état général permet la chirurgie et l’anesthésie générale',
+            'Patients avec une longue espérance de vie qui privilégient un traitement actif'
+          ],
+          notSuitable: [
+            'Présence de métastases étendues (priorité au traitement systémique)',
+            'Risque anesthésique élevé en cas de cardiopathie ou pneumopathie sévère',
+            'Patients sélectionnés à très faible risque, éligibles à la surveillance active'
+          ]
+        },
+        technology: [
+          'Système de chirurgie robotique da Vinci',
+          'Technique de préservation nerveuse',
+          'Dissection millimétrique avec vision 3D haute définition'
+        ],
+        recovery: [
+          { period: 'Semaine 1', body: 'Sortie avec sonde ; de courtes marches sont recommandées, le port de charges est évité.' },
+          { period: 'Semaine 2', body: 'La sonde est retirée. Des fuites urinaires sont attendues ; la rééducation périnéale débute.' },
+          { period: 'Semaines 3–4', body: 'Reprise de la vie quotidienne et du travail de bureau. La continence s’améliore progressivement.' },
+          { period: 'Mois 2–3', body: 'Le contrôle urinaire s’améliore nettement chez la plupart des patients ; le premier PSA de contrôle est réalisé.' },
+          { period: 'Mois 6–12', body: 'La récupération de la fonction sexuelle s’étale sur cette période ; les chances sont meilleures après une chirurgie avec préservation nerveuse.' }
+        ],
+        sources: [
+          { label: 'Recommandations EAU sur le cancer de la prostate — Association européenne d’urologie', url: 'https://uroweb.org/guidelines/prostate-cancer' }
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
@@ -3591,15 +3808,35 @@ export const treatments: Treatment[] = [
 // bir alan varsa build burada net bir mesajla kırılır (sessizce boş geçmez).
 assertTreatmentsValid(treatments);
 
-export function getTreatment(slug: string): Treatment | undefined {
-  return treatments.find((t) => t.slug === slug);
+/**
+ * YAYINDAKİ tedaviler — taslaklar (draft: true) hariç.
+ * Liste, menü, sitemap ve statik üretim DAİMA bunu kullanır;
+ * ham "treatments" dizisi yalnızca içerik yönetimi içindir.
+ */
+export const publishedTreatments = treatments.filter((t) => !t.draft);
+
+/** Slug ile tedavi getirir. Taslaklar yalnızca includeDrafts ile döner. */
+export function getTreatment(
+  slug: string,
+  includeDrafts = false
+): Treatment | undefined {
+  const t = treatments.find((x) => x.slug === slug);
+  if (!t) return undefined;
+  if (t.draft && !includeDrafts) return undefined;
+  return t;
 }
 
-export const treatmentSlugs = treatments.map((t) => t.slug);
+/** Yayındaki tedavi slug'ları (statik üretim ve sitemap için). */
+export const treatmentSlugs = publishedTreatments.map((t) => t.slug);
 
-/** Belirli kategorideki tedaviler. */
+/** Belirli kategorideki YAYINDAKİ tedaviler. */
 export function treatmentsByCategory(category: TreatmentCategory): Treatment[] {
-  return treatments.filter((t) => treatmentCategory(t) === category);
+  return publishedTreatments.filter((t) => treatmentCategory(t) === category);
+}
+
+/** Bir hub'ın yayındaki alt sayfaları. */
+export function childTreatments(parentSlug: string): Treatment[] {
+  return publishedTreatments.filter((t) => t.parent === parentSlug);
 }
 
 /** Genel (fiyat/hacim odaklı) tedaviler — ana sayfa/menü kart gridleri için. */

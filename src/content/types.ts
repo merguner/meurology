@@ -59,6 +59,47 @@ export interface ExpertiseSignals {
   advancedTechnique: string;
 }
 
+/**
+ * HIZLI BİLGİ KUTUSU (prompt m.4.2/2).
+ * Hastanın en çok sorduğu pratik bilgiler, sayfanın en üstünde.
+ * Her alan opsiyoneldir; boş olan satır render EDİLMEZ.
+ */
+export interface QuickFacts {
+  /** İşlem süresi — ör. "2–4 saat". */
+  duration?: string;
+  /** Anestezi tipi — ör. "Genel anestezi". */
+  anesthesia?: string;
+  /** Hastanede kalış — ör. "1 gece". */
+  hospitalStay?: string;
+  /** Türkiye'de toplam kalış (yabancı hasta) — ör. "7–10 gün". */
+  stayInTurkey?: string;
+  /** Sonda süresi — ör. "7–10 gün". */
+  catheter?: string;
+  /** İşe dönüş — ör. "2–3 hafta". */
+  returnToWork?: string;
+  /** Uçuşa izin — ör. "10. günden sonra". */
+  flightClearance?: string;
+}
+
+/** Kimlere uygundur / uygun değildir (prompt m.4.2/4). */
+export interface Eligibility {
+  suitable: string[];
+  notSuitable: string[];
+}
+
+/** Hafta hafta iyileşme (prompt m.4.2/10). */
+export interface RecoveryStep {
+  /** ör. "1. hafta" */
+  period: string;
+  body: string;
+}
+
+/** Bilimsel kaynak (prompt m.4.2/14). */
+export interface ContentSource {
+  label: string;
+  url?: string;
+}
+
 export interface TreatmentContent {
   title: string;
   /** Kart ve meta açıklaması için kısa özet. */
@@ -66,8 +107,18 @@ export interface TreatmentContent {
   /** SEO meta title/description. */
   metaTitle: string;
   metaDescription: string;
+  /** Hızlı bilgi kutusu — opsiyonel, boş alanlar gizlenir. */
+  quickFacts?: QuickFacts;
   /** Durumun sade dille tanımı (paragraflar). */
   definition: string[];
+  /** Kimlere uygundur / uygun değildir. */
+  eligibility?: Eligibility;
+  /** Kullanılan teknoloji (cihaz adı/modeli) — trust.ts'ten de beslenebilir. */
+  technology?: string[];
+  /** Hafta hafta iyileşme süreci. */
+  recovery?: RecoveryStep[];
+  /** Bilimsel kaynaklar (EAU kılavuzu, cerrahın yayınları). */
+  sources?: ContentSource[];
   /** Bu prosedürde cerrah deneyimi — PLACEHOLDER sayılar. */
   surgeonExperience: {
     caseVolume: string; // ör. "1.500+ vaka" (PLACEHOLDER)
@@ -98,6 +149,19 @@ export interface Treatment {
   icon: string;
   /** Kategori — belirtilmezse 'general' kabul edilir. */
   category?: TreatmentCategory;
+  /**
+   * TASLAK. true iken sayfa YAYINDA GÖRÜNMEZ:
+   * listelerde ve menüde çıkmaz, sitemap'e girmez, statik olarak üretilmez.
+   * Tıbbi metinler cerrah tarafından onaylanana kadar true kalır (prompt m.8.3).
+   */
+  draft?: boolean;
+  /**
+   * Üst kategori (hub) slug'ı. Verilirse bu sayfa o hub'ın alt sayfasıdır.
+   * Hub'ın kendisi parent almaz. Ekmek kırıntısı ve iç linkleme bunu kullanır.
+   */
+  parent?: string;
+  /** Son tıbbi gözden geçirme tarihi (ISO) — sayfada gösterilir, JSON-LD lastReviewed. */
+  lastReviewed?: string;
   /**
    * Fiyat aralığı — EURO (tedavi başına bir kez; dile bağlı değil).
    * YALNIZCA features(locale).prices === true olan dillerde gösterilir;

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { buildAlternates } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
-import { treatments } from '@/content/treatments';
+import { publishedTreatments } from '@/content/treatments';
 import { resolveContent } from '@/content/types';
 import { PageHero } from '@/components/PageHero';
 import { TreatmentCard } from '@/components/TreatmentCard';
@@ -41,7 +41,7 @@ export default async function TreatmentsPage({
       />
       <section className="container-content py-12">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {treatments.map((tr) => {
+          {publishedTreatments.map((tr) => {
             const c = resolveContent(tr, locale);
             return (
               <TreatmentCard

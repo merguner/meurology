@@ -97,7 +97,23 @@
     "complexCaseLabel": "Définition d'un cas complexe",
     "advancedTechniqueLabel": "Technique avancée utilisée",
     "patientStories": "Avis de patients",
-    "sectionPackage": "Contenu du forfait"
+    "sectionPackage": "Contenu du forfait",
+    "lastReviewed": "Dernière révision médicale : {date} — {reviewer}",
+    "sectionEligibility": "À qui s’adresse ce traitement ?",
+    "eligibleTitle": "Peut convenir",
+    "notEligibleTitle": "Peut ne pas convenir",
+    "sectionTechnology": "Technologie utilisée",
+    "sectionRecovery": "Récupération",
+    "sectionSources": "Sources scientifiques",
+    "quickFacts": {
+      "duration": "Durée de l’intervention",
+      "anesthesia": "Anesthésie",
+      "hospitalStay": "Séjour hospitalier",
+      "stayInTurkey": "Séjour en Türkiye",
+      "catheter": "Durée de la sonde",
+      "returnToWork": "Reprise du travail",
+      "flightClearance": "Autorisation de vol"
+    }
   },
   "Surgeon": {
     "title": "Profil du chirurgien",
@@ -172,7 +188,20 @@
     "readingTime": "de lecture",
     "relatedTreatment": "Traitement associé",
     "backToBlog": "Retour au Centre d'information",
-    "publishedOn": "Publié le"
+    "publishedOn": "Publié le",
+    "updatedOn": "Mis à jour le",
+    "tocTitle": "Sommaire",
+    "sourcesTitle": "Références",
+    "allCategories": "Toutes les catégories",
+    "categories": {
+      "prostate": "Prostate",
+      "bph": "HBP",
+      "andrology": "Andrologie",
+      "stones": "Lithiase urinaire",
+      "oncology": "Uro-oncologie",
+      "femaleUrology": "Urologie féminine",
+      "healthTourism": "Tourisme médical"
+    }
   },
   "Contact": {
     "title": "Contact",

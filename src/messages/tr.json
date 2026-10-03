@@ -97,7 +97,23 @@
     "complexCaseLabel": "Kompleks vaka tanımı",
     "advancedTechniqueLabel": "Kullanılan ileri teknik",
     "patientStories": "Hasta yorumları",
-    "sectionPackage": "Paket kapsamı"
+    "sectionPackage": "Paket kapsamı",
+    "lastReviewed": "Son tıbbi gözden geçirme: {date} — {reviewer}",
+    "sectionEligibility": "Kimlere uygundur?",
+    "eligibleTitle": "Uygun olabilir",
+    "notEligibleTitle": "Uygun olmayabilir",
+    "sectionTechnology": "Kullanılan teknoloji",
+    "sectionRecovery": "İyileşme süreci",
+    "sectionSources": "Bilimsel kaynaklar",
+    "quickFacts": {
+      "duration": "İşlem süresi",
+      "anesthesia": "Anestezi",
+      "hospitalStay": "Hastanede kalış",
+      "stayInTurkey": "Türkiye’de kalış",
+      "catheter": "Sonda süresi",
+      "returnToWork": "İşe dönüş",
+      "flightClearance": "Uçuşa izin"
+    }
   },
   "Surgeon": {
     "title": "Cerrah Profili",
@@ -172,7 +188,20 @@
     "readingTime": "okuma",
     "relatedTreatment": "İlgili tedavi",
     "backToBlog": "Bilgi Merkezi'ne dön",
-    "publishedOn": "Yayın tarihi"
+    "publishedOn": "Yayın tarihi",
+    "updatedOn": "Güncelleme",
+    "tocTitle": "İçindekiler",
+    "sourcesTitle": "Kaynakça",
+    "allCategories": "Tüm kategoriler",
+    "categories": {
+      "prostate": "Prostat",
+      "bph": "BPH",
+      "andrology": "Androloji",
+      "stones": "Taş Hastalığı",
+      "oncology": "Üroonkoloji",
+      "femaleUrology": "Kadın Ürolojisi",
+      "healthTourism": "Sağlık Turizmi"
+    }
   },
   "Contact": {
     "title": "İletişim",

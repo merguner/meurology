@@ -97,7 +97,23 @@
     "complexCaseLabel": "Definition komplexer Fälle",
     "advancedTechniqueLabel": "Verwendete fortgeschrittene Technik",
     "patientStories": "Patientenbewertungen",
-    "sectionPackage": "Leistungsumfang"
+    "sectionPackage": "Leistungsumfang",
+    "lastReviewed": "Zuletzt medizinisch geprüft: {date} — {reviewer}",
+    "sectionEligibility": "Für wen ist es geeignet?",
+    "eligibleTitle": "Kann geeignet sein",
+    "notEligibleTitle": "Kann ungeeignet sein",
+    "sectionTechnology": "Eingesetzte Technologie",
+    "sectionRecovery": "Genesung",
+    "sectionSources": "Wissenschaftliche Quellen",
+    "quickFacts": {
+      "duration": "Eingriffsdauer",
+      "anesthesia": "Anästhesie",
+      "hospitalStay": "Krankenhausaufenthalt",
+      "stayInTurkey": "Aufenthalt in der Türkei",
+      "catheter": "Katheterdauer",
+      "returnToWork": "Rückkehr zur Arbeit",
+      "flightClearance": "Flugfreigabe"
+    }
   },
   "Surgeon": {
     "title": "Chirurgenprofil",
@@ -172,7 +188,20 @@
     "readingTime": "Lesezeit",
     "relatedTreatment": "Zugehörige Behandlung",
     "backToBlog": "Zurück zum Wissenszentrum",
-    "publishedOn": "Veröffentlicht am"
+    "publishedOn": "Veröffentlicht am",
+    "updatedOn": "Aktualisiert",
+    "tocTitle": "Inhalt",
+    "sourcesTitle": "Quellen",
+    "allCategories": "Alle Kategorien",
+    "categories": {
+      "prostate": "Prostata",
+      "bph": "BPH",
+      "andrology": "Andrologie",
+      "stones": "Steinleiden",
+      "oncology": "Uroonkologie",
+      "femaleUrology": "Urologie der Frau",
+      "healthTourism": "Gesundheitstourismus"
+    }
   },
   "Contact": {
     "title": "Kontakt",

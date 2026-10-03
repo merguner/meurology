@@ -4,17 +4,18 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { routing, type Locale } from '@/i18n/routing';
-import { blogPosts, getBlogPost } from '@/content/blog';
+import { publishedPosts, getBlogPost, readingMinutes } from '@/content/blog';
 import { getTreatment } from '@/content/treatments';
 import { resolveContent } from '@/content/types';
 import { siteConfig } from '@/config/site';
+import { surgeonFullName } from '@/content/surgeon';
 import { Icon } from '@/components/Icon';
 import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { JsonLd } from '@/components/JsonLd';
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    blogPosts.map((p) => ({ locale, slug: p.slug }))
+    publishedPosts.map((p) => ({ locale, slug: p.slug }))
   );
 }
 
@@ -47,17 +48,35 @@ export default async function BlogPostPage({
 
   const c = post.i18n[locale] ?? post.i18n.en ?? post.i18n.tr!;
   const t = await getTranslations('Blog');
+  const tc = await getTranslations('Blog');
+  const tt = await getTranslations('Treatment');
 
   const relatedTreatment = post.treatmentSlug ? getTreatment(post.treatmentSlug) : undefined;
   const relatedTitle = relatedTreatment ? resolveContent(relatedTreatment, locale).title : undefined;
 
+  const author = surgeonFullName(locale);
+  const minutes = readingMinutes(post, locale);
+  const fmtDate = (iso: string) =>
+    new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(`${iso}T00:00:00`));
+
+  /**
+   * Article + yazar olarak Physician (prompt m.3.4).
+   * Tıbbi içerikte yazar kimliği (E-E-A-T) arama görünürlüğü için belirleyicidir.
+   */
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'MedicalWebPage',
+    '@type': 'Article',
     headline: c.title,
     description: c.metaDescription,
     inLanguage: locale,
     datePublished: post.date,
+    dateModified: post.updated ?? post.date,
+    author: {
+      '@type': 'Physician',
+      name: author,
+      medicalSpecialty: 'Urology',
+      url: `${siteConfig.domain}${getPathname({ locale, href: '/cerrah' })}`
+    },
     url: `${siteConfig.domain}${getPathname({ locale, href: { pathname: '/blog/[slug]', params: { slug } } })}`,
     publisher: { '@type': 'Organization', name: siteConfig.name }
   };
@@ -71,14 +90,46 @@ export default async function BlogPostPage({
           {t('backToBlog')}
         </Link>
 
-        <p className="label-mono">
-          {t('publishedOn')}:{' '}
-          <time dateTime={post.date}>
-            {new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(post.date))}
-          </time>
-        </p>
+        <p className="label-mono">{tc(`categories.${post.category}` as never)}</p>
         <h1 className="mt-2 text-3xl font-bold leading-tight md:text-4xl">{c.title}</h1>
         <p className="mt-4 text-lg text-muted">{c.excerpt}</p>
+
+        {/* YAZAR KUTUSU + tarihler + okuma süresi (prompt m.4.7). */}
+        <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 rounded-xl border border-border bg-surface p-4 text-sm">
+          <Link href="/cerrah" className="flex items-center gap-2.5 font-semibold hover:text-primary">
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-soft text-primary">
+              <Icon name="shield" size={18} />
+            </span>
+            {author}
+          </Link>
+          <span className="text-muted">
+            {t('publishedOn')}: <time dateTime={post.date}>{fmtDate(post.date)}</time>
+          </span>
+          {post.updated && post.updated !== post.date && (
+            <span className="text-muted">
+              {t('updatedOn')}: <time dateTime={post.updated}>{fmtDate(post.updated)}</time>
+            </span>
+          )}
+          <span className="text-muted">
+            {minutes} {t('readingTime')}
+          </span>
+        </div>
+
+        {/* İÇİNDEKİLER — iki bölümden fazlaysa gösterilir. */}
+        {c.sections.length > 2 && (
+          <nav aria-label={t('tocTitle')} className="mt-6 rounded-xl border border-border bg-surface-2 p-5">
+            <p className="mb-2 font-semibold">{t('tocTitle')}</p>
+            <ol className="space-y-1.5 text-sm">
+              {c.sections.map((s, i) => (
+                <li key={i}>
+                  <a href={`#bolum-${i}`} className="text-muted underline-offset-2 hover:text-primary hover:underline">
+                    {s.heading}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
 
         {relatedTreatment && relatedTitle && (
           <Link
@@ -93,7 +144,7 @@ export default async function BlogPostPage({
 
         <div className="mt-8 space-y-8">
           {c.sections.map((section, i) => (
-            <section key={i}>
+            <section key={i} id={`bolum-${i}`} className="scroll-mt-24">
               <h2 className="text-xl font-bold">{section.heading}</h2>
               <div className="prose-content mt-3 space-y-3">
                 {section.paragraphs.map((p, j) => (
@@ -104,7 +155,35 @@ export default async function BlogPostPage({
           ))}
         </div>
 
-        <div className="mt-12 rounded-xl border border-primary/25 bg-primary-soft/50 p-6">
+        {/* KAYNAKÇA */}
+        {post.sources && post.sources.length > 0 && (
+          <section className="mt-10">
+            <h2 className="mb-3 text-lg font-bold">{t('sourcesTitle')}</h2>
+            <ul className="space-y-2">
+              {post.sources.map((src, i) => (
+                <li key={i} className="flex gap-2 text-sm text-muted">
+                  <Icon name="document" size={15} className="mt-0.5 shrink-0 text-primary" />
+                  {src.url ? (
+                    <a
+                      href={src.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-2 hover:text-primary"
+                    >
+                      {src.label}
+                    </a>
+                  ) : (
+                    src.label
+                  )}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <p className="mt-8 text-xs text-muted">{tt('medicalDisclaimer')}</p>
+
+        <div className="mt-10 rounded-xl border border-primary/25 bg-primary-soft/50 p-6">
           <WhatsAppCta />
         </div>
       </article>

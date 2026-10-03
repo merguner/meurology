@@ -97,7 +97,23 @@
     "complexCaseLabel": "Complex case definition",
     "advancedTechniqueLabel": "Advanced technique used",
     "patientStories": "Patient reviews",
-    "sectionPackage": "Package scope"
+    "sectionPackage": "Package scope",
+    "lastReviewed": "Last medically reviewed: {date} — {reviewer}",
+    "sectionEligibility": "Who is it suitable for?",
+    "eligibleTitle": "May be suitable",
+    "notEligibleTitle": "May not be suitable",
+    "sectionTechnology": "Technology used",
+    "sectionRecovery": "Recovery",
+    "sectionSources": "Scientific sources",
+    "quickFacts": {
+      "duration": "Procedure time",
+      "anesthesia": "Anesthesia",
+      "hospitalStay": "Hospital stay",
+      "stayInTurkey": "Stay in Türkiye",
+      "catheter": "Catheter duration",
+      "returnToWork": "Return to work",
+      "flightClearance": "Flight clearance"
+    }
   },
   "Surgeon": {
     "title": "Surgeon Profile",
@@ -172,7 +188,20 @@
     "readingTime": "read",
     "relatedTreatment": "Related treatment",
     "backToBlog": "Back to Knowledge Center",
-    "publishedOn": "Published on"
+    "publishedOn": "Published on",
+    "updatedOn": "Updated",
+    "tocTitle": "Contents",
+    "sourcesTitle": "References",
+    "allCategories": "All categories",
+    "categories": {
+      "prostate": "Prostate",
+      "bph": "BPH",
+      "andrology": "Andrology",
+      "stones": "Stone Disease",
+      "oncology": "Uro-Oncology",
+      "femaleUrology": "Female Urology",
+      "healthTourism": "Health Tourism"
+    }
   },
   "Contact": {
     "title": "Contact",

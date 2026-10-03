@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { buildAlternates } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
-import { blogPosts } from '@/content/blog';
+import { publishedPosts, readingMinutes } from '@/content/blog';
 import { PageHero } from '@/components/PageHero';
 import { Link } from '@/i18n/navigation';
 import { Icon } from '@/components/Icon';
@@ -30,7 +30,7 @@ export default async function BlogIndexPage({
   setRequestLocale(locale);
   const t = await getTranslations('Blog');
 
-  const posts = [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const posts = publishedPosts; // zaten tarihe göre sıralı, taslaklar hariç
 
   return (
     <>
@@ -45,13 +45,20 @@ export default async function BlogIndexPage({
                 href={{ pathname: '/blog/[slug]', params: { slug: post.slug } }}
                 className="card group flex flex-col p-6 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg"
               >
-                <time dateTime={post.date} className="label-mono">
-                  {new Intl.DateTimeFormat(locale, { dateStyle: 'medium' }).format(new Date(post.date))}
-                </time>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <span className="chip border-primary/30 bg-primary-soft text-primary">
+                    {t(`categories.${post.category}` as never)}
+                  </span>
+                  <time dateTime={post.updated ?? post.date} className="label-mono">
+                    {new Intl.DateTimeFormat(locale, { dateStyle: 'medium' }).format(
+                      new Date(`${post.updated ?? post.date}T00:00:00`)
+                    )}
+                  </time>
+                </div>
                 <h2 className="mt-2 text-lg font-bold leading-snug">{c.title}</h2>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{c.excerpt}</p>
                 <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
-                  {t('readingTime')}
+                  {readingMinutes(post, locale)} {t('readingTime')}
                   <Icon name="arrow" size={16} className="rtl:rotate-180" />
                 </span>
               </Link>

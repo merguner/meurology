@@ -6,6 +6,8 @@ import { PageHero } from '@/components/PageHero';
 import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { Icon } from '@/components/Icon';
 import { Link } from '@/i18n/navigation';
+import { resolveInternationalFaq } from '@/content/internationalFaq';
+import { JsonLd } from '@/components/JsonLd';
 
 export async function generateMetadata({
   params
@@ -32,6 +34,7 @@ export default async function ProcessPage({
   const tc = await getTranslations('Common');
 
   const steps = ['s1', 's2', 's3', 's4', 's5'] as const;
+  const faqs = resolveInternationalFaq(locale);
   const packageItems = [
     t('packageAccommodation'),
     t('packageTransfer'),
@@ -39,8 +42,20 @@ export default async function ProcessPage({
     t('packageFollowup')
   ];
 
+  // FAQPage yapısal verisi — arama sonuçlarında soru/cevap görünürlüğü.
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a }
+    }))
+  };
+
   return (
     <>
+      {faqs.length > 0 && <JsonLd data={faqJsonLd} />}
       <PageHero eyebrow={t('title')} title={t('title')} description={t('subtitle')} />
 
       <div className="container-content py-12">
@@ -88,6 +103,28 @@ export default async function ProcessPage({
           <p className="mt-3 max-w-3xl text-muted">{t('visaBody')}</p>
           <p className="mt-3 text-xs text-muted">{t('visaDisclaimer')}</p>
         </section>
+
+        {/* SSS — süreç, ödeme, seyahat, komplikasyon ve takip (prompt m.4.5) */}
+        {faqs.length > 0 && (
+          <section className="mt-14">
+            <h2 className="mb-6 text-xl font-bold md:text-2xl">{t('faqTitle')}</h2>
+            <div className="divide-y divide-border rounded-xl border border-border">
+              {faqs.map((f, i) => (
+                <details key={i} className="group px-5 py-4">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium">
+                    {f.q}
+                    <Icon
+                      name="arrow"
+                      size={18}
+                      className="shrink-0 rotate-90 text-muted transition-transform group-open:-rotate-90"
+                    />
+                  </summary>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* CTA */}
         <section className="mt-14 flex flex-col items-start gap-4 rounded-2xl bg-primary p-8 text-primary-fg md:flex-row md:items-center md:justify-between md:p-10">

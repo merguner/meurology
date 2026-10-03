@@ -4,7 +4,7 @@ import { getPathname, treatmentHref } from '@/i18n/navigation';
 import { siteConfig } from '@/config/site';
 import { features } from '@/config/features';
 import { treatmentSlugs } from '@/content/treatments';
-import { blogPosts } from '@/content/blog';
+import { publishedPosts } from '@/content/blog';
 
 /** Tüm diller ve içerik yolları için otomatik sitemap (lokalize slug'larla). */
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const dynamicHrefs = [
     // Tedaviler aşağıda dil bazlı slug ile ayrıca eklenir (bkz. treatmentEntries).
-    ...blogPosts.map((p) => ({ pathname: '/blog/[slug]', params: { slug: p.slug } }) as const)
+    ...publishedPosts.map((p) => ({ pathname: '/blog/[slug]', params: { slug: p.slug } }) as const)
   ];
 
   const allHrefs = [...staticHrefs, ...dynamicHrefs];

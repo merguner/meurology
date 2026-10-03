@@ -97,7 +97,23 @@
     "complexCaseLabel": "تعريف الحالة المعقّدة",
     "advancedTechniqueLabel": "التقنية المتقدمة المستخدمة",
     "patientStories": "تقييمات المرضى",
-    "sectionPackage": "نطاق الباقة"
+    "sectionPackage": "نطاق الباقة",
+    "lastReviewed": "آخر مراجعة طبية: {date} — {reviewer}",
+    "sectionEligibility": "لمن تناسب؟",
+    "eligibleTitle": "قد تكون مناسبة",
+    "notEligibleTitle": "قد لا تكون مناسبة",
+    "sectionTechnology": "التقنية المستخدمة",
+    "sectionRecovery": "فترة التعافي",
+    "sectionSources": "المصادر العلمية",
+    "quickFacts": {
+      "duration": "مدة العملية",
+      "anesthesia": "التخدير",
+      "hospitalStay": "الإقامة في المستشفى",
+      "stayInTurkey": "الإقامة في تركيا",
+      "catheter": "مدة القسطرة",
+      "returnToWork": "العودة إلى العمل",
+      "flightClearance": "الإذن بالسفر جوًا"
+    }
   },
   "Surgeon": {
     "title": "الملف الشخصي للجرّاح",
@@ -172,7 +188,20 @@
     "readingTime": "قراءة",
     "relatedTreatment": "العلاج المرتبط",
     "backToBlog": "العودة إلى مركز المعرفة",
-    "publishedOn": "تاريخ النشر"
+    "publishedOn": "تاريخ النشر",
+    "updatedOn": "آخر تحديث",
+    "tocTitle": "المحتويات",
+    "sourcesTitle": "المراجع",
+    "allCategories": "كل الفئات",
+    "categories": {
+      "prostate": "البروستاتا",
+      "bph": "تضخم البروستاتا الحميد",
+      "andrology": "طب الذكورة",
+      "stones": "أمراض الحصوات",
+      "oncology": "أورام المسالك البولية",
+      "femaleUrology": "المسالك البولية النسائية",
+      "healthTourism": "السياحة الصحية"
+    }
   },
   "Contact": {
     "title": "اتصل بنا",

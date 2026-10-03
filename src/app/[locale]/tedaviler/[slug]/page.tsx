@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import { buildTreatmentAlternates, treatmentHref, getPathname } from '@/i18n/navigation';
-import { canonicalSlug, localizedSlug, slugsForLocale } from '@/i18n/slugs';
+import { canonicalSlug, localizedSlug } from '@/i18n/slugs';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { routing, type Locale } from '@/i18n/routing';
-import { getTreatment, treatments, treatmentSlugs } from '@/content/treatments';
+import { getTreatment, publishedTreatments } from '@/content/treatments';
 import { resolveContent, treatmentCategory, isPlaceholder } from '@/content/types';
 import { resolveConsultation } from '@/content/consultation';
 import { siteConfig, formatPriceRangeEUR, whatsappMessageFor } from '@/config/site';
+import { contactConfig } from '@/config/contact';
 import { surgeon, surgeonFullName } from '@/content/surgeon';
 import { SectionHeading } from '@/components/PageHero';
 import { Icon } from '@/components/Icon';
@@ -24,9 +25,9 @@ import { features } from '@/config/features';
 
 // Tüm dil + slug kombinasyonlarını statik üret (hız için).
 export function generateStaticParams() {
-  // Her dil KENDİ slug'larıyla üretilir (ör. /en/treatments/kidney-stones).
+  // Her dil KENDİ slug'ıyla; TASLAKLAR üretilmez (draft: true).
   return routing.locales.flatMap((locale) =>
-    slugsForLocale(locale).map((slug) => ({ locale, slug }))
+    publishedTreatments.map((t) => ({ locale, slug: localizedSlug(t.slug, locale) }))
   );
 }
 
@@ -63,6 +64,7 @@ export default async function TreatmentPage({
   const c = resolveContent(treatment, locale);
   const t = await getTranslations('Treatment');
   const tc = await getTranslations('Common');
+  const tn = await getTranslations('Nav');
   const tf = await getTranslations('Form');
   const te = await getTranslations('Experiences');
 
@@ -75,12 +77,39 @@ export default async function TreatmentPage({
   const isReconstructive = treatmentCategory(treatment) === 'reconstructive';
   // Sayfaya özel WhatsApp ön-dolu mesajı + kaynak takip kodu (ör. [TR-BOBREK-TASI]).
   const waMessage = whatsappMessageFor(tc('whatsappTopicMessage', { topic: c.title }), locale, slug);
+
+  /**
+   * Hızlı bilgi kutusu satırları — yalnızca DOLU alanlar.
+   * Sıra sabittir; etiketler messages Treatment.quickFacts.* altında.
+   */
+  const QUICK_FACT_KEYS = [
+    'duration',
+    'anesthesia',
+    'hospitalStay',
+    'stayInTurkey',
+    'catheter',
+    'returnToWork',
+    'flightClearance'
+  ] as const;
+  const quickFactRows = QUICK_FACT_KEYS.map((key) => ({
+    key,
+    value: c.quickFacts?.[key]
+  })).filter((r): r is { key: (typeof QUICK_FACT_KEYS)[number]; value: string } =>
+    Boolean(r.value)
+  );
+
+  // Son tıbbi gözden geçirme tarihi — girilmişse başlık altında gösterilir.
+  const reviewedDate = treatment.lastReviewed
+    ? new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(
+        new Date(`${treatment.lastReviewed}T00:00:00`)
+      )
+    : null;
   const patientStories = storiesForTreatment(slug);
   // İlgili tedaviler aynı kategoriden; yetmezse genelle tamamla.
-  const sameCat = treatments.filter(
+  const sameCat = publishedTreatments.filter(
     (tr) => tr.slug !== slug && treatmentCategory(tr) === treatmentCategory(treatment)
   );
-  const related = (sameCat.length >= 3 ? sameCat : treatments.filter((tr) => tr.slug !== slug)).slice(0, 3);
+  const related = (sameCat.length >= 3 ? sameCat : publishedTreatments.filter((tr) => tr.slug !== slug)).slice(0, 3);
 
   // JSON-LD: MedicalWebPage + FAQPage + ilişkili Physician.
   const jsonLd = {
@@ -93,13 +122,46 @@ export default async function TreatmentPage({
         inLanguage: locale,
         url: `${siteConfig.domain}${getPathname({ locale, href: treatmentHref(canonical, locale) })}`,
         about: { '@type': 'MedicalProcedure', name: c.title },
-        lastReviewed: new Date().toISOString().slice(0, 10)
+        // lastReviewed GERÇEK gözden geçirme tarihinden gelir. Daha önce her
+        // derlemede "bugün" yazılıyordu — bu, doğrulanmamış bir güncellik
+        // sinyaliydi. Tarih girilmemişse alan hiç yayınlanmaz.
+        ...(treatment.lastReviewed
+          ? {
+              lastReviewed: treatment.lastReviewed,
+              reviewedBy: { '@type': 'Physician', name: surgeonFullName(locale) }
+            }
+          : {})
       },
       {
         '@type': 'Physician',
         name: surgeonFullName(locale),
         medicalSpecialty: 'Urology',
+        knowsLanguage: [...contactConfig.surgeonLanguages],
         url: `${siteConfig.domain}${getPathname({ locale, href: '/cerrah' })}`
+      },
+      {
+        // Ekmek kırıntısı — arama sonuçlarında hiyerarşi gösterir (prompt m.3.4).
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: tn('home'),
+            item: `${siteConfig.domain}${getPathname({ locale, href: '/' })}`
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: tn('treatments'),
+            item: `${siteConfig.domain}${getPathname({ locale, href: '/tedaviler' })}`
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: c.title,
+            item: `${siteConfig.domain}${getPathname({ locale, href: treatmentHref(canonical, locale) })}`
+          }
+        ]
       },
       {
         '@type': 'FAQPage',
@@ -130,6 +192,12 @@ export default async function TreatmentPage({
             <div>
               <h1 className="text-3xl font-bold leading-tight md:text-4xl">{c.title}</h1>
               <p className="mt-3 max-w-2xl text-muted md:text-lg">{c.summary}</p>
+              {/* Son tıbbi gözden geçirme — E-E-A-T sinyali (prompt m.4.2/1). */}
+              {reviewedDate && (
+                <p className="mt-3 text-xs text-muted">
+                  {t('lastReviewed', { date: reviewedDate, reviewer: surgeonFullName(locale) })}
+                </p>
+              )}
             </div>
           </div>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -186,6 +254,21 @@ export default async function TreatmentPage({
           );
         })()}
 
+      {/* HIZLI BİLGİ KUTUSU — hastanın en çok sorduğu pratik bilgiler.
+          Yalnızca doldurulmuş alanlar render edilir. */}
+      {quickFactRows.length > 0 && (
+        <div className="container-content pt-8">
+          <dl className="grid gap-x-6 gap-y-4 rounded-2xl border border-border bg-surface p-6 sm:grid-cols-2 lg:grid-cols-4">
+            {quickFactRows.map(({ key, value }) => (
+              <div key={key}>
+                <dt className="label-mono">{t(`quickFacts.${key}` as never)}</dt>
+                <dd className="mt-1 font-semibold">{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      )}
+
       <div className="container-content grid gap-10 py-12 lg:grid-cols-3">
         {/* ANA İÇERİK */}
         <div className="space-y-12 lg:col-span-2">
@@ -198,6 +281,54 @@ export default async function TreatmentPage({
               ))}
             </div>
           </section>
+
+          {/* Kimlere uygundur / uygun değildir */}
+          {c.eligibility && (
+            <section>
+              <SectionHeading title={t('sectionEligibility')} />
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div className="card p-5">
+                  <p className="mb-3 flex items-center gap-2 font-semibold text-success">
+                    <Icon name="check" size={18} /> {t('eligibleTitle')}
+                  </p>
+                  <ul className="space-y-2">
+                    {c.eligibility.suitable.map((x, i) => (
+                      <li key={i} className="flex gap-2 text-sm text-muted">
+                        <Icon name="check" size={15} className="mt-0.5 shrink-0 text-success" />
+                        {x}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="card p-5">
+                  <p className="mb-3 font-semibold text-muted">{t('notEligibleTitle')}</p>
+                  <ul className="space-y-2">
+                    {c.eligibility.notSuitable.map((x, i) => (
+                      <li key={i} className="flex gap-2 text-sm text-muted">
+                        <span aria-hidden="true" className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-border" />
+                        {x}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </section>
+          )}
+
+          {/* Kullanılan teknoloji */}
+          {c.technology && c.technology.length > 0 && (
+            <section>
+              <SectionHeading title={t('sectionTechnology')} />
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {c.technology.map((x, i) => (
+                  <li key={i} className="flex gap-2 rounded-lg border border-border bg-surface p-4 text-sm">
+                    <Icon name="robot" size={18} className="mt-0.5 shrink-0 text-primary" />
+                    {x}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           {/* Cerrah deneyimi — doğrulanabilir. Rekonstrüktif vakalarda vaka sayısının
               yanında redo oranı, kompleks vaka tanımı ve ileri teknik öne çıkar. */}
@@ -353,6 +484,22 @@ export default async function TreatmentPage({
             </section>
           )}
 
+          {/* İyileşme süreci — hafta hafta */}
+          {c.recovery && c.recovery.length > 0 && (
+            <section>
+              <SectionHeading title={t('sectionRecovery')} />
+              <ol className="space-y-4 border-s-2 border-border ps-6">
+                {c.recovery.map((r, i) => (
+                  <li key={i} className="relative">
+                    <span className="absolute -start-[1.72rem] top-1 h-3 w-3 rounded-full bg-primary" aria-hidden="true" />
+                    <h3 className="font-bold">{r.period}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-muted">{r.body}</p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
+
           {/* SSS */}
           <section>
             <SectionHeading title={t('sectionFaq')} />
@@ -368,6 +515,32 @@ export default async function TreatmentPage({
               ))}
             </div>
           </section>
+
+          {/* Bilimsel kaynaklar */}
+          {c.sources && c.sources.length > 0 && (
+            <section>
+              <SectionHeading title={t('sectionSources')} />
+              <ul className="space-y-2">
+                {c.sources.map((src, i) => (
+                  <li key={i} className="flex gap-2 text-sm text-muted">
+                    <Icon name="document" size={15} className="mt-0.5 shrink-0 text-primary" />
+                    {src.url ? (
+                      <a
+                        href={src.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-2 hover:text-primary"
+                      >
+                        {src.label}
+                      </a>
+                    ) : (
+                      src.label
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           <p className="text-xs text-muted">{t('medicalDisclaimer')}</p>
         </div>

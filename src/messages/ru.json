@@ -97,7 +97,23 @@
     "complexCaseLabel": "Определение сложного случая",
     "advancedTechniqueLabel": "Применяемая продвинутая техника",
     "patientStories": "Отзывы пациентов",
-    "sectionPackage": "Состав пакета"
+    "sectionPackage": "Состав пакета",
+    "lastReviewed": "Последняя медицинская проверка: {date} — {reviewer}",
+    "sectionEligibility": "Кому подходит?",
+    "eligibleTitle": "Может подойти",
+    "notEligibleTitle": "Может не подойти",
+    "sectionTechnology": "Используемые технологии",
+    "sectionRecovery": "Восстановление",
+    "sectionSources": "Научные источники",
+    "quickFacts": {
+      "duration": "Длительность вмешательства",
+      "anesthesia": "Анестезия",
+      "hospitalStay": "Пребывание в больнице",
+      "stayInTurkey": "Пребывание в Турции",
+      "catheter": "Срок катетера",
+      "returnToWork": "Возвращение к работе",
+      "flightClearance": "Разрешение на перелёт"
+    }
   },
   "Surgeon": {
     "title": "Профиль хирурга",
@@ -172,7 +188,20 @@
     "readingTime": "чтения",
     "relatedTreatment": "Связанное лечение",
     "backToBlog": "Назад в Базу знаний",
-    "publishedOn": "Опубликовано"
+    "publishedOn": "Опубликовано",
+    "updatedOn": "Обновлено",
+    "tocTitle": "Содержание",
+    "sourcesTitle": "Источники",
+    "allCategories": "Все категории",
+    "categories": {
+      "prostate": "Простата",
+      "bph": "ДГПЖ",
+      "andrology": "Андрология",
+      "stones": "Мочекаменная болезнь",
+      "oncology": "Онкоурология",
+      "femaleUrology": "Женская урология",
+      "healthTourism": "Медицинский туризм"
+    }
   },
   "Contact": {
     "title": "Контакты",
