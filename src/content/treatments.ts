@@ -15,11 +15,9 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
-     * TASLAK — cerrah onayına sunuldu, onaylanana kadar yayında görünmez.
-     * Kaynaklar: EAU non-neurogenic male LUTS kılavuzu + cerrahın kendi 2025
-     * ThuLEP yayını. Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     * Cerrah tarafından 4 Ekim 2026 tarihinde onaylandı ve yayına alındı.
+     * Kaynaklar: EAU non-neurogenic male LUTS kılavuzu + cerrahın 2025 ThuLEP yayını.
      */
-    draft: true,
     slug: 'thulep',
     parent: 'bph-prostat-buyumesi',
     lastReviewed: '2026-10-04',
@@ -231,6 +229,1026 @@ export const treatments: Treatment[] = [
           {
             label:
               'EAU Guidelines on Management of Non-Neurogenic Male LUTS — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts'
+          },
+          {
+            label:
+              'Ergün M, Sağır S, Hacibey İ. ThuLEP technique for managing benign prostatic hyperplasia: intraoperative and postoperative complications in a series of 42 consecutive cases. Journal of Surgery and Medicine, 2025.'
+          }
+        ]
+      },
+      en: {
+        title: 'ThuLEP (Thulium Laser Enucleation of the Prostate)',
+        summary:
+          'An endoscopic method in which the obstructing tissue of an enlarged prostate is enucleated whole with a thulium laser.',
+        metaTitle: 'ThuLEP: Thulium Laser Enucleation of the Prostate',
+        metaDescription:
+          'ThuLEP for benign prostatic enlargement: who it suits, how it is performed, risks, recovery and how it compares with HoLEP and TURP.',
+        quickFacts: {
+          duration: '60–120 minutes',
+          anesthesia: 'General or spinal anesthesia',
+          hospitalStay: '1 night',
+          stayInTurkey: '5–7 days',
+          catheter: '1–2 days',
+          returnToWork: '2–3 weeks',
+          flightClearance: 'From day 7'
+        },
+        definition: [
+          'Benign prostatic enlargement (BPH) is the age-related growth of prostate tissue that compresses the urinary channel from outside. The most common complaints are a weak stream, difficulty starting, waking several times at night and a feeling that the bladder does not empty fully. In advanced cases, inability to pass urine (retention), recurrent urinary tract infection or bladder stones may develop.',
+          'ThuLEP is an endoscopic operation in which the obstructing prostate tissue is separated from its capsule with a thulium laser and removed AS A WHOLE. No incision is made in the body; the entire procedure is performed through the urinary channel. Whereas classic TURP shaves the tissue away in small chips, enucleation peels the obstructing tissue off in one piece — applying the logic of open prostate surgery through a closed approach.',
+          'The thulium laser emits a continuous wave; it cuts tissue while sealing small vessels at the same time. Because this makes bleeding easier to control, the method can be preferred in large-volume prostates and in selected patients who require caution because of blood-thinning medication.',
+          'The enucleated tissue is reduced inside the bladder with a device called a morcellator, removed, and sent for PATHOLOGICAL EXAMINATION. This is an important difference from methods that vaporise the tissue: if an unexpected focus of cancer is present, the diagnosis is not missed.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients with a medium or large prostate who do not benefit sufficiently from medication',
+            'Patients who cannot continue medication because of side effects',
+            'Patients with recurrent urinary retention or who have become catheter-dependent',
+            'Patients who develop recurrent urinary tract infection or bladder stones due to prostate enlargement',
+            'Selected patients requiring caution over bleeding control, where the surgeon judges the method suitable'
+          ],
+          notSuitable: [
+            'Patients with an active urinary tract infection — the infection is treated first and surgery is postponed',
+            'Patients in whom suspicion of prostate cancer has not yet been resolved — diagnostic work-up is completed first',
+            'Patients whose symptoms arise from loss of bladder muscle function rather than obstruction may gain limited benefit',
+            'Patients at high anesthetic risk because of comorbidities',
+            'Patients planning to father children — retrograde ejaculation is possible and must be discussed before surgery'
+          ]
+        },
+        technology: [
+          'Quanta thulium laser platform',
+          'Continuous-wave thulium: cutting and bleeding control at the same time',
+          'Safe removal of tissue from the bladder with a morcellator',
+          'All removed tissue sent for pathological examination'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Assoc. Prof. Dr. Müslüm Ergün has a peer-reviewed publication on the ThuLEP technique evaluating intraoperative and postoperative complications (Journal of Surgery and Medicine, 2025).'
+        },
+        timeline: [
+          {
+            when: 'Remote',
+            title: 'Pre-assessment',
+            body: 'Your urinary flow test (uroflowmetry), IPSS symptom score, PSA value, prostate volume and post-void residual volume are reviewed, and the suitability of the method is assessed.'
+          },
+          {
+            when: 'Day 1',
+            title: 'Arrival and tests',
+            body: 'In-person examination, completion of any missing tests and anesthesia assessment.'
+          },
+          {
+            when: 'Day 2',
+            title: 'Procedure',
+            body: 'ThuLEP is performed under general or spinal anesthesia; it usually takes 60–120 minutes and requires no incision.'
+          },
+          {
+            when: 'Day 3',
+            title: 'Catheter removal and discharge',
+            body: 'The catheter is removed once the urine is clear; discharge is planned after you are seen to pass urine on your own.'
+          },
+          {
+            when: 'Day 7–10',
+            title: 'Review and pathology',
+            body: 'A follow-up examination is carried out, the pathology result is reviewed and clearance is given for the return flight.'
+          }
+        ],
+        risks: [
+          'Temporary burning and sudden urgency when passing urine',
+          'Temporary stress-type urinary leakage — in most patients it settles within weeks, and pelvic floor exercises support this',
+          'Retrograde ejaculation: semen passing into the bladder rather than outward; it is common and affects fertility',
+          'Urinary tract infection',
+          'Urethral stricture or bladder neck contracture (less common; may require an additional procedure)',
+          'Bleeding and general surgical risks related to anesthesia'
+        ],
+        alternatives: [
+          'Medication (alpha blockers, 5-alpha reductase inhibitors)',
+          'HoLEP — enucleation with a holmium laser',
+          'TURP — classic endoscopic resection',
+          'Rezūm — volume reduction with water vapour (in smaller prostates)',
+          'Open (simple) prostatectomy — in very large prostates, increasingly rare'
+        ],
+        comparison: {
+          title: 'ThuLEP, HoLEP, TURP and Rezūm compared',
+          columns: ['Criterion', 'ThuLEP', 'HoLEP', 'TURP', 'Rezūm'],
+          rows: [
+            {
+              label: 'Suitable prostate volume',
+              values: ['Any volume, especially large', 'Any volume, especially large', 'Small–medium', 'Small–medium']
+            },
+            { label: 'Tissue sent for pathology', values: ['Yes', 'Yes', 'Yes', 'No'] },
+            { label: 'Average catheter time', values: ['1–2 days', '1–2 days', '2–3 days', 'Variable'] },
+            { label: 'Hospital stay', values: ['1 night', '1 night', '1–2 nights', 'May be day-case'] },
+            {
+              label: 'Effect on sexual function',
+              values: [
+                'Retrograde ejaculation common',
+                'Retrograde ejaculation common',
+                'Retrograde ejaculation common',
+                'Ejaculation less affected'
+              ]
+            }
+          ],
+          note:
+            'This table is for general information. The method is chosen individually after assessing prostate volume, comorbidities and the patient’s priorities.'
+        },
+        recovery: [
+          {
+            period: 'First 48 hours',
+            body: 'The catheter is in place. Plenty of fluids are advised; a slight pink tinge and sediment in the urine may be seen and is expected.'
+          },
+          {
+            period: 'Week 1',
+            body: 'The catheter has been removed. Burning and urgency on passing urine gradually decrease. Short walks are advised; heavy lifting and long car journeys are avoided.'
+          },
+          {
+            period: 'Weeks 2–3',
+            body: 'Improvement in urinary flow becomes clear. Returning to desk work is usually possible in this period. Pelvic floor (Kegel) exercises are continued.'
+          },
+          {
+            period: 'Weeks 4–6',
+            body: 'Any urinary leakage largely settles. Heavy physical activity and sexual intercourse await your surgeon’s approval.'
+          },
+          {
+            period: 'Month 3',
+            body: 'Results stabilise. At follow-up the IPSS score and uroflowmetry are repeated so the improvement is measured objectively.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies with prostate volume, any additional procedures and length of stay. A firm quote follows pre-assessment.'
+        },
+        packageIncludes: [
+          'Surgery and hospital stay',
+          'Anesthesia and operating room',
+          'Pre-operative tests',
+          'Pathological examination',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and patient coordinator',
+          'Post-discharge online follow-ups'
+        ],
+        faqs: [
+          {
+            q: 'What is the difference between ThuLEP and HoLEP?',
+            a: 'Both are enucleation methods that remove the obstructing prostate tissue as a whole; the difference is the laser used. HoLEP uses a holmium laser, ThuLEP a thulium laser. Because thulium emits a continuous wave, bleeding control during cutting is easier. From the patient’s point of view the process, recovery and expected outcomes are largely similar; the choice depends on the surgeon’s experience and the available equipment.'
+          },
+          {
+            q: 'My prostate is very large — can a closed method still be used?',
+            a: 'Yes. The main advantage of enucleation methods is that they can be used in large-volume prostates as well. Prostates of a size that once required open surgery can be treated with ThuLEP without an incision.'
+          },
+          {
+            q: 'Will my sexual function be affected?',
+            a: 'Erectile function is usually preserved. Retrograde ejaculation — semen passing into the bladder rather than outward — is, however, a common change. It is not harmful to health but it does affect fertility. If you plan to have children, we must discuss this before surgery.'
+          },
+          {
+            q: 'How long does the catheter stay in?',
+            a: 'Usually 1–2 days. The catheter is removed once the urine is clear, and you are discharged after you are seen to pass urine on your own. This period is occasionally longer.'
+          },
+          {
+            q: 'I take blood thinners — can I have this operation?',
+            a: 'Because the thulium laser makes bleeding control easier, ThuLEP can be considered in these patients. However, whether and how your medication is adjusted is decided together with the physician who follows you. Do not stop your medication on your own.'
+          },
+          {
+            q: 'Is the removed tissue examined, and what if cancer is found?',
+            a: 'Yes. In enucleation all removed tissue is sent for pathology. If an unexpected focus of cancer is found, a plan for further treatment or surveillance is prepared according to its stage and explained to you in detail.'
+          },
+          {
+            q: 'Will the procedure need to be repeated?',
+            a: 'Because enucleation removes the obstructing tissue as a whole, it aims for a durable result. Even so, no method can guarantee that repeat treatment will never be needed; regular follow-up is advised.'
+          },
+          {
+            q: 'Will urinary leakage be permanent?',
+            a: 'Leakage that may occur in the first weeks after surgery is temporary in most patients and improves gradually. Pelvic floor exercises support this. Permanent leakage is uncommon; the risk is discussed with you separately during pre-operative assessment.'
+          },
+          {
+            q: 'When can I fly after the operation?',
+            a: 'Clearance to fly is usually given after the follow-up examination, generally 7 days after the procedure. On long flights, movement and fluid intake are advised to reduce the risk of clots.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'EAU Guidelines on Management of Non-Neurogenic Male LUTS — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts'
+          },
+          {
+            label:
+              'Ergün M, Sağır S, Hacibey İ. ThuLEP technique for managing benign prostatic hyperplasia: intraoperative and postoperative complications in a series of 42 consecutive cases. Journal of Surgery and Medicine, 2025.'
+          }
+        ]
+      },
+      de: {
+        title: 'ThuLEP (Thulium-Laser-Enukleation der Prostata)',
+        summary:
+          'Endoskopisches Verfahren, bei dem das obstruierende Gewebe der vergrößerten Prostata mit dem Thuliumlaser im Ganzen ausgeschält wird.',
+        metaTitle: 'ThuLEP: Thulium-Laser-Enukleation der Prostata',
+        metaDescription:
+          'ThuLEP bei gutartiger Prostatavergrößerung: für wen geeignet, Ablauf, Risiken, Genesung und Vergleich mit HoLEP und TURP.',
+        quickFacts: {
+          duration: '60–120 Minuten',
+          anesthesia: 'Vollnarkose oder Spinalanästhesie',
+          hospitalStay: '1 Nacht',
+          stayInTurkey: '5–7 Tage',
+          catheter: '1–2 Tage',
+          returnToWork: '2–3 Wochen',
+          flightClearance: 'Ab Tag 7'
+        },
+        definition: [
+          'Die gutartige Prostatavergrößerung (BPH) ist das altersbedingte Wachstum des Prostatagewebes, das die Harnröhre von außen einengt. Die häufigsten Beschwerden sind ein schwacher Strahl, erschwertes Wasserlassen, mehrfaches nächtliches Aufstehen und das Gefühl der unvollständigen Blasenentleerung. In fortgeschrittenen Fällen können Harnverhalt, wiederkehrende Harnwegsinfekte oder Blasensteine auftreten.',
+          'ThuLEP ist eine endoskopische Operation, bei der das obstruierende Prostatagewebe mit dem Thuliumlaser von seiner Kapsel gelöst und IM GANZEN entfernt wird. Es wird kein Hautschnitt gesetzt; der gesamte Eingriff erfolgt über die Harnröhre. Während bei der klassischen TURP das Gewebe in kleinen Spänen abgetragen wird, wird es bei der Enukleation in einem Stück ausgeschält — die Logik der offenen Prostataoperation, umgesetzt über einen geschlossenen Zugang.',
+          'Der Thuliumlaser arbeitet mit Dauerstrich; er schneidet das Gewebe und verschließt gleichzeitig kleine Gefäße. Da sich die Blutungskontrolle dadurch erleichtert, kann das Verfahren bei großvolumigen Prostatae und bei ausgewählten Patienten bevorzugt werden, die wegen blutverdünnender Medikamente besondere Vorsicht erfordern.',
+          'Das ausgeschälte Gewebe wird mit einem Morcellator in der Blase zerkleinert, entfernt und zur PATHOLOGISCHEN UNTERSUCHUNG eingeschickt. Das ist ein wichtiger Unterschied zu Verfahren, die das Gewebe verdampfen: Ein unerwarteter Krebsherd wird so nicht übersehen.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patienten mit mittlerer oder großer Prostata, die von Medikamenten nicht ausreichend profitieren',
+            'Patienten, die die Medikation wegen Nebenwirkungen nicht fortsetzen können',
+            'Patienten mit wiederholtem Harnverhalt oder bestehender Katheterabhängigkeit',
+            'Patienten mit wiederkehrenden Harnwegsinfekten oder Blasensteinen infolge der Prostatavergrößerung',
+            'Ausgewählte Patienten, bei denen die Blutungskontrolle besondere Vorsicht erfordert und der Chirurg das Verfahren für geeignet hält'
+          ],
+          notSuitable: [
+            'Patienten mit aktivem Harnwegsinfekt — der Infekt wird zuerst behandelt, die Operation verschoben',
+            'Patienten, bei denen ein Prostatakrebsverdacht noch nicht geklärt ist — zuerst wird die Diagnostik abgeschlossen',
+            'Patienten, deren Beschwerden nicht von der Obstruktion, sondern von einer Funktionsschwäche des Blasenmuskels herrühren, profitieren möglicherweise nur begrenzt',
+            'Patienten mit hohem Narkoserisiko aufgrund von Begleiterkrankungen',
+            'Patienten mit Kinderwunsch — eine retrograde Ejakulation ist möglich und muss vor der Operation besprochen werden'
+          ]
+        },
+        technology: [
+          'Quanta Thulium-Laserplattform',
+          'Dauerstrich-Thulium: Schneiden und Blutungskontrolle zugleich',
+          'Sichere Entfernung des Gewebes aus der Blase mit dem Morcellator',
+          'Das gesamte entfernte Gewebe wird pathologisch untersucht'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Doz. Dr. Müslüm Ergün hat eine begutachtete Publikation zur ThuLEP-Technik, die intra- und postoperative Komplikationen auswertet (Journal of Surgery and Medicine, 2025).'
+        },
+        timeline: [
+          {
+            when: 'Aus der Ferne',
+            title: 'Vorabbeurteilung',
+            body: 'Uroflowmetrie, IPSS-Symptomscore, PSA-Wert, Prostatavolumen und Restharnmenge werden geprüft und die Eignung des Verfahrens beurteilt.'
+          },
+          {
+            when: 'Tag 1',
+            title: 'Ankunft und Untersuchungen',
+            body: 'Persönliche Untersuchung, Nachholen fehlender Befunde und Narkosevorbereitung.'
+          },
+          {
+            when: 'Tag 2',
+            title: 'Eingriff',
+            body: 'ThuLEP wird in Vollnarkose oder Spinalanästhesie durchgeführt; der Eingriff dauert meist 60–120 Minuten und erfordert keinen Schnitt.'
+          },
+          {
+            when: 'Tag 3',
+            title: 'Katheterentfernung und Entlassung',
+            body: 'Der Katheter wird entfernt, sobald der Urin klar ist; die Entlassung erfolgt, nachdem Sie selbstständig Wasser gelassen haben.'
+          },
+          {
+            when: 'Tag 7–10',
+            title: 'Kontrolle und Pathologie',
+            body: 'Es erfolgt eine Kontrolluntersuchung, der Pathologiebefund wird besprochen und die Freigabe für den Rückflug erteilt.'
+          }
+        ],
+        risks: [
+          'Vorübergehendes Brennen und plötzlicher Harndrang beim Wasserlassen',
+          'Vorübergehender Belastungsharnverlust — bei den meisten Patienten bessert er sich binnen Wochen; Beckenbodenübungen unterstützen dies',
+          'Retrograde Ejakulation: Der Samen gelangt in die Blase statt nach außen; sie ist häufig und beeinflusst die Fruchtbarkeit',
+          'Harnwegsinfekt',
+          'Harnröhrenstriktur oder Blasenhalsenge (seltener; kann einen weiteren Eingriff erfordern)',
+          'Blutung und allgemeine chirurgische Risiken der Narkose'
+        ],
+        alternatives: [
+          'Medikamentöse Therapie (Alphablocker, 5-Alpha-Reduktase-Hemmer)',
+          'HoLEP — Enukleation mit dem Holmiumlaser',
+          'TURP — klassische endoskopische Resektion',
+          'Rezūm — Volumenreduktion mit Wasserdampf (bei kleineren Prostatae)',
+          'Offene (einfache) Prostatektomie — bei sehr großen Prostatae, zunehmend selten'
+        ],
+        comparison: {
+          title: 'ThuLEP, HoLEP, TURP und Rezūm im Vergleich',
+          columns: ['Kriterium', 'ThuLEP', 'HoLEP', 'TURP', 'Rezūm'],
+          rows: [
+            {
+              label: 'Geeignetes Prostatavolumen',
+              values: ['Jedes Volumen, besonders groß', 'Jedes Volumen, besonders groß', 'Klein–mittel', 'Klein–mittel']
+            },
+            { label: 'Gewebe zur Pathologie', values: ['Ja', 'Ja', 'Ja', 'Nein'] },
+            { label: 'Durchschnittliche Katheterdauer', values: ['1–2 Tage', '1–2 Tage', '2–3 Tage', 'Variabel'] },
+            { label: 'Krankenhausaufenthalt', values: ['1 Nacht', '1 Nacht', '1–2 Nächte', 'Ambulant möglich'] },
+            {
+              label: 'Einfluss auf die Sexualfunktion',
+              values: [
+                'Retrograde Ejakulation häufig',
+                'Retrograde Ejakulation häufig',
+                'Retrograde Ejakulation häufig',
+                'Ejakulation weniger betroffen'
+              ]
+            }
+          ],
+          note:
+            'Diese Tabelle dient der allgemeinen Information. Das Verfahren wird individuell nach Prostatavolumen, Begleiterkrankungen und den Prioritäten des Patienten gewählt.'
+        },
+        recovery: [
+          {
+            period: 'Erste 48 Stunden',
+            body: 'Der Katheter liegt. Reichlich Trinken wird empfohlen; eine leichte rosa Färbung und Sediment im Urin können auftreten und sind zu erwarten.'
+          },
+          {
+            period: 'Woche 1',
+            body: 'Der Katheter ist entfernt. Brennen und Harndrang nehmen allmählich ab. Kurze Spaziergänge werden empfohlen; schweres Heben und lange Autofahrten werden vermieden.'
+          },
+          {
+            period: 'Woche 2–3',
+            body: 'Die Verbesserung des Harnstrahls wird deutlich. Die Rückkehr zur Bürotätigkeit ist in diesem Zeitraum meist möglich. Beckenbodenübungen werden fortgesetzt.'
+          },
+          {
+            period: 'Woche 4–6',
+            body: 'Ein etwaiger Harnverlust bessert sich weitgehend. Für schwere körperliche Aktivität und Geschlechtsverkehr wird die Freigabe Ihres Arztes abgewartet.'
+          },
+          {
+            period: 'Monat 3',
+            body: 'Die Ergebnisse stabilisieren sich. Bei der Kontrolle werden IPSS-Score und Uroflowmetrie wiederholt, um die Besserung objektiv zu messen.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Der Preis richtet sich nach Prostatavolumen, zusätzlichen Eingriffen und Aufenthaltsdauer. Ein verbindliches Angebot folgt nach der Vorabbeurteilung.'
+        },
+        packageIncludes: [
+          'Operation und Krankenhausaufenthalt',
+          'Anästhesie und Operationssaal',
+          'Präoperative Untersuchungen',
+          'Pathologische Untersuchung',
+          'Transfers Flughafen–Krankenhaus–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und Patientenkoordinator',
+          'Online-Nachsorge nach der Entlassung'
+        ],
+        faqs: [
+          {
+            q: 'Worin unterscheiden sich ThuLEP und HoLEP?',
+            a: 'Beide sind Enukleationsverfahren, die das obstruierende Prostatagewebe im Ganzen entfernen; der Unterschied liegt im verwendeten Laser. HoLEP nutzt einen Holmium-, ThuLEP einen Thuliumlaser. Da Thulium im Dauerstrich arbeitet, ist die Blutungskontrolle beim Schneiden einfacher. Aus Patientensicht sind Ablauf, Genesung und zu erwartende Ergebnisse weitgehend vergleichbar; die Wahl richtet sich nach Erfahrung des Chirurgen und vorhandener Ausstattung.'
+          },
+          {
+            q: 'Meine Prostata ist sehr groß — ist ein geschlossenes Verfahren dennoch möglich?',
+            a: 'Ja. Der wesentliche Vorteil der Enukleationsverfahren ist, dass sie auch bei großvolumigen Prostatae anwendbar sind. Größen, die früher eine offene Operation erforderten, lassen sich mit ThuLEP ohne Schnitt behandeln.'
+          },
+          {
+            q: 'Wird meine Sexualfunktion beeinträchtigt?',
+            a: 'Die Erektionsfähigkeit bleibt in der Regel erhalten. Die retrograde Ejakulation — der Samen gelangt in die Blase statt nach außen — ist jedoch eine häufige Veränderung. Sie ist gesundheitlich unbedenklich, beeinflusst aber die Fruchtbarkeit. Bei Kinderwunsch müssen wir dies vor der Operation besprechen.'
+          },
+          {
+            q: 'Wie lange bleibt der Katheter?',
+            a: 'Meist 1–2 Tage. Der Katheter wird entfernt, sobald der Urin klar ist, und Sie werden entlassen, nachdem Sie selbstständig Wasser gelassen haben. Selten dauert dies länger.'
+          },
+          {
+            q: 'Ich nehme Blutverdünner — kann ich operiert werden?',
+            a: 'Da der Thuliumlaser die Blutungskontrolle erleichtert, kommt ThuLEP bei diesen Patienten in Betracht. Ob und wie Ihre Medikation angepasst wird, entscheidet jedoch der behandelnde Arzt gemeinsam mit Ihnen. Setzen Sie Ihre Medikamente nicht eigenmächtig ab.'
+          },
+          {
+            q: 'Wird das entfernte Gewebe untersucht, und was ist, wenn Krebs gefunden wird?',
+            a: 'Ja. Bei der Enukleation wird das gesamte entfernte Gewebe zur Pathologie geschickt. Wird ein unerwarteter Krebsherd gefunden, wird je nach Stadium ein Plan für weitere Behandlung oder Überwachung erstellt und Ihnen ausführlich erläutert.'
+          },
+          {
+            q: 'Muss der Eingriff wiederholt werden?',
+            a: 'Da die Enukleation das obstruierende Gewebe im Ganzen entfernt, zielt sie auf ein dauerhaftes Ergebnis. Dennoch kann kein Verfahren garantieren, dass nie eine erneute Behandlung nötig wird; regelmäßige Kontrollen werden empfohlen.'
+          },
+          {
+            q: 'Bleibt der Harnverlust dauerhaft?',
+            a: 'Ein Harnverlust in den ersten Wochen nach der Operation ist bei den meisten Patienten vorübergehend und bessert sich allmählich. Beckenbodenübungen unterstützen dies. Dauerhafter Harnverlust ist selten; das Risiko wird im Vorgespräch gesondert mit Ihnen besprochen.'
+          },
+          {
+            q: 'Wann darf ich nach der Operation fliegen?',
+            a: 'Die Flugfreigabe wird meist nach der Kontrolluntersuchung erteilt, in der Regel 7 Tage nach dem Eingriff. Auf Langstreckenflügen werden Bewegung und ausreichend Flüssigkeit empfohlen, um das Thromboserisiko zu senken.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'EAU-Leitlinie zum Management nicht-neurogener männlicher LUTS — Europäische Gesellschaft für Urologie',
+            url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts'
+          },
+          {
+            label:
+              'Ergün M, Sağır S, Hacibey İ. ThuLEP technique for managing benign prostatic hyperplasia: intraoperative and postoperative complications in a series of 42 consecutive cases. Journal of Surgery and Medicine, 2025.'
+          }
+        ]
+      },
+      fr: {
+        title: 'ThuLEP (énucléation de la prostate au laser thulium)',
+        summary:
+          'Méthode endoscopique dans laquelle le tissu obstructif de la prostate hypertrophiée est énucléé en bloc au laser thulium.',
+        metaTitle: 'ThuLEP : énucléation de la prostate au laser thulium',
+        metaDescription:
+          'ThuLEP pour l’hypertrophie bénigne de la prostate : indications, déroulement, risques, récupération et comparaison avec la HoLEP et la RTUP.',
+        quickFacts: {
+          duration: '60 à 120 minutes',
+          anesthesia: 'Anesthésie générale ou rachidienne',
+          hospitalStay: '1 nuit',
+          stayInTurkey: '5 à 7 jours',
+          catheter: '1 à 2 jours',
+          returnToWork: '2 à 3 semaines',
+          flightClearance: 'À partir du 7e jour'
+        },
+        definition: [
+          'L’hypertrophie bénigne de la prostate (HBP) est la croissance, liée à l’âge, du tissu prostatique qui comprime l’urètre de l’extérieur. Les plaintes les plus fréquentes sont un jet faible, une difficulté à initier la miction, plusieurs levers nocturnes et la sensation que la vessie ne se vide pas complètement. À un stade avancé peuvent survenir une rétention urinaire, des infections urinaires à répétition ou des calculs vésicaux.',
+          'La ThuLEP est une intervention endoscopique au cours de laquelle le tissu prostatique obstructif est séparé de sa capsule au laser thulium et retiré EN BLOC. Aucune incision cutanée n’est pratiquée ; toute l’intervention se fait par les voies urinaires. Alors que la RTUP classique retire le tissu en petits copeaux, l’énucléation le décolle d’un seul tenant : c’est la logique de la chirurgie ouverte appliquée par voie endoscopique.',
+          'Le laser thulium émet une onde continue ; il coupe le tissu tout en obturant simultanément les petits vaisseaux. Comme cela facilite le contrôle du saignement, la méthode peut être privilégiée pour les prostates volumineuses et chez certains patients nécessitant une vigilance particulière en raison d’un traitement anticoagulant.',
+          'Le tissu énucléé est fragmenté dans la vessie à l’aide d’un morcellateur, retiré, puis adressé à l’EXAMEN ANATOMOPATHOLOGIQUE. C’est une différence importante par rapport aux techniques de vaporisation : si un foyer cancéreux inattendu est présent, le diagnostic n’est pas manqué.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients porteurs d’une prostate de volume moyen ou important ne tirant pas un bénéfice suffisant du traitement médical',
+            'Patients ne pouvant poursuivre le traitement en raison des effets indésirables',
+            'Patients présentant des rétentions urinaires répétées ou devenus dépendants d’une sonde',
+            'Patients développant des infections urinaires récidivantes ou des calculs vésicaux liés à l’hypertrophie',
+            'Patients sélectionnés nécessitant une vigilance quant au saignement, lorsque le chirurgien juge la méthode adaptée'
+          ],
+          notSuitable: [
+            'Patients présentant une infection urinaire active — l’infection est traitée d’abord et l’intervention reportée',
+            'Patients chez qui une suspicion de cancer de la prostate n’est pas encore levée — le bilan diagnostique est complété au préalable',
+            'Patients dont les troubles proviennent d’une défaillance du muscle vésical plutôt que de l’obstruction : le bénéfice attendu peut être limité',
+            'Patients à risque anesthésique élevé en raison de comorbidités',
+            'Patients ayant un projet de paternité — une éjaculation rétrograde est possible et doit être abordée avant l’intervention'
+          ]
+        },
+        technology: [
+          'Plateforme laser thulium Quanta',
+          'Thulium à onde continue : découpe et contrôle du saignement simultanés',
+          'Retrait sûr du tissu depuis la vessie à l’aide d’un morcellateur',
+          'Totalité du tissu retiré adressée à l’examen anatomopathologique'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Le Dr Müslüm Ergün est auteur d’une publication évaluée par les pairs portant sur la technique ThuLEP et analysant les complications per- et postopératoires (Journal of Surgery and Medicine, 2025).'
+        },
+        timeline: [
+          {
+            when: 'À distance',
+            title: 'Pré-évaluation',
+            body: 'Votre débitmétrie urinaire, votre score de symptômes IPSS, votre PSA, le volume prostatique et le résidu post-mictionnel sont examinés, et l’indication de la méthode est évaluée.'
+          },
+          {
+            when: 'Jour 1',
+            title: 'Arrivée et examens',
+            body: 'Examen clinique, complément du bilan manquant et consultation d’anesthésie.'
+          },
+          {
+            when: 'Jour 2',
+            title: 'Intervention',
+            body: 'La ThuLEP est réalisée sous anesthésie générale ou rachidienne ; elle dure généralement 60 à 120 minutes et ne nécessite aucune incision.'
+          },
+          {
+            when: 'Jour 3',
+            title: 'Retrait de la sonde et sortie',
+            body: 'La sonde est retirée dès que les urines sont claires ; la sortie est organisée après vérification que vous urinez spontanément.'
+          },
+          {
+            when: 'Jours 7–10',
+            title: 'Contrôle et anatomopathologie',
+            body: 'Une consultation de contrôle est réalisée, le résultat anatomopathologique est examiné et l’autorisation de prendre le vol retour est délivrée.'
+          }
+        ],
+        risks: [
+          'Brûlures et urgences mictionnelles transitoires',
+          'Fuites urinaires d’effort transitoires — elles régressent en quelques semaines chez la plupart des patients, la rééducation périnéale y contribue',
+          'Éjaculation rétrograde : le sperme reflue vers la vessie au lieu d’être émis ; fréquente, elle affecte la fertilité',
+          'Infection urinaire',
+          'Sténose urétrale ou sclérose du col vésical (plus rares ; peuvent nécessiter un geste complémentaire)',
+          'Saignement et risques chirurgicaux généraux liés à l’anesthésie'
+        ],
+        alternatives: [
+          'Traitement médicamenteux (alphabloquants, inhibiteurs de la 5-alpha-réductase)',
+          'HoLEP — énucléation au laser holmium',
+          'RTUP — résection endoscopique classique',
+          'Rezūm — réduction de volume par vapeur d’eau (prostates plus petites)',
+          'Adénomectomie par voie ouverte — pour les très grosses prostates, de plus en plus rare'
+        ],
+        comparison: {
+          title: 'Comparaison ThuLEP, HoLEP, RTUP et Rezūm',
+          columns: ['Critère', 'ThuLEP', 'HoLEP', 'RTUP', 'Rezūm'],
+          rows: [
+            {
+              label: 'Volume prostatique adapté',
+              values: ['Tous volumes, surtout les gros', 'Tous volumes, surtout les gros', 'Petit à moyen', 'Petit à moyen']
+            },
+            { label: 'Tissu adressé en anatomopathologie', values: ['Oui', 'Oui', 'Oui', 'Non'] },
+            { label: 'Durée moyenne de sondage', values: ['1 à 2 jours', '1 à 2 jours', '2 à 3 jours', 'Variable'] },
+            { label: 'Séjour hospitalier', values: ['1 nuit', '1 nuit', '1 à 2 nuits', 'Possible en ambulatoire'] },
+            {
+              label: 'Effet sur la fonction sexuelle',
+              values: [
+                'Éjaculation rétrograde fréquente',
+                'Éjaculation rétrograde fréquente',
+                'Éjaculation rétrograde fréquente',
+                'Éjaculation moins affectée'
+              ]
+            }
+          ],
+          note:
+            'Ce tableau est fourni à titre d’information générale. La méthode est choisie au cas par cas, selon le volume prostatique, les comorbidités et les priorités du patient.'
+        },
+        recovery: [
+          {
+            period: '48 premières heures',
+            body: 'La sonde est en place. Une hydratation abondante est conseillée ; une légère coloration rosée et des dépôts dans les urines peuvent apparaître et sont attendus.'
+          },
+          {
+            period: 'Semaine 1',
+            body: 'La sonde est retirée. Les brûlures et les urgences mictionnelles diminuent progressivement. De courtes marches sont conseillées ; le port de charges et les longs trajets en voiture sont évités.'
+          },
+          {
+            period: 'Semaines 2–3',
+            body: 'L’amélioration du jet urinaire devient nette. La reprise d’un travail de bureau est généralement possible à cette période. La rééducation périnéale (Kegel) est poursuivie.'
+          },
+          {
+            period: 'Semaines 4–6',
+            body: 'Les éventuelles fuites urinaires régressent largement. L’activité physique intense et les rapports sexuels attendent l’accord de votre chirurgien.'
+          },
+          {
+            period: 'Mois 3',
+            body: 'Les résultats se stabilisent. Au contrôle, le score IPSS et la débitmétrie sont répétés afin de mesurer objectivement l’amélioration.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Le prix varie selon le volume prostatique, les gestes associés et la durée du séjour. Un devis ferme est établi après la pré-évaluation.'
+        },
+        packageIncludes: [
+          'Intervention et séjour hospitalier',
+          'Anesthésie et bloc opératoire',
+          'Bilan préopératoire',
+          'Examen anatomopathologique',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et coordinateur patient',
+          'Contrôles en ligne après la sortie'
+        ],
+        faqs: [
+          {
+            q: 'Quelle est la différence entre la ThuLEP et la HoLEP ?',
+            a: 'Ce sont deux techniques d’énucléation qui retirent en bloc le tissu prostatique obstructif ; la différence tient au laser employé. La HoLEP utilise un laser holmium, la ThuLEP un laser thulium. Le thulium émettant une onde continue, le contrôle du saignement pendant la découpe est facilité. Du point de vue du patient, le déroulement, la récupération et les résultats attendus sont très proches ; le choix dépend de l’expérience du chirurgien et du matériel disponible.'
+          },
+          {
+            q: 'Ma prostate est très volumineuse : une méthode endoscopique est-elle possible ?',
+            a: 'Oui. Le principal avantage des techniques d’énucléation est de rester applicables aux prostates volumineuses. Des volumes qui imposaient autrefois une chirurgie ouverte peuvent être traités par ThuLEP sans incision.'
+          },
+          {
+            q: 'Ma fonction sexuelle sera-t-elle affectée ?',
+            a: 'La fonction érectile est généralement préservée. En revanche, l’éjaculation rétrograde — le sperme reflue vers la vessie au lieu d’être émis — est un changement fréquent. Elle n’est pas dangereuse pour la santé mais affecte la fertilité. Si vous avez un projet de paternité, nous devons en parler avant l’intervention.'
+          },
+          {
+            q: 'Combien de temps la sonde reste-t-elle en place ?',
+            a: 'Généralement 1 à 2 jours. La sonde est retirée dès que les urines sont claires, et vous sortez après avoir uriné spontanément. Cette durée est rarement plus longue.'
+          },
+          {
+            q: 'Je prends des anticoagulants : puis-je être opéré ?',
+            a: 'Le laser thulium facilitant le contrôle du saignement, la ThuLEP peut être envisagée chez ces patients. La décision d’interrompre ou d’adapter votre traitement revient toutefois au médecin qui vous suit. N’arrêtez jamais vos médicaments de votre propre initiative.'
+          },
+          {
+            q: 'Le tissu retiré est-il analysé, et que se passe-t-il si un cancer est découvert ?',
+            a: 'Oui. Dans l’énucléation, la totalité du tissu retiré est adressée en anatomopathologie. Si un foyer cancéreux inattendu est découvert, un plan de traitement complémentaire ou de surveillance est établi selon le stade et vous est expliqué en détail.'
+          },
+          {
+            q: 'L’intervention devra-t-elle être répétée ?',
+            a: 'Parce que l’énucléation retire le tissu obstructif en bloc, elle vise un résultat durable. Aucune méthode ne peut toutefois garantir qu’un nouveau traitement ne sera jamais nécessaire ; un suivi régulier est recommandé.'
+          },
+          {
+            q: 'Les fuites urinaires seront-elles définitives ?',
+            a: 'Les fuites pouvant survenir dans les premières semaines sont transitoires chez la plupart des patients et s’améliorent progressivement. La rééducation périnéale y contribue. Les fuites définitives sont rares ; ce risque est abordé spécifiquement lors de l’évaluation préopératoire.'
+          },
+          {
+            q: 'Quand puis-je prendre l’avion après l’intervention ?',
+            a: 'L’autorisation de vol est généralement donnée après la consultation de contrôle, le plus souvent 7 jours après l’intervention. Sur les vols longs, il est conseillé de bouger et de bien s’hydrater afin de réduire le risque de caillots.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'Recommandations EAU sur la prise en charge des TUBA masculins non neurogènes — Association européenne d’urologie',
+            url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts'
+          },
+          {
+            label:
+              'Ergün M, Sağır S, Hacibey İ. ThuLEP technique for managing benign prostatic hyperplasia: intraoperative and postoperative complications in a series of 42 consecutive cases. Journal of Surgery and Medicine, 2025.'
+          }
+        ]
+      },
+      ru: {
+        title: 'ThuLEP (энуклеация простаты тулиевым лазером)',
+        summary:
+          'Эндоскопический метод, при котором обтурирующая ткань увеличенной простаты целиком энуклеируется тулиевым лазером.',
+        metaTitle: 'ThuLEP: энуклеация простаты тулиевым лазером',
+        metaDescription:
+          'ThuLEP при доброкачественной гиперплазии простаты: кому подходит, как проводится, риски, восстановление и сравнение с HoLEP и ТУРП.',
+        quickFacts: {
+          duration: '60–120 минут',
+          anesthesia: 'Общая или спинальная анестезия',
+          hospitalStay: '1 ночь',
+          stayInTurkey: '5–7 дней',
+          catheter: '1–2 дня',
+          returnToWork: '2–3 недели',
+          flightClearance: 'С 7-го дня'
+        },
+        definition: [
+          'Доброкачественная гиперплазия простаты (ДГПЖ) — это возрастное разрастание ткани простаты, сдавливающее мочеиспускательный канал снаружи. Чаще всего беспокоят слабая струя, затруднённое начало мочеиспускания, несколько ночных подъёмов и ощущение неполного опорожнения мочевого пузыря. В запущенных случаях возможны острая задержка мочи, повторные инфекции мочевых путей или камни мочевого пузыря.',
+          'ThuLEP — эндоскопическая операция, при которой обтурирующая ткань простаты отделяется от капсулы тулиевым лазером и удаляется ЦЕЛИКОМ. Разрезов на теле не делают; всё вмешательство выполняется через мочеиспускательный канал. Если при классической ТУРП ткань срезается мелкими фрагментами, то при энуклеации она отслаивается единым блоком — это логика открытой операции, реализованная закрытым доступом.',
+          'Тулиевый лазер работает в непрерывном режиме: он рассекает ткань и одновременно запаивает мелкие сосуды. Это облегчает контроль кровотечения, поэтому метод может быть предпочтителен при больших объёмах простаты и у отдельных пациентов, требующих осторожности из-за приёма антикоагулянтов.',
+          'Энуклеированная ткань измельчается в мочевом пузыре морцеллятором, извлекается и направляется на ГИСТОЛОГИЧЕСКОЕ ИССЛЕДОВАНИЕ. Это важное отличие от методов с испарением ткани: при случайном очаге рака диагноз не будет пропущен.'
+        ],
+        eligibility: {
+          suitable: [
+            'Пациенты со средним или большим объёмом простаты, у которых лекарственная терапия недостаточно эффективна',
+            'Пациенты, не способные продолжать приём препаратов из-за побочных эффектов',
+            'Пациенты с повторной задержкой мочи или ставшие зависимыми от катетера',
+            'Пациенты с рецидивирующими инфекциями мочевых путей или камнями мочевого пузыря на фоне гиперплазии',
+            'Отдельные пациенты, требующие осторожности в отношении кровотечения, если хирург считает метод подходящим'
+          ],
+          notSuitable: [
+            'Пациенты с активной инфекцией мочевых путей — сначала лечат инфекцию, операцию откладывают',
+            'Пациенты, у которых подозрение на рак простаты ещё не снято — сначала завершают диагностику',
+            'Пациенты, у которых жалобы обусловлены не обструкцией, а слабостью мышцы мочевого пузыря: ожидаемая польза может быть ограниченной',
+            'Пациенты с высоким анестезиологическим риском из-за сопутствующих заболеваний',
+            'Пациенты, планирующие зачатие, — возможна ретроградная эякуляция, это необходимо обсудить до операции'
+          ]
+        },
+        technology: [
+          'Тулиевая лазерная платформа Quanta',
+          'Непрерывный режим тулия: рассечение и гемостаз одновременно',
+          'Безопасное извлечение ткани из мочевого пузыря морцеллятором',
+          'Вся удалённая ткань направляется на гистологическое исследование'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'У доцента, д-ра Мюслюма Эргюна есть рецензируемая публикация по технике ThuLEP с анализом интра- и послеоперационных осложнений (Journal of Surgery and Medicine, 2025).'
+        },
+        timeline: [
+          {
+            when: 'Дистанционно',
+            title: 'Предварительная оценка',
+            body: 'Оцениваются урофлоуметрия, балл симптомов IPSS, уровень ПСА, объём простаты и остаточная моча; определяется, подходит ли вам метод.'
+          },
+          {
+            when: '1-й день',
+            title: 'Приезд и обследование',
+            body: 'Очный осмотр, дообследование при необходимости и консультация анестезиолога.'
+          },
+          {
+            when: '2-й день',
+            title: 'Вмешательство',
+            body: 'ThuLEP выполняется под общей или спинальной анестезией; обычно занимает 60–120 минут и не требует разрезов.'
+          },
+          {
+            when: '3-й день',
+            title: 'Удаление катетера и выписка',
+            body: 'Катетер удаляют, когда моча становится прозрачной; выписка планируется после того, как вы начнёте мочиться самостоятельно.'
+          },
+          {
+            when: '7–10-й день',
+            title: 'Контроль и гистология',
+            body: 'Проводится контрольный осмотр, разбирается результат гистологии и даётся разрешение на обратный перелёт.'
+          }
+        ],
+        risks: [
+          'Временное жжение и внезапные позывы при мочеиспускании',
+          'Временное стрессовое подтекание мочи — у большинства пациентов проходит за несколько недель, упражнения для тазового дна этому способствуют',
+          'Ретроградная эякуляция: семя попадает в мочевой пузырь, а не наружу; встречается часто и влияет на фертильность',
+          'Инфекция мочевых путей',
+          'Стриктура уретры или склероз шейки мочевого пузыря (реже; может потребоваться дополнительное вмешательство)',
+          'Кровотечение и общие хирургические риски, связанные с анестезией'
+        ],
+        alternatives: [
+          'Лекарственная терапия (альфа-блокаторы, ингибиторы 5-альфа-редуктазы)',
+          'HoLEP — энуклеация гольмиевым лазером',
+          'ТУРП — классическая эндоскопическая резекция',
+          'Rezūm — уменьшение объёма водяным паром (при небольших простатах)',
+          'Открытая (простая) аденомэктомия — при очень больших объёмах, всё реже'
+        ],
+        comparison: {
+          title: 'Сравнение ThuLEP, HoLEP, ТУРП и Rezūm',
+          columns: ['Критерий', 'ThuLEP', 'HoLEP', 'ТУРП', 'Rezūm'],
+          rows: [
+            {
+              label: 'Подходящий объём простаты',
+              values: ['Любой, особенно большой', 'Любой, особенно большой', 'Малый–средний', 'Малый–средний']
+            },
+            { label: 'Ткань направляется на гистологию', values: ['Да', 'Да', 'Да', 'Нет'] },
+            { label: 'Средний срок катетера', values: ['1–2 дня', '1–2 дня', '2–3 дня', 'Переменный'] },
+            { label: 'Пребывание в больнице', values: ['1 ночь', '1 ночь', '1–2 ночи', 'Возможно амбулаторно'] },
+            {
+              label: 'Влияние на половую функцию',
+              values: [
+                'Ретроградная эякуляция часто',
+                'Ретроградная эякуляция часто',
+                'Ретроградная эякуляция часто',
+                'Эякуляция страдает меньше'
+              ]
+            }
+          ],
+          note:
+            'Таблица носит общий информационный характер. Метод подбирается индивидуально с учётом объёма простаты, сопутствующих заболеваний и приоритетов пациента.'
+        },
+        recovery: [
+          {
+            period: 'Первые 48 часов',
+            body: 'Катетер установлен. Рекомендуется обильное питьё; лёгкое розовое окрашивание мочи и осадок возможны и считаются ожидаемыми.'
+          },
+          {
+            period: '1-я неделя',
+            body: 'Катетер удалён. Жжение и позывы при мочеиспускании постепенно уменьшаются. Рекомендуются короткие прогулки; подъём тяжестей и долгие поездки исключаются.'
+          },
+          {
+            period: '2–3-я неделя',
+            body: 'Улучшение струи становится отчётливым. Возвращение к офисной работе обычно возможно в этот период. Упражнения для тазового дна продолжают.'
+          },
+          {
+            period: '4–6-я неделя',
+            body: 'Подтекание мочи, если оно было, в основном проходит. Для тяжёлых нагрузок и половой жизни дожидаются разрешения врача.'
+          },
+          {
+            period: '3-й месяц',
+            body: 'Результат стабилизируется. На контроле повторяют балл IPSS и урофлоуметрию, чтобы объективно измерить улучшение.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Стоимость зависит от объёма простаты, сопутствующих вмешательств и длительности пребывания. Точное предложение даётся после предварительной оценки.'
+        },
+        packageIncludes: [
+          'Операция и пребывание в больнице',
+          'Анестезия и операционная',
+          'Предоперационное обследование',
+          'Гистологическое исследование',
+          'Трансферы аэропорт–больница–отель',
+          'Проживание (пациент + 1 сопровождающий)',
+          'Медицинский переводчик и координатор пациента',
+          'Онлайн-наблюдение после выписки'
+        ],
+        faqs: [
+          {
+            q: 'Чем ThuLEP отличается от HoLEP?',
+            a: 'Оба метода — энуклеация, при которой обтурирующая ткань простаты удаляется целиком; различие в лазере. HoLEP использует гольмиевый лазер, ThuLEP — тулиевый. Поскольку тулий работает в непрерывном режиме, контроль кровотечения при рассечении проще. С точки зрения пациента ход операции, восстановление и ожидаемые результаты во многом схожи; выбор определяется опытом хирурга и имеющимся оборудованием.'
+          },
+          {
+            q: 'У меня очень большая простата — возможен ли закрытый метод?',
+            a: 'Да. Главное преимущество энуклеации в том, что она применима и при больших объёмах. Размеры, которые раньше требовали открытой операции, сегодня лечатся с помощью ThuLEP без разрезов.'
+          },
+          {
+            q: 'Пострадает ли половая функция?',
+            a: 'Эрекция, как правило, сохраняется. При этом ретроградная эякуляция — попадание семени в мочевой пузырь вместо выхода наружу — встречается часто. Для здоровья она не опасна, но влияет на фертильность. Если вы планируете детей, это нужно обсудить до операции.'
+          },
+          {
+            q: 'Сколько времени стоит катетер?',
+            a: 'Обычно 1–2 дня. Катетер удаляют, когда моча становится прозрачной, и выписывают после того, как вы начнёте мочиться самостоятельно. Изредка этот срок длиннее.'
+          },
+          {
+            q: 'Я принимаю антикоагулянты — можно ли мне оперироваться?',
+            a: 'Поскольку тулиевый лазер облегчает контроль кровотечения, ThuLEP может рассматриваться у таких пациентов. Однако вопрос отмены или коррекции препарата решает наблюдающий вас врач. Не прекращайте приём самостоятельно.'
+          },
+          {
+            q: 'Исследуют ли удалённую ткань и что будет, если найдут рак?',
+            a: 'Да. При энуклеации вся удалённая ткань направляется на гистологию. Если обнаружен неожиданный очаг рака, в зависимости от стадии составляется план дополнительного лечения или наблюдения, и он подробно вам разъясняется.'
+          },
+          {
+            q: 'Потребуется ли повторная операция?',
+            a: 'Поскольку энуклеация удаляет обтурирующую ткань целиком, она нацелена на длительный результат. Тем не менее ни один метод не гарантирует, что повторное лечение никогда не понадобится; рекомендуется регулярное наблюдение.'
+          },
+          {
+            q: 'Останется ли недержание навсегда?',
+            a: 'Подтекание мочи в первые недели после операции у большинства пациентов временное и постепенно проходит. Упражнения для тазового дна этому способствуют. Стойкое недержание встречается редко; этот риск обсуждается с вами отдельно при предоперационной оценке.'
+          },
+          {
+            q: 'Когда можно лететь после операции?',
+            a: 'Разрешение на перелёт обычно даётся после контрольного осмотра, как правило через 7 дней после вмешательства. В длительных перелётах рекомендуются движение и достаточное питьё для снижения риска тромбов.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'Рекомендации EAU по ведению ненейрогенных СНМП у мужчин — Европейская ассоциация урологии',
+            url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts'
+          },
+          {
+            label:
+              'Ergün M, Sağır S, Hacibey İ. ThuLEP technique for managing benign prostatic hyperplasia: intraoperative and postoperative complications in a series of 42 consecutive cases. Journal of Surgery and Medicine, 2025.'
+          }
+        ]
+      },
+      ar: {
+        title: 'ThuLEP (استئصال البروستاتا بليزر الثوليوم)',
+        summary:
+          'طريقة تنظيرية يُستأصل فيها النسيج المسبّب للانسداد في البروستاتا المتضخّمة كاملًا بليزر الثوليوم.',
+        metaTitle: 'ThuLEP: استئصال البروستاتا بليزر الثوليوم',
+        metaDescription:
+          'ThuLEP لتضخم البروستاتا الحميد: لمن تناسب، وكيف تُجرى، والمخاطر، والتعافي، ومقارنتها بـ HoLEP وTURP.',
+        quickFacts: {
+          duration: '60–120 دقيقة',
+          anesthesia: 'تخدير عام أو نصفي',
+          hospitalStay: 'ليلة واحدة',
+          stayInTurkey: '5–7 أيام',
+          catheter: '1–2 يوم',
+          returnToWork: '2–3 أسابيع',
+          flightClearance: 'بدءًا من اليوم السابع'
+        },
+        definition: [
+          'تضخم البروستاتا الحميد هو نمو نسيج البروستاتا مع التقدّم في العمر بما يضغط على مجرى البول من الخارج. وأكثر الشكاوى شيوعًا ضعف تدفق البول، وصعوبة بدء التبول، والاستيقاظ عدة مرات ليلًا، والإحساس بعدم إفراغ المثانة تمامًا. وفي الحالات المتقدّمة قد يحدث احتباس بولي أو التهابات بولية متكرّرة أو حصوات في المثانة.',
+          'ThuLEP عملية تنظيرية يُفصَل فيها النسيج المسبّب للانسداد عن محفظة البروستاتا بليزر الثوليوم ويُزال كاملًا ككتلة واحدة. ولا يُجرى أي شق في الجسم؛ إذ تتم العملية بالكامل عبر مجرى البول. وبينما يُكشَط النسيج في عملية TURP التقليدية على شكل شرائح صغيرة، يُقشَّر في الاستئصال كقطعة واحدة — وهو منطق الجراحة المفتوحة مطبّقًا بأسلوب مغلق.',
+          'يعمل ليزر الثوليوم بموجة مستمرة؛ فيقطع النسيج ويُغلق الأوعية الصغيرة في الوقت نفسه. ولأن ذلك يسهّل السيطرة على النزف، قد تُفضَّل هذه الطريقة في البروستاتا كبيرة الحجم ولدى مرضى مختارين يحتاجون إلى حذر بسبب أدوية سيولة الدم.',
+          'يُفتَّت النسيج المستأصل داخل المثانة بجهاز يُسمّى المفتّت (morcellator)، ثم يُخرَج ويُرسَل إلى الفحص النسيجي. وهذا فرق مهم عن الطرق التي تبخّر النسيج: فإن وُجد بؤرة سرطانية غير متوقّعة، لا يفوت التشخيص.'
+        ],
+        eligibility: {
+          suitable: [
+            'المرضى ذوو البروستاتا متوسطة أو كبيرة الحجم الذين لا يستفيدون كفايةً من العلاج الدوائي',
+            'المرضى غير القادرين على مواصلة الدواء بسبب آثاره الجانبية',
+            'المرضى الذين يعانون احتباسًا بوليًا متكرّرًا أو أصبحوا معتمدين على القسطرة',
+            'المرضى الذين تتكرّر لديهم التهابات المسالك أو تتكوّن حصوات المثانة بسبب التضخم',
+            'مرضى مختارون يحتاجون إلى حذر في السيطرة على النزف، متى رأى الجرّاح أن الطريقة مناسبة'
+          ],
+          notSuitable: [
+            'المصابون بالتهاب بولي نشط — يُعالَج الالتهاب أولًا وتُؤجَّل العملية',
+            'من لم يُستبعد لديهم بعد الاشتباه بسرطان البروستاتا — يُستكمل التقييم التشخيصي أولًا',
+            'من تنجم أعراضهم عن ضعف عضلة المثانة لا عن الانسداد؛ فقد تكون الفائدة المتوقّعة محدودة',
+            'المرضى ذوو الخطورة التخديرية العالية بسبب أمراض مصاحبة',
+            'من لديهم رغبة في الإنجاب — فاحتمال القذف الرجوعي قائم ويجب مناقشته قبل العملية'
+          ]
+        },
+        technology: [
+          'منصّة ليزر الثوليوم Quanta',
+          'ثوليوم بموجة مستمرة: قطع وسيطرة على النزف في آن واحد',
+          'إخراج النسيج من المثانة بأمان باستخدام المفتّت',
+          'إرسال كامل النسيج المستأصل إلى الفحص النسيجي'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'للأستاذ المشارك د. مسلم إرغن بحث محكّم حول تقنية ThuLEP يقيّم المضاعفات أثناء العملية وبعدها (Journal of Surgery and Medicine, 2025).'
+        },
+        timeline: [
+          {
+            when: 'عن بُعد',
+            title: 'التقييم المبدئي',
+            body: 'تُراجَع نتائج قياس تدفق البول ومؤشر الأعراض IPSS وقيمة PSA وحجم البروستاتا والبول المتبقي بعد التبول، ثم تُقيَّم ملاءمة الطريقة لحالتكم.'
+          },
+          {
+            when: 'اليوم الأول',
+            title: 'الوصول والفحوص',
+            body: 'فحص سريري مباشر واستكمال ما ينقص من فحوص وتقييم التخدير.'
+          },
+          {
+            when: 'اليوم الثاني',
+            title: 'العملية',
+            body: 'تُجرى ThuLEP تحت تخدير عام أو نصفي؛ وتستغرق عادةً 60–120 دقيقة ولا تتطلّب أي شق.'
+          },
+          {
+            when: 'اليوم الثالث',
+            title: 'إزالة القسطرة والخروج',
+            body: 'تُزال القسطرة عندما يصفو البول؛ ويُخطَّط للخروج بعد التأكد من قدرتكم على التبول تلقائيًا.'
+          },
+          {
+            when: 'اليوم 7–10',
+            title: 'المتابعة والنتيجة النسيجية',
+            body: 'يُجرى فحص المتابعة وتُراجَع نتيجة الفحص النسيجي ويُمنَح الإذن برحلة العودة.'
+          }
+        ],
+        risks: [
+          'حرقة وإلحاح مفاجئ عند التبول بشكل مؤقّت',
+          'تسرّب بولي جهدي مؤقّت — يتحسّن لدى معظم المرضى خلال أسابيع، وتمارين قاع الحوض تدعم ذلك',
+          'القذف الرجوعي: انتقال السائل المنوي إلى المثانة بدل خروجه؛ شائع ويؤثر في الخصوبة',
+          'التهاب المسالك البولية',
+          'تضيّق الإحليل أو تصلّب عنق المثانة (أقل شيوعًا؛ وقد يتطلّب إجراءً إضافيًا)',
+          'النزف والمخاطر الجراحية العامة المرتبطة بالتخدير'
+        ],
+        alternatives: [
+          'العلاج الدوائي (حاصرات ألفا، مثبطات 5-ألفا ريدكتاز)',
+          'HoLEP — الاستئصال بليزر الهولميوم',
+          'TURP — الاستئصال التنظيري التقليدي',
+          'Rezūm — تقليل الحجم ببخار الماء (للبروستاتا الأصغر)',
+          'الاستئصال المفتوح (البسيط) — للبروستاتا كبيرة الحجم جدًا، ويقلّ استخدامه تدريجيًا'
+        ],
+        comparison: {
+          title: 'مقارنة ThuLEP وHoLEP وTURP وRezūm',
+          columns: ['المعيار', 'ThuLEP', 'HoLEP', 'TURP', 'Rezūm'],
+          rows: [
+            {
+              label: 'حجم البروستاتا المناسب',
+              values: ['كل الأحجام، خاصة الكبيرة', 'كل الأحجام، خاصة الكبيرة', 'صغير–متوسط', 'صغير–متوسط']
+            },
+            { label: 'إرسال النسيج للفحص النسيجي', values: ['نعم', 'نعم', 'نعم', 'لا'] },
+            { label: 'متوسط مدة القسطرة', values: ['1–2 يوم', '1–2 يوم', '2–3 أيام', 'متغيّرة'] },
+            { label: 'الإقامة في المستشفى', values: ['ليلة واحدة', 'ليلة واحدة', 'ليلة إلى ليلتين', 'قد تكون ليوم واحد'] },
+            {
+              label: 'الأثر في الوظيفة الجنسية',
+              values: [
+                'القذف الرجوعي شائع',
+                'القذف الرجوعي شائع',
+                'القذف الرجوعي شائع',
+                'القذف أقل تأثرًا'
+              ]
+            }
+          ],
+          note:
+            'هذا الجدول لأغراض التوعية العامة. وتُحدَّد الطريقة لكل حالة على حدة بحسب حجم البروستاتا والأمراض المصاحبة وأولويات المريض.'
+        },
+        recovery: [
+          {
+            period: 'أول 48 ساعة',
+            body: 'القسطرة موضوعة. ويُنصح بشرب كميات وافرة من السوائل؛ وقد يُلاحَظ لون وردي خفيف ورواسب في البول، وهذا أمر متوقّع.'
+          },
+          {
+            period: 'الأسبوع الأول',
+            body: 'أُزيلت القسطرة. وتقلّ الحرقة والإلحاح عند التبول تدريجيًا. ويُنصح بالمشي القصير، مع تجنّب رفع الأثقال والسفر الطويل بالسيارة.'
+          },
+          {
+            period: 'الأسبوع 2–3',
+            body: 'يصبح تحسّن تدفق البول واضحًا. وعادةً ما تمكن العودة إلى العمل المكتبي في هذه الفترة. وتستمر تمارين قاع الحوض (كيجل).'
+          },
+          {
+            period: 'الأسبوع 4–6',
+            body: 'يتراجع التسرّب البولي إن وُجد إلى حدٍّ كبير. ويُنتظر إذن الجرّاح لممارسة النشاط البدني الشاق والعلاقة الزوجية.'
+          },
+          {
+            period: 'الشهر الثالث',
+            body: 'تستقرّ النتائج. وفي المتابعة يُعاد قياس مؤشر IPSS وتدفق البول لقياس التحسّن موضوعيًا.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'تختلف التكلفة بحسب حجم البروستاتا والإجراءات المرافقة ومدة الإقامة. ويُقدَّم عرض نهائي بعد التقييم المبدئي.'
+        },
+        packageIncludes: [
+          'العملية والإقامة في المستشفى',
+          'التخدير وغرفة العمليات',
+          'الفحوص قبل العملية',
+          'الفحص النسيجي',
+          'تنقّلات المطار–المستشفى–الفندق',
+          'الإقامة (المريض + مرافق واحد)',
+          'مترجم طبي ومنسّق للمرضى',
+          'متابعة عبر الإنترنت بعد الخروج'
+        ],
+        faqs: [
+          {
+            q: 'ما الفرق بين ThuLEP وHoLEP؟',
+            a: 'كلتاهما طريقة استئصال تُزيل النسيج المسبّب للانسداد كاملًا؛ والفرق في نوع الليزر. فـ HoLEP تستخدم ليزر الهولميوم، وThuLEP ليزر الثوليوم. ولأن الثوليوم يعمل بموجة مستمرة، تصبح السيطرة على النزف أثناء القطع أيسر. ومن وجهة نظر المريض فإن سير العملية والتعافي والنتائج المتوقّعة متقاربة إلى حدّ كبير؛ ويعتمد الاختيار على خبرة الجرّاح والأجهزة المتاحة.'
+          },
+          {
+            q: 'بروستاتي كبيرة جدًا، فهل يمكن إجراء طريقة مغلقة؟',
+            a: 'نعم. أهم ميزة في طرق الاستئصال أنها قابلة للتطبيق في البروستاتا كبيرة الحجم أيضًا. فالأحجام التي كانت تستلزم سابقًا جراحة مفتوحة يمكن علاجها بـ ThuLEP دون أي شق.'
+          },
+          {
+            q: 'هل تتأثر وظيفتي الجنسية؟',
+            a: 'عادةً ما يُحافَظ على الانتصاب. غير أن القذف الرجوعي — انتقال السائل المنوي إلى المثانة بدل خروجه — تغيّر شائع. وهو غير ضار بالصحة لكنه يؤثر في الخصوبة. فإن كانت لديكم رغبة في الإنجاب، يجب أن نناقش ذلك قبل العملية.'
+          },
+          {
+            q: 'كم تبقى القسطرة؟',
+            a: 'عادةً يومًا إلى يومين. تُزال القسطرة عندما يصفو البول، وتخرجون بعد التأكد من قدرتكم على التبول تلقائيًا. ونادرًا ما تطول هذه المدة.'
+          },
+          {
+            q: 'أتناول أدوية سيولة الدم، فهل يمكنني إجراء العملية؟',
+            a: 'لأن ليزر الثوليوم يسهّل السيطرة على النزف، يمكن النظر في ThuLEP لدى هؤلاء المرضى. لكن قرار إيقاف الدواء أو تعديله يُتَّخذ مع الطبيب المتابع لحالتكم. لا توقفوا الدواء من تلقاء أنفسكم.'
+          },
+          {
+            q: 'هل يُفحَص النسيج المستأصل، وماذا لو ظهر سرطان؟',
+            a: 'نعم. في الاستئصال يُرسَل كامل النسيج إلى الفحص النسيجي. وإذا وُجدت بؤرة سرطانية غير متوقّعة، تُعدّ خطة علاج إضافي أو متابعة بحسب المرحلة وتُشرَح لكم بالتفصيل.'
+          },
+          {
+            q: 'هل تحتاج العملية إلى تكرار؟',
+            a: 'لأن الاستئصال يزيل النسيج المسبّب للانسداد كاملًا، فهو يستهدف نتيجة طويلة الأمد. ومع ذلك لا تضمن أي طريقة عدم الحاجة إلى علاج لاحق؛ ويُنصَح بالمتابعة المنتظمة.'
+          },
+          {
+            q: 'هل يصبح تسرّب البول دائمًا؟',
+            a: 'التسرّب الذي قد يظهر في الأسابيع الأولى بعد العملية مؤقّت لدى معظم المرضى ويتحسّن تدريجيًا. وتمارين قاع الحوض تدعم ذلك. أما التسرّب الدائم فنادر؛ وتُناقَش هذه المخاطرة معكم على حدة أثناء التقييم قبل العملية.'
+          },
+          {
+            q: 'متى يمكنني السفر جوًا بعد العملية؟',
+            a: 'يُمنَح إذن السفر عادةً بعد فحص المتابعة، وغالبًا بعد 7 أيام من العملية. وفي الرحلات الطويلة يُنصح بالحركة وشرب السوائل لتقليل خطر الجلطات.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'إرشادات EAU حول التعامل مع أعراض الجهاز البولي السفلي غير العصبية لدى الرجال — الجمعية الأوروبية للمسالك البولية',
             url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts'
           },
           {
