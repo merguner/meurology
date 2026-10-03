@@ -236,32 +236,12 @@ export const treatments: Treatment[] = [
   },
   {
     /**
-     * TASLAK — cerrah onayına sunuldu, onaylanana kadar yayında görünmez.
-     * Androloji "ana para sayfası" (prompt m.4.1). Ton: satış değil, MAHREMİYET
-     * ve GERÇEKÇİ BEKLENTİ. Geri dönüşsüzlük açıkça yazıldı.
-     * Kaynak: EAU Sexual and Reproductive Health kılavuzu.
-     * Kaynaksız memnuniyet/başarı yüzdesi YAZILMAMIŞTIR (prompt m.1).
-     *
-     * AQUADİSSEKSİYON: Kavernöz doku koruyucu (cavernous-sparing) yaklaşımın
-     * bir uygulama biçimidir. Rakamlar J Sex Med 2026 meta-analizinden alınmıştır
-     * ve KAYNAK GÖSTERİLEREK verilmiştir (prompt m.4.2/9).
-     *
-     * ⚠️ Bu meta-analiz CERRAHIN KENDİ YAYINI DEĞİLDİR (yazarlar: Mohamed,
-     * Abdelshafi, Ahmed, Deameh, Mohamed, Ramez, Raheem). Sayfada yazarlık
-     * ima edilmemiştir; destekleyici literatür olarak gösterilir.
-     *
-     * ⚠️ Meta-analiz "kavernöz doku koruyucu teknikler" başlığı altındadır;
-     * özetinde aquadisseksiyon adı geçmez. Bu nedenle metin, aquadisseksiyonu
-     * bu YAKLAŞIMIN bir uygulaması olarak konumlandırır, rakamları doğrudan
-     * aquadisseksiyona atfetmez.
-     *
-     * TODO-DOGRULA (cerrahtan):
-     *   1) Kullanılan sıvı ve varsa ek madde (tek açık soru)
-     * CEVAPLANDI (4 Eki 2026): Cerrahın bu teknikle kendi yayını YOK — bu
-     * nedenle sayfada yalnızca destekleyici literatüre atıf var. Teknik rutin
-     * değil, seçilmiş ve uygun olgularda uygulanıyor; metin buna göre yazıldı.
+     * Cerrah tarafından 4 Ekim 2026 tarihinde onaylandı ve yayına alındı.
+     * Kaynaklar: EAU Sexual and Reproductive Health kılavuzu +
+     * J Sex Med 2026;23(2):qdag006 (doku koruyucu teknikler meta-analizi;
+     * cerrahın kendi yayını DEĞİL, destekleyici literatür).
+     * Aquadisseksiyon: rutin değil, seçilmiş ve uygun olgularda uygulanıyor.
      */
-    draft: true,
     slug: 'penil-protez',
     parent: 'androloji',
     lastReviewed: '2026-10-04',
@@ -470,6 +450,1061 @@ export const treatments: Treatment[] = [
           {
             label:
               'EAU Guidelines on Sexual and Reproductive Health — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          },
+          {
+            label:
+              'Mohamed H, Abdelshafi A, Ahmed A, Deameh MG, Mohamed T, Ramez M, Raheem O. Impact of cavernous tissue-sparing techniques on postoperative outcomes in penile prosthesis surgery: a systematic review and meta-analysis. The Journal of Sexual Medicine, 2026;23(2):qdag006.',
+            url: 'https://doi.org/10.1093/jsxmed/qdag006'
+          }
+        ]
+      },
+      en: {
+        title: 'Penile Prosthesis (Penile Implant) Surgery',
+        summary:
+          'A lasting solution for erection problems that do not respond to medication and other treatments, using a device placed inside the penis.',
+        metaTitle: 'Penile Prosthesis Surgery | Inflatable and Malleable Implants',
+        metaDescription:
+          'Penile prosthesis surgery: who it suits, implant types, risks, recovery and frequently asked questions. A process run with privacy as the priority.',
+        quickFacts: {
+          duration: '60–90 minutes',
+          anesthesia: 'General or spinal anesthesia',
+          hospitalStay: '1 night',
+          stayInTurkey: '7–10 days',
+          catheter: '1 day',
+          returnToWork: '1–2 weeks (desk work)',
+          flightClearance: 'Day 7–10'
+        },
+        definition: [
+          'Erectile dysfunction is the inability to achieve or maintain an erection sufficient for intercourse. Treatment follows a stepwise approach: first lifestyle and, where relevant, hormonal adjustment, then oral medication (PDE5 inhibitors), and after that intracavernosal injection or a vacuum device.',
+          'A penile prosthesis is the surgical solution considered when these steps do not give a sufficient result. Cylinders that provide rigidity are placed inside the spongy tissue of the penis responsible for erection (corpus cavernosum). The device gives a rigidity the patient controls and can use whenever he wishes.',
+          'AN IMPORTANT AND PERMANENT DECISION: Implanting a prosthesis is not a reversible procedure. In the classic method the corpus cavernosum is dilated serially with metal dilators; during this the tissue responsible for erection is substantially damaged and a natural, spontaneous erection is not expected afterwards. Even if the prosthesis is removed, the previous state cannot be restored.',
+          'In recent years a distinction has emerged at this point. Cavernous-sparing approaches aim to preserve the cavernosal tissue and artery as far as possible during dilation. A 2026 systematic review and meta-analysis reported that, in patients operated on with a tissue-sparing technique, preservation of the cavernosal artery and post-operative partial tumescence (residual tumescence) were markedly more frequent than with classic serial dilation, while complication rates were statistically similar between the two techniques. This evidence rests on 4 randomised studies and a total of 193 patients; it is therefore promising, but the number of patients is still limited.',
+          'This finding does NOT mean that you will have an erection sufficient for intercourse without the device after a prosthesis is implanted. What is preserved is partial tumescence and vascular function; rigidity is still provided by the prosthesis. The decision remains permanent. For this reason a penile prosthesis is recommended only after the other treatment options have genuinely been tried and expectations have been discussed in detail.',
+          'There are two basic implant types. In the three-piece inflatable prosthesis the cylinders are accompanied by a small pump placed in the scrotum and a fluid reservoir placed in the abdomen; squeezing the pump produces rigidity, and afterwards the fluid returns so the penis becomes soft again. In the malleable implant the penis stays semi-rigid at all times and is positioned by hand.',
+          'The guidelines of the European Association of Urology state that, in appropriately selected patients, penile prosthesis surgery is a treatment with high reported patient and partner satisfaction. The strongest determinant of that satisfaction is having discussed expectations properly before surgery.',
+          'AQUADISSECTION (FLUID-ASSISTED DISSECTION): This is one way of applying the tissue-sparing approach described above. Instead of forcing the inside of the corpus cavernosum mechanically with metal dilators, the tissue planes are separated by delivering fluid under pressure. The aim is to reduce the mechanical stress placed on the cavernosal tissue, the tunica and the urethra during dilation. In our clinic this technique is used in selected cases found suitable after assessment; it is not applied routinely in every patient.',
+          'Aquadissection can be particularly meaningful where the corporal tissue has become firm and narrowed (fibrotic): after prolonged priapism, after a previously implanted prosthesis has been removed because of infection, or in advanced Peyronie’s disease. In such cases mechanical dilation is technically difficult and the risk of injury increases.'
+        ],
+        eligibility: {
+          suitable: [
+            'Persistent erection problems where medication, injection and a vacuum device have been tried without sufficient result',
+            'Treatment-resistant erectile dysfunction after radical prostatectomy or pelvic surgery',
+            'Advanced vascular erectile dysfunction related to diabetes',
+            'Peyronie’s disease accompanied by erectile dysfunction',
+            'For an inflatable implant: having the manual dexterity to operate the pump'
+          ],
+          notSuitable: [
+            'Active infection (urinary, skin or systemic) — surgery is not performed until the infection is treated',
+            'Uncontrolled diabetes — it increases the risk of infection; blood sugar is regulated first',
+            'Patients who have not yet tried the simpler treatment steps',
+            'Patients with unrealistic expectations — an implant does not add length or sensation',
+            'Erection problems that are mainly psychological in origin — counselling and medical treatment come first'
+          ]
+        },
+        technology: [
+          'Corporal dilation with aquadissection (fluid-assisted dissection)',
+          'Three-piece inflatable prosthesis (cylinders + scrotal pump + reservoir)',
+          'Malleable implant',
+          'Antibiotic-coated or impregnated devices to reduce the risk of infection',
+          'Strict sterility protocol and no-touch implantation technique'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Andrology and penile prosthesis surgery are among Assoc. Prof. Dr. Müslüm Ergün’s fields of work. The implant type is chosen together with you after assessing your manual dexterity, accompanying conditions and expectations.'
+        },
+        timeline: [
+          {
+            when: 'Remote',
+            title: 'Confidential pre-assessment',
+            body: 'The duration of your complaint, treatments already tried, your diabetes and cardiovascular status, previous operations and current medication are assessed in confidence.'
+          },
+          {
+            when: 'Day 1',
+            title: 'Examination and expectations consultation',
+            body: 'In-person examination, necessary tests and selection of the implant type. In this consultation what the device does — and what it does not do — is discussed in detail.'
+          },
+          {
+            when: 'Day 2',
+            title: 'Surgery',
+            body: 'The procedure is performed under general or spinal anesthesia and usually takes 60–90 minutes. The incision is made in the scrotal area or at the base of the penis. For dilating the corpora, the aquadissection technique is used in selected and suitable cases.'
+          },
+          {
+            when: 'Day 3',
+            title: 'Catheter removal and discharge',
+            body: 'The catheter is usually removed the next day. Dressing care and the medication schedule are explained and discharge is planned.'
+          },
+          {
+            when: 'Day 7–10',
+            title: 'Review and return',
+            body: 'The wound is checked, sutures are assessed and clearance is given for the return flight. The device is NOT YET USED at this stage.'
+          },
+          {
+            when: 'Week 4–6',
+            title: 'Device activation and training',
+            body: 'Once the swelling has settled the device is activated and its use is taught step by step. This training can also be given online if needed.'
+          }
+        ],
+        risks: [
+          'Infection — the most important complication of implant surgery; if it develops the device may have to be removed. Diabetes and smoking increase the risk.',
+          'Mechanical failure — may occur in the long term, particularly with multi-part devices, and can require revision surgery',
+          'Pressure on the skin or erosion of the device (uncommon)',
+          'Reduced sensation in the glans',
+          'A FEELING that the penis has become shorter — an implant does not add length, which is why pre-operative expectations matter',
+          'Bleeding, haematoma and wound healing problems',
+          'General surgical risks related to anesthesia'
+        ],
+        alternatives: [
+          'PDE5 inhibitors (oral medication)',
+          'Intracavernosal injection therapy',
+          'Vacuum erection device',
+          'Low-intensity shockwave therapy (Li-ESWT) — the level of evidence is still limited; considered in selected patients',
+          'Psychosexual counselling — especially where there is a psychological component'
+        ],
+        comparison: {
+          title: 'Three-piece inflatable versus malleable implant',
+          columns: ['Criterion', 'Three-piece inflatable', 'Malleable'],
+          rows: [
+            { label: 'Naturalness', values: ['More natural, as it inflates and deflates', 'The penis stays semi-rigid at all times'] },
+            { label: 'Use', values: ['Via the scrotal pump; manual dexterity needed', 'Positioned by bending it by hand'] },
+            { label: 'Concealment under clothing', values: ['High', 'Lower'] },
+            { label: 'Number of parts and mechanical failure', values: ['More parts; possibility of revision in the long term', 'Fewer parts; mechanically more durable'] },
+            { label: 'Complexity of the operation', values: ['More complex', 'Simpler'] },
+            { label: 'Who it suits', values: ['Patients who prioritise naturalness and have sufficient dexterity', 'Patients with limited dexterity or who prefer simplicity'] }
+          ],
+          note:
+            'Both devices provide a lasting solution. The choice is made by weighing dexterity, expectations, accompanying conditions and cost together.'
+        },
+        recovery: [
+          {
+            period: 'Week 1',
+            body: 'Swelling, bruising and pain are expected findings; a painkiller and antibiotic schedule is followed. The device is not used in this period. Long walks and heavy lifting are avoided.'
+          },
+          {
+            period: 'Weeks 2–3',
+            body: 'Swelling decreases markedly. Returning to desk work is usually possible. Wound care continues.'
+          },
+          {
+            period: 'Weeks 4–6',
+            body: 'The device is activated and training in its use is given. The first uses are guided by your physician.'
+          },
+          {
+            period: 'After week 6',
+            body: 'Sexual activity begins with your physician’s approval. Getting used to the device may take time in the first weeks; this is normal.'
+          },
+          {
+            period: 'Month 3',
+            body: 'A follow-up examination is carried out; the functioning of the device and your satisfaction are assessed. Annual follow-up is advised thereafter.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies significantly with the type and brand of implant chosen. A firm quote is given once the implant type has been decided.'
+        },
+        packageIncludes: [
+          'Surgery and hospital stay',
+          'Anesthesia and operating room',
+          'The implant device (according to the type chosen)',
+          'Pre-operative tests',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and confidentiality-based coordination',
+          'Device training and post-discharge online follow-ups'
+        ],
+        faqs: [
+          {
+            q: 'Is a natural erection possible after an implant?',
+            a: 'Rigidity is provided by the prosthesis in every case; you should not expect an erection sufficient for intercourse without the device. With classic serial dilation the erectile tissue is substantially damaged, so spontaneous tumescence is also largely lost. With tissue-sparing approaches the cavernosal tissue and artery are preserved as far as possible; a 2026 meta-analysis reported that partial tumescence (residual tumescence) is markedly more often preserved in these patients than with the classic method. Even so, the decision remains permanent: once an implant is in place there is no going back.'
+          },
+          {
+            q: 'What is aquadissection, and what difference does it make for me?',
+            a: 'Before the implant is placed, the inside of the spongy tissue of the penis is dilated. In the classic method this is done mechanically with metal dilators; in aquadissection the tissue planes are separated by delivering fluid under pressure. This is one application of approaches that aim to preserve cavernosal tissue. A 2026 systematic review and meta-analysis reported that with tissue-sparing techniques, preservation of the cavernosal artery and post-operative partial tumescence were more frequent than with classic dilation, while complication rates were similar; this evidence rests on 4 randomised studies and 193 patients. The technique can be particularly meaningful where the tissue has become firm and narrowed (fibrotic). Whether it is suitable in your case is assessed after examination and imaging.'
+          },
+          {
+            q: 'Are ejaculation and orgasm affected?',
+            a: 'No. The implant only provides rigidity; ejaculation and orgasm occur through different mechanisms and are generally preserved. If you have had prostate surgery before, the situation regarding ejaculation depends on that operation, not on the implant.'
+          },
+          {
+            q: 'Is it noticeable from the outside?',
+            a: 'A three-piece inflatable implant is not noticeable under clothing, because the penis stays soft when it is not in use. With a malleable implant the penis is permanently semi-rigid, so it is a little harder to conceal; this is one of the points discussed when choosing the type.'
+          },
+          {
+            q: 'What is the risk of infection and how is it reduced?',
+            a: 'Infection is the most important complication of implant surgery and, when it develops, usually requires removal of the device. To reduce the risk, antibiotic-coated devices, a strict sterility protocol and a no-touch implantation technique are used. Regulating blood sugar before surgery and stopping smoking are the two most important factors that lower the risk.'
+          },
+          {
+            q: 'How long does an implant last?',
+            a: 'Implants are designed to be used for many years; however, as it is a mechanical device there is a possibility of failure over time, and revision surgery may then be needed. The manufacturer’s warranty and follow-up conditions are explained to you before surgery.'
+          },
+          {
+            q: 'Will my penis become shorter?',
+            a: 'An implant does not lengthen the penis. Some patients feel after surgery that it has become shorter; this is usually because the full lengthening of a natural erection is replaced by the rigidity the device provides. This expectation is always discussed before surgery.'
+          },
+          {
+            q: 'When can I have sexual intercourse?',
+            a: 'The device is usually activated after 4–6 weeks and training in its use is given; sexual activity begins after that period with your physician’s approval. Using it too early can affect wound healing adversely.'
+          },
+          {
+            q: 'Is the process kept confidential?',
+            a: 'Yes. For andrology enquiries all consultation and coordination are conducted on the principle of confidentiality. The information you share is processed only for assessment. If you wish, you can speak one to one through the paid online consultation without visiting the clinic.'
+          },
+          {
+            q: 'Must I try the simpler treatments first?',
+            a: 'Yes, as a rule. An implant is the final step of stepwise treatment. A prosthesis is not recommended before medication, injection or a vacuum device has been tried, because those options are reversible and an implant is not.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          },
+          {
+            label:
+              'Mohamed H, Abdelshafi A, Ahmed A, Deameh MG, Mohamed T, Ramez M, Raheem O. Impact of cavernous tissue-sparing techniques on postoperative outcomes in penile prosthesis surgery: a systematic review and meta-analysis. The Journal of Sexual Medicine, 2026;23(2):qdag006.',
+            url: 'https://doi.org/10.1093/jsxmed/qdag006'
+          }
+        ]
+      },
+      de: {
+        title: 'Penisprothese (Penisimplantat) — Operation',
+        summary:
+          'Eine dauerhafte Lösung bei Erektionsproblemen, die auf Medikamente und andere Behandlungen nicht ansprechen, mit einem im Penis platzierten Implantat.',
+        metaTitle: 'Penisprothese: Operation, aufblasbare und biegsame Implantate',
+        metaDescription:
+          'Penisprothesen-Operation: für wen geeignet, Implantattypen, Risiken, Genesung und häufige Fragen. Ein Ablauf, bei dem Diskretion Vorrang hat.',
+        quickFacts: {
+          duration: '60–90 Minuten',
+          anesthesia: 'Vollnarkose oder Spinalanästhesie',
+          hospitalStay: '1 Nacht',
+          stayInTurkey: '7–10 Tage',
+          catheter: '1 Tag',
+          returnToWork: '1–2 Wochen (Bürotätigkeit)',
+          flightClearance: 'Tag 7–10'
+        },
+        definition: [
+          'Erektile Dysfunktion ist die Unfähigkeit, eine für den Geschlechtsverkehr ausreichende Erektion zu erreichen oder zu halten. Die Behandlung folgt einem Stufenschema: zunächst Lebensstil und gegebenenfalls hormonelle Anpassung, dann orale Medikamente (PDE5-Hemmer), anschließend Schwellkörperinjektion oder Vakuumpumpe.',
+          'Die Penisprothese ist die chirurgische Lösung, wenn diese Stufen kein ausreichendes Ergebnis bringen. In das für die Erektion zuständige Schwellkörpergewebe (Corpus cavernosum) werden Zylinder eingesetzt, die die Steifigkeit erzeugen. Das Implantat liefert eine Steifigkeit, die der Patient selbst steuert und jederzeit nutzen kann.',
+          'EINE WICHTIGE UND DAUERHAFTE ENTSCHEIDUNG: Das Einsetzen einer Prothese ist nicht umkehrbar. Beim klassischen Verfahren wird der Schwellkörper mit Metalldilatatoren seriell aufgedehnt; dabei wird das für die Erektion zuständige Gewebe erheblich geschädigt, und eine natürliche, spontane Erektion ist danach nicht zu erwarten. Auch nach Entfernung der Prothese lässt sich der vorherige Zustand nicht wiederherstellen.',
+          'In den letzten Jahren hat sich hier eine Unterscheidung herausgebildet. Gewebeschonende (cavernous-sparing) Verfahren zielen darauf, Schwellkörpergewebe und Arterie bei der Aufdehnung so weit wie möglich zu erhalten. Eine systematische Übersichtsarbeit mit Metaanalyse aus dem Jahr 2026 berichtete, dass bei gewebeschonend operierten Patienten der Erhalt der Schwellkörperarterie und eine postoperative Teiltumeszenz (Resttumeszenz) deutlich häufiger auftraten als nach klassischer serieller Dilatation, während die Komplikationsraten zwischen beiden Techniken statistisch vergleichbar waren. Diese Evidenz stützt sich auf 4 randomisierte Studien mit insgesamt 193 Patienten; sie ist also vielversprechend, die Patientenzahl bleibt jedoch begrenzt.',
+          'Dieser Befund bedeutet NICHT, dass Sie nach dem Einsetzen einer Prothese ohne das Implantat eine für den Geschlechtsverkehr ausreichende Erektion haben werden. Erhalten bleiben Teiltumeszenz und Gefäßfunktion; die Steifigkeit liefert weiterhin die Prothese. Die Entscheidung bleibt dauerhaft. Deshalb wird eine Penisprothese erst empfohlen, wenn die übrigen Behandlungsoptionen wirklich ausgeschöpft und die Erwartungen ausführlich besprochen wurden.',
+          'Es gibt zwei Grundtypen. Bei der dreiteiligen aufblasbaren Prothese gehören zu den Zylindern eine kleine Pumpe im Hodensack und ein Flüssigkeitsreservoir im Bauchraum; durch Drücken der Pumpe entsteht die Steifigkeit, danach fließt die Flüssigkeit zurück und der Penis wird wieder weich. Beim biegsamen (malleablen) Implantat bleibt der Penis dauerhaft halbsteif und wird von Hand positioniert.',
+          'Die Leitlinien der Europäischen Gesellschaft für Urologie halten fest, dass die Penisprothesenchirurgie bei geeignet ausgewählten Patienten eine Behandlung mit hoch berichteter Zufriedenheit von Patient und Partnerin ist. Der stärkste Faktor für diese Zufriedenheit ist ein vorab korrekt geführtes Erwartungsgespräch.',
+          'AQUADISSEKTION (FLÜSSIGKEITSGESTÜTZTE DISSEKTION): Dies ist eine Anwendungsform des oben beschriebenen gewebeschonenden Vorgehens. Statt das Innere des Schwellkörpers mechanisch mit Metalldilatatoren aufzuweiten, werden die Gewebeschichten durch unter Druck eingebrachte Flüssigkeit getrennt. Ziel ist es, die mechanische Belastung von Schwellkörpergewebe, Tunica und Harnröhre während der Aufdehnung zu verringern. In unserer Klinik wird diese Technik bei ausgewählten, nach Beurteilung geeigneten Fällen eingesetzt; sie wird nicht routinemäßig bei jedem Patienten angewandt.',
+          'Besonders sinnvoll kann die Aquadissektion sein, wenn das Schwellkörpergewebe verhärtet und verengt (fibrotisch) ist: nach langanhaltendem Priapismus, nach Entfernung einer zuvor eingesetzten Prothese wegen Infektion oder bei fortgeschrittener Induratio penis plastica. In diesen Fällen ist die mechanische Aufdehnung technisch schwierig und das Verletzungsrisiko steigt.'
+        ],
+        eligibility: {
+          suitable: [
+            'Anhaltende Erektionsprobleme, bei denen Medikamente, Injektion und Vakuumpumpe ohne ausreichendes Ergebnis versucht wurden',
+            'Therapieresistente erektile Dysfunktion nach radikaler Prostatektomie oder Beckenchirurgie',
+            'Fortgeschrittene vaskuläre erektile Dysfunktion bei Diabetes',
+            'Induratio penis plastica mit begleitender erektiler Dysfunktion',
+            'Für ein aufblasbares Implantat: ausreichende Handgeschicklichkeit zur Bedienung der Pumpe'
+          ],
+          notSuitable: [
+            'Aktive Infektion (Harnwege, Haut oder systemisch) — bis zur Behandlung der Infektion wird nicht operiert',
+            'Unkontrollierter Diabetes — erhöht das Infektionsrisiko; zunächst wird der Blutzucker eingestellt',
+            'Patienten, die die einfacheren Behandlungsstufen noch nicht versucht haben',
+            'Patienten mit unrealistischen Erwartungen — ein Implantat schafft weder Länge noch mehr Empfindung',
+            'Überwiegend psychisch bedingte Erektionsstörungen — Vorrang haben Beratung und medikamentöse Therapie'
+          ]
+        },
+        technology: [
+          'Schwellkörperaufdehnung mittels Aquadissektion (flüssigkeitsgestützte Dissektion)',
+          'Dreiteilige aufblasbare Prothese (Zylinder + Pumpe im Hodensack + Reservoir)',
+          'Biegsames (malleables) Implantat',
+          'Antibiotisch beschichtete bzw. imprägnierte Implantate zur Senkung des Infektionsrisikos',
+          'Striktes Sterilitätsprotokoll und No-Touch-Implantationstechnik'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Andrologie und Penisprothesenchirurgie gehören zu den Arbeitsgebieten von Doz. Dr. Müslüm Ergün. Der Implantattyp wird gemeinsam mit Ihnen gewählt, nach Beurteilung von Handgeschicklichkeit, Begleiterkrankungen und Erwartungen.'
+        },
+        timeline: [
+          {
+            when: 'Aus der Ferne',
+            title: 'Vertrauliche Vorabbeurteilung',
+            body: 'Dauer der Beschwerden, bereits versuchte Therapien, Diabetes- und Herz-Kreislauf-Status, frühere Operationen und Ihre Medikation werden vertraulich beurteilt.'
+          },
+          {
+            when: 'Tag 1',
+            title: 'Untersuchung und Erwartungsgespräch',
+            body: 'Persönliche Untersuchung, erforderliche Befunde und Wahl des Implantattyps. In diesem Gespräch wird ausführlich besprochen, was das Implantat leistet — und was nicht.'
+          },
+          {
+            when: 'Tag 2',
+            title: 'Operation',
+            body: 'Der Eingriff erfolgt in Vollnarkose oder Spinalanästhesie und dauert meist 60–90 Minuten. Der Schnitt wird am Hodensack oder an der Peniswurzel gesetzt. Zur Aufdehnung der Schwellkörper wird in ausgewählten, geeigneten Fällen die Aquadissektionstechnik verwendet.'
+          },
+          {
+            when: 'Tag 3',
+            title: 'Katheterentfernung und Entlassung',
+            body: 'Der Katheter wird meist am Folgetag entfernt. Verbandpflege und Medikationsplan werden erklärt, die Entlassung wird geplant.'
+          },
+          {
+            when: 'Tag 7–10',
+            title: 'Kontrolle und Rückreise',
+            body: 'Wundkontrolle, Beurteilung der Nähte und Freigabe für den Rückflug. Das Implantat wird in dieser Phase NOCH NICHT BENUTZT.'
+          },
+          {
+            when: 'Woche 4–6',
+            title: 'Aktivierung des Implantats und Einweisung',
+            body: 'Nach Abklingen der Schwellung wird das Implantat aktiviert und seine Bedienung Schritt für Schritt erklärt. Diese Einweisung kann bei Bedarf auch online erfolgen.'
+          }
+        ],
+        risks: [
+          'Infektion — die wichtigste Komplikation der Implantatchirurgie; tritt sie auf, muss das Implantat unter Umständen entfernt werden. Diabetes und Rauchen erhöhen das Risiko.',
+          'Mechanisches Versagen — vor allem bei mehrteiligen Implantaten langfristig möglich; kann eine Revisionsoperation erfordern',
+          'Druck auf die Haut oder Erosion des Implantats (selten)',
+          'Verminderte Empfindung an der Eichel',
+          'Das GEFÜHL, der Penis sei kürzer geworden — ein Implantat verlängert nicht; deshalb ist das Erwartungsgespräch vorab so wichtig',
+          'Blutung, Hämatom und Wundheilungsstörungen',
+          'Allgemeine chirurgische Risiken der Narkose'
+        ],
+        alternatives: [
+          'PDE5-Hemmer (orale Medikation)',
+          'Schwellkörper-Autoinjektionstherapie',
+          'Vakuum-Erektionshilfe',
+          'Niedrigintensive Stoßwellentherapie (Li-ESWT) — die Evidenzlage ist noch begrenzt; bei ausgewählten Patienten erwägbar',
+          'Psychosexuelle Beratung — insbesondere bei psychischer Komponente'
+        ],
+        comparison: {
+          title: 'Dreiteilige aufblasbare Prothese im Vergleich zum biegsamen Implantat',
+          columns: ['Kriterium', 'Dreiteilig aufblasbar', 'Biegsam (malleabel)'],
+          rows: [
+            { label: 'Natürlichkeit', values: ['Natürlicher, da auf- und entleerbar', 'Der Penis bleibt dauerhaft halbsteif'] },
+            { label: 'Bedienung', values: ['Über die Pumpe im Hodensack; Handgeschicklichkeit nötig', 'Wird von Hand in Position gebogen'] },
+            { label: 'Verbergen unter der Kleidung', values: ['Hoch', 'Geringer'] },
+            { label: 'Teilezahl und mechanisches Versagen', values: ['Mehr Teile; langfristig Revision möglich', 'Weniger Teile; mechanisch robuster'] },
+            { label: 'Komplexität der Operation', values: ['Komplexer', 'Einfacher'] },
+            { label: 'Für wen geeignet', values: ['Patienten mit Priorität auf Natürlichkeit und ausreichender Geschicklichkeit', 'Patienten mit eingeschränkter Geschicklichkeit oder Wunsch nach Einfachheit'] }
+          ],
+          note:
+            'Beide Implantate bieten eine dauerhafte Lösung. Die Wahl erfolgt nach Abwägung von Geschicklichkeit, Erwartungen, Begleiterkrankungen und Kosten.'
+        },
+        recovery: [
+          {
+            period: 'Woche 1',
+            body: 'Schwellung, Blutergüsse und Schmerzen sind zu erwarten; Schmerzmittel und Antibiotika werden nach Plan eingenommen. Das Implantat wird in dieser Zeit nicht benutzt. Lange Spaziergänge und schweres Heben werden vermieden.'
+          },
+          {
+            period: 'Woche 2–3',
+            body: 'Die Schwellung geht deutlich zurück. Die Rückkehr zur Bürotätigkeit ist meist möglich. Die Wundpflege wird fortgesetzt.'
+          },
+          {
+            period: 'Woche 4–6',
+            body: 'Das Implantat wird aktiviert und die Bedienung eingeübt. Die ersten Anwendungen erfolgen unter ärztlicher Anleitung.'
+          },
+          {
+            period: 'Ab Woche 6',
+            body: 'Mit ärztlicher Freigabe beginnt die sexuelle Aktivität. Sich in den ersten Wochen an das Implantat zu gewöhnen, kann Zeit brauchen; das ist normal.'
+          },
+          {
+            period: 'Monat 3',
+            body: 'Kontrolluntersuchung; Funktion des Implantats und Zufriedenheit werden beurteilt. Danach wird eine jährliche Nachsorge empfohlen.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Der Preis hängt deutlich vom gewählten Implantattyp und Hersteller ab. Ein verbindliches Angebot erfolgt, sobald der Implantattyp feststeht.'
+        },
+        packageIncludes: [
+          'Operation und Krankenhausaufenthalt',
+          'Anästhesie und Operationssaal',
+          'Das Implantat (je nach gewähltem Typ)',
+          'Präoperative Untersuchungen',
+          'Transfers Flughafen–Krankenhaus–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und vertrauliche Koordination',
+          'Einweisung in das Implantat und Online-Nachsorge nach der Entlassung'
+        ],
+        faqs: [
+          {
+            q: 'Ist nach einem Implantat eine natürliche Erektion möglich?',
+            a: 'Die Steifigkeit liefert in jedem Fall die Prothese; eine ohne Implantat für den Geschlechtsverkehr ausreichende Erektion sollten Sie nicht erwarten. Bei der klassischen seriellen Dilatation wird das Erektionsgewebe erheblich geschädigt, sodass auch die spontane Tumeszenz weitgehend verloren geht. Bei gewebeschonenden Verfahren werden Gewebe und Arterie so weit wie möglich erhalten; eine Metaanalyse von 2026 berichtete, dass eine Teiltumeszenz (Resttumeszenz) bei diesen Patienten deutlich häufiger erhalten bleibt als beim klassischen Vorgehen. Dennoch bleibt die Entscheidung dauerhaft: Ist das Implantat eingesetzt, gibt es kein Zurück.'
+          },
+          {
+            q: 'Was ist Aquadissektion und welchen Unterschied macht sie für mich?',
+            a: 'Vor dem Einsetzen des Implantats wird das Innere des Schwellkörpergewebes aufgedehnt. Klassisch geschieht das mechanisch mit Metalldilatatoren; bei der Aquadissektion werden die Gewebeschichten durch unter Druck eingebrachte Flüssigkeit getrennt. Dies ist eine Anwendung von Verfahren, die auf den Erhalt des Schwellkörpergewebes zielen. Eine systematische Übersichtsarbeit mit Metaanalyse von 2026 berichtete, dass mit gewebeschonenden Techniken der Erhalt der Schwellkörperarterie und eine postoperative Teiltumeszenz häufiger auftraten als bei klassischer Dilatation, bei vergleichbaren Komplikationsraten; diese Evidenz stützt sich auf 4 randomisierte Studien und 193 Patienten. Besonders sinnvoll kann die Technik sein, wenn das Gewebe verhärtet und verengt (fibrotisch) ist. Ob sie in Ihrem Fall geeignet ist, wird nach Untersuchung und Bildgebung beurteilt.'
+          },
+          {
+            q: 'Sind Ejakulation und Orgasmus betroffen?',
+            a: 'Nein. Das Implantat erzeugt nur die Steifigkeit; Ejakulation und Orgasmus laufen über andere Mechanismen und bleiben in der Regel erhalten. Wenn Sie zuvor an der Prostata operiert wurden, hängt die Situation der Ejakulation von jener Operation ab, nicht vom Implantat.'
+          },
+          {
+            q: 'Sieht man es von außen?',
+            a: 'Eine dreiteilige aufblasbare Prothese fällt unter der Kleidung nicht auf, da der Penis im Ruhezustand weich bleibt. Beim biegsamen Implantat ist der Penis dauerhaft halbsteif und daher etwas schwerer zu verbergen; das gehört zu den Punkten, die bei der Typwahl besprochen werden.'
+          },
+          {
+            q: 'Wie hoch ist das Infektionsrisiko und wie wird es gesenkt?',
+            a: 'Die Infektion ist die wichtigste Komplikation der Implantatchirurgie und erfordert im Fall des Falles meist die Entfernung des Implantats. Zur Risikosenkung werden antibiotisch beschichtete Implantate, ein striktes Sterilitätsprotokoll und die No-Touch-Technik eingesetzt. Die Einstellung des Blutzuckers vor der Operation und der Rauchstopp sind die beiden wichtigsten risikosenkenden Faktoren.'
+          },
+          {
+            q: 'Wie lange hält ein Implantat?',
+            a: 'Implantate sind für viele Jahre ausgelegt; da es sich jedoch um ein mechanisches Gerät handelt, besteht mit der Zeit die Möglichkeit eines Defekts, der eine Revisionsoperation erforderlich machen kann. Herstellergarantie und Nachsorgebedingungen werden Ihnen vor der Operation erläutert.'
+          },
+          {
+            q: 'Wird mein Penis kürzer?',
+            a: 'Ein Implantat verlängert den Penis nicht. Manche Patienten haben nach der Operation das Gefühl, er sei kürzer geworden; meist liegt das daran, dass die volle Längenzunahme einer natürlichen Erektion durch die Steifigkeit des Implantats ersetzt wird. Diese Erwartung wird stets vorab besprochen.'
+          },
+          {
+            q: 'Wann kann ich Geschlechtsverkehr haben?',
+            a: 'Das Implantat wird meist nach 4–6 Wochen aktiviert und die Bedienung eingeübt; die sexuelle Aktivität beginnt danach mit ärztlicher Freigabe. Eine zu frühe Nutzung kann die Wundheilung beeinträchtigen.'
+          },
+          {
+            q: 'Wird der Ablauf vertraulich behandelt?',
+            a: 'Ja. Bei andrologischen Anfragen werden alle Gespräche und die Koordination nach dem Grundsatz der Vertraulichkeit geführt. Die von Ihnen geteilten Informationen werden ausschließlich zur Beurteilung verarbeitet. Auf Wunsch können Sie über die kostenpflichtige Online-Beratung sprechen, ohne in die Klinik zu kommen.'
+          },
+          {
+            q: 'Muss ich zuerst die einfacheren Behandlungen versuchen?',
+            a: 'Ja, in der Regel. Das Implantat ist die letzte Stufe der Stufentherapie. Eine Prothese wird nicht empfohlen, bevor Medikamente, Injektion oder Vakuumpumpe versucht wurden — denn diese Optionen sind umkehrbar, das Implantat ist es nicht.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'EAU Guidelines on Sexual and Reproductive Health — Europäische Gesellschaft für Urologie',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          },
+          {
+            label:
+              'Mohamed H, Abdelshafi A, Ahmed A, Deameh MG, Mohamed T, Ramez M, Raheem O. Impact of cavernous tissue-sparing techniques on postoperative outcomes in penile prosthesis surgery: a systematic review and meta-analysis. The Journal of Sexual Medicine, 2026;23(2):qdag006.',
+            url: 'https://doi.org/10.1093/jsxmed/qdag006'
+          }
+        ]
+      },
+      fr: {
+        title: 'Prothèse pénienne (implant pénien) : la chirurgie',
+        summary:
+          'Une solution durable aux troubles de l’érection ne répondant pas aux médicaments et aux autres traitements, grâce à un dispositif implanté dans la verge.',
+        metaTitle: 'Prothèse pénienne : implants gonflables et malléables',
+        metaDescription:
+          'Chirurgie de la prothèse pénienne : indications, types d’implant, risques, récupération et questions fréquentes. Un parcours mené avec la confidentialité comme priorité.',
+        quickFacts: {
+          duration: '60 à 90 minutes',
+          anesthesia: 'Anesthésie générale ou rachidienne',
+          hospitalStay: '1 nuit',
+          stayInTurkey: '7 à 10 jours',
+          catheter: '1 jour',
+          returnToWork: '1 à 2 semaines (travail de bureau)',
+          flightClearance: 'Jours 7 à 10'
+        },
+        definition: [
+          'La dysfonction érectile est l’incapacité à obtenir ou à maintenir une érection suffisante pour un rapport sexuel. La prise en charge suit une approche par paliers : d’abord le mode de vie et, le cas échéant, une correction hormonale, puis les médicaments par voie orale (inhibiteurs de la PDE5), ensuite l’injection intracaverneuse ou la pompe à vide.',
+          'La prothèse pénienne est la solution chirurgicale envisagée lorsque ces étapes ne donnent pas de résultat suffisant. Des cylindres assurant la rigidité sont placés dans les corps caverneux, le tissu spongieux responsable de l’érection. Le dispositif procure une rigidité que le patient contrôle lui-même et peut utiliser quand il le souhaite.',
+          'UNE DÉCISION IMPORTANTE ET DÉFINITIVE : la pose d’une prothèse n’est pas une intervention réversible. Dans la méthode classique, les corps caverneux sont dilatés en série avec des dilatateurs métalliques ; ce faisant, le tissu responsable de l’érection est nettement endommagé et aucune érection naturelle, spontanée, n’est attendue ensuite. Même si la prothèse est retirée, l’état antérieur ne peut être rétabli.',
+          'Ces dernières années, une distinction est apparue sur ce point. Les approches préservant le tissu caverneux (cavernous-sparing) visent à épargner autant que possible le tissu caverneux et l’artère pendant la dilatation. Une revue systématique avec méta-analyse publiée en 2026 a rapporté que, chez les patients opérés avec une technique préservant les tissus, la préservation de l’artère caverneuse et la tumescence partielle postopératoire (tumescence résiduelle) étaient nettement plus fréquentes qu’après une dilatation sérielle classique, les taux de complications étant statistiquement comparables entre les deux techniques. Cette donnée repose sur 4 études randomisées et 193 patients au total : elle est donc prometteuse, mais l’effectif reste limité.',
+          'Ce résultat ne signifie PAS que vous aurez, une fois la prothèse posée, une érection suffisante pour un rapport sans le dispositif. Ce qui est préservé, c’est une tumescence partielle et la fonction vasculaire ; la rigidité reste assurée par la prothèse. La décision demeure définitive. C’est pourquoi la prothèse pénienne n’est proposée qu’après que les autres options thérapeutiques ont réellement été essayées et que les attentes ont été discutées en détail.',
+          'Il existe deux grands types d’implant. Dans la prothèse gonflable à trois pièces, les cylindres s’accompagnent d’une petite pompe placée dans le scrotum et d’un réservoir de liquide placé dans l’abdomen ; une pression sur la pompe produit la rigidité, puis le liquide reflue et la verge redevient souple. Dans l’implant malléable, la verge reste en permanence semi-rigide et se positionne à la main.',
+          'Les recommandations de l’Association européenne d’urologie indiquent que, chez des patients correctement sélectionnés, la chirurgie de la prothèse pénienne est un traitement pour lequel une satisfaction élevée du patient et de la partenaire est rapportée. Le principal déterminant de cette satisfaction est un entretien d’attentes correctement mené avant l’intervention.',
+          'AQUADISSECTION (DISSECTION ASSISTÉE PAR FLUIDE) : il s’agit d’une mise en œuvre de l’approche préservant les tissus décrite plus haut. Plutôt que de forcer mécaniquement l’intérieur du corps caverneux avec des dilatateurs métalliques, les plans tissulaires sont séparés par du liquide délivré sous pression. L’objectif est de réduire la contrainte mécanique exercée sur le tissu caverneux, l’albuginée et l’urètre pendant la dilatation. Dans notre clinique, cette technique est employée pour des cas sélectionnés jugés adaptés après évaluation ; elle n’est pas appliquée en routine chez tous les patients.',
+          'L’aquadissection peut être particulièrement utile lorsque le tissu caverneux est induré et rétréci (fibrotique) : après un priapisme prolongé, après le retrait pour infection d’une prothèse précédemment implantée, ou en cas de maladie de La Peyronie évoluée. Dans ces situations, la dilatation mécanique est techniquement difficile et le risque de lésion augmente.'
+        ],
+        eligibility: {
+          suitable: [
+            'Troubles de l’érection persistants malgré l’essai des médicaments, des injections et de la pompe à vide',
+            'Dysfonction érectile résistante au traitement après prostatectomie radicale ou chirurgie pelvienne',
+            'Dysfonction érectile vasculaire évoluée liée au diabète',
+            'Maladie de La Peyronie associée à une dysfonction érectile',
+            'Pour un implant gonflable : disposer de la dextérité manuelle nécessaire pour actionner la pompe'
+          ],
+          notSuitable: [
+            'Infection active (urinaire, cutanée ou générale) — l’intervention n’est pas réalisée tant que l’infection n’est pas traitée',
+            'Diabète non équilibré — il augmente le risque infectieux ; la glycémie est d’abord régulée',
+            'Patients n’ayant pas encore essayé les paliers thérapeutiques plus simples',
+            'Patients ayant des attentes irréalistes — un implant n’apporte ni longueur ni sensation supplémentaire',
+            'Troubles de l’érection d’origine principalement psychologique — la priorité va à l’accompagnement et au traitement médical'
+          ]
+        },
+        technology: [
+          'Dilatation des corps caverneux par aquadissection (dissection assistée par fluide)',
+          'Prothèse gonflable à trois pièces (cylindres + pompe scrotale + réservoir)',
+          'Implant malléable',
+          'Dispositifs enduits ou imprégnés d’antibiotique pour réduire le risque infectieux',
+          'Protocole de stérilité strict et technique d’implantation « no-touch »'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'L’andrologie et la chirurgie de la prothèse pénienne font partie des domaines d’activité du Dr Müslüm Ergün. Le type d’implant est choisi avec vous après évaluation de votre dextérité, de vos affections associées et de vos attentes.'
+        },
+        timeline: [
+          {
+            when: 'À distance',
+            title: 'Pré-évaluation confidentielle',
+            body: 'L’ancienneté du trouble, les traitements déjà essayés, votre statut diabétique et cardiovasculaire, vos interventions antérieures et vos médicaments sont évalués en toute confidentialité.'
+          },
+          {
+            when: 'Jour 1',
+            title: 'Examen et entretien sur les attentes',
+            body: 'Examen clinique, bilan nécessaire et choix du type d’implant. Cet entretien précise en détail ce que le dispositif apporte — et ce qu’il n’apporte pas.'
+          },
+          {
+            when: 'Jour 2',
+            title: 'Intervention',
+            body: 'L’intervention se déroule sous anesthésie générale ou rachidienne et dure généralement 60 à 90 minutes. L’incision est faite au niveau du scrotum ou de la base de la verge. Pour la dilatation des corps caverneux, la technique d’aquadissection est utilisée dans les cas sélectionnés et jugés adaptés.'
+          },
+          {
+            when: 'Jour 3',
+            title: 'Retrait de la sonde et sortie',
+            body: 'La sonde est généralement retirée le lendemain. Les soins de pansement et le schéma médicamenteux sont expliqués et la sortie est organisée.'
+          },
+          {
+            when: 'Jours 7–10',
+            title: 'Contrôle et retour',
+            body: 'Contrôle de la cicatrice, évaluation des sutures et autorisation pour le vol retour. Le dispositif n’est PAS ENCORE UTILISÉ à ce stade.'
+          },
+          {
+            when: 'Semaines 4–6',
+            title: 'Activation du dispositif et apprentissage',
+            body: 'Une fois l’œdème résorbé, le dispositif est activé et son utilisation enseignée pas à pas. Cet apprentissage peut aussi se faire en ligne si nécessaire.'
+          }
+        ],
+        risks: [
+          'Infection — complication la plus importante de la chirurgie prothétique ; si elle survient, le dispositif peut devoir être retiré. Le diabète et le tabac augmentent le risque.',
+          'Défaillance mécanique — possible à long terme, surtout avec les dispositifs à plusieurs pièces ; peut nécessiter une reprise chirurgicale',
+          'Pression sur la peau ou érosion du dispositif (peu fréquent)',
+          'Diminution de la sensibilité du gland',
+          'SENSATION que la verge est plus courte — un implant n’allonge pas ; d’où l’importance de l’entretien préopératoire sur les attentes',
+          'Saignement, hématome et troubles de cicatrisation',
+          'Risques chirurgicaux généraux liés à l’anesthésie'
+        ],
+        alternatives: [
+          'Inhibiteurs de la PDE5 (traitement oral)',
+          'Injections intracaverneuses',
+          'Pompe à vide',
+          'Ondes de choc de faible intensité (Li-ESWT) — niveau de preuve encore limité ; à envisager chez des patients sélectionnés',
+          'Accompagnement psychosexuel — en particulier en présence d’une composante psychologique'
+        ],
+        comparison: {
+          title: 'Prothèse gonflable à trois pièces et implant malléable',
+          columns: ['Critère', 'Gonflable trois pièces', 'Malléable'],
+          rows: [
+            { label: 'Naturel', values: ['Plus naturel, car il se gonfle et se dégonfle', 'La verge reste semi-rigide en permanence'] },
+            { label: 'Utilisation', values: ['Par la pompe scrotale ; dextérité nécessaire', 'Positionné à la main en le pliant'] },
+            { label: 'Discrétion sous les vêtements', values: ['Élevée', 'Moindre'] },
+            { label: 'Nombre de pièces et défaillance mécanique', values: ['Plus de pièces ; reprise possible à long terme', 'Moins de pièces ; mécaniquement plus robuste'] },
+            { label: 'Complexité de l’intervention', values: ['Plus complexe', 'Plus simple'] },
+            { label: 'À qui cela convient', values: ['Patients privilégiant le naturel et ayant une dextérité suffisante', 'Patients à dextérité limitée ou recherchant la simplicité'] }
+          ],
+          note:
+            'Les deux dispositifs apportent une solution durable. Le choix se fait en pesant ensemble la dextérité, les attentes, les affections associées et le coût.'
+        },
+        recovery: [
+          {
+            period: 'Semaine 1',
+            body: 'Œdème, ecchymoses et douleur sont attendus ; un traitement antalgique et antibiotique est suivi. Le dispositif n’est pas utilisé pendant cette période. Les longues marches et le port de charges sont évités.'
+          },
+          {
+            period: 'Semaines 2–3',
+            body: 'L’œdème diminue nettement. La reprise d’un travail de bureau est généralement possible. Les soins de cicatrice se poursuivent.'
+          },
+          {
+            period: 'Semaines 4–6',
+            body: 'Le dispositif est activé et son utilisation enseignée. Les premières utilisations se font sous la conduite du médecin.'
+          },
+          {
+            period: 'Après la 6e semaine',
+            body: 'L’activité sexuelle reprend avec l’accord de votre médecin. S’habituer au dispositif peut demander du temps les premières semaines ; c’est normal.'
+          },
+          {
+            period: 'Mois 3',
+            body: 'Consultation de contrôle ; le fonctionnement du dispositif et votre satisfaction sont évalués. Un suivi annuel est ensuite recommandé.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Le prix varie sensiblement selon le type et la marque d’implant retenus. Un devis ferme est établi une fois le type d’implant décidé.'
+        },
+        packageIncludes: [
+          'Intervention et séjour hospitalier',
+          'Anesthésie et bloc opératoire',
+          'Le dispositif implanté (selon le type retenu)',
+          'Bilan préopératoire',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et coordination confidentielle',
+          'Apprentissage du dispositif et contrôles en ligne après la sortie'
+        ],
+        faqs: [
+          {
+            q: 'Une érection naturelle est-elle possible après un implant ?',
+            a: 'La rigidité est assurée dans tous les cas par la prothèse ; vous ne devez pas attendre une érection suffisante pour un rapport sans le dispositif. Avec la dilatation sérielle classique, le tissu érectile est nettement endommagé et la tumescence spontanée est donc largement perdue. Avec les approches préservant les tissus, le tissu caverneux et l’artère sont épargnés autant que possible ; une méta-analyse de 2026 a rapporté que la tumescence partielle (tumescence résiduelle) est nettement plus souvent conservée chez ces patients qu’avec la méthode classique. La décision reste néanmoins définitive : une fois l’implant posé, il n’y a pas de retour en arrière.'
+          },
+          {
+            q: 'Qu’est-ce que l’aquadissection et qu’est-ce que cela change pour moi ?',
+            a: 'Avant la pose de l’implant, l’intérieur du tissu spongieux de la verge est dilaté. Dans la méthode classique, cela se fait mécaniquement avec des dilatateurs métalliques ; en aquadissection, les plans tissulaires sont séparés par du liquide délivré sous pression. C’est une application des approches visant à préserver le tissu caverneux. Une revue systématique avec méta-analyse de 2026 a rapporté qu’avec les techniques préservant les tissus, la préservation de l’artère caverneuse et la tumescence partielle postopératoire étaient plus fréquentes qu’avec la dilatation classique, les taux de complications étant comparables ; cette donnée repose sur 4 études randomisées et 193 patients. La technique peut être particulièrement utile lorsque le tissu est induré et rétréci (fibrotique). Son adéquation à votre cas est évaluée après examen et imagerie.'
+          },
+          {
+            q: 'L’éjaculation et l’orgasme sont-ils affectés ?',
+            a: 'Non. L’implant ne fournit que la rigidité ; l’éjaculation et l’orgasme passent par d’autres mécanismes et sont généralement préservés. Si vous avez déjà été opéré de la prostate, la situation concernant l’éjaculation dépend de cette intervention, non de l’implant.'
+          },
+          {
+            q: 'Est-ce visible de l’extérieur ?',
+            a: 'Une prothèse gonflable à trois pièces ne se remarque pas sous les vêtements, car la verge reste souple lorsqu’elle n’est pas utilisée. Avec un implant malléable, la verge est en permanence semi-rigide et donc un peu plus difficile à dissimuler ; c’est l’un des points abordés lors du choix du type.'
+          },
+          {
+            q: 'Quel est le risque d’infection et comment est-il réduit ?',
+            a: 'L’infection est la complication la plus importante de la chirurgie prothétique et impose le plus souvent, lorsqu’elle survient, le retrait du dispositif. Pour réduire le risque, on utilise des dispositifs enduits d’antibiotique, un protocole de stérilité strict et une technique d’implantation sans contact. L’équilibration de la glycémie avant l’intervention et l’arrêt du tabac sont les deux facteurs qui réduisent le plus le risque.'
+          },
+          {
+            q: 'Combien de temps dure un implant ?',
+            a: 'Les implants sont conçus pour durer de nombreuses années ; s’agissant toutefois d’un dispositif mécanique, une défaillance reste possible avec le temps et peut imposer une reprise chirurgicale. La garantie du fabricant et les modalités de suivi vous sont expliquées avant l’intervention.'
+          },
+          {
+            q: 'Ma verge sera-t-elle plus courte ?',
+            a: 'Un implant n’allonge pas la verge. Certains patients ont après l’intervention la sensation qu’elle est plus courte ; cela tient généralement au fait que l’allongement complet d’une érection naturelle est remplacé par la rigidité du dispositif. Cette attente est toujours discutée au préalable.'
+          },
+          {
+            q: 'Quand puis-je avoir des rapports sexuels ?',
+            a: 'Le dispositif est généralement activé après 4 à 6 semaines et son utilisation enseignée ; l’activité sexuelle commence ensuite avec l’accord de votre médecin. Une utilisation trop précoce peut nuire à la cicatrisation.'
+          },
+          {
+            q: 'Le parcours reste-t-il confidentiel ?',
+            a: 'Oui. Pour les demandes relevant de l’andrologie, l’ensemble des échanges et de la coordination est mené selon le principe de confidentialité. Les informations que vous partagez ne sont traitées qu’à des fins d’évaluation. Si vous le souhaitez, vous pouvez échanger en tête-à-tête via la consultation en ligne payante, sans venir à la clinique.'
+          },
+          {
+            q: 'Dois-je d’abord essayer les traitements plus simples ?',
+            a: 'Oui, en règle générale. L’implant est la dernière étape du traitement par paliers. Une prothèse n’est pas proposée avant que les médicaments, les injections ou la pompe à vide n’aient été essayés, car ces options sont réversibles alors que l’implant ne l’est pas.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'EAU Guidelines on Sexual and Reproductive Health — Association européenne d’urologie',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          },
+          {
+            label:
+              'Mohamed H, Abdelshafi A, Ahmed A, Deameh MG, Mohamed T, Ramez M, Raheem O. Impact of cavernous tissue-sparing techniques on postoperative outcomes in penile prosthesis surgery: a systematic review and meta-analysis. The Journal of Sexual Medicine, 2026;23(2):qdag006.',
+            url: 'https://doi.org/10.1093/jsxmed/qdag006'
+          }
+        ]
+      },
+      ru: {
+        title: 'Фаллопротезирование (пенильный имплант): операция',
+        summary:
+          'Долговременное решение при нарушениях эрекции, не отвечающих на лекарства и другие методы, с помощью устройства, имплантируемого в половой член.',
+        metaTitle: 'Фаллопротезирование: надувные и пластичные импланты',
+        metaDescription:
+          'Операция фаллопротезирования: кому подходит, типы имплантов, риски, восстановление и частые вопросы. Процесс с приоритетом конфиденциальности.',
+        quickFacts: {
+          duration: '60–90 минут',
+          anesthesia: 'Общая или спинальная анестезия',
+          hospitalStay: '1 ночь',
+          stayInTurkey: '7–10 дней',
+          catheter: '1 день',
+          returnToWork: '1–2 недели (офисная работа)',
+          flightClearance: '7–10-й день'
+        },
+        definition: [
+          'Эректильная дисфункция — это невозможность достичь или удержать эрекцию, достаточную для полового акта. Лечение строится ступенчато: сначала образ жизни и при необходимости гормональная коррекция, затем препараты внутрь (ингибиторы ФДЭ-5), далее интракавернозные инъекции или вакуумное устройство.',
+          'Фаллопротез — хирургическое решение, которое рассматривают, когда эти ступени не дают достаточного результата. В пещеристые тела полового члена, отвечающие за эрекцию, помещают цилиндры, обеспечивающие ригидность. Устройство даёт жёсткость, которой пациент управляет сам и может воспользоваться в любой момент.',
+          'ВАЖНОЕ И НЕОБРАТИМОЕ РЕШЕНИЕ: установка протеза не является обратимой процедурой. При классическом методе пещеристые тела последовательно бужируют металлическими дилататорами; при этом ткань, отвечающая за эрекцию, существенно повреждается, и естественной, спонтанной эрекции после операции не ожидается. Даже если протез удалить, прежнее состояние восстановить нельзя.',
+          'В последние годы здесь появилось различие. Подходы, щадящие кавернозную ткань (cavernous-sparing), направлены на максимальное сохранение кавернозной ткани и артерии во время расширения. Систематический обзор с метаанализом 2026 года показал, что у пациентов, оперированных по тканесберегающей методике, сохранение кавернозной артерии и послеоперационная частичная тумесценция (остаточная тумесценция) встречались заметно чаще, чем при классическом последовательном бужировании, тогда как частота осложнений между двумя методиками статистически не различалась. Эти данные опираются на 4 рандомизированных исследования и в общей сложности 193 пациента: результат обнадёживающий, но число наблюдений пока ограничено.',
+          'Эта находка НЕ означает, что после установки протеза у вас будет эрекция, достаточная для полового акта без устройства. Сохраняются частичная тумесценция и сосудистая функция; жёсткость по-прежнему обеспечивает протез. Решение остаётся необратимым. Поэтому фаллопротезирование рекомендуют лишь после того, как другие варианты лечения действительно испробованы, а ожидания подробно обсуждены.',
+          'Существуют два основных типа имплантов. В трёхкомпонентном надувном протезе помимо цилиндров есть небольшая помпа в мошонке и резервуар с жидкостью в брюшной полости; при нажатии на помпу возникает ригидность, а затем жидкость возвращается и половой член вновь становится мягким. В пластичном (malleable) импланте половой член постоянно полужёсткий и устанавливается в нужное положение рукой.',
+          'Рекомендации Европейской ассоциации урологии отмечают, что у правильно отобранных пациентов фаллопротезирование — метод с высокой сообщаемой удовлетворённостью пациента и партнёрши. Самый сильный фактор этой удовлетворённости — корректно проведённая беседа об ожиданиях до операции.',
+          'АКВАДИССЕКЦИЯ (ГИДРОДИССЕКЦИЯ): это один из способов реализации описанного выше тканесберегающего подхода. Вместо механического расширения пещеристого тела металлическими дилататорами тканевые слои разделяют жидкостью, подаваемой под давлением. Цель — уменьшить механическую нагрузку на кавернозную ткань, белочную оболочку и уретру во время расширения. В нашей клинике эта методика применяется у отобранных пациентов, признанных подходящими после оценки; рутинно у всех она не используется.',
+          'Аквадиссекция может быть особенно полезна, когда ткань пещеристых тел уплотнена и сужена (фиброз): после затяжного приапизма, после удаления ранее установленного протеза из-за инфекции или при выраженной болезни Пейрони. В этих случаях механическое расширение технически трудно, а риск повреждения возрастает.'
+        ],
+        eligibility: {
+          suitable: [
+            'Стойкие нарушения эрекции, при которых препараты, инъекции и вакуумное устройство испробованы без достаточного результата',
+            'Резистентная к лечению эректильная дисфункция после радикальной простатэктомии или операций на малом тазу',
+            'Выраженная сосудистая эректильная дисфункция при диабете',
+            'Болезнь Пейрони в сочетании с эректильной дисфункцией',
+            'Для надувного импланта: достаточная ловкость рук для работы с помпой'
+          ],
+          notSuitable: [
+            'Активная инфекция (мочевых путей, кожи или системная) — операцию не выполняют до излечения инфекции',
+            'Некомпенсированный диабет — повышает риск инфекции; сначала нормализуют уровень глюкозы',
+            'Пациенты, ещё не испробовавшие более простые ступени лечения',
+            'Пациенты с нереалистичными ожиданиями — имплант не добавляет ни длины, ни чувствительности',
+            'Нарушения эрекции преимущественно психогенного происхождения — в приоритете консультирование и медикаментозное лечение'
+          ]
+        },
+        technology: [
+          'Расширение пещеристых тел методом аквадиссекции (гидродиссекции)',
+          'Трёхкомпонентный надувной протез (цилиндры + помпа в мошонке + резервуар)',
+          'Пластичный имплант',
+          'Устройства с антибактериальным покрытием или пропиткой для снижения риска инфекции',
+          'Строгий протокол стерильности и методика имплантации без касания (no-touch)'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Андрология и хирургия фаллопротезирования входят в сферу работы доцента, д-ра Мюслюма Эргюна. Тип импланта подбирается вместе с вами после оценки ловкости рук, сопутствующих заболеваний и ожиданий.'
+        },
+        timeline: [
+          {
+            when: 'Дистанционно',
+            title: 'Конфиденциальная предварительная оценка',
+            body: 'Длительность жалоб, уже испробованные методы, статус по диабету и сердечно-сосудистым заболеваниям, перенесённые операции и принимаемые препараты оцениваются конфиденциально.'
+          },
+          {
+            when: '1-й день',
+            title: 'Осмотр и беседа об ожиданиях',
+            body: 'Очный осмотр, необходимые исследования и выбор типа импланта. В этой беседе подробно обсуждается, что устройство даёт — и чего оно не даёт.'
+          },
+          {
+            when: '2-й день',
+            title: 'Операция',
+            body: 'Вмешательство выполняется под общей или спинальной анестезией и обычно занимает 60–90 минут. Разрез выполняется в области мошонки или у основания полового члена. Для расширения пещеристых тел у отобранных и подходящих пациентов используется методика аквадиссекции.'
+          },
+          {
+            when: '3-й день',
+            title: 'Удаление катетера и выписка',
+            body: 'Катетер обычно удаляют на следующий день. Объясняют уход за повязкой и схему приёма препаратов, после чего планируют выписку.'
+          },
+          {
+            when: '7–10-й день',
+            title: 'Контроль и возвращение',
+            body: 'Осмотр раны, оценка швов и разрешение на обратный перелёт. На этом этапе устройство ЕЩЁ НЕ ИСПОЛЬЗУЕТСЯ.'
+          },
+          {
+            when: '4–6-я неделя',
+            title: 'Активация устройства и обучение',
+            body: 'После спадения отёка устройство активируют и пошагово обучают пользованию. При необходимости это обучение можно провести онлайн.'
+          }
+        ],
+        risks: [
+          'Инфекция — важнейшее осложнение протезной хирургии; при её развитии устройство может потребоваться удалить. Диабет и курение повышают риск.',
+          'Механическая поломка — возможна в отдалённом периоде, особенно у многокомпонентных устройств, и может потребовать повторной операции',
+          'Давление на кожу или эрозия устройства (нечасто)',
+          'Снижение чувствительности головки',
+          'ОЩУЩЕНИЕ укорочения полового члена — имплант не удлиняет; именно поэтому важна предоперационная беседа об ожиданиях',
+          'Кровотечение, гематома и нарушения заживления раны',
+          'Общие хирургические риски, связанные с анестезией'
+        ],
+        alternatives: [
+          'Ингибиторы ФДЭ-5 (препараты внутрь)',
+          'Интракавернозные инъекции',
+          'Вакуумное эрекционное устройство',
+          'Ударно-волновая терапия низкой интенсивности (Li-ESWT) — уровень доказательности пока ограничен; рассматривается у отдельных пациентов',
+          'Психосексуальное консультирование — особенно при наличии психологического компонента'
+        ],
+        comparison: {
+          title: 'Трёхкомпонентный надувной протез и пластичный имплант',
+          columns: ['Критерий', 'Трёхкомпонентный надувной', 'Пластичный'],
+          rows: [
+            { label: 'Естественность', values: ['Более естественный: надувается и сдувается', 'Половой член постоянно полужёсткий'] },
+            { label: 'Использование', values: ['Через помпу в мошонке; нужна ловкость рук', 'Устанавливается в положение рукой'] },
+            { label: 'Незаметность под одеждой', values: ['Высокая', 'Ниже'] },
+            { label: 'Число компонентов и поломки', values: ['Больше компонентов; возможна ревизия в отдалённом периоде', 'Меньше компонентов; механически надёжнее'] },
+            { label: 'Сложность операции', values: ['Сложнее', 'Проще'] },
+            { label: 'Кому подходит', values: ['Пациентам, ценящим естественность и имеющим достаточную ловкость', 'Пациентам с ограниченной ловкостью или предпочитающим простоту'] }
+          ],
+          note:
+            'Оба устройства дают долговременное решение. Выбор делается с учётом ловкости рук, ожиданий, сопутствующих заболеваний и стоимости.'
+        },
+        recovery: [
+          {
+            period: '1-я неделя',
+            body: 'Отёк, синяки и боль ожидаемы; применяются обезболивающие и антибиотики по схеме. Устройство в этот период не используется. Длительных прогулок и подъёма тяжестей избегают.'
+          },
+          {
+            period: '2–3-я неделя',
+            body: 'Отёк заметно уменьшается. Возвращение к офисной работе обычно возможно. Уход за раной продолжается.'
+          },
+          {
+            period: '4–6-я неделя',
+            body: 'Устройство активируют и обучают пользованию. Первые применения проходят под руководством врача.'
+          },
+          {
+            period: 'После 6-й недели',
+            body: 'Половая жизнь возобновляется с разрешения врача. Привыкание к устройству в первые недели может занять время; это нормально.'
+          },
+          {
+            period: '3-й месяц',
+            body: 'Контрольный осмотр; оценивают работу устройства и вашу удовлетворённость. Далее рекомендуется ежегодное наблюдение.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Стоимость существенно зависит от выбранного типа и марки протеза. Точное предложение даётся после того, как тип импланта определён.'
+        },
+        packageIncludes: [
+          'Операция и пребывание в больнице',
+          'Анестезия и операционная',
+          'Сам имплант (в зависимости от выбранного типа)',
+          'Предоперационное обследование',
+          'Трансферы аэропорт–больница–отель',
+          'Проживание (пациент + 1 сопровождающий)',
+          'Медицинский переводчик и конфиденциальная координация',
+          'Обучение пользованию устройством и онлайн-наблюдение после выписки'
+        ],
+        faqs: [
+          {
+            q: 'Возможна ли естественная эрекция после импланта?',
+            a: 'Жёсткость в любом случае обеспечивает протез; эрекции, достаточной для полового акта без устройства, ожидать не следует. При классическом последовательном бужировании эректильная ткань существенно повреждается, поэтому спонтанная тумесценция в основном утрачивается. При тканесберегающих подходах кавернозная ткань и артерия сохраняются максимально; метаанализ 2026 года показал, что частичная тумесценция у таких пациентов сохраняется заметно чаще, чем при классическом методе. Тем не менее решение остаётся необратимым: после установки импланта пути назад нет.'
+          },
+          {
+            q: 'Что такое аквадиссекция и что она меняет для меня?',
+            a: 'Перед установкой импланта внутреннюю часть пещеристой ткани расширяют. При классическом методе это делается механически металлическими дилататорами; при аквадиссекции тканевые слои разделяют жидкостью под давлением. Это одно из применений подходов, направленных на сохранение кавернозной ткани. Систематический обзор с метаанализом 2026 года показал, что при тканесберегающих методиках сохранение кавернозной артерии и послеоперационная частичная тумесценция встречались чаще, чем при классическом расширении, при сопоставимой частоте осложнений; эти данные основаны на 4 рандомизированных исследованиях и 193 пациентах. Методика может быть особенно полезна при уплотнённой и суженной (фиброзной) ткани. Подходит ли она в вашем случае, оценивают после осмотра и визуализации.'
+          },
+          {
+            q: 'Влияет ли это на эякуляцию и оргазм?',
+            a: 'Нет. Имплант обеспечивает только жёсткость; эякуляция и оргазм происходят через другие механизмы и обычно сохраняются. Если ранее вы перенесли операцию на простате, ситуация с эякуляцией зависит от той операции, а не от импланта.'
+          },
+          {
+            q: 'Заметно ли это со стороны?',
+            a: 'Трёхкомпонентный надувной протез под одеждой незаметен, так как в нерабочем состоянии половой член остаётся мягким. При пластичном импланте половой член постоянно полужёсткий, поэтому скрыть его немного сложнее; это один из вопросов, обсуждаемых при выборе типа.'
+          },
+          {
+            q: 'Каков риск инфекции и как его снизить?',
+            a: 'Инфекция — важнейшее осложнение протезной хирургии, и при её развитии обычно требуется удаление устройства. Для снижения риска применяют устройства с антибактериальным покрытием, строгий протокол стерильности и методику имплантации без касания. Нормализация уровня глюкозы до операции и отказ от курения — два важнейших фактора снижения риска.'
+          },
+          {
+            q: 'Сколько служит имплант?',
+            a: 'Импланты рассчитаны на многие годы; однако это механическое устройство, поэтому со временем возможна поломка, и тогда может потребоваться ревизионная операция. Гарантия производителя и условия наблюдения разъясняются вам до операции.'
+          },
+          {
+            q: 'Станет ли половой член короче?',
+            a: 'Имплант не удлиняет половой член. У некоторых пациентов после операции возникает ощущение укорочения; обычно это связано с тем, что полное удлинение при естественной эрекции заменяется жёсткостью, которую даёт устройство. Это ожидание всегда обсуждается заранее.'
+          },
+          {
+            q: 'Когда можно вести половую жизнь?',
+            a: 'Устройство обычно активируют через 4–6 недель и обучают пользованию; половая жизнь начинается после этого периода с разрешения врача. Слишком раннее использование может неблагоприятно повлиять на заживление.'
+          },
+          {
+            q: 'Сохраняется ли конфиденциальность?',
+            a: 'Да. При обращениях по андрологии все консультации и координация ведутся по принципу конфиденциальности. Предоставленная вами информация обрабатывается только для оценки. При желании вы можете поговорить один на один через платную онлайн-консультацию, не приезжая в клинику.'
+          },
+          {
+            q: 'Обязательно ли сначала попробовать более простые методы?',
+            a: 'Да, как правило. Имплант — последняя ступень ступенчатого лечения. Протез не рекомендуют, пока не испробованы препараты, инъекции или вакуумное устройство, поскольку эти варианты обратимы, а имплант — нет.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'Рекомендации EAU по сексуальному и репродуктивному здоровью — Европейская ассоциация урологии',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          },
+          {
+            label:
+              'Mohamed H, Abdelshafi A, Ahmed A, Deameh MG, Mohamed T, Ramez M, Raheem O. Impact of cavernous tissue-sparing techniques on postoperative outcomes in penile prosthesis surgery: a systematic review and meta-analysis. The Journal of Sexual Medicine, 2026;23(2):qdag006.',
+            url: 'https://doi.org/10.1093/jsxmed/qdag006'
+          }
+        ]
+      },
+      ar: {
+        title: 'جراحة دعامة القضيب (الدعامة الذكرية)',
+        summary:
+          'حل دائم لمشكلات الانتصاب التي لا تستجيب للأدوية والعلاجات الأخرى، عبر جهاز يُزرع داخل القضيب.',
+        metaTitle: 'جراحة دعامة القضيب | الدعامات القابلة للنفخ والقابلة للثني',
+        metaDescription:
+          'جراحة دعامة القضيب: لمن تناسب، وأنواع الدعامات، والمخاطر، والتعافي، والأسئلة الشائعة. مسار تُعطى فيه الخصوصية الأولوية.',
+        quickFacts: {
+          duration: '60–90 دقيقة',
+          anesthesia: 'تخدير عام أو نصفي',
+          hospitalStay: 'ليلة واحدة',
+          stayInTurkey: '7–10 أيام',
+          catheter: 'يوم واحد',
+          returnToWork: '1–2 أسبوع (عمل مكتبي)',
+          flightClearance: 'اليوم 7–10'
+        },
+        definition: [
+          'ضعف الانتصاب هو عدم القدرة على تحقيق انتصاب كافٍ للجماع أو الحفاظ عليه. ويتبع العلاج نهجًا تدريجيًا: أولًا نمط الحياة وتعديل الهرمونات عند اللزوم، ثم الأدوية الفموية (مثبطات PDE5)، ثم الحقن داخل الأجسام الكهفية أو جهاز الشفط.',
+          'دعامة القضيب هي الحل الجراحي الذي يُطرح حين لا تعطي هذه المراحل نتيجة كافية. تُوضع داخل النسيج الإسفنجي المسؤول عن الانتصاب (الأجسام الكهفية) أسطوانات توفّر الصلابة. ويمنح الجهاز صلابة يتحكّم بها المريض بنفسه ويستخدمها متى شاء.',
+          'قرار مهم ودائم: زراعة الدعامة ليست إجراءً قابلًا للتراجع. في الطريقة التقليدية تُوسَّع الأجسام الكهفية تدريجيًا بموسّعات معدنية؛ وخلال ذلك يتضرّر النسيج المسؤول عن الانتصاب بدرجة كبيرة، ولا يُتوقّع بعد العملية انتصاب طبيعي تلقائي. وحتى لو أُزيلت الدعامة، لا يمكن العودة إلى الحالة السابقة.',
+          'في السنوات الأخيرة ظهر تمييز في هذه النقطة. فالمناهج التي تحافظ على النسيج الكهفي (cavernous-sparing) تهدف إلى الحفاظ قدر الإمكان على النسيج الكهفي والشريان أثناء التوسيع. وقد أفادت مراجعة منهجية وتحليل تلوي صدرا عام 2026 بأن الحفاظ على الشريان الكهفي والانتفاخ الجزئي بعد العملية (التورّم المتبقّي) كانا أكثر تكرارًا بوضوح لدى المرضى الذين خضعوا لتقنية حافظة للنسيج مقارنةً بالتوسيع التدريجي التقليدي، في حين كانت معدلات المضاعفات متقاربة إحصائيًا بين التقنيتين. وتستند هذه الأدلة إلى 4 دراسات عشوائية و193 مريضًا إجمالًا؛ أي أنها واعدة لكن عدد المرضى لا يزال محدودًا.',
+          'هذه النتيجة لا تعني أنه سيكون لديكم بعد زراعة الدعامة انتصاب كافٍ للجماع من دون الجهاز. فما يُحافَظ عليه هو الانتفاخ الجزئي والوظيفة الوعائية؛ أما الصلابة فتوفّرها الدعامة. والقرار يبقى دائمًا. ولهذا لا يُنصَح بدعامة القضيب إلا بعد تجربة خيارات العلاج الأخرى فعليًا ومناقشة التوقعات بالتفصيل.',
+          'هناك نوعان أساسيان. في الدعامة القابلة للنفخ ثلاثية القطع ترافق الأسطوانات مضخة صغيرة تُوضع في كيس الصفن وخزّان سائل يُوضع في البطن؛ وبالضغط على المضخة تتحقّق الصلابة، ثم يعود السائل فيلين القضيب مجددًا. أما في الدعامة القابلة للثني فيبقى القضيب شبه صلب دائمًا ويُوضَع في الاتجاه المطلوب باليد.',
+          'تشير إرشادات الجمعية الأوروبية للمسالك البولية إلى أن جراحة دعامة القضيب، لدى المرضى المختارين بعناية، علاج تُسجَّل فيه درجة رضا عالية لدى المريض وشريكته. والعامل الأقوى في هذا الرضا هو إجراء حوار صحيح حول التوقعات قبل العملية.',
+          'الأكوادِسِكشن (التسليخ بمساعدة السوائل): هو أحد أشكال تطبيق المنهج الحافظ للنسيج المذكور أعلاه. فبدلًا من توسيع داخل الجسم الكهفي ميكانيكيًا بموسّعات معدنية، تُفصَل طبقات النسيج بسائل يُضَخّ تحت ضغط. والهدف تقليل الإجهاد الميكانيكي الواقع على النسيج الكهفي والغلالة والإحليل أثناء التوسيع. وتُستخدم هذه التقنية في عيادتنا لدى حالات مختارة تُعدّ مناسبة بعد التقييم؛ ولا تُطبَّق روتينيًا على كل مريض.',
+          'قد تكون الأكوادِسِكشن مفيدة بوجه خاص حين يصبح نسيج الأجسام الكهفية متصلّبًا وضيّقًا (ليفيًا): بعد قساح مطوّل، أو بعد إزالة دعامة سبق زرعها بسبب التهاب، أو في مرض بيروني المتقدّم. ففي هذه الحالات يكون التوسيع الميكانيكي صعبًا تقنيًا ويزداد خطر الإصابة.'
+        ],
+        eligibility: {
+          suitable: [
+            'مشكلات انتصاب مستمرة جُرِّبت فيها الأدوية والحقن وجهاز الشفط دون نتيجة كافية',
+            'ضعف انتصاب مقاوم للعلاج بعد الاستئصال الجذري للبروستاتا أو جراحة الحوض',
+            'ضعف انتصاب وعائي متقدّم مرتبط بالسكري',
+            'مرض بيروني المصحوب بضعف انتصاب',
+            'للدعامة القابلة للنفخ: امتلاك المهارة اليدوية اللازمة لتشغيل المضخة'
+          ],
+          notSuitable: [
+            'وجود التهاب نشط (بولي أو جلدي أو جهازي) — لا تُجرى العملية قبل علاج الالتهاب',
+            'سكري غير منضبط — يرفع خطر العدوى؛ ويُضبَط سكر الدم أولًا',
+            'المرضى الذين لم يجرّبوا بعدُ مراحل العلاج الأبسط',
+            'المرضى ذوو التوقعات غير الواقعية — فالدعامة لا تزيد الطول ولا الإحساس',
+            'مشكلات الانتصاب ذات المنشأ النفسي الغالب — الأولوية للإرشاد والعلاج الدوائي'
+          ]
+        },
+        technology: [
+          'توسيع الأجسام الكهفية بتقنية الأكوادِسِكشن (التسليخ بمساعدة السوائل)',
+          'دعامة قابلة للنفخ ثلاثية القطع (أسطوانات + مضخة في كيس الصفن + خزّان)',
+          'دعامة قابلة للثني',
+          'أجهزة مطلية أو مشبعة بالمضاد الحيوي لتقليل خطر العدوى',
+          'بروتوكول تعقيم صارم وتقنية زراعة دون ملامسة (no-touch)'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'طب الذكورة وجراحة دعامة القضيب من مجالات عمل الأستاذ المشارك د. مسلم إرغن. ويُختار نوع الدعامة معكم بعد تقييم المهارة اليدوية والأمراض المصاحبة والتوقعات.'
+        },
+        timeline: [
+          {
+            when: 'عن بُعد',
+            title: 'تقييم مبدئي سرّي',
+            body: 'تُقيَّم بسرّية مدة الشكوى، والعلاجات التي جُرِّبت، وحالة السكري والقلب والأوعية، والعمليات السابقة، والأدوية التي تتناولونها.'
+          },
+          {
+            when: 'اليوم الأول',
+            title: 'الفحص وحوار التوقعات',
+            body: 'فحص سريري مباشر والفحوص اللازمة واختيار نوع الدعامة. وفي هذا الحوار يُناقَش بالتفصيل ما يقدّمه الجهاز وما لا يقدّمه.'
+          },
+          {
+            when: 'اليوم الثاني',
+            title: 'العملية',
+            body: 'تُجرى تحت تخدير عام أو نصفي وتستغرق عادةً 60–90 دقيقة. ويكون الشق في منطقة كيس الصفن أو عند جذر القضيب. ولتوسيع الأجسام الكهفية تُستخدم تقنية الأكوادِسِكشن في الحالات المختارة والمناسبة.'
+          },
+          {
+            when: 'اليوم الثالث',
+            title: 'إزالة القسطرة والخروج',
+            body: 'تُزال القسطرة عادةً في اليوم التالي. ويُشرَح العناية بالضماد ونظام الأدوية، ثم يُخطَّط للخروج.'
+          },
+          {
+            when: 'اليوم 7–10',
+            title: 'المتابعة والعودة',
+            body: 'فحص الجرح وتقييم الغرز والإذن برحلة العودة. ولا يُستخدَم الجهاز بعد في هذه المرحلة.'
+          },
+          {
+            when: 'الأسبوع 4–6',
+            title: 'تفعيل الجهاز والتدريب على استخدامه',
+            body: 'بعد زوال التورّم يُفعَّل الجهاز ويُعلَّم استخدامه خطوة بخطوة. ويمكن إجراء هذا التدريب عبر الإنترنت عند الحاجة.'
+          }
+        ],
+        risks: [
+          'العدوى — أهم مضاعفات جراحة الدعامات؛ وعند حدوثها قد يلزم إزالة الجهاز. ويزيد السكري والتدخين من الخطر.',
+          'العطل الميكانيكي — وارد على المدى الطويل خصوصًا في الأجهزة متعدّدة القطع، وقد يستلزم جراحة مراجعة',
+          'ضغط الجهاز على الجلد أو تآكله (غير شائع)',
+          'نقص الإحساس في حشفة القضيب',
+          'الشعور بأن القضيب أصبح أقصر — فالدعامة لا تُطيل؛ ولهذا تُعدّ مناقشة التوقعات قبل العملية مهمة',
+          'النزف والورم الدموي ومشكلات التئام الجرح',
+          'المخاطر الجراحية العامة المرتبطة بالتخدير'
+        ],
+        alternatives: [
+          'مثبطات PDE5 (العلاج الفموي)',
+          'الحقن داخل الأجسام الكهفية',
+          'جهاز الشفط للانتصاب',
+          'العلاج بالموجات التصادمية منخفضة الشدة (Li-ESWT) — مستوى الأدلة لا يزال محدودًا؛ ويُنظَر فيه لدى مرضى مختارين',
+          'الإرشاد النفسي الجنسي — خصوصًا عند وجود مكوّن نفسي'
+        ],
+        comparison: {
+          title: 'مقارنة الدعامة القابلة للنفخ ثلاثية القطع بالدعامة القابلة للثني',
+          columns: ['المعيار', 'قابلة للنفخ ثلاثية القطع', 'قابلة للثني'],
+          rows: [
+            { label: 'الطبيعية', values: ['أكثر طبيعية لأنها تنتفخ وتفرغ', 'يبقى القضيب شبه صلب دائمًا'] },
+            { label: 'طريقة الاستخدام', values: ['عبر المضخة في كيس الصفن؛ تتطلّب مهارة يدوية', 'يُوضَع في الاتجاه المطلوب بالثني باليد'] },
+            { label: 'إخفاؤها تحت الملابس', values: ['عالية', 'أقل'] },
+            { label: 'عدد القطع والعطل الميكانيكي', values: ['قطع أكثر؛ احتمال مراجعة على المدى الطويل', 'قطع أقل؛ أمتن ميكانيكيًا'] },
+            { label: 'تعقيد العملية', values: ['أكثر تعقيدًا', 'أبسط'] },
+            { label: 'لمن تناسب', values: ['من يعطون الأولوية للطبيعية ولديهم مهارة يدوية كافية', 'من لديهم مهارة يدوية محدودة أو يفضّلون البساطة'] }
+          ],
+          note:
+            'كلا الجهازين يقدّم حلًا دائمًا. ويُتَّخذ الاختيار بموازنة المهارة اليدوية والتوقعات والأمراض المصاحبة والتكلفة معًا.'
+        },
+        recovery: [
+          {
+            period: 'الأسبوع الأول',
+            body: 'التورّم والكدمات والألم أمور متوقّعة؛ ويُتَّبع نظام المسكّنات والمضادات الحيوية. ولا يُستخدَم الجهاز في هذه الفترة. ويُتجنَّب المشي الطويل ورفع الأثقال.'
+          },
+          {
+            period: 'الأسبوع 2–3',
+            body: 'يقلّ التورّم بوضوح. والعودة إلى العمل المكتبي ممكنة عادةً. وتستمر العناية بالجرح.'
+          },
+          {
+            period: 'الأسبوع 4–6',
+            body: 'يُفعَّل الجهاز ويُقدَّم التدريب على استخدامه. وتتم الاستخدامات الأولى بتوجيه من الطبيب.'
+          },
+          {
+            period: 'بعد الأسبوع السادس',
+            body: 'تبدأ العلاقة الزوجية بإذن الطبيب. وقد يستغرق التعوّد على الجهاز بعض الوقت في الأسابيع الأولى؛ وهذا طبيعي.'
+          },
+          {
+            period: 'الشهر الثالث',
+            body: 'فحص متابعة؛ ويُقيَّم عمل الجهاز ومدى رضاكم. ويُنصَح بعدها بمتابعة سنوية.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'تختلف التكلفة بوضوح بحسب نوع الدعامة وعلامتها التجارية. ويُقدَّم عرض نهائي بعد تحديد نوع الدعامة.'
+        },
+        packageIncludes: [
+          'العملية والإقامة في المستشفى',
+          'التخدير وغرفة العمليات',
+          'جهاز الدعامة (بحسب النوع المختار)',
+          'الفحوص قبل العملية',
+          'تنقّلات المطار–المستشفى–الفندق',
+          'الإقامة (المريض + مرافق واحد)',
+          'مترجم طبي وتنسيق قائم على السرّية',
+          'التدريب على استخدام الجهاز ومتابعة عبر الإنترنت بعد الخروج'
+        ],
+        faqs: [
+          {
+            q: 'هل يمكن حدوث انتصاب طبيعي بعد الدعامة؟',
+            a: 'الصلابة توفّرها الدعامة في كل الأحوال؛ ولا ينبغي توقّع انتصاب كافٍ للجماع من دون الجهاز. ففي التوسيع التدريجي التقليدي يتضرّر النسيج الانتصابي بدرجة كبيرة، ومن ثمّ يُفقَد التورّم التلقائي إلى حدّ بعيد. أما في المناهج الحافظة للنسيج فيُحافَظ على النسيج الكهفي والشريان قدر الإمكان؛ وقد أفاد تحليل تلوي صدر عام 2026 بأن الانتفاخ الجزئي يبقى محفوظًا لدى هؤلاء المرضى أكثر بوضوح منه في الطريقة التقليدية. ومع ذلك يبقى القرار دائمًا: فبعد زرع الدعامة لا رجعة.'
+          },
+          {
+            q: 'ما الأكوادِسِكشن وما الفرق الذي تحدثه بالنسبة لي؟',
+            a: 'قبل زرع الدعامة يُوسَّع داخل النسيج الإسفنجي للقضيب. وفي الطريقة التقليدية يتم ذلك ميكانيكيًا بموسّعات معدنية؛ أما في الأكوادِسِكشن فتُفصَل طبقات النسيج بسائل يُضَخّ تحت ضغط. وهذا أحد تطبيقات المناهج الهادفة إلى الحفاظ على النسيج الكهفي. وقد أفادت مراجعة منهجية وتحليل تلوي عام 2026 بأن الحفاظ على الشريان الكهفي والانتفاخ الجزئي بعد العملية كانا أكثر تكرارًا مع التقنيات الحافظة للنسيج مقارنةً بالتوسيع التقليدي، مع تقارب معدلات المضاعفات؛ وتستند هذه الأدلة إلى 4 دراسات عشوائية و193 مريضًا. وقد تكون التقنية مفيدة بوجه خاص حين يكون النسيج متصلّبًا وضيّقًا (ليفيًا). ويُقيَّم مدى ملاءمتها لحالتكم بعد الفحص والتصوير.'
+          },
+          {
+            q: 'هل يتأثر القذف والنشوة؟',
+            a: 'لا. فالدعامة توفّر الصلابة فقط؛ أما القذف والنشوة فيحدثان بآليات مختلفة ويُحافَظ عليهما عادةً. وإن كنتم قد خضعتم لجراحة بروستاتا سابقًا، فإن وضع القذف يعتمد على تلك العملية لا على الدعامة.'
+          },
+          {
+            q: 'هل تظهر من الخارج؟',
+            a: 'الدعامة القابلة للنفخ ثلاثية القطع لا تُلاحَظ تحت الملابس لأن القضيب يبقى ليّنًا حين لا تُستخدَم. أما في الدعامة القابلة للثني فيكون القضيب شبه صلب دائمًا، لذا يصعب إخفاؤها قليلًا؛ وهذا من النقاط التي تُناقَش عند اختيار النوع.'
+          },
+          {
+            q: 'ما خطر العدوى وكيف يُقلَّل؟',
+            a: 'العدوى أهم مضاعفات جراحة الدعامات، وعند حدوثها تستلزم في الغالب إزالة الجهاز. ولتقليل الخطر تُستخدَم أجهزة مطلية بالمضاد الحيوي وبروتوكول تعقيم صارم وتقنية زراعة دون ملامسة. ويُعدّ ضبط سكر الدم قبل العملية والإقلاع عن التدخين أهم عاملين يخفّضان الخطر.'
+          },
+          {
+            q: 'كم تدوم الدعامة؟',
+            a: 'تُصمَّم الدعامات للاستخدام سنوات طويلة؛ لكنها جهاز ميكانيكي، لذا يبقى احتمال العطل قائمًا مع الوقت وقد يستلزم جراحة مراجعة. ويُشرَح لكم ضمان الشركة المصنّعة وشروط المتابعة قبل العملية.'
+          },
+          {
+            q: 'هل يقصر قضيبي؟',
+            a: 'الدعامة لا تُطيل القضيب. ويشعر بعض المرضى بعد العملية بأنه أصبح أقصر؛ ويعود ذلك عادةً إلى أن الاستطالة الكاملة في الانتصاب الطبيعي يحلّ محلّها الصلابة التي يوفّرها الجهاز. وتُناقَش هذه التوقعات دائمًا قبل العملية.'
+          },
+          {
+            q: 'متى يمكنني ممارسة العلاقة الزوجية؟',
+            a: 'يُفعَّل الجهاز عادةً بعد 4–6 أسابيع ويُقدَّم التدريب على استخدامه؛ وتبدأ العلاقة الزوجية بعد ذلك بإذن الطبيب. فالاستخدام المبكر قد يؤثر سلبًا في التئام الجرح.'
+          },
+          {
+            q: 'هل يُدار المسار بسرّية؟',
+            a: 'نعم. في مراجعات طب الذكورة تُدار جميع المحادثات والتنسيق وفق مبدأ السرّية. والمعلومات التي تشاركونها تُعالَج لغرض التقييم فقط. وإن رغبتم يمكنكم التحدّث وجهًا لوجه عبر الاستشارة المدفوعة عبر الإنترنت دون القدوم إلى العيادة.'
+          },
+          {
+            q: 'هل يجب أن أجرّب العلاجات الأبسط أولًا؟',
+            a: 'نعم، كقاعدة. فالدعامة هي المرحلة الأخيرة من العلاج التدريجي. ولا يُنصَح بها قبل تجربة الأدوية أو الحقن أو جهاز الشفط، لأن هذه الخيارات قابلة للتراجع بينما الدعامة ليست كذلك.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'إرشادات EAU حول الصحة الجنسية والإنجابية — الجمعية الأوروبية للمسالك البولية',
             url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
           },
           {
