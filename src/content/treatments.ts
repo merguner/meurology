@@ -15,6 +15,441 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
+     * TASLAK — cerrah onayına sunuldu.
+     * HASSAS SAYFA. Prompt m.1: uydurma yok, başarı garantisi yasak.
+     * Prompt m.4.2/9: oran verilirken literatür kaynağı şart.
+     * Yönetmelik: "talep yaratma" riski nedeniyle metin bilinçli olarak
+     * TANITIM DEĞİL BİLGİLENDİRME tonunda; kılavuzların kozmetik amaçlı
+     * büyütmeyi önermediği AÇIKÇA yazıldı ve psikolojik değerlendirme
+     * öne çıkarıldı. Bu, hastayı yanlış beklentiden koruyan tek dürüst yoldur.
+     * Kaynak: EAU Sexual and Reproductive Health kılavuzu.
+     */
+    draft: true,
+    slug: 'penis-buyutme',
+    parent: 'androloji',
+    lastReviewed: '2026-10-04',
+    icon: 'andrology',
+    offersConsultation: true,
+    i18n: {
+      tr: {
+        title: 'Penis Büyütme İşlemleri: Ne Mümkün, Ne Değil',
+        summary:
+          'Boy ve çevre artırma yöntemleri, kanıt düzeyleri, gerçek tıbbi endikasyonlar ve riskler üzerine dürüst bir bilgilendirme.',
+        metaTitle: 'Penis Büyütme: Yöntemler, Kanıt Düzeyi ve Riskler',
+        metaDescription:
+          'Penis büyütme işlemleri hakkında kanıta dayalı bilgilendirme: hangi yöntemler var, kılavuzlar ne diyor, kimler için tıbbi endikasyon vardır ve riskler nelerdir.',
+        quickFacts: {
+          duration: 'Yönteme göre 45–120 dakika',
+          anesthesia: 'Yönteme göre lokal, sedasyon veya genel',
+          hospitalStay: 'Günübirlik veya 1 gece',
+          stayInTurkey: '7–10 gün',
+          returnToWork: '1–2 hafta',
+          flightClearance: '7–10. gün'
+        },
+        definition: [
+          'Bu sayfa, penis büyütme işlemleri hakkında bir tanıtım değil, karar vermenize yardımcı olacak dürüst bir bilgilendirmedir. Çünkü bu alan, beklentilerin gerçeklerden en çok uzaklaştığı ve hastaların en çok yanlış yönlendirildiği alanlardan biridir.',
+          'ÖNCE EN ÖNEMLİ BİLGİ: Avrupa Üroloji Derneği dâhil başlıca ürolojik kılavuzlar, penis boyu NORMAL SINIRLAR İÇİNDE olan erkeklerde kozmetik amaçlı büyütme işlemlerini rutin olarak ÖNERMEMEKTEDİR. Bu işlemlerin etkinliğine ve uzun dönem güvenliğine ilişkin kanıt düzeyi sınırlıdır. Bu, işlemlerin hiçbir koşulda yapılmadığı anlamına gelmez; seçilmiş ve doğru değerlendirilmiş durumlarla sınırlı olduğu anlamına gelir.',
+          'Başvuran erkeklerin önemli bir bölümünde ölçüm normal aralıktadır. Buna rağmen kişi boyunu yetersiz algılıyorsa, bu durum "penil dismorfofobi" olarak adlandırılır ve cerrahi değil, psikoseksüel değerlendirme gerektirir. Ameliyat, algıya dayalı bir rahatsızlığı çözmez; çoğu zaman memnuniyetsizliği sürdürür.',
+          'Gerçek tıbbi endikasyonlar ayrıdır ve bunlar cerrahi değerlendirmeyi hak eder: mikropenis, gömük penis (buried penis), travma veya önceki cerrahi sonrası oluşan boy kaybı, Peyronie hastalığına bağlı kısalma ve eğrilik.',
+          'Uygulanan başlıca yaklaşımlar şunlardır. BOY İÇİN: askı bağının (suspansuar ligament) gevşetilmesi — penisin gövde içinde kalan kısmını dışarı çıkararak sarkık hâldeki görünür boyu artırmayı hedefler; ereksiyon hâlindeki boyu artırmaz. ÇEVRE İÇİN: yağ enjeksiyonu, dermal greft veya dolgu maddeleri — kalınlık artışı hedeflenir, ancak emilim, asimetri ve nodül oluşumu görülebilir.'
+        ],
+        eligibility: {
+          suitable: [
+            'Mikropenis tanısı konmuş, ölçümle doğrulanmış hastalar',
+            'Gömük penis (buried penis) nedeniyle işlevsel ve hijyenik sorun yaşayanlar',
+            'Travma veya geçirilmiş cerrahi sonrası boy kaybı gelişen hastalar',
+            'Peyronie hastalığına bağlı kısalma ve eğriliği olan, bu nedenle rekonstrüktif cerrahi planlanan hastalar',
+            'Beklentileri gerçekçi olan ve psikoseksüel değerlendirmeden geçmiş, seçilmiş hastalar'
+          ],
+          notSuitable: [
+            'Ölçümü normal aralıkta olan ve yalnızca kozmetik kaygıyla başvuran erkekler — öncelik psikoseksüel danışmanlıktır',
+            'Penil dismorfofobi düşündüren, algı kaynaklı memnuniyetsizliği olan hastalar',
+            'Belirgin boy artışı veya cinsel performans artışı bekleyen hastalar — bu işlemler bunu vaat etmez',
+            'Aktif enfeksiyonu veya yara iyileşmesini bozacak kontrolsüz hastalığı olanlar',
+            'Tedavi edilmemiş erektil disfonksiyonu olan hastalar — önce sertleşme sorunu ele alınır'
+          ]
+        },
+        technology: [
+          'Askı bağı gevşetme (suspansuar ligament) — sarkık boyda görünür artış hedefi',
+          'Otolog yağ enjeksiyonu — kendi yağ dokusuyla çevre artışı',
+          'Dermal greft uygulaması',
+          'Peyronie veya gömük penis olgularında rekonstrüktif teknikler'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Doç. Dr. Müslüm Ergün androloji ve rekonstrüktif üroloji alanlarında çalışmaktadır. Bu başlıkta yaklaşım, öncelikle doğru endikasyonun belirlenmesi; cerrahi yalnızca gerçekten uygun olgularda gündeme gelir.'
+        },
+        timeline: [
+          {
+            when: 'Uzaktan',
+            title: 'Gizli ön değerlendirme',
+            body: 'Şikâyetiniz, beklentiniz ve varsa önceki işlemler gizlilik içinde değerlendirilir. Bu aşamada çoğu zaman en yararlı çıktı, cerrahinin size uygun olup olmadığının netleşmesidir.'
+          },
+          {
+            when: '1. gün',
+            title: 'Muayene, ölçüm ve beklenti görüşmesi',
+            body: 'Standart ölçüm yapılır, sertleşme işlevi değerlendirilir ve beklentiler açıkça konuşulur. Gerekirse psikoseksüel danışmanlık önerilir.'
+          },
+          {
+            when: '2. gün',
+            title: 'İşlem (uygun bulunursa)',
+            body: 'Seçilen yönteme göre lokal, sedasyon veya genel anestezi altında uygulanır. Günübirlik veya bir gecelik yatış gerekebilir.'
+          },
+          {
+            when: '7–10. gün',
+            title: 'Kontrol ve dönüş',
+            body: 'Yara kontrolü, ödem değerlendirmesi ve dönüş onayı. Sonucun oturması haftalar alır; erken dönem görünüm nihai sonuç değildir.'
+          },
+          {
+            when: '3. ay',
+            title: 'Sonuç değerlendirmesi',
+            body: 'Özellikle yağ enjeksiyonunda emilim nedeniyle sonuç bu dönemde netleşir; gerekirse ek seans değerlendirilir.'
+          }
+        ],
+        risks: [
+          'Beklentinin karşılanmaması — bu alanda en sık bildirilen sorun memnuniyetsizliktir',
+          'Yara izi ve ciltte sertlik',
+          'Yağ enjeksiyonunda emilim, asimetri ve nodül oluşumu; ek seans gerekebilir',
+          'Duyu değişikliği veya azalması',
+          'Enfeksiyon ve yara iyileşme sorunları',
+          'Askı bağı gevşetmede ereksiyon açısının aşağı kayması ve stabilitede azalma',
+          'Dolgu maddelerinde göç (migrasyon) ve granülom; kalıcı dolgular ek risk taşır',
+          'Nadiren erektil işlevin olumsuz etkilenmesi'
+        ],
+        alternatives: [
+          'Psikoseksüel danışmanlık — ölçümü normal olan hastalarda ilk seçenek',
+          'Kilo verme ve pubik yağ dokusunun azaltılması — gömük görünümde belirgin fayda sağlayabilir',
+          'Erektil disfonksiyon varsa önce onun tedavisi — sertlik arttığında algılanan boy da artar',
+          'Peyronie hastalığında eğrilik düzeltici cerrahi',
+          'Hiçbir işlem yapmamak — normal ölçümlerde bu, çoğu zaman en doğru seçenektir'
+        ],
+        comparison: {
+          title: 'Yöntemlere göre hedef, kanıt düzeyi ve başlıca risk',
+          columns: ['Yöntem', 'Hedef', 'Kanıt düzeyi', 'Başlıca risk'],
+          rows: [
+            {
+              label: 'Askı bağı gevşetme',
+              values: ['Sarkık hâldeki görünür boy', 'Sınırlı; ereksiyon boyunu artırmaz', 'Ereksiyon açısının düşmesi']
+            },
+            {
+              label: 'Yağ enjeksiyonu',
+              values: ['Çevre (kalınlık)', 'Sınırlı; emilim değişken', 'Asimetri, nodül, ek seans ihtiyacı']
+            },
+            {
+              label: 'Dermal greft',
+              values: ['Çevre (kalınlık)', 'Sınırlı; seçilmiş olgular', 'Greft büzüşmesi, iz']
+            },
+            {
+              label: 'Dolgu maddeleri',
+              values: ['Çevre (kalınlık)', 'Sınırlı; kalıcı dolgularda risk artar', 'Migrasyon, granülom']
+            },
+            {
+              label: 'Rekonstrüktif cerrahi',
+              values: ['Gömük penis, Peyronie, travma', 'Tıbbi endikasyon varsa yerleşik', 'Genel cerrahi riskleri']
+            }
+          ],
+          note:
+            'Kozmetik amaçlı yöntemlerin kanıt düzeyi sınırlıdır ve kılavuzlar bunları normal ölçümlü erkeklerde rutin olarak önermez. Tıbbi endikasyon bulunan rekonstrüktif girişimler bu tablodan ayrı değerlendirilir.'
+        },
+        recovery: [
+          {
+            period: '1. hafta',
+            body: 'Ödem ve morluk beklenen bulgulardır. Ağır aktivite ve cinsel ilişkiden kaçınılır; yara bakımı düzenli yapılır.'
+          },
+          {
+            period: '2–3. hafta',
+            body: 'Ödem azalır, masa başı işe dönüş genellikle mümkündür. Görünüm bu dönemde henüz nihai değildir.'
+          },
+          {
+            period: '4–6. hafta',
+            body: 'Hekim onayıyla cinsel aktiviteye kademeli dönüş değerlendirilir.'
+          },
+          {
+            period: '3. ay',
+            body: 'Özellikle yağ enjeksiyonunda emilim tamamlanır ve sonuç netleşir. Gerekirse ek seans bu aşamada konuşulur.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat seçilen yönteme ve kullanılan malzemeye göre değişir. Teklif, ancak cerrahi uygunluk doğrulandıktan sonra verilir.'
+        },
+        packageIncludes: [
+          'Değerlendirme, ölçüm ve beklenti görüşmesi',
+          'İşlem ve anestezi',
+          'Gerekliyse yatış',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Gizlilik esaslı koordinasyon ve tıbbi tercüman',
+          'Kontrol ve online takip'
+        ],
+        faqs: [
+          {
+            q: 'Penis boyum normal mi, nasıl anlarım?',
+            a: 'Ölçüm standart koşullarda, gergin (streç) hâlde ve kemikten uca yapılır. Literatürde normal kabul edilen geniş bir aralık vardır ve başvuran erkeklerin önemli bir bölümünde ölçüm bu aralığın içindedir. Doğru ölçüm, çoğu zaman gereksiz bir ameliyattan koruyan ilk adımdır.'
+          },
+          {
+            q: 'Kılavuzlar bu işlemleri neden önermiyor?',
+            a: 'Çünkü kozmetik amaçlı büyütme işlemlerinin etkinliğine ve uzun dönem güvenliğine dair kanıt düzeyi sınırlıdır; buna karşılık memnuniyetsizlik ve komplikasyon bildirimleri azımsanmayacak düzeydedir. Bu nedenle normal ölçümlü erkeklerde rutin olarak önerilmez.'
+          },
+          {
+            q: 'Askı bağı gevşetme ereksiyon hâlindeki boyu artırır mı?',
+            a: 'Hayır. Bu işlem sarkık hâldeki görünür boyu artırmayı hedefler; ereksiyon hâlindeki boyu uzatmaz. Ayrıca bağın gevşetilmesi ereksiyon açısının aşağı kaymasına yol açabilir.'
+          },
+          {
+            q: 'Yağ enjeksiyonunun sonucu kalıcı mı?',
+            a: 'Enjekte edilen yağın bir kısmı zamanla emilir ve emilim oranı kişiden kişiye değişir. Sonuç genellikle üçüncü ayda netleşir; bazı hastalarda ek seans gerekebilir. Asimetri ve nodül oluşumu bildirilen sorunlardandır.'
+          },
+          {
+            q: 'Cinsel performansım artar mı?',
+            a: 'Hayır. Bu işlemler sertleşme kalitesini, cinsel isteği veya performansı artırmaz. Sertleşme sorununuz varsa çözüm bu işlemler değil, erektil disfonksiyon tedavisidir.'
+          },
+          {
+            q: 'Eşim veya partnerim açısından fark eder mi?',
+            a: 'Literatürde partner memnuniyetinin boyla doğrudan ilişkili olmadığı; iletişim, cinsel işlev ve ilişki niteliğinin daha belirleyici olduğu bildirilmektedir. Beklentilerinizi bu çerçevede konuşmanızı öneririz.'
+          },
+          {
+            q: 'Psikolojik değerlendirme neden isteniyor?',
+            a: 'Çünkü başvuruların bir bölümünde sorun ölçümde değil, algıdadır. Bu durumda cerrahi memnuniyetsizliği çözmez, çoğu zaman sürdürür. Psikoseksüel değerlendirme, sizi gereksiz ve geri dönüşü zor bir işlemden korumayı amaçlar.'
+          },
+          {
+            q: 'Hiçbir şey yaptırmamak bir seçenek mi?',
+            a: 'Evet ve ölçümü normal olan erkeklerde çoğu zaman en doğru seçenektir. Bunu açıkça söylememizin nedeni, bu alanda hastaların en çok yanlış yönlendirildiği konunun bu olmasıdır.'
+          },
+          {
+            q: 'Başvurum gizli kalır mı?',
+            a: 'Evet. Androloji başvurularında tüm görüşme ve koordinasyon gizlilik esasıyla yürütülür. Kliniğe gelmeden önce ücretli online danışmanlık ile birebir görüşebilirsiniz.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'EAU Guidelines on Sexual and Reproductive Health — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      }
+    }
+  },
+  {
+    /**
+     * TASLAK — cerrah onayına sunuldu, onaylanana kadar yayında görünmez.
+     * Androloji "ana para sayfası" (prompt m.4.1). Ton: satış değil, MAHREMİYET
+     * ve GERÇEKÇİ BEKLENTİ. Geri dönüşsüzlük açıkça yazıldı.
+     * Kaynak: EAU Sexual and Reproductive Health kılavuzu.
+     * Kaynaksız memnuniyet/başarı yüzdesi YAZILMAMIŞTIR (prompt m.1).
+     */
+    draft: true,
+    slug: 'penil-protez',
+    parent: 'androloji',
+    lastReviewed: '2026-10-04',
+    icon: 'andrology',
+    offersConsultation: true,
+    i18n: {
+      tr: {
+        title: 'Penil Protez (Mutluluk Çubuğu) Ameliyatı',
+        summary:
+          'İlaç ve diğer tedavilere yanıt vermeyen sertleşme sorununda, penis içine yerleştirilen cihazla kalıcı çözüm.',
+        metaTitle: 'Penil Protez Ameliyatı | Şişirilebilir ve Bükülebilir Protez',
+        metaDescription:
+          'Penil protez ameliyatı: kimlere uygun, protez tipleri, riskler, iyileşme süreci ve sık sorulan sorular. Mahremiyet önceliğiyle yürütülen süreç.',
+        quickFacts: {
+          duration: '60–90 dakika',
+          anesthesia: 'Genel veya spinal anestezi',
+          hospitalStay: '1 gece',
+          stayInTurkey: '7–10 gün',
+          catheter: '1 gün',
+          returnToWork: '1–2 hafta (masa başı)',
+          flightClearance: '7–10. gün'
+        },
+        definition: [
+          'Erektil disfonksiyon, cinsel ilişki için yeterli sertleşmenin sağlanamaması veya sürdürülememesidir. Tedavide basamaklı bir yaklaşım izlenir: önce yaşam tarzı ve varsa hormonal düzenleme, ardından ağızdan alınan ilaçlar (PDE5 inhibitörleri), sonra penis içi enjeksiyon veya vakum cihazı denenir.',
+          'Penil protez, bu basamakların yeterli sonuç vermediği durumlarda gündeme gelen cerrahi çözümdür. Penisin sertleşmeden sorumlu süngerimsi dokularının (korpus kavernozum) içine, sertliği sağlayan silindirler yerleştirilir. Cihaz, hastanın kendi kontrolünde ve istediği zaman kullanabileceği bir sertlik sağlar.',
+          'ÖNEMLİ VE GERİ DÖNÜŞSÜZ BİR KARAR: Protez yerleştirilirken korpus kavernozumun içi genişletilir. Bu nedenle ameliyattan sonra doğal (kendiliğinden) ereksiyon artık mümkün olmaz. Protez çıkarılsa bile önceki duruma dönülemez. Bu yüzden penil protez, diğer tedavi seçenekleri gerçekten denendikten sonra ve beklentiler ayrıntılı konuşulduktan sonra önerilir.',
+          'İki temel protez tipi vardır. Üç parçalı şişirilebilir protezde silindirler, skrotuma yerleştirilen küçük bir pompa ve karın içine konan bir sıvı rezervuarı bulunur; pompa sıkılarak sertlik sağlanır, işlem bitince sıvı geri boşaltılır ve penis yumuşak hâle döner. Bükülebilir (malleable) protezde ise penis sürekli yarı sert kalır ve elle istenen konuma getirilir.',
+          'Avrupa Üroloji Derneği kılavuzları, uygun şekilde seçilmiş hastalarda penil protez cerrahisinin hasta ve eş memnuniyetinin yüksek bildirildiği bir tedavi olduğunu belirtir. Bu memnuniyetin en güçlü belirleyicisi, ameliyat öncesinde beklentilerin doğru konuşulmuş olmasıdır.'
+        ],
+        eligibility: {
+          suitable: [
+            'İlaç, enjeksiyon ve vakum cihazı denenmiş ancak yeterli sonuç alınamamış kalıcı sertleşme sorunu',
+            'Radikal prostatektomi veya pelvik cerrahi sonrası gelişen, tedaviye dirençli erektil disfonksiyon',
+            'Diyabete bağlı ileri damarsal erektil disfonksiyon',
+            'Peyronie hastalığına erektil disfonksiyonun eşlik ettiği durumlar',
+            'Şişirilebilir protez için: pompayı kullanabilecek el becerisine sahip olmak'
+          ],
+          notSuitable: [
+            'Aktif enfeksiyon (idrar yolu, cilt veya sistemik) — enfeksiyon tedavi edilmeden ameliyat yapılmaz',
+            'Kontrolsüz diyabet — enfeksiyon riskini artırır; önce kan şekeri düzenlenir',
+            'Daha basit tedavi basamakları henüz denenmemiş hastalar',
+            'Beklentileri gerçekçi olmayan hastalar — protez boy veya his artışı sağlamaz',
+            'Nedeni ağırlıklı olarak psikolojik olan sertleşme sorunları — öncelik danışmanlık ve medikal tedavidir'
+          ]
+        },
+        technology: [
+          'Üç parçalı şişirilebilir protez (silindirler + skrotal pompa + rezervuar)',
+          'Bükülebilir (malleable) protez',
+          'Enfeksiyon riskini azaltmaya yönelik antibiyotik kaplı/emdirilmiş cihazlar',
+          'Sıkı sterilite protokolü ve dokunmasız (no-touch) yerleştirme tekniği'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Androloji ve penil protez cerrahisi, Doç. Dr. Müslüm Ergün’ün çalışma alanları arasındadır. Protez tipi, hastanın el becerisi, eşlik eden hastalıkları ve beklentileri değerlendirilerek birlikte seçilir.'
+        },
+        timeline: [
+          {
+            when: 'Uzaktan',
+            title: 'Gizli ön değerlendirme',
+            body: 'Şikâyetin süresi, daha önce denenmiş tedaviler, diyabet ve kalp-damar durumu, geçirilmiş ameliyatlar ve kullandığınız ilaçlar gizlilik içinde değerlendirilir.'
+          },
+          {
+            when: '1. gün',
+            title: 'Muayene ve beklenti görüşmesi',
+            body: 'Yüz yüze muayene, gerekli tetkikler ve protez tipinin seçimi. Bu görüşmede cihazın ne sağladığı ve neyi sağlamadığı ayrıntılı konuşulur.'
+          },
+          {
+            when: '2. gün',
+            title: 'Ameliyat',
+            body: 'İşlem genel veya spinal anestezi altında, genellikle 60–90 dakikada tamamlanır. Kesi skrotum veya penis kökü bölgesinden yapılır.'
+          },
+          {
+            when: '3. gün',
+            title: 'Sonda alımı ve taburculuk',
+            body: 'Sonda genellikle ertesi gün alınır. Pansuman ve ilaç düzeni anlatılarak taburculuk planlanır.'
+          },
+          {
+            when: '7–10. gün',
+            title: 'Kontrol ve dönüş',
+            body: 'Yara kontrolü yapılır, dikişler değerlendirilir ve dönüş uçuşu için onay verilir. Cihaz bu aşamada HENÜZ KULLANILMAZ.'
+          },
+          {
+            when: '4–6. hafta',
+            title: 'Cihazın aktivasyonu ve kullanım eğitimi',
+            body: 'Ödem geçtikten sonra cihaz aktive edilir ve kullanımı adım adım öğretilir. Bu eğitim gerekirse online olarak da yapılabilir.'
+          }
+        ],
+        risks: [
+          'Enfeksiyon — protez cerrahisinin en önemli komplikasyonudur; geliştiğinde cihazın çıkarılması gerekebilir. Diyabet ve sigara riski artırır.',
+          'Mekanik arıza — özellikle çok parçalı cihazlarda uzun dönemde görülebilir ve revizyon ameliyatı gerektirebilir',
+          'Cihazın cilde baskısı veya erozyonu (seyrek)',
+          'Glans (penis başı) duyusunda azalma',
+          'Penis boyunun kısaldığı HİSSİ — protez boy uzatmaz; ameliyat öncesi beklenti bu nedenle önemlidir',
+          'Kanama, hematom ve yara iyileşme sorunları',
+          'Anesteziye bağlı genel cerrahi riskler'
+        ],
+        alternatives: [
+          'PDE5 inhibitörleri (ağızdan ilaç tedavisi)',
+          'Penis içi (intrakavernozal) enjeksiyon tedavisi',
+          'Vakum ereksiyon cihazı',
+          'Düşük yoğunluklu şok dalga tedavisi (Li-ESWT) — kanıt düzeyi henüz sınırlıdır, seçilmiş hastalarda değerlendirilir',
+          'Psikoseksüel danışmanlık — özellikle psikojenik bileşen varsa'
+        ],
+        comparison: {
+          title: 'Üç parçalı şişirilebilir protez ile bükülebilir protez karşılaştırması',
+          columns: ['Ölçüt', 'Üç parçalı şişirilebilir', 'Bükülebilir (malleable)'],
+          rows: [
+            { label: 'Doğallık', values: ['Şişip inebildiği için daha doğal', 'Penis sürekli yarı sert kalır'] },
+            { label: 'Kullanım', values: ['Skrotumdaki pompa ile; el becerisi gerekir', 'Elle bükülerek konumlandırılır'] },
+            { label: 'Giysi altında gizlenebilirlik', values: ['Yüksek', 'Daha düşük'] },
+            { label: 'Parça sayısı ve mekanik arıza', values: ['Daha fazla parça; uzun dönemde revizyon olasılığı', 'Daha az parça; mekanik olarak daha dayanıklı'] },
+            { label: 'Ameliyatın karmaşıklığı', values: ['Daha karmaşık', 'Daha basit'] },
+            { label: 'Kimler için uygun', values: ['Doğallık önceliği olan, el becerisi yeterli hastalar', 'El becerisi kısıtlı veya basitlik isteyen hastalar'] }
+          ],
+          note:
+            'İki cihaz da kalıcı çözüm sağlar. Seçim; el becerisi, beklenti, eşlik eden hastalıklar ve maliyet birlikte değerlendirilerek yapılır.'
+        },
+        recovery: [
+          {
+            period: '1. hafta',
+            body: 'Ödem, morluk ve ağrı beklenen bulgulardır; ağrı kesici ve antibiyotik düzeni uygulanır. Cihaz bu dönemde kullanılmaz. Uzun yürüyüş ve ağır kaldırmadan kaçınılır.'
+          },
+          {
+            period: '2–3. hafta',
+            body: 'Ödem belirgin biçimde azalır. Masa başı işe dönüş genellikle mümkündür. Yara bakımı sürdürülür.'
+          },
+          {
+            period: '4–6. hafta',
+            body: 'Cihaz aktive edilir ve kullanım eğitimi verilir. İlk kullanımlar hekim yönlendirmesiyle yapılır.'
+          },
+          {
+            period: '6. haftadan sonra',
+            body: 'Hekim onayıyla cinsel aktiviteye başlanır. İlk haftalarda cihazın kullanımına alışmak zaman alabilir; bu normaldir.'
+          },
+          {
+            period: '3. ay',
+            body: 'Kontrol muayenesi yapılır; cihazın çalışması ve memnuniyet değerlendirilir. Sonrasında yıllık takip önerilir.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat, seçilen protez tipine ve markasına göre belirgin biçimde değişir. Kesin teklif, protez tipi kararlaştırıldıktan sonra verilir.'
+        },
+        packageIncludes: [
+          'Ameliyat ve hastane yatışı',
+          'Anestezi ve ameliyathane',
+          'Protez cihazı (seçilen tipe göre)',
+          'Ameliyat öncesi tetkikler',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve gizlilik esaslı koordinasyon',
+          'Cihaz kullanım eğitimi ve taburculuk sonrası online kontroller'
+        ],
+        faqs: [
+          {
+            q: 'Protezden sonra doğal ereksiyon mümkün olur mu?',
+            a: 'Hayır. Protez yerleştirilirken penisin süngerimsi dokusunun içi genişletildiği için doğal, kendiliğinden ereksiyon artık oluşmaz. Cihaz çıkarılsa bile önceki duruma dönülemez. Bu, ameliyatın geri dönüşsüz yanıdır ve kararınızı vermeden önce net olarak bilmeniz gerekir.'
+          },
+          {
+            q: 'Boşalma ve orgazm etkilenir mi?',
+            a: 'Hayır. Protez yalnızca sertliği sağlar; boşalma ve orgazm farklı mekanizmalarla gerçekleşir ve genellikle korunur. Daha önce prostat ameliyatı geçirdiyseniz boşalmayla ilgili durum o ameliyata bağlıdır, protezden kaynaklanmaz.'
+          },
+          {
+            q: 'Dışarıdan belli olur mu?',
+            a: 'Üç parçalı şişirilebilir protez, kullanılmadığında penis yumuşak kaldığı için giysi altında fark edilmez. Bükülebilir protezde penis sürekli yarı sert olduğundan gizlenmesi biraz daha zordur; bu, tip seçiminde konuşulan konulardan biridir.'
+          },
+          {
+            q: 'Enfeksiyon riski nedir, nasıl azaltılır?',
+            a: 'Enfeksiyon, protez cerrahisinin en önemli komplikasyonudur ve geliştiğinde çoğu zaman cihazın çıkarılmasını gerektirir. Riski azaltmak için antibiyotik kaplı cihazlar, sıkı sterilite protokolü ve dokunmasız yerleştirme tekniği kullanılır. Kan şekerinin ameliyat öncesi düzenlenmesi ve sigaranın bırakılması riski azaltan en önemli iki etkendir.'
+          },
+          {
+            q: 'Protez ne kadar dayanır?',
+            a: 'Protezler uzun yıllar kullanılmak üzere tasarlanır; ancak mekanik bir cihaz olduğu için zamanla arıza ihtimali vardır ve bu durumda revizyon ameliyatı gerekebilir. Üretici garantisi ve takip koşulları ameliyat öncesinde size açıklanır.'
+          },
+          {
+            q: 'Penisim kısalır mı?',
+            a: 'Protez penisi uzatmaz. Bazı hastalar ameliyat sonrasında boyun kısaldığı hissine kapılır; bunun nedeni genellikle doğal ereksiyondaki tam uzamanın yerini cihazın sağladığı sertliğin almasıdır. Bu beklenti ameliyat öncesinde mutlaka konuşulur.'
+          },
+          {
+            q: 'Ne zaman cinsel ilişkiye girebilirim?',
+            a: 'Genellikle 4–6 hafta sonra cihaz aktive edilir ve kullanım eğitimi verilir; cinsel aktiviteye hekim onayıyla bu dönemden sonra başlanır. Erken kullanım yara iyileşmesini olumsuz etkileyebilir.'
+          },
+          {
+            q: 'Süreç gizli yürütülüyor mu?',
+            a: 'Evet. Androloji başvurularında tüm görüşme ve koordinasyon gizlilik esasıyla yürütülür. Paylaştığınız bilgiler yalnızca değerlendirme amacıyla işlenir. Dilerseniz ücretli online danışmanlık ile kliniğe gelmeden birebir görüşebilirsiniz.'
+          },
+          {
+            q: 'Önce daha basit tedavileri denemem şart mı?',
+            a: 'Evet, kural olarak öyledir. Protez, basamaklı tedavinin son aşamasıdır. İlaç, enjeksiyon veya vakum cihazı denenmeden protez önerilmez; çünkü bu seçenekler geri dönüşlüdür, protez ise değildir.'
+          }
+        ],
+        sources: [
+          {
+            label:
+              'EAU Guidelines on Sexual and Reproductive Health — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      }
+    }
+  },
+  {
+    /**
      * Cerrah tarafından 4 Ekim 2026 tarihinde onaylandı ve yayına alındı.
      * Kaynak: EAU non-neurogenic male LUTS kılavuzu.
      */

@@ -56,6 +56,22 @@ export const treatmentSlugMap = {
     ru: 'thulep',
     ar: 'thulep'
   },
+  'penis-buyutme': {
+    tr: 'penis-buyutme',
+    en: 'penile-enlargement',
+    de: 'penisvergroesserung',
+    fr: 'agrandissement-penien',
+    ru: 'uvelichenie-polovogo-chlena',
+    ar: 'penile-enlargement'
+  },
+  'penil-protez': {
+    tr: 'penil-protez',
+    en: 'penile-prosthesis',
+    de: 'penisprothese',
+    fr: 'prothese-penienne',
+    ru: 'falloprotezirovanie',
+    ar: 'penile-implant'
+  },
   androloji: {
     tr: 'androloji',
     en: 'andrology',
