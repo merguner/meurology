@@ -9,7 +9,6 @@ import { Link } from '@/i18n/navigation';
 import { siteConfig } from '@/config/site';
 import { PageHero } from '@/components/PageHero';
 import { VerifiedInfo } from '@/components/VerifiedInfo';
-import { StatsBand } from '@/components/StatsBand';
 import { VideoPlaceholder } from '@/components/VideoPlaceholder';
 import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { Icon } from '@/components/Icon';
@@ -98,10 +97,7 @@ export default async function SurgeonPage({
             ))}
           </section>
 
-          {/* Rakamlarla — cerrahi deneyim (sayaç animasyonlu) */}
-          <section>
-            <StatsBand />
-          </section>
+          {/* KALDIRILDI: vaka sayısı bandı — doğrulanmış rakam yok (content/caseStats.ts). */}
 
           {/* Doğrulanabilir bilgiler — yalnızca gösterilecek doğrulanmış bilgi varsa */}
           {!isPlaceholder(surgeon.diplomaRegistryNo) && (
@@ -258,26 +254,16 @@ export default async function SurgeonPage({
         </aside>
       </div>
 
-      {/* Tanıtım videosu — belirli tanıtım videosunun embed URL'i girilince
-          VideoPlaceholder'a embedUrl geçilerek gömülecek. Şimdilik YouTube
-          kanalına yönlendiren buton. */}
+      {/* Tanıtım videosu — YALNIZCA gerçek embed URL girilmişse render edilir.
+          TODO-DOGRULA: config/site.ts → youtubeFeaturedId. */}
+      {featuredVideoEmbed && (
       <section className="container-content pb-14">
         <h2 className="mb-4 text-xl font-bold">{t('videoTitle')}</h2>
         <div className="max-w-3xl">
-          <VideoPlaceholder caption={t('videoCaption')} title={c.fullName} embedUrl={featuredVideoEmbed} />
-          {!featuredVideoEmbed && (
-            <a
-              href={siteConfig.social.youtube}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline mt-4"
-            >
-              <Icon name="youtube" size={18} className="text-[#FF0000]" />
-              {t('watchChannel')}
-            </a>
-          )}
+          <VideoPlaceholder caption={t('videoTitle')} title={c.fullName} embedUrl={featuredVideoEmbed} />
         </div>
       </section>
+      )}
     </>
   );
 }

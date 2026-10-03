@@ -63,7 +63,26 @@ function resolveLegacyRedirect(pathname: string): string | null {
   return null;
 }
 
+/**
+ * YÖNETMELİK: Yurt içine yönelik (Türkçe) tanıtımda hasta yorumu/görseli yasak.
+ * /tr/deneyimler yayından kaldırıldı → 301 ile /tr'ye yönlendirilir.
+ * (Sayfa bileşeni de aynı kontrolü yapar; burada SEO için kalıcı yönlendirme.)
+ */
+function resolveComplianceRedirect(pathname: string): string | null {
+  const segments = pathname.split('/').filter(Boolean);
+  if (segments[0] !== 'tr') return null;
+  if (segments[1] === 'deneyimler') return '/tr';
+  return null;
+}
+
 export default function middleware(request: NextRequest) {
+  const compliance = resolveComplianceRedirect(request.nextUrl.pathname);
+  if (compliance) {
+    const url = request.nextUrl.clone();
+    url.pathname = compliance;
+    return NextResponse.redirect(url, 301);
+  }
+
   const legacy = resolveLegacyRedirect(request.nextUrl.pathname);
   if (legacy) {
     const url = request.nextUrl.clone();

@@ -156,7 +156,7 @@ export async function POST(request: Request) {
       auth: { user: SMTP_USER, pass: SMTP_PASS }
     });
 
-    // Bildirim alıcısı: kliniğin görünen e-postası (siteConfig.email = muslumergun@gmail.com).
+    // Bildirim alıcısı: kliniğin görünen e-postası (siteConfig.email = info@meurology.com).
     // SMTP_USER yalnızca gönderen/kimlik doğrulama hesabıdır (info@meurology.com).
     const to = process.env.LEAD_NOTIFICATION_EMAIL || siteConfig.email;
     const locale = (data.locale as Locale) || 'tr';

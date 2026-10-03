@@ -38,7 +38,8 @@
     "language": "Language",
     "verified": "Verifiable information",
     "placeholderNotice": "Sample/placeholder content",
-    "fileEvalCta": "Send file/imaging"
+    "fileEvalCta": "Send file/imaging",
+    "whatsappTopicMessage": "Hello, I would like information about {topic}. My country:"
   },
   "Home": {
     "positioning": "A trusted address in urological surgery for international patients",
@@ -47,12 +48,11 @@
     "heroPrimaryCta": "Free assessment on WhatsApp",
     "heroSecondaryCta": "Explore treatments",
     "accreditationsTitle": "Accreditation and assurance",
-    "membershipTitle": "Professional membership",
     "treatmentsTitle": "Treatment areas",
     "treatmentsSubtitle": "Quickly reach the treatment page that fits your needs.",
-    "whyTitle": "Why patients choose us",
+    "whyTitle": "Our approach to treatment",
     "why": {
-      "experienceTitle": "High case volume",
+      "experienceTitle": "Surgical experience",
       "experienceBody": "Extensive surgical experience in robotic and minimally invasive procedures.",
       "transparencyTitle": "Transparent price & process",
       "transparencyBody": "What is included in the package and every step of the process is shared clearly.",
@@ -87,7 +87,6 @@
     "priceOnRequest": "Price shared after assessment",
     "packageIncludes": "Included in the package",
     "sectionVideo": "Patient experience video",
-    "videoPlaceholder": "Video area — a consented patient experience video will be added here.",
     "sectionFaq": "Frequently asked questions",
     "ctaTitle": "Let's talk about this treatment",
     "ctaBody": "Message us on WhatsApp with your questions or fill in the pre-assessment form.",
@@ -98,7 +97,7 @@
     "complexCaseLabel": "Complex case definition",
     "advancedTechniqueLabel": "Advanced technique used",
     "patientStories": "Patient reviews",
-    "priceApprox": "(approx.)"
+    "sectionPackage": "Package scope"
   },
   "Surgeon": {
     "title": "Surgeon Profile",
@@ -112,18 +111,18 @@
     "verifiedNote": "The information below can be verified from official records.",
     "reconstructiveTitle": "Reconstructive urology experience",
     "reconstructiveLink": "Go to the reconstructive urology page",
-    "watchChannel": "Watch our YouTube channel",
-    "videoCaption": "A surgeon introduction video will be added soon. For now, you can find content on the YouTube channel.",
-    "photoPending": "Photo coming soon",
     "coursesTitle": "Courses & Certificates",
     "awardsTitle": "Awards"
   },
   "Hospital": {
     "title": "Hospital & Technology",
     "robotLabel": "Robotic system",
-    "orLabel": "Operating rooms",
     "featuresTitle": "Key facilities",
-    "accreditationsTitle": "Accreditations"
+    "accreditationsTitle": "Accreditations",
+    "laserLabel": "Laser platform",
+    "licenseLabel": "Health tourism authorisation",
+    "licenseHolder": "Certificate holder: {holder} (issued by the Ministry of Health)",
+    "licenseNo": "Certificate no"
   },
   "Process": {
     "title": "International Patient Journey",
@@ -165,8 +164,7 @@
     "basedOnReviews": "Based on {count} Google reviews",
     "seeAllGoogle": "See all on Google",
     "googleAttribution": "Reviews are fetched automatically via Google.",
-    "galleryTitle": "From our patients",
-    "photoAlt": "Our happy patient"
+    "galleryTitle": "From our patients"
   },
   "Blog": {
     "title": "Knowledge Center",
@@ -206,8 +204,6 @@
     "treatmentPlaceholder": "Select a treatment",
     "message": "Your message",
     "messagePlaceholder": "Your symptoms or questions",
-    "file": "Upload test results / file",
-    "filePlaceholder": "File upload will be enabled soon. For now you can send files via WhatsApp.",
     "privacyLinksIntro": "Before submitting, read how your data is processed:",
     "consent": "I explicitly consent to the processing of health information I choose to share for pre-assessment.",
     "consentRequired": "Explicit consent is required to continue.",
@@ -232,35 +228,23 @@
     "legal": "Legal",
     "kvkk": "KVKK / GDPR Privacy Notice",
     "consent": "Explicit Consent Text",
-    "ushasLabel": "USHAŞ Authorization No.",
     "rights": "All rights reserved.",
-    "medicalDisclaimer": "The information on this website is for general information only and is not a substitute for medical advice.",
+    "medicalDisclaimer": "The information on this site is for general information only and does not replace medical advice. Diagnosis and treatment require examination by a physician.",
     "googleReview": "Review us on Google",
-    "contactTitle": "Contact"
+    "contactTitle": "Contact",
+    "licenseLabel": "Republic of Türkiye Ministry of Health International Health Tourism Authorisation Certificate",
+    "diplomaLabel": "Medical registration no",
+    "verbisLabel": "VERBİS registration no"
   },
   "NotFound": {
     "title": "Page not found",
     "body": "The page you are looking for may have been moved or removed.",
     "home": "Back to home"
   },
-  "Stats": {
-    "title": "By the numbers",
-    "totalLabel": "Total surgical procedures",
-    "yearsLabel": "Years of surgical experience",
-    "note": "Figures reflect the total surgical experience of Assoc. Prof. Dr. Müslüm Ergün; category totals add up to the overall total.",
-    "categories": {
-      "robotic": "Robotic / laparoscopic surgery",
-      "endourology": "Endourology / stone surgery",
-      "andrology": "Andrology",
-      "microsurgery": "Microsurgery",
-      "reconstructive": "Functional / reconstructive urology",
-      "uroOnc": "Uro-oncology"
-    }
-  },
   "Payment": {
     "orLabel": "or",
     "cardCta": "Pay by card (international)",
-    "comingSoon": "Card payment will be available soon. For now, please use bank transfer + WhatsApp receipt.",
+    "comingSoon": "Card payment is currently unavailable. Please use bank transfer and send the receipt via WhatsApp.",
     "error": "Something went wrong, please try again."
   }
 }

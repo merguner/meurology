@@ -1,6 +1,6 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { navItems } from '@/config/nav';
+import { navItemsFor } from '@/config/nav';
 import { siteConfig } from '@/config/site';
 import { ThemeToggle } from './ThemeToggle';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -9,6 +9,8 @@ import { NavDropdown } from './NavDropdown';
 
 export async function SiteHeader() {
   const t = await getTranslations('Nav');
+  // Yasal filtre: /tr menüsünde "Hasta Deneyimleri" yer almaz.
+  const navItems = navItemsFor(await getLocale());
 
   return (
     <header className="sticky top-0 z-30 border-b border-border/80 bg-bg/85 backdrop-blur supports-[backdrop-filter]:bg-bg/70">

@@ -38,7 +38,8 @@
     "language": "Dil",
     "verified": "Doğrulanabilir bilgi",
     "placeholderNotice": "Örnek/placeholder içerik",
-    "fileEvalCta": "Dosya/görüntüleme gönder"
+    "fileEvalCta": "Dosya/görüntüleme gönder",
+    "whatsappTopicMessage": "Merhaba, {topic} hakkında bilgi almak istiyorum. Ülkem:"
   },
   "Home": {
     "positioning": "Uluslararası hastalar için ürolojik cerrahide güvenilir adres",
@@ -47,14 +48,13 @@
     "heroPrimaryCta": "WhatsApp'tan ücretsiz değerlendirme",
     "heroSecondaryCta": "Tedavileri incele",
     "accreditationsTitle": "Akreditasyon ve güvence",
-    "membershipTitle": "Mesleki üyelik",
     "treatmentsTitle": "Tedavi alanları",
     "treatmentsSubtitle": "İhtiyacınıza uygun tedavi sayfasına hızlıca ulaşın.",
-    "whyTitle": "Neden bizi tercih ediyorlar?",
+    "whyTitle": "Tedavi yaklaşımımız",
     "why": {
-      "experienceTitle": "Yüksek vaka deneyimi",
+      "experienceTitle": "Cerrahi deneyim",
       "experienceBody": "Robotik ve minimal invaziv prosedürlerde yoğun cerrahi deneyim.",
-      "transparencyTitle": "Şeffaf fiyat ve süreç",
+      "transparencyTitle": "Şeffaf süreç",
       "transparencyBody": "Pakete dahil olanlar ve süreç adımları net biçimde paylaşılır.",
       "supportTitle": "Uçtan uca destek",
       "supportBody": "Tercüman, transfer, konaklama ve taburculuk sonrası online takip.",
@@ -63,7 +63,7 @@
     },
     "processTitle": "Nasıl çalışır?",
     "processCtaTitle": "Durumunuza uygun yol haritasını birlikte çıkaralım",
-    "processCtaBody": "Tahlil ve görüntülemelerinizi paylaşın, size özel değerlendirme ve fiyat aralığını iletelim.",
+    "processCtaBody": "Tahlil ve görüntülemelerinizi paylaşın, durumunuza özel değerlendirme ve tedavi planını iletelim.",
     "reconstructiveCardTitle": "Rekonstrüktif Üroloji",
     "reconstructiveCardText": "Uzmanlık gerektiren, karmaşık vakalar",
     "reconstructiveCardCta": "Kategoriyi incele",
@@ -87,7 +87,6 @@
     "priceOnRequest": "Fiyat değerlendirme sonrası paylaşılır",
     "packageIncludes": "Pakete dahil olanlar",
     "sectionVideo": "Hasta deneyimi videosu",
-    "videoPlaceholder": "Video alanı — onaylı hasta deneyimi videosu buraya eklenecek.",
     "sectionFaq": "Sık sorulan sorular",
     "ctaTitle": "Bu tedavi hakkında konuşalım",
     "ctaBody": "Sorularınız için WhatsApp'tan yazın veya ön değerlendirme formunu doldurun.",
@@ -98,7 +97,7 @@
     "complexCaseLabel": "Kompleks vaka tanımı",
     "advancedTechniqueLabel": "Kullanılan ileri teknik",
     "patientStories": "Hasta yorumları",
-    "priceApprox": "(yaklaşık)"
+    "sectionPackage": "Paket kapsamı"
   },
   "Surgeon": {
     "title": "Cerrah Profili",
@@ -112,18 +111,18 @@
     "verifiedNote": "Aşağıdaki bilgiler resmi kayıtlardan doğrulanabilir.",
     "reconstructiveTitle": "Rekonstrüktif üroloji deneyimi",
     "reconstructiveLink": "Rekonstrüktif üroloji sayfasına git",
-    "watchChannel": "YouTube kanalını izle",
-    "videoCaption": "Cerrah tanıtım videosu yakında eklenecek. Şimdilik YouTube kanalından içeriklere ulaşabilirsiniz.",
-    "photoPending": "Fotoğraf yakında",
     "coursesTitle": "Kurslar ve Sertifikalar",
     "awardsTitle": "Ödüller"
   },
   "Hospital": {
     "title": "Hastane & Teknoloji",
     "robotLabel": "Robotik sistem",
-    "orLabel": "Ameliyathane",
     "featuresTitle": "Öne çıkan olanaklar",
-    "accreditationsTitle": "Akreditasyonlar"
+    "accreditationsTitle": "Akreditasyonlar",
+    "laserLabel": "Lazer platformu",
+    "licenseLabel": "Sağlık turizmi yetki belgesi",
+    "licenseHolder": "Belge sahibi: {holder} (T.C. Sağlık Bakanlığı tarafından düzenlenir)",
+    "licenseNo": "Belge no"
   },
   "Process": {
     "title": "Uluslararası Hasta Süreci",
@@ -135,14 +134,14 @@
       "s2Title": "2. Değerlendirme",
       "s2Body": "Ekip dosyanızı inceler; gerekirse video konsültasyon planlanır.",
       "s3Title": "3. Teklif ve plan",
-      "s3Body": "Size özel tedavi planı, fiyat aralığı ve paket içeriği iletilir.",
+      "s3Body": "Size özel tedavi planı ve paket içeriği iletilir.",
       "s4Title": "4. Seyahat ve tedavi",
       "s4Body": "Transfer, konaklama ve tercüman ayarlanır; tedaviniz gerçekleştirilir.",
       "s5Title": "5. Takip",
       "s5Body": "Taburculuk sonrası online kontrollerle iyileşmeniz izlenir."
     },
-    "packagesTitle": "Paketler ve fiyatlandırma",
-    "packagesBody": "Paketlerimiz konaklama, havalimanı transferleri ve tıbbi tercüman hizmetini içerir. Kesin fiyat, tedavi ve kalış süresine göre değerlendirme sonrası verilir.",
+    "packagesTitle": "Paket kapsamı",
+    "packagesBody": "Paketlerimiz konaklama, havalimanı transferleri ve tıbbi tercüman hizmetini içerir. Kapsam, tedavi ve kalış süresine göre değerlendirme sonrası netleşir.",
     "packageAccommodation": "Konaklama (hasta + refakatçi)",
     "packageTransfer": "Havalimanı ve hastane transferleri",
     "packageInterpreter": "Tıbbi tercüman ve hasta koordinatörü",
@@ -165,8 +164,7 @@
     "basedOnReviews": "{count} Google değerlendirmesine göre",
     "seeAllGoogle": "Tümünü Google’da gör",
     "googleAttribution": "Yorumlar Google üzerinden otomatik alınır.",
-    "galleryTitle": "Hastalarımızdan",
-    "photoAlt": "Memnun hastamız"
+    "galleryTitle": "Hastalarımızdan"
   },
   "Blog": {
     "title": "Bilgi Merkezi",
@@ -206,8 +204,6 @@
     "treatmentPlaceholder": "Tedavi seçin",
     "message": "Mesajınız",
     "messagePlaceholder": "Şikâyetiniz veya sorularınız",
-    "file": "Tahlil / dosya yükleme",
-    "filePlaceholder": "Dosya yükleme yakında etkinleşecek. Şimdilik dosyalarınızı WhatsApp'tan iletebilirsiniz.",
     "privacyLinksIntro": "Başvurmadan önce veri işleme bilgilerini okuyun:",
     "consent": "Ön değerlendirme için paylaşmayı seçtiğim sağlık bilgilerimin işlenmesine açık rıza veriyorum.",
     "consentRequired": "Devam etmek için açık rıza gereklidir.",
@@ -232,35 +228,23 @@
     "legal": "Yasal",
     "kvkk": "KVKK / GDPR Aydınlatma Metni",
     "consent": "Açık Rıza Metni",
-    "ushasLabel": "USHAŞ Yetki Belgesi No",
     "rights": "Tüm hakları saklıdır.",
-    "medicalDisclaimer": "Bu web sitesindeki bilgiler genel bilgilendirme amaçlıdır ve tıbbi tavsiye yerine geçmez.",
+    "medicalDisclaimer": "Bu sitedeki bilgiler genel bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez. Tanı ve tedavi için hekim muayenesi gerekir.",
     "googleReview": "Google’da Bizi İnceleyin",
-    "contactTitle": "İletişim"
+    "contactTitle": "İletişim",
+    "licenseLabel": "T.C. Sağlık Bakanlığı Uluslararası Sağlık Turizmi Yetki Belgesi",
+    "diplomaLabel": "Diploma tescil no",
+    "verbisLabel": "VERBİS kayıt no"
   },
   "NotFound": {
     "title": "Sayfa bulunamadı",
     "body": "Aradığınız sayfa taşınmış veya kaldırılmış olabilir.",
     "home": "Ana sayfaya dön"
   },
-  "Stats": {
-    "title": "Rakamlarla",
-    "totalLabel": "Toplam cerrahi işlem",
-    "yearsLabel": "Yıl cerrahi deneyim",
-    "note": "Rakamlar Doç. Dr. Müslüm Ergün’ün toplam cerrahi deneyimini yansıtır; kategori toplamı genel toplama eşittir.",
-    "categories": {
-      "robotic": "Robotik / laparoskopik cerrahi",
-      "endourology": "Endoürolojik / taş cerrahisi",
-      "andrology": "Androloji",
-      "microsurgery": "Mikroskopik cerrahi",
-      "reconstructive": "Fonksiyonel / rekonstrüktif üroloji",
-      "uroOnc": "Üroonkoloji"
-    }
-  },
   "Payment": {
     "orLabel": "veya",
     "cardCta": "Kartla öde (uluslararası)",
-    "comingSoon": "Kartlı ödeme yakında aktif olacak. Şimdilik banka havalesi + WhatsApp dekont yöntemini kullanabilirsiniz.",
+    "comingSoon": "Kartlı ödeme şu anda kullanılamıyor. Banka havalesi + WhatsApp dekont yöntemini kullanabilirsiniz.",
     "error": "Bir sorun oluştu, lütfen tekrar deneyin."
   }
 }

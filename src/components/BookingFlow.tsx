@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import type { Locale } from '@/i18n/routing';
 import type { ConsultationCopy } from '@/content/consultation';
-import { siteConfig, whatsappLink, approxForeign } from '@/config/site';
+import { siteConfig, whatsappLink, formatEUR } from '@/config/site';
 import { Icon } from './Icon';
 import { CountrySelect } from './CountrySelect';
 
@@ -54,9 +54,9 @@ function makeCode(dateStr: string): string {
 export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: Locale }) {
   const c = copy;
   const cfg = siteConfig.consultation;
-  // Tam ücret ifadesi (ör. "8.000 TL (KDV dahil)") — her iki ekranda ve WhatsApp mesajında.
-  const price = `${cfg.price.amount} (${c.vatIncluded})`;
-  const priceApprox = approxForeign(cfg.price.amountTRY); // "≈ $X / €Y" (yaklaşık)
+  // Tam ücret ifadesi (ör. "200 € (KDV dahil)") — ödeme adımında ve WhatsApp mesajında.
+  const price = `${formatEUR(cfg.priceEUR, locale)} (${c.vatIncluded})`;
+
 
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [tz, setTz] = useState('Europe/Istanbul');
@@ -74,7 +74,7 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
 
   /**
    * KARTLI ÖDEME — placeholder akış. /api/odeme'ye istek atar; entegrasyon
-   * aktifse checkoutUrl'e yönlendirir, değilse "yakında" mesajı gösterir.
+   * aktifse checkoutUrl'e yönlendirir, değilse "kullanılamıyor" mesajı gösterir.
    */
   async function startCardPayment() {
     setCardStatus('loading');
@@ -82,7 +82,7 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
       const res = await fetch('/api/odeme', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code, amountTRY: cfg.price.amountTRY, name, country })
+        body: JSON.stringify({ code, amountEUR: cfg.priceEUR, name, country })
       });
       const result = await res.json();
       if (result?.ok && result?.checkoutUrl) {
@@ -301,7 +301,7 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
             <div className="sm:col-span-2 border-t border-border pt-3">
               <dt className="label-mono">{c.amountLabel}</dt>
               <dd className="mt-0.5 text-base font-bold">
-                {price} <span className="text-sm font-normal text-muted">{priceApprox}</span>
+                {price}
               </dd>
             </div>
           </dl>
@@ -347,7 +347,11 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
             {c.whatsappReceiptCta}
           </a>
 
-          {/* Alternatif: Kartla öde (uluslararası) — iskelet; entegrasyon aktif değil */}
+          {/* Alternatif: Kartla öde. Entegrasyon (iyzico/Stripe) aktif değilken
+              buton ve uyarı metni HİÇ render edilmez — yayında yer tutucu olmaz.
+              TODO-DOGRULA: ödeme altyapısı seçilince cardPaymentEnabled: true. */}
+          {cfg.cardPaymentEnabled && (
+          <>
           <div className="mt-3 flex items-center gap-3 text-xs text-muted">
             <span className="h-px flex-1 bg-border" aria-hidden="true" />
             {tp('orLabel')}
@@ -371,6 +375,8 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
             <p role="alert" className="mt-2 text-xs text-danger">
               {tp('error')}
             </p>
+          )}
+          </>
           )}
 
           {/* Döviz/kur notu (yabancı hasta) + uluslararası hasta notu */}

@@ -19,7 +19,18 @@ export interface HeroSlide {
   bg: string;
   image?: string;
   cta: { type: 'whatsapp' | 'internal'; href?: StaticPathname };
-  i18n: Partial<Record<Locale, { title: string; subtitle: string; ctaLabel: string }>>;
+  i18n: Partial<
+    Record<
+      Locale,
+      {
+        title: string;
+        subtitle: string;
+        ctaLabel: string;
+        /** WhatsApp ön-dolu mesajında geçecek KONU (slayt başlığı değil). */
+        ctaTopic?: string;
+      }
+    >
+  >;
 }
 
 export const heroSlides: HeroSlide[] = [
@@ -32,31 +43,36 @@ export const heroSlides: HeroSlide[] = [
         title: 'Ürolojik Cerrahide Deneyim, Şeffaflık ve Uluslararası Standart',
         subtitle:
           'Robotik ve minimal invaziv ürolojik cerrahi için tek noktadan koordinasyon: değerlendirme, tedavi, konaklama ve takip.',
-        ctaLabel: 'Hemen WhatsApp’tan yazın'
+        ctaLabel: 'Hemen WhatsApp’tan yazın',
+        ctaTopic: 'ürolojik tedavi seçenekleri'
       },
       en: {
         title: 'Experience, Transparency and International Standards in Urological Surgery',
         subtitle:
           'Single-point coordination for robotic and minimally invasive urological surgery: assessment, treatment, accommodation and follow-up.',
-        ctaLabel: 'Message us on WhatsApp'
+        ctaLabel: 'Message us on WhatsApp',
+        ctaTopic: 'urological treatment options'
       },
       de: {
         title: 'Erfahrung, Transparenz und internationaler Standard in der urologischen Chirurgie',
         subtitle:
           'Koordination aus einer Hand für robotische und minimalinvasive urologische Chirurgie: Bewertung, Behandlung, Unterkunft und Nachsorge.',
-        ctaLabel: 'Schreiben Sie uns auf WhatsApp'
+        ctaLabel: 'Schreiben Sie uns auf WhatsApp',
+        ctaTopic: 'urologische Behandlungsmöglichkeiten'
       },
       ru: {
         title: 'Опыт, прозрачность и международный стандарт в урологической хирургии',
         subtitle:
           'Координация в одном месте для роботической и малоинвазивной урологической хирургии: оценка, лечение, проживание и наблюдение.',
-        ctaLabel: 'Напишите нам в WhatsApp'
+        ctaLabel: 'Напишите нам в WhatsApp',
+        ctaTopic: 'варианты урологического лечения'
       },
       ar: {
         title: 'الخبرة والشفافية والمعايير الدولية في جراحة المسالك البولية',
         subtitle:
           'تنسيق من نقطة واحدة للجراحة الروبوتية والطفيفة التوغل: التقييم والعلاج والإقامة والمتابعة.',
-        ctaLabel: 'راسلنا على واتساب'
+        ctaLabel: 'راسلنا على واتساب',
+        ctaTopic: 'خيارات علاج المسالك البولية'
       }
     }
   },

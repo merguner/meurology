@@ -99,16 +99,20 @@ export interface Treatment {
   /** Kategori — belirtilmezse 'general' kabul edilir. */
   category?: TreatmentCategory;
   /**
-   * Tahmini fiyat aralığı (TL, tedavi başına bir kez; dile bağlı değil).
-   * Girilirse sayfada "X–Y TL (≈ $a–b / €c–d)" gösterilir (USD/EUR kurdan türetilir).
-   * Boş bırakılırsa "değerlendirme sonrası paylaşılır" mesajı korunur
-   * (rekonstrüktif/redo vakalar için). Standart prosedürlerde doldurun.
+   * Fiyat aralığı — EURO (tedavi başına bir kez; dile bağlı değil).
+   * YALNIZCA features(locale).prices === true olan dillerde gösterilir;
+   * Türkçe sayfalarda hiçbir koşulda gösterilmez (yönetmelik).
+   * Boş bırakılırsa "değerlendirme sonrası teklif" mesajı gösterilir.
+   * TODO-DOGRULA: işlem bazlı gerçek aralıklar girilecek.
    */
-  priceRangeTRY?: { from: number; to: number };
+  priceRangeEUR?: { from: number; to: number };
   /** Ücretli "Özel Online Danışmanlık" CTA'sı bu tedavi sayfasında gösterilsin mi. */
   offersConsultation?: boolean;
-  /** Hasta deneyimi videosu — gerçek embed URL'i girilene kadar boş. */
-  videoPlaceholderNote: string;
+  /**
+   * Hasta deneyimi videosu — gerçek embed URL'i girilene kadar BOŞ bırakılır.
+   * Boşken video bölümü hiç render edilmez (yayında yer tutucu görünmez).
+   */
+  videoEmbedUrl?: string;
   /** Dil bazlı içerik. tr ve en dolu; diğerleri render'da en'e düşer. */
   i18n: Partial<Record<Locale, TreatmentContent>>;
 }

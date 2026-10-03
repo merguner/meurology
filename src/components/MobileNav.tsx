@@ -1,13 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
-import { navItems } from '@/config/nav';
+import { navItemsFor } from '@/config/nav';
 import { SocialLinks } from './SocialLinks';
 
 export function MobileNav() {
   const t = useTranslations('Nav');
+  const navItems = navItemsFor(useLocale());
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 

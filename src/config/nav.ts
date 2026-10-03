@@ -1,4 +1,5 @@
-import type { StaticPathname } from '@/i18n/routing';
+import type { Locale, StaticPathname } from '@/i18n/routing';
+import { features } from './features';
 
 /** Lokalize route anahtarları (static üst-seviye yollar). */
 type Pathname = StaticPathname;
@@ -15,6 +16,11 @@ export interface NavItem {
   key: string;
   /** Varsa üst kategori olarak açılır menü (dropdown) gösterilir. */
   children?: NavChild[];
+  /**
+   * Yalnızca hasta yorumu gösterilebilen dillerde görünür.
+   * (Yönetmelik: Türkçe menüde "Hasta Deneyimleri" yer almaz.)
+   */
+  requiresTestimonials?: boolean;
 }
 
 export const navItems: NavItem[] = [
@@ -33,7 +39,13 @@ export const navItems: NavItem[] = [
   { href: '/cerrah', key: 'surgeon' },
   { href: '/hastane', key: 'hospital' },
   { href: '/uluslararasi-hasta', key: 'process' },
-  { href: '/deneyimler', key: 'experiences' },
+  { href: '/deneyimler', key: 'experiences', requiresTestimonials: true },
   { href: '/blog', key: 'blog' },
   { href: '/iletisim', key: 'contact' }
 ];
+
+/** Belirli bir dilde gösterilecek menü öğeleri (yasal filtre uygulanmış). */
+export function navItemsFor(locale: Locale | string): NavItem[] {
+  const f = features(locale);
+  return navItems.filter((i) => !i.requiresTestimonials || f.testimonials);
+}

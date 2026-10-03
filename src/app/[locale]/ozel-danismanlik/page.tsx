@@ -3,7 +3,8 @@ import { buildAlternates } from '@/i18n/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
 import { resolveConsultation } from '@/content/consultation';
-import { siteConfig, approxForeign } from '@/config/site';
+import { siteConfig, formatEUR } from '@/config/site';
+import { features } from '@/config/features';
 import { PageHero } from '@/components/PageHero';
 import { BookingFlow } from '@/components/BookingFlow';
 import { Icon } from '@/components/Icon';
@@ -31,7 +32,9 @@ export default async function ConsultationPage({
   setRequestLocale(locale);
   const c = resolveConsultation(locale);
   const cfg = siteConfig.consultation;
-  const price = `${cfg.price.amount} (${c.vatIncluded})`; // ör. "8.000 TL (KDV dahil)"
+  // YÖNETMELİK: Türkçe sayfada ücret TUTARI yazılmaz; yalnızca "ücretlidir" bilgisi.
+  const showPrice = features(locale).prices;
+  const price = `${formatEUR(cfg.priceEUR, locale)} (${c.vatIncluded})`;
   const priceNote = c.priceNote.replace('{duration}', String(cfg.durationMinutes));
 
   return (
@@ -56,14 +59,15 @@ export default async function ConsultationPage({
             {c.forWhom}
           </p>
 
-          {/* Ücret */}
+          {/* Ücret — tutar yalnızca yabancı dil sayfalarında (sağlık turizmi istisnası) */}
           <div className="card p-5">
             <p className="label-mono">{c.priceLabel}</p>
-            <p className="mt-1 text-2xl font-bold text-primary">
-              {price} <span className="text-base font-normal text-muted">{approxForeign(siteConfig.consultation.price.amountTRY)}</span>
-            </p>
+            {showPrice ? (
+              <p className="mt-1 text-2xl font-bold text-primary">{price}</p>
+            ) : (
+              <p className="mt-1 font-semibold text-fg">{c.priceDomesticNotice}</p>
+            )}
             <p className="mt-1 text-sm text-muted">{priceNote}</p>
-            {c.fxNote && <p className="mt-2 text-xs text-muted">{c.fxNote}</p>}
           </div>
 
           {/* Nasıl işliyor */}

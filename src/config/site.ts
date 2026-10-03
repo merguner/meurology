@@ -1,19 +1,18 @@
 /**
  * Merkezi site yapılandırması.
- * Marka, telefon, WhatsApp, sosyal medya, adres ve e-posta GERÇEK verilerle dolduruldu.
- * Hâlâ PLACEHOLDER olanlar (ayrı turda gelecek): domain, ushasLicenseNo.
+ * İletişim, e-posta ve belge numaraları için TEK KAYNAK: config/contact.ts.
+ * Burada yalnızca marka, alan adı, adres, sosyal medya ve randevu ayarları tutulur.
  */
+import { contactConfig } from './contact';
+
 export const siteConfig = {
   name: 'ME Urology Clinic', // Marka adı — tüm dillerde sabit (çevrilmez)
   domain: 'https://www.meurology.com', // Canlı alan adı (kanonik: www). apex → www 301 yönlendirmesi hosting/DNS'te yapılmalı.
-  // wa.me linkleri için uluslararası formatta, sadece rakam.
-  whatsappNumber: '905320630969',
-  phone: '0532 063 09 69', // yurt içi görünüm
-  phoneIntl: '+905320630969', // tel: linki için
-  // Mevcut siteden alınan gerçek e-posta (doğrulanmadı; yanlışsa güncellenecek).
-  email: 'muslumergun@gmail.com',
-  // PLACEHOLDER: USHAŞ (Uluslararası Sağlık Hizmetleri A.Ş.) yetki belge no
-  ushasLicenseNo: 'USHAŞ-XXXX-XXXX',
+  // İletişim bilgileri contact.ts'ten gelir (tek kaynak).
+  whatsappNumber: contactConfig.whatsappNumber,
+  phone: contactConfig.phone,
+  phoneIntl: contactConfig.phoneIntl,
+  email: contactConfig.email,
   /**
    * Klinik/ameliyat merkezi adresi (GERÇEK). Adres metni özel isim olduğundan
    * TÜM DİLLERDE AYNI kalır; yalnızca "Klinik / Ameliyat Merkezi" gibi etiketler
@@ -71,64 +70,94 @@ export const siteConfig = {
       bankName: 'Türkiye Finans',
       iban: 'TR45 0020 6001 2700 9285 8300 02'
     },
-    // Ücret (gerçek). "KDV dahil" ifadesi dile göre consultation.ts'te (vatIncluded).
-    price: {
-      amount: '8.000 TL',
-      amountTRY: 8000 // yaklaşık döviz karşılığı için sayısal değer
-    },
+    /**
+     * Online konsültasyon ücreti — EURO.
+     * TL ve kur çevirisi kaldırıldı: yurt içi (tr) sayfalarda ücret hiç gösterilmez
+     * (yönetmelik), yabancı dil sayfalarında doğrudan € yazılır.
+     */
+    priceEUR: 200,
     // Kartlı ödeme (iyzico/Stripe) entegrasyonu tamamlanınca true yapın.
-    // false iken "Kartla öde" butonu görünür ama "yakında" mesajı gösterir.
+    // TODO-DOGRULA: ödeme altyapısı tercihi bildirilmedi.
     cardPaymentEnabled: false
-  },
-  /**
-   * Yaklaşık döviz karşılıkları için MANUEL kur (1 birim = kaç TL).
-   * Canlı API yok; kur değiştikçe elle güncelleyin.
-   */
-  exchangeRates: {
-    tryPerUsd: 34,
-    tryPerEur: 37
   }
 } as const;
 
-/** TL tutarını yaklaşık USD/EUR karşılığıyla "≈ $X / €Y" olarak biçimler. */
-export function approxForeign(amountTRY: number): string {
-  const { tryPerUsd, tryPerEur } = siteConfig.exchangeRates;
-  const round10 = (n: number) => Math.round(n / 10) * 10;
-  const usd = round10(amountTRY / tryPerUsd);
-  const eur = round10(amountTRY / tryPerEur);
-  return `≈ $${usd} / €${eur}`;
+/** Tek bir EUR tutarını locale'e göre biçimler: "200 €". */
+export function formatEUR(amount: number, locale: string): string {
+  try {
+    return new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: 'EUR',
+      maximumFractionDigits: 0
+    }).format(amount);
+  } catch {
+    return `€${amount}`;
+  }
 }
 
 /**
- * TL aralığını locale'e göre "X–Y TL" + yaklaşık "$a–b / €c–d" olarak biçimler.
- * Döner: { try: "45.000–70.000 TL", approx: "≈ $1.320–2.060 / €1.220–1.890" }
+ * EUR aralığını locale'e göre biçimler: "5.000–20.000 €".
+ * Yalnızca features(locale).prices === true olan dillerde çağrılır.
  */
-export function formatPriceRangeTRY(
+export function formatPriceRangeEUR(
   range: { from: number; to: number },
   locale: string
-): { try: string; approx: string } {
-  const { tryPerUsd, tryPerEur } = siteConfig.exchangeRates;
+): string {
   const nf = (() => {
     try {
-      return new Intl.NumberFormat(locale);
+      return new Intl.NumberFormat(locale, {
+        style: 'currency',
+        currency: 'EUR',
+        maximumFractionDigits: 0
+      });
     } catch {
-      return new Intl.NumberFormat('en');
+      return null;
     }
   })();
-  const round100 = (n: number) => Math.round(n / 100) * 100;
-  const usdFrom = nf.format(round100(range.from / tryPerUsd));
-  const usdTo = nf.format(round100(range.to / tryPerUsd));
-  const eurFrom = nf.format(round100(range.from / tryPerEur));
-  const eurTo = nf.format(round100(range.to / tryPerEur));
-  return {
-    try: `${nf.format(range.from)}–${nf.format(range.to)} TL`,
-    approx: `≈ $${usdFrom}–${usdTo} / €${eurFrom}–${eurTo}`
-  };
+  if (!nf) return `€${range.from}–${range.to}`;
+  // Aralıkta para birimi simgesini bir kez göstermek için üst sınırı biçimlendirip
+  // alt sınırı sade sayı olarak önüne ekliyoruz.
+  const plain = (() => {
+    try {
+      return new Intl.NumberFormat(locale, { maximumFractionDigits: 0 });
+    } catch {
+      return new Intl.NumberFormat('en', { maximumFractionDigits: 0 });
+    }
+  })();
+  return `${plain.format(range.from)}–${nf.format(range.to)}`;
 }
 
-/** Belirli bir mesajla WhatsApp deep-link üretir. */
+/**
+ * Belirli bir mesajla WhatsApp deep-link üretir.
+ * encodeURIComponent, Türkçe/Arapça/Kiril karakterleri güvenle kodlar.
+ */
 export function whatsappLink(prefilledMessage?: string): string {
   const base = `https://wa.me/${siteConfig.whatsappNumber}`;
   if (!prefilledMessage) return base;
   return `${base}?text=${encodeURIComponent(prefilledMessage)}`;
+}
+
+/**
+ * SAYFAYA ÖZEL WHATSAPP MESAJI + KAYNAK TAKİP KODU.
+ *
+ * Örnek çıktı:
+ *   "Merhaba, Robotik Prostatektomi hakkında bilgi almak istiyorum. Ülkem:  [TR-ROBOTIK-PROSTATEKTOMI]"
+ *
+ * Kaynak kodu ([DİL-KONU]) hangi sayfadan gelindiğini WhatsApp kutusunda
+ * görünür kılar; kampanya/sayfa performansı elle izlenebilir.
+ *
+ * @param message   next-intl ile {topic} doldurulmuş hazır mesaj.
+ * @param locale    Kaynak kodundaki dil ön eki.
+ * @param sourceKey Kaynak kodundaki konu anahtarı (ör. tedavi slug'ı).
+ */
+export function whatsappMessageFor(
+  message: string,
+  locale: string,
+  sourceKey: string
+): string {
+  const code = `${locale}-${sourceKey}`
+    .toUpperCase()
+    .replace(/[^A-Z0-9-]/g, '-')
+    .replace(/-+/g, '-');
+  return `${message} [${code}]`;
 }

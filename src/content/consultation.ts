@@ -25,6 +25,8 @@ export interface ConsultationCopy {
   priceLabel: string;
   priceNote: string; // {duration} ile
   vatIncluded: string; // "KDV dahil" karşılığı
+  /** Türkçe sayfada tutar yerine gösterilen ifade (yönetmelik: fiyat yazılmaz). */
+  priceDomesticNotice: string;
   fxNote: string; // yabancı hasta için döviz/kur notu (tr'de boş olabilir)
   internationalNote: string;
   ctaBook: string;
@@ -92,6 +94,7 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
     priceLabel: 'Ücret',
     priceNote: '{duration} dakikalık birebir değerlendirme görüşmesi',
     vatIncluded: 'KDV dahil',
+    priceDomesticNotice: 'Ücretlidir; tutar randevu sırasında bildirilir.',
     fxNote: '',
     internationalNote:
       'Uluslararası hastaysanız: havale yalnızca Türkiye’deki banka hesabına yapıldığından, ödeme yöntemini birlikte belirlemek için lütfen WhatsApp’tan bize ulaşın.',
@@ -164,8 +167,8 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
     priceLabel: 'Fee',
     priceNote: '{duration}-minute one-to-one assessment consultation',
     vatIncluded: 'incl. VAT',
-    fxNote:
-      'The fee is charged in Turkish Lira (8.000 TL); any currency equivalent is approximate and may vary with the exchange rate.',
+    priceDomesticNotice: 'A fee applies; the amount is confirmed when booking.',
+    fxNote: '',
     internationalNote:
       'If you are an international patient: since the transfer is only to a bank account in Türkiye, please contact us on WhatsApp so we can arrange the payment method together.',
     ctaBook: 'Book an appointment',
@@ -237,8 +240,8 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
     priceLabel: 'الرسوم',
     priceNote: 'جلسة تقييم فردية مدّتها {duration} دقيقة',
     vatIncluded: 'شامل ضريبة القيمة المضافة',
-    fxNote:
-      'تُحصَّل الرسوم بالليرة التركية (8.000 TL)؛ وأي مقابل بعملة أخرى تقريبي وقد يتغيّر حسب سعر الصرف.',
+    priceDomesticNotice: 'الخدمة مدفوعة؛ يُبلَّغ بالمبلغ عند الحجز.',
+    fxNote: '',
     internationalNote:
       'إذا كنت مريضًا دوليًا: بما أن التحويل يتم فقط إلى حساب بنكي في تركيا، فيُرجى التواصل معنا عبر WhatsApp لنحدّد طريقة الدفع معًا.',
     ctaBook: 'احجز موعدًا',
@@ -310,8 +313,8 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
     priceLabel: 'Gebühr',
     priceNote: 'Eins-zu-eins-Beratungsgespräch von {duration} Minuten',
     vatIncluded: 'inkl. MwSt.',
-    fxNote:
-      'Die Gebühr wird in Türkischer Lira (8.000 TL) berechnet; ein etwaiger Währungsgegenwert ist ungefähr und kann je nach Wechselkurs variieren.',
+    priceDomesticNotice: 'Kostenpflichtig; der Betrag wird bei der Buchung mitgeteilt.',
+    fxNote: '',
     internationalNote:
       'Wenn Sie internationale Patientin/internationaler Patient sind: Da die Überweisung nur auf ein Bankkonto in der Türkei erfolgt, kontaktieren Sie uns bitte über WhatsApp, damit wir die Zahlungsart gemeinsam festlegen.',
     ctaBook: 'Termin buchen',
@@ -383,8 +386,8 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
     priceLabel: 'Стоимость',
     priceNote: 'Индивидуальная оценочная консультация {duration} минут',
     vatIncluded: 'включая НДС',
-    fxNote:
-      'Стоимость взимается в турецких лирах (8.000 TL); любой эквивалент в валюте является приблизительным и может меняться в зависимости от курса.',
+    priceDomesticNotice: 'Услуга платная; сумма сообщается при записи.',
+    fxNote: '',
     internationalNote:
       'Если вы иностранный пациент: поскольку перевод осуществляется только на банковский счёт в Турции, пожалуйста, свяжитесь с нами в WhatsApp, чтобы вместе определить способ оплаты.',
     ctaBook: 'Записаться',

@@ -38,7 +38,8 @@
     "language": "Sprache",
     "verified": "Überprüfbare Informationen",
     "placeholderNotice": "Beispiel-/Platzhalterinhalt",
-    "fileEvalCta": "Unterlagen/Bilder senden"
+    "fileEvalCta": "Unterlagen/Bilder senden",
+    "whatsappTopicMessage": "Hallo, ich möchte Informationen zu {topic}. Mein Land:"
   },
   "Home": {
     "positioning": "Eine vertrauenswürdige Adresse für urologische Chirurgie für internationale Patienten",
@@ -47,12 +48,11 @@
     "heroPrimaryCta": "Kostenlose Bewertung über WhatsApp",
     "heroSecondaryCta": "Behandlungen ansehen",
     "accreditationsTitle": "Akkreditierung und Sicherheit",
-    "membershipTitle": "Fachmitgliedschaft",
     "treatmentsTitle": "Behandlungsbereiche",
     "treatmentsSubtitle": "Erreichen Sie schnell die passende Behandlungsseite.",
-    "whyTitle": "Warum Patienten uns wählen",
+    "whyTitle": "Unser Behandlungsansatz",
     "why": {
-      "experienceTitle": "Hohe Fallzahl",
+      "experienceTitle": "Chirurgische Erfahrung",
       "experienceBody": "Umfangreiche chirurgische Erfahrung bei robotischen und minimalinvasiven Eingriffen.",
       "transparencyTitle": "Transparenter Preis & Ablauf",
       "transparencyBody": "Was im Paket enthalten ist und jeder Schritt wird klar mitgeteilt.",
@@ -87,7 +87,6 @@
     "priceOnRequest": "Preis nach Bewertung",
     "packageIncludes": "Im Paket enthalten",
     "sectionVideo": "Video zur Patientenerfahrung",
-    "videoPlaceholder": "Videobereich — hier wird ein einwilligungsbasiertes Patientenvideo eingefügt.",
     "sectionFaq": "Häufig gestellte Fragen",
     "ctaTitle": "Sprechen wir über diese Behandlung",
     "ctaBody": "Schreiben Sie uns Ihre Fragen auf WhatsApp oder füllen Sie das Vorabbewertungsformular aus.",
@@ -98,7 +97,7 @@
     "complexCaseLabel": "Definition komplexer Fälle",
     "advancedTechniqueLabel": "Verwendete fortgeschrittene Technik",
     "patientStories": "Patientenbewertungen",
-    "priceApprox": "(ca.)"
+    "sectionPackage": "Leistungsumfang"
   },
   "Surgeon": {
     "title": "Chirurgenprofil",
@@ -112,18 +111,18 @@
     "verifiedNote": "Die folgenden Angaben können aus offiziellen Registern überprüft werden.",
     "reconstructiveTitle": "Erfahrung in rekonstruktiver Urologie",
     "reconstructiveLink": "Zur Seite Rekonstruktive Urologie",
-    "watchChannel": "YouTube-Kanal ansehen",
-    "videoCaption": "Ein Vorstellungsvideo des Chirurgen wird in Kürze hinzugefügt. Vorerst finden Sie Inhalte auf dem YouTube-Kanal.",
-    "photoPending": "Foto folgt in Kürze",
     "coursesTitle": "Kurse & Zertifikate",
     "awardsTitle": "Auszeichnungen"
   },
   "Hospital": {
     "title": "Klinik & Technologie",
     "robotLabel": "Robotersystem",
-    "orLabel": "Operationssäle",
     "featuresTitle": "Wichtige Einrichtungen",
-    "accreditationsTitle": "Akkreditierungen"
+    "accreditationsTitle": "Akkreditierungen",
+    "laserLabel": "Laserplattform",
+    "licenseLabel": "Zulassung Gesundheitstourismus",
+    "licenseHolder": "Zulassungsinhaber: {holder} (ausgestellt vom Gesundheitsministerium)",
+    "licenseNo": "Zulassungsnummer"
   },
   "Process": {
     "title": "Ablauf für internationale Patienten",
@@ -165,8 +164,7 @@
     "basedOnReviews": "Basierend auf {count} Google-Bewertungen",
     "seeAllGoogle": "Alle auf Google ansehen",
     "googleAttribution": "Bewertungen werden automatisch über Google abgerufen.",
-    "galleryTitle": "Von unseren Patienten",
-    "photoAlt": "Unser zufriedener Patient"
+    "galleryTitle": "Von unseren Patienten"
   },
   "Blog": {
     "title": "Wissenszentrum",
@@ -206,8 +204,6 @@
     "treatmentPlaceholder": "Behandlung auswählen",
     "message": "Ihre Nachricht",
     "messagePlaceholder": "Ihre Beschwerden oder Fragen",
-    "file": "Befunde / Datei hochladen",
-    "filePlaceholder": "Der Datei-Upload wird bald aktiviert. Vorerst können Sie Dateien über WhatsApp senden.",
     "privacyLinksIntro": "Lesen Sie vor dem Absenden, wie Ihre Daten verarbeitet werden:",
     "consent": "Ich willige ausdrücklich in die Verarbeitung der Gesundheitsangaben ein, die ich für die Vorabbewertung mitteile.",
     "consentRequired": "Zum Fortfahren ist eine ausdrückliche Einwilligung erforderlich.",
@@ -232,35 +228,23 @@
     "legal": "Rechtliches",
     "kvkk": "KVKK / DSGVO-Datenschutzerklärung",
     "consent": "Ausdrückliche Einwilligung",
-    "ushasLabel": "USHAŞ-Genehmigungsnr.",
     "rights": "Alle Rechte vorbehalten.",
-    "medicalDisclaimer": "Die Informationen auf dieser Website dienen nur der allgemeinen Information und ersetzen keine ärztliche Beratung.",
+    "medicalDisclaimer": "Die Informationen auf dieser Website dienen der allgemeinen Information und ersetzen keine ärztliche Beratung. Diagnose und Behandlung erfordern eine ärztliche Untersuchung.",
     "googleReview": "Bewerten Sie uns auf Google",
-    "contactTitle": "Kontakt"
+    "contactTitle": "Kontakt",
+    "licenseLabel": "Zulassung für internationalen Gesundheitstourismus des Gesundheitsministeriums der Republik Türkei",
+    "diplomaLabel": "Approbationsnummer",
+    "verbisLabel": "VERBİS-Registernummer"
   },
   "NotFound": {
     "title": "Seite nicht gefunden",
     "body": "Die gesuchte Seite wurde möglicherweise verschoben oder entfernt.",
     "home": "Zurück zur Startseite"
   },
-  "Stats": {
-    "title": "In Zahlen",
-    "totalLabel": "Chirurgische Eingriffe insgesamt",
-    "yearsLabel": "Jahre chirurgische Erfahrung",
-    "note": "Die Zahlen spiegeln die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün wider; die Kategoriesummen ergeben die Gesamtsumme.",
-    "categories": {
-      "robotic": "Robotische / laparoskopische Chirurgie",
-      "endourology": "Endourologie / Steinchirurgie",
-      "andrology": "Andrologie",
-      "microsurgery": "Mikrochirurgie",
-      "reconstructive": "Funktionelle / rekonstruktive Urologie",
-      "uroOnc": "Uroonkologie"
-    }
-  },
   "Payment": {
     "orLabel": "oder",
     "cardCta": "Mit Karte zahlen (international)",
-    "comingSoon": "Kartenzahlung wird bald verfügbar sein. Bitte nutzen Sie vorerst Banküberweisung + WhatsApp-Beleg.",
+    "comingSoon": "Kartenzahlung ist derzeit nicht verfügbar. Bitte nutzen Sie die Banküberweisung und senden Sie den Beleg per WhatsApp.",
     "error": "Ein Fehler ist aufgetreten, bitte erneut versuchen."
   }
 }

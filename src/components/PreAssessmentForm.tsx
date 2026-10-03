@@ -131,11 +131,10 @@ export function PreAssessmentForm({
         <textarea id="message" name="message" rows={4} placeholder={t('messagePlaceholder')} className="form-input resize-y" />
       </Field>
 
-      {/* Dosya/tahlil yükleme — PLACEHOLDER (backend depolama eklenince etkinleşir). */}
-      <Field label={t('file')} htmlFor="file">
-        <input id="file" name="file" type="file" disabled aria-describedby="file-note" className="form-input file:mr-3 file:rounded file:border-0 file:bg-surface-2 file:px-3 file:py-1.5 file:text-sm" />
-        <p id="file-note" className="mt-1 text-xs text-muted">{t('filePlaceholder')}</p>
-      </Field>
+      {/* KALDIRILDI: devre dışı dosya yükleme alanı.
+          Çalışmayan bir alan yayında gösterilmez. Şifreli depolama + KVKK özel
+          nitelikli veri onayı ile birlikte Faz 4'te eklenecek; o zamana kadar
+          hastalar dosyalarını WhatsApp'tan iletiyor. */}
 
       <p className="text-sm text-muted">
         {t('privacyLinksIntro')}{' '}

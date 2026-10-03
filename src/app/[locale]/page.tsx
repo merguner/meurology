@@ -5,9 +5,8 @@ import { generalTreatments } from '@/content/treatments';
 import { resolveContent } from '@/content/types';
 import { resolveConsultation } from '@/content/consultation';
 import { WhatsAppCta } from '@/components/WhatsAppCta';
+import { whatsappMessageFor } from '@/config/site';
 import { TreatmentCard } from '@/components/TreatmentCard';
-import { AccreditationBadges } from '@/components/AccreditationBadges';
-import { StatsBand } from '@/components/StatsBand';
 import { HeroSlider } from '@/components/HeroSlider';
 import { TrustStrip } from '@/components/TrustStrip';
 import { Icon, type IconName } from '@/components/Icon';
@@ -21,6 +20,12 @@ export default async function HomePage({
   setRequestLocale(locale);
   const t = await getTranslations('Home');
   const tc = await getTranslations('Common');
+  // Ana sayfa CTA'sı için ön-dolu WhatsApp mesajı (bölüm başlığı değil) + kaynak kodu.
+  const waMessage = whatsappMessageFor(
+    tc('whatsappTopicMessage', { topic: t('treatmentsTitle') }),
+    locale,
+    'anasayfa'
+  );
 
   const why: { icon: IconName; title: string; body: string }[] = [
     { icon: 'robot', title: t('why.experienceTitle'), body: t('why.experienceBody') },
@@ -34,23 +39,17 @@ export default async function HomePage({
       {/* HERO SLIDER — içerik src/content/heroSlides.ts'ten okunur (güncellenebilir) */}
       <HeroSlider />
 
-      {/* SABİT GÜVEN ŞERİDİ — kaymaz; istatistik + öne çıkan Google yorumları */}
+      {/* SABİT GÜVEN ŞERİDİ — kaymaz; yalnızca tr dışı dillerde Google yorumları */}
       <TrustStrip locale={locale} />
 
-      {/* MESLEKİ ÜYELİK */}
-      <section className="container-content py-14">
-        <h2 className="mb-6 text-xl font-bold md:text-2xl">
-          {t('membershipTitle')}
-        </h2>
-        <AccreditationBadges only={['eau']} />
-      </section>
+      {/* KALDIRILDI: "Mesleki üyelik" bölümü (EAU rozeti).
+          Gerekçe: Bölüm 0 → dernek üyeliği yok; doğrulanamayan üyelik beyanı
+          yanıltıcı tanıtım sayılır. Üyelik belgelenirse trust.ts ile birlikte geri gelir. */}
 
-      {/* RAKAMLARLA — cerrahi deneyim (sayaç animasyonlu) */}
-      <section className="border-y border-border bg-surface py-14">
-        <div className="container-content">
-          <StatsBand />
-        </div>
-      </section>
+      {/* KALDIRILDI: "Rakamlarla" vaka sayısı bandı (StatsBand).
+          Gerekçe: Yayındaki rakamlar (5.230 / 945) ile bildirilen işlem bazlı
+          rakamlar (toplam 2.385) çelişiyor ve hiçbiri doğrulanmadı.
+          Doğrulanınca content/caseStats.ts doldurulup features.caseNumbers açılır. */}
 
       {/* TEDAVİLER */}
       <section className="container-content py-6 md:py-10">
@@ -151,7 +150,7 @@ export default async function HomePage({
           </h2>
           <p className="mt-3 max-w-2xl text-primary-fg/85">{t('processCtaBody')}</p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <WhatsAppCta message={t('processCtaTitle')} />
+            <WhatsAppCta message={waMessage} />
             <Link
               href="/iletisim"
               className="btn bg-accent text-accent-fg hover:bg-accent/90"

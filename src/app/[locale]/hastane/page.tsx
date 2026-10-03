@@ -3,6 +3,7 @@ import { buildAlternates } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
 import { hospital } from '@/content/trust';
+import { contactConfig } from '@/config/contact';
 import { isPlaceholder } from '@/content/types';
 import { PageHero } from '@/components/PageHero';
 import { AccreditationBadges } from '@/components/AccreditationBadges';
@@ -33,7 +34,7 @@ export default async function HospitalPage({
 
   // Doğrulanmamış teknik detaylar gerçek bilgi gelene kadar gizli.
   const showRobot = !isPlaceholder(hospital.robotSystem);
-  const showOr = !isPlaceholder(hospital.operatingRooms);
+  const showLaser = !isPlaceholder(hospital.laserSystem);
   const features = c.features.filter((f) => !isPlaceholder(f));
 
   return (
@@ -47,7 +48,7 @@ export default async function HospitalPage({
               <p key={i}>{p}</p>
             ))}
 
-            {(showRobot || showOr) && (
+            {(showRobot || showLaser) && (
               <div className="grid gap-4 pt-4 sm:grid-cols-2">
                 {showRobot && (
                   <div className="card p-5">
@@ -55,14 +56,26 @@ export default async function HospitalPage({
                     <p className="font-medium">{hospital.robotSystem}</p>
                   </div>
                 )}
-                {showOr && (
+                {showLaser && (
                   <div className="card p-5">
-                    <p className="label-mono mb-1">{t('orLabel')}</p>
-                    <p className="font-medium">{hospital.operatingRooms}</p>
+                    <p className="label-mono mb-1">{t('laserLabel')}</p>
+                    <p className="font-medium">{hospital.laserSystem}</p>
                   </div>
                 )}
               </div>
             )}
+
+            {/* Sağlık turizmi yetki belgesi — belgeyi T.C. Sağlık Bakanlığı verir
+                (USHAŞ değil); belge sahibi hastanedir. Numara boşken satır gizli. */}
+            <div className="card mt-4 p-5">
+              <p className="label-mono mb-1">{t('licenseLabel')}</p>
+              <p className="text-sm text-muted">
+                {t('licenseHolder', { holder: contactConfig.healthTourism.licenseHolder })}
+                {contactConfig.healthTourism.licenseNo
+                  ? ` · ${t('licenseNo')}: ${contactConfig.healthTourism.licenseNo}`
+                  : ''}
+              </p>
+            </div>
           </div>
 
           {features.length > 0 && (

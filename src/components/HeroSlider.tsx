@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { whatsappLink } from '@/config/site';
+import { whatsappLink, whatsappMessageFor } from '@/config/site';
 import { heroSlides } from '@/content/heroSlides';
 import type { Locale } from '@/i18n/routing';
 import { Icon } from './Icon';
@@ -13,6 +13,7 @@ const AUTOPLAY_MS = 6500;
 
 export function HeroSlider() {
   const t = useTranslations('Home');
+  const tc = useTranslations('Common');
   const locale = useLocale() as Locale;
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false); // kullanıcı etkileşiminde kalıcı durur
@@ -71,7 +72,11 @@ export function HeroSlider() {
         {heroSlides.map((slide, i) => {
           const c = slide.i18n[locale] ?? slide.i18n.tr!;
           const active = i === index;
-          const href = slide.cta.type === 'whatsapp' ? whatsappLink(c.title) : slide.cta.href ?? '/';
+          // Ön-dolu mesaj: slayt BAŞLIĞI değil, anlaşılır bir soru + kaynak kodu.
+          const href =
+            slide.cta.type === 'whatsapp'
+              ? whatsappLink(whatsappMessageFor(tc('whatsappTopicMessage', { topic: c.ctaTopic ?? c.title }), locale, slide.id))
+              : slide.cta.href ?? '/';
           // SEO: sayfada tek <h1> — yalnızca ilk slide h1, diğerleri h2 (görsel olarak aynı).
           const Heading = i === 0 ? 'h1' : 'h2';
           return (

@@ -7,7 +7,7 @@ import { routing, type Locale } from '@/i18n/routing';
 import { getTreatment, treatments, treatmentSlugs } from '@/content/treatments';
 import { resolveContent, treatmentCategory, isPlaceholder } from '@/content/types';
 import { resolveConsultation } from '@/content/consultation';
-import { siteConfig, formatPriceRangeTRY } from '@/config/site';
+import { siteConfig, formatPriceRangeEUR, whatsappMessageFor } from '@/config/site';
 import { surgeon, surgeonFullName } from '@/content/surgeon';
 import { SectionHeading } from '@/components/PageHero';
 import { Icon } from '@/components/Icon';
@@ -17,10 +17,9 @@ import { VideoPlaceholder } from '@/components/VideoPlaceholder';
 import { PreAssessmentForm } from '@/components/PreAssessmentForm';
 import { JsonLd } from '@/components/JsonLd';
 import { TreatmentCard } from '@/components/TreatmentCard';
-import { PatientGallery } from '@/components/PatientGallery';
 import { InsuranceInfo } from '@/components/InsuranceInfo';
-import { photosForTreatment } from '@/content/patientMedia';
 import { storiesForTreatment } from '@/content/experiences';
+import { features } from '@/config/features';
 
 // Tüm dil + slug kombinasyonlarını statik üret (hız için).
 export function generateStaticParams() {
@@ -62,13 +61,15 @@ export default async function TreatmentPage({
   const tf = await getTranslations('Form');
   const te = await getTranslations('Experiences');
 
-  // TL fiyat aralığı (varsa) — TL + yaklaşık USD/EUR olarak biçimlenir.
-  const priceRange = treatment.priceRangeTRY
-    ? formatPriceRangeTRY(treatment.priceRangeTRY, locale)
-    : null;
+  // EURO fiyat aralığı — YÖNETMELİK: yurt içi (tr) sayfalarda fiyat gösterilmez;
+  // yalnızca yabancı dil (sağlık turizmi) sayfalarında gösterilir. TL kullanılmaz.
+  const priceRange =
+    treatment.priceRangeEUR && features(locale).prices
+      ? formatPriceRangeEUR(treatment.priceRangeEUR, locale)
+      : null;
   const isReconstructive = treatmentCategory(treatment) === 'reconstructive';
-  // Fotoğraflar androloji/rekonstrüktifte daima boş (mahremiyet); yorumlar serbest.
-  const galleryPhotos = photosForTreatment(slug);
+  // Sayfaya özel WhatsApp ön-dolu mesajı + kaynak takip kodu (ör. [TR-BOBREK-TASI]).
+  const waMessage = whatsappMessageFor(tc('whatsappTopicMessage', { topic: c.title }), locale, slug);
   const patientStories = storiesForTreatment(slug);
   // İlgili tedaviler aynı kategoriden; yetmezse genelle tamamla.
   const sameCat = treatments.filter(
@@ -134,13 +135,13 @@ export default async function TreatmentPage({
                   {tc('fileEvalCta')}
                 </a>
                 <WhatsAppCta
-                  message={`${c.title} — ${tf('title')}`}
+                  message={waMessage}
                   className="!bg-transparent !text-fg border border-border hover:!bg-surface-2"
                 />
               </>
             ) : (
               <>
-                <WhatsAppCta message={`${c.title} — ${tf('title')}`} />
+                <WhatsAppCta message={waMessage} />
                 <a href="#form" className="btn bg-accent text-accent-fg hover:bg-accent/90">
                   {tc('formCta')}
                 </a>
@@ -199,9 +200,13 @@ export default async function TreatmentPage({
             <SectionHeading title={t('sectionExperience')} />
             <VerifiedInfo
               title={tc('verified')}
-              note={c.surgeonExperience.note}
+              /* Not, vaka sayısının kapsamını açıklıyor; rakam gizliyken gösterilmez. */
+              note={features(locale).caseNumbers ? c.surgeonExperience.note : undefined}
               items={[
-                { label: t('caseVolumeLabel'), value: c.surgeonExperience.caseVolume },
+                // Vaka sayısı yalnızca doğrulanmış rakam varsa (caseStats.ts) gösterilir.
+                ...(features(locale).caseNumbers
+                  ? [{ label: t('caseVolumeLabel'), value: c.surgeonExperience.caseVolume }]
+                  : []),
                 ...(c.expertise
                   ? [
                       { label: t('redoRateLabel'), value: c.expertise.redoRate },
@@ -295,17 +300,25 @@ export default async function TreatmentPage({
             </div>
           </section>
 
-          {/* Hasta deneyimi videosu */}
-          <section>
-            <SectionHeading title={t('sectionVideo')} />
-            <VideoPlaceholder caption={t('videoPlaceholder')} title={c.title} />
-          </section>
+          {/* Hasta deneyimi videosu — yalnızca gerçek embed URL girilmişse.
+              Yer tutucu metin yayında GÖSTERİLMEZ (treatment.videoEmbedUrl). */}
+          {treatment.videoEmbedUrl && (
+            <section>
+              <SectionHeading title={t('sectionVideo')} />
+              <VideoPlaceholder
+                caption={t('sectionVideo')}
+                title={c.title}
+                embedUrl={treatment.videoEmbedUrl}
+              />
+            </section>
+          )}
 
-          {/* Hastalarımızdan — fotoğraflar (androloji/rekonstrüktifte gizli) + yorumlar */}
-          {(galleryPhotos.length > 0 || patientStories.length > 0) && (
+          {/* Hastalarımızdan — yalnızca yorumlar. YÖNETMELİK: yurt içi (tr)
+              sayfalarda hasta yorumu gösterilmez. Hasta FOTOĞRAFI imzalı Ek-1
+              onamı olmadığı için tüm dillerde kaldırıldı (patientMedia.ts). */}
+          {features(locale).testimonials && patientStories.length > 0 && (
             <section className="space-y-6">
               <SectionHeading title={te('galleryTitle')} />
-              <PatientGallery photos={galleryPhotos} alt={te('photoAlt')} />
               {patientStories.length > 0 && (
                 <ul className="grid gap-5 sm:grid-cols-2">
                   {patientStories.map((s) => {
@@ -358,37 +371,42 @@ export default async function TreatmentPage({
         <aside className="lg:col-span-1">
           <div className="lg:sticky lg:top-20 space-y-5">
             <div className="card p-6">
-              <h2 className="font-serif text-lg font-bold">{t('sectionPrice')}</h2>
-              <div className="mt-3">
-                {priceRange ? (
-                  <>
-                    {/* TL aralığı girilmiş — TL + yaklaşık USD/EUR (her kategoride). */}
-                    <p className="label-mono">{t('priceRange')}</p>
-                    <p className="mt-1 font-mono text-2xl font-bold text-primary">
-                      {priceRange.try}{' '}
-                      <span className="text-sm font-medium text-muted">{t('priceApprox')}</span>
-                    </p>
-                    <p className="mt-0.5 text-sm text-muted">{priceRange.approx}</p>
-                  </>
-                ) : isReconstructive ? (
-                  <>
-                    <p className="label-mono">{t('priceByAssessment')}</p>
-                    <p className="mt-1 font-semibold text-fg">{t('priceOnRequest')}</p>
-                  </>
-                ) : (
-                  <>
-                    <p className="label-mono">{t('priceRange')}</p>
-                    <p className="mt-1 font-semibold text-fg">{t('priceOnRequest')}</p>
-                  </>
-                )}
-                {c.price.disclaimer && (
-                  <p className="mt-2 text-xs text-muted">{c.price.disclaimer}</p>
-                )}
-              </div>
+              {/* YÖNETMELİK: yurt içi (tr) sayfada fiyat gösterilmez; yalnızca paket kapsamı. */}
+              <h2 className="font-serif text-lg font-bold">
+                {features(locale).prices ? t('sectionPrice') : t('sectionPackage')}
+              </h2>
+              {features(locale).prices && (
+                <>
+                  <div className="mt-3">
+                    {priceRange ? (
+                      <>
+                        {/* Doğrulanmış EURO aralığı (TL/kur kullanılmaz). */}
+                        <p className="label-mono">{t('priceRange')}</p>
+                        <p className="mt-1 font-mono text-2xl font-bold text-primary">
+                          {priceRange}
+                        </p>
+                      </>
+                    ) : isReconstructive ? (
+                      <>
+                        <p className="label-mono">{t('priceByAssessment')}</p>
+                        <p className="mt-1 font-semibold text-fg">{t('priceOnRequest')}</p>
+                      </>
+                    ) : (
+                      <>
+                        <p className="label-mono">{t('priceRange')}</p>
+                        <p className="mt-1 font-semibold text-fg">{t('priceOnRequest')}</p>
+                      </>
+                    )}
+                    {c.price.disclaimer && (
+                      <p className="mt-2 text-xs text-muted">{c.price.disclaimer}</p>
+                    )}
+                  </div>
 
-              <hr className="my-5 border-border" />
+                  <hr className="my-5 border-border" />
+                </>
+              )}
 
-              <p className="label-mono mb-3">{t('packageIncludes')}</p>
+              <p className="label-mono mb-3 mt-3">{t('packageIncludes')}</p>
               <ul className="space-y-2">
                 {c.packageIncludes.map((item, i) => (
                   <li key={i} className="flex gap-2 text-sm text-muted">
@@ -405,11 +423,11 @@ export default async function TreatmentPage({
                       <Icon name="document" size={18} />
                       {tc('fileEvalCta')}
                     </a>
-                    <WhatsAppCta message={`${c.title} — ${tf('title')}`} className="w-full !bg-transparent !text-fg border border-border hover:!bg-surface-2" />
+                    <WhatsAppCta message={waMessage} className="w-full !bg-transparent !text-fg border border-border hover:!bg-surface-2" />
                   </>
                 ) : (
                   <>
-                    <WhatsAppCta message={`${c.title} — ${tf('title')}`} className="w-full" />
+                    <WhatsAppCta message={waMessage} className="w-full" />
                     <a href="#form" className="btn-outline w-full">{tc('formCta')}</a>
                   </>
                 )}
@@ -429,7 +447,7 @@ export default async function TreatmentPage({
             <h2 className="text-2xl font-bold md:text-3xl">{t('ctaTitle')}</h2>
             <p className="mt-3 text-muted">{t('ctaBody')}</p>
             <div className="mt-5">
-              <WhatsAppCta message={`${c.title} — ${tf('title')}`} />
+              <WhatsAppCta message={waMessage} />
             </div>
           </div>
           <div className="card p-6">

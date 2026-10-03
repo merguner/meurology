@@ -6,9 +6,9 @@ export const runtime = 'nodejs';
 /**
  * KARTLI ÖDEME — İSKELET (placeholder).
  * ------------------------------------------------------------------
- * Gerçek entegrasyon (iyzico / Stripe) buraya eklenecek. Şu an yalnızca
+ * Gerçek entegrasyon (iyzico / Stripe) bu dosyada yapılacak. Şu an yalnızca
  * yapılandırma bayrağına bakar; kapalıysa "not_configured" döner ve UI
- * "yakında" mesajı gösterir.
+ * "kullanılamıyor" mesajı gösterir.
  *
  * Entegrasyon adımları (TODO):
  *  1. Sağlayıcı SDK'sını ekleyin (ör. iyzipay / stripe).
@@ -18,7 +18,7 @@ export const runtime = 'nodejs';
  *  5. siteConfig.consultation.cardPaymentEnabled = true yapın.
  */
 export async function POST(request: Request) {
-  let body: { code?: string; amountTRY?: number; name?: string; country?: string } = {};
+  let body: { code?: string; amountEUR?: number; name?: string; country?: string } = {};
   try {
     body = await request.json();
   } catch {
@@ -26,13 +26,13 @@ export async function POST(request: Request) {
   }
 
   if (!siteConfig.consultation.cardPaymentEnabled) {
-    // Entegrasyon henüz aktif değil — UI "yakında" mesajına düşer.
+    // Entegrasyon henüz aktif değil — UI "kullanılamıyor" mesajına düşer.
     return NextResponse.json({ ok: false, error: 'not_configured' });
   }
 
   // ---- GERÇEK ENTEGRASYON BURAYA ----
   // const provider = new Iyzipay({ apiKey: process.env.IYZICO_API_KEY, ... });
-  // const session = await provider.checkoutForm.create({ price: body.amountTRY, ... });
+  // const session = await provider.checkoutForm.create({ price: body.amountEUR, ... });
   // return NextResponse.json({ ok: true, checkoutUrl: session.paymentPageUrl });
 
   // Bayrak açık ama kod henüz yazılmadıysa güvenli varsayılan:

@@ -6,16 +6,17 @@ import { assertTreatmentsValid } from './validate';
  * TEDAVİ İÇERİKLERİ
  * ------------------------------------------------------------------
  * - Metinler genel/eğitici bilgilendirme amaçlıdır; tıbbi tavsiye değildir.
- * - Fiyatlar, vaka sayıları ve videolar PLACEHOLDER'dır'a i18n.<locale> ekleyin.
+ * - Fiyat (priceRangeEUR) ve video (videoEmbedUrl) alanları doğrulanmış veri
+ *   gelene kadar BOŞ bırakılır; boşken ilgili bölüm hiç render edilmez.
+ * - Vaka sayıları burada tutulmaz; tek kaynak content/caseStats.ts.
+ * - Yeni dil eklerken ilgili tedavinin i18n.<locale> alanını doldurun.
  */
 
 export const treatments: Treatment[] = [
   {
     slug: 'robotik-prostatektomi',
-    priceRangeTRY: { from: 200000, to: 320000 }, // TODO: gerçek fiyatla güncelleyin (tahmini)
+    // TODO-DOGRULA: robotik prostatektomi EUR fiyat aralığı girilecek (priceRangeEUR).
     icon: 'robot',
-    videoPlaceholderNote:
-      'PLACEHOLDER: Hasta deneyimi video embed URL’i (YouTube/Vimeo) buraya eklenecek.',
     i18n: {
       tr: {
         title: 'Robotik / Laparoskopik Radikal Prostatektomi',
@@ -355,10 +356,8 @@ export const treatments: Treatment[] = [
   },
   {
     slug: 'bobrek-tasi',
-    priceRangeTRY: { from: 60000, to: 140000 }, // TODO: gerçek fiyatla güncelleyin (tahmini)
+    // TODO-DOGRULA: böbrek taşı EUR fiyat aralığı girilecek (priceRangeEUR).
     icon: 'stone',
-    videoPlaceholderNote:
-      'PLACEHOLDER: Böbrek taşı hasta deneyimi video embed URL’i buraya eklenecek.',
     i18n: {
       tr: {
         title: 'Böbrek Taşı Tedavisi (RIRS, PCNL, ESWL)',
@@ -671,9 +670,8 @@ export const treatments: Treatment[] = [
   },
   {
     slug: 'bph-prostat-buyumesi',
-    priceRangeTRY: { from: 90000, to: 190000 }, // TODO: gerçek fiyatla güncelleyin (tahmini)
+    // TODO-DOGRULA: BPH EUR fiyat aralığı girilecek (priceRangeEUR).
     icon: 'prostate',
-    videoPlaceholderNote: 'PLACEHOLDER: BPH hasta deneyimi video embed URL’i buraya eklenecek.',
     i18n: {
       tr: {
         title: 'BPH / İyi Huylu Prostat Büyümesi (HoLEP, Rezūm, TURP)',
@@ -988,7 +986,6 @@ export const treatments: Treatment[] = [
     slug: 'androloji',
     icon: 'andrology',
     offersConsultation: true, // mahremiyet öncelikli hastalar için ücretli özel görüşme
-    videoPlaceholderNote: 'PLACEHOLDER: Androloji hasta deneyimi video embed URL’i buraya eklenecek.',
     i18n: {
       tr: {
         title: 'Androloji (Penil Protez, Varikosel, Erektil Disfonksiyon)',
@@ -1252,7 +1249,6 @@ export const treatments: Treatment[] = [
   {
     slug: 'uroonkoloji',
     icon: 'oncology',
-    videoPlaceholderNote: 'PLACEHOLDER: Üroonkoloji hasta deneyimi video embed URL’i buraya eklenecek.',
     i18n: {
       tr: {
         title: 'Üroonkoloji (Mesane, Böbrek, Testis Tümörü Cerrahisi)',
@@ -1516,7 +1512,6 @@ export const treatments: Treatment[] = [
   {
     slug: 'kadin-urolojisi',
     icon: 'female',
-    videoPlaceholderNote: 'PLACEHOLDER: Kadın ürolojisi hasta deneyimi video embed URL’i buraya eklenecek.',
     i18n: {
       tr: {
         title: 'Kadın Ürolojisi (İnkontinans, Pelvik Taban Cerrahisi)',
@@ -1776,7 +1771,6 @@ export const treatments: Treatment[] = [
     slug: 'uretroplasti',
     icon: 'urethra',
     category: 'reconstructive',
-    videoPlaceholderNote: 'PLACEHOLDER: Üretroplasti hasta deneyimi video embed URL’i buraya eklenecek.',
     i18n: {
       tr: {
         title: 'Üretroplasti (Üretral Darlık Cerrahisi)',
@@ -2064,7 +2058,6 @@ export const treatments: Treatment[] = [
     slug: 'piyeloplasti',
     icon: 'kidney',
     category: 'reconstructive',
-    videoPlaceholderNote: 'PLACEHOLDER: Piyeloplasti hasta deneyimi video embed URL’i buraya eklenecek.',
     i18n: {
       tr: {
         title: 'Piyeloplasti (UPJ Darlığı Cerrahisi)',
@@ -2412,7 +2405,6 @@ export const treatments: Treatment[] = [
     slug: 'fistul-onarimi',
     icon: 'repair',
     category: 'reconstructive',
-    videoPlaceholderNote: 'PLACEHOLDER: Fistül onarımı hasta deneyimi video embed URL’i buraya eklenecek.',
     i18n: {
       tr: {
         title: 'Vezikovaginal ve Üreterovaginal Fistül Onarımı',
@@ -2700,7 +2692,6 @@ export const treatments: Treatment[] = [
     slug: 'ureter-rekonstruksiyonu',
     icon: 'graft',
     category: 'reconstructive',
-    videoPlaceholderNote: 'PLACEHOLDER: Üreter rekonstrüksiyonu hasta deneyimi video embed URL’i buraya eklenecek.',
     i18n: {
       tr: {
         title: 'Üreter Rekonstrüksiyonu (Uzun Segment Darlık/Hasar)',

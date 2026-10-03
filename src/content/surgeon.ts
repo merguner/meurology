@@ -4,7 +4,7 @@ import type { Locale } from '@/i18n/routing';
  * CERRAH PROFİLİ — gerçek CV verisiyle (unvan, akademik kariyer, eğitim,
  * kurslar/sertifikalar, ödül ve seçilmiş yayınlar) dolduruldu.
  *
- * HÂLÂ PLACEHOLDER (gerçek veri gelmedi, uydurma YAPILMADI):
+ * TODO-DOGRULA (doğrulanmış veri gelmedi, uydurma YAPILMADI):
  *  - diplomaRegistryNo: Sağlık Bakanlığı diploma tescil no (CV'de yok)
  *  - photo: cerrah fotoğrafı (henüz yok)
  *  - languages: ['tr','en'] — DOĞRULANMAMIŞ VARSAYIM (CV'de açık dil listesi yok;
@@ -35,9 +35,8 @@ export interface SurgeonProfile {
   photo?: string; // /public içine eklenecek görsel yolu
   languages: string[]; // konuştuğu diller (kod veya ad)
   // Doğrulanabilir güven sinyalleri
-  diplomaRegistryNo: string; // Diploma tescil no (PLACEHOLDER)
+  diplomaRegistryNo: string; // Diploma / uzmanlık belge tescil no
   societies: { name: string; note: string }[]; // EAU, AUA vb.
-  videoPlaceholderNote: string;
   i18n: Partial<
     Record<
       Locale,
@@ -123,24 +122,23 @@ export const surgeon: SurgeonProfile = {
   // Dil-nötr ad (JSON-LD Person.name için); görüntüde dile göre fullName kullanılır.
   name: 'Müslüm Ergün',
   photo: '/dr-muslum-ergun.jpg', // Doç. Dr. Müslüm Ergün — cerrah portresi
-  // PLACEHOLDER (doğrulanmamış varsayım): CV'de açık dil listesi yok — değiştirmeyin.
+  // Doğrulandı (Bölüm 0): Türkçe, İngilizce.
   languages: ['tr', 'en'],
-  diplomaRegistryNo: 'PLACEHOLDER: 000000', // Sağlık Bakanlığı diploma tescil no (CV'de yok)
+  diplomaRegistryNo: '121270', // Diploma / uzmanlık belge tescil no
   // Dernek üyelikleri kaldırıldı (doğrulanmamıştı). Doğrulanmış üyelik(ler)
   // eklenecekse buraya { name, note } olarak girin; cerrah sayfasında tekrar gösterilir.
   societies: [],
-  videoPlaceholderNote: 'PLACEHOLDER: Cerrah tanıtım videosu embed URL’i buraya eklenecek.',
   i18n: {
     tr: {
       fullName: 'Doç. Dr. Müslüm Ergün',
       title: 'Üroloji Uzmanı',
-      role: 'Üroloji Anabilim Dalı Başkanı — İstanbul Atlas Üniversitesi Tıp Fakültesi',
+      role: 'Üroloji Kliniği — Altınbaş Üniversitesi',
       bio: [
-        'Doç. Dr. Müslüm Ergün, 18 yılı aşkın cerrahi deneyime sahip bir üroloji uzmanıdır. Robotik ve laparoskopik cerrahi, endoüroloji ve taş cerrahisi, androloji, üroonkoloji ile fonksiyonel ve rekonstrüktif üroloji alanlarında toplam 5.230’u aşkın cerrahi işlem gerçekleştirmiştir. Hâlen İstanbul Atlas Üniversitesi Tıp Fakültesi’nde Üroloji Anabilim Dalı Başkanı olarak görev yapmakta, ameliyatlarını İstanbul’daki Medical Park Bahçelievler’de gerçekleştirmektedir.',
+        'Doç. Dr. Müslüm Ergün bir üroloji uzmanıdır. Robotik ve laparoskopik cerrahi, endoüroloji ve taş cerrahisi, androloji, üroonkoloji ile fonksiyonel ve rekonstrüktif üroloji alanlarında çalışmaktadır. Hâlen Altınbaş Üniversitesi Üroloji Kliniği’nde görev yapmakta, ameliyatlarını İstanbul’daki Medical Park Bahçelievler ve LİV Hospital Topkapı’da gerçekleştirmektedir.',
         'Uluslararası hastalara şeffaf bir süreç, kanıta dayalı bir yaklaşım ve kişiye özel tedavi planları sunar. Özellikle kompleks ve redo (yeniden onarım) vakalarında deneyimlidir.'
       ],
       education: [
-        { year: '2000–2004', item: 'Tıp Fakültesi — Uludağ Üniversitesi' },
+        { year: '2004', item: 'Tıp Fakültesi mezuniyeti — Uludağ Üniversitesi' },
         {
           year: '2009–2014',
           item: 'Üroloji Uzmanlık Eğitimi — Antalya Eğitim ve Araştırma Hastanesi',
@@ -148,7 +146,8 @@ export const surgeon: SurgeonProfile = {
         },
         { year: '2019', item: 'Doktor Öğretim Üyesi — İstanbul Atlas Üniversitesi' },
         { year: '2025', item: 'Üroloji Anabilim Dalı Başkanı — İstanbul Atlas Üniversitesi Tıp Fakültesi' },
-        { year: '2026', item: 'Altınbaş Üniversitesi, Medical Park Hastanesi' }
+        { year: 'Ocak 2026', item: 'Doçentlik unvanı' },
+        { year: '2026', item: 'Üroloji Kliniği — Altınbaş Üniversitesi' }
       ],
       courses: [
         { year: '2024', item: 'Uygulamalı Sakral Nöromodülasyon Kursu — 33. Ulusal Üroloji Kongresi, Antalya' },
@@ -161,13 +160,13 @@ export const surgeon: SurgeonProfile = {
     en: {
       fullName: 'Assoc. Prof. Dr. Müslüm Ergün',
       title: 'Urologist',
-      role: 'Head of the Department of Urology — İstanbul Atlas Üniversitesi',
+      role: 'Department of Urology — Altınbaş Üniversitesi',
       bio: [
-        'Assoc. Prof. Dr. Müslüm Ergün is a urology specialist with more than 18 years of surgical experience. He has performed over 5,230 surgical procedures across robotic and laparoscopic surgery, endourology and stone surgery, andrology, uro-oncology, and functional and reconstructive urology. He currently serves as Head of the Department of Urology at İstanbul Atlas Üniversitesi and operates at Medical Park Bahçelievler in Istanbul.',
+        'Assoc. Prof. Dr. Müslüm Ergün is a urology specialist. His practice covers robotic and laparoscopic surgery, endourology and stone surgery, andrology, uro-oncology, and functional and reconstructive urology. He currently works at the Department of Urology, Altınbaş Üniversitesi, and operates at Medical Park Bahçelievler and LİV Hospital Topkapı in Istanbul.',
         'He offers international patients a transparent process, an evidence-based approach and individualized treatment plans, with particular experience in complex and redo (revision) cases.'
       ],
       education: [
-        { year: '2000–2004', item: 'Medical School — Uludağ Üniversitesi' },
+        { year: '2004', item: 'Medical School graduation — Uludağ Üniversitesi' },
         {
           year: '2009–2014',
           item: 'Urology Residency — Antalya Eğitim ve Araştırma Hastanesi',
@@ -175,7 +174,8 @@ export const surgeon: SurgeonProfile = {
         },
         { year: '2019', item: 'Assistant Professor — İstanbul Atlas Üniversitesi' },
         { year: '2025', item: 'Head of the Department of Urology — İstanbul Atlas Üniversitesi' },
-        { year: '2026', item: 'Altınbaş Üniversitesi, Medical Park Hastanesi' }
+        { year: 'January 2026', item: 'Associate Professorship' },
+        { year: '2026', item: 'Department of Urology — Altınbaş Üniversitesi' }
       ],
       courses: [
         { year: '2024', item: 'Hands-on Sacral Neuromodulation Course — 33rd National Urology Congress, Antalya' },
@@ -188,13 +188,13 @@ export const surgeon: SurgeonProfile = {
     ar: {
       fullName: 'الأستاذ المشارك د. مسلم إرغن',
       title: 'أخصائي المسالك البولية',
-      role: 'رئيس قسم المسالك البولية — İstanbul Atlas Üniversitesi',
+      role: 'قسم المسالك البولية — Altınbaş Üniversitesi',
       bio: [
-        'الأستاذ المشارك د. مسلم إرغن اختصاصي في المسالك البولية بخبرة جراحية تتجاوز 18 عامًا. أجرى أكثر من 5,230 عملية جراحية في مجالات الجراحة الروبوتية وبالمنظار، وجراحة المناظير الداخلية والحصوات، وطب الذكورة، وأورام المسالك البولية، والمسالك البولية الوظيفية والترميمية. ويشغل حاليًا منصب رئيس قسم المسالك البولية في İstanbul Atlas Üniversitesi، ويُجري عملياته في Medical Park Bahçelievler بإسطنبول.',
+        'الأستاذ المشارك د. مسلم إرغن اختصاصي في المسالك البولية. يشمل مجال عمله الجراحة الروبوتية وبالمنظار، وجراحة المناظير الداخلية والحصوات، وطب الذكورة، وأورام المسالك البولية، والمسالك البولية الوظيفية والترميمية. يعمل حاليًا في قسم المسالك البولية بجامعة Altınbaş Üniversitesi، ويُجري عملياته في Medical Park Bahçelievler وLİV Hospital Topkapı بإسطنبول.',
         'يقدّم للمرضى الدوليين مسارًا شفافًا ونهجًا قائمًا على الأدلة وخططًا علاجية مخصّصة، مع خبرة خاصة في الحالات المعقدة وحالات إعادة الجراحة (redo).'
       ],
       education: [
-        { year: '2000–2004', item: 'كلية الطب — Uludağ Üniversitesi' },
+        { year: '2004', item: 'التخرج من كلية الطب — Uludağ Üniversitesi' },
         {
           year: '2009–2014',
           item: 'اختصاص المسالك البولية — Antalya Eğitim ve Araştırma Hastanesi',
@@ -202,7 +202,8 @@ export const surgeon: SurgeonProfile = {
         },
         { year: '2019', item: 'أستاذ مساعد — İstanbul Atlas Üniversitesi' },
         { year: '2025', item: 'رئيس قسم المسالك البولية — İstanbul Atlas Üniversitesi Tıp Fakültesi' },
-        { year: '2026', item: 'Altınbaş Üniversitesi, Medical Park Hastanesi' }
+        { year: 'يناير 2026', item: 'لقب أستاذ مشارك' },
+        { year: '2026', item: 'قسم المسالك البولية — Altınbaş Üniversitesi' }
       ],
       courses: [
         { year: '2024', item: 'دورة عملية في التحفيز العصبي العجزي — المؤتمر الوطني الثالث والثلاثون للمسالك البولية، أنطاليا' },
@@ -215,13 +216,13 @@ export const surgeon: SurgeonProfile = {
     de: {
       fullName: 'Doz. Dr. Müslüm Ergün',
       title: 'Facharzt für Urologie',
-      role: 'Leiter der Abteilung für Urologie — İstanbul Atlas Üniversitesi',
+      role: 'Urologische Klinik — Altınbaş Üniversitesi',
       bio: [
-        'Doz. Dr. Müslüm Ergün ist Facharzt für Urologie mit mehr als 18 Jahren chirurgischer Erfahrung. Er hat über 5.230 chirurgische Eingriffe in der robotischen und laparoskopischen Chirurgie, Endourologie und Steinchirurgie, Andrologie, Uroonkologie sowie funktionellen und rekonstruktiven Urologie durchgeführt. Derzeit ist er Leiter der Abteilung für Urologie an der İstanbul Atlas Üniversitesi und operiert im Medical Park Bahçelievler in Istanbul.',
+        'Doz. Dr. Müslüm Ergün ist Facharzt für Urologie. Seine Schwerpunkte sind robotische und laparoskopische Chirurgie, Endourologie und Steinchirurgie, Andrologie, Uroonkologie sowie funktionelle und rekonstruktive Urologie. Derzeit ist er in der Urologischen Klinik der Altınbaş Üniversitesi tätig und operiert im Medical Park Bahçelievler und im LİV Hospital Topkapı in Istanbul.',
         'Internationalen Patienten bietet er einen transparenten Ablauf, einen evidenzbasierten Ansatz und individuelle Behandlungspläne – mit besonderer Erfahrung bei komplexen und Redo-(Revisions-)Fällen.'
       ],
       education: [
-        { year: '2000–2004', item: 'Medizinische Fakultät — Uludağ Üniversitesi' },
+        { year: '2004', item: 'Abschluss der Medizinischen Fakultät — Uludağ Üniversitesi' },
         {
           year: '2009–2014',
           item: 'Facharztausbildung Urologie — Antalya Eğitim ve Araştırma Hastanesi',
@@ -229,7 +230,8 @@ export const surgeon: SurgeonProfile = {
         },
         { year: '2019', item: 'Assistenzprofessor — İstanbul Atlas Üniversitesi' },
         { year: '2025', item: 'Leiter der Abteilung für Urologie — İstanbul Atlas Üniversitesi' },
-        { year: '2026', item: 'Altınbaş Üniversitesi, Medical Park Hastanesi' }
+        { year: 'Januar 2026', item: 'Habilitation (Doçentlik)' },
+        { year: '2026', item: 'Urologische Klinik — Altınbaş Üniversitesi' }
       ],
       courses: [
         { year: '2024', item: 'Praktischer Kurs für sakrale Neuromodulation — 33. Nationaler Urologie-Kongress, Antalya' },
@@ -242,13 +244,13 @@ export const surgeon: SurgeonProfile = {
     ru: {
       fullName: 'Доцент, д-р Мюслюм Эргюн',
       title: 'Врач-уролог',
-      role: 'Заведующий кафедрой урологии — İstanbul Atlas Üniversitesi',
+      role: 'Клиника урологии — Altınbaş Üniversitesi',
       bio: [
-        'Доцент, д-р Мюслюм Эргюн — специалист-уролог с более чем 18-летним хирургическим опытом. Он выполнил свыше 5 230 хирургических вмешательств в области роботической и лапароскопической хирургии, эндоурологии и хирургии камней, андрологии, онкоурологии, а также функциональной и реконструктивной урологии. В настоящее время он заведует кафедрой урологии в İstanbul Atlas Üniversitesi и оперирует в Medical Park Bahçelievler в Стамбуле.',
+        'Доцент, д-р Мюслюм Эргюн — специалист-уролог. Сфера его работы включает роботическую и лапароскопическую хирургию, эндоурологию и хирургию камней, андрологию, онкоурологию, а также функциональную и реконструктивную урологию. В настоящее время он работает в клинике урологии Altınbaş Üniversitesi и оперирует в Medical Park Bahçelievler и LİV Hospital Topkapı в Стамбуле.',
         'Иностранным пациентам он предлагает прозрачный процесс, доказательный подход и индивидуальные планы лечения, обладая особым опытом в сложных и повторных (redo) случаях.'
       ],
       education: [
-        { year: '2000–2004', item: 'Медицинский факультет — Uludağ Üniversitesi' },
+        { year: '2004', item: 'Окончание медицинского факультета — Uludağ Üniversitesi' },
         {
           year: '2009–2014',
           item: 'Ординатура по урологии — Antalya Eğitim ve Araştırma Hastanesi',
@@ -256,7 +258,8 @@ export const surgeon: SurgeonProfile = {
         },
         { year: '2019', item: 'Ассистент-профессор — İstanbul Atlas Üniversitesi' },
         { year: '2025', item: 'Заведующий кафедрой урологии — İstanbul Atlas Üniversitesi' },
-        { year: '2026', item: 'Altınbaş Üniversitesi, Medical Park Hastanesi' }
+        { year: 'Январь 2026', item: 'Звание доцента' },
+        { year: '2026', item: 'Клиника урологии — Altınbaş Üniversitesi' }
       ],
       courses: [
         { year: '2024', item: 'Практический курс по сакральной нейромодуляции — 33-й Национальный урологический конгресс, Анталья' },

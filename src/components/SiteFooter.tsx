@@ -1,7 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { navItems } from '@/config/nav';
+import { navItemsFor } from '@/config/nav';
 import { siteConfig } from '@/config/site';
+import { contactConfig } from '@/config/contact';
 import { SocialLinks } from './SocialLinks';
 import { Icon } from './Icon';
 import { getLocale } from 'next-intl/server';
@@ -12,7 +13,9 @@ export async function SiteFooter() {
   const t = await getTranslations('Footer');
   const tn = await getTranslations('Nav');
   const tc = await getTranslations('Contact');
-  const consult = resolveConsultation((await getLocale()) as Locale);
+  const locale = (await getLocale()) as Locale;
+  const consult = resolveConsultation(locale);
+  const navItems = navItemsFor(locale);
   const year = new Date().getFullYear();
 
   return (
@@ -29,12 +32,30 @@ export async function SiteFooter() {
           <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
             {t('tagline')}
           </p>
-          {!siteConfig.ushasLicenseNo.includes('XXXX') && (
-            <p className="mt-4 font-mono text-xs text-muted">
-              {t('ushasLabel')}:{' '}
-              <span className="text-fg">{siteConfig.ushasLicenseNo}</span>
-            </p>
-          )}
+          {/* KİMLİK VE YETKİ BİLGİLERİ.
+              Yetki belgesini T.C. Sağlık Bakanlığı verir (USHAŞ değil); belge sahibi
+              hastanedir. Numara/VERBİS boşken ilgili satır render EDİLMEZ. */}
+          <dl className="mt-4 space-y-1 text-xs text-muted">
+            <div className="flex flex-wrap gap-x-1.5">
+              <dt>{t('licenseLabel')}:</dt>
+              <dd className="text-fg">
+                {contactConfig.healthTourism.licenseHolder}
+                {contactConfig.healthTourism.licenseNo
+                  ? ` · ${contactConfig.healthTourism.licenseNo}`
+                  : ''}
+              </dd>
+            </div>
+            <div className="flex flex-wrap gap-x-1.5">
+              <dt>{t('diplomaLabel')}:</dt>
+              <dd className="font-mono text-fg">{contactConfig.diplomaRegistryNo}</dd>
+            </div>
+            {contactConfig.verbisNo && (
+              <div className="flex flex-wrap gap-x-1.5">
+                <dt>{t('verbisLabel')}:</dt>
+                <dd className="font-mono text-fg">{contactConfig.verbisNo}</dd>
+              </div>
+            )}
+          </dl>
 
           {/* İletişim: adres (Google Maps'e tıklanabilir) + telefon + e-posta */}
           <ul className="mt-5 space-y-2.5 text-sm">

@@ -44,32 +44,38 @@ export const accreditations: Accreditation[] = [
     }
   },
   {
-    id: 'ushas',
+    /**
+     * DÜZELTİLDİ: Yetki belgesini T.C. SAĞLIK BAKANLIĞI verir.
+     * USHAŞ (Uluslararası Sağlık Hizmetleri A.Ş.) bir tanıtım/koordinasyon
+     * şirketidir ve yetki belgesi DÜZENLEMEZ. Belge sahibi de hekim değil
+     * HASTANEDİR (config/contact.ts → healthTourism).
+     */
+    id: 'health-tourism-license',
     i18n: {
       tr: {
-        name: 'USHAŞ Yetkisi',
+        name: 'Sağlık Turizmi Yetki Belgesi',
         explainer:
-          'T.C. Sağlık Bakanlığı bağlı kuruluşu USHAŞ tarafından yetkilendirilmiş uluslararası sağlık turizmi sağlayıcısı.'
+          'Ameliyatların yapıldığı hastane, T.C. Sağlık Bakanlığı Uluslararası Sağlık Turizmi Yetki Belgesi sahibidir.'
       },
       en: {
-        name: 'USHAŞ Authorization',
+        name: 'Health Tourism Authorisation',
         explainer:
-          'Authorized international health tourism provider under USHAŞ, affiliated with the Turkish Ministry of Health.'
+          'The hospital where procedures are performed holds the International Health Tourism Authorisation Certificate issued by the Republic of Türkiye Ministry of Health.'
       },
       ar: {
-        name: 'ترخيص USHAŞ',
+        name: 'تصريح السياحة الصحية',
         explainer:
-          'مزوّد معتمد للسياحة العلاجية الدولية من قِبل USHAŞ التابعة لوزارة الصحة التركية.'
+          'المستشفى الذي تُجرى فيه العمليات حاصل على شهادة تصريح السياحة الصحية الدولية الصادرة عن وزارة الصحة التركية.'
       },
       de: {
-        name: 'USHAŞ-Genehmigung',
+        name: 'Zulassung Gesundheitstourismus',
         explainer:
-          'Autorisierter Anbieter für internationalen Gesundheitstourismus unter USHAŞ, angegliedert an das türkische Gesundheitsministerium.'
+          'Das Krankenhaus, in dem die Eingriffe durchgeführt werden, besitzt die vom türkischen Gesundheitsministerium ausgestellte Zulassung für internationalen Gesundheitstourismus.'
       },
       ru: {
-        name: 'Разрешение USHAŞ',
+        name: 'Разрешение на медицинский туризм',
         explainer:
-          'Аккредитованный поставщик международного медицинского туризма при USHAŞ, подведомственной Министерству здравоохранения Турции.'
+          'Больница, где проводятся операции, имеет свидетельство о праве на международный медицинский туризм, выданное Министерством здравоохранения Турции.'
       }
     }
   },
@@ -97,99 +103,87 @@ export const accreditations: Accreditation[] = [
         explainer: 'Сертификация системы менеджмента качества — стандартизированные и прослеживаемые процессы обслуживания.'
       }
     }
-  },
-  {
-    id: 'eau',
-    i18n: {
-      tr: {
-        name: 'EAU Üyeliği',
-        explainer: 'Cerrahımız Avrupa Üroloji Derneği üyesidir; güncel kılavuzları takip eder.'
-      },
-      en: {
-        name: 'EAU Membership',
-        explainer: 'Our surgeon is a member of the European Association of Urology, following current guidelines.'
-      },
-      ar: {
-        name: 'عضوية EAU',
-        explainer: 'جرّاحنا عضو في الجمعية الأوروبية للمسالك البولية ويتّبع أحدث الإرشادات السريرية.'
-      },
-      de: {
-        name: 'EAU-Mitgliedschaft',
-        explainer: 'Unser Chirurg ist Mitglied der Europäischen Gesellschaft für Urologie und folgt den aktuellen Leitlinien.'
-      },
-      ru: {
-        name: 'Членство в EAU',
-        explainer: 'Наш хирург — член Европейской ассоциации урологии и следует актуальным клиническим рекомендациям.'
-      }
-    }
   }
+  // KALDIRILDI: "EAU Üyeliği" rozeti.
+  // Gerekçe: Bölüm 0 → "Dernek üyelikleri: yok". Doğrulanamayan bir üyelik beyanı
+  // yönetmelik açısından yanıltıcı tanıtım sayılır. Üyelik belgelenirse hem buraya
+  // hem content/surgeon.ts → societies alanına birlikte eklenmelidir.
 ];
 
 /**
- * HASTANE / TEKNOLOJİ — PLACEHOLDER.
+ * HASTANE VE TEKNOLOJİ (Bölüm 0'dan doğrulanmış veri).
+ * Ameliyatlar iki hastanede yapılıyor. Cihaz adları özel isimdir, çevrilmez.
+ * TODO-DOGRULA: JCI/ISO akreditasyon doğrulama linkleri (config/contact.ts).
  */
 export const hospital = {
-  robotSystem: 'PLACEHOLDER: Robotik cerrahi sistemi (ör. da Vinci Xi)',
-  operatingRooms: 'PLACEHOLDER: Ameliyathane sayısı ve donanım bilgisi',
+  /** Robotik cerrahi platformu — Bölüm 0: "da vinci". Model (Xi/X/SP) bildirilmedi. */
+  robotSystem: 'da Vinci',
+  /** HoLEP/ThuLEP lazer platformu — Bölüm 0: "quanta". */
+  laserSystem: 'Quanta',
   i18n: {
     tr: {
-      name: 'Medical Park Bahçelievler',
+      name: 'Medical Park Bahçelievler · LİV Hospital Topkapı',
       intro: [
-        'ME Urology Clinic ameliyatları, İstanbul Bahçelievler’de yer alan Medical Park Bahçelievler Hastanesi’nde gerçekleştirilir.',
-        'Tam teşekküllü özel bir hastane olarak modern cerrahi altyapı, yoğun bakım ve uluslararası hasta hizmetleri sunar.'
+        'ME Urology Clinic ameliyatları İstanbul’da Medical Park Bahçelievler Hastanesi ve LİV Hospital Topkapı’da gerçekleştirilir.',
+        'Her iki merkez de tam teşekküllü özel hastanedir; modern cerrahi altyapı, yoğun bakım ve uluslararası hasta hizmetleri sunar.'
       ],
       features: [
-        'PLACEHOLDER: Robotik cerrahi platformu',
-        'PLACEHOLDER: Hibrit ameliyathaneler',
-        'PLACEHOLDER: Uluslararası hasta katı ve tercüman hizmeti'
+        'da Vinci robotik cerrahi sistemi',
+        'Quanta lazer platformu (HoLEP / ThuLEP)',
+        'Yoğun bakım ve tam teşekküllü ameliyathane altyapısı',
+        'Uluslararası hasta birimi ve tercüman hizmeti'
       ]
     },
     en: {
-      name: 'Medical Park Bahçelievler',
+      name: 'Medical Park Bahçelievler · LİV Hospital Topkapı',
       intro: [
-        'ME Urology Clinic procedures are performed at Medical Park Bahçelievler Hospital in Bahçelievler, Istanbul.',
-        'As a full-service private hospital, it offers modern surgical infrastructure, intensive care and international patient services.'
+        'ME Urology Clinic procedures are performed at Medical Park Bahçelievler Hospital and LİV Hospital Topkapı in Istanbul.',
+        'Both are full-service private hospitals offering modern surgical infrastructure, intensive care and international patient services.'
       ],
       features: [
-        'PLACEHOLDER: Robotic surgery platform',
-        'PLACEHOLDER: Hybrid operating rooms',
-        'PLACEHOLDER: International patient floor and interpreter service'
+        'da Vinci robotic surgery system',
+        'Quanta laser platform (HoLEP / ThuLEP)',
+        'Intensive care and full operating-theatre infrastructure',
+        'International patient unit and interpreter service'
       ]
     },
     ar: {
-      name: 'Medical Park Bahçelievler',
+      name: 'Medical Park Bahçelievler · LİV Hospital Topkapı',
       intro: [
-        'تُجرى عمليات ME Urology Clinic في مستشفى Medical Park Bahçelievler بحي Bahçelievler في إسطنبول.',
-        'وهو مستشفى خاص متكامل الخدمات يوفّر بنية جراحية حديثة وعناية مركزة وخدمات للمرضى الدوليين.'
+        'تُجرى عمليات ME Urology Clinic في مستشفى Medical Park Bahçelievler ومستشفى LİV Hospital Topkapı في إسطنبول.',
+        'وكلاهما مستشفى خاص متكامل الخدمات يوفّر بنية جراحية حديثة وعناية مركزة وخدمات للمرضى الدوليين.'
       ],
       features: [
-        'PLACEHOLDER: منصّة الجراحة الروبوتية',
-        'PLACEHOLDER: غرف عمليات هجينة',
-        'PLACEHOLDER: جناح المرضى الدوليين وخدمة الترجمة'
+        'نظام الجراحة الروبوتية da Vinci',
+        'منصّة الليزر Quanta (HoLEP / ThuLEP)',
+        'عناية مركزة وبنية غرف عمليات متكاملة',
+        'وحدة المرضى الدوليين وخدمة الترجمة'
       ]
     },
     de: {
-      name: 'Medical Park Bahçelievler',
+      name: 'Medical Park Bahçelievler · LİV Hospital Topkapı',
       intro: [
-        'Die Eingriffe der ME Urology Clinic werden im Medical Park Bahçelievler in Bahçelievler, Istanbul, durchgeführt.',
-        'Als Vollversorger-Privatkrankenhaus bietet es moderne chirurgische Infrastruktur, Intensivmedizin und Dienste für internationale Patienten.'
+        'Die Eingriffe der ME Urology Clinic werden im Medical Park Bahçelievler und im LİV Hospital Topkapı in Istanbul durchgeführt.',
+        'Beide sind Privatkrankenhäuser der Vollversorgung mit moderner chirurgischer Infrastruktur, Intensivmedizin und Diensten für internationale Patienten.'
       ],
       features: [
-        'PLACEHOLDER: Robotische Chirurgieplattform',
-        'PLACEHOLDER: Hybrid-Operationssäle',
-        'PLACEHOLDER: Station für internationale Patienten und Dolmetscherdienst'
+        'da Vinci Robotik-Chirurgiesystem',
+        'Quanta Laserplattform (HoLEP / ThuLEP)',
+        'Intensivmedizin und vollständige OP-Infrastruktur',
+        'Abteilung für internationale Patienten und Dolmetscherdienst'
       ]
     },
     ru: {
-      name: 'Medical Park Bahçelievler',
+      name: 'Medical Park Bahçelievler · LİV Hospital Topkapı',
       intro: [
-        'Операции ME Urology Clinic проводятся в больнице Medical Park Bahçelievler в районе Бахчелиэвлер, Стамбул.',
-        'Это частная больница полного цикла с современной хирургической инфраструктурой, интенсивной терапией и услугами для иностранных пациентов.'
+        'Операции ME Urology Clinic проводятся в больницах Medical Park Bahçelievler и LİV Hospital Topkapı в Стамбуле.',
+        'Обе — частные больницы полного цикла с современной хирургической инфраструктурой, интенсивной терапией и услугами для иностранных пациентов.'
       ],
       features: [
-        'PLACEHOLDER: Платформа роботической хирургии',
-        'PLACEHOLDER: Гибридные операционные',
-        'PLACEHOLDER: Отделение для иностранных пациентов и услуга переводчика'
+        'Роботическая хирургическая система da Vinci',
+        'Лазерная платформа Quanta (HoLEP / ThuLEP)',
+        'Интенсивная терапия и полностью оснащённые операционные',
+        'Отделение для иностранных пациентов и услуга переводчика'
       ]
     }
   } as Partial<Record<Locale, { name: string; intro: string[]; features: string[] }>>
