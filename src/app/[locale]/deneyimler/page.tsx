@@ -4,6 +4,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
 import { PageHero } from '@/components/PageHero';
 import { ExperiencesList } from '@/components/ExperiencesList';
+import { publishedTreatments } from '@/content/treatments';
+import { resolveContent } from '@/content/types';
 import { GoogleReviews } from '@/components/GoogleReviews';
 import { features } from '@/config/features';
 
@@ -32,6 +34,10 @@ export default async function ExperiencesPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  // Başlıklar SUNUCUDA çözülür; istemciye içerik dosyası gitmesin.
+  const treatmentTitles = Object.fromEntries(
+    publishedTreatments.map((tr) => [tr.slug, resolveContent(tr, locale).title])
+  );
 
   /**
    * YÖNETMELİK: Yurt içine yönelik (Türkçe) tanıtımda hasta yorumu/görseli yasak.
@@ -61,7 +67,7 @@ export default async function ExperiencesPage({
 
       {/* Seçili (onaylı) hasta deneyimleri — ülkeye göre filtreli */}
       <section className="container-content py-12">
-        <ExperiencesList />
+        <ExperiencesList treatmentTitles={treatmentTitles} />
       </section>
     </>
   );

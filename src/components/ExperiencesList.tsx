@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { patientStories, experienceCountries } from '@/content/experiences';
-import { getTreatment } from '@/content/treatments';
-import { resolveContent } from '@/content/types';
 import type { Locale } from '@/i18n/routing';
 import { Icon } from './Icon';
 
@@ -16,7 +14,17 @@ function countryName(code: string, locale: string): string {
   }
 }
 
-export function ExperiencesList() {
+/**
+ * PERFORMANS NOTU — treatments.ts'i BURADAN IMPORT ETMEYİN (bkz. PreAssessmentForm).
+ * İstemci bileşeni olduğu için import edilirse 6 dildeki tüm tedavi metni
+ * tarayıcıya gönderilir. Başlıklar sunucuda çözülüp prop olarak geçilir.
+ */
+export function ExperiencesList({
+  treatmentTitles = {}
+}: {
+  /** slug -> o dildeki başlık. Sunucuda hazırlanır. */
+  treatmentTitles?: Record<string, string>;
+}) {
   const t = useTranslations('Experiences');
   const locale = useLocale() as Locale;
   const [country, setCountry] = useState<string>('all');
@@ -48,8 +56,7 @@ export function ExperiencesList() {
       ) : (
         <ul className="grid gap-6 md:grid-cols-2">
           {filtered.map((s) => {
-            const treatment = s.treatmentSlug ? getTreatment(s.treatmentSlug) : undefined;
-            const treatmentTitle = treatment ? resolveContent(treatment, locale).title : null;
+            const treatmentTitle = s.treatmentSlug ? (treatmentTitles[s.treatmentSlug] ?? null) : null;
             const dateStr = new Intl.DateTimeFormat(locale, {
               year: 'numeric',
               month: 'long'

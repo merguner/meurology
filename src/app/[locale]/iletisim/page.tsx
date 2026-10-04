@@ -9,6 +9,9 @@ import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { Icon } from '@/components/Icon';
 import { InsuranceInfo } from '@/components/InsuranceInfo';
 import { MapEmbed } from '@/components/MapEmbed';
+// Başlıklar SUNUCUDA çözülür; istemciye 2 MB'lık içerik dosyası gitmesin.
+import { publishedTreatments } from '@/content/treatments';
+import { resolveContent } from '@/content/types';
 
 export async function generateMetadata({
   params
@@ -31,6 +34,10 @@ export default async function ContactPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const treatmentOptions = publishedTreatments.map((tr) => ({
+    slug: tr.slug,
+    title: resolveContent(tr, locale).title
+  }));
   const t = await getTranslations('Contact');
   const tf = await getTranslations('Form');
   const tc = await getTranslations('Common');
@@ -45,7 +52,7 @@ export default async function ContactPage({
           <div className="card p-6 md:p-8">
             <h2 className="font-serif text-xl font-bold">{tf('title')}</h2>
             <p className="mb-6 mt-1 text-sm text-muted">{tf('subtitle')}</p>
-            <PreAssessmentForm />
+            <PreAssessmentForm treatmentOptions={treatmentOptions} />
           </div>
         </div>
 

@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { publishedTreatments } from '@/content/treatments';
-import { resolveContent } from '@/content/types';
 import type { Locale } from '@/i18n/routing';
 import { Icon } from './Icon';
 import { TurnstileWidget } from './TurnstileWidget';
@@ -12,10 +10,27 @@ import { CountrySelect } from './CountrySelect';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
+/** Açılır listede gösterilecek en az veri: slug + o dildeki başlık. */
+export interface TreatmentOption {
+  slug: string;
+  title: string;
+}
+
+/**
+ * PERFORMANS NOTU — treatments.ts'i BURADAN IMPORT ETMEYİN.
+ *
+ * Bu bir istemci bileşenidir. `@/content/treatments` dosyası 6 dilde tüm
+ * tedavi metinlerini içerir (~2 MB kaynak). Buradan import edilirse paketleyici
+ * dosyanın TAMAMINI tarayıcıya gönderir; ölçümde tek bir 506 KB'lık JS yığını
+ * ve mobilde 3,3 sn LCP olarak görüldü. Oysa listenin ihtiyacı yalnızca
+ * slug + başlıktır. Bu yüzden seçenekler SUNUCUDA çözülüp prop olarak geçilir.
+ */
 export function PreAssessmentForm({
-  defaultTreatment
+  defaultTreatment,
+  treatmentOptions = []
 }: {
   defaultTreatment?: string;
+  treatmentOptions?: TreatmentOption[];
 }) {
   const t = useTranslations('Form');
   const tl = useTranslations('Legal');
@@ -136,9 +151,9 @@ export function PreAssessmentForm({
       <Field label={t('treatment')} htmlFor="treatment">
         <select id="treatment" name="treatment" defaultValue={defaultTreatment ?? ''} className="form-input">
           <option value="">{t('treatmentPlaceholder')}</option>
-          {publishedTreatments.map((tr) => (
-            <option key={tr.slug} value={tr.slug}>
-              {resolveContent(tr, locale).title}
+          {treatmentOptions.map((o) => (
+            <option key={o.slug} value={o.slug}>
+              {o.title}
             </option>
           ))}
         </select>

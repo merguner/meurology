@@ -44,12 +44,18 @@ export function LanguageSwitcher() {
 
   return (
     <div className="relative" ref={ref}>
+      {/*
+        Erişilebilir ad GÖRÜNEN METNİ İÇERMELİDİR (WCAG 2.5.3 "Label in Name").
+        Düğmede "TR" yazarken ada yalnızca "Dil" vermek, sesle kontrol kullanan
+        birinin ekranda gördüğü "TR"yi söyleyerek düğmeyi tetiklemesini engeller.
+        Bu yüzden görünen kod da ada dahil edilir: "Dil: TR (Türkçe)".
+      */}
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        aria-label={t('language')}
+        aria-label={`${t('language')}: ${locale.toUpperCase()} (${LOCALE_LABELS[locale]})`}
         className="inline-flex h-10 items-center gap-1.5 rounded-lg border border-border bg-surface px-3 text-sm font-medium text-fg transition-colors hover:bg-surface-2"
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">

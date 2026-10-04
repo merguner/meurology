@@ -62,6 +62,11 @@ export default async function TreatmentPage({
   if (!treatment || !canonical) notFound();
 
   const c = resolveContent(treatment, locale);
+  // Form açılır listesi: başlıklar SUNUCUDA çözülür (istemciye 2 MB içerik gitmesin).
+  const treatmentOptions = publishedTreatments.map((tr) => ({
+    slug: tr.slug,
+    title: resolveContent(tr, locale).title
+  }));
   const t = await getTranslations('Treatment');
   const tc = await getTranslations('Common');
   const tn = await getTranslations('Nav');
@@ -645,7 +650,7 @@ export default async function TreatmentPage({
           <div className="card p-6">
             <h3 className="mb-1 font-serif text-lg font-bold">{tf('title')}</h3>
             <p className="mb-5 text-sm text-muted">{tf('subtitle')}</p>
-            <PreAssessmentForm defaultTreatment={slug} />
+            <PreAssessmentForm defaultTreatment={slug} treatmentOptions={treatmentOptions} />
           </div>
         </div>
       </section>
