@@ -24482,53 +24482,136 @@ export const treatments: Treatment[] = [
       },
       fr: {
         title: 'Andrologie (prothèse pénienne, varicocèle, dysfonction érectile)',
-        summary: 'Santé sexuelle masculine et chirurgie de la reproduction : prothèse pénienne, varicocèle, dysfonction érectile et interventions esthétiques.',
-        metaTitle: 'Andrologie | Prothèse pénienne, varicocèle, chirurgie de la DE',
-        metaDescription: 'Chirurgie andrologique : prothèse pénienne, allongement et augmentation de circonférence du pénis, varicocèle et traitement de la dysfonction érectile ; déroulement, risques et fourchette de prix.',
+        summary:
+          'Santé sexuelle et reproductive masculine. La plupart des motifs de consultation arrivent tard parce qu\'ils restent tus — or certains sont le premier signe d\'une autre maladie, et pour d\'autres le temps est compté.',
+        metaTitle: 'Andrologie : quel symptôme conduit à quelle évaluation',
+        metaDescription:
+          'Dysfonction érectile, varicocèle, infertilité masculine, maladie de Lapeyronie et prothèse pénienne : l\'évaluation requise par chaque motif, la logique par paliers et la confidentialité.',
+        quickFacts: {
+          duration: 'Première évaluation 30 à 45 minutes',
+          anesthesia: 'Non nécessaire pour l\'évaluation',
+          hospitalStay: 'Selon le diagnostic et l\'intervention',
+          stayInTurkey: '3 à 7 jours selon l\'intervention prévue',
+          returnToWork: 'Selon l\'intervention',
+          flightClearance: 'Déterminée par l\'intervention'
+        },
         definition: [
-          'L’andrologie est la surspécialité urologique consacrée à la santé sexuelle et reproductive masculine. Elle propose des options chirurgicales en cas de dysfonction érectile résistante aux médicaments, d’infertilité liée à une varicocèle ou de troubles de la fonction sexuelle.',
-          'Les interventions comprennent la prothèse pénienne gonflable, la varicocélectomie microchirurgicale, l’allongement ou l’augmentation de circonférence du pénis et certaines chirurgies de la dysfonction érectile. L’intervention adaptée est déterminée après une évaluation détaillée.'
+          'L\'andrologie est la surspécialité urologique consacrée à la santé sexuelle et reproductive de l\'homme : troubles de l\'érection, difficulté à concevoir, troubles du sperme et de l\'éjaculation, courbure de la verge et affections testiculaires.',
+          'LE PROBLÈME CENTRAL DE CE DOMAINE EST LE RETARD. Beaucoup d\'hommes n\'en parlent à personne pendant des années. Ce retard a un coût : un trouble de l\'érection peut être le premier signe d\'une maladie cardiovasculaire ou d\'un diabète, et en matière de fertilité le temps est une variable qui n\'attend pas.',
+          'LE POINT LE PLUS IMPORTANT : UN TROUBLE DE L\'ÉRECTION N\'EST PAS SEULEMENT UN PROBLÈME SEXUEL. L\'érection dépend du bon fonctionnement de petits vaisseaux, plus fins que ceux qui irriguent le cœur ; un rétrécissement peut donc se manifester ici en premier. Un trouble apparu récemment et qui s\'aggrave doit conduire à évaluer le risque cardiovasculaire et le diabète. Une ordonnance ne remplace pas cette évaluation.',
+          'DEUXIÈME POINT : LES SITUATIONS BRUTALES ET DOULOUREUSES SONT DES URGENCES. Une douleur testiculaire intense et brutale, surtout chez l\'homme jeune, peut être une torsion du testicule et impose une prise en charge en quelques heures. Une érection douloureuse persistant plus de quatre heures (priapisme) est également une urgence ; attendre peut causer des lésions définitives. Ni l\'une ni l\'autre n\'attend un rendez-vous.',
+          'La prise en charge est ici presque toujours PAR PALIERS : d\'abord établir la cause et corriger ce qui peut l\'être, puis les médicaments, puis les options plus invasives. Sauter ces paliers conduit à prendre trop tôt des décisions irréversibles.'
+        ],
+        eligibility: {
+          suitable: [
+            'Hommes présentant un trouble de l\'érection et souhaitant en connaître la cause',
+            'Évaluation de l\'homme lorsqu\'un couple ne conçoit pas après un an de rapports non protégés',
+            'Hommes dont le spermogramme est anormal',
+            'Hommes constatant une courbure, une zone indurée ou une douleur de la verge (maladie de Lapeyronie)',
+            'Hommes présentant un trouble de l\'éjaculation',
+            'Hommes constatant une tuméfaction, une masse indurée ou une douleur testiculaire — à évaluer sans délai',
+            'Hommes non soulagés par les traitements médicaux et souhaitant discuter d\'une prothèse'
+          ],
+          notSuitable: [
+            'Hommes demandant une chirurgie sans aucune évaluation préalable : la cause est recherchée d\'abord',
+            'Hommes aux attentes irréalistes — point examiné en détail, en particulier pour les demandes d\'agrandissement',
+            'Hommes dont le diabète est mal équilibré : la pose de prothèse est reportée jusqu\'à amélioration',
+            'Hommes présentant une infection active : la chirurgie prothétique n\'est pas réalisée'
+          ]
+        },
+        technology: [
+          'Bilan hormonal (testostérone et hormones associées) et bilan métabolique',
+          'Échographie-doppler pénienne — recherche d\'une cause vasculaire',
+          'Spermogramme et, si nécessaire, contrôle',
+          'Échographie-doppler scrotale — varicocèle et évaluation testiculaire',
+          'Microscope opératoire — varicocélectomie microchirurgicale et micro-TESE',
+          'Prothèses péniennes gonflables et malléables',
+          'Évaluation objective de la courbure dans la maladie de Lapeyronie'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+          note: 'L\'andrologie fait partie des domaines d\'exercice du Pr associé Müslüm Ergün. La démarche est progressive : d\'abord la recherche de la cause, ensuite les traitements réversibles, et en dernier lieu les gestes irréversibles.'
         },
         timeline: [
-          { when: 'À distance', title: 'Pré-consultation confidentielle', body: 'Vos résultats hormonaux et vasculaires sont examinés en toute confidentialité.' },
-          { when: 'Jour 1', title: 'Arrivée et examen', body: 'Examen clinique, bilan nécessaire et planification de l’intervention.' },
-          { when: 'Jour 2', title: 'Intervention', body: 'L’intervention retenue ; le plus souvent avec une nuit d’hospitalisation.' },
-          { when: 'Jours 3–5', title: 'Contrôle', body: 'Pansement, informations et autorisation de retour ; apprentissage de l’utilisation en cas de prothèse.' }
+          { when: 'À distance', title: 'Premier contact confidentiel', body: 'Votre motif, vos traitements, vos antécédents et vos examens antérieurs sont examinés. Il vous est indiqué clairement à qui vous parlez et où vos données sont conservées.' },
+          { when: 'Jour 1', title: 'Évaluation', body: 'Examen clinique, bilans hormonal et métabolique, et si indiqué échographie-doppler ou spermogramme. L\'objectif est ici de trouver la cause, non d\'intervenir d\'emblée.' },
+          { when: 'Phase de décision', title: 'Discussion des options', body: 'À quel palier vous vous situez, quelles options sont réversibles et lesquelles ne le sont pas, attentes réalistes et risques. Cet échange n\'est pas précipité.' },
+          { when: 'Jour de l\'intervention', title: 'Le geste prévu', body: 'Varicocélectomie, micro-TESE, correction d\'une maladie de Lapeyronie ou pose de prothèse selon le plan. Une nuit suffit dans la plupart des cas.' },
+          { when: 'Avant le départ', title: 'Contrôle et apprentissage', body: 'Contrôle de la cicatrice, consultation et, le cas échéant, apprentissage du dispositif. Si une prothèse a été posée, son utilisation vous est enseignée ici en personne — et non plus tard par visioconférence.' }
         ],
         risks: [
-          'Infection (en particulier en chirurgie prothétique)',
+          'INFECTION : la complication la plus redoutée en chirurgie prothétique, car un dispositif infecté doit souvent être retiré. Un bon équilibre glycémique est déterminant pour réduire ce risque',
           'Œdème, ecchymoses et modification transitoire de la sensibilité',
-          'Possibilité de dysfonctionnement mécanique de la prothèse (à long terme)',
-          'Nécessité de garder des attentes réalistes'
+          'Panne mécanique de la prothèse à long terme imposant un changement',
+          'La sensation que la verge est plus courte qu\'avant l\'intervention — motif d\'insatisfaction le plus fréquemment rapporté',
+          'Hydrocèle et récidive après varicocélectomie',
+          'Correction incomplète de la courbure ou raccourcissement après chirurgie de Lapeyronie',
+          'IRRÉVERSIBILITÉ : après la pose d\'une prothèse, les érections naturelles ne reviennent pas. Cette décision ne doit pas être précipitée',
+          'Attentes irréalistes : ici, la première cause d\'insatisfaction n\'est pas un problème technique mais une attente jamais discutée'
         ],
         alternatives: [
-          'Traitement oral (inhibiteurs de la PDE5)',
-          'Injection intracaverneuse ou pompe à vide',
-          'Ondes de choc (dans des cas sélectionnés)',
-          'Adaptation du mode de vie et correction hormonale'
+          'Correction du mode de vie et des facteurs de risque — arrêt du tabac, perte de poids, équilibre du diabète et de la tension. Cela paraît banal mais c\'est fondamental lorsque la cause est vasculaire',
+          'Révision des traitements en cours — certains antihypertenseurs et psychotropes modifient la fonction sexuelle ; ne les arrêtez pas seul, parlez-en',
+          'Traitement d\'un déficit hormonal avéré — à noter : la testostérone peut freiner la production de spermatozoïdes et demande une discussion distincte en cas de désir d\'enfant',
+          'Médicaments par voie orale (inhibiteurs de la PDE5) — traitement de première intention',
+          'Injections intracaverneuses ou vacuum — lorsque les comprimés ne suffisent pas',
+          'Varicocélectomie — peut améliorer les paramètres spermatiques chez des patients bien sélectionnés',
+          'Micro-TESE — prélèvement de spermatozoïdes dans le testicule en l\'absence de spermatozoïdes dans l\'éjaculat',
+          'Prothèse pénienne — lorsque les autres options n\'ont pas aidé ; définitive et irréversible'
+        ],
+        comparison: {
+          title: 'Les paliers dans la dysfonction érectile : où chacun s\'arrête',
+          columns: ['Palier', 'Ce qu\'il fait', 'Réversible ?', 'Quand il s\'applique'],
+          rows: [
+            { label: 'Corriger les facteurs de risque', values: ['Agit sur la cause vasculaire', 'Oui', 'Premier pas pour tous'] },
+            { label: 'Comprimés', values: ['Soutiennent le mécanisme existant', 'Oui', 'Premier palier médicamenteux'] },
+            { label: 'Injections / vacuum', values: ['Produisent l\'érection de l\'extérieur', 'Oui', 'Quand les comprimés ne suffisent pas'] },
+            { label: 'Prothèse pénienne', values: ['Produit la rigidité par un dispositif', 'NON — les érections naturelles ne reviennent pas', 'Quand le reste n\'a pas aidé'] }
+          ],
+          note: 'Ces paliers ne doivent pas être sautés. La prothèse est une bonne solution, mais c\'est le dernier palier ; la proposer avant d\'avoir essayé les précédents revient à prendre trop tôt une décision irréversible. Observez si l\'on vous a d\'abord demandé ce que vous aviez déjà essayé.'
+        },
+        recovery: [
+          { period: 'Après l\'évaluation', body: 'Les résultats sont repris avec vous. Si un risque cardiovasculaire est mis en évidence, une orientation est proposée — cela peut importer davantage que le motif initial de votre consultation.' },
+          { period: 'Pendant le traitement médical', body: 'La bonne utilisation compte ; certains échecs apparents sont des erreurs d\'utilisation. L\'évaluation se fait après plusieurs essais, non après un seul.' },
+          { period: 'Première semaine postopératoire', body: 'Œdème et ecchymoses sont attendus. Les efforts sont évités. Fièvre, douleur croissante ou écoulement doivent être signalés sans délai.' },
+          { period: 'Cicatrisation après une prothèse', body: 'Le dispositif n\'est pas utilisé immédiatement ; la cicatrisation doit être acquise et le chirurgien fixe le moment. Un usage précoce peut causer des dégâts.' },
+          { period: 'Troisième mois après varicocélectomie', body: 'La spermatogenèse suit un cycle d\'environ trois mois ; un spermogramme de contrôle n\'a donc de sens qu\'à partir de là.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Varie selon la marque de la prothèse et l’intervention.'
+          disclaimer: 'Le montant dépend de l\'intervention prévue et, si une prothèse est utilisée, du modèle. Un devis écrit et détaillé est remis après l\'évaluation.'
         },
         packageIncludes: [
-          'Intervention et séjour hospitalier',
-          'Anesthésie et examens',
-          '(Le cas échéant) dispositif de prothèse',
-          'Transferts et hébergement',
+          'Consultation initiale confidentielle',
+          'Examen clinique, bilans hormonal et métabolique',
+          'Échographie-doppler et spermogramme si indiqués',
+          'Anesthésie et bloc opératoire',
+          'L\'intervention prévue',
+          'Le dispositif prothétique le cas échéant',
+          'Hospitalisation',
+          'Apprentissage du dispositif en présentiel en cas de prothèse',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
           'Interprète médical et coordination confidentielle',
-          'Contrôle et suivi en ligne'
+          'Suivi à distance après le retour'
         ],
         faqs: [
-          { q: 'Le parcours reste-t-il confidentiel ?', a: 'Oui ; toutes les consultations et la coordination sont menées selon le principe de confidentialité.' },
-          { q: 'Comment est la fonction sexuelle après une prothèse pénienne ?', a: 'La prothèse apporte une solution durable aux troubles de l’érection ne répondant pas aux médicaments ; une formation à son utilisation est dispensée.' },
-          { q: 'La chirurgie de la varicocèle corrige-t-elle l’infertilité ?', a: 'La varicocélectomie microchirurgicale peut améliorer les paramètres spermatiques chez des patients sélectionnés.' }
+          { q: 'J\'ai un trouble de l\'érection — puis-je simplement avoir une ordonnance ?', a: 'C\'est l\'erreur la plus fréquente. Un trouble récent et qui s\'aggrave peut être le premier signe d\'une maladie cardiovasculaire ou d\'un diabète, car les vaisseaux de la verge sont plus fins que ceux du cœur et peuvent se rétrécir en premier. L\'évaluation précède donc l\'ordonnance. Elle n\'est pas là pour vous retarder, mais pour éviter de passer à côté de plus important.' },
+          { q: 'Quand dois-je consulter en urgence ?', a: 'Devant une douleur testiculaire intense et brutale, surtout chez l\'homme jeune : il peut s\'agir d\'une torsion, à traiter en quelques heures. Une érection douloureuse de plus de quatre heures est également une urgence, et attendre peut laisser des séquelles. Une masse indurée indolore du testicule doit aussi être évaluée sans délai.' },
+          { q: 'La confidentialité est-elle assurée ?', a: 'Oui, et c\'est un droit, non une faveur. Vous pouvez demander qui accède à votre dossier, où il est conservé, à quel nom l\'hébergement est réservé et ce qui figure sur la facture. Si l\'on vous demande des photographies ou un témoignage, vous pouvez refuser sans que cela change votre prise en charge.' },
+          { q: 'Nous n\'arrivons pas à concevoir — qui doit être évalué en premier ?', a: 'Les deux partenaires. C\'est une question de couple, et arrêter les investigations dès qu\'on trouve quelque chose chez l\'homme est une erreur fréquente. L\'ovulation, l\'état des trompes et l\'âge de la femme pèsent directement sur le résultat ; sans cela, le bénéfice attendu d\'un traitement chez l\'homme ne peut être apprécié sérieusement.' },
+          { q: 'Mon spermogramme est anormal — est-ce définitif ?', a: 'Un seul examen ne suffit pas. Les résultats sont influencés par une maladie fébrile, un stress important, certains médicaments et les conditions de recueil. Il est habituellement répété après un intervalle. Ne décidez pas sur un seul résultat anormal.' },
+          { q: 'La chirurgie de la varicocèle garantit-elle une paternité ?', a: 'Non. Chez des patients bien sélectionnés elle peut améliorer les paramètres spermatiques, mais tous ne s\'améliorent pas, et toutes les améliorations n\'aboutissent pas à une grossesse. Méfiez-vous des promesses de résultat.' },
+          { q: 'La prothèse est-elle un dernier recours ?', a: 'Oui, et elle doit être traitée comme tel. Elle ne doit pas être proposée avant d\'avoir essayé les options réversibles : comprimés, injections, vacuum. Après une prothèse, les érections naturelles ne reviennent pas. Une proposition de prothèse sans qu\'on vous demande ce que vous avez essayé n\'est pas une évaluation.' },
+          { q: 'Que puis-je attendre d\'une chirurgie d\'agrandissement ?', a: 'Ici, la gestion des attentes compte plus que la technique. Les promesses trouvées en ligne sont souvent irréalistes. Chez certains hommes, l\'enjeu n\'est pas la mesure mais la perception qu\'ils en ont ; dans ce cas la chirurgie n\'apporte pas de satisfaction. Ce point est abordé franchement lors de l\'évaluation.' },
+          { q: 'Dois-je prendre de la testostérone ?', a: 'Pas sans déficit démontré. Et un point important : la testostérone peut freiner la production de spermatozoïdes. En cas de désir d\'enfant, ce traitement demande une discussion distincte, faute de quoi vous aggraveriez un autre problème en en traitant un.' },
+          { q: 'Ma partenaire ou ma famille connaîtront-elles les détails ?', a: 'Non. Vos informations médicales ne sont communiquées à personne sans votre accord, pas même à vos proches. Vous décidez qui est informé. Si vous venez accompagné, vous décidez aussi à quelles parties de la consultation l\'accompagnant assiste. Le dire d\'emblée est plus simple que de l\'expliquer dans un moment délicat.' },
+          { q: 'Quels documents envoyer à l\'avance ?', a: 'Vos spermogrammes, vos bilans hormonaux, votre glycémie et votre cholestérol, la liste complète de vos traitements, vos antécédents et les comptes rendus d\'interventions antérieures. Cela permet d\'évaluer à quel palier vous vous situez avant votre déplacement.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Sexual and Reproductive Health — Association européenne d\'urologie', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
         ]
       }
     }
@@ -25042,54 +25125,137 @@ export const treatments: Treatment[] = [
         ]
       },
       fr: {
-        title: 'Uro-oncologie (chirurgie des tumeurs de la vessie, du rein et du testicule)',
-        summary: 'Chirurgie mini-invasive et préservant les organes pour les cancers de l’appareil urinaire et des organes reproducteurs masculins.',
-        metaTitle: 'Uro-oncologie | Chirurgie des cancers de la vessie, du rein et du testicule',
-        metaDescription: 'Chirurgie uro-oncologique : techniques robotiques/laparoscopiques et préservant les organes pour les tumeurs de la vessie, du rein et du testicule ; déroulement, risques et fourchette de prix.',
+        title: 'Uro-oncologie (cancers de la prostate, de la vessie, du rein et du testicule)',
+        summary:
+          'Traitement chirurgical des cancers de l\'appareil urinaire et des organes génitaux masculins. Deux choses comptent avant tout : ne manquer aucun signe d\'alerte et ne pas décider dans la précipitation.',
+        metaTitle: 'Uro-oncologie : signes d\'alerte et choix du traitement',
+        metaDescription:
+          'Signes d\'alerte des cancers de la prostate, de la vessie, du rein et du testicule, pourquoi le sang dans les urines doit toujours être exploré, chirurgie d\'épargne d\'organe et prise de décision.',
+        quickFacts: {
+          duration: 'Première évaluation 30 à 45 minutes',
+          anesthesia: 'Non nécessaire pour l\'évaluation',
+          hospitalStay: 'Selon le diagnostic et l\'étendue de la chirurgie',
+          stayInTurkey: '7 à 14 jours selon l\'intervention',
+          returnToWork: 'Selon l\'intervention',
+          flightClearance: 'Selon le contrôle et la récupération'
+        },
         definition: [
-          'L’uro-oncologie traite chirurgicalement les cancers de l’appareil urinaire et de l’appareil reproducteur masculin : rein, vessie, prostate et testicule.',
-          'Lorsque cela est possible, les techniques préservant l’organe (par exemple la néphrectomie partielle) et les approches mini-invasives robotiques ou laparoscopiques sont privilégiées. Le traitement est planifié en réunion de concertation pluridisciplinaire.'
+          'L\'uro-oncologie couvre le diagnostic et le traitement chirurgical des cancers du rein, de la vessie, des voies urinaires, de la prostate et du testicule. Ces cancers ont en commun de donner peu de symptômes au début, et que les symptômes apparus sont facilement attribués à autre chose.',
+          'LA PHRASE LA PLUS IMPORTANTE DE CETTE PAGE : LE SANG DANS LES URINES DOIT ÊTRE EXPLORÉ, MÊME INDOLORE. Une hématurie indolore est le premier signe classique du cancer de la vessie. Qu\'elle survienne une fois puis disparaisse ne veut pas dire qu\'elle est résolue : son caractère intermittent est au contraire bien connu. Chez un fumeur ou un ancien fumeur, elle doit être explorée. S\'entendre dire « c\'est une infection urinaire » et recevoir un antibiotique est la première cause de retard diagnostique.',
+          'DEUXIÈME ALERTE : UNE MASSE TESTICULAIRE INDURÉE ET INDOLORE. Le cancer du testicule touche l\'homme jeune et est souvent remarqué tard précisément parce qu\'il ne fait pas mal. L\'absence de douleur n\'est pas rassurante : elle est typique. L\'évaluation doit être immédiate.',
+          'TROISIÈMEMENT : une part importante des tumeurs du rein est aujourd\'hui découverte fortuitement lors d\'une imagerie faite pour un autre motif. Cela semble une mauvaise nouvelle, c\'en est une bonne : les tumeurs découvertes tôt et petites relèvent souvent d\'une chirurgie d\'épargne d\'organe.',
+          'NE PRÉCIPITEZ PAS LA DÉCISION. Pour la plupart de ces cancers, quelques semaines de réflexion ne causent aucun préjudice médical. Si l\'on vous presse de décider immédiatement, cette pression peut être commerciale plutôt que médicale. Un second avis est votre droit et ne vous oblige pas à changer de lieu de traitement.'
+        ],
+        eligibility: {
+          suitable: [
+            'Toute personne présentant du sang dans les urines — même indolore et même une seule fois',
+            'Hommes constatant une masse indurée indolore ou une augmentation de volume d\'un testicule',
+            'Hommes avec un PSA élevé ou un toucher rectal suspect',
+            'Personnes chez qui une masse rénale a été découverte en imagerie',
+            'Patients traités pour une tumeur de vessie et nécessitant une surveillance',
+            'Patients souhaitant un second avis avant de décider',
+            'Personnes avec antécédent tabagique et troubles urinaires récents'
+          ],
+          notSuitable: [
+            'Patients voulant planifier une chirurgie avant que le diagnostic et le bilan d\'extension soient complets : la stadification correcte vient d\'abord',
+            'Patients attendant de la seule chirurgie une réponse à une maladie étendue : le traitement systémique prime alors',
+            'Patients dont l\'état général et les comorbidités contre-indiquent une chirurgie lourde, chez qui des options moins invasives sont envisagées',
+            'Certaines tumeurs très petites et peu évolutives, pour lesquelles la surveillance est plus adaptée que la chirurgie'
+          ]
+        },
+        technology: [
+          'Scanner et IRM avec injection pour le bilan d\'extension',
+          'IRM prostatique multiparamétrique et biopsie par fusion',
+          'Cystoscopie — inspection directe de la vessie',
+          'Cytologie urinaire',
+          'Chirurgie robotique et laparoscopique',
+          'Néphrectomie partielle (épargne d\'organe)',
+          'Examen anatomopathologique — détermination du stade réel et des marges',
+          'Réunion de concertation pluridisciplinaire'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+          note: 'La chirurgie uro-oncologique fait partie des domaines d\'exercice du Pr associé Müslüm Ergün. Le plan de traitement repose sur l\'anatomopathologie, l\'imagerie, l\'état général et les préférences du patient, et dans les cas appropriés sur une décision de concertation pluridisciplinaire.'
         },
         timeline: [
-          { when: 'À distance', title: 'Concertation pluridisciplinaire', body: 'Vos résultats anatomopathologiques et votre imagerie sont examinés en réunion de concertation.' },
-          { when: 'Jours 1–2', title: 'Arrivée et examens', body: 'Examen clinique, bilan d’extension et consultation d’anesthésie.' },
-          { when: 'Jour 3', title: 'Intervention', body: 'Chirurgie robotique, laparoscopique ou ouverte ; la durée du séjour dépend de l’étendue du geste.' },
-          { when: 'Jours 5–7', title: 'Contrôle et anatomopathologie', body: 'Résultat anatomopathologique, plan de suite et autorisation de retour.' }
+          { when: 'À distance', title: 'Examen de votre dossier', body: 'Vos comptes rendus anatomopathologiques et votre imagerie sont examinés. Envoyez l\'imagerie sous forme d\'images (DICOM) et non seulement de comptes rendus : lire le compte rendu d\'autrui n\'est pas une évaluation indépendante.' },
+          { when: 'Jours 1–2', title: 'Arrivée et bilan d\'extension', body: 'Examen clinique, complément du bilan d\'extension, bilan sanguin et consultation d\'anesthésie.' },
+          { when: 'Phase de décision', title: 'Discussion des options', body: 'Chirurgie, autres traitements et, chez les patients adaptés, surveillance active ; les effets indésirables et les contraintes de suivi de chaque option sont énoncés clairement.' },
+          { when: 'Jour de l\'intervention', title: 'La chirurgie', body: 'Robotique ou laparoscopique lorsque cela convient, et avec épargne d\'organe chaque fois que c\'est possible.' },
+          { when: 'Après la sortie', title: 'Anatomopathologie et plan', body: 'L\'analyse de la pièce opératoire établit le stade réel et la nécessité éventuelle d\'un traitement complémentaire. Le résultat arrive souvent après votre retour ; la manière dont il vous parviendra et qui l\'expliquera sont convenues à l\'avance.' },
+          { when: 'À long terme', title: 'Surveillance', body: 'Dans ces cancers, le suivi fait partie du traitement. Le calendrier, les examens, leur fréquence et le responsable de leur interprétation sont planifiés par écrit.' }
         ],
         risks: [
-          'Saignement, infection et risques chirurgicaux généraux',
-          'Modification de la fonction de l’organe (selon l’étendue du geste)',
-          'Nécessité éventuelle d’un traitement complémentaire (chimiothérapie, immunothérapie)',
-          'Nécessité d’une surveillance de la récidive'
+          'RETARD DIAGNOSTIQUE : le principal risque de ce domaine n\'est pas une complication chirurgicale mais un signe d\'alerte négligé. Une hématurie attribuée à une infection et non explorée en est l\'exemple le plus fréquent',
+          'Saignement, infection et risques généraux de la chirurgie et de l\'anesthésie',
+          'Modification de la fonction de l\'organe selon l\'étendue de la chirurgie',
+          'Incontinence et modifications de la fonction sexuelle après chirurgie prostatique',
+          'Période d\'adaptation après reconstruction des voies urinaires en chirurgie vésicale',
+          'Baisse de la fonction rénale après chirurgie du rein ; l\'épargne d\'organe vise à la limiter',
+          'Collection lymphatique après curage ganglionnaire',
+          'UN RÉSULTAT ANATOMOPATHOLOGIQUE MOINS BON QUE PRÉVU imposant un traitement complémentaire',
+          'La possibilité de récidive et donc la nécessité d\'un suivi continu — sortir du suivi peut annuler le bénéfice du traitement lui-même'
         ],
         alternatives: [
-          'Surveillance active (petites tumeurs sélectionnées)',
-          'Techniques d’ablation (tumeurs rénales sélectionnées)',
-          'Radiothérapie ou traitement systémique (selon le stade)',
-          'Protocoles de préservation vésicale (dans des cas sélectionnés)'
+          'Surveillance active — dans certains cancers de prostate à faible risque et certaines petites masses rénales. Ce n\'est pas différer le traitement mais surveiller rigoureusement',
+          'Radiothérapie — alternative à la chirurgie dans le cancer de prostate, au profil d\'effets différent',
+          'Instillations intravésicales — pour les tumeurs superficielles de vessie',
+          'Techniques d\'ablation — pour certaines petites tumeurs rénales',
+          'Chimiothérapie, immunothérapie et thérapies ciblées — selon le stade, avant ou après la chirurgie',
+          'Chirurgie d\'épargne d\'organe — retirer la tumeur plutôt que l\'organe entier lorsque c\'est possible',
+          'Soins de support — priorité à la qualité de vie chez les patients âgés très comorbides'
+        ],
+        comparison: {
+          title: 'Signes d\'alerte : quel degré d\'urgence',
+          columns: ['Constatation', 'Ce que cela peut être', 'Urgence', 'Premier geste'],
+          rows: [
+            { label: 'Sang indolore dans les urines', values: ['Tumeur de vessie ou des voies urinaires', 'Explorer sans délai', 'Cystoscopie et imagerie'] },
+            { label: 'Masse testiculaire indolore', values: ['Tumeur du testicule', 'Sans délai', 'Examen et échographie scrotale'] },
+            { label: 'PSA élevé', values: ['Hypertrophie bénigne, inflammation ou cancer', 'Non urgent, mais à suivre', 'Contrôle, examen, IRM'] },
+            { label: 'Masse rénale en imagerie', values: ['Lésion bénigne ou maligne', 'Évaluation programmée', 'Scanner avec injection'] },
+            { label: 'Douleur lombaire + fièvre + frissons', values: ['Infection en amont d\'un obstacle', 'URGENCE', 'Se rendre aux urgences'] }
+          ],
+          note: 'Ce tableau n\'a pas pour but d\'inquiéter mais de montrer combien de temps chaque constatation tolère. Une hématurie indolore survenue une fois puis disparue ne rend pas l\'exploration inutile : son caractère intermittent est bien connu.'
+        },
+        recovery: [
+          { period: 'Première semaine', body: 'Variable selon l\'étendue de la chirurgie. Le lever précoce importe, à la fois pour réduire le risque de thrombose et pour la reprise du transit.' },
+          { period: 'Semaines 2 à 4', body: 'Reprise progressive de la vie quotidienne. Le port de charges est évité. Le moment de reprendre chaque activité est précisé pour l\'intervention réalisée.' },
+          { period: 'Après l\'anatomopathologie', body: 'Le résultat détermine la nécessité d\'un traitement complémentaire. Le cas échéant, le moment et le lieu sont planifiés ; ce n\'est pas une mauvaise nouvelle mais un plan actualisé.' },
+          { period: 'Première année', body: 'Le suivi est plus rapproché, avec bilans sanguins et imagerie à intervalles fixés.' },
+          { period: 'À long terme', body: 'Les intervalles s\'espacent selon l\'évolution mais le suivi ne cesse pas. Sortir de la surveillance expose à découvrir tardivement une récidive qui aurait pu l\'être tôt.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Varie selon le type de tumeur, le stade et l’étendue du geste chirurgical.'
+          disclaimer: 'Le montant dépend du type tumoral, du stade, de l\'étendue de la chirurgie et de la durée d\'hospitalisation. Un devis écrit et détaillé est remis après examen de votre dossier.'
         },
         packageIncludes: [
-          'Intervention et séjour hospitalier',
-          'Anesthésie et bilan d’extension',
-          'Examen anatomopathologique',
-          'Transferts et hébergement',
-          'Interprète médical et coordinateur',
-          'Contrôle et suivi en ligne'
+          'Examen de votre dossier à distance',
+          'Consultation et complément du bilan d\'extension',
+          'Anesthésie et bloc opératoire',
+          'Chirurgie et hospitalisation',
+          'Examen anatomopathologique de la pièce opératoire',
+          'Contrôle après la sortie et évaluation avant le retour',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et coordination des patients',
+          'Interprétation à distance de vos examens de suivi'
         ],
         faqs: [
-          { q: 'Mon rein sera-t-il retiré en totalité ?', a: 'Dans les cas favorables, seule la partie tumorale est retirée (néphrectomie partielle) ; la décision est prise après l’imagerie.' },
-          { q: 'Aurai-je besoin d’un traitement complémentaire après la chirurgie ?', a: 'Cela dépend de l’anatomopathologie et du stade ; la décision est prise en concertation pluridisciplinaire.' },
-          { q: 'Comment se déroule le suivi ?', a: 'Par imagerie et analyses sanguines régulières ; un accompagnement à distance est assuré.' }
+          { q: 'J\'ai eu du sang dans les urines une fois, puis plus rien. Faut-il explorer ?', a: 'Oui, sans hésiter. Une hématurie indolore est le premier signe classique du cancer de la vessie, et son caractère intermittent est bien connu. Qu\'elle ait cessé ne signifie pas qu\'elle est résolue. Avec un antécédent tabagique, elle doit être explorée. L\'attribuer à une infection et traiter par antibiotique est la première cause de retard diagnostique.' },
+          { q: 'La masse dans mon testicule ne fait pas mal, ce n\'est donc pas grave ?', a: 'Au contraire. Le cancer du testicule est typiquement indolore ; l\'absence de douleur n\'est pas rassurante. Toute masse indurée doit donc être évaluée sans délai par un examen et une échographie scrotale.' },
+          { q: 'Dois-je décider immédiatement ?', a: 'Pour la plupart de ces cancers, quelques semaines de réflexion ne causent aucun préjudice médical. Une pression à « décider maintenant » traduit plus souvent une démarche commerciale qu\'une nécessité clinique. Posez des questions, demandez un second avis, et décidez en comprenant.' },
+          { q: 'Demander un second avis est-il irrespectueux ?', a: 'Non. Il existe généralement plusieurs voies défendables, et les comparer est la façon de savoir laquelle vous convient. La gradation d\'une biopsie comporte aussi une part d\'interprétation : une seconde lecture peut modifier le grade — et donc la recommandation. Demander un second avis ne vous engage pas à être traité ici.' },
+          { q: 'Mon rein sera-t-il retiré en entier ?', a: 'Pas toujours. Pour des tumeurs de taille et de siège adaptés, seule la tumeur est retirée (épargne d\'organe). C\'est important pour la fonction rénale, en particulier en cas de rein unique, de diabète ou de fonction déjà diminuée. La décision se prend sur l\'imagerie et le siège de la tumeur.' },
+          { q: 'Un traitement complémentaire sera-t-il nécessaire ?', a: 'C\'est l\'anatomopathologie qui le détermine. Du tissu tumoral peut être retrouvé sur la marge, ou la maladie se révéler plus avancée que prévu ; cela ne signifie pas un échec de l\'intervention mais un plan actualisé. L\'essentiel est que cette éventualité ait été évoquée avant.' },
+          { q: 'Combien de temps dure le suivi, et pourquoi est-il si important ?', a: 'Le suivi fait partie du traitement, ce n\'est pas une option. Une récidive découverte tôt se traite bien plus facilement. Pour les tumeurs de vessie en particulier, la cystoscopie régulière est déterminante. Demandez votre calendrier par écrit : quel examen, à quelle fréquence, et qui en interprète les résultats.' },
+          { q: 'Je viens de l\'étranger — comment se passera le suivi ?', a: 'Cela doit être réglé avant de fixer vos dates. Quels examens sont réalisables dans votre pays, comment les résultats seront transmis et qui les interprétera sont convenus à l\'avance. Demandez aussi le compte rendu opératoire, le résultat anatomopathologique et le compte rendu d\'hospitalisation dans une langue que vous comprenez : votre médecin en aura besoin.' },
+          { q: 'Arrêter de fumer sert-il encore à ce stade ?', a: 'Oui, et la question compte plus qu\'on ne le suppose. Le tabac est le facteur de risque modifiable le mieux établi du cancer de la vessie, et son rôle ne s\'arrête pas au diagnostic. Il influence aussi la cicatrisation et le risque de complications pulmonaires après une intervention. La période précédant une opération n\'est pas trop tardive : c\'est celle où la motivation est la plus forte.' },
+          { q: 'Que dois-je envoyer ?', a: 'Tous vos comptes rendus anatomopathologiques, l\'imagerie elle-même en fichiers DICOM, vos résultats sanguins, vos comptes rendus opératoires antérieurs, la liste de vos traitements et vos autres pathologies. N\'envoyer que des textes de comptes rendus limite ce qui peut être évalué.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines — Association européenne d\'urologie (recommandations uro-oncologiques)', url: 'https://uroweb.org/guidelines' }
         ]
       }
     }
@@ -25610,53 +25776,140 @@ export const treatments: Treatment[] = [
         ]
       },
       fr: {
-        title: 'Urologie féminine (incontinence, chirurgie du plancher pelvien)',
-        summary: 'Des solutions modernes pour l’incontinence urinaire et les troubles du plancher pelvien, permettant un retour rapide à la vie quotidienne.',
-        metaTitle: 'Urologie féminine | Incontinence et chirurgie du plancher pelvien',
-        metaDescription: 'Urologie féminine : bandelette sous-urétrale et chirurgie du plancher pelvien pour l’incontinence urinaire et le prolapsus ; déroulement, risques et fourchette de prix.',
+        title: 'Urologie féminine (incontinence, vessie hyperactive, périnée)',
+        summary:
+          'Les fuites urinaires sont fréquentes mais ne sont pas normales, et elles se traitent. La première condition d\'un bon traitement est d\'établir le type de fuite — car le bon traitement appliqué au mauvais type ne marche pas.',
+        metaTitle: 'Urologie féminine : types d\'incontinence et choix du traitement',
+        metaDescription:
+          'Différence entre incontinence d\'effort, par urgenturie et mixte, pourquoi le traitement dépend du type, rééducation périnéale, bandelette sous-urétrale et confidentialité.',
+        quickFacts: {
+          duration: 'Première évaluation 30 à 45 minutes',
+          anesthesia: 'Non nécessaire pour l\'évaluation',
+          hospitalStay: 'Ambulatoire – 1 nuit selon l\'intervention',
+          stayInTurkey: '4 à 7 jours',
+          returnToWork: 'Quelques jours (efforts différés de plusieurs semaines)',
+          flightClearance: 'Après la consultation de contrôle'
+        },
         definition: [
-          'L’urologie féminine prend en charge le diagnostic et le traitement de l’incontinence urinaire d’effort, de l’hyperactivité vésicale et du prolapsus des organes pelviens.',
-          'Le traitement va de la rééducation périnéale aux bandelettes sous-urétrales mini-invasives et à la réparation du plancher pelvien. La méthode est choisie selon le type et la sévérité des troubles.'
+          'L\'urologie féminine prend en charge les fuites urinaires, la vessie hyperactive, le prolapsus des organes pelviens, les infections urinaires récidivantes et les troubles de la vidange vésicale.',
+          'DISONS-LE D\'ABORD : LES FUITES URINAIRES NE SONT PAS UNE CONSÉQUENCE NATURELLE DE L\'ÂGE. Qu\'elles soient fréquentes ne les rend pas normales. Beaucoup de femmes vivent ainsi pendant des années sans en parler, utilisent des protections, évitent de boire et réduisent leur vie sociale. Or la plupart obtiennent une nette amélioration sans chirurgie.',
+          'LA PREMIÈRE CONDITION EST D\'ÉTABLIR LE TYPE. Dans l\'incontinence d\'effort, la fuite survient quand la pression abdominale augmente — toux, rire, port de charges — sans besoin préalable. Dans l\'incontinence par urgenturie, un besoin soudain et impérieux survient d\'abord et les toilettes ne sont pas atteintes à temps. Cette distinction est décisive : les médicaments qui relâchent la vessie ne servent à rien dans le type d\'effort, et une bandelette ne sert à rien dans le type par urgenturie.',
+          'UN AVERTISSEMENT : DU SANG DANS LES URINES N\'EST PAS UNE SIMPLE PLAINTE DE FUITE. Il doit être exploré à part, même lorsqu\'il accompagne des fuites. De même, des brûlures et une pollakiurie persistant malgré le traitement ne doivent pas être écartées comme une « vessie sensible ».',
+          'UN SECOND AVERTISSEMENT : SI LA VESSIE NE SE VIDE PAS, LES MÉDICAMENTS AGGRAVENT LA SITUATION. La mesure du résidu post-mictionnel doit donc précéder tout traitement. Omise, elle expose à ce qu\'une prescription bien intentionnée fasse du mal.'
+        ],
+        eligibility: {
+          suitable: [
+            'Femmes qui fuient en toussant, riant, éternuant ou en portant des charges',
+            'Femmes qui n\'atteignent pas les toilettes à cause d\'un besoin soudain',
+            'Femmes présentant les deux types à la fois',
+            'Femmes se levant plusieurs fois la nuit pour uriner',
+            'Femmes décrivant une pesanteur liée à un prolapsus',
+            'Femmes présentant des infections urinaires récidivantes',
+            'Femmes déjà traitées sans bénéfice — souvent le problème n\'est pas le traitement mais un type mal identifié'
+          ],
+          notSuitable: [
+            'Femmes présentant une infection urinaire non traitée : elle est traitée d\'abord, car elle peut mimer tous ces symptômes',
+            'Femmes dont la vessie ne se vide pas complètement : les médicaments relâchant la vessie ne conviennent pas, et cela s\'évalue en premier',
+            'Femmes demandant une chirurgie sans évaluation : on n\'opère pas avant d\'avoir établi le type',
+            'Femmes ayant un projet de grossesse, chez qui le calendrier de la chirurgie du prolapsus et de la bandelette se discute à part'
+          ]
+        },
+        technology: [
+          'Catalogue mictionnel — relevé de la fréquence, des volumes et de l\'intensité du besoin ; il apporte plus que des examens coûteux',
+          'ECBU — pour écarter une infection',
+          'Mesure du résidu post-mictionnel — étape obligatoire avant toute décision médicamenteuse',
+          'Bilan urodynamique — chez des patientes sélectionnées, si le type reste incertain',
+          'Cystoscopie — en cas d\'hématurie ou de tableau atypique',
+          'Évaluation du périnée et apprentissage du bon muscle',
+          'Bandelette sous-urétrale mini-invasive et réparation du plancher pelvien',
+          'Toxine botulique intravésicale et neuromodulation sacrée'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+          note: 'L\'urologie féminine et fonctionnelle fait partie des domaines d\'exercice du Pr associé Müslüm Ergün. La démarche est progressive : écarter d\'abord les autres causes et établir le type, puis traitement comportemental, puis médicaments et chirurgie si nécessaire.'
         },
         timeline: [
-          { when: 'À distance', title: 'Pré-évaluation', body: 'Votre historique de symptômes et, le cas échéant, votre bilan urodynamique sont évalués.' },
-          { when: 'Jour 1', title: 'Arrivée et examen', body: 'Examen clinique, bilan nécessaire et planification.' },
-          { when: 'Jour 2', title: 'Intervention', body: 'Bandelette mini-invasive ou réparation ; le plus souvent en ambulatoire ou avec une nuit.' },
-          { when: 'Jours 3–4', title: 'Contrôle', body: 'Contrôle, informations et autorisation de retour.' }
+          { when: 'À distance', title: 'Première évaluation', body: 'Le type de vos symptômes, vos antécédents obstétricaux, vos traitements et vos examens antérieurs sont examinés. Sur demande, la consultation se déroule en présence d\'une professionnelle de santé.' },
+          { when: 'Préparation', title: 'Catalogue mictionnel', body: 'Pendant quelques jours, vous notez quand et combien vous urinez et l\'intensité du besoin. Ce relevé simple est l\'outil le plus utile pour établir le type et sert aussi à mesurer l\'effet du traitement.' },
+          { when: 'Jour 1', title: 'Examen et bilans', body: 'Examen clinique, ECBU, mesure du résidu post-mictionnel. Un bilan urodynamique est programmé si nécessaire.' },
+          { when: 'Phase de décision', title: 'Détermination du type et plan', body: 'Le type de fuite est précisé et le palier adapté choisi. Pour la plupart des femmes, le premier palier n\'est pas la chirurgie.' },
+          { when: 'Jour de l\'intervention', title: 'Geste éventuel', body: 'Bandelette, réparation du plancher pelvien ou toxine botulique intravésicale. La plupart se font en ambulatoire ou avec une nuit.' },
+          { when: 'Avant le départ', title: 'Contrôle', body: 'On vérifie que la vessie se vide après la miction et l\'autorisation de vol est donnée.' }
         ],
         risks: [
-          'Difficulté transitoire à uriner',
+          'LE BON TRAITEMENT AU MAUVAIS TYPE : le principal risque ici n\'est pas une complication chirurgicale mais une erreur de typage. Une bandelette posée pour une urgenturie n\'aide pas et laisse la patiente convaincue que son problème est insoluble',
+          'Difficulté transitoire à uriner après la pose d\'une bandelette',
           'Infection urinaire',
-          'Douleur ou œdème (transitoires)',
-          'Rarement, nécessité d’une seconde intervention'
+          'Douleur, œdème et gêne transitoire',
+          'Symptômes ne disparaissant pas complètement après la chirurgie — surtout dans l\'incontinence mixte quand une seule composante est traitée',
+          'Après toxine botulique, vidange vésicale incomplète et besoin temporaire d\'autosondage ; cette éventualité doit être discutée avant et la patiente doit y être prête',
+          'Réapparition des symptômes avec le temps et nécessité d\'un traitement complémentaire',
+          'Récidive après cure de prolapsus'
         ],
         alternatives: [
-          'Rééducation périnéale (exercices de Kegel)',
-          'Rééducation vésicale et modifications du mode de vie',
-          'Traitement médicamenteux (hyperactivité vésicale)',
-          'Pessaire (en cas de prolapsus)'
+          'Rééducation périnéale — efficace à condition de solliciter le bon muscle. L\'erreur la plus fréquente est de contracter l\'abdomen, les fessiers ou les cuisses',
+          'Rééducation vésicale — allongement progressif des intervalles entre les mictions ; palier fondamental du type par urgenturie',
+          'Ajustement des boissons et de la caféine — restreindre fortement les apports est une ERREUR ; cela concentre les urines et aggrave les symptômes',
+          'Perte de poids et traitement de la constipation — bénéfice mesurable par réduction de la pression abdominale',
+          'Médicaments relâchant la vessie — pour le type par urgenturie ; chez la femme âgée, le choix est fait avec attention aux effets cognitifs',
+          'Œstrogènes par voie vaginale — peuvent réduire les symptômes chez certaines femmes ménopausées',
+          'Pessaire — option non chirurgicale du prolapsus',
+          'Bandelette sous-urétrale — pour le type d\'effort lorsque le traitement comportemental ne suffit pas',
+          'Toxine botulique intravésicale et neuromodulation sacrée — en cas d\'urgenturie résistante aux médicaments'
+        ],
+        comparison: {
+          title: 'Quel type conduit à quel traitement',
+          columns: ['Critère', 'Type d\'effort', 'Type par urgenturie', 'Type par regorgement'],
+          rows: [
+            { label: 'Quand survient la fuite', values: ['Toux, rire, port de charges', 'Après un besoin soudain', 'Goutte à goutte, quasi permanent'] },
+            { label: 'Besoin préalable ?', values: ['Non', 'Oui, impérieux', 'Incertain ; sensation de vidange incomplète'] },
+            { label: 'Premier palier', values: ['Rééducation périnéale', 'Rééducation vésicale et gestion des boissons', 'Identifier l\'obstacle à la vidange'] },
+            { label: 'Les médicaments aident-ils ?', values: ['Les relaxants vésicaux N\'AIDENT PAS', 'Oui, en deuxième palier', 'Les relaxants vésicaux PEUVENT NUIRE'] },
+            { label: 'Option chirurgicale', values: ['Bandelette', 'Toxine botulique, neuromodulation', 'Lever l\'obstacle'] }
+          ],
+          note: 'Ce tableau n\'a qu\'un but : montrer que la même phrase — « je perds mes urines » — conduit à des traitements entièrement différents. Un traitement engagé sans évaluation peut donc rester sans effet, aussi bien intentionné soit-il.'
+        },
+        recovery: [
+          { period: 'Pendant la rééducation', body: 'Les premières semaines de rééducation périnéale sont difficiles et la différence n\'est pas immédiate. Bien faite et régulière, elle agit en quelques semaines. Faites-vous montrer la technique une fois pour être sûre du bon muscle.' },
+          { period: 'Pendant la rééducation vésicale', body: 'Les intervalles s\'allongent progressivement, pas d\'un coup. Le catalogue mictionnel rend les progrès visibles et entretient la motivation.' },
+          { period: 'Première semaine après une bandelette', body: 'Une gêne légère et un œdème sont habituels. Évitez le port de charges et les efforts de poussée ; prévenez la constipation. Signalez toute difficulté à uriner.' },
+          { period: 'Semaines 2 à 6 après une bandelette', body: 'Les activités légères reprennent en quelques jours ; pour les efforts et les rapports, respectez le délai indiqué par votre chirurgien.' },
+          { period: 'Après la toxine botulique', body: 'L\'effet dure quelques mois puis s\'estompe : il faut le renouveler. La vidange vésicale est contrôlée au début.' },
+          { period: 'À long terme', body: 'Si les symptômes reviennent, la cause est réévaluée. Contrôle du poids, prévention de la constipation et poursuite des exercices contribuent à la durabilité du résultat.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Varie selon le type d’intervention.'
+          disclaimer: 'Le montant varie nettement selon ce qui est réalisé — évaluation, bandelette, toxine botulique ou chirurgie de réparation. Un devis écrit et détaillé est remis une fois le type établi.'
         },
         packageIncludes: [
-          'Intervention et séjour hospitalier',
-          'Anesthésie et examens',
-          'Transferts et hébergement',
-          'Interprète médicale (sur demande)',
-          'Contrôle et suivi en ligne'
+          'Évaluation en urologie féminine et lecture du catalogue mictionnel',
+          'ECBU',
+          'Mesure du résidu post-mictionnel',
+          'Bilan urodynamique ou cystoscopie si nécessaire',
+          'Apprentissage de la bonne technique périnéale',
+          'L\'intervention prévue et l\'anesthésie',
+          'Hospitalisation si nécessaire',
+          'Interprète médicale sur demande',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patiente + 1 accompagnant)',
+          'Suivi à distance après le retour'
         ],
         faqs: [
-          { q: 'La chirurgie par bandelette est-elle définitive ?', a: 'Elle apporte une amélioration durable chez la plupart des patientes ; le résultat varie selon le type de trouble.' },
-          { q: 'Combien de temps dure la récupération ?', a: 'Vous reprenez une activité quotidienne légère en quelques jours ; les efforts importants sont différés de quelques semaines.' },
-          { q: 'Puis-je demander un personnel médical féminin ?', a: 'Oui ; sur demande, une interprète et un accompagnement féminins sont proposés.' }
+          { q: 'Les fuites urinaires font-elles partie du vieillissement ?', a: 'Non. Qu\'elles soient fréquentes ne les rend pas normales. Elles se traitent, et la plupart des femmes obtiennent une nette amélioration sans chirurgie. Il n\'est pas nécessaire de vivre des années avec des protections en réduisant sa vie sociale.' },
+          { q: 'J\'ai déjà été traitée sans résultat — mon problème est-il insoluble ?', a: 'Avant de le conclure, demandez si le type a été correctement identifié. Un relaxant vésical pour une incontinence d\'effort, ou une bandelette pour une urgenturie, ne fonctionne pas. Le problème ne tient alors pas à votre état mais à un traitement dirigé vers le mauvais type.' },
+          { q: 'En quoi consiste l\'évaluation — est-ce gênant ?', a: 'Elle consiste à écouter vos symptômes, revoir le catalogue mictionnel, analyser les urines et pratiquer un examen. Celui-ci est bref et chaque étape est expliquée avant. Sur demande, une professionnelle est présente et une interprète femme est prévue ; le demander est un droit, pas une faveur.' },
+          { q: 'La rééducation périnéale fonctionne-t-elle vraiment ?', a: 'Oui, à condition d\'utiliser le bon muscle. L\'erreur la plus fréquente est de contracter l\'abdomen, les fessiers ou les cuisses, ce qui ne compte pas comme exercice. Une fois la technique montrée, l\'effet apparaît en quelques semaines. Même si une chirurgie est envisagée, ce palier ne doit pas être sauté.' },
+          { q: 'Si je bois moins, fuirai-je moins ?', a: 'Non, c\'est l\'inverse. Boire peu concentre les urines, irrite la vessie et augmente l\'urgenturie. Il faut répartir les boissons dans la journée et les réduire le soir. Diminuer la caféine et les boissons gazeuses peut aider.' },
+          { q: 'La bandelette est-elle définitive ?', a: 'Chez des femmes bien sélectionnées avec incontinence d\'effort, elle peut apporter une amélioration durable. Dans l\'incontinence mixte, ne traiter que la composante d\'effort peut laisser l\'urgenturie : il importe que cela ait été dit avant. Méfiez-vous des promesses de résultat définitif.' },
+          { q: 'J\'ai du sang dans les urines mais mon problème principal est la fuite — est-ce important ?', a: 'Oui, et séparément. Le sang dans les urines doit être exploré pour lui-même, même associé à des fuites. L\'écarter comme une « vessie sensible » peut retarder un diagnostic.' },
+          { q: 'Devrai-je m\'autosonder après une toxine botulique vésicale ?', a: 'Chez certaines femmes, la vessie se relâche trop et ne se vide pas complètement ; un autosondage temporaire peut alors être nécessaire. La probabilité est faible mais réelle, et cela doit être discuté avant. Si vous n\'y êtes pas prête ou physiquement apte, cette option peut ne pas vous convenir.' },
+          { q: 'Je prévois une grossesse — dois-je me faire opérer maintenant ?', a: 'Si vous prévoyez une grossesse, dites-le. Le calendrier de la chirurgie du prolapsus et de la bandelette en dépend ; on les préfère généralement après la fin du projet parental. D\'ici là, le traitement comportemental et la rééducation périnéale sont au premier plan.' },
+          { q: 'Quels documents envoyer ?', a: 'Un bilan urodynamique éventuel, votre ECBU, la mesure du résidu post-mictionnel, vos antécédents obstétricaux, vos interventions antérieures, la liste de vos traitements et un catalogue mictionnel de quelques jours. Ce dernier paraît anodin mais contribue davantage que tout le reste.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-neurogenic Female LUTS — Association européenne d\'urologie', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
         ]
       }
     }
