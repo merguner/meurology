@@ -24,6 +24,38 @@ export const treatmentSlugMap = {
     ru: 'roboticheskaya-prostatektomiya',
     ar: 'robotic-prostatectomy'
   },
+  'peyronie-hastaligi': {
+    tr: 'peyronie-hastaligi',
+    en: 'peyronies-disease',
+    de: 'peyronie-krankheit',
+    fr: 'maladie-de-lapeyronie',
+    ru: 'bolezn-peyroni',
+    ar: 'peyronies-disease'
+  },
+  'erkek-infertilitesi': {
+    tr: 'erkek-infertilitesi-mikro-tese',
+    en: 'male-infertility-micro-tese',
+    de: 'maennliche-unfruchtbarkeit-micro-tese',
+    fr: 'infertilite-masculine-micro-tese',
+    ru: 'muzhskoe-besplodie-mikro-tese',
+    ar: 'male-infertility-micro-tese'
+  },
+  'mesane-kanseri': {
+    tr: 'mesane-kanseri',
+    en: 'bladder-cancer',
+    de: 'blasenkrebs',
+    fr: 'cancer-de-la-vessie',
+    ru: 'rak-mochevogo-puzyrya',
+    ar: 'bladder-cancer'
+  },
+  'bobrek-kanseri': {
+    tr: 'bobrek-kanseri',
+    en: 'kidney-cancer',
+    de: 'nierenkrebs',
+    fr: 'cancer-du-rein',
+    ru: 'rak-pochki',
+    ar: 'kidney-cancer'
+  },
   'erektil-disfonksiyon': {
     tr: 'erektil-disfonksiyon',
     en: 'erectile-dysfunction',

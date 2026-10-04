@@ -15,6 +15,1321 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
+     * Üroonkoloji hub'ının altında (prompt m.4.1).
+     * EN ÖNEMLİ MESAJ: AĞRISIZ idrarda kan ciddiye alınmalıdır; kendiliğinden
+     * geçmesi "iyileşti" demek değildir. Hastaların en sık yaptığı hata budur.
+     * TEKRARLAMA ve ÖMÜR BOYU TAKİP açıkça yazılmıştır — mesane kanseri
+     * "alındı, bitti" denen bir hastalık değildir.
+     * Sigaranın bırakılmasının tekrarlamayı etkilediği belirtilmiştir.
+     * Kaynak: EAU Bladder Cancer kılavuzları (NMIBC ve MIBC).
+     * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     */
+    slug: 'mesane-kanseri',
+    parent: 'uroonkoloji',
+    lastReviewed: '2026-10-04',
+    icon: 'oncology',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'Mesane Kanseri: Tanıdan Tedaviye',
+        summary:
+          'Ağrısız idrarda kan en sık ilk belirtidir ve kendiliğinden geçmesi sorunun bittiği anlamına gelmez. Bu sayfa tanı, kas tutulumu ayrımı ve takibin neden ömür boyu sürdüğünü anlatır.',
+        metaTitle: 'Mesane Kanseri Belirtileri, Tanısı ve Tedavisi',
+        metaDescription:
+          'Mesane kanserinde idrarda kanın anlamı, sistoskopi, TUR-M, kas tutulumu ayrımı, mesane içi tedaviler, radikal sistektomi ve ömür boyu takip.',
+        quickFacts: {
+          duration: 'TUR-M 30–60 dakika',
+          anesthesia: 'Spinal veya genel anestezi',
+          hospitalStay: 'TUR-M için 1–2 gece',
+          stayInTurkey: '5–7 gün (TUR-M), sistektomide belirgin olarak uzun',
+          returnToWork: '1–2 hafta (TUR-M)',
+          flightClearance: '7–10 gün (TUR-M)'
+        },
+        definition: [
+          'Mesane kanseri, idrarı depolayan organın iç yüzeyini döşeyen hücrelerden kaynaklanır. En sık ilk belirtisi İDRARDA KAN GÖRÜLMESİDİR ve bu kanama tipik olarak AĞRISIZDIR.',
+          'BU SAYFANIN EN ÖNEMLİ UYARISI ŞUDUR: İdrarınızda bir kez kan gördüyseniz ve ertesi gün geçtiyse, sorun geçmiş değildir. Mesane kanserinde kanama gelir ve gider; aradaki temiz dönem hastalığın yokluğu anlamına gelmez. Hastaların en sık yaptığı hata, kanama durduğu için başvurmayı ertelemektir. Ağrısız idrarda kan, aksi gösterilene kadar araştırılması gereken bir bulgudur.',
+          'EN ÖNEMLİ RİSK ETKENİ SİGARADIR. Mesane, idrarla atılan maddelerin uzun süre temas ettiği bir organdır; sigara dumanındaki maddeler böbreklerden süzülüp mesanede birikir. Boya, kauçuk ve bazı kimyasal sektörlerde uzun süreli mesleki maruziyet de risk taşır.',
+          'Tanıda temel yöntem sistoskopidir: idrar yolundan ince bir kamerayla mesanenin içine bakılır. Buna görüntüleme (çoğunlukla bilgisayarlı tomografi ürografi) ve idrar sitolojisi eşlik eder. Ultrason tek başına yeterli değildir; küçük veya düz (yüzeyel yayılan) tümörleri gösteremeyebilir.',
+          'BÜTÜN TEDAVİ KARARINI BELİRLEYEN SORU ŞUDUR: tümör mesane kasına girmiş midir? Kasa girmemiş (yüzeyel) tümörlerde mesane korunur ve tedavi mesane içinden yürütülür. Kasa girmiş tümörlerde ise mesanenin tamamının alınması gündeme gelir. Bu ayrım TUR-M ile alınan dokunun patolojik incelemesiyle yapılır.',
+          'TUR-M (mesane tümörünün idrar yolundan alınması) hem tedavi hem tanı işlemidir: tümör çıkarılır ve aynı zamanda kas tabakasının tutulup tutulmadığı anlaşılır. Patolog raporunda kas dokusu görülmemişse veya tümör yüksek dereceliyse, 2–6 hafta sonra ikinci bir TUR-M (re-TUR) yapılması gerekebilir. Bu bir hata ya da başarısızlık değil, planlı bir basamaktır.'
+        ],
+        eligibility: {
+          suitable: [
+            'İdrarında kan görülen her hasta — ağrısız olsa ve kendiliğinden geçse bile araştırılmalıdır',
+            'Sistoskopide mesane içinde kitle saptanan hastalar',
+            'Görüntülemede mesane duvarında kalınlaşma veya şüpheli alan bulunan hastalar',
+            'Daha önce mesane tümörü nedeniyle tedavi görmüş ve takipte yeni lezyon saptanan hastalar',
+            'Uzun süreli sigara öyküsü veya mesleki maruziyeti olup açıklanamayan idrar yakınması bulunan hastalar'
+          ],
+          notSuitable: [
+            'Aktif idrar yolu enfeksiyonu olan hastalar — enfeksiyon da idrarda kana yol açar; önce tedavi edilip idrar tekrar değerlendirilir',
+            'Kanama bozukluğu kontrol altına alınmamış hastalar — işlem öncesi düzenlenir',
+            'Genel durumu radikal cerrahiye uygun olmayan hastalar — bu durumda mesaneyi koruyan yaklaşımlar ve onkoloji iş birliği gündeme gelir',
+            'Beklenen yaşam süresi çok kısa olan ileri yaştaki hastalarda yoğun tedavi — hedef yakınma kontrolü olabilir'
+          ]
+        },
+        technology: [
+          'Sistoskopi ile mesane içinin doğrudan görüntülenmesi',
+          'Bilgisayarlı tomografi ürografi — üst idrar yollarının da değerlendirilmesi',
+          'İdrar sitolojisi',
+          'TUR-M (transüretral mesane tümörü rezeksiyonu) — kas tabakasını içeren örnekleme',
+          'Mesane içi ilaç (kemoterapi veya BCG) uygulaması',
+          'Gerektiğinde radikal sistektomi ve idrar yolu yeniden yapılandırması'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Üroonkolojik cerrahi, Doç. Dr. Müslüm Ergün’ün çalışma alanları arasındadır. Mesane kanserinde tedavi planı; tümörün derecesi, kas tutulumu, lezyon sayısı ve boyutu ile hastanın genel durumu birlikte değerlendirilerek yapılır.'
+        },
+        timeline: [
+          {
+            when: '1. adım',
+            title: 'İdrarda kanın araştırılması',
+            body: 'Enfeksiyon dışlanır, idrar sitolojisi alınır, görüntüleme yapılır ve sistoskopi planlanır. Kanamanın geçmiş olması araştırmayı durdurmaz.'
+          },
+          {
+            when: '2. adım',
+            title: 'TUR-M',
+            body: 'Tümör idrar yolundan girilerek çıkarılır ve kas tabakasını içeren örnek alınır. İşlem 30–60 dakika sürer; genellikle 1–2 gece yatış gerekir.'
+          },
+          {
+            when: '3. adım',
+            title: 'Patoloji ve risk grubu',
+            body: 'Rapor tümörün derecesini ve kasa girip girmediğini bildirir. Bu bilgi lezyon sayısı ve boyutuyla birleştirilerek risk grubu belirlenir; tedavi planı buna göre kurulur.'
+          },
+          {
+            when: '4. adım',
+            title: 'Kasa girmemişse: mesane içi tedavi',
+            body: 'Düşük riskte tek doz mesane içi kemoterapi yeterli olabilir. Orta ve yüksek riskte mesane içi BCG veya kemoterapi kürleri planlanır. Yüksek dereceli tümörlerde re-TUR gündeme gelir.'
+          },
+          {
+            when: '4b. adım',
+            title: 'Kasa girmişse: radikal tedavi',
+            body: 'Mesanenin tamamının alınması (radikal sistektomi) ve idrar yolunun yeniden yapılandırılması değerlendirilir. Birçok hastada cerrahi öncesi kemoterapi gündeme gelir. Mesaneyi koruyan yaklaşımlar seçilmiş hastalarda tartışılır.'
+          },
+          {
+            when: 'Sonrası',
+            title: 'Ömür boyu takip',
+            body: 'Belirli aralıklarla sistoskopi yapılır. Aralıklar risk grubuna göre belirlenir ve zamanla seyrekleşir, ancak tamamen sona ermez.'
+          }
+        ],
+        risks: [
+          'TEKRARLAMA: Mesane kanseri tekrarlama eğilimi yüksek bir hastalıktır. Tümörün alınmış olması hastalığın bittiği anlamına gelmez; bu, yöntemin başarısızlığı değil hastalığın doğasıdır',
+          'TAKİBİN BIRAKILMASI: En büyük gerçek risk budur. Kendini iyi hissettiği için sistoskopiye gelmeyen hasta, tedavi edilebilir bir nüksü kaçırabilir',
+          'TUR-M sonrası idrarda kanama ve yanma — ilk günlerde beklenir',
+          'Mesane delinmesi (perforasyon) — seyrek; sonda süresinin uzamasını gerektirebilir',
+          'İdrar yolu enfeksiyonu',
+          'İdrar kanalında darlık — sonradan gelişebilir',
+          'Mesane içi BCG tedavisine bağlı yakınmalar — sık idrara çıkma, yanma, ateş; nadiren tedavinin kesilmesini gerektirir',
+          'Radikal sistektomi sonrası: idrar yapma biçiminin kalıcı olarak değişmesi, cinsel işlev üzerinde etki, bağırsak sorunları ve uzun ameliyata bağlı riskler'
+        ],
+        alternatives: [
+          'Düşük riskli tümörde TUR-M sonrası tek doz mesane içi kemoterapi ve izlem',
+          'Orta–yüksek riskte mesane içi BCG veya kemoterapi kürleri',
+          'Yüksek riskli ancak kasa girmemiş tümörde erken radikal sistektomi — seçilmiş hastalarda',
+          'Kas invaziv hastalıkta cerrahi öncesi kemoterapi ve ardından radikal sistektomi',
+          'Mesaneyi koruyan üçlü yaklaşım (TUR-M + radyoterapi + kemoterapi) — seçilmiş hastalarda',
+          'Genel durumu cerrahiye uygun olmayan hastalarda yakınma kontrolüne yönelik tedaviler'
+        ],
+        comparison: {
+          title: 'Kasa girmemiş ve kas invaziv mesane kanseri',
+          columns: ['Ölçüt', 'Kasa girmemiş (yüzeyel)', 'Kas invaziv'],
+          rows: [
+            { label: 'Mesane korunur mu?', values: ['Evet', 'Çoğu hastada hayır'] },
+            { label: 'Ana tedavi', values: ['TUR-M + mesane içi ilaç', 'Radikal sistektomi (çoğu kez kemoterapi ile)'] },
+            { label: 'Yatış süresi', values: ['1–2 gece', 'Belirgin olarak uzun'] },
+            { label: 'İdrar yapma biçimi', values: ['Değişmez', 'Kalıcı olarak değişir'] },
+            { label: 'Takip', values: ['Sistoskopi ile ömür boyu', 'Görüntüleme ve kan tetkikleriyle ömür boyu'] },
+            { label: 'Karar nasıl verilir', values: ['TUR-M patolojisi', 'TUR-M patolojisi + evreleme görüntülemesi'] }
+          ],
+          note:
+            'Bu ayrım tedavinin tamamını belirler ve yalnızca patolojik inceleme ile yapılabilir. Görüntüleme tek başına kas tutulumunu kesin olarak gösteremez.'
+        },
+        recovery: [
+          {
+            period: 'İlk 48 saat (TUR-M)',
+            body: 'Sonda takılıdır ve gerekirse mesane yıkanır. İdrarda pembe-kırmızı renk beklenen bulgudur.'
+          },
+          {
+            period: '1. hafta',
+            body: 'Sonda çıkarılmıştır. Yanma ve sık idrara çıkma görülebilir; bol sıvı alınması önerilir. Ağır kaldırmadan kaçınılır.'
+          },
+          {
+            period: '2–4. hafta',
+            body: 'Günlük yaşama dönülür. Mesane içi tedavi planlandıysa bu dönemde başlar.'
+          },
+          {
+            period: '3. ay ve sonrası',
+            body: 'İlk kontrol sistoskopisi yapılır. Sonuç temizse aralıklar risk grubuna göre açılır; ancak takip sona ermez.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat; yalnızca TUR-M mi yoksa mesane içi tedavi kürleri veya radikal cerrahi mi gerekeceğine göre belirgin biçimde değişir. Kesin teklif, patoloji sonucu netleştikten sonra verilebilir.'
+        },
+        packageIncludes: [
+          'Üroloji değerlendirmesi, görüntüleme ve idrar sitolojisi',
+          'Sistoskopi ve TUR-M işlemi',
+          'Anestezi ve hastanede 1–2 gece konaklama',
+          'Patolojik inceleme ve risk grubu değerlendirmesi',
+          'Takip planının yazılı olarak verilmesi',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve ülkenize döndükten sonra uzaktan takip'
+        ],
+        faqs: [
+          {
+            q: 'İdrarımda bir kez kan gördüm, sonra geçti. Yine de doktora gitmeli miyim?',
+            a: 'Evet, mutlaka. Bu sayfanın en önemli mesajı budur. Mesane kanserinde kanama gelip gider; ertesi gün idrarın temiz olması sorunun geçtiği anlamına gelmez. Ağrısız idrarda kan, aksi gösterilene kadar araştırılması gereken bir bulgudur. Beklemek tanıyı geciktirir ve geciken tanı tedaviyi zorlaştırır.'
+          },
+          {
+            q: 'Ultrason yeterli mi?',
+            a: 'Hayır. Ultrason bazı kitleleri gösterebilir ama küçük tümörleri ve mesane yüzeyine yayılan düz lezyonları kaçırabilir. Tanının temeli sistoskopidir — mesanenin içine doğrudan bakmaktır.'
+          },
+          {
+            q: 'Tümör alındı, iyileştim mi?',
+            a: 'Tümörün alınması önemli bir adımdır ama hastalığın bittiği anlamına gelmez. Mesane kanserinin tekrarlama eğilimi yüksektir. Bu nedenle belirli aralıklarla sistoskopi ile takip gerekir ve bu takip ömür boyu sürer. Aralıklar zamanla açılır ama tamamen sona ermez.'
+          },
+          {
+            q: 'Neden ikinci bir TUR-M gerekiyor?',
+            a: 'İlk işlemde alınan örnekte kas dokusu görülmemişse veya tümör yüksek dereceliyse, hastalığın kasa girip girmediğinden emin olmak için 2–6 hafta sonra ikinci bir rezeksiyon yapılır. Bu bir hata değil, planlı bir basamaktır; yanlış evreleme yanlış tedaviye yol açar.'
+          },
+          {
+            q: 'Mesanem alınacak mı?',
+            a: 'Bu yalnızca tümör mesane kasına girmişse gündeme gelir. Kasa girmemiş tümörlerde mesane korunur ve tedavi mesane içinden yürütülür. Kararı görüntüleme değil, TUR-M ile alınan dokunun patolojik incelemesi verir.'
+          },
+          {
+            q: 'BCG tedavisi nedir, kemoterapi mi?',
+            a: 'Hayır, BCG bir bağışıklık tedavisidir; mesanenin içine verilerek vücudun kendi savunmasının tümör hücrelerine yanıt vermesi hedeflenir. Sık idrara çıkma, yanma ve ateş gibi yakınmalara yol açabilir. Bu yan etkiler genellikle yönetilebilir, ancak nadiren tedavinin kesilmesi gerekir.'
+          },
+          {
+            q: 'Sigarayı bırakmam bir şey değiştirir mi?',
+            a: 'Evet. Sigara mesane kanserinin en önemli risk etkenidir ve bırakmak yalnızca yeni kanser riskini değil, mevcut hastalığın seyrini de ilgilendirir. Tedaviye katkısı olan, tamamen sizin elinizde olan tek adımdır.'
+          },
+          {
+            q: 'Takip ne kadar sürer?',
+            a: 'Ömür boyu. Aralıklar risk grubuna göre belirlenir ve yıllar içinde seyrekleşir, ancak tamamen bırakılmaz. Kendinizi iyi hissetmeniz takibi bırakmak için bir neden değildir; nükslerin çoğu yakınma vermeden önce sistoskopide görülür.'
+          },
+          {
+            q: 'Ülkeme döndükten sonra takibimi orada yaptırabilir miyim?',
+            a: 'Evet, hatta tercih edilen budur. Patoloji raporu, risk grubu ve takip aralıkları yazılı olarak verilir; böylece kendi ülkenizdeki üroloğunuz sistoskopileri planlayabilir. Önemli olan takibin yapılmasıdır, nerede yapıldığı değil.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Non-muscle-invasive Bladder Cancer — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/non-muscle-invasive-bladder-cancer'
+          },
+          {
+            label: 'EAU Guidelines on Muscle-invasive and Metastatic Bladder Cancer — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer'
+          }
+        ]
+      },
+      en: {
+        title: 'Bladder Cancer: From Diagnosis to Treatment',
+        summary:
+          'Painless blood in the urine is the most common first sign, and its stopping on its own does not mean the problem has gone. This page covers diagnosis, the muscle-invasion question and why follow-up lasts a lifetime.',
+        metaTitle: 'Bladder Cancer: Symptoms, Diagnosis and Treatment',
+        metaDescription:
+          'What blood in the urine means, cystoscopy, TURBT, the muscle-invasion distinction, intravesical treatments, radical cystectomy and lifelong follow-up.',
+        quickFacts: {
+          duration: 'TURBT 30–60 minutes',
+          anesthesia: 'Spinal or general anaesthesia',
+          hospitalStay: '1–2 nights for TURBT',
+          stayInTurkey: '5–7 days (TURBT); considerably longer for cystectomy',
+          returnToWork: '1–2 weeks (TURBT)',
+          flightClearance: '7–10 days (TURBT)'
+        },
+        definition: [
+          'Bladder cancer arises from the cells lining the inner surface of the organ that stores urine. Its most common first sign is BLOOD IN THE URINE, and that bleeding is typically PAINLESS.',
+          'THE MOST IMPORTANT WARNING ON THIS PAGE IS THIS: if you have seen blood in your urine once and it had gone by the next day, the problem has not gone. In bladder cancer the bleeding comes and goes; the clear interval in between does not mean the disease is absent. The commonest mistake patients make is to put off seeking help because the bleeding stopped. Painless blood in the urine is a finding that must be investigated until proved otherwise.',
+          'THE MOST IMPORTANT RISK FACTOR IS SMOKING. The bladder is an organ in prolonged contact with substances excreted in urine; compounds from cigarette smoke are filtered by the kidneys and collect in the bladder. Long-term occupational exposure in the dye, rubber and certain chemical industries also carries risk.',
+          'The mainstay of diagnosis is cystoscopy: looking inside the bladder with a slim camera passed along the urinary passage. It is accompanied by imaging (usually CT urography) and urine cytology. Ultrasound alone is not sufficient; it can miss small tumours and flat, superficially spreading ones.',
+          'THE QUESTION THAT DETERMINES THE WHOLE OF TREATMENT IS THIS: has the tumour invaded the bladder muscle? In tumours that have not (superficial disease), the bladder is preserved and treatment is delivered inside it. Where the muscle is involved, removing the whole bladder comes into consideration. That distinction is made by pathological examination of the tissue taken at TURBT.',
+          'TURBT (removing the bladder tumour through the urinary passage) is both treatment and diagnosis: the tumour is removed and at the same time it becomes clear whether the muscle layer is involved. If the pathologist does not see muscle in the specimen, or if the tumour is high grade, a second TURBT may be needed 2–6 weeks later. That is not an error or a failure but a planned step.'
+        ],
+        eligibility: {
+          suitable: [
+            'Any patient who has seen blood in the urine — it must be investigated even if painless and even if it stopped on its own',
+            'Patients in whom a mass is found in the bladder at cystoscopy',
+            'Patients with thickening of the bladder wall or a suspicious area on imaging',
+            'Patients treated previously for a bladder tumour in whom a new lesion is found at follow-up',
+            'Patients with a long smoking history or occupational exposure and unexplained urinary symptoms'
+          ],
+          notSuitable: [
+            'Patients with an active urinary tract infection — infection also causes blood in the urine; it is treated first and the urine reassessed',
+            'Patients with an uncontrolled bleeding disorder — this is corrected before the procedure',
+            'Patients whose general condition is unsuited to radical surgery — bladder-preserving approaches and oncology collaboration then come into consideration',
+            'Intensive treatment in older patients with a very limited life expectancy — the aim may be control of symptoms'
+          ]
+        },
+        technology: [
+          'Direct inspection of the bladder by cystoscopy',
+          'CT urography — assessing the upper urinary tract as well',
+          'Urine cytology',
+          'TURBT (transurethral resection of bladder tumour) — sampling that includes the muscle layer',
+          'Intravesical drug instillation (chemotherapy or BCG)',
+          'Radical cystectomy and urinary reconstruction where required'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Uro-oncological surgery is among Assoc. Prof. Müslüm Ergün’s areas of work. In bladder cancer the treatment plan is made by weighing the grade of the tumour, muscle invasion, the number and size of lesions and the patient’s general condition together.'
+        },
+        timeline: [
+          {
+            when: 'Step 1',
+            title: 'Investigating blood in the urine',
+            body: 'Infection is excluded, urine cytology is taken, imaging is carried out and cystoscopy is planned. The bleeding having stopped does not halt the investigation.'
+          },
+          {
+            when: 'Step 2',
+            title: 'TURBT',
+            body: 'The tumour is removed through the urinary passage and a specimen including the muscle layer is taken. The procedure takes 30–60 minutes and usually requires 1–2 nights in hospital.'
+          },
+          {
+            when: 'Step 3',
+            title: 'Pathology and risk group',
+            body: 'The report states the grade of the tumour and whether it has invaded the muscle. Combined with the number and size of lesions, this determines the risk group, and the treatment plan follows from it.'
+          },
+          {
+            when: 'Step 4',
+            title: 'If the muscle is not involved: treatment inside the bladder',
+            body: 'In low risk, a single dose of intravesical chemotherapy may be enough. In intermediate and high risk, courses of intravesical BCG or chemotherapy are planned. In high-grade tumours a repeat TURBT comes into consideration.'
+          },
+          {
+            when: 'Step 4b',
+            title: 'If the muscle is involved: radical treatment',
+            body: 'Removing the whole bladder (radical cystectomy) with urinary reconstruction is considered. Chemotherapy before surgery comes into consideration for many patients. Bladder-preserving approaches are discussed in selected cases.'
+          },
+          {
+            when: 'Afterwards',
+            title: 'Lifelong follow-up',
+            body: 'Cystoscopy is carried out at set intervals. The intervals are determined by the risk group and lengthen over time, but they do not come to an end.'
+          }
+        ],
+        risks: [
+          'RECURRENCE: bladder cancer has a strong tendency to recur. The tumour having been removed does not mean the disease is over; that is the nature of the condition, not a failure of the method',
+          'STOPPING FOLLOW-UP: this is the greatest real risk. A patient who feels well and does not come for cystoscopy can miss a recurrence that was still treatable',
+          'Bleeding and burning on passing urine after TURBT — expected in the first days',
+          'Perforation of the bladder — uncommon; it may require the catheter to stay in longer',
+          'Urinary tract infection',
+          'Narrowing of the urinary passage — can develop later',
+          'Symptoms from intravesical BCG — frequency, burning, fever; rarely the treatment has to be stopped',
+          'After radical cystectomy: a permanent change in how you pass urine, effects on sexual function, bowel problems and the risks of a long operation'
+        ],
+        alternatives: [
+          'A single dose of intravesical chemotherapy after TURBT and surveillance, in low-risk tumours',
+          'Courses of intravesical BCG or chemotherapy in intermediate to high risk',
+          'Early radical cystectomy in high-risk disease that has not invaded the muscle — in selected patients',
+          'Chemotherapy before surgery followed by radical cystectomy in muscle-invasive disease',
+          'Bladder-preserving trimodal therapy (TURBT + radiotherapy + chemotherapy) — in selected patients',
+          'Treatment aimed at controlling symptoms in patients unsuited to surgery'
+        ],
+        comparison: {
+          title: 'Non-muscle-invasive versus muscle-invasive bladder cancer',
+          columns: ['Criterion', 'Non-muscle-invasive (superficial)', 'Muscle-invasive'],
+          rows: [
+            { label: 'Is the bladder preserved?', values: ['Yes', 'In most patients no'] },
+            { label: 'Main treatment', values: ['TURBT + intravesical drug', 'Radical cystectomy (often with chemotherapy)'] },
+            { label: 'Hospital stay', values: ['1–2 nights', 'Considerably longer'] },
+            { label: 'How you pass urine', values: ['Unchanged', 'Permanently changed'] },
+            { label: 'Follow-up', values: ['Lifelong, by cystoscopy', 'Lifelong, by imaging and blood tests'] },
+            { label: 'How the decision is made', values: ['TURBT pathology', 'TURBT pathology + staging imaging'] }
+          ],
+          note:
+            'This distinction determines the whole of treatment and can only be made by pathological examination. Imaging alone cannot establish muscle invasion with certainty.'
+        },
+        recovery: [
+          {
+            period: 'First 48 hours (TURBT)',
+            body: 'A catheter is in place and the bladder is irrigated if needed. Pink-to-red urine is an expected finding.'
+          },
+          {
+            period: 'Week 1',
+            body: 'The catheter has been removed. Burning and frequency may occur; plenty of fluids are advised. Heavy lifting is avoided.'
+          },
+          {
+            period: 'Weeks 2–4',
+            body: 'Daily life resumes. If intravesical treatment has been planned, it begins during this period.'
+          },
+          {
+            period: 'Month 3 onwards',
+            body: 'The first check cystoscopy is carried out. If it is clear, the intervals lengthen according to the risk group — but follow-up does not stop.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies markedly according to whether only a TURBT is needed or courses of intravesical treatment or radical surgery as well. A firm quotation can be given once the pathology result is clear.'
+        },
+        packageIncludes: [
+          'Urological assessment, imaging and urine cytology',
+          'Cystoscopy and the TURBT procedure',
+          'Anaesthesia and 1–2 nights in hospital',
+          'Pathological examination and risk-group assessment',
+          'A written follow-up plan',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and remote follow-up after you return home'
+        ],
+        faqs: [
+          {
+            q: 'I saw blood in my urine once and then it stopped. Should I still see a doctor?',
+            a: 'Yes, without question. This is the most important message on this page. In bladder cancer the bleeding comes and goes; clear urine the next day does not mean the problem has passed. Painless blood in the urine is a finding to be investigated until proved otherwise. Waiting delays the diagnosis, and a delayed diagnosis makes treatment harder.'
+          },
+          {
+            q: 'Is an ultrasound enough?',
+            a: 'No. Ultrasound can show some masses but may miss small tumours and flat lesions spreading over the bladder surface. The basis of diagnosis is cystoscopy — looking directly inside the bladder.'
+          },
+          {
+            q: 'The tumour has been removed — am I cured?',
+            a: 'Removing the tumour is an important step but does not mean the disease is over. Bladder cancer has a strong tendency to recur. Follow-up by cystoscopy at set intervals is therefore required, and it lasts a lifetime. The intervals lengthen over time but do not come to an end.'
+          },
+          {
+            q: 'Why is a second TURBT needed?',
+            a: 'If no muscle was seen in the specimen taken at the first procedure, or if the tumour is high grade, a second resection is carried out 2–6 weeks later to be certain whether the disease has invaded the muscle. This is not an error but a planned step; incorrect staging leads to incorrect treatment.'
+          },
+          {
+            q: 'Will my bladder be removed?',
+            a: 'That only comes into consideration if the tumour has invaded the bladder muscle. In tumours that have not, the bladder is preserved and treatment is delivered inside it. The decision is made by pathological examination of the tissue taken at TURBT, not by imaging.'
+          },
+          {
+            q: 'What is BCG treatment — is it chemotherapy?',
+            a: 'No, BCG is an immune treatment; it is instilled into the bladder so that your own defences respond to the tumour cells. It can cause frequency, burning and fever. These effects are usually manageable, though rarely the treatment has to be stopped.'
+          },
+          {
+            q: 'Does stopping smoking make any difference?',
+            a: 'Yes. Smoking is the most important risk factor for bladder cancer, and stopping affects not only the risk of a new cancer but the course of the existing disease. It is the one step that contributes to treatment and is entirely in your own hands.'
+          },
+          {
+            q: 'How long does follow-up last?',
+            a: 'For life. The intervals are set by risk group and become less frequent over the years, but they are not abandoned. Feeling well is not a reason to stop; most recurrences are seen at cystoscopy before they cause any symptoms.'
+          },
+          {
+            q: 'Can I have my follow-up at home after I return?',
+            a: 'Yes, and that is in fact preferable. The pathology report, the risk group and the follow-up intervals are provided in writing so that your own urologist can schedule the cystoscopies. What matters is that the follow-up happens, not where.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Non-muscle-invasive Bladder Cancer — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/non-muscle-invasive-bladder-cancer'
+          },
+          {
+            label: 'EAU Guidelines on Muscle-invasive and Metastatic Bladder Cancer — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer'
+          }
+        ]
+      },
+      de: {
+        title: 'Blasenkrebs: von der Diagnose zur Behandlung',
+        summary: 'Schmerzloses Blut im Urin ist das häufigste erste Zeichen, und dass es von selbst aufhört, bedeutet nicht, dass das Problem verschwunden ist. Diese Seite behandelt Diagnose, die Frage der Muskelinvasion und warum die Nachsorge lebenslang dauert.',
+        metaTitle: 'Blasenkrebs: Symptome, Diagnose und Behandlung',
+        metaDescription: 'Was Blut im Urin bedeutet, Blasenspiegelung, TUR-B, die Unterscheidung der Muskelinvasion, Behandlungen in der Blase, radikale Zystektomie und lebenslange Nachsorge.',
+        quickFacts: { duration: 'TUR-B 30–60 Minuten', anesthesia: 'Spinal- oder Vollnarkose', hospitalStay: '1–2 Nächte bei TUR-B', stayInTurkey: '5–7 Tage (TUR-B); bei Zystektomie deutlich länger', returnToWork: '1–2 Wochen (TUR-B)', flightClearance: '7–10 Tage (TUR-B)' },
+        definition: [
+          'Blasenkrebs geht von den Zellen aus, die die Innenfläche des harnspeichernden Organs auskleiden. Sein häufigstes erstes Zeichen ist BLUT IM URIN, und diese Blutung ist typischerweise SCHMERZLOS.',
+          'DER WICHTIGSTE HINWEIS DIESER SEITE LAUTET: Haben Sie einmal Blut im Urin gesehen und war es am nächsten Tag verschwunden, so ist das Problem nicht verschwunden. Bei Blasenkrebs kommt und geht die Blutung; das klare Intervall dazwischen bedeutet nicht, dass keine Erkrankung vorliegt. Der häufigste Fehler ist, den Arztbesuch aufzuschieben, weil die Blutung aufgehört hat. Schmerzloses Blut im Urin muss abgeklärt werden, bis das Gegenteil bewiesen ist.',
+          'DER WICHTIGSTE RISIKOFAKTOR IST DAS RAUCHEN. Die Blase steht lange mit Stoffen in Kontakt, die über den Urin ausgeschieden werden; Verbindungen aus dem Zigarettenrauch werden über die Nieren gefiltert und sammeln sich in der Blase. Auch langjährige berufliche Belastung in der Farben-, Gummi- und bestimmten Chemieindustrien birgt ein Risiko.',
+          'Grundlage der Diagnose ist die Blasenspiegelung: Mit einer schlanken Kamera wird über die Harnröhre in die Blase geschaut. Hinzu kommen Bildgebung (meist CT-Urographie) und Urinzytologie. Ultraschall allein genügt nicht; kleine Tumoren und flache, oberflächlich ausgebreitete Herde können übersehen werden.',
+          'DIE FRAGE, DIE DIE GESAMTE BEHANDLUNG BESTIMMT, LAUTET: Hat der Tumor die Blasenmuskulatur erreicht? Bei Tumoren ohne Muskelbefall bleibt die Blase erhalten und die Behandlung erfolgt in der Blase. Bei Muskelbefall kommt die Entfernung der gesamten Blase infrage. Diese Unterscheidung trifft die pathologische Untersuchung des bei der TUR-B entnommenen Gewebes.',
+          'Die TUR-B (Abtragung des Blasentumors über die Harnröhre) ist zugleich Behandlung und Diagnose: Der Tumor wird entfernt und es wird erkennbar, ob die Muskelschicht befallen ist. Findet der Pathologe im Präparat keine Muskulatur oder ist der Tumor hochgradig, kann 2–6 Wochen später eine zweite TUR-B nötig sein. Das ist kein Fehler, sondern ein geplanter Schritt.'
+        ],
+        eligibility: {
+          suitable: ['Jede Person, die Blut im Urin bemerkt hat — auch schmerzlos und auch wenn es von selbst aufhörte', 'Patienten mit einer bei der Blasenspiegelung gefundenen Raumforderung', 'Patienten mit Wandverdickung oder verdächtigem Areal in der Bildgebung', 'Patienten mit früher behandeltem Blasentumor und neuem Befund in der Nachsorge', 'Patienten mit langer Rauchergeschichte oder beruflicher Belastung und ungeklärten Harnbeschwerden'],
+          notSuitable: ['Patienten mit akutem Harnwegsinfekt — auch er verursacht Blut im Urin; zuerst behandeln und den Urin erneut beurteilen', 'Patienten mit nicht eingestellter Gerinnungsstörung — wird vorher korrigiert', 'Patienten, deren Allgemeinzustand eine radikale Operation nicht zulässt — dann kommen blasenerhaltende Vorgehen und die Zusammenarbeit mit der Onkologie infrage', 'Intensive Behandlung bei älteren Patienten mit sehr begrenzter Lebenserwartung — Ziel kann die Beschwerdekontrolle sein']
+        },
+        technology: ['Direkte Betrachtung der Blase durch Zystoskopie', 'CT-Urographie — Beurteilung auch der oberen Harnwege', 'Urinzytologie', 'TUR-B — Probenentnahme einschließlich der Muskelschicht', 'Instillation von Medikamenten in die Blase (Chemotherapie oder BCG)', 'Bei Bedarf radikale Zystektomie und Harnableitung'],
+        surgeonExperience: { caseVolume: '', note: 'Die uroonkologische Chirurgie gehört zu den Arbeitsgebieten von Doz. Dr. Müslüm Ergün. Beim Blasenkrebs wird der Behandlungsplan unter gemeinsamer Abwägung von Tumorgrad, Muskelinvasion, Zahl und Größe der Herde und Allgemeinzustand erstellt.' },
+        timeline: [
+          { when: 'Schritt 1', title: 'Abklärung von Blut im Urin', body: 'Ein Infekt wird ausgeschlossen, Urinzytologie abgenommen, Bildgebung durchgeführt und eine Blasenspiegelung geplant. Dass die Blutung aufgehört hat, beendet die Abklärung nicht.' },
+          { when: 'Schritt 2', title: 'TUR-B', body: 'Der Tumor wird über die Harnröhre abgetragen und ein Präparat einschließlich der Muskelschicht gewonnen. Der Eingriff dauert 30–60 Minuten; meist sind 1–2 Nächte stationär nötig.' },
+          { when: 'Schritt 3', title: 'Pathologie und Risikogruppe', body: 'Der Befund nennt den Grad des Tumors und ob die Muskulatur befallen ist. Zusammen mit Zahl und Größe der Herde ergibt sich die Risikogruppe, nach der der Plan erstellt wird.' },
+          { when: 'Schritt 4', title: 'Ohne Muskelbefall: Behandlung in der Blase', body: 'Bei niedrigem Risiko kann eine einmalige Instillation genügen. Bei mittlerem und hohem Risiko werden Zyklen mit BCG oder Chemotherapie geplant. Bei hochgradigen Tumoren kommt eine erneute TUR-B infrage.' },
+          { when: 'Schritt 4b', title: 'Mit Muskelbefall: radikale Behandlung', body: 'Die Entfernung der gesamten Blase mit Harnableitung wird erwogen. Bei vielen Patienten kommt eine Chemotherapie vor der Operation infrage. Blasenerhaltende Vorgehen werden bei ausgewählten Patienten besprochen.' },
+          { when: 'Danach', title: 'Lebenslange Nachsorge', body: 'In festen Abständen wird eine Blasenspiegelung durchgeführt. Die Abstände richten sich nach der Risikogruppe und werden länger, enden aber nicht.' }
+        ],
+        risks: ['RÜCKFALL: Blasenkrebs neigt stark zum Wiederauftreten. Dass der Tumor entfernt wurde, bedeutet nicht, dass die Erkrankung beendet ist; das liegt in ihrer Natur und ist kein Versagen des Verfahrens', 'ABBRUCH DER NACHSORGE: das größte reale Risiko. Wer sich wohlfühlt und nicht zur Blasenspiegelung kommt, kann ein noch behandelbares Rezidiv verpassen', 'Blutung und Brennen beim Wasserlassen nach TUR-B — in den ersten Tagen zu erwarten', 'Perforation der Blase — selten; der Katheter muss dann länger liegen', 'Harnwegsinfekt', 'Verengung der Harnröhre — kann später auftreten', 'Beschwerden durch BCG in der Blase — häufiger Harndrang, Brennen, Fieber; selten muss die Behandlung abgebrochen werden', 'Nach radikaler Zystektomie: dauerhafte Änderung des Wasserlassens, Auswirkungen auf die Sexualfunktion, Darmprobleme und die Risiken einer langen Operation'],
+        alternatives: ['Einmalige Instillation nach TUR-B und Beobachtung bei Tumoren mit niedrigem Risiko', 'Zyklen mit BCG oder Chemotherapie in der Blase bei mittlerem bis hohem Risiko', 'Frühe radikale Zystektomie bei Hochrisikotumoren ohne Muskelbefall — bei ausgewählten Patienten', 'Chemotherapie vor der Operation und anschließende radikale Zystektomie bei Muskelbefall', 'Blasenerhaltende Dreifachtherapie (TUR-B + Bestrahlung + Chemotherapie) — bei ausgewählten Patienten', 'Auf Beschwerdekontrolle gerichtete Behandlung bei nicht operationsfähigen Patienten'],
+        comparison: {
+          title: 'Blasenkrebs ohne und mit Muskelbefall',
+          columns: ['Kriterium', 'Ohne Muskelbefall (oberflächlich)', 'Mit Muskelbefall'],
+          rows: [
+            { label: 'Bleibt die Blase erhalten?', values: ['Ja', 'Bei den meisten nicht'] },
+            { label: 'Hauptbehandlung', values: ['TUR-B + Medikament in der Blase', 'Radikale Zystektomie (oft mit Chemotherapie)'] },
+            { label: 'Klinikaufenthalt', values: ['1–2 Nächte', 'Deutlich länger'] },
+            { label: 'Art des Wasserlassens', values: ['Unverändert', 'Dauerhaft verändert'] },
+            { label: 'Nachsorge', values: ['Lebenslang per Blasenspiegelung', 'Lebenslang per Bildgebung und Blutwerten'] },
+            { label: 'Wie entschieden wird', values: ['Pathologie der TUR-B', 'Pathologie der TUR-B + Staging-Bildgebung'] }
+          ],
+          note: 'Diese Unterscheidung bestimmt die gesamte Behandlung und lässt sich nur pathologisch treffen. Die Bildgebung allein kann einen Muskelbefall nicht sicher belegen.'
+        },
+        recovery: [
+          { period: 'Erste 48 Stunden (TUR-B)', body: 'Ein Katheter liegt, bei Bedarf wird gespült. Rosa bis roter Urin ist zu erwarten.' },
+          { period: 'Woche 1', body: 'Der Katheter ist entfernt. Brennen und häufiger Harndrang können auftreten; reichliches Trinken wird empfohlen. Schweres Heben wird vermieden.' },
+          { period: 'Woche 2–4', body: 'Der Alltag wird wieder aufgenommen. Ist eine Behandlung in der Blase geplant, beginnt sie in dieser Zeit.' },
+          { period: 'Ab Monat 3', body: 'Die erste Kontroll-Blasenspiegelung erfolgt. Ist sie unauffällig, werden die Abstände je nach Risikogruppe länger — die Nachsorge endet jedoch nicht.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Der Preis unterscheidet sich deutlich danach, ob nur eine TUR-B nötig ist oder zusätzlich Instillationszyklen bzw. eine radikale Operation. Ein verbindliches Angebot ist möglich, sobald der pathologische Befund vorliegt.' },
+        packageIncludes: ['Urologische Abklärung, Bildgebung und Urinzytologie', 'Blasenspiegelung und TUR-B', 'Narkose und 1–2 Nächte stationär', 'Pathologische Untersuchung und Einstufung der Risikogruppe', 'Schriftlicher Nachsorgeplan', 'Transfers Flughafen–Krankenhaus–Hotel', 'Unterkunft (Patient + 1 Begleitperson)', 'Medizinischer Dolmetscher und Fernbetreuung nach Ihrer Rückkehr'],
+        faqs: [
+          { q: 'Ich hatte einmal Blut im Urin, dann war es weg. Soll ich trotzdem zum Arzt?', a: 'Ja, unbedingt. Das ist die wichtigste Botschaft dieser Seite. Bei Blasenkrebs kommt und geht die Blutung; klarer Urin am nächsten Tag bedeutet nicht, dass das Problem vorüber ist. Schmerzloses Blut im Urin muss abgeklärt werden, bis das Gegenteil bewiesen ist. Abwarten verzögert die Diagnose, und eine späte Diagnose erschwert die Behandlung.' },
+          { q: 'Reicht ein Ultraschall?', a: 'Nein. Der Ultraschall kann manche Raumforderungen zeigen, kleine Tumoren und flache, über die Blasenoberfläche ausgebreitete Herde aber übersehen. Grundlage der Diagnose ist die Blasenspiegelung — der direkte Blick in die Blase.' },
+          { q: 'Der Tumor wurde entfernt — bin ich geheilt?', a: 'Die Entfernung ist ein wichtiger Schritt, bedeutet aber nicht das Ende der Erkrankung. Blasenkrebs neigt stark zum Wiederauftreten. Deshalb ist eine Nachsorge mit Blasenspiegelungen in festen Abständen erforderlich, und zwar lebenslang. Die Abstände werden länger, enden aber nicht.' },
+          { q: 'Warum ist eine zweite TUR-B nötig?', a: 'Wurde im ersten Präparat keine Muskulatur gesehen oder ist der Tumor hochgradig, erfolgt 2–6 Wochen später eine zweite Abtragung, um sicher zu klären, ob die Muskulatur befallen ist. Das ist kein Fehler, sondern ein geplanter Schritt; eine falsche Stadieneinteilung führt zu falscher Behandlung.' },
+          { q: 'Wird meine Blase entfernt?', a: 'Das kommt nur infrage, wenn der Tumor die Blasenmuskulatur erreicht hat. Ohne Muskelbefall bleibt die Blase erhalten und die Behandlung erfolgt in der Blase. Entschieden wird dies anhand der pathologischen Untersuchung des bei der TUR-B entnommenen Gewebes, nicht anhand der Bildgebung.' },
+          { q: 'Was ist die BCG-Behandlung, ist das Chemotherapie?', a: 'Nein, BCG ist eine Immuntherapie; sie wird in die Blase eingebracht, damit die körpereigene Abwehr auf die Tumorzellen reagiert. Sie kann häufigen Harndrang, Brennen und Fieber verursachen. Diese Nebenwirkungen sind meist beherrschbar, selten muss die Behandlung abgebrochen werden.' },
+          { q: 'Ändert es etwas, wenn ich das Rauchen aufgebe?', a: 'Ja. Rauchen ist der wichtigste Risikofaktor für Blasenkrebs, und das Aufhören betrifft nicht nur das Risiko eines neuen Tumors, sondern auch den Verlauf der bestehenden Erkrankung. Es ist der eine Schritt, der zur Behandlung beiträgt und vollständig in Ihrer Hand liegt.' },
+          { q: 'Wie lange dauert die Nachsorge?', a: 'Lebenslang. Die Abstände richten sich nach der Risikogruppe und werden über die Jahre seltener, aufgegeben werden sie nicht. Sich wohlzufühlen ist kein Grund aufzuhören; die meisten Rezidive zeigen sich bei der Blasenspiegelung, bevor sie Beschwerden machen.' },
+          { q: 'Kann ich die Nachsorge nach der Rückkehr zu Hause machen lassen?', a: 'Ja, und das ist sogar vorzuziehen. Pathologischer Befund, Risikogruppe und Nachsorgeabstände werden schriftlich mitgegeben, sodass Ihre Urologin oder Ihr Urologe die Blasenspiegelungen planen kann. Wichtig ist, dass die Nachsorge stattfindet, nicht wo.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-muscle-invasive Bladder Cancer — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/non-muscle-invasive-bladder-cancer' },
+          { label: 'EAU Guidelines on Muscle-invasive and Metastatic Bladder Cancer — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer' }
+        ]
+      },
+      fr: {
+        title: 'Cancer de la vessie : du diagnostic au traitement',
+        summary: 'Du sang indolore dans les urines est le premier signe le plus fréquent, et le fait qu’il cesse seul ne signifie pas que le problème a disparu. Cette page traite du diagnostic, de la question de l’invasion musculaire et des raisons pour lesquelles la surveillance dure toute la vie.',
+        metaTitle: 'Cancer de la vessie : symptômes, diagnostic et traitement',
+        metaDescription: 'Ce que signifie le sang dans les urines, la cystoscopie, la RTUV, la distinction de l’invasion musculaire, les traitements intravésicaux, la cystectomie radicale et la surveillance à vie.',
+        quickFacts: { duration: 'RTUV 30–60 minutes', anesthesia: 'Rachianesthésie ou anesthésie générale', hospitalStay: '1–2 nuits pour la RTUV', stayInTurkey: '5–7 jours (RTUV) ; nettement plus pour une cystectomie', returnToWork: '1–2 semaines (RTUV)', flightClearance: '7–10 jours (RTUV)' },
+        definition: [
+          'Le cancer de la vessie naît des cellules qui tapissent la face interne de l’organe où s’accumule l’urine. Son premier signe le plus fréquent est la PRÉSENCE DE SANG DANS LES URINES, et ce saignement est typiquement INDOLORE.',
+          'L’AVERTISSEMENT LE PLUS IMPORTANT DE CETTE PAGE EST LE SUIVANT : si vous avez vu du sang une fois et qu’il avait disparu le lendemain, le problème n’a pas disparu. Dans le cancer de la vessie, le saignement va et vient ; l’intervalle clair ne signifie pas l’absence de maladie. L’erreur la plus fréquente est de repousser la consultation parce que le saignement a cessé. Du sang indolore dans les urines doit être exploré jusqu’à preuve du contraire.',
+          'LE PRINCIPAL FACTEUR DE RISQUE EST LE TABAC. La vessie est en contact prolongé avec les substances éliminées dans l’urine ; les composés de la fumée de cigarette, filtrés par les reins, s’y accumulent. Une exposition professionnelle prolongée dans les industries des colorants, du caoutchouc et de certains produits chimiques comporte également un risque.',
+          'La base du diagnostic est la cystoscopie : on regarde l’intérieur de la vessie avec une fine caméra introduite par les voies naturelles. S’y ajoutent l’imagerie (le plus souvent un uroscanner) et la cytologie urinaire. L’échographie seule ne suffit pas ; elle peut méconnaître de petites tumeurs et des lésions planes étendues en surface.',
+          'LA QUESTION QUI DÉTERMINE TOUT LE TRAITEMENT EST CELLE-CI : la tumeur a-t-elle envahi le muscle vésical ? Lorsque ce n’est pas le cas (maladie superficielle), la vessie est conservée et le traitement est délivré à l’intérieur. En cas d’atteinte musculaire, l’ablation complète de la vessie s’envisage. Cette distinction est établie par l’examen anatomopathologique du tissu prélevé lors de la RTUV.',
+          'La RTUV (résection de la tumeur par les voies naturelles) est à la fois traitement et diagnostic : la tumeur est retirée et l’on sait en même temps si la couche musculaire est atteinte. Si le pathologiste ne voit pas de muscle dans le prélèvement, ou si la tumeur est de haut grade, une seconde RTUV peut être nécessaire 2 à 6 semaines plus tard. Ce n’est ni une erreur ni un échec, mais une étape planifiée.'
+        ],
+        eligibility: {
+          suitable: ['Toute personne ayant vu du sang dans ses urines — même indolore et même s’il a cessé seul', 'Patients chez qui une masse vésicale est découverte en cystoscopie', 'Patients présentant un épaississement de la paroi ou une zone suspecte à l’imagerie', 'Patients déjà traités pour une tumeur de vessie chez qui une nouvelle lésion apparaît au suivi', 'Patients tabagiques de longue date ou exposés professionnellement, avec des troubles urinaires inexpliqués'],
+          notSuitable: ['Patients présentant une infection urinaire active — elle aussi provoque du sang dans les urines ; on la traite puis on réévalue', 'Patients présentant un trouble de la coagulation non équilibré — corrigé avant le geste', 'Patients dont l’état général ne permet pas une chirurgie radicale — approches conservatrices et collaboration avec l’oncologie', 'Traitement intensif chez des patients âgés à espérance de vie très limitée — l’objectif peut être le contrôle des symptômes']
+        },
+        technology: ['Examen direct de la vessie par cystoscopie', 'Uroscanner — évaluation également du haut appareil urinaire', 'Cytologie urinaire', 'RTUV — prélèvement incluant la couche musculaire', 'Instillation intravésicale (chimiothérapie ou BCG)', 'Cystectomie radicale et reconstruction urinaire si nécessaire'],
+        surgeonExperience: { caseVolume: '', note: 'La chirurgie uro-oncologique fait partie des domaines d’activité du Dr Müslüm Ergün, maître de conférences. Dans le cancer de la vessie, le plan de traitement repose sur le grade tumoral, l’invasion musculaire, le nombre et la taille des lésions et l’état général du patient.' },
+        timeline: [
+          { when: 'Étape 1', title: 'Exploration du sang dans les urines', body: 'On écarte une infection, on réalise une cytologie urinaire et une imagerie, et l’on programme une cystoscopie. L’arrêt du saignement n’interrompt pas l’exploration.' },
+          { when: 'Étape 2', title: 'RTUV', body: 'La tumeur est retirée par les voies naturelles et un prélèvement incluant le muscle est obtenu. Le geste dure 30 à 60 minutes et nécessite généralement 1 à 2 nuits.' },
+          { when: 'Étape 3', title: 'Anatomopathologie et groupe de risque', body: 'Le compte rendu précise le grade et l’éventuelle invasion musculaire. Associé au nombre et à la taille des lésions, il définit le groupe de risque dont découle le plan.' },
+          { when: 'Étape 4', title: 'Sans invasion musculaire : traitement intravésical', body: 'En risque faible, une instillation unique peut suffire. En risque intermédiaire ou élevé, des cures de BCG ou de chimiothérapie sont programmées. Pour les tumeurs de haut grade, une seconde RTUV s’envisage.' },
+          { when: 'Étape 4b', title: 'Avec invasion musculaire : traitement radical', body: 'L’ablation complète de la vessie avec reconstruction urinaire est envisagée. Une chimiothérapie préopératoire s’envisage chez de nombreux patients. Les approches conservatrices sont discutées dans des cas sélectionnés.' },
+          { when: 'Ensuite', title: 'Surveillance à vie', body: 'Des cystoscopies sont réalisées à intervalles définis. Ces intervalles dépendent du groupe de risque et s’allongent avec le temps, mais ne prennent pas fin.' }
+        ],
+        risks: ['RÉCIDIVE : le cancer de la vessie récidive volontiers. Le retrait de la tumeur ne signifie pas la fin de la maladie ; c’est la nature de l’affection, non un échec de la méthode', 'ARRÊT DU SUIVI : le plus grand risque réel. Un patient qui se sent bien et ne vient pas à la cystoscopie peut manquer une récidive encore curable', 'Saignement et brûlures mictionnelles après la RTUV — attendus les premiers jours', 'Perforation vésicale — peu fréquente ; elle peut imposer un sondage prolongé', 'Infection urinaire', 'Rétrécissement urétral — possible secondairement', 'Troubles liés au BCG intravésical — pollakiurie, brûlures, fièvre ; rarement l’arrêt du traitement est nécessaire', 'Après cystectomie radicale : modification définitive de la miction, retentissement sur la fonction sexuelle, troubles digestifs et risques d’une longue intervention'],
+        alternatives: ['Instillation unique après RTUV et surveillance dans les tumeurs à faible risque', 'Cures de BCG ou de chimiothérapie intravésicale en risque intermédiaire à élevé', 'Cystectomie radicale précoce en maladie à haut risque sans invasion musculaire — chez des patients sélectionnés', 'Chimiothérapie préopératoire puis cystectomie radicale en cas d’invasion musculaire', 'Trimodalité conservatrice (RTUV + radiothérapie + chimiothérapie) — chez des patients sélectionnés', 'Traitements visant le contrôle des symptômes chez les patients non opérables'],
+        comparison: {
+          title: 'Cancer de vessie sans et avec invasion musculaire',
+          columns: ['Critère', 'Sans invasion (superficiel)', 'Avec invasion musculaire'],
+          rows: [
+            { label: 'La vessie est-elle conservée ?', values: ['Oui', 'Chez la plupart, non'] },
+            { label: 'Traitement principal', values: ['RTUV + instillation', 'Cystectomie radicale (souvent avec chimiothérapie)'] },
+            { label: 'Hospitalisation', values: ['1–2 nuits', 'Nettement plus longue'] },
+            { label: 'Façon d’uriner', values: ['Inchangée', 'Modifiée définitivement'] },
+            { label: 'Surveillance', values: ['À vie, par cystoscopie', 'À vie, par imagerie et biologie'] },
+            { label: 'Comment on décide', values: ['Anatomopathologie de la RTUV', 'Anatomopathologie + imagerie de stadification'] }
+          ],
+          note: 'Cette distinction détermine tout le traitement et ne peut être établie que par l’examen anatomopathologique. L’imagerie seule ne prouve pas avec certitude l’invasion musculaire.'
+        },
+        recovery: [
+          { period: 'Premières 48 heures (RTUV)', body: 'Une sonde est en place et la vessie est lavée si nécessaire. Des urines rosées à rouges sont attendues.' },
+          { period: 'Semaine 1', body: 'La sonde est retirée. Brûlures et pollakiurie possibles ; il est conseillé de boire abondamment. Le port de charges est évité.' },
+          { period: 'Semaines 2–4', body: 'Reprise de la vie quotidienne. Si un traitement intravésical est prévu, il débute à cette période.' },
+          { period: 'À partir du 3e mois', body: 'La première cystoscopie de contrôle est réalisée. Si elle est normale, les intervalles s’allongent selon le groupe de risque — mais la surveillance ne s’arrête pas.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Le prix varie nettement selon qu’une RTUV seule suffit ou que des cures intravésicales voire une chirurgie radicale s’y ajoutent. Un devis ferme peut être remis une fois le résultat anatomopathologique connu.' },
+        packageIncludes: ['Évaluation urologique, imagerie et cytologie urinaire', 'Cystoscopie et RTUV', 'Anesthésie et 1 à 2 nuits d’hospitalisation', 'Examen anatomopathologique et détermination du groupe de risque', 'Plan de surveillance remis par écrit', 'Transferts aéroport–hôpital–hôtel', 'Hébergement (patient + 1 accompagnant)', 'Interprète médical et suivi à distance après votre retour'],
+        faqs: [
+          { q: 'J’ai vu du sang une fois dans mes urines, puis cela a cessé. Dois-je quand même consulter ?', a: 'Oui, absolument. C’est le message le plus important de cette page. Dans le cancer de la vessie, le saignement va et vient ; des urines claires le lendemain ne signifient pas que le problème est passé. Du sang indolore dans les urines doit être exploré jusqu’à preuve du contraire. Attendre retarde le diagnostic, et un diagnostic retardé complique le traitement.' },
+          { q: 'Une échographie suffit-elle ?', a: 'Non. L’échographie peut montrer certaines masses mais méconnaître de petites tumeurs et des lésions planes étendues en surface. La base du diagnostic est la cystoscopie — regarder directement dans la vessie.' },
+          { q: 'La tumeur a été retirée — suis-je guéri ?', a: 'Le retrait est une étape importante mais ne signifie pas la fin de la maladie. Le cancer de la vessie récidive volontiers. Une surveillance par cystoscopie à intervalles définis est donc nécessaire, et elle dure toute la vie. Les intervalles s’allongent mais ne cessent pas.' },
+          { q: 'Pourquoi une seconde RTUV ?', a: 'Si aucun muscle n’a été vu dans le premier prélèvement, ou si la tumeur est de haut grade, une seconde résection est réalisée 2 à 6 semaines plus tard afin de savoir avec certitude si le muscle est envahi. Ce n’est pas une erreur mais une étape planifiée ; une stadification erronée conduit à un traitement erroné.' },
+          { q: 'Va-t-on m’enlever la vessie ?', a: 'Cela ne s’envisage que si la tumeur a envahi le muscle vésical. Sans invasion, la vessie est conservée et le traitement délivré à l’intérieur. La décision repose sur l’anatomopathologie du prélèvement de RTUV, non sur l’imagerie.' },
+          { q: 'Qu’est-ce que le BCG, est-ce une chimiothérapie ?', a: 'Non, le BCG est une immunothérapie : instillé dans la vessie, il vise à faire réagir vos propres défenses contre les cellules tumorales. Il peut provoquer pollakiurie, brûlures et fièvre. Ces effets sont généralement gérables, mais il faut rarement interrompre le traitement.' },
+          { q: 'Arrêter de fumer change-t-il quelque chose ?', a: 'Oui. Le tabac est le principal facteur de risque du cancer de la vessie, et l’arrêt concerne non seulement le risque d’un nouveau cancer mais aussi l’évolution de la maladie actuelle. C’est la seule étape qui contribue au traitement et qui dépend entièrement de vous.' },
+          { q: 'Combien de temps dure la surveillance ?', a: 'Toute la vie. Les intervalles dépendent du groupe de risque et s’espacent au fil des ans, mais on ne les abandonne pas. Se sentir bien n’est pas une raison d’arrêter : la plupart des récidives sont vues en cystoscopie avant de provoquer des symptômes.' },
+          { q: 'Puis-je faire mon suivi chez moi après le retour ?', a: 'Oui, et c’est même préférable. Le compte rendu anatomopathologique, le groupe de risque et les intervalles de surveillance sont remis par écrit afin que votre urologue puisse programmer les cystoscopies. L’essentiel est que le suivi ait lieu, pas l’endroit.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-muscle-invasive Bladder Cancer — Association européenne d’urologie', url: 'https://uroweb.org/guidelines/non-muscle-invasive-bladder-cancer' },
+          { label: 'EAU Guidelines on Muscle-invasive and Metastatic Bladder Cancer — Association européenne d’urologie', url: 'https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer' }
+        ]
+      },
+      ru: {
+        title: 'Рак мочевого пузыря: от диагноза к лечению',
+        summary: 'Безболезненная кровь в моче — самый частый первый признак, и то, что она прошла сама, не значит, что проблема исчезла. Здесь — о диагностике, вопросе прорастания в мышцу и о том, почему наблюдение длится всю жизнь.',
+        metaTitle: 'Рак мочевого пузыря: симптомы, диагностика и лечение',
+        metaDescription: 'Что означает кровь в моче, цистоскопия, ТУР мочевого пузыря, различие по прорастанию в мышцу, внутрипузырное лечение, радикальная цистэктомия и пожизненное наблюдение.',
+        quickFacts: { duration: 'ТУР 30–60 минут', anesthesia: 'Спинальная или общая анестезия', hospitalStay: '1–2 ночи при ТУР', stayInTurkey: '5–7 дней (ТУР); при цистэктомии заметно дольше', returnToWork: '1–2 недели (ТУР)', flightClearance: '7–10 дней (ТУР)' },
+        definition: [
+          'Рак мочевого пузыря исходит из клеток, выстилающих внутреннюю поверхность органа, в котором накапливается моча. Самый частый первый признак — КРОВЬ В МОЧЕ, и это кровотечение обычно БЕЗБОЛЕЗНЕННОЕ.',
+          'САМОЕ ВАЖНОЕ ПРЕДУПРЕЖДЕНИЕ ЭТОЙ СТРАНИЦЫ ТАКОЕ: если вы однажды увидели кровь в моче, а на следующий день её не было, проблема не исчезла. При раке мочевого пузыря кровотечение то появляется, то пропадает; светлый промежуток между эпизодами не означает отсутствия болезни. Самая частая ошибка пациентов — откладывать обращение, потому что кровотечение прекратилось. Безболезненная кровь в моче — признак, который нужно обследовать, пока не доказано обратное.',
+          'ГЛАВНЫЙ ФАКТОР РИСКА — КУРЕНИЕ. Мочевой пузырь долго соприкасается с веществами, которые выводятся с мочой; соединения из табачного дыма фильтруются почками и накапливаются в пузыре. Риск несёт и длительное профессиональное воздействие в производстве красителей, резины и ряда химических веществ.',
+          'Основа диагностики — цистоскопия: внутрь мочевого пузыря смотрят тонкой камерой, введённой через мочеиспускательный канал. К ней добавляются визуализация (чаще компьютерная томография с контрастированием мочевых путей) и цитологическое исследование мочи. Одного ультразвука недостаточно: он может не увидеть мелкие опухоли и плоские, поверхностно распространяющиеся очаги.',
+          'ВОПРОС, ОПРЕДЕЛЯЮЩИЙ ВСЁ ЛЕЧЕНИЕ, ТАКОВ: проросла ли опухоль в мышцу мочевого пузыря? Если нет (поверхностная болезнь), пузырь сохраняют, а лечение проводят изнутри него. При прорастании в мышцу рассматривают удаление всего пузыря. Это различие устанавливает патоморфологическое исследование ткани, взятой при ТУР.',
+          'ТУР мочевого пузыря (удаление опухоли через мочеиспускательный канал) — это одновременно лечение и диагностика: опухоль удаляют и тут же выясняют, затронут ли мышечный слой. Если патоморфолог не увидел в материале мышцу или опухоль высокой степени злокачественности, через 2–6 недель может понадобиться повторная ТУР. Это не ошибка и не неудача, а запланированный этап.'
+        ],
+        eligibility: {
+          suitable: ['Любой пациент, увидевший кровь в моче, — обследовать нужно, даже если боли не было и кровь прошла сама', 'Пациенты, у которых при цистоскопии найдено образование в мочевом пузыре', 'Пациенты с утолщением стенки пузыря или подозрительным участком при визуализации', 'Пациенты, ранее лечившиеся по поводу опухоли пузыря, у которых при наблюдении выявлен новый очаг', 'Пациенты с длительным стажем курения или профессиональным воздействием и необъяснимыми мочевыми жалобами'],
+          notSuitable: ['Пациенты с активной инфекцией мочевых путей — она тоже вызывает кровь в моче; сначала лечат и повторно оценивают мочу', 'Пациенты с некомпенсированным нарушением свёртывания крови — его корректируют до вмешательства', 'Пациенты, чьё общее состояние не позволяет радикальную операцию — тогда рассматривают органосохраняющие подходы и работу с онкологами', 'Интенсивное лечение у пожилых пациентов с очень ограниченной ожидаемой продолжительностью жизни — целью может быть контроль симптомов']
+        },
+        technology: ['Прямой осмотр мочевого пузыря при цистоскопии', 'Компьютерная томография мочевых путей — оценка и верхних отделов', 'Цитологическое исследование мочи', 'ТУР мочевого пузыря — забор материала с мышечным слоем', 'Внутрипузырное введение препарата (химиотерапия или БЦЖ)', 'При необходимости радикальная цистэктомия и реконструкция мочевых путей'],
+        surgeonExperience: { caseVolume: '', note: 'Уроонкологическая хирургия входит в сферу работы доц. д-ра Мюслюма Эргюна. При раке мочевого пузыря план лечения строится при совместной оценке степени злокачественности, прорастания в мышцу, числа и размера очагов и общего состояния пациента.' },
+        timeline: [
+          { when: 'Шаг 1', title: 'Обследование при крови в моче', body: 'Исключают инфекцию, берут цитологию мочи, выполняют визуализацию и планируют цистоскопию. То, что кровотечение прошло, обследование не отменяет.' },
+          { when: 'Шаг 2', title: 'ТУР мочевого пузыря', body: 'Опухоль удаляют через мочеиспускательный канал и берут материал, включающий мышечный слой. Вмешательство занимает 30–60 минут, обычно нужны 1–2 ночи в стационаре.' },
+          { when: 'Шаг 3', title: 'Патоморфология и группа риска', body: 'В заключении указывают степень злокачественности и наличие прорастания в мышцу. Вместе с числом и размером очагов это определяет группу риска, из которой следует план лечения.' },
+          { when: 'Шаг 4', title: 'Без прорастания: лечение внутри пузыря', body: 'При низком риске достаточно одного внутрипузырного введения. При среднем и высоком планируют курсы БЦЖ или химиотерапии. При опухолях высокой степени рассматривают повторную ТУР.' },
+          { when: 'Шаг 4б', title: 'С прорастанием: радикальное лечение', body: 'Рассматривают удаление всего пузыря с реконструкцией мочевых путей. У многих пациентов обсуждают химиотерапию до операции. Органосохраняющие подходы обсуждают у отобранных пациентов.' },
+          { when: 'Далее', title: 'Пожизненное наблюдение', body: 'Цистоскопию выполняют через определённые промежутки. Промежутки зависят от группы риска и со временем удлиняются, но не заканчиваются.' }
+        ],
+        risks: ['РЕЦИДИВ: рак мочевого пузыря склонен возвращаться. Удаление опухоли не означает окончания болезни; это природа заболевания, а не неудача метода', 'ПРЕКРАЩЕНИЕ НАБЛЮДЕНИЯ: самый большой реальный риск. Пациент, который хорошо себя чувствует и не приходит на цистоскопию, может пропустить ещё излечимый рецидив', 'Кровь в моче и жжение при мочеиспускании после ТУР — ожидаемы в первые дни', 'Перфорация мочевого пузыря — нечасто; может потребовать более долгого пребывания катетера', 'Инфекция мочевых путей', 'Сужение мочеиспускательного канала — может развиться позже', 'Жалобы на фоне внутрипузырной БЦЖ — учащённое мочеиспускание, жжение, лихорадка; редко лечение приходится прекращать', 'После радикальной цистэктомии: стойкое изменение способа мочеиспускания, влияние на половую функцию, кишечные нарушения и риски длительной операции'],
+        alternatives: ['Однократное внутрипузырное введение после ТУР и наблюдение при опухолях низкого риска', 'Курсы внутрипузырной БЦЖ или химиотерапии при среднем и высоком риске', 'Ранняя радикальная цистэктомия при высоком риске без прорастания в мышцу — у отобранных пациентов', 'Химиотерапия до операции и затем радикальная цистэктомия при прорастании в мышцу', 'Органосохраняющая трёхкомпонентная терапия (ТУР + лучевая + химиотерапия) — у отобранных пациентов', 'Лечение, направленное на контроль симптомов, у пациентов, которым операция не подходит'],
+        comparison: {
+          title: 'Рак мочевого пузыря без прорастания и с прорастанием в мышцу',
+          columns: ['Критерий', 'Без прорастания (поверхностный)', 'С прорастанием в мышцу'],
+          rows: [
+            { label: 'Сохраняется ли пузырь?', values: ['Да', 'У большинства нет'] },
+            { label: 'Основное лечение', values: ['ТУР + внутрипузырный препарат', 'Радикальная цистэктомия (часто с химиотерапией)'] },
+            { label: 'Пребывание в стационаре', values: ['1–2 ночи', 'Заметно дольше'] },
+            { label: 'Способ мочеиспускания', values: ['Не меняется', 'Меняется навсегда'] },
+            { label: 'Наблюдение', values: ['Пожизненно, цистоскопия', 'Пожизненно, визуализация и анализы'] },
+            { label: 'Как принимается решение', values: ['Патоморфология после ТУР', 'Патоморфология + визуализация для стадирования'] }
+          ],
+          note: 'Это различие определяет всё лечение и устанавливается только патоморфологически. Одна визуализация не доказывает прорастание в мышцу с уверенностью.'
+        },
+        recovery: [
+          { period: 'Первые 48 часов (ТУР)', body: 'Установлен катетер, при необходимости пузырь промывают. Розовая или красная моча — ожидаемое явление.' },
+          { period: '1-я неделя', body: 'Катетер удалён. Возможны жжение и учащённое мочеиспускание; рекомендуется обильное питьё. Поднятия тяжестей избегают.' },
+          { period: '2–4-я неделя', body: 'Возвращение к обычной жизни. Если запланировано внутрипузырное лечение, оно начинается в этот период.' },
+          { period: 'С 3-го месяца', body: 'Выполняют первую контрольную цистоскопию. Если она чистая, промежутки удлиняют по группе риска — но наблюдение не прекращается.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Стоимость заметно зависит от того, нужна ли только ТУР или ещё курсы внутрипузырного лечения либо радикальная операция. Точное предложение возможно после получения патоморфологического заключения.' },
+        packageIncludes: ['Урологическое обследование, визуализация и цитология мочи', 'Цистоскопия и ТУР мочевого пузыря', 'Анестезия и 1–2 ночи в стационаре', 'Патоморфологическое исследование и определение группы риска', 'Письменный план наблюдения', 'Трансферы аэропорт–больница–отель', 'Проживание (пациент + 1 сопровождающий)', 'Медицинский переводчик и дистанционное наблюдение после возвращения домой'],
+        faqs: [
+          { q: 'Я один раз увидел кровь в моче, потом она прошла. Нужно ли всё равно идти к врачу?', a: 'Да, обязательно. Это самое важное сообщение этой страницы. При раке мочевого пузыря кровотечение то появляется, то исчезает; чистая моча на следующий день не означает, что проблема прошла. Безболезненная кровь в моче требует обследования, пока не доказано обратное. Ожидание откладывает диагноз, а поздний диагноз усложняет лечение.' },
+          { q: 'Достаточно ли ультразвука?', a: 'Нет. Ультразвук может показать некоторые образования, но пропустить мелкие опухоли и плоские очаги, распространяющиеся по поверхности пузыря. Основа диагностики — цистоскопия, то есть прямой осмотр изнутри.' },
+          { q: 'Опухоль удалили — я вылечился?', a: 'Удаление опухоли — важный шаг, но это не означает окончания болезни. Рак мочевого пузыря склонен возвращаться. Поэтому нужны цистоскопии через определённые промежутки, и это наблюдение продолжается всю жизнь. Промежутки удлиняются, но не исчезают.' },
+          { q: 'Зачем нужна повторная ТУР?', a: 'Если в первом материале не было мышцы или опухоль высокой степени злокачественности, через 2–6 недель выполняют повторное удаление, чтобы точно знать, проросла ли болезнь в мышцу. Это не ошибка, а запланированный этап: неверное стадирование ведёт к неверному лечению.' },
+          { q: 'Удалят ли мне мочевой пузырь?', a: 'Это рассматривают только при прорастании опухоли в мышцу. Без прорастания пузырь сохраняют, а лечение проводят внутри него. Решение принимают по патоморфологии материала ТУР, а не по визуализации.' },
+          { q: 'Что такое БЦЖ, это химиотерапия?', a: 'Нет, БЦЖ — иммунное лечение; его вводят в мочевой пузырь, чтобы собственная защита организма отреагировала на опухолевые клетки. Оно может вызывать учащённое мочеиспускание, жжение и лихорадку. Эти явления обычно управляемы, но редко лечение приходится прекращать.' },
+          { q: 'Изменит ли что-то отказ от курения?', a: 'Да. Курение — главный фактор риска рака мочевого пузыря, и отказ влияет не только на риск новой опухоли, но и на течение имеющейся болезни. Это единственный шаг, который помогает лечению и полностью зависит от вас.' },
+          { q: 'Сколько длится наблюдение?', a: 'Всю жизнь. Промежутки определяются группой риска и с годами становятся реже, но наблюдение не бросают. Хорошее самочувствие — не повод прекращать: большинство рецидивов видны при цистоскопии ещё до появления жалоб.' },
+          { q: 'Можно ли наблюдаться дома после возвращения?', a: 'Да, и это даже предпочтительно. Патоморфологическое заключение, группа риска и промежутки наблюдения выдаются письменно, чтобы ваш уролог мог планировать цистоскопии. Важно, чтобы наблюдение велось, а не где именно.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-muscle-invasive Bladder Cancer — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/non-muscle-invasive-bladder-cancer' },
+          { label: 'EAU Guidelines on Muscle-invasive and Metastatic Bladder Cancer — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer' }
+        ]
+      },
+      ar: {
+        title: 'سرطان المثانة: من التشخيص إلى العلاج',
+        summary: 'الدم غير المؤلم في البول هو أكثر العلامات الأولى شيوعًا، وزواله تلقائيًا لا يعني أن المشكلة انتهت. تتناول هذه الصفحة التشخيص ومسألة غزو العضلة ولماذا تستمر المتابعة مدى الحياة.',
+        metaTitle: 'سرطان المثانة: الأعراض والتشخيص والعلاج',
+        metaDescription: 'ما معنى الدم في البول، وتنظير المثانة، واستئصال الورم عبر الإحليل، وتمييز غزو العضلة، والعلاجات داخل المثانة، والاستئصال الجذري، والمتابعة مدى الحياة.',
+        quickFacts: { duration: 'استئصال الورم 30–60 دقيقة', anesthesia: 'تخدير نصفي أو عام', hospitalStay: 'ليلة إلى ليلتين لاستئصال الورم', stayInTurkey: '5–7 أيام (استئصال الورم)؛ وأطول بوضوح عند الاستئصال الجذري', returnToWork: '1–2 أسبوع (استئصال الورم)', flightClearance: '7–10 أيام (استئصال الورم)' },
+        definition: [
+          'ينشأ سرطان المثانة من الخلايا المبطّنة للسطح الداخلي للعضو الذي يخزّن البول. وأكثر علاماته الأولى شيوعًا ظهور الدم في البول، وهذا النزف غير مؤلم في العادة.',
+          'أهم تنبيه في هذه الصفحة هو الآتي: إن رأيت الدم في بولك مرة وزال في اليوم التالي فالمشكلة لم تزل. ففي سرطان المثانة يأتي النزف ويذهب؛ والفترة الصافية بينهما لا تعني غياب المرض. وأكثر أخطاء المرضى شيوعًا تأجيل المراجعة لأن النزف توقّف. فالدم غير المؤلم في البول علامة يجب البحث فيها حتى يثبت العكس.',
+          'أهم عامل خطر هو التدخين. فالمثانة عضو يلامس طويلًا المواد التي تُطرح مع البول؛ ومركبات دخان السجائر تُرشَّح عبر الكلى وتتجمّع في المثانة. كما أن التعرض المهني الطويل في صناعات الأصباغ والمطاط وبعض الكيماويات يحمل خطرًا.',
+          'أساس التشخيص تنظير المثانة: يُنظَر إلى داخلها بكاميرا رفيعة تُدخَل عبر المجرى البولي. ويرافقه التصوير (غالبًا التصوير المقطعي للمسالك) والفحص الخلوي للبول. والموجات فوق الصوتية وحدها لا تكفي؛ فقد تفوّت الأورام الصغيرة والآفات المسطحة المنتشرة سطحيًا.',
+          'السؤال الذي يحدد العلاج كله هو: هل غزا الورم عضلة المثانة؟ ففي الأورام التي لم تغزُها (المرض السطحي) تُحفَظ المثانة ويُعطى العلاج داخلها. أما عند غزو العضلة فيُطرح استئصال المثانة كاملة. ويُحسم هذا التمييز بالفحص النسيجي المرضي للنسيج المأخوذ أثناء استئصال الورم عبر الإحليل.',
+          'استئصال الورم عبر الإحليل علاج وتشخيص معًا: يُزال الورم ويتضح في الوقت نفسه ما إذا كانت الطبقة العضلية مصابة. فإن لم يرَ الطبيب النسيجي عضلة في العينة أو كان الورم عالي الدرجة فقد يلزم استئصال ثانٍ بعد 2–6 أسابيع. وهذا ليس خطأ ولا فشلًا بل خطوة مخططة.'
+        ],
+        eligibility: {
+          suitable: ['كل من رأى دمًا في بوله — ويجب البحث حتى لو كان غير مؤلم وزال تلقائيًا', 'من يُكتشف لديهم كتلة في المثانة بالتنظير', 'من يوجد لديهم سماكة في جدار المثانة أو منطقة مشبوهة في التصوير', 'من عُولجوا سابقًا من ورم في المثانة وظهرت لديهم آفة جديدة في المتابعة', 'من لديهم تاريخ تدخين طويل أو تعرّض مهني مع شكوى بولية غير مفسَّرة'],
+          notSuitable: ['من لديهم التهاب نشط في المسالك البولية — فهو أيضًا يسبب دمًا في البول؛ يُعالَج أولًا ثم يُعاد تقييم البول', 'من لديهم اضطراب تخثّر غير مضبوط — يُصحَّح قبل الإجراء', 'من لا تسمح حالتهم العامة بجراحة جذرية — عندها تُطرح الأساليب الحافظة للمثانة والعمل مع الأورام', 'العلاج المكثف عند كبار السن ذوي العمر المتوقع المحدود جدًا — إذ قد يكون الهدف ضبط الشكوى']
+        },
+        technology: ['رؤية داخل المثانة مباشرةً بالتنظير', 'التصوير المقطعي للمسالك — وتقييم المسالك العلوية أيضًا', 'الفحص الخلوي للبول', 'استئصال الورم عبر الإحليل — أخذ عينة تشمل الطبقة العضلية', 'تقطير الدواء داخل المثانة (علاج كيميائي أو BCG)', 'الاستئصال الجذري للمثانة وإعادة بناء المسالك عند اللزوم'],
+        surgeonExperience: { caseVolume: '', note: 'جراحة الأورام البولية من مجالات عمل الأستاذ المشارك الدكتور مسلم إرغون. وفي سرطان المثانة تُوضع خطة العلاج بتقييم درجة الورم وغزو العضلة وعدد الآفات وحجمها والحالة العامة للمريض معًا.' },
+        timeline: [
+          { when: 'الخطوة 1', title: 'البحث في سبب الدم في البول', body: 'يُستبعَد الالتهاب، ويُؤخَذ الفحص الخلوي للبول، ويُجرى التصوير، ويُخطَّط لتنظير المثانة. وتوقّف النزف لا يوقف البحث.' },
+          { when: 'الخطوة 2', title: 'استئصال الورم عبر الإحليل', body: 'يُزال الورم عبر المجرى البولي وتُؤخذ عينة تشمل الطبقة العضلية. ويستغرق الإجراء 30–60 دقيقة ويلزم عادةً مبيت ليلة إلى ليلتين.' },
+          { when: 'الخطوة 3', title: 'الفحص النسيجي ومجموعة الخطورة', body: 'يذكر التقرير درجة الورم وما إذا غزا العضلة. وبدمج ذلك مع عدد الآفات وحجمها تُحدَّد مجموعة الخطورة وتُبنى الخطة عليها.' },
+          { when: 'الخطوة 4', title: 'من دون غزو العضلة: علاج داخل المثانة', body: 'في الخطورة المنخفضة قد تكفي جرعة واحدة داخل المثانة. وفي المتوسطة والعالية تُخطَّط دورات BCG أو علاج كيميائي. وفي الأورام عالية الدرجة يُطرح استئصال ثانٍ.' },
+          { when: 'الخطوة 4ب', title: 'مع غزو العضلة: علاج جذري', body: 'يُقيَّم استئصال المثانة كاملة مع إعادة بناء المسالك. ويُطرح العلاج الكيميائي قبل الجراحة عند كثير من المرضى. وتُناقَش الأساليب الحافظة للمثانة عند مرضى مختارين.' },
+          { when: 'بعد ذلك', title: 'متابعة مدى الحياة', body: 'يُجرى تنظير المثانة على فترات محددة. وتتحدد الفترات بمجموعة الخطورة وتتباعد مع الوقت، لكنها لا تنتهي.' }
+        ],
+        risks: ['التكرار: سرطان المثانة شديد الميل إلى العودة. وإزالة الورم لا تعني انتهاء المرض؛ فهذه طبيعة المرض لا فشل الأسلوب', 'ترك المتابعة: وهذا أكبر خطر حقيقي. فالمريض الذي يشعر أنه بخير ولا يأتي للتنظير قد يفوّت نكسًا كان ما يزال قابلًا للعلاج', 'نزف وحرقة عند التبول بعد الاستئصال — متوقعان في الأيام الأولى', 'انثقاب المثانة — غير شائع؛ وقد يستلزم بقاء القسطرة مدة أطول', 'التهاب المسالك البولية', 'تضيّق المجرى البولي — قد يحدث لاحقًا', 'شكاوى بسبب BCG داخل المثانة — تبول متكرر وحرقة وحمى؛ ونادرًا يلزم إيقاف العلاج', 'بعد الاستئصال الجذري: تغيّر دائم في طريقة التبول، وأثر في الوظيفة الجنسية، ومشكلات معوية، ومخاطر عملية طويلة'],
+        alternatives: ['جرعة واحدة داخل المثانة بعد الاستئصال مع المتابعة في الأورام منخفضة الخطورة', 'دورات BCG أو علاج كيميائي داخل المثانة في الخطورة المتوسطة إلى العالية', 'استئصال جذري مبكر في المرض عالي الخطورة من دون غزو العضلة — عند مرضى مختارين', 'علاج كيميائي قبل الجراحة ثم استئصال جذري عند غزو العضلة', 'العلاج الثلاثي الحافظ للمثانة (استئصال عبر الإحليل + إشعاع + كيميائي) — عند مرضى مختارين', 'علاجات موجَّهة لضبط الشكوى عند من لا تناسبهم الجراحة'],
+        comparison: {
+          title: 'سرطان المثانة من دون غزو العضلة ومع غزوها',
+          columns: ['المعيار', 'من دون غزو (سطحي)', 'مع غزو العضلة'],
+          rows: [
+            { label: 'هل تُحفَظ المثانة؟', values: ['نعم', 'لا عند معظم المرضى'] },
+            { label: 'العلاج الأساسي', values: ['استئصال عبر الإحليل + دواء داخل المثانة', 'استئصال جذري (مع علاج كيميائي غالبًا)'] },
+            { label: 'الإقامة في المستشفى', values: ['ليلة إلى ليلتين', 'أطول بوضوح'] },
+            { label: 'طريقة التبول', values: ['لا تتغير', 'تتغير بشكل دائم'] },
+            { label: 'المتابعة', values: ['مدى الحياة بالتنظير', 'مدى الحياة بالتصوير والتحاليل'] },
+            { label: 'كيف يُتخذ القرار', values: ['الفحص النسيجي بعد الاستئصال', 'الفحص النسيجي + تصوير تحديد المرحلة'] }
+          ],
+          note: 'هذا التمييز يحدد العلاج كله ولا يمكن حسمه إلا بالفحص النسيجي المرضي. والتصوير وحده لا يثبت غزو العضلة يقينًا.'
+        },
+        recovery: [
+          { period: 'أول 48 ساعة (الاستئصال)', body: 'القسطرة موضوعة وتُغسَل المثانة عند الحاجة. واللون الوردي إلى الأحمر في البول متوقع.' },
+          { period: 'الأسبوع 1', body: 'نُزعت القسطرة. وقد تظهر حرقة وتبول متكرر؛ ويُنصح بشرب السوائل بكثرة. ويُتجنَّب رفع الأثقال.' },
+          { period: 'الأسبوع 2–4', body: 'تُستأنف الحياة اليومية. وإن خُطِّط لعلاج داخل المثانة فإنه يبدأ في هذه المرحلة.' },
+          { period: 'من الشهر 3', body: 'يُجرى أول تنظير متابعة. فإن كان نظيفًا تتباعد الفترات بحسب مجموعة الخطورة — لكن المتابعة لا تتوقف.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'يتغير السعر بوضوح بحسب ما إذا كان المطلوب استئصالًا عبر الإحليل فقط أم دورات علاج داخل المثانة أو جراحة جذرية. ويمكن تقديم العرض النهائي بعد وضوح نتيجة الفحص النسيجي.' },
+        packageIncludes: ['تقييم المسالك البولية والتصوير والفحص الخلوي للبول', 'تنظير المثانة واستئصال الورم عبر الإحليل', 'التخدير والإقامة ليلة إلى ليلتين', 'الفحص النسيجي المرضي وتحديد مجموعة الخطورة', 'تسليم خطة المتابعة مكتوبة', 'التنقلات بين المطار والمستشفى والفندق', 'الإقامة (المريض + مرافق واحد)', 'مترجم طبي ومتابعة عن بُعد بعد عودتك إلى بلدك'],
+        faqs: [
+          { q: 'رأيت الدم في بولي مرة ثم زال، فهل أراجع الطبيب رغم ذلك؟', a: 'نعم بالتأكيد. وهذه أهم رسالة في هذه الصفحة. ففي سرطان المثانة يأتي النزف ويذهب؛ وصفاء البول في اليوم التالي لا يعني أن المشكلة انتهت. فالدم غير المؤلم في البول علامة يجب البحث فيها حتى يثبت العكس. والانتظار يؤخّر التشخيص، والتشخيص المتأخر يُصعّب العلاج.' },
+          { q: 'هل تكفي الموجات فوق الصوتية؟', a: 'لا. فقد تُظهر بعض الكتل لكنها قد تفوّت الأورام الصغيرة والآفات المسطحة المنتشرة على سطح المثانة. وأساس التشخيص تنظير المثانة، أي النظر مباشرةً إلى داخلها.' },
+          { q: 'أُزيل الورم، فهل شُفيت؟', a: 'إزالة الورم خطوة مهمة لكنها لا تعني انتهاء المرض. فسرطان المثانة شديد الميل إلى العودة. ولذلك تلزم متابعة بالتنظير على فترات محددة، وتستمر هذه المتابعة مدى الحياة. وتتباعد الفترات مع الوقت لكنها لا تنتهي.' },
+          { q: 'لماذا يلزم استئصال ثانٍ؟', a: 'إن لم تُرَ عضلة في عينة الإجراء الأول أو كان الورم عالي الدرجة، يُجرى استئصال ثانٍ بعد 2–6 أسابيع للتأكد مما إذا كان المرض قد غزا العضلة. وهذا ليس خطأ بل خطوة مخططة؛ فتحديد المرحلة الخاطئ يؤدي إلى علاج خاطئ.' },
+          { q: 'هل ستُستأصل مثانتي؟', a: 'لا يُطرح ذلك إلا إذا غزا الورم عضلة المثانة. أما من دون غزو فتُحفَظ المثانة ويُعطى العلاج داخلها. ويُتخذ القرار بالفحص النسيجي للنسيج المأخوذ أثناء الاستئصال عبر الإحليل لا بالتصوير.' },
+          { q: 'ما علاج BCG، هل هو علاج كيميائي؟', a: 'لا، BCG علاج مناعي؛ يُقطَّر داخل المثانة ليستجيب دفاع الجسم نفسه لخلايا الورم. وقد يسبب تبولًا متكررًا وحرقة وحمى. وهذه الآثار يمكن التعامل معها عادةً، لكن نادرًا يلزم إيقاف العلاج.' },
+          { q: 'هل يغيّر إقلاعي عن التدخين شيئًا؟', a: 'نعم. فالتدخين أهم عامل خطر لسرطان المثانة، والإقلاع لا يخصّ خطر ورم جديد فحسب بل مسار المرض القائم أيضًا. وهو الخطوة الوحيدة التي تسهم في العلاج وتعود إليك وحدك.' },
+          { q: 'كم تستمر المتابعة؟', a: 'مدى الحياة. وتتحدد الفترات بمجموعة الخطورة وتقلّ مع السنين، لكنها لا تُترك. وشعورك بأنك بخير ليس سببًا للتوقف؛ فمعظم النكسات تُرى بالتنظير قبل أن تسبب أي شكوى.' },
+          { q: 'هل يمكنني إجراء المتابعة في بلدي بعد العودة؟', a: 'نعم، بل هذا هو المفضّل. فتقرير الفحص النسيجي ومجموعة الخطورة وفترات المتابعة تُسلَّم مكتوبة ليتمكّن طبيبك من جدولة التنظيرات. والمهم أن تجري المتابعة لا أين تجري.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-muscle-invasive Bladder Cancer — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/non-muscle-invasive-bladder-cancer' },
+          { label: 'EAU Guidelines on Muscle-invasive and Metastatic Bladder Cancer — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer' }
+        ]
+      }
+    }
+  },
+  {
+    /**
+     * Androloji hub'ının altında (prompt m.4.1).
+     * KRİTİK: Hastalığın AKTİF ve STABİL evresi ayrılmıştır; aktif evrede
+     * cerrahi YAPILMAZ. "Düzeltme" vaadi verilmez — amaç ilişkiyi mümkün
+     * kılacak kadar düzeltmektir, kozmetik mükemmellik değil.
+     * Plikasyonun KISALMA yaptığı açıkça yazılıdır.
+     * Kaynak: EAU Sexual and Reproductive Health kılavuzu.
+     * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     */
+    slug: 'peyronie-hastaligi',
+    parent: 'androloji',
+    lastReviewed: '2026-10-04',
+    icon: 'andrology',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'Peyronie Hastalığı: Penis Eğriliği',
+        summary:
+          'Sertleşme sırasında penisin bir yöne eğrilmesi ve ağrı. Hastalığın aktif ve durağan olmak üzere iki dönemi vardır; tedavi kararı hangi dönemde olduğunuza bağlıdır.',
+        metaTitle: 'Peyronie Hastalığı (Penis Eğriliği): Nedenleri ve Tedavisi',
+        metaDescription:
+          'Peyronie hastalığının evreleri, neden aktif dönemde ameliyat yapılmadığı, plikasyon ve greft yöntemleri, riskleri ve gerçekçi beklentiler.',
+        quickFacts: {
+          duration: 'Cerrahi 60–120 dakika',
+          anesthesia: 'Genel veya spinal anestezi',
+          hospitalStay: 'Günübirlik veya 1 gece',
+          stayInTurkey: '5–7 gün',
+          returnToWork: '1 hafta',
+          flightClearance: '5–7 gün'
+        },
+        definition: [
+          'Peyronie hastalığı, penisin sertleşmeyi sağlayan dokusunu saran zarda sertleşmiş bir plak (nasır benzeri doku) oluşmasıdır. Bu plak esnemediği için sertleşme sırasında penis o yöne doğru eğrilir. Eğrilik yukarı, aşağı veya yana olabilir; bazı hastalarda kum saati şeklinde incelme ya da kısalma eşlik eder.',
+          'HASTALIĞIN İKİ DÖNEMİ VARDIR VE BU AYRIM TEDAVİYİ BELİRLER. Aktif (inflamatuar) dönemde ağrı vardır ve eğrilik haftalar içinde değişmeye devam eder. Durağan (stabil) dönemde ağrı geçmiştir ve eğrilik en az üç–altı aydır aynı kalmıştır.',
+          'AKTİF DÖNEMDE AMELİYAT YAPILMAZ. Bunun sebebi basittir: eğrilik hâlâ değişiyorsa, bugün düzeltilen açı altı ay sonra yeniden bozulabilir. Bu nedenle önce hastalığın durulması beklenir. Bekleme süresi boş geçmez; ağrının kontrolü ve izlem bu dönemin parçasıdır.',
+          'Neden olduğu tam olarak bilinmemektedir. Cinsel ilişki sırasında oluşan küçük tekrarlayıcı zorlanmaların, yatkınlığı olan kişilerde iyileşme sürecini bozarak plak oluşumuna yol açtığı düşünülür. Şeker hastalığı, Dupuytren kontraktürü (el içinde benzer doku sertleşmesi) ve bazı bağ dokusu özellikleri yatkınlıkla ilişkilendirilmiştir.',
+          'GERÇEKÇİ BEKLENTİ: Cerrahinin amacı penisi ameliyat öncesi hâline veya hastalık öncesi hâline döndürmek değildir. Amaç, cinsel ilişkiyi mümkün kılacak kadar düzeltmektir. Hafif bir eğriliğin kalması başarısızlık sayılmaz. Size "tamamen düzelecek" diyen bir yaklaşıma karşı dikkatli olun.'
+        ],
+        eligibility: {
+          suitable: [
+            'Hastalığı durağan döneme girmiş (ağrısı geçmiş, eğriliği en az 3–6 aydır değişmeyen) hastalar',
+            'Eğriliği cinsel ilişkiyi engelleyecek derecede olan hastalar',
+            'Kum saati şeklinde incelme nedeniyle sertleşmenin ucunda bükülme (instabilite) yaşayan hastalar',
+            'Sertleşme işlevi yeterli olan ve yalnızca şekil sorunu bulunan hastalar — plikasyon veya greft uygundur',
+            'Hem belirgin eğriliği hem de ilaca yanıt vermeyen sertleşme sorunu olan hastalar — protez ile birlikte düzeltme gündeme gelir'
+          ],
+          notSuitable: [
+            'AKTİF DÖNEMDEKİ HASTALAR — ağrı sürüyorsa veya eğrilik hâlâ değişiyorsa cerrahi ertelenir',
+            'Eğriliği hafif olan ve cinsel ilişkide zorluk yaşamayan hastalar — ameliyat gerekmez',
+            'Beklentisi kozmetik mükemmellik olan hastalar',
+            'Sertleşme sorunu olup bunun değerlendirilmediği hastalar — önce bu netleşmelidir, çünkü yöntem seçimini değiştirir',
+            'Kanama bozukluğu veya kontrolsüz eşlik eden hastalığı olanlar'
+          ]
+        },
+        technology: [
+          'Penil renkli Doppler ultrason — plak yeri, kalsifikasyon ve damar akımı değerlendirmesi',
+          'Yapay ereksiyon altında açı ölçümü (ameliyat sırasında)',
+          'Plikasyon (kısaltma) teknikleri',
+          'Greft ile plak genişletme',
+          'Gerekli olgularda penil protez ile eşzamanlı düzeltme'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Androloji ve penil cerrahi, Doç. Dr. Müslüm Ergün’ün çalışma alanları arasındadır. Peyronie’de yöntem seçimi; eğriliğin derecesi ve yönü, penis boyu, sertleşme işlevinin durumu ve hastanın beklentisi birlikte değerlendirilerek yapılır.'
+        },
+        timeline: [
+          {
+            when: '1. adım',
+            title: 'Dönem belirlenmesi',
+            body: 'Ağrının olup olmadığı ve eğriliğin son aylarda değişip değişmediği sorgulanır. Bu, ameliyat zamanlamasını belirleyen en önemli bilgidir.'
+          },
+          {
+            when: '2. adım',
+            title: 'Ölçüm ve görüntüleme',
+            body: 'Sertleşme hâlindeki penisin fotoğrafı veya muayenede yapay ereksiyonla açı ölçülür. Doppler ultrasonla plağın yeri, kireçlenme olup olmadığı ve damar akımı değerlendirilir.'
+          },
+          {
+            when: '3. adım',
+            title: 'Aktif dönemde izlem ve destek',
+            body: 'Hastalık aktifse cerrahi ertelenir. Bu dönemde ağrının kontrolü ve belirli aralıklarla yeniden ölçüm yapılır. Durulma genellikle aylar alır.'
+          },
+          {
+            when: '4. adım',
+            title: 'Yöntem seçimi',
+            body: 'Durağan dönemde karar verilir: eğrilik orta derecede ve penis boyu yeterliyse plikasyon; eğrilik ileri veya kum saati varsa greft; sertleşme işlevi de bozuksa protez ile düzeltme.'
+          },
+          {
+            when: 'Ameliyat sonrası',
+            title: 'İyileşme ve cinsel yaşama dönüş',
+            body: 'Şişlik ve morarma ilk haftalarda beklenir. Cinsel yaşama dönüş genellikle 6–8 hafta sonra, hekim onayıyla planlanır.'
+          }
+        ],
+        risks: [
+          'PENİS KISALMASI: plikasyon tekniğinin doğasında vardır — eğrilik, uzun tarafın kısaltılmasıyla düzeltilir. Bu bir komplikasyon değil, yöntemin bilinen sonucudur ve ameliyat öncesi mutlaka konuşulur',
+          'Eğriliğin tamamen düzelmemesi veya zamanla kısmen geri gelmesi',
+          'Sertleşme işlevinde bozulma — özellikle greft uygulanan hastalarda daha fazla gündemdedir',
+          'Penis derisinde veya uç kısmında his değişikliği, uyuşma',
+          'Ele gelen dikiş düğümleri (plikasyon sonrası)',
+          'Greft bölgesinde iyileşme sorunu',
+          'Enfeksiyon ve kanama',
+          'Protez uygulanan hastalarda cihaza bağlı riskler — ayrı sayfada ayrıntılı anlatılmıştır'
+        ],
+        alternatives: [
+          'İzlem — eğrilik hafifse ve ilişkiyi engellemiyorsa en doğru yaklaşım budur',
+          'Ağrı kontrolü ve aktif dönemin geçmesini bekleme',
+          'Plak içi enjeksiyon tedavileri — seçilmiş hastalarda, etkinliği hastadan hastaya değişir',
+          'Traksiyon (germe) cihazları — düzenli ve uzun süreli kullanım gerektirir',
+          'Plikasyon — orta derecede eğrilikte, kısalma kabul ediliyorsa',
+          'Greft ile genişletme — ileri eğrilik ve kum saati deformitesinde',
+          'Penil protez — sertleşme sorunu da varsa'
+        ],
+        comparison: {
+          title: 'Plikasyon, greft ve protez karşılaştırması',
+          columns: ['Ölçüt', 'Plikasyon', 'Greft', 'Protez ile düzeltme'],
+          rows: [
+            { label: 'Kime uygun', values: ['Orta eğrilik, sertleşme iyi', 'İleri eğrilik veya kum saati', 'Eğrilik + ilaca yanıtsız sertleşme sorunu'] },
+            { label: 'Penis boyu', values: ['Kısalma olur', 'Kısalma daha az', 'Protez boyuna göre'] },
+            { label: 'Sertleşmeye etki', values: ['Genellikle korunur', 'Bozulma riski daha yüksek', 'Sertleşme cihazla sağlanır'] },
+            { label: 'Teknik zorluk', values: ['Daha basit', 'Daha ileri', 'İleri'] },
+            { label: 'Geri dönüş', values: ['Dikişler alınabilir', 'Zor', 'Yok — doku çıkarılır'] }
+          ],
+          note:
+            'Hiçbir yöntem diğerinden mutlak üstün değildir. Seçim; eğriliğin derecesi, penis boyu, sertleşme işlevi ve sizin önceliğiniz birlikte değerlendirilerek yapılır.'
+        },
+        recovery: [
+          {
+            period: 'İlk hafta',
+            body: 'Şişlik ve morarma beklenir, zamanla geriler. Ağrı kesici kullanılır. Ağır aktiviteden kaçınılır.'
+          },
+          {
+            period: '2–4. hafta',
+            body: 'Morarma büyük ölçüde geçer. Günlük yaşama dönülür. Hekimin önerdiği durumlarda germe egzersizlerine başlanabilir.'
+          },
+          {
+            period: '6–8. hafta',
+            body: 'Cinsel yaşama dönüş bu dönemde, hekim onayıyla planlanır. Erken dönüş dikişleri zorlayabilir.'
+          },
+          {
+            period: '3–6. ay',
+            body: 'Sonuç değerlendirilir. Hafif bir eğriliğin kalması olasıdır ve ilişkiyi engellemediği sürece başarısızlık sayılmaz.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat; seçilen yönteme (plikasyon, greft veya protez ile düzeltme) göre belirgin biçimde değişir. Kesin teklif, değerlendirme sonrasında verilir.'
+        },
+        packageIncludes: [
+          'Androloji değerlendirmesi ve penil Doppler ultrason',
+          'Cerrahi işlem ve anestezi',
+          'Günübirlik işlem veya 1 gece konaklama',
+          'Pansuman ve kontrol muayenesi',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve ülkenize döndükten sonra uzaktan takip'
+        ],
+        faqs: [
+          {
+            q: 'Penisimdeki eğrilik Peyronie mi?',
+            a: 'Her eğrilik Peyronie değildir. Bazı erkeklerde doğuştan hafif bir eğrilik bulunur ve bu hastalık değildir. Peyronie sonradan başlar, çoğu zaman ağrıyla gelir ve muayenede ele gelen sert bir plak bulunur. Ayrımı muayene ve öykü yapar.'
+          },
+          {
+            q: 'Hemen ameliyat olabilir miyim?',
+            a: 'Hastalık aktif dönemdeyse hayır. Ağrı sürüyorsa veya eğrilik son aylarda değişiyorsa ameliyat ertelenir, çünkü bugün düzeltilen açı daha sonra yeniden bozulabilir. Eğriliğin en az üç–altı aydır sabit olması beklenir.'
+          },
+          {
+            q: 'Ameliyat penisimi kısaltır mı?',
+            a: 'Plikasyon tekniğinde evet — eğrilik, uzun tarafın kısaltılmasıyla düzeltilir. Bu, yöntemin bilinen ve kaçınılmaz sonucudur, komplikasyon değildir. Greft tekniğinde kısalma daha azdır ancak bu kez sertleşme işlevinin etkilenme olasılığı daha fazladır. Hangi ödünü vereceğiniz birlikte konuşulur.'
+          },
+          {
+            q: 'Eğriliğim tamamen düzelir mi?',
+            a: 'Amaç tam düzelme değil, cinsel ilişkiyi mümkün kılacak kadar düzelmedir. Hafif bir eğriliğin kalması olağandır ve ilişkiyi engellemiyorsa başarılı sayılır. Size tam düzelme garantisi veren bir yaklaşıma karşı dikkatli olun.'
+          },
+          {
+            q: 'Ameliyatsız tedavi var mı?',
+            a: 'Seçilmiş hastalarda plak içi enjeksiyon tedavileri ve traksiyon cihazları gündeme gelebilir. Bunların etkisi hastadan hastaya değişir ve hiçbiri cerrahi kadar öngörülebilir sonuç vermez. Eğrilik hafifse ve ilişkiyi engellemiyorsa en doğru yaklaşım izlemdir.'
+          },
+          {
+            q: 'Sertleşme sorunum da var, ne yapılır?',
+            a: 'Bu durumda yalnızca eğriliği düzeltmek yeterli olmaz; sertleşme sağlanamazsa düz bir penis de işe yaramaz. İlaca yanıt alınamıyorsa penil protez ile eşzamanlı düzeltme gündeme gelir. Bu karar geri dönüşü olmadığı için ayrıntılı konuşulur.'
+          },
+          {
+            q: 'Hastalık kendiliğinden geçer mi?',
+            a: 'Ağrı çoğu hastada zamanla geçer. Eğrilik ise genellikle kalıcıdır; bir kısım hastada hafifler, bir kısmında aynı kalır. Kendiliğinden tamamen düzelmesi beklenmez, bu yüzden izlem kararı "hiçbir şey yapmamak" değil, cerrahiye gerek olup olmadığını zaman içinde görmektir.'
+          },
+          {
+            q: 'Ne zaman cinsel yaşama dönebilirim?',
+            a: 'Genellikle 6–8 hafta sonra, hekim onayıyla. Erken dönüş dikişleri zorlayabilir ve sonucu bozabilir. Bu süre greft uygulananlarda daha uzun olabilir.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      en: {
+        title: 'Peyronie’s Disease: Curvature of the Penis',
+        summary:
+          'The penis bending to one side during an erection, often with pain. The disease has an active and a settled phase, and the decision about treatment depends on which one you are in.',
+        metaTitle: 'Peyronie’s Disease (Penile Curvature): Causes and Treatment',
+        metaDescription:
+          'The phases of Peyronie’s disease, why surgery is not done during the active phase, plication and grafting techniques, the risks and realistic expectations.',
+        quickFacts: {
+          duration: 'Surgery 60–120 minutes',
+          anesthesia: 'General or spinal anaesthesia',
+          hospitalStay: 'Day case or 1 night',
+          stayInTurkey: '5–7 days',
+          returnToWork: '1 week',
+          flightClearance: '5–7 days'
+        },
+        definition: [
+          'Peyronie’s disease is the formation of a hardened plaque — tissue rather like a callus — in the sheath surrounding the erectile tissue of the penis. Because the plaque does not stretch, the penis bends towards it during an erection. The curve may be upwards, downwards or to the side; some men also have an hourglass narrowing or shortening.',
+          'THE DISEASE HAS TWO PHASES AND THAT DISTINCTION DETERMINES TREATMENT. In the active (inflammatory) phase there is pain and the curve keeps changing from week to week. In the settled (stable) phase the pain has gone and the curve has stayed the same for at least three to six months.',
+          'SURGERY IS NOT PERFORMED IN THE ACTIVE PHASE. The reason is simple: if the curve is still changing, an angle corrected today may distort again six months later. The disease is therefore allowed to settle first. That waiting time is not empty; controlling the pain and monitoring the curve are part of it.',
+          'The cause is not fully known. It is thought that small repeated strains during intercourse disturb the healing process in men who are predisposed, leading to the plaque. Diabetes, Dupuytren’s contracture (a similar hardening of tissue in the palm) and certain connective tissue traits have been linked with predisposition.',
+          'A REALISTIC EXPECTATION: the aim of surgery is not to return the penis to how it was before the disease. The aim is to straighten it enough to make intercourse possible. A slight residual curve is not a failure. Be wary of anyone who tells you it will be completely corrected.'
+        ],
+        eligibility: {
+          suitable: [
+            'Men whose disease has entered the settled phase — pain gone, curve unchanged for at least 3–6 months',
+            'Men whose curve is severe enough to prevent intercourse',
+            'Men who experience buckling at the tip during erection because of an hourglass narrowing',
+            'Men with adequate erectile function and a problem of shape alone — plication or grafting is suitable',
+            'Men with both a marked curve and erectile difficulty unresponsive to tablets — correction with a prosthesis comes into consideration'
+          ],
+          notSuitable: [
+            'MEN IN THE ACTIVE PHASE — if pain persists or the curve is still changing, surgery is postponed',
+            'Men whose curve is slight and who have no difficulty with intercourse — no operation is needed',
+            'Men whose expectation is cosmetic perfection',
+            'Men with erectile difficulty that has not been assessed — this must be clarified first, as it changes the choice of method',
+            'Men with a bleeding disorder or an uncontrolled accompanying illness'
+          ]
+        },
+        technology: [
+          'Penile colour Doppler ultrasound — assessing the site of the plaque, calcification and blood flow',
+          'Measurement of the angle under artificial erection (during surgery)',
+          'Plication (shortening) techniques',
+          'Widening the plaque with a graft',
+          'Simultaneous correction with a penile prosthesis where required'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Andrology and penile surgery are among Assoc. Prof. Müslüm Ergün’s areas of work. In Peyronie’s disease the choice of method is made by weighing the degree and direction of the curve, penile length, the state of erectile function and the patient’s expectation together.'
+        },
+        timeline: [
+          {
+            when: 'Step 1',
+            title: 'Establishing the phase',
+            body: 'Whether there is pain, and whether the curve has changed in recent months, are asked about. This is the single most important piece of information for timing surgery.'
+          },
+          {
+            when: 'Step 2',
+            title: 'Measurement and imaging',
+            body: 'The angle is measured from a photograph of the erect penis or at examination under artificial erection. Doppler ultrasound assesses the site of the plaque, any calcification and the blood flow.'
+          },
+          {
+            when: 'Step 3',
+            title: 'Monitoring and support in the active phase',
+            body: 'If the disease is active, surgery is postponed. During this time the pain is controlled and the curve is re-measured at intervals. Settling usually takes months.'
+          },
+          {
+            when: 'Step 4',
+            title: 'Choosing the method',
+            body: 'The decision is made in the settled phase: plication if the curve is moderate and penile length is adequate; a graft if the curve is severe or there is an hourglass deformity; correction with a prosthesis if erectile function is also impaired.'
+          },
+          {
+            when: 'After surgery',
+            title: 'Recovery and return to sexual activity',
+            body: 'Swelling and bruising are expected in the first weeks. A return to sexual activity is usually planned after 6–8 weeks with the surgeon’s approval.'
+          }
+        ],
+        risks: [
+          'SHORTENING OF THE PENIS: inherent to the plication technique — the curve is corrected by shortening the longer side. This is not a complication but a known consequence of the method, and it is always discussed before surgery',
+          'The curve not being fully corrected, or partially returning over time',
+          'Impairment of erectile function — more of an issue in men who have a graft',
+          'Altered sensation or numbness in the skin or at the tip of the penis',
+          'Palpable suture knots (after plication)',
+          'Healing problems at the graft site',
+          'Infection and bleeding',
+          'Device-related risks in men who have a prosthesis — set out in detail on its own page'
+        ],
+        alternatives: [
+          'Surveillance — the right approach if the curve is slight and does not prevent intercourse',
+          'Pain control and waiting for the active phase to pass',
+          'Injection treatments into the plaque — in selected men; the effect varies from person to person',
+          'Traction (stretching) devices — these require regular, prolonged use',
+          'Plication — for a moderate curve where shortening is acceptable',
+          'Widening with a graft — for a severe curve and hourglass deformity',
+          'Penile prosthesis — where there is erectile difficulty as well'
+        ],
+        comparison: {
+          title: 'Plication, grafting and prosthesis compared',
+          columns: ['Criterion', 'Plication', 'Graft', 'Correction with a prosthesis'],
+          rows: [
+            { label: 'Who it suits', values: ['Moderate curve, good erections', 'Severe curve or hourglass', 'Curve plus erectile difficulty unresponsive to tablets'] },
+            { label: 'Penile length', values: ['Shortening occurs', 'Less shortening', 'Depends on the prosthesis length'] },
+            { label: 'Effect on erections', values: ['Usually preserved', 'Higher risk of impairment', 'Erection is produced by the device'] },
+            { label: 'Technical demand', values: ['Simpler', 'More advanced', 'Advanced'] },
+            { label: 'Reversibility', values: ['Sutures can be removed', 'Difficult', 'None — tissue is removed'] }
+          ],
+          note:
+            'No method is absolutely superior to another. The choice is made by weighing the degree of curve, penile length, erectile function and your own priority together.'
+        },
+        recovery: [
+          {
+            period: 'First week',
+            body: 'Swelling and bruising are expected and settle with time. Painkillers are used. Strenuous activity is avoided.'
+          },
+          {
+            period: 'Weeks 2–4',
+            body: 'The bruising largely resolves. Daily life resumes. Stretching exercises may be started where the surgeon advises them.'
+          },
+          {
+            period: 'Weeks 6–8',
+            body: 'A return to sexual activity is planned during this period with the surgeon’s approval. Returning too early can strain the sutures.'
+          },
+          {
+            period: 'Months 3–6',
+            body: 'The outcome is assessed. A slight residual curve is likely and, as long as it does not prevent intercourse, is not counted as a failure.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies markedly with the method chosen (plication, graft or correction with a prosthesis). A firm quotation is given after assessment.'
+        },
+        packageIncludes: [
+          'Andrological assessment and penile Doppler ultrasound',
+          'The surgical procedure and anaesthesia',
+          'Day-case procedure or 1 night’s stay',
+          'Dressings and a follow-up examination',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and remote follow-up after you return home'
+        ],
+        faqs: [
+          {
+            q: 'Is the curve in my penis Peyronie’s disease?',
+            a: 'Not every curve is Peyronie’s. Some men have a slight curve from birth, and that is not a disease. Peyronie’s begins later in life, often with pain, and a firm plaque can be felt on examination. History and examination make the distinction.'
+          },
+          {
+            q: 'Can I have surgery straight away?',
+            a: 'Not if the disease is in its active phase. If pain persists or the curve has changed in recent months, surgery is postponed, because an angle corrected today may distort again later. The curve should have been stable for at least three to six months.'
+          },
+          {
+            q: 'Will the operation shorten my penis?',
+            a: 'With the plication technique, yes — the curve is corrected by shortening the longer side. That is a known and unavoidable consequence of the method, not a complication. With a graft there is less shortening, but the chance of affecting erectile function is greater. Which trade-off you accept is discussed together.'
+          },
+          {
+            q: 'Will my curve be completely corrected?',
+            a: 'The aim is not complete correction but enough correction to make intercourse possible. A slight residual curve is usual and counts as success provided it does not get in the way. Be wary of anyone guaranteeing complete correction.'
+          },
+          {
+            q: 'Is there a treatment without surgery?',
+            a: 'In selected men, injection treatments into the plaque and traction devices may come into consideration. Their effect varies from person to person and none gives results as predictable as surgery. If the curve is slight and does not prevent intercourse, surveillance is the right approach.'
+          },
+          {
+            q: 'I also have erectile difficulty — what then?',
+            a: 'In that case correcting the curve alone is not enough; a straight penis is of no use if an erection cannot be achieved. If tablets do not work, simultaneous correction with a penile prosthesis comes into consideration. Because that decision is irreversible, it is discussed in detail.'
+          },
+          {
+            q: 'Does the disease resolve on its own?',
+            a: 'The pain settles over time in most men. The curve, however, usually persists; in some it lessens, in others it stays the same. Complete spontaneous correction is not expected, so a decision to observe is not "doing nothing" but seeing over time whether surgery is needed at all.'
+          },
+          {
+            q: 'When can I return to sexual activity?',
+            a: 'Usually after 6–8 weeks, with the surgeon’s approval. Returning early can strain the sutures and spoil the result. This period can be longer for men who have had a graft.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      de: {
+        title: 'Peyronie-Krankheit: Penisverkrümmung',
+        summary:
+          'Der Penis verbiegt sich bei der Erektion zu einer Seite, oft mit Schmerzen. Die Erkrankung hat eine aktive und eine stabile Phase, und davon hängt die Behandlungsentscheidung ab.',
+        metaTitle: 'Peyronie-Krankheit (Penisverkrümmung): Ursachen und Behandlung',
+        metaDescription: 'Die Phasen der Peyronie-Krankheit, warum in der aktiven Phase nicht operiert wird, Plikations- und Transplantattechniken, Risiken und realistische Erwartungen.',
+        quickFacts: { duration: 'Operation 60–120 Minuten', anesthesia: 'Vollnarkose oder Spinalanästhesie', hospitalStay: 'Ambulant oder 1 Nacht', stayInTurkey: '5–7 Tage', returnToWork: '1 Woche', flightClearance: '5–7 Tage' },
+        definition: [
+          'Bei der Peyronie-Krankheit bildet sich in der Hülle um das Schwellkörpergewebe eine verhärtete Platte — ein Gewebe ähnlich einer Schwiele. Da diese Platte nicht mitdehnt, verbiegt sich der Penis bei der Erektion in ihre Richtung. Die Krümmung kann nach oben, unten oder zur Seite gehen; bei manchen Männern kommt eine sanduhrförmige Einschnürung oder eine Verkürzung hinzu.',
+          'DIE ERKRANKUNG HAT ZWEI PHASEN, UND DIESE UNTERSCHEIDUNG BESTIMMT DIE BEHANDLUNG. In der aktiven (entzündlichen) Phase bestehen Schmerzen und die Krümmung verändert sich von Woche zu Woche. In der stabilen Phase sind die Schmerzen verschwunden und die Krümmung ist seit mindestens drei bis sechs Monaten unverändert.',
+          'IN DER AKTIVEN PHASE WIRD NICHT OPERIERT. Der Grund ist einfach: Verändert sich die Krümmung noch, kann ein heute korrigierter Winkel sich in sechs Monaten erneut verziehen. Deshalb wartet man das Abklingen ab. Diese Wartezeit bleibt nicht ungenutzt; Schmerzkontrolle und Verlaufsmessung gehören dazu.',
+          'Die Ursache ist nicht vollständig geklärt. Man nimmt an, dass kleine wiederholte Belastungen beim Geschlechtsverkehr bei veranlagten Männern die Heilung stören und so zur Plattenbildung führen. Diabetes, die Dupuytren-Kontraktur (eine ähnliche Gewebeverhärtung in der Handfläche) und bestimmte Bindegewebsmerkmale werden mit einer Veranlagung in Verbindung gebracht.',
+          'EINE REALISTISCHE ERWARTUNG: Ziel der Operation ist nicht, den Penis in den Zustand vor der Erkrankung zurückzuversetzen. Ziel ist, ihn so weit zu begradigen, dass Geschlechtsverkehr möglich wird. Eine leichte Restkrümmung ist kein Misserfolg. Seien Sie vorsichtig, wenn Ihnen jemand vollständige Korrektur zusagt.'
+        ],
+        eligibility: {
+          suitable: ['Männer in der stabilen Phase — schmerzfrei, Krümmung seit mindestens 3–6 Monaten unverändert', 'Männer, deren Krümmung den Geschlechtsverkehr verhindert', 'Männer, bei denen der Penis wegen einer sanduhrförmigen Einschnürung an der Spitze abknickt', 'Männer mit guter Erektionsfähigkeit und reinem Formproblem — Plikation oder Transplantat geeignet', 'Männer mit ausgeprägter Krümmung und zugleich auf Tabletten nicht ansprechender Erektionsstörung — Korrektur mit Prothese kommt infrage'],
+          notSuitable: ['MÄNNER IN DER AKTIVEN PHASE — bei anhaltenden Schmerzen oder sich noch verändernder Krümmung wird verschoben', 'Männer mit leichter Krümmung ohne Schwierigkeiten beim Verkehr — eine Operation ist nicht nötig', 'Männer, deren Erwartung kosmetische Perfektion ist', 'Männer mit nicht abgeklärter Erektionsstörung — das muss zuerst geklärt werden, da es die Verfahrenswahl ändert', 'Männer mit Gerinnungsstörung oder nicht eingestellter Begleiterkrankung']
+        },
+        technology: ['Penile Farbduplexsonographie — Lage der Platte, Verkalkung und Durchblutung', 'Winkelmessung unter künstlicher Erektion (intraoperativ)', 'Plikationstechniken (Verkürzung)', 'Erweiterung der Platte mit einem Transplantat', 'Bei Bedarf gleichzeitige Korrektur mit einer Penisprothese'],
+        surgeonExperience: { caseVolume: '', note: 'Andrologie und Penischirurgie gehören zu den Arbeitsgebieten von Doz. Dr. Müslüm Ergün. Bei der Peyronie-Krankheit erfolgt die Verfahrenswahl unter gemeinsamer Abwägung von Ausmaß und Richtung der Krümmung, Penislänge, Erektionsfähigkeit und Erwartung des Patienten.' },
+        timeline: [
+          { when: 'Schritt 1', title: 'Bestimmung der Phase', body: 'Es wird gefragt, ob Schmerzen bestehen und ob sich die Krümmung in den letzten Monaten verändert hat. Das ist die wichtigste Angabe für den Operationszeitpunkt.' },
+          { when: 'Schritt 2', title: 'Messung und Bildgebung', body: 'Der Winkel wird anhand eines Fotos des erigierten Penis oder bei der Untersuchung unter künstlicher Erektion gemessen. Die Duplexsonographie beurteilt Lage der Platte, Verkalkung und Durchblutung.' },
+          { when: 'Schritt 3', title: 'Beobachtung in der aktiven Phase', body: 'Ist die Erkrankung aktiv, wird die Operation verschoben. In dieser Zeit werden die Schmerzen behandelt und die Krümmung in Abständen erneut gemessen. Das Abklingen dauert meist Monate.' },
+          { when: 'Schritt 4', title: 'Wahl des Verfahrens', body: 'In der stabilen Phase wird entschieden: Plikation bei mäßiger Krümmung und ausreichender Länge; Transplantat bei starker Krümmung oder Sanduhrform; Korrektur mit Prothese, wenn auch die Erektionsfähigkeit beeinträchtigt ist.' },
+          { when: 'Nach der Operation', title: 'Heilung und Rückkehr zur Sexualität', body: 'Schwellung und Blutergüsse sind in den ersten Wochen zu erwarten. Die Rückkehr zur Sexualität wird meist nach 6–8 Wochen mit Zustimmung des Operateurs geplant.' }
+        ],
+        risks: ['VERKÜRZUNG DES PENIS: der Plikationstechnik eigen — die Krümmung wird durch Verkürzung der längeren Seite korrigiert. Das ist keine Komplikation, sondern eine bekannte Folge des Verfahrens und wird stets vorher besprochen', 'Die Krümmung wird nicht vollständig korrigiert oder kehrt teilweise zurück', 'Beeinträchtigung der Erektionsfähigkeit — besonders nach Transplantat', 'Veränderte Empfindung oder Taubheit an Haut oder Eichel', 'Tastbare Nahtknoten (nach Plikation)', 'Heilungsstörung am Transplantatlager', 'Infektion und Blutung', 'Gerätebezogene Risiken bei Prothesenträgern — ausführlich auf der eigenen Seite'],
+        alternatives: ['Beobachtung — bei leichter, den Verkehr nicht behindernder Krümmung das richtige Vorgehen', 'Schmerzkontrolle und Abwarten des Abklingens', 'Injektionsbehandlungen in die Platte — bei ausgewählten Männern, Wirkung individuell verschieden', 'Traktionsgeräte — erfordern regelmäßige, lange Anwendung', 'Plikation — bei mäßiger Krümmung, wenn eine Verkürzung akzeptiert wird', 'Erweiterung mit Transplantat — bei starker Krümmung und Sanduhrform', 'Penisprothese — wenn zusätzlich eine Erektionsstörung besteht'],
+        comparison: {
+          title: 'Plikation, Transplantat und Prothese im Vergleich',
+          columns: ['Kriterium', 'Plikation', 'Transplantat', 'Korrektur mit Prothese'],
+          rows: [
+            { label: 'Für wen geeignet', values: ['Mäßige Krümmung, gute Erektion', 'Starke Krümmung oder Sanduhr', 'Krümmung plus therapieresistente Erektionsstörung'] },
+            { label: 'Penislänge', values: ['Verkürzung tritt ein', 'Weniger Verkürzung', 'Abhängig von der Prothesenlänge'] },
+            { label: 'Wirkung auf die Erektion', values: ['Meist erhalten', 'Höheres Risiko der Beeinträchtigung', 'Erektion erzeugt das Gerät'] },
+            { label: 'Technischer Anspruch', values: ['Einfacher', 'Anspruchsvoller', 'Anspruchsvoll'] },
+            { label: 'Umkehrbarkeit', values: ['Nähte entfernbar', 'Schwierig', 'Keine — Gewebe wird entfernt'] }
+          ],
+          note: 'Kein Verfahren ist dem anderen absolut überlegen. Die Wahl erfolgt unter Abwägung von Krümmungsgrad, Penislänge, Erektionsfähigkeit und Ihrer eigenen Priorität.'
+        },
+        recovery: [
+          { period: 'Erste Woche', body: 'Schwellung und Blutergüsse sind zu erwarten und klingen ab. Schmerzmittel werden eingenommen, anstrengende Tätigkeiten vermieden.' },
+          { period: 'Woche 2–4', body: 'Die Blutergüsse gehen weitgehend zurück. Der Alltag wird wieder aufgenommen. Dehnübungen können begonnen werden, wenn der Operateur sie empfiehlt.' },
+          { period: 'Woche 6–8', body: 'Die Rückkehr zur Sexualität wird in dieser Zeit mit Zustimmung des Operateurs geplant. Zu frühe Aufnahme kann die Nähte belasten.' },
+          { period: 'Monat 3–6', body: 'Das Ergebnis wird beurteilt. Eine leichte Restkrümmung ist wahrscheinlich und gilt, solange sie den Verkehr nicht behindert, nicht als Misserfolg.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Der Preis unterscheidet sich deutlich je nach gewähltem Verfahren (Plikation, Transplantat oder Korrektur mit Prothese). Ein verbindliches Angebot erfolgt nach der Abklärung.' },
+        packageIncludes: ['Andrologische Abklärung und penile Duplexsonographie', 'Operativer Eingriff und Narkose', 'Ambulanter Eingriff oder 1 Übernachtung', 'Verbandwechsel und Kontrolluntersuchung', 'Transfers Flughafen–Krankenhaus–Hotel', 'Unterkunft (Patient + 1 Begleitperson)', 'Medizinischer Dolmetscher und Fernbetreuung nach Ihrer Rückkehr'],
+        faqs: [
+          { q: 'Ist die Krümmung meines Penis eine Peyronie-Krankheit?', a: 'Nicht jede Krümmung ist Peyronie. Manche Männer haben von Geburt an eine leichte Krümmung, und das ist keine Erkrankung. Peyronie beginnt später, oft mit Schmerzen, und bei der Untersuchung ist eine feste Platte tastbar. Anamnese und Untersuchung treffen die Unterscheidung.' },
+          { q: 'Kann ich sofort operiert werden?', a: 'Nicht in der aktiven Phase. Bestehen noch Schmerzen oder hat sich die Krümmung in den letzten Monaten verändert, wird verschoben, weil ein heute korrigierter Winkel später erneut abweichen kann. Die Krümmung sollte seit mindestens drei bis sechs Monaten stabil sein.' },
+          { q: 'Verkürzt die Operation meinen Penis?', a: 'Bei der Plikation ja — die Krümmung wird durch Verkürzung der längeren Seite korrigiert. Das ist eine bekannte und unvermeidliche Folge, keine Komplikation. Beim Transplantat ist die Verkürzung geringer, dafür ist die Wahrscheinlichkeit höher, dass die Erektionsfähigkeit leidet. Welchen Kompromiss Sie eingehen, wird gemeinsam besprochen.' },
+          { q: 'Wird meine Krümmung vollständig korrigiert?', a: 'Ziel ist nicht vollständige, sondern ausreichende Korrektur für den Geschlechtsverkehr. Eine leichte Restkrümmung ist üblich und gilt als Erfolg, solange sie nicht stört. Seien Sie vorsichtig, wenn Ihnen vollständige Korrektur zugesagt wird.' },
+          { q: 'Gibt es eine Behandlung ohne Operation?', a: 'Bei ausgewählten Männern kommen Injektionen in die Platte und Traktionsgeräte infrage. Ihre Wirkung ist individuell verschieden und keine liefert so vorhersehbare Ergebnisse wie eine Operation. Bei leichter, nicht störender Krümmung ist Beobachtung richtig.' },
+          { q: 'Ich habe auch eine Erektionsstörung — was dann?', a: 'Dann genügt die Begradigung allein nicht; ein gerader Penis nützt nichts, wenn keine Erektion zustande kommt. Wirken Tabletten nicht, kommt die gleichzeitige Korrektur mit einer Penisprothese infrage. Da diese Entscheidung nicht umkehrbar ist, wird sie ausführlich besprochen.' },
+          { q: 'Heilt die Erkrankung von selbst?', a: 'Die Schmerzen klingen bei den meisten mit der Zeit ab. Die Krümmung bleibt dagegen meist bestehen; bei manchen wird sie geringer, bei anderen bleibt sie gleich. Eine vollständige spontane Korrektur ist nicht zu erwarten; abzuwarten heißt daher nicht "nichts tun", sondern über die Zeit zu sehen, ob eine Operation überhaupt nötig ist.' },
+          { q: 'Wann darf ich wieder Geschlechtsverkehr haben?', a: 'Meist nach 6–8 Wochen mit Zustimmung des Operateurs. Zu frühe Aufnahme kann die Nähte belasten und das Ergebnis verschlechtern. Nach einem Transplantat kann diese Zeit länger sein.' }
+        ],
+        sources: [{ label: 'EAU Guidelines on Sexual and Reproductive Health — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }]
+      },
+      fr: {
+        title: 'Maladie de La Peyronie : courbure de la verge',
+        summary:
+          'La verge se courbe d’un côté lors de l’érection, souvent avec des douleurs. La maladie comporte une phase active et une phase stabilisée, et la décision thérapeutique en dépend.',
+        metaTitle: 'Maladie de La Peyronie (courbure de la verge) : causes et traitement',
+        metaDescription: 'Les phases de la maladie de La Peyronie, pourquoi on n’opère pas en phase active, les techniques de plicature et de greffe, les risques et les attentes réalistes.',
+        quickFacts: { duration: 'Chirurgie 60–120 minutes', anesthesia: 'Anesthésie générale ou rachianesthésie', hospitalStay: 'Ambulatoire ou 1 nuit', stayInTurkey: '5–7 jours', returnToWork: '1 semaine', flightClearance: '5–7 jours' },
+        definition: [
+          'La maladie de La Peyronie correspond à la formation d’une plaque durcie — un tissu comparable à un cal — dans l’enveloppe entourant les corps caverneux. Comme cette plaque ne s’étire pas, la verge se courbe de son côté lors de l’érection. La courbure peut être vers le haut, vers le bas ou latérale ; certains hommes présentent en outre un rétrécissement en sablier ou un raccourcissement.',
+          'LA MALADIE COMPORTE DEUX PHASES ET CETTE DISTINCTION DÉTERMINE LE TRAITEMENT. En phase active (inflammatoire), il existe des douleurs et la courbure continue d’évoluer de semaine en semaine. En phase stabilisée, les douleurs ont disparu et la courbure est inchangée depuis au moins trois à six mois.',
+          'ON N’OPÈRE PAS EN PHASE ACTIVE. La raison est simple : si la courbure évolue encore, un angle corrigé aujourd’hui peut se déformer de nouveau six mois plus tard. On attend donc que la maladie se stabilise. Cette attente n’est pas vide : le contrôle de la douleur et la surveillance en font partie.',
+          'La cause n’est pas entièrement élucidée. On pense que de petites contraintes répétées lors des rapports perturbent la cicatrisation chez les hommes prédisposés et conduisent à la plaque. Le diabète, la maladie de Dupuytren (durcissement tissulaire analogue dans la paume) et certaines caractéristiques du tissu conjonctif ont été associés à cette prédisposition.',
+          'UNE ATTENTE RÉALISTE : le but de la chirurgie n’est pas de rendre à la verge son état antérieur à la maladie, mais de la redresser suffisamment pour rendre les rapports possibles. Une légère courbure résiduelle n’est pas un échec. Méfiez-vous de qui vous promet une correction totale.'
+        ],
+        eligibility: {
+          suitable: ['Hommes en phase stabilisée — sans douleur, courbure inchangée depuis au moins 3 à 6 mois', 'Hommes dont la courbure empêche les rapports', 'Hommes dont la verge se plie à son extrémité du fait d’un rétrécissement en sablier', 'Hommes ayant une fonction érectile satisfaisante et un problème de forme isolé — plicature ou greffe', 'Hommes présentant à la fois une courbure marquée et des troubles de l’érection résistants aux comprimés — correction avec prothèse envisageable'],
+          notSuitable: ['HOMMES EN PHASE ACTIVE — en cas de douleurs persistantes ou de courbure évolutive, l’intervention est reportée', 'Hommes dont la courbure est légère et qui n’ont pas de difficulté lors des rapports', 'Hommes attendant une perfection esthétique', 'Hommes dont les troubles de l’érection n’ont pas été évalués — à clarifier d’abord, car cela change la technique', 'Hommes présentant un trouble de la coagulation ou une maladie associée non équilibrée']
+        },
+        technology: ['Échographie-doppler couleur pénienne — siège de la plaque, calcifications et vascularisation', 'Mesure de l’angle sous érection artificielle (en peropératoire)', 'Techniques de plicature (raccourcissement)', 'Élargissement de la plaque par greffe', 'Correction simultanée par prothèse pénienne si nécessaire'],
+        surgeonExperience: { caseVolume: '', note: 'L’andrologie et la chirurgie de la verge font partie des domaines d’activité du Dr Müslüm Ergün, maître de conférences. Dans la maladie de La Peyronie, le choix de la technique repose sur le degré et le sens de la courbure, la longueur de la verge, la fonction érectile et les attentes du patient.' },
+        timeline: [
+          { when: 'Étape 1', title: 'Détermination de la phase', body: 'On recherche la présence de douleurs et une évolution de la courbure ces derniers mois. C’est l’élément le plus important pour fixer le moment de l’intervention.' },
+          { when: 'Étape 2', title: 'Mesure et imagerie', body: 'L’angle est mesuré sur une photographie en érection ou lors de l’examen sous érection artificielle. Le doppler évalue le siège de la plaque, les calcifications et la vascularisation.' },
+          { when: 'Étape 3', title: 'Surveillance en phase active', body: 'Si la maladie est active, l’intervention est reportée. On contrôle la douleur et l’on remesure la courbure à intervalles réguliers. La stabilisation demande généralement des mois.' },
+          { when: 'Étape 4', title: 'Choix de la technique', body: 'La décision se prend en phase stabilisée : plicature si la courbure est modérée et la longueur suffisante ; greffe si la courbure est importante ou s’il existe un sablier ; correction par prothèse si la fonction érectile est aussi altérée.' },
+          { when: 'Après l’intervention', title: 'Convalescence et reprise sexuelle', body: 'Œdème et ecchymoses sont attendus les premières semaines. La reprise des rapports se planifie généralement après 6 à 8 semaines, avec l’accord du chirurgien.' }
+        ],
+        risks: ['RACCOURCISSEMENT DE LA VERGE : inhérent à la plicature — la courbure est corrigée en raccourcissant le côté le plus long. Ce n’est pas une complication mais une conséquence connue de la technique, toujours expliquée avant l’intervention', 'Correction incomplète de la courbure ou réapparition partielle avec le temps', 'Altération de la fonction érectile — davantage en cause après une greffe', 'Modification de la sensibilité ou engourdissement de la peau ou du gland', 'Nœuds de suture perceptibles (après plicature)', 'Trouble de cicatrisation au niveau de la greffe', 'Infection et saignement', 'Risques liés au matériel chez les porteurs de prothèse — détaillés sur la page dédiée'],
+        alternatives: ['Surveillance — approche adaptée si la courbure est légère et n’empêche pas les rapports', 'Contrôle de la douleur en attendant la fin de la phase active', 'Injections dans la plaque — chez des patients sélectionnés, effet variable', 'Dispositifs de traction — nécessitent un usage régulier et prolongé', 'Plicature — courbure modérée, si le raccourcissement est accepté', 'Élargissement par greffe — courbure importante et déformation en sablier', 'Prothèse pénienne — en cas de troubles de l’érection associés'],
+        comparison: {
+          title: 'Plicature, greffe et prothèse : comparaison',
+          columns: ['Critère', 'Plicature', 'Greffe', 'Correction par prothèse'],
+          rows: [
+            { label: 'À qui cela convient', values: ['Courbure modérée, bonnes érections', 'Courbure importante ou sablier', 'Courbure et troubles érectiles résistants'] },
+            { label: 'Longueur de la verge', values: ['Raccourcissement', 'Moins de raccourcissement', 'Selon la longueur de la prothèse'] },
+            { label: 'Effet sur l’érection', values: ['Généralement préservée', 'Risque d’altération plus élevé', 'L’érection est produite par le dispositif'] },
+            { label: 'Exigence technique', values: ['Plus simple', 'Plus avancée', 'Avancée'] },
+            { label: 'Réversibilité', values: ['Sutures retirables', 'Difficile', 'Nulle — du tissu est retiré'] }
+          ],
+          note: 'Aucune méthode n’est absolument supérieure. Le choix tient compte du degré de courbure, de la longueur de la verge, de la fonction érectile et de votre propre priorité.'
+        },
+        recovery: [
+          { period: 'Première semaine', body: 'Œdème et ecchymoses attendus, régressant avec le temps. Antalgiques prescrits, efforts à éviter.' },
+          { period: 'Semaines 2–4', body: 'Les ecchymoses disparaissent largement. Reprise de la vie quotidienne. Des exercices d’étirement peuvent débuter si le chirurgien les conseille.' },
+          { period: 'Semaines 6–8', body: 'La reprise des rapports se planifie durant cette période avec l’accord du chirurgien. Une reprise trop précoce peut solliciter les sutures.' },
+          { period: 'Mois 3–6', body: 'Le résultat est évalué. Une légère courbure résiduelle est probable et, tant qu’elle n’empêche pas les rapports, n’est pas considérée comme un échec.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Le prix varie nettement selon la technique retenue (plicature, greffe ou correction par prothèse). Un devis ferme est remis après l’évaluation.' },
+        packageIncludes: ['Évaluation andrologique et échographie-doppler pénienne', 'Intervention chirurgicale et anesthésie', 'Geste ambulatoire ou 1 nuit d’hospitalisation', 'Pansements et consultation de contrôle', 'Transferts aéroport–hôpital–hôtel', 'Hébergement (patient + 1 accompagnant)', 'Interprète médical et suivi à distance après votre retour'],
+        faqs: [
+          { q: 'La courbure de ma verge est-elle une maladie de La Peyronie ?', a: 'Toute courbure n’est pas une maladie de La Peyronie. Certains hommes ont une légère courbure depuis la naissance, et ce n’est pas une maladie. La Peyronie apparaît plus tard, souvent avec des douleurs, et une plaque ferme est palpable à l’examen. L’interrogatoire et l’examen font la différence.' },
+          { q: 'Puis-je être opéré tout de suite ?', a: 'Pas en phase active. Si les douleurs persistent ou si la courbure a évolué ces derniers mois, l’intervention est reportée, car un angle corrigé aujourd’hui peut se déformer ensuite. La courbure doit être stable depuis au moins trois à six mois.' },
+          { q: 'L’opération va-t-elle raccourcir ma verge ?', a: 'Avec la plicature, oui — la courbure est corrigée en raccourcissant le côté le plus long. C’est une conséquence connue et inévitable de la technique, pas une complication. Avec une greffe, le raccourcissement est moindre mais le risque d’altérer la fonction érectile est plus élevé. Le compromis se discute ensemble.' },
+          { q: 'Ma courbure sera-t-elle entièrement corrigée ?', a: 'L’objectif n’est pas une correction totale mais une correction suffisante pour permettre les rapports. Une légère courbure résiduelle est habituelle et constitue un succès tant qu’elle ne gêne pas. Méfiez-vous de qui garantit une correction complète.' },
+          { q: 'Existe-t-il un traitement sans chirurgie ?', a: 'Chez des patients sélectionnés, des injections dans la plaque et des dispositifs de traction peuvent s’envisager. Leur effet varie et aucun ne donne de résultats aussi prévisibles que la chirurgie. Si la courbure est légère et sans gêne, la surveillance est la bonne attitude.' },
+          { q: 'J’ai aussi des troubles de l’érection — que faire ?', a: 'Dans ce cas, redresser seulement la verge ne suffit pas : une verge droite ne sert à rien sans érection. Si les comprimés sont inefficaces, la correction simultanée par prothèse pénienne s’envisage. Cette décision étant irréversible, elle se discute en détail.' },
+          { q: 'La maladie guérit-elle seule ?', a: 'La douleur disparaît avec le temps chez la plupart des hommes. La courbure, en revanche, persiste le plus souvent : elle s’atténue chez certains, reste identique chez d’autres. Une correction spontanée complète n’est pas attendue ; surveiller ne signifie donc pas « ne rien faire » mais voir avec le temps si une chirurgie est nécessaire.' },
+          { q: 'Quand puis-je reprendre les rapports ?', a: 'Généralement après 6 à 8 semaines, avec l’accord du chirurgien. Une reprise précoce peut solliciter les sutures et compromettre le résultat. Ce délai peut être plus long après une greffe.' }
+        ],
+        sources: [{ label: 'EAU Guidelines on Sexual and Reproductive Health — Association européenne d’urologie', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }]
+      },
+      ru: {
+        title: 'Болезнь Пейрони: искривление полового члена',
+        summary:
+          'Половой член отклоняется в сторону при эрекции, часто с болью. У болезни есть активная и стабильная фаза, и решение о лечении зависит от того, в какой из них вы находитесь.',
+        metaTitle: 'Болезнь Пейрони (искривление полового члена): причины и лечение',
+        metaDescription: 'Фазы болезни Пейрони, почему в активной фазе не оперируют, методики пликации и пластики лоскутом, риски и реалистичные ожидания.',
+        quickFacts: { duration: 'Операция 60–120 минут', anesthesia: 'Общая или спинальная анестезия', hospitalStay: 'Амбулаторно или 1 ночь', stayInTurkey: '5–7 дней', returnToWork: '1 неделя', flightClearance: '5–7 дней' },
+        definition: [
+          'Болезнь Пейрони — это образование уплотнённой бляшки, ткани наподобие мозоли, в оболочке, окружающей кавернозные тела. Поскольку бляшка не растягивается, при эрекции половой член изгибается в её сторону. Искривление может быть вверх, вниз или в сторону; у части мужчин к нему добавляется сужение по типу песочных часов или укорочение.',
+          'У БОЛЕЗНИ ДВЕ ФАЗЫ, И ИМЕННО ЭТО РАЗЛИЧИЕ ОПРЕДЕЛЯЕТ ЛЕЧЕНИЕ. В активной (воспалительной) фазе есть боль, и искривление продолжает меняться от недели к неделе. В стабильной фазе боль прошла, а искривление не меняется не менее трёх–шести месяцев.',
+          'В АКТИВНОЙ ФАЗЕ НЕ ОПЕРИРУЮТ. Причина проста: если искривление ещё меняется, исправленный сегодня угол через полгода может снова измениться. Поэтому сначала дают болезни успокоиться. Это ожидание не проходит впустую: контроль боли и наблюдение — его часть.',
+          'Причина до конца не выяснена. Считается, что небольшие повторяющиеся нагрузки во время близости у предрасположенных мужчин нарушают заживление и приводят к образованию бляшки. С предрасположенностью связывают сахарный диабет, контрактуру Дюпюитрена (похожее уплотнение ткани на ладони) и некоторые особенности соединительной ткани.',
+          'РЕАЛИСТИЧНОЕ ОЖИДАНИЕ: цель операции — не вернуть половой член к состоянию до болезни, а выпрямить его настолько, чтобы близость стала возможной. Небольшое остаточное искривление не считается неудачей. С осторожностью относитесь к тем, кто обещает полное исправление.'
+        ],
+        eligibility: {
+          suitable: ['Мужчины в стабильной фазе — без боли, с неизменным искривлением не менее 3–6 месяцев', 'Мужчины, у которых искривление мешает половому акту', 'Мужчины, у которых из-за сужения по типу песочных часов половой член подгибается у головки', 'Мужчины с достаточной эрекцией и только проблемой формы — подходит пликация или пластика лоскутом', 'Мужчины с выраженным искривлением и одновременно с нарушением эрекции, не отвечающим на таблетки — рассматривается коррекция с протезом'],
+          notSuitable: ['МУЖЧИНЫ В АКТИВНОЙ ФАЗЕ — при сохраняющейся боли или меняющемся искривлении операцию откладывают', 'Мужчины с небольшим искривлением, не испытывающие трудностей при близости', 'Мужчины, ожидающие косметического совершенства', 'Мужчины с неоценённым нарушением эрекции — это нужно выяснить сначала, так как меняет выбор метода', 'Мужчины с нарушением свёртывания крови или неконтролируемым сопутствующим заболеванием']
+        },
+        technology: ['Цветное допплеровское УЗИ полового члена — расположение бляшки, кальциноз и кровоток', 'Измерение угла при искусственной эрекции (во время операции)', 'Методики пликации (укорочения)', 'Расширение зоны бляшки лоскутом', 'При необходимости одновременная коррекция с фаллопротезом'],
+        surgeonExperience: { caseVolume: '', note: 'Андрология и хирургия полового члена входят в сферу работы доц. д-ра Мюслюма Эргюна. При болезни Пейрони метод выбирают при совместной оценке степени и направления искривления, длины полового члена, состояния эрекции и ожиданий пациента.' },
+        timeline: [
+          { when: 'Шаг 1', title: 'Определение фазы', body: 'Выясняют, есть ли боль и менялось ли искривление в последние месяцы. Это важнейшее сведение для выбора времени операции.' },
+          { when: 'Шаг 2', title: 'Измерение и визуализация', body: 'Угол измеряют по фотографии в состоянии эрекции или при осмотре с искусственной эрекцией. Допплеровское УЗИ оценивает расположение бляшки, кальциноз и кровоток.' },
+          { when: 'Шаг 3', title: 'Наблюдение в активной фазе', body: 'Если болезнь активна, операцию откладывают. В это время контролируют боль и периодически повторяют измерения. Стабилизация обычно занимает месяцы.' },
+          { when: 'Шаг 4', title: 'Выбор метода', body: 'Решение принимают в стабильной фазе: пликация при умеренном искривлении и достаточной длине; лоскут при выраженном искривлении или песочных часах; коррекция с протезом, если нарушена и эрекция.' },
+          { when: 'После операции', title: 'Заживление и возвращение к близости', body: 'Отёк и синяки ожидаемы в первые недели. Возвращение к половой жизни обычно планируют через 6–8 недель с разрешения хирурга.' }
+        ],
+        risks: ['УКОРОЧЕНИЕ ПОЛОВОГО ЧЛЕНА: присуще методике пликации — искривление исправляют укорочением длинной стороны. Это не осложнение, а известное следствие метода, и его всегда обсуждают до операции', 'Неполное исправление искривления или его частичный возврат со временем', 'Ухудшение эрекции — особенно актуально после пластики лоскутом', 'Изменение чувствительности или онемение кожи либо головки', 'Прощупываемые узлы швов (после пликации)', 'Нарушение заживления в зоне лоскута', 'Инфекция и кровотечение', 'Риски, связанные с устройством, у пациентов с протезом — подробно изложены на отдельной странице'],
+        alternatives: ['Наблюдение — правильный подход при небольшом искривлении, не мешающем близости', 'Контроль боли и ожидание окончания активной фазы', 'Инъекции в бляшку — у отобранных пациентов, эффект различается', 'Вытягивающие устройства — требуют регулярного и длительного применения', 'Пликация — при умеренном искривлении, если укорочение приемлемо', 'Расширение лоскутом — при выраженном искривлении и песочных часах', 'Фаллопротез — при сопутствующем нарушении эрекции'],
+        comparison: {
+          title: 'Сравнение пликации, пластики лоскутом и протеза',
+          columns: ['Критерий', 'Пликация', 'Лоскут', 'Коррекция с протезом'],
+          rows: [
+            { label: 'Кому подходит', values: ['Умеренное искривление, хорошая эрекция', 'Выраженное искривление или песочные часы', 'Искривление и устойчивое нарушение эрекции'] },
+            { label: 'Длина полового члена', values: ['Происходит укорочение', 'Укорочение меньше', 'Зависит от длины протеза'] },
+            { label: 'Влияние на эрекцию', values: ['Обычно сохраняется', 'Выше риск ухудшения', 'Эрекцию обеспечивает устройство'] },
+            { label: 'Техническая сложность', values: ['Проще', 'Сложнее', 'Сложная'] },
+            { label: 'Обратимость', values: ['Швы можно снять', 'Трудно', 'Нет — ткань удаляется'] }
+          ],
+          note: 'Ни один метод не превосходит другие безусловно. Выбор делается с учётом степени искривления, длины полового члена, состояния эрекции и вашего собственного приоритета.'
+        },
+        recovery: [
+          { period: 'Первая неделя', body: 'Ожидаемы отёк и синяки, которые постепенно проходят. Применяют обезболивающие. Тяжёлых нагрузок избегают.' },
+          { period: '2–4-я неделя', body: 'Синяки в основном проходят. Возвращение к обычной жизни. По рекомендации хирурга можно начать упражнения на растяжение.' },
+          { period: '6–8-я неделя', body: 'Возвращение к половой жизни планируют в этот период с разрешения хирурга. Слишком раннее возвращение может перегрузить швы.' },
+          { period: '3–6-й месяц', body: 'Оценивают результат. Небольшое остаточное искривление вероятно и, пока оно не мешает близости, неудачей не считается.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Стоимость заметно зависит от выбранного метода (пликация, лоскут или коррекция с протезом). Точное предложение даётся после обследования.' },
+        packageIncludes: ['Андрологическое обследование и допплеровское УЗИ полового члена', 'Операция и анестезия', 'Амбулаторная процедура или 1 ночь в стационаре', 'Перевязки и контрольный осмотр', 'Трансферы аэропорт–больница–отель', 'Проживание (пациент + 1 сопровождающий)', 'Медицинский переводчик и дистанционное наблюдение после возвращения домой'],
+        faqs: [
+          { q: 'Моё искривление — это болезнь Пейрони?', a: 'Не всякое искривление является болезнью Пейрони. У части мужчин лёгкое искривление есть с рождения, и это не болезнь. Болезнь Пейрони начинается позже, часто с боли, и при осмотре прощупывается плотная бляшка. Различить помогают расспрос и осмотр.' },
+          { q: 'Можно ли оперироваться сразу?', a: 'В активной фазе нет. Если боль сохраняется или искривление менялось в последние месяцы, операцию откладывают, потому что исправленный сегодня угол может измениться позже. Искривление должно быть стабильным не менее трёх–шести месяцев.' },
+          { q: 'Укоротит ли операция половой член?', a: 'При пликации да — искривление исправляют укорочением длинной стороны. Это известное и неизбежное следствие метода, а не осложнение. При пластике лоскутом укорочение меньше, но выше вероятность повлиять на эрекцию. Какой компромисс выбрать, обсуждается вместе.' },
+          { q: 'Исправится ли искривление полностью?', a: 'Цель — не полное исправление, а достаточное для возможности близости. Небольшое остаточное искривление обычно и считается успехом, пока оно не мешает. С осторожностью относитесь к обещаниям полного исправления.' },
+          { q: 'Есть ли лечение без операции?', a: 'У отобранных пациентов могут рассматриваться инъекции в бляшку и вытягивающие устройства. Их эффект различается, и ни один не даёт столь предсказуемого результата, как операция. При небольшом искривлении, не мешающем близости, правильнее наблюдение.' },
+          { q: 'У меня ещё и нарушение эрекции — что тогда?', a: 'В этом случае одного выпрямления недостаточно: прямой половой член бесполезен, если эрекции нет. Если таблетки не помогают, рассматривается одновременная коррекция с фаллопротезом. Поскольку это решение необратимо, его обсуждают подробно.' },
+          { q: 'Проходит ли болезнь сама?', a: 'Боль у большинства со временем проходит. Искривление же обычно остаётся: у части мужчин оно уменьшается, у части сохраняется. Полного самостоятельного исправления не ждут, поэтому решение наблюдать — это не «ничего не делать», а со временем увидеть, нужна ли операция вообще.' },
+          { q: 'Когда можно вернуться к половой жизни?', a: 'Обычно через 6–8 недель с разрешения хирурга. Раннее возвращение может перегрузить швы и испортить результат. После пластики лоскутом этот срок может быть больше.' }
+        ],
+        sources: [{ label: 'EAU Guidelines on Sexual and Reproductive Health — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }]
+      },
+      ar: {
+        title: 'مرض بيروني: اعوجاج القضيب',
+        summary:
+          'انحناء القضيب إلى جهة أثناء الانتصاب، مع ألم في الغالب. وللمرض طوران: نشط ومستقر، وقرار العلاج يتوقف على الطور الذي أنت فيه.',
+        metaTitle: 'مرض بيروني (اعوجاج القضيب): الأسباب والعلاج',
+        metaDescription: 'أطوار مرض بيروني، ولماذا لا تُجرى الجراحة في الطور النشط، وتقنيتا الطيّ والرقعة، والمخاطر، والتوقعات الواقعية.',
+        quickFacts: { duration: 'الجراحة 60–120 دقيقة', anesthesia: 'تخدير عام أو نصفي', hospitalStay: 'في اليوم نفسه أو ليلة واحدة', stayInTurkey: '5–7 أيام', returnToWork: 'أسبوع واحد', flightClearance: '5–7 أيام' },
+        definition: [
+          'مرض بيروني هو تكوّن لويحة متصلبة — نسيج يشبه الثفن — في الغلاف المحيط بالنسيج الانتصابي للقضيب. ولأن هذه اللويحة لا تتمدد، ينحني القضيب نحوها أثناء الانتصاب. وقد يكون الانحناء إلى الأعلى أو الأسفل أو الجانب؛ ويصاحبه عند بعض الرجال تضيّق على هيئة الساعة الرملية أو قِصَر.',
+          'للمرض طوران، وهذا التمييز هو ما يحدد العلاج. ففي الطور النشط (الالتهابي) يوجد ألم ويستمر الانحناء في التغير من أسبوع إلى آخر. أما في الطور المستقر فقد زال الألم وبقي الانحناء على حاله ثلاثة إلى ستة أشهر على الأقل.',
+          'لا تُجرى الجراحة في الطور النشط. والسبب بسيط: فإن كان الانحناء ما زال يتغير فقد تعود الزاوية المصححة اليوم إلى الاعوجاج بعد ستة أشهر. ولذلك يُنتظر هدوء المرض أولًا. وهذا الانتظار ليس فارغًا؛ فضبط الألم والمتابعة جزء منه.',
+          'السبب غير معروف تمامًا. ويُعتقد أن إجهادات صغيرة متكررة أثناء الجماع تُفسد مسار الالتئام عند المهيّئين فتؤدي إلى تكوّن اللويحة. وقد رُبطت بالاستعداد لذلك أمراضٌ مثل السكري وتقفّع دوبويتران (تصلّب نسيجي مشابه في راحة اليد) وبعض خصائص النسيج الضام.',
+          'توقّع واقعي: ليس هدف الجراحة إعادة القضيب إلى ما كان عليه قبل المرض، بل تقويمه بما يكفي لجعل الجماع ممكنًا. وبقاء انحناء خفيف ليس فشلًا. فاحذر من يقول لك إنه سيُصحَّح تمامًا.'
+        ],
+        eligibility: {
+          suitable: ['من دخل مرضهم الطور المستقر — زال الألم ولم يتغير الانحناء منذ 3–6 أشهر على الأقل', 'من يمنعهم الانحناء من الجماع', 'من ينثني لديهم القضيب عند الطرف بسبب تضيّق على هيئة الساعة الرملية', 'من لديهم وظيفة انتصاب جيدة ومشكلة شكل فقط — تناسبهم تقنية الطيّ أو الرقعة', 'من لديهم انحناء واضح مع ضعف انتصاب لا يستجيب للحبوب — تُطرح لهم الدعامة مع التقويم'],
+          notSuitable: ['من هم في الطور النشط — إن استمر الألم أو كان الانحناء ما زال يتغير تُؤجَّل الجراحة', 'من انحناؤهم خفيف ولا يجدون صعوبة في الجماع — لا تلزمهم عملية', 'من يتوقعون كمالًا تجميليًا', 'من لم يُقيَّم لديهم ضعف الانتصاب — يجب توضيح ذلك أولًا لأنه يغيّر اختيار الأسلوب', 'من لديهم اضطراب تخثّر أو مرض مرافق غير مضبوط']
+        },
+        technology: ['التصوير بالدوبلر الملون للقضيب — موضع اللويحة والتكلّس والتروية', 'قياس الزاوية تحت انتصاب صناعي (أثناء العملية)', 'تقنيات الطيّ (التقصير)', 'توسيع موضع اللويحة برقعة', 'التقويم المتزامن بدعامة القضيب عند اللزوم'],
+        surgeonExperience: { caseVolume: '', note: 'الأندرولوجيا وجراحة القضيب من مجالات عمل الأستاذ المشارك الدكتور مسلم إرغون. وفي مرض بيروني يُختار الأسلوب بتقييم درجة الانحناء واتجاهه وطول القضيب وحال وظيفة الانتصاب وتوقعات المريض معًا.' },
+        timeline: [
+          { when: 'الخطوة 1', title: 'تحديد الطور', body: 'يُسأل عن وجود الألم وعمّا إذا تغيّر الانحناء في الأشهر الأخيرة. وهذه أهم معلومة في تحديد توقيت الجراحة.' },
+          { when: 'الخطوة 2', title: 'القياس والتصوير', body: 'تُقاس الزاوية من صورة للقضيب منتصبًا أو بالفحص تحت انتصاب صناعي. ويُقيَّم بالدوبلر موضع اللويحة ووجود التكلّس والتروية.' },
+          { when: 'الخطوة 3', title: 'المتابعة في الطور النشط', body: 'إن كان المرض نشطًا تُؤجَّل الجراحة. ويُضبَط الألم ويُعاد القياس على فترات. ويستغرق الهدوء أشهرًا عادةً.' },
+          { when: 'الخطوة 4', title: 'اختيار الأسلوب', body: 'يُتخذ القرار في الطور المستقر: الطيّ إذا كان الانحناء متوسطًا والطول كافيًا؛ والرقعة إذا كان الانحناء شديدًا أو وُجدت الساعة الرملية؛ والتقويم بدعامة إذا اختلّت وظيفة الانتصاب أيضًا.' },
+          { when: 'بعد العملية', title: 'التعافي والعودة إلى الحياة الجنسية', body: 'يُتوقع تورم وكدمات في الأسابيع الأولى. وتُخطَّط العودة إلى الحياة الجنسية عادةً بعد 6–8 أسابيع بموافقة الجرّاح.' }
+        ],
+        risks: ['قِصَر القضيب: متأصل في تقنية الطيّ — إذ يُصحَّح الانحناء بتقصير الجانب الأطول. وهذه ليست مضاعفة بل نتيجة معروفة للأسلوب، وتُناقَش دائمًا قبل العملية', 'عدم تصحيح الانحناء بالكامل أو عودته جزئيًا مع الوقت', 'اختلال وظيفة الانتصاب — وهو أكثر طرحًا بعد الرقعة', 'تغيّر الإحساس أو خدر في الجلد أو الحشفة', 'عُقَد خيوط محسوسة (بعد الطيّ)', 'اضطراب الالتئام في موضع الرقعة', 'العدوى والنزف', 'مخاطر متعلقة بالجهاز عند حاملي الدعامة — مفصّلة في صفحتها'],
+        alternatives: ['المتابعة — النهج الصحيح إذا كان الانحناء خفيفًا ولا يمنع الجماع', 'ضبط الألم وانتظار انقضاء الطور النشط', 'حقن داخل اللويحة — عند مرضى مختارين، والأثر يختلف من شخص إلى آخر', 'أجهزة الشدّ — تتطلب استعمالًا منتظمًا وطويلًا', 'الطيّ — عند انحناء متوسط إذا كان القِصَر مقبولًا', 'التوسيع برقعة — عند انحناء شديد وتشوّه الساعة الرملية', 'دعامة القضيب — عند وجود ضعف انتصاب أيضًا'],
+        comparison: {
+          title: 'مقارنة بين الطيّ والرقعة والدعامة',
+          columns: ['المعيار', 'الطيّ', 'الرقعة', 'التقويم بالدعامة'],
+          rows: [
+            { label: 'لمن يصلح', values: ['انحناء متوسط وانتصاب جيد', 'انحناء شديد أو ساعة رملية', 'انحناء مع ضعف انتصاب لا يستجيب للحبوب'] },
+            { label: 'طول القضيب', values: ['يحدث قِصَر', 'قِصَر أقل', 'بحسب طول الدعامة'] },
+            { label: 'الأثر في الانتصاب', values: ['يُحفَظ عادةً', 'خطر الاختلال أعلى', 'الانتصاب يوفّره الجهاز'] },
+            { label: 'الصعوبة التقنية', values: ['أبسط', 'أكثر تقدمًا', 'متقدمة'] },
+            { label: 'إمكان الرجوع', values: ['يمكن نزع الخيوط', 'صعب', 'لا يوجد — يُزال نسيج'] }
+          ],
+          note: 'لا تتفوق طريقة على أخرى تفوقًا مطلقًا. ويُتخذ الاختيار بتقييم درجة الانحناء وطول القضيب ووظيفة الانتصاب وأولويتك أنت معًا.'
+        },
+        recovery: [
+          { period: 'الأسبوع الأول', body: 'يُتوقع تورم وكدمات تتراجع مع الوقت. وتُستعمل المسكنات، ويُتجنَّب النشاط الشاق.' },
+          { period: 'الأسبوع 2–4', body: 'تزول الكدمات إلى حد كبير. وتُستأنف الحياة اليومية. ويمكن بدء تمارين الشدّ إن أوصى بها الجرّاح.' },
+          { period: 'الأسبوع 6–8', body: 'تُخطَّط العودة إلى الحياة الجنسية في هذه المرحلة بموافقة الجرّاح. والعودة المبكرة قد تُجهد الخيوط.' },
+          { period: 'الشهر 3–6', body: 'تُقيَّم النتيجة. وبقاء انحناء خفيف وارد، ولا يُعدّ فشلًا ما دام لا يمنع الجماع.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'يتغير السعر بوضوح بحسب الأسلوب المختار (الطيّ أو الرقعة أو التقويم بالدعامة). ويُقدَّم العرض النهائي بعد التقييم.' },
+        packageIncludes: ['التقييم الأندرولوجي والتصوير بالدوبلر للقضيب', 'الإجراء الجراحي والتخدير', 'إجراء في اليوم نفسه أو إقامة ليلة واحدة', 'الضمادات وفحص المتابعة', 'التنقلات بين المطار والمستشفى والفندق', 'الإقامة (المريض + مرافق واحد)', 'مترجم طبي ومتابعة عن بُعد بعد عودتك إلى بلدك'],
+        faqs: [
+          { q: 'هل الانحناء في قضيبي مرض بيروني؟', a: 'ليس كل انحناء مرض بيروني. فبعض الرجال لديهم انحناء خفيف منذ الولادة وهذا ليس مرضًا. أما بيروني فيبدأ لاحقًا، وغالبًا مع ألم، وتُجسّ في الفحص لويحة صلبة. والقصة المرضية والفحص هما ما يفرّق بينهما.' },
+          { q: 'هل يمكنني إجراء العملية فورًا؟', a: 'ليس في الطور النشط. فإن استمر الألم أو تغيّر الانحناء في الأشهر الأخيرة تُؤجَّل العملية، لأن الزاوية المصححة اليوم قد تعود إلى الاعوجاج لاحقًا. وينبغي أن يكون الانحناء ثابتًا منذ ثلاثة إلى ستة أشهر على الأقل.' },
+          { q: 'هل تُقصِّر العملية قضيبي؟', a: 'في تقنية الطيّ نعم — إذ يُصحَّح الانحناء بتقصير الجانب الأطول. وهذه نتيجة معروفة لا مفرّ منها، لا مضاعفة. أما في الرقعة فالقِصَر أقل، لكن احتمال تأثر وظيفة الانتصاب أعلى. وأي المقايضتين تقبل يُناقَش معك.' },
+          { q: 'هل سيُصحَّح انحنائي تمامًا؟', a: 'الهدف ليس التصحيح الكامل بل التصحيح الكافي لجعل الجماع ممكنًا. وبقاء انحناء خفيف أمر معتاد ويُعدّ نجاحًا ما دام لا يعيق. فاحذر من يضمن لك تصحيحًا كاملًا.' },
+          { q: 'هل يوجد علاج من دون جراحة؟', a: 'عند مرضى مختارين قد تُطرح الحقن داخل اللويحة وأجهزة الشدّ. وأثرها يختلف من شخص إلى آخر ولا يعطي أي منها نتيجة يمكن التنبؤ بها كالجراحة. وإن كان الانحناء خفيفًا ولا يمنع الجماع فالمتابعة هي النهج الصحيح.' },
+          { q: 'لديّ ضعف انتصاب أيضًا، فماذا يُفعل؟', a: 'عندها لا يكفي تقويم الانحناء وحده؛ فالقضيب المستقيم لا ينفع إن لم يحدث انتصاب. فإن لم تنفع الحبوب طُرح التقويم المتزامن بدعامة القضيب. ولأن هذا القرار لا رجعة فيه فيُناقَش بالتفصيل.' },
+          { q: 'هل يزول المرض من تلقاء نفسه؟', a: 'يزول الألم عند معظم المرضى مع الوقت. أما الانحناء فيبقى غالبًا؛ يخفّ عند بعضهم ويبقى كما هو عند آخرين. ولا يُتوقع تصحيح تلقائي كامل، ولذلك فقرار المتابعة ليس «عدم فعل شيء» بل رؤية ما إذا كانت الجراحة لازمة أصلًا مع مرور الوقت.' },
+          { q: 'متى يمكنني العودة إلى الحياة الجنسية؟', a: 'بعد 6–8 أسابيع عادةً وبموافقة الجرّاح. والعودة المبكرة قد تُجهد الخيوط وتُفسد النتيجة. وقد تطول هذه المدة عند من أُجريت لهم رقعة.' }
+        ],
+        sources: [{ label: 'EAU Guidelines on Sexual and Reproductive Health — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }]
+      }
+    }
+  },
+  {
+    /**
      * Androloji hub'ının altındaki varikosel sayfası (prompt m.4.1).
      * KRİTİK DÜRÜSTLÜK: her varikosel ameliyat edilmez; görülen her
      * varikosel kısırlık nedeni değildir. Ameliyatın gebelik GARANTİSİ
