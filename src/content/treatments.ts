@@ -24296,54 +24296,137 @@ export const treatments: Treatment[] = [
         ]
       },
       de: {
-        title: 'Andrologie (Penisimplantat, Varikozele, erektile Dysfunktion)',
-        summary: 'Chirurgie der männlichen Sexual- und Fortpflanzungsgesundheit: Penisimplantat, Varikozele, erektile Dysfunktion und ästhetische Eingriffe.',
-        metaTitle: 'Andrologie | Penisimplantat, Varikozele, ED-Chirurgie',
-        metaDescription: 'Andrologische Chirurgie: Penisimplantat, Penisverlängerung und -verdickung, Varikozele und Behandlung der erektilen Dysfunktion; Ablauf, Risiken und Preisspanne.',
+        title: 'Andrologie (Penisprothese, Varikozele, erektile Dysfunktion)',
+        summary:
+          'Männliche Sexual- und Fortpflanzungsmedizin. Die meisten Beschwerden dieses Fachs werden verspätet vorgestellt, weil sie nicht ausgesprochen werden — dabei ist manche das erste Zeichen einer anderen Erkrankung, und bei anderer ist die Zeit begrenzt.',
+        metaTitle: 'Andrologie: Welche Beschwerde führt zu welcher Abklärung',
+        metaDescription:
+          'Erektile Dysfunktion, Varikozele, männliche Unfruchtbarkeit, Peyronie-Krankheit und Penisprothese: welche Abklärung die jeweilige Beschwerde erfordert, die Stufenlogik der Behandlung und Diskretion.',
+        quickFacts: {
+          duration: 'Erstbeurteilung 30–45 Minuten',
+          anesthesia: 'Für die Abklärung nicht erforderlich',
+          hospitalStay: 'Abhängig von Diagnose und Eingriff',
+          stayInTurkey: '3–7 Tage je nach geplantem Eingriff',
+          returnToWork: 'Abhängig vom Eingriff',
+          flightClearance: 'Richtet sich nach dem Eingriff'
+        },
         definition: [
-          'Die Andrologie ist das urologische Teilgebiet für die männliche Sexual- und Fortpflanzungsgesundheit. Sie bietet chirurgische Optionen bei medikamentenresistenter erektiler Dysfunktion, varikozelenbedingter Unfruchtbarkeit oder Sexualfunktionsstörungen.',
-          'Zu den Eingriffen zählen das aufblasbare Penisimplantat, die mikrochirurgische Varikozelektomie, Penisverlängerung/-verdickung sowie ausgewählte Operationen bei erektiler Dysfunktion. Der passende Eingriff wird nach einer ausführlichen Bewertung festgelegt.'
+          'Die Andrologie ist das urologische Teilgebiet für männliche Sexual- und Fortpflanzungsgesundheit. Erektionsstörungen, unerfüllter Kinderwunsch, Probleme mit Samenerguss und Ejakulat, Penisverkrümmung und Erkrankungen der Hoden gehören dazu.',
+          'DAS ZENTRALE PROBLEM DIESES FACHS IST DIE VERZÖGERUNG. Viele Männer sprechen jahrelang mit niemandem darüber. Diese Verzögerung hat einen Preis: Eine Erektionsstörung kann das erste Zeichen einer Herz-Kreislauf-Erkrankung oder eines Diabetes sein, und beim Kinderwunsch ist die Zeit ein Faktor, der nicht wartet.',
+          'DER WICHTIGSTE EINZELPUNKT: EINE EREKTIONSSTÖRUNG IST NICHT NUR EIN SEXUELLES PROBLEM. Die Erektion hängt davon ab, dass kleine Gefäße richtig arbeiten. Diese Gefäße sind enger als die Herzkranzgefäße, weshalb sich eine Verengung hier zuerst zeigen kann. Eine neu aufgetretene und zunehmende Erektionsstörung sollte Anlass sein, Herz-Kreislauf-Erkrankungen und Diabetes abzuklären. Ein Rezept ersetzt diese Abklärung nicht.',
+          'DER ZWEITE PUNKT: PLÖTZLICHE UND SCHMERZHAFTE ZUSTÄNDE SIND NOTFÄLLE. Plötzlicher starker Hodenschmerz, besonders bei jüngeren Männern, kann eine Hodentorsion sein und erfordert eine Behandlung innerhalb von Stunden. Eine länger als vier Stunden anhaltende, nicht abklingende und schmerzhafte Erektion (Priapismus) ist ebenfalls ein Notfall; Abwarten kann bleibende Schäden verursachen. Beides wartet nicht auf einen Termin.',
+          'Die Behandlung erfolgt hier fast immer in STUFEN: zuerst die Ursache klären und Korrigierbares angehen, dann Medikamente, dann eingreifendere Optionen. Wer diese Stufen überspringt, trifft unumkehrbare Entscheidungen zu früh.'
+        ],
+        eligibility: {
+          suitable: [
+            'Männer mit Erektionsstörung, die die Ursache klären lassen möchten',
+            'Abklärung des Mannes, wenn ein Paar nach einem Jahr ungeschützten Verkehrs kein Kind bekommt',
+            'Männer mit auffälligem Spermiogramm',
+            'Männer mit Verkrümmung, einer verhärteten Stelle oder Schmerzen am Penis (Peyronie-Krankheit)',
+            'Männer mit Problemen der Ejakulation',
+            'Männer, die eine Schwellung, einen Knoten oder Schmerzen am Hoden bemerken — das ist unverzüglich abzuklären',
+            'Männer ohne Nutzen von medikamentöser Therapie, die über eine Prothese sprechen möchten'
+          ],
+          notSuitable: [
+            'Männer, die ohne jede Abklärung direkt eine Operation wünschen: Zuerst wird die Ursache gesucht',
+            'Männer mit unrealistischen Erwartungen — besonders bei Wünschen zur Penisvergrößerung wird das ausführlich besprochen',
+            'Männer mit schlecht eingestelltem Diabetes: Die Prothesenoperation wird bis zur besseren Einstellung verschoben',
+            'Männer mit aktiver Infektion: Prothesen- und Implantatchirurgie wird nicht durchgeführt'
+          ]
+        },
+        technology: [
+          'Hormonprofil (Testosteron und zugehörige Hormone) und Stoffwechselabklärung',
+          'Penile Farbduplexsonographie — zur Abklärung einer vaskulären Ursache',
+          'Spermiogramm und bei Bedarf Wiederholung',
+          'Skrotale Duplexsonographie — Varikozele und Hodenbeurteilung',
+          'Operationsmikroskop — für mikrochirurgische Varikozelektomie und Mikro-TESE',
+          'Hydraulische und biegsame Penisprothesensysteme',
+          'Objektive Beurteilung der Verkrümmung bei Peyronie-Krankheit'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
+          note: 'Die Andrologie gehört zu den Arbeitsschwerpunkten von Assoc. Prof. Dr. Müslüm Ergün. Das Vorgehen ist stufenweise: zuerst die Ursachenklärung, dann umkehrbare Behandlungen, zuletzt die nicht umkehrbaren Eingriffe.'
         },
         timeline: [
-          { when: 'Aus der Ferne', title: 'Vertrauliche Erstberatung', body: 'Ihre hormonellen und vaskulären Befunde werden vertraulich geprüft.' },
-          { when: 'Tag 1', title: 'Ankunft & Untersuchung', body: 'Untersuchung, erforderliche Tests und Eingriffsplanung.' },
-          { when: 'Tag 2', title: 'Operation', body: 'Der gewählte Eingriff; meist mit 1 Nacht Aufenthalt.' },
-          { when: 'Tag 3–5', title: 'Kontrolle', body: 'Verbandswechsel, Aufklärung und Reisefreigabe; bei Implantaten Anwendungsschulung.' }
+          { when: 'Aus der Ferne', title: 'Vertrauliche Erstkontaktaufnahme', body: 'Ihre Beschwerden, Ihre Medikation, Ihre Begleiterkrankungen und vorhandene Vorbefunde werden durchgesehen. Sie erfahren klar, mit wem Sie sprechen und wo Ihre Unterlagen liegen.' },
+          { when: 'Tag 1', title: 'Abklärung', body: 'Untersuchung, Hormon- und Stoffwechselwerte, bei Bedarf Duplexsonographie oder Spermiogramm. Ziel ist hier die Ursache, nicht der sofortige Eingriff.' },
+          { when: 'Entscheidungsphase', title: 'Besprechung der Optionen', body: 'Auf welcher Stufe Sie stehen, welche Optionen umkehrbar sind und welche nicht, realistische Erwartungen und Risiken. Dieses Gespräch wird nicht beschleunigt.' },
+          { when: 'Eingriffstag', title: 'Der geplante Eingriff', body: 'Varikozelektomie, Mikro-TESE, Peyronie-Korrektur oder Penisprothese wie geplant. Für die meisten genügt eine Nacht.' },
+          { when: 'Vor dem Rückflug', title: 'Kontrolle und Einweisung', body: 'Wundkontrolle, Nachschau und gegebenenfalls Geräteschulung. Wurde eine Prothese eingesetzt, lernen Sie die Bedienung hier persönlich — nicht später per Videoanruf.' }
         ],
         risks: [
-          'Infektion (besonders bei der Implantatchirurgie)',
-          'Schwellung, Blutergüsse und vorübergehende Empfindungsänderung',
-          'Möglichkeit eines mechanischen Implantatproblems (langfristig)',
-          'Notwendigkeit, die Erwartungen realistisch zu halten'
+          'INFEKTION: die ernsteste Komplikation der Penisprothesenchirurgie, weil ein infiziertes Gerät entfernt werden muss. Eine gute Blutzuckereinstellung ist zur Risikosenkung entscheidend',
+          'Schwellung, Bluterguss und vorübergehend verändertes Gefühl',
+          'Langfristig mechanischer Defekt der Prothese mit Wechselbedarf',
+          'Das Empfinden, der Penis sei nach der Prothesenoperation kürzer als zuvor — der am häufigsten genannte Grund für Unzufriedenheit',
+          'Flüssigkeitsansammlung im Hodensack und Wiederauftreten nach Varikozelektomie',
+          'Unvollständige Korrektur der Verkrümmung oder Verkürzung nach Peyronie-Operation',
+          'UNUMKEHRBARKEIT: Nach Einsetzen einer Prothese kehren natürliche Erektionen nicht zurück. Diese Entscheidung sollte nicht überstürzt werden',
+          'Unrealistische Erwartungen: Die häufigste Ursache für Unzufriedenheit ist hier kein technisches Problem, sondern eine nie besprochene Erwartung'
         ],
         alternatives: [
-          'Orale Medikamente (PDE5-Hemmer)',
-          'Penisinjektion oder Vakuumpumpe',
-          'Stoßwellentherapie (in ausgewählten Fällen)',
-          'Lebensstil und hormonelle Anpassung'
+          'Lebensstil und Risikofaktoren korrigieren — Rauchstopp, Gewichtsabnahme, Blutzucker- und Blutdruckeinstellung. Das klingt unspektakulär, ist aber bei vaskulärer Ursache grundlegend',
+          'Bestehende Medikamente überprüfen — manche Blutdruck- und Psychopharmaka beeinflussen die Sexualfunktion; setzen Sie nichts eigenmächtig ab, sondern sprechen Sie darüber',
+          'Behandlung eines Hormonmangels, falls vorhanden — zu beachten: Eine Testosterontherapie kann die Samenbildung unterdrücken und bedarf bei Kinderwunsch gesonderter Abwägung',
+          'Tabletten (PDE5-Hemmer) — die medikamentöse Erstlinie',
+          'Schwellkörperinjektion oder Vakuumsystem — wenn Tabletten nicht genügen',
+          'Varikozelektomie — kann bei geeigneter Auswahl die Spermienparameter verbessern',
+          'Mikro-TESE — Gewinnung von Spermien aus dem Hoden, wenn im Ejakulat keine vorhanden sind',
+          'Penisprothese — wenn die übrigen Optionen nicht geholfen haben; dauerhaft und nicht umkehrbar'
+        ],
+        comparison: {
+          title: 'Die Stufen bei Erektionsstörung: wo jede endet',
+          columns: ['Stufe', 'Was sie bewirkt', 'Umkehrbar?', 'Wann sie passt'],
+          rows: [
+            { label: 'Risikofaktoren korrigieren', values: ['Setzt an der vaskulären Ursache an', 'Ja', 'Für alle der erste Schritt'] },
+            { label: 'Tabletten', values: ['Unterstützen den vorhandenen Mechanismus', 'Ja', 'Bei den meisten die erste Medikamentenstufe'] },
+            { label: 'Injektion / Vakuum', values: ['Erzeugen die Erektion von außen', 'Ja', 'Wenn Tabletten nicht genügen'] },
+            { label: 'Penisprothese', values: ['Erzeugt Steifigkeit mit einem Gerät', 'NEIN — natürliche Erektionen kehren nicht zurück', 'Wenn das Übrige nicht geholfen hat'] }
+          ],
+          note: 'Diese Stufen sollten nicht übersprungen werden. Eine Prothese ist eine gute Lösung, aber die letzte Stufe; sie vor den früheren Schritten zu empfehlen bedeutet, eine nicht umkehrbare Entscheidung zu früh zu treffen. Achten Sie darauf, ob überhaupt gefragt wurde, was Sie bereits versucht haben.'
+        },
+        recovery: [
+          { period: 'Nach der Abklärung', body: 'Die Befunde werden mit Ihnen durchgesprochen. Zeigt sich neben der Erektionsstörung ein kardiovaskuläres Risiko, erfolgt dafür eine Weiterleitung — das kann wichtiger sein als die Beschwerde, mit der Sie gekommen sind.' },
+          { period: 'Während der medikamentösen Therapie', body: 'Die korrekte Anwendung ist entscheidend; manche vermeintliche Wirkungslosigkeit ist ein Anwendungsfehler. Beurteilt wird nach mehreren Versuchen, nicht nach einem.' },
+          { period: 'Erste Woche nach der Operation', body: 'Schwellung und Bluterguss sind zu erwarten. Anstrengung wird vermieden. Fieber, zunehmender Schmerz oder Sekretion sind unverzüglich zu melden.' },
+          { period: 'Heilungsphase nach einer Prothese', body: 'Das Gerät wird nicht sofort benutzt; die Heilung muss abgeschlossen sein, und den Zeitpunkt legt Ihr Operateur fest. Zu frühe Nutzung kann schaden.' },
+          { period: 'Dritter Monat nach Varikozelektomie', body: 'Die Spermienbildung folgt einem Zyklus von etwa drei Monaten; ein Kontrollspermiogramm ist daher frühestens dann aussagekräftig.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Variiert je nach Implantatmarke und Eingriff.'
+          disclaimer: 'Der Betrag hängt vom geplanten Eingriff und, wenn eine Prothese verwendet wird, vom Modell ab. Ein schriftlicher, aufgeschlüsselter Kostenvoranschlag folgt nach der Abklärung.'
         },
         packageIncludes: [
-          'Operation und Krankenhausaufenthalt',
-          'Anästhesie und Untersuchungen',
-          '(Falls zutreffend) Implantat',
-          'Transfers und Unterkunft',
-          'Medizinischer Dolmetscher und vertrauliche Koordination',
-          'Kontrolle und Online-Nachsorge'
+          'Vertrauliches Erstgespräch',
+          'Untersuchung, Hormon- und Stoffwechselwerte',
+          'Duplexsonographie und Spermiogramm bei Bedarf',
+          'Anästhesie und Operationssaal',
+          'Der geplante Eingriff',
+          'Das Prothesensystem, soweit verwendet',
+          'Klinikaufenthalt',
+          'Persönliche Geräteschulung bei eingesetzter Prothese',
+          'Transfers Flughafen–Klinik–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und diskrete Koordination',
+          'Nachbetreuung aus der Ferne nach der Rückkehr'
         ],
         faqs: [
-          { q: 'Wird der Prozess vertraulich behandelt?', a: 'Ja; alle Beratungen und die Koordination erfolgen nach dem Grundsatz der Vertraulichkeit.' },
-          { q: 'Wie ist die Sexualfunktion nach einem Penisimplantat?', a: 'Das Implantat bietet eine dauerhafte Lösung bei Erektionsproblemen, die nicht auf Medikamente ansprechen; eine Anwendungsschulung wird angeboten.' },
-          { q: 'Behebt eine Varikozelen-Operation die Unfruchtbarkeit?', a: 'Die mikrochirurgische Varikozelektomie kann bei ausgewählten Patienten die Spermienparameter verbessern.' }
+          { q: 'Ich habe eine Erektionsstörung — kann ich nicht einfach ein Rezept bekommen?', a: 'Das ist der häufigste Fehler. Eine neu aufgetretene und zunehmende Erektionsstörung kann das erste Zeichen einer Herz-Kreislauf-Erkrankung oder eines Diabetes sein, weil die Gefäße im Penis enger sind als die Herzkranzgefäße und eine Verengung zuerst zeigen können. Deshalb steht die Abklärung vor dem Rezept. Sie soll Sie nicht hinhalten, sondern verhindern, dass etwas Wichtigeres übersehen wird.' },
+          { q: 'Wann muss ich sofort Hilfe suchen?', a: 'Bei plötzlichem starkem Hodenschmerz, besonders in jüngeren Jahren: Das kann eine Hodentorsion sein und erfordert eine Behandlung innerhalb von Stunden. Auch eine über vier Stunden anhaltende, nicht abklingende und schmerzhafte Erektion ist ein Notfall; Abwarten kann bleibende Schäden verursachen. Ein schmerzloser, tastbarer Knoten im Hoden ist ebenfalls unverzüglich abzuklären.' },
+          { q: 'Bleibt das vertraulich?', a: 'Ja, und das ist Ihr Recht, kein Entgegenkommen. Sie dürfen fragen, wer Zugriff auf Ihre Unterlagen hat, wo sie gespeichert werden, auf welchen Namen die Unterkunft gebucht wird und was auf der Rechnung steht. Werden Sie um Fotos oder ein Patientenzitat gebeten, dürfen Sie ablehnen, ohne dass das Ihre Behandlung beeinflusst.' },
+          { q: 'Wir bekommen kein Kind — wer sollte zuerst untersucht werden?', a: 'Beide Partner. Das ist ein Thema des Paares, und die Untersuchung abzubrechen, sobald beim Mann etwas gefunden wird, ist ein häufiger Fehler. Eisprung, Zustand der Eileiter und das Alter der Frau beeinflussen das Ergebnis unmittelbar; ohne diese Information lässt sich der erwartete Nutzen einer Behandlung beim Mann nicht seriös beurteilen.' },
+          { q: 'Mein Spermiogramm war auffällig — steht das fest?', a: 'Ein einzelner Test genügt nicht. Die Werte werden durch fieberhafte Erkrankungen, starken Stress, manche Medikamente und die Bedingungen der Probengewinnung beeinflusst. Üblich ist eine Wiederholung nach einem Intervall. Treffen Sie keine Entscheidung auf Grundlage eines einzigen auffälligen Ergebnisses.' },
+          { q: 'Führt eine Varikozelenoperation sicher zur Vaterschaft?', a: 'Nein. Bei geeigneter Auswahl kann sie die Spermienparameter verbessern, aber nicht bei jedem Mann, und nicht jedes Paar mit Verbesserung wird schwanger. Seien Sie vorsichtig bei Zusicherungen eines bestimmten Ergebnisses.' },
+          { q: 'Ist die Penisprothese die letzte Möglichkeit?', a: 'Ja, und so sollte sie behandelt werden. Sie sollte nicht vorgeschlagen werden, bevor umkehrbare Optionen — Tabletten, Injektionen, Vakuumsystem — versucht wurden. Nach einer Prothese kehren natürliche Erektionen nicht zurück. Wer Ihnen eine Prothese vorschlägt, ohne zu fragen, was Sie bereits versucht haben, klärt Sie nicht ab.' },
+          { q: 'Was kann ich von Penisvergrößerungen erwarten?', a: 'Hier ist das Erwartungsmanagement wichtiger als die Technik. Die Versprechen im Internet sind häufig unrealistisch. Bei manchen Männern liegt das eigentliche Thema nicht im Maß, sondern in dessen Wahrnehmung; dann führt eine Operation nicht zu Zufriedenheit. Das wird in der Abklärung offen besprochen.' },
+          { q: 'Sollte ich Testosteron nehmen?', a: 'Ohne nachgewiesenen Mangel ist eine Testosterongabe nicht richtig. Und ein wichtiger Punkt: Eine Testosterontherapie kann die Samenbildung unterdrücken. Bei Kinderwunsch bedarf sie daher gesonderter Abwägung — sonst verschlimmern Sie ein anderes Problem, während Sie eines behandeln.' },
+          { q: 'Erfahren meine Partnerin oder meine Familie Einzelheiten?', a: 'Nein. Ihre medizinischen Informationen werden ohne Ihre Zustimmung mit niemandem geteilt, auch nicht mit den Ihnen Nächsten. Sie bestimmen, wer informiert wird. Reisen Sie mit Begleitung, bestimmen Sie auch, bei welchen Teilen des Gesprächs sie dabei ist. Das zu Beginn zu sagen, ist leichter, als es in einem heiklen Moment zu erklären.' },
+          { q: 'Welche Unterlagen soll ich vorab senden?', a: 'Vorhandene Spermiogramme, Hormonwerte, Blutzucker und Cholesterin, eine vollständige Medikamentenliste, Ihre Begleiterkrankungen und Berichte früherer Eingriffe. Damit lässt sich schon vor der Reise beurteilen, auf welcher Stufe Sie stehen.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Sexual and Reproductive Health — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
         ]
       },
       ru: {
@@ -24774,54 +24857,137 @@ export const treatments: Treatment[] = [
         ]
       },
       de: {
-        title: 'Uroonkologie (Blasen-, Nieren-, Hodentumor-Chirurgie)',
-        summary: 'Minimalinvasive und organerhaltende Chirurgie bei Krebserkrankungen des Harnsystems und der männlichen Geschlechtsorgane.',
-        metaTitle: 'Uroonkologie | Blasen-, Nieren-, Hodenkrebs-Chirurgie',
-        metaDescription: 'Uroonkologische Chirurgie: robotische/laparoskopische und organerhaltende Verfahren bei Blasen-, Nieren- und Hodentumoren; Ablauf, Risiken und Preisspanne.',
+        title: 'Uroonkologie (Prostata-, Blasen-, Nieren- und Hodenkrebs)',
+        summary:
+          'Operative Behandlung von Krebserkrankungen der Harnwege und der männlichen Geschlechtsorgane. Zwei Dinge zählen hier am meisten: kein Warnzeichen zu übersehen und die Behandlungsentscheidung nicht zu überstürzen.',
+        metaTitle: 'Uroonkologie: Was die Warnzeichen bedeuten und wie behandelt wird',
+        metaDescription:
+          'Warnzeichen bei Prostata-, Blasen-, Nieren- und Hodenkrebs, warum Blut im Urin immer abgeklärt werden muss, organerhaltende Chirurgie und wie die Behandlungsentscheidung zustande kommt.',
+        quickFacts: {
+          duration: 'Erstbeurteilung 30–45 Minuten',
+          anesthesia: 'Für die Beurteilung nicht erforderlich',
+          hospitalStay: 'Abhängig von Diagnose und Operationsumfang',
+          stayInTurkey: '7–14 Tage je nach Operation',
+          returnToWork: 'Abhängig von der Operation',
+          flightClearance: 'Nach Kontrolle und Heilungsverlauf'
+        },
         definition: [
-          'Die Uroonkologie befasst sich mit der chirurgischen Behandlung von Krebserkrankungen des Harn- und männlichen Geschlechtssystems wie Nieren-, Blasen-, Prostata- und Hodenkrebs.',
-          'In geeigneten Fällen werden organerhaltende (z. B. partielle Nephrektomie) und minimalinvasive robotische/laparoskopische Techniken bevorzugt. Die Behandlung wird von einem interdisziplinären Tumorboard geplant.'
+          'Die Uroonkologie umfasst Diagnostik und operative Behandlung von Krebserkrankungen der Niere, der Blase, der Harnwege, der Prostata und des Hodens. Gemeinsam ist ihnen, dass sie früh oft wenige Beschwerden verursachen und dass die auftretenden Beschwerden leicht anderem zugeschrieben werden.',
+          'DER WICHTIGSTE SATZ DIESER SEITE: BLUT IM URIN MUSS ABGEKLÄRT WERDEN, AUCH WENN ES NICHT SCHMERZT. Schmerzloses Blut im Urin ist das klassische erste Zeichen eines Blasenkarzinoms. Dass es einmal auftritt und wieder verschwindet, bedeutet nicht, dass es sich erledigt hat — im Gegenteil, der schubweise Verlauf ist ein bekanntes Merkmal. Bei Rauchern und ehemaligen Rauchern muss es abgeklärt werden. Die Auskunft "das ist ein Harnwegsinfekt" samt Antibiotikum ist die häufigste Ursache verspäteter Diagnosen.',
+          'DAS ZWEITE WARNZEICHEN: EIN SCHMERZLOSER, TASTBARER KNOTEN IM HODEN. Hodenkrebs tritt bei jüngeren Männern auf und wird gerade deshalb oft spät bemerkt, weil er nicht wehtut. Schmerzlosigkeit ist nicht beruhigend, sondern typisch. Eine Abklärung hat unverzüglich zu erfolgen.',
+          'DRITTENS: Ein erheblicher Teil der Nierentumoren wird heute zufällig bei einer aus anderem Grund durchgeführten Bildgebung entdeckt. Das klingt nach einer schlechten Nachricht, ist aber eine gute: Früh und klein entdeckte Tumoren lassen sich oft organerhaltend operieren.',
+          'ÜBERSTÜRZEN SIE DIE ENTSCHEIDUNG NICHT. Bei den meisten Krebserkrankungen dieses Gebiets schaden einige Wochen Bedenkzeit medizinisch nicht. Wird Druck gemacht, sofort zu entscheiden, kann dieser Druck eher kaufmännisch als medizinisch begründet sein. Eine Zweitmeinung ist Ihr Recht und verpflichtet Sie nicht, den Behandlungsort zu wechseln.'
+        ],
+        eligibility: {
+          suitable: [
+            'Alle mit Blut im Urin — auch schmerzlos und auch wenn es nur einmal auftrat',
+            'Männer mit schmerzlosem Knoten oder Größenzunahme eines Hodens',
+            'Männer mit erhöhtem PSA-Wert oder auffälligem Tastbefund',
+            'Personen mit einem in der Bildgebung entdeckten Nierentumor',
+            'Patienten, die wegen eines Blasentumors behandelt wurden und Nachsorge benötigen',
+            'Patienten, die vor der Entscheidung eine Zweitmeinung wünschen',
+            'Personen mit Raucheranamnese und neu aufgetretenen Harnbeschwerden'
+          ],
+          notSuitable: [
+            'Patienten, die eine Operation planen möchten, bevor Diagnose und Stadieneinteilung abgeschlossen sind: Zuerst wird korrekt eingestuft',
+            'Patienten, die bei ausgedehnter Erkrankung allein von einer Operation ausgehen: Hier hat die systemische Therapie Vorrang',
+            'Patienten, deren Allgemeinzustand und Begleiterkrankungen einen großen Eingriff nicht zulassen; dann werden weniger eingreifende Optionen geprüft',
+            'Manche sehr kleinen, langsam wachsenden Tumoren, bei denen Überwachung sinnvoller ist als eine Operation'
+          ]
+        },
+        technology: [
+          'Kontrastmittel-Computertomographie und Magnetresonanztomographie zur Stadieneinteilung',
+          'Multiparametrische Prostata-MRT und Fusionsbiopsie',
+          'Zystoskopie — direkte Betrachtung der Blase',
+          'Urinzytologie',
+          'Robotergestützte und laparoskopische Chirurgie',
+          'Organerhaltende (partielle) Nephrektomie',
+          'Feingewebliche Untersuchung — Bestimmung des tatsächlichen Stadiums und der Schnittränder',
+          'Interdisziplinäre Tumorkonferenz'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
+          note: 'Die uroonkologische Chirurgie gehört zu den Arbeitsschwerpunkten von Assoc. Prof. Dr. Müslüm Ergün. Der Behandlungsplan stützt sich auf Histologie, Bildgebung, Allgemeinzustand und die Präferenzen der Patientin oder des Patienten, in geeigneten Fällen auf eine Tumorkonferenzentscheidung.'
         },
         timeline: [
-          { when: 'Aus der Ferne', title: 'Tumorboard-Bewertung', body: 'Ihre Pathologie- und Bildgebungsbefunde werden im Tumorboard bewertet.' },
-          { when: 'Tag 1–2', title: 'Ankunft & Untersuchungen', body: 'Untersuchung, Staging-Untersuchungen und Anästhesiebewertung.' },
-          { when: 'Tag 3', title: 'Operation', body: 'Robotische/laparoskopische oder offene Operation; die Aufenthaltsdauer richtet sich nach dem Umfang.' },
-          { when: 'Tag 5–7', title: 'Kontrolle & Pathologie', body: 'Pathologiebefund, Plan der nächsten Schritte und Reisefreigabe.' }
+          { when: 'Aus der Ferne', title: 'Durchsicht Ihrer Unterlagen', body: 'Ihre Histologiebefunde und Bildgebung werden durchgesehen. Senden Sie die Bildgebung als Bilddaten (DICOM), nicht nur als Befundtext: Einen fremden Befund zu lesen ist keine eigenständige Beurteilung.' },
+          { when: 'Tag 1–2', title: 'Ankunft und Staging', body: 'Untersuchung, Nachholen fehlender Staging-Untersuchungen, Blutwerte und Narkoseaufklärung.' },
+          { when: 'Entscheidungsphase', title: 'Besprechung der Optionen', body: 'Operation, andere Behandlungen und bei geeigneten Patienten die aktive Überwachung; Nebenwirkungen und Nachsorgeaufwand jeder Option werden klar benannt.' },
+          { when: 'Operationstag', title: 'Der Eingriff', body: 'Wo angebracht robotergestützt oder laparoskopisch, und organerhaltend, wo immer das möglich ist.' },
+          { when: 'Nach der Entlassung', title: 'Histologie und Plan', body: 'Die Untersuchung des entfernten Gewebes zeigt das tatsächliche Stadium und ob eine weitere Behandlung nötig ist. Der Befund trifft meist nach Ihrer Rückkehr ein; wie er Sie erreicht und wer ihn erläutert, wird vorher vereinbart.' },
+          { when: 'Langfristig', title: 'Nachsorge', body: 'Bei diesen Erkrankungen ist die Nachsorge Teil der Behandlung. Zeitplan, Untersuchungen, Intervalle und Zuständigkeit für die Befundung werden schriftlich festgelegt.' }
         ],
         risks: [
-          'Blutung, Infektion und allgemeine chirurgische Risiken',
-          'Veränderungen der Organfunktion (je nach Umfang)',
-          'Möglicher Bedarf an Zusatztherapie (Chemo-/Immuntherapie)',
-          'Notwendigkeit der Rezidiv-Nachsorge'
+          'VERSPÄTETE DIAGNOSE: Das größte Risiko dieses Gebiets ist keine Operationskomplikation, sondern ein übersehenes Warnzeichen. Blut im Urin, das als Infekt gedeutet und nicht abgeklärt wird, ist das häufigste Beispiel',
+          'Blutung, Infektion und allgemeine Operations- und Narkoserisiken',
+          'Veränderung der Organfunktion je nach Umfang des Eingriffs',
+          'Inkontinenz und Veränderungen der Sexualfunktion nach Prostataoperationen',
+          'Anpassungsphase nach Rekonstruktion der Harnwege bei Blasenoperationen',
+          'Abnahme der Nierenfunktion nach Nierenoperationen; die organerhaltende Chirurgie soll das begrenzen',
+          'Lymphflüssigkeitsansammlung nach Lymphknotenentfernung',
+          'EIN SCHLECHTERER HISTOLOGIEBEFUND ALS ERWARTET mit der Notwendigkeit weiterer Behandlung',
+          'Die Möglichkeit eines Rückfalls und damit die Notwendigkeit kontinuierlicher Nachsorge — aus der Nachsorge auszuscheiden kann den Wert der Behandlung zunichtemachen'
         ],
         alternatives: [
-          'Aktive Überwachung (bei ausgewählten kleinen Tumoren)',
-          'Ablationsverfahren (bei ausgewählten Nierentumoren)',
-          'Strahlen-/systemische Therapie (je nach Stadium)',
-          'Blasenerhaltende Protokolle (in ausgewählten Fällen)'
+          'Aktive Überwachung — bei ausgewählter Niedrigrisiko-Erkrankung der Prostata und manchen kleinen Nierentumoren. Kein Aufschieben, sondern konsequentes Kontrollieren',
+          'Strahlentherapie — Alternative zur Operation beim Prostatakarzinom, mit anderem Nebenwirkungsprofil',
+          'Instillationstherapie in die Blase — bei oberflächlichen Blasentumoren',
+          'Ablative Verfahren — bei ausgewählten kleinen Nierentumoren',
+          'Chemotherapie, Immuntherapie und zielgerichtete Therapien — je nach Stadium, vor oder nach der Operation',
+          'Organerhaltende Chirurgie — nur den Tumor statt des ganzen Organs entfernen, wo das möglich ist',
+          'Unterstützende Behandlung — bei älteren Patienten mit erheblichen Begleiterkrankungen mit Vorrang für die Lebensqualität'
+        ],
+        comparison: {
+          title: 'Warnzeichen: wie dringend ist welches',
+          columns: ['Befund', 'Was dahinterstecken kann', 'Dringlichkeit', 'Erster Schritt'],
+          rows: [
+            { label: 'Schmerzloses Blut im Urin', values: ['Blasen- oder Harnwegstumor', 'Unverzüglich abklären', 'Zystoskopie und Bildgebung'] },
+            { label: 'Schmerzloser Knoten im Hoden', values: ['Hodentumor', 'Unverzüglich', 'Untersuchung und Hodensonographie'] },
+            { label: 'Erhöhter PSA-Wert', values: ['Gutartige Vergrößerung, Entzündung oder Krebs', 'Nicht akut, aber nachzuverfolgen', 'Kontrollwert, Untersuchung, MRT'] },
+            { label: 'Nierentumor in der Bildgebung', values: ['Gutartige oder bösartige Raumforderung', 'Planbare Abklärung', 'Kontrastmittel-CT'] },
+            { label: 'Flankenschmerz + Fieber + Schüttelfrost', values: ['Infektion hinter einem Aufstau', 'NOTFALL', 'Notaufnahme aufsuchen'] }
+          ],
+          note: 'Diese Tabelle soll nicht beunruhigen, sondern zeigen, wie viel Zeit welcher Befund verträgt. Schmerzloses Blut im Urin, das einmal auftritt und verschwindet, macht die Abklärung nicht entbehrlich — der schubweise Verlauf ist ein bekanntes Merkmal.'
+        },
+        recovery: [
+          { period: 'Erste Woche', body: 'Abhängig vom Umfang des Eingriffs. Frühes Aufstehen ist wichtig, sowohl zur Senkung des Thromboserisikos als auch für die Darmtätigkeit.' },
+          { period: '2.–4. Woche', body: 'Schrittweise Rückkehr in den Alltag. Heben wird vermieden. Wann welche Tätigkeit wieder möglich ist, wird für die durchgeführte Operation gesondert erklärt.' },
+          { period: 'Nach der Histologie', body: 'Der Befund entscheidet, ob eine weitere Behandlung ratsam ist. Falls ja, wird geplant, wann und wo; das ist keine schlechte Nachricht, sondern ein aktualisierter Plan.' },
+          { period: 'Erstes Jahr', body: 'Die Nachsorge ist in dieser Zeit engmaschiger, mit Blutwerten und Bildgebung in festen Abständen.' },
+          { period: 'Langfristig', body: 'Die Abstände werden je nach Verlauf größer, die Nachsorge endet jedoch nicht. Wer aus der Kontrolle herausfällt, riskiert, dass ein Rückfall spät statt früh erkannt wird.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Variiert je nach Tumorart, Stadium und OP-Umfang.'
+          disclaimer: 'Der Betrag hängt von Tumorart, Stadium, Operationsumfang und Dauer des Klinikaufenthalts ab. Ein schriftlicher, aufgeschlüsselter Kostenvoranschlag folgt nach Durchsicht Ihrer Unterlagen.'
         },
         packageIncludes: [
-          'Operation und Krankenhausaufenthalt',
-          'Anästhesie und Staging-Untersuchungen',
-          'Pathologische Untersuchung',
-          'Transfers und Unterkunft',
-          'Medizinischer Dolmetscher und Koordinator',
-          'Kontrolle und Online-Nachsorge'
+          'Durchsicht Ihrer Unterlagen aus der Ferne',
+          'Untersuchung und Nachholen fehlender Staging-Untersuchungen',
+          'Anästhesie und Operationssaal',
+          'Operation und Klinikaufenthalt',
+          'Feingewebliche Untersuchung des Präparats',
+          'Kontrolle nach Entlassung und Beurteilung vor dem Rückflug',
+          'Transfers Flughafen–Klinik–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und Patientenkoordination',
+          'Beurteilung Ihrer Nachsorgebefunde aus der Ferne'
         ],
         faqs: [
-          { q: 'Wird meine gesamte Niere entfernt?', a: 'In geeigneten Fällen wird nur der Tumoranteil entfernt (partielle Nephrektomie); die Entscheidung fällt nach der Bildgebung.' },
-          { q: 'Benötige ich nach der Operation eine Zusatztherapie?', a: 'Das hängt von Pathologie und Stadium ab und wird vom Tumorboard geplant.' },
-          { q: 'Wie erfolgt die Nachsorge?', a: 'Mit regelmäßiger Bildgebung und Blutuntersuchungen; eine Fernnachsorge wird angeboten.' }
+          { q: 'Ich hatte einmal Blut im Urin, dann war es weg. Muss ich das abklären lassen?', a: 'Ja, unbedingt. Schmerzloses Blut im Urin ist das klassische erste Zeichen eines Blasenkarzinoms, und der schubweise Verlauf ist ein bekanntes Merkmal. Dass es aufgehört hat, bedeutet nicht, dass es erledigt ist. Bei Raucheranamnese muss es abgeklärt werden. Die Deutung als Infekt mit Antibiotikum ist die häufigste Ursache verspäteter Diagnosen.' },
+          { q: 'Der Knoten im Hoden tut nicht weh — dann ist er doch harmlos?', a: 'Im Gegenteil. Hodenkrebs tut charakteristischerweise nicht weh; fehlender Schmerz ist kein beruhigender Befund. Jeder tastbare Knoten gehört daher unverzüglich untersucht und sonographiert.' },
+          { q: 'Muss ich sofort entscheiden?', a: 'Bei den meisten Krebserkrankungen dieses Gebiets schaden einige Wochen Bedenkzeit medizinisch nicht. Druck, "jetzt sofort" zu entscheiden, ist häufiger ein Zeichen kaufmännischen Vorgehens als medizinischer Notwendigkeit. Stellen Sie Fragen, holen Sie eine Zweitmeinung ein und entscheiden Sie mit Verständnis.' },
+          { q: 'Ist eine Zweitmeinung respektlos gegenüber meiner Ärztin oder meinem Arzt?', a: 'Nein. Meist gibt es hier mehr als einen vertretbaren Weg, und der Vergleich zeigt, welcher zu Ihnen passt. Auch die Graduierung einer Biopsie beruht auf Beurteilung; eine zweite pathologische Durchsicht kann die Einstufung ändern — und damit die Empfehlung. Eine Zweitmeinung verpflichtet Sie nicht, sich hier behandeln zu lassen.' },
+          { q: 'Wird meine ganze Niere entfernt?', a: 'Nicht immer. Bei Tumoren geeigneter Größe und Lage lässt sich nur der Tumor entfernen (organerhaltende Chirurgie). Das ist für die Nierenfunktion wichtig, insbesondere bei Einzelniere, Diabetes oder bereits eingeschränkter Funktion. Entschieden wird anhand der Bildgebung und der Tumorlage.' },
+          { q: 'Brauche ich nach der Operation eine weitere Behandlung?', a: 'Das entscheidet die Histologie. Am Schnittrand kann Tumor gefunden werden, oder die Erkrankung ist weiter fortgeschritten als angenommen; das bedeutet kein Scheitern der Operation, sondern einen aktualisierten Plan. Entscheidend ist, dass diese Möglichkeit vorher besprochen wurde.' },
+          { q: 'Wie lange dauert die Nachsorge, und warum ist sie so wichtig?', a: 'Die Nachsorge ist Teil der Behandlung, kein optionaler Zusatz danach. Ein früh erkannter Rückfall ist weit leichter zu behandeln. Gerade bei Blasentumoren ist die regelmäßige Zystoskopie entscheidend. Lassen Sie sich Ihren Plan schriftlich geben: welche Untersuchung, in welchem Abstand, und wer die Befunde beurteilt.' },
+          { q: 'Ich reise aus dem Ausland an — wie läuft die Nachsorge?', a: 'Das sollte geklärt sein, bevor Sie Reisedaten festlegen. Welche Untersuchungen in Ihrem Land möglich sind, wie Befunde übermittelt und von wem sie beurteilt werden, wird vorher vereinbart. Verlangen Sie außerdem Operationsbericht, Histologiebefund und Entlassungsbrief in einer Sprache, die Sie verstehen; Ihre behandelnden Ärzte brauchen sie.' },
+          { q: 'Bringt es jetzt noch etwas, mit dem Rauchen aufzuhören?', a: 'Ja, und die Frage ist wichtiger, als viele annehmen. Rauchen ist der am besten belegte beeinflussbare Risikofaktor für Blasenkrebs, und seine Bedeutung endet nicht mit der Diagnose. Es beeinflusst zudem die Wundheilung und das Risiko pulmonaler Komplikationen nach einer Operation. Die Zeit vor einer Operation ist nicht zu spät zum Aufhören — sie ist der Zeitpunkt, an dem die Motivation am größten ist.' },
+          { q: 'Was soll ich senden?', a: 'Alle Histologiebefunde, die Bildgebung selbst als DICOM-Daten, Ihre Blutwerte, frühere Operationsberichte, Ihre Medikamentenliste und Ihre Begleiterkrankungen. Nur Befundtexte zu senden begrenzt, was beurteilt werden kann.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines — Europäische Gesellschaft für Urologie (uroonkologische Leitlinien)', url: 'https://uroweb.org/guidelines' }
         ]
       },
       ru: {
@@ -25257,53 +25423,140 @@ export const treatments: Treatment[] = [
         ]
       },
       de: {
-        title: 'Frauenurologie (Inkontinenz, Beckenboden-Chirurgie)',
-        summary: 'Moderne Lösungen bei Harninkontinenz und Beckenbodenproblemen mit rascher Rückkehr in den Alltag.',
-        metaTitle: 'Frauenurologie | Inkontinenz und Beckenboden-Chirurgie',
-        metaDescription: 'Frauenurologie: Schlingen- und Beckenbodenchirurgie bei Harninkontinenz und Beckenorganprolaps; Ablauf, Risiken und Preisspanne.',
+        title: 'Urologie der Frau (Inkontinenz, überaktive Blase, Beckenboden)',
+        summary:
+          'Harnverlust ist häufig, aber nicht normal — und er ist behandelbar. Die erste Voraussetzung der richtigen Behandlung ist, den Typ zu bestimmen: Die richtige Behandlung am falschen Typ wirkt nicht.',
+        metaTitle: 'Urologie der Frau: Inkontinenztypen und Wahl der Behandlung',
+        metaDescription:
+          'Unterschied zwischen Belastungs-, Drang- und Mischinkontinenz, warum die Behandlung vom Typ abhängt, Beckenbodentraining, Schlingenoperation und Diskretion.',
+        quickFacts: {
+          duration: 'Erstbeurteilung 30–45 Minuten',
+          anesthesia: 'Für die Beurteilung nicht erforderlich',
+          hospitalStay: 'Ambulant – 1 Nacht je nach Eingriff',
+          stayInTurkey: '4–7 Tage',
+          returnToWork: 'Wenige Tage (anstrengende Tätigkeit später)',
+          flightClearance: 'Nach der Kontrolle'
+        },
         definition: [
-          'Die Frauenurologie befasst sich mit Diagnose und Behandlung von Erkrankungen wie Belastungsinkontinenz, überaktiver Blase und Beckenorganprolaps.',
-          'Die Behandlung reicht von Beckenbodenübungen über minimalinvasive Schlingenoperationen bis zur Beckenbodenrekonstruktion. Das Verfahren wird nach Art und Schweregrad der Beschwerden gewählt.'
+          'Die Urologie der Frau befasst sich mit Harnverlust, überaktiver Blase, Senkungsbeschwerden, wiederkehrenden Harnwegsinfekten und Entleerungsstörungen.',
+          'ZUERST KLAR GESAGT: HARNVERLUST IST KEINE NATÜRLICHE FOLGE DES ALTERNS. Dass er häufig ist, macht ihn nicht normal. Viele Frauen leben jahrelang damit, ohne es jemandem zu sagen, benutzen Einlagen, trinken weniger und schränken ihr gesellschaftliches Leben ein. Dabei lässt sich bei den meisten ohne Operation eine deutliche Besserung erreichen.',
+          'DIE ERSTE VORAUSSETZUNG IST DIE BESTIMMUNG DES TYPS. Bei der Belastungsinkontinenz tritt der Harnverlust auf, wenn der Bauchdruck steigt — Husten, Lachen, Heben — ohne vorangehenden Drang. Bei der Dranginkontinenz kommt zuerst ein plötzlicher, nicht aufschiebbarer Drang, und die Toilette wird nicht rechtzeitig erreicht. Dieser Unterschied ist entscheidend: Blasendämpfende Medikamente helfen beim Belastungstyp nicht, und eine Schlingenoperation hilft beim Drangtyp nicht.',
+          'EIN WARNHINWEIS: BLUT IM URIN IST KEINE EINFACHE INKONTINENZBESCHWERDE. Blut im Urin muss gesondert abgeklärt werden, auch wenn es gemeinsam mit Harnverlust auftritt. Ebenso sollten Brennen und Häufigkeit, die trotz Behandlung bestehen bleiben, nicht als "empfindliche Blase" abgetan werden.',
+          'EIN ZWEITER WARNHINWEIS: ENTLEERT SICH DIE BLASE NICHT, VERSCHLECHTERN MEDIKAMENTE DIE LAGE. Deshalb gehört die Restharnmessung vor jeden Behandlungsbeginn. Wird dieser einfache Schritt übersprungen, kann ein gut gemeintes Medikament schaden.'
+        ],
+        eligibility: {
+          suitable: [
+            'Frauen, die beim Husten, Lachen, Niesen oder Heben Harn verlieren',
+            'Frauen, die wegen plötzlichen Drangs die Toilette nicht erreichen',
+            'Frauen, bei denen beide Typen zusammen auftreten',
+            'Frauen, die nachts wiederholt zum Wasserlassen aufstehen',
+            'Frauen mit Druck- oder Schweregefühl bei Senkungsbeschwerden',
+            'Frauen mit wiederkehrenden Harnwegsinfekten',
+            'Frauen, die bereits ohne Erfolg behandelt wurden — oft liegt das nicht an der Behandlung, sondern an einem falsch bestimmten Typ'
+          ],
+          notSuitable: [
+            'Frauen mit unbehandeltem Harnwegsinfekt: Dieser wird zuerst behandelt, denn er kann alle Beschwerden nachahmen',
+            'Frauen, deren Blase sich nicht vollständig entleert: Blasendämpfende Medikamente sind dann ungeeignet, das wird zuerst geklärt',
+            'Frauen, die ohne Abklärung eine Operation wünschen: Vor Bestimmung des Typs wird nicht operiert',
+            'Frauen mit Kinderwunsch, bei denen der Zeitpunkt von Senkungs- und Schlingenoperationen gesondert besprochen wird'
+          ]
+        },
+        technology: [
+          'Miktionstagebuch — Aufzeichnung von Häufigkeit, Menge und Drangstärke; es liefert mehr als teure Untersuchungen',
+          'Urinuntersuchung und Kultur — zum Ausschluss eines Infekts',
+          'Restharnmessung — verpflichtender Schritt vor jeder Medikamentenentscheidung',
+          'Urodynamik — bei ausgewählten Frauen, wenn der Typ unklar ist',
+          'Zystoskopie — bei Blut im Urin oder untypischem Bild',
+          'Beurteilung des Beckenbodens und Anleitung zum richtigen Muskel',
+          'Minimalinvasive Schlingenoperation und Beckenbodenrekonstruktion',
+          'Botulinumtoxin in die Blase und sakrale Neuromodulation'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
+          note: 'Die Urologie der Frau und die funktionelle Urologie gehören zu den Arbeitsschwerpunkten von Assoc. Prof. Dr. Müslüm Ergün. Das Vorgehen ist stufenweise: zuerst andere Ursachen ausschließen und den Typ bestimmen, dann Verhaltenstherapie, dann Medikamente und bei Bedarf eine Operation.'
         },
         timeline: [
-          { when: 'Aus der Ferne', title: 'Vorabbewertung', body: 'Ihre Symptomvorgeschichte und – falls vorhanden – Urodynamik-Befunde werden ausgewertet.' },
-          { when: 'Tag 1', title: 'Ankunft & Untersuchung', body: 'Untersuchung, erforderliche Tests und Planung.' },
-          { when: 'Tag 2', title: 'Eingriff', body: 'Minimalinvasive Schlinge oder Rekonstruktion; die meisten Fälle ambulant–1 Nacht.' },
-          { when: 'Tag 3–4', title: 'Kontrolle', body: 'Kontrolle, Aufklärung und Reisefreigabe.' }
+          { when: 'Aus der Ferne', title: 'Erstbeurteilung', body: 'Art Ihrer Beschwerden, Geburtenanamnese, Medikation und vorhandene Vorbefunde werden durchgesehen. Auf Wunsch findet das Gespräch im Beisein einer weiblichen Mitarbeiterin statt.' },
+          { when: 'Vorbereitung', title: 'Miktionstagebuch', body: 'Über einige Tage notieren Sie, wann und wie viel Sie Wasser lassen und wie stark der Drang war. Diese einfache Aufzeichnung ist das wertvollste Mittel zur Typbestimmung und dient zugleich der Erfolgsmessung.' },
+          { when: 'Tag 1', title: 'Untersuchung und Tests', body: 'Untersuchung, Urinbefund und Kultur, Restharnmessung. Bei Bedarf wird eine Urodynamik geplant.' },
+          { when: 'Entscheidungsphase', title: 'Typbestimmung und Plan', body: 'Der Typ des Harnverlusts wird geklärt und die passende Stufe gewählt. Bei den meisten Frauen ist die erste Stufe keine Operation.' },
+          { when: 'Eingriffstag', title: 'Eingriff, falls erforderlich', body: 'Schlingenoperation, Beckenbodenrekonstruktion oder Botulinumtoxin in die Blase. Die meisten Eingriffe erfolgen ambulant oder mit einer Nacht.' },
+          { when: 'Vor dem Rückflug', title: 'Kontrolle', body: 'Es wird geprüft, ob sich die Blase nach dem Wasserlassen entleert, und die Flugfreigabe erteilt.' }
         ],
         risks: [
-          'Vorübergehende Schwierigkeiten beim Wasserlassen',
-          'Harnwegsinfektion',
-          'Schmerzen oder Schwellung (vorübergehend)',
-          'Selten Bedarf an einem erneuten Eingriff'
+          'DIE RICHTIGE BEHANDLUNG AM FALSCHEN TYP: Das größte Risiko dieses Gebiets ist keine Operationskomplikation, sondern eine falsche Typbestimmung. Eine Schlinge bei Dranginkontinenz hilft nicht und hinterlässt die Überzeugung, das Problem sei unlösbar',
+          'Vorübergehende Schwierigkeiten beim Wasserlassen nach einer Schlingenoperation',
+          'Harnwegsinfekt',
+          'Schmerzen, Schwellung und vorübergehendes Unbehagen',
+          'Nach der Operation nicht vollständig verschwundene Beschwerden — besonders bei Mischinkontinenz, wenn nur ein Anteil behandelt wurde',
+          'Nach Botulinumtoxin unvollständige Blasenentleerung und vorübergehende Notwendigkeit des Selbstkatheterisierens; diese Möglichkeit muss vorher besprochen werden und die Patientin muss darauf vorbereitet sein',
+          'Wiederauftreten der Beschwerden mit der Zeit und Bedarf einer weiteren Behandlung',
+          'Rezidiv nach Senkungsoperation'
         ],
         alternatives: [
-          'Beckenboden- (Kegel-)Übungen',
-          'Blasentraining und Lebensstiländerungen',
-          'Medikamente (bei überaktiver Blase)',
-          'Pessar (bei Prolaps)'
+          'Beckenbodentraining — wirksam, sofern der richtige Muskel angesteuert wird. Häufigster Fehler ist das Anspannen von Bauch, Gesäß oder Oberschenkeln',
+          'Blasentraining — schrittweises Verlängern der Abstände zwischen den Toilettengängen; die Grundstufe beim Drangtyp',
+          'Trink- und Koffeinmenge anpassen — die Trinkmenge stark zu reduzieren ist FALSCH; es konzentriert den Harn und verstärkt die Beschwerden',
+          'Gewichtsabnahme und Behandlung von Verstopfung — messbarer Nutzen durch geringeren Bauchdruck',
+          'Blasendämpfende Medikamente — beim Drangtyp; bei älteren Frauen wird die Auswahl mit Blick auf kognitive Wirkungen sorgfältig getroffen',
+          'Vaginale Östrogene — können bei ausgewählten Frauen nach der Menopause Beschwerden lindern',
+          'Pessar — nicht operative Option bei Senkung',
+          'Schlingenoperation — beim Belastungstyp, wenn Verhaltenstherapie nicht ausreicht',
+          'Botulinumtoxin in die Blase und sakrale Neuromodulation — bei medikamentös nicht beherrschbarem Drangtyp'
+        ],
+        comparison: {
+          title: 'Welcher Typ führt zu welcher Behandlung',
+          columns: ['Kriterium', 'Belastungstyp', 'Drangtyp', 'Überlauftyp'],
+          rows: [
+            { label: 'Wann tritt der Verlust auf', values: ['Husten, Lachen, Heben', 'Nach plötzlichem Drang', 'Tröpfelnd, nahezu ständig'] },
+            { label: 'Geht Drang voraus?', values: ['Nein', 'Ja, nicht aufschiebbar', 'Unklar; Gefühl unvollständiger Entleerung'] },
+            { label: 'Erste Stufe', values: ['Beckenbodentraining', 'Blasentraining und Trinkmanagement', 'Die Entleerungsstörung klären'] },
+            { label: 'Hilft ein Medikament?', values: ['Blasendämpfer helfen NICHT', 'Ja, als zweite Stufe', 'Blasendämpfer können SCHADEN'] },
+            { label: 'Operative Option', values: ['Schlinge', 'Botulinumtoxin, Neuromodulation', 'Beseitigung des Hindernisses'] }
+          ],
+          note: 'Diese Tabelle soll nur eines zeigen: Derselbe Satz — "Ich verliere Harn" — führt zu völlig unterschiedlichen Behandlungen. Eine ohne Abklärung begonnene Behandlung kann deshalb wirkungslos bleiben, so gut gemeint sie auch ist.'
+        },
+        recovery: [
+          { period: 'Während der Übungsphase', body: 'Die ersten Wochen des Beckenbodentrainings sind mühsam, und der Unterschied zeigt sich nicht sofort. Richtig und regelmäßig ausgeführt, wirkt es über Wochen. Lassen Sie sich die Technik einmal zeigen, damit Sie sicher den richtigen Muskel nutzen.' },
+          { period: 'Während des Blasentrainings', body: 'Die Abstände werden schrittweise verlängert, nicht auf einmal. Das Miktionstagebuch macht Fortschritte sichtbar und erhält die Motivation.' },
+          { period: 'Erste Woche nach einer Schlinge', body: 'Leichtes Unbehagen und Schwellung sind üblich. Heben und Pressen vermeiden, Verstopfung verhindern. Schwierigkeiten beim Wasserlassen bitte melden.' },
+          { period: '2.–6. Woche nach einer Schlinge', body: 'Leichte Alltagstätigkeit ist nach wenigen Tagen wieder möglich; für Anstrengung und Geschlechtsverkehr gilt die von Ihrer Ärztin oder Ihrem Arzt genannte Frist.' },
+          { period: 'Nach Botulinumtoxin', body: 'Die Wirkung hält einige Monate an und lässt dann nach, eine Wiederholung ist nötig. In der Anfangszeit wird die Blasenentleerung kontrolliert.' },
+          { period: 'Langfristig', body: 'Kehren Beschwerden zurück, wird die Ursache neu beurteilt. Gewichtskontrolle, Vermeidung von Verstopfung und fortgesetztes Training tragen zur Dauerhaftigkeit bei.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Variiert je nach Art des Eingriffs.'
+          disclaimer: 'Der Betrag hängt deutlich davon ab, was durchgeführt wird — Abklärung, Schlinge, Botulinumtoxin oder Rekonstruktion. Ein schriftlicher, aufgeschlüsselter Kostenvoranschlag folgt nach Bestimmung des Typs.'
         },
         packageIncludes: [
-          'Eingriff und Krankenhausaufenthalt',
-          'Anästhesie und Untersuchungen',
-          'Transfers und Unterkunft',
-          'Weibliche medizinische Dolmetscherin (auf Wunsch)',
-          'Kontrolle und Online-Nachsorge'
+          'Urologische Beurteilung und Auswertung des Miktionstagebuchs',
+          'Urinuntersuchung und Kultur',
+          'Restharnmessung',
+          'Urodynamik oder Zystoskopie bei Bedarf',
+          'Anleitung zur richtigen Beckenbodentechnik',
+          'Der geplante Eingriff und die Anästhesie',
+          'Klinikaufenthalt, falls erforderlich',
+          'Weibliche medizinische Dolmetscherin auf Wunsch',
+          'Transfers Flughafen–Klinik–Hotel',
+          'Unterkunft (Patientin + 1 Begleitperson)',
+          'Nachbetreuung aus der Ferne nach der Rückkehr'
         ],
         faqs: [
-          { q: 'Ist die Schlingenoperation dauerhaft?', a: 'Sie bietet bei den meisten Patientinnen eine langanhaltende Besserung; das Ergebnis hängt von der Art der Beschwerden ab.' },
-          { q: 'Wie lange dauert die Genesung?', a: 'Zu leichter Alltagsaktivität kehren Sie innerhalb weniger Tage zurück; schwere Aktivität wird einige Wochen aufgeschoben.' },
-          { q: 'Kann ich weibliches medizinisches Personal anfragen?', a: 'Ja; auf Wunsch werden eine Dolmetscherin und weibliche Koordinationsunterstützung bereitgestellt.' }
+          { q: 'Gehört Harnverlust zum Älterwerden dazu?', a: 'Nein. Dass er häufig ist, macht ihn nicht normal. Er ist behandelbar, und die meisten Frauen erreichen ohne Operation eine deutliche Besserung. Es ist nicht nötig, jahrelang mit Einlagen zu leben und das gesellschaftliche Leben einzuschränken.' },
+          { q: 'Ich war schon in Behandlung, es hat nicht geholfen — ist mein Problem unlösbar?', a: 'Bevor Sie das schließen, fragen Sie, ob der Typ richtig bestimmt wurde. Ein Blasendämpfer bei Belastungsinkontinenz oder eine Schlinge bei Dranginkontinenz wirkt nicht. Dann liegt das Problem nicht an Ihrem Zustand, sondern daran, dass die Behandlung auf den falschen Typ gerichtet war.' },
+          { q: 'Was passiert bei der Untersuchung — ist das unangenehm?', a: 'Sie besteht aus dem Gespräch, der Durchsicht des Miktionstagebuchs, einer Urinuntersuchung und einer Untersuchung. Diese dauert kurz, und jeder Schritt wird vorher erklärt. Auf Wunsch ist eine weibliche Mitarbeiterin anwesend und eine Dolmetscherin verfügbar; das zu verlangen ist ein Recht, kein Entgegenkommen.' },
+          { q: 'Hilft Beckenbodentraining wirklich?', a: 'Ja, sofern der richtige Muskel genutzt wird. Der häufigste Fehler ist das Anspannen von Bauch, Gesäß oder Oberschenkeln; das zählt nicht als Übung. Ist die Technik einmal gezeigt, wirkt sie über Wochen. Auch wenn eine Operation erwogen wird, sollte diese Stufe nicht übersprungen werden.' },
+          { q: 'Wenn ich weniger trinke, verliere ich weniger Harn?', a: 'Nein, das Gegenteil. Wenig zu trinken konzentriert den Harn, reizt die Blase und verstärkt den Drang. Richtig ist, die Trinkmenge über den Tag zu verteilen und abends zu reduzieren. Koffein und kohlensäurehaltige Getränke zu verringern kann helfen.' },
+          { q: 'Ist eine Schlingenoperation dauerhaft?', a: 'Bei geeigneten Frauen mit Belastungsinkontinenz kann sie eine anhaltende Besserung bringen. Bei Mischinkontinenz kann die Behandlung nur des Belastungsanteils die Drangbeschwerden bestehen lassen; dass dies vorher besprochen wurde, ist wichtig. Seien Sie vorsichtig bei Zusicherungen eines endgültigen Ergebnisses.' },
+          { q: 'Ich habe Blut im Urin, mein Hauptproblem ist aber der Harnverlust — ist das wichtig?', a: 'Ja, und zwar gesondert. Blut im Urin muss eigenständig abgeklärt werden, auch wenn es gemeinsam mit Harnverlust auftritt. Es als "empfindliche Blase" abzutun, kann eine Diagnose verzögern.' },
+          { q: 'Muss ich mich nach Blasen-Botulinumtoxin selbst katheterisieren?', a: 'Bei manchen Frauen entspannt sich die Blase zu stark und entleert sich nicht vollständig; dann kann vorübergehendes Selbstkatheterisieren nötig sein. Die Wahrscheinlichkeit ist gering, aber real, und das gehört vorher besprochen. Sind Sie dazu nicht bereit oder körperlich nicht in der Lage, passt diese Option möglicherweise nicht.' },
+          { q: 'Ich möchte noch Kinder bekommen — soll ich jetzt operiert werden?', a: 'Wenn Sie eine Schwangerschaft planen, sagen Sie es. Der Zeitpunkt von Senkungs- und Schlingenoperationen hängt davon ab; in der Regel werden sie nach abgeschlossener Familienplanung bevorzugt. Bis dahin stehen Verhaltenstherapie und Beckenbodentraining im Vordergrund.' },
+          { q: 'Welche Unterlagen soll ich vorab senden?', a: 'Eine vorhandene Urodynamik, Urinbefund und Kultur, die Restharnmessung, Ihre Geburtenanamnese, frühere Operationen, Ihre Medikamentenliste und ein Miktionstagebuch über einige Tage. Das Tagebuch wirkt unscheinbar, trägt aber mehr zur Beurteilung bei als alles andere.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-neurogenic Female LUTS — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
         ]
       },
       ru: {
