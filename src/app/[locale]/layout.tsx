@@ -86,12 +86,17 @@ export default async function LocaleLayout({
       hasMap: siteConfig.address.mapsLink
     },
     hasMap: siteConfig.address.mapsLink,
+    /**
+     * Boş profiller filtrelenir: doğrulanmamış bir URL yayımlamaktansa
+     * alanı hiç basmamak doğrudur (bkz. siteConfig.profiles).
+     */
     sameAs: [
       siteConfig.social.instagram,
       siteConfig.social.youtube,
       siteConfig.social.linkedin,
-      siteConfig.social.google
-    ]
+      siteConfig.social.google,
+      ...Object.values(siteConfig.profiles)
+    ].filter((u) => u.length > 0)
   };
 
   return (

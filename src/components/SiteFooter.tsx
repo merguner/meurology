@@ -111,10 +111,16 @@ export async function SiteFooter() {
                 {consult.navLabel}
               </Link>
             </li>
-            {/* Sözlük ana menüde değil (menü kalabalığı); footer'dan erişilir. */}
+            {/* Sözlük ve sigorta sayfası ana menüde değil (menü kalabalığı);
+                footer'dan erişilir. İkisi de arama motorlarına açıktır. */}
             <li>
               <Link href="/sozluk" className="text-sm text-muted transition-colors hover:text-fg">
                 {tn('glossary')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/sgk-ve-sigorta" className="text-sm text-muted transition-colors hover:text-fg">
+                {tn('insurance')}
               </Link>
             </li>
             {navItems.slice(1).map((item) => (

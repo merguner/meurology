@@ -33,9 +33,22 @@ export const siteConfig = {
     // Anahtarsız iframe gömme için arama sorgusu (embed URL sayfada üretilir)
     mapsQuery: 'Medical Park Bahçelievler, Bahçelievler Mahallesi, E-5 Karayolu Kültür Sok No:1, 34180 Bahçelievler İstanbul'
   },
-  // TODO: Öne çıkan tanıtım videosunun YouTube ID'sini girin (ör. 'dQw4w9WgXcQ').
-  // Girilince cerrah profilinde video otomatik gömülür; boşken markalı kanal kartı gösterilir.
+  /**
+   * ÖNE ÇIKAN TANITIM VİDEOSU (cerrah profili).
+   *
+   * TODO-DOGRULA: Veri gelmedi, uydurma YAPILMADI.
+   *  - youtubeFeaturedId: videonun YouTube ID'si (ör. 'dQw4w9WgXcQ').
+   *    Girilince cerrah sayfasında hafif gömme (LiteYouTube) görünür;
+   *    boşken markalı kanal kartı gösterilir — eksik görünmez.
+   *  - featuredVideoUploadDate: videonun YAYIN TARİHİ (ISO, ör. '2026-03-14').
+   *    VideoObject yapılandırılmış verisi için Google'ın zorunlu tuttuğu
+   *    alandır. UYDURULAMAZ: yanlış tarih yapılandırılmış veri hatasıdır.
+   *
+   * VideoObject YALNIZCA bu iki alanın İKİSİ de doluyken yayımlanır
+   * (bkz. cerrah/page.tsx). Biri eksikken şema hiç basılmaz.
+   */
   youtubeFeaturedId: '',
+  featuredVideoUploadDate: '',
   social: {
     instagram: 'https://www.instagram.com/meurology.tr',
     youtube: 'https://www.youtube.com/@meurology',
@@ -43,6 +56,23 @@ export const siteConfig = {
     linkedin: 'https://www.linkedin.com/in/meurology',
     // Google işletme profili paylaşım linki (yorumlar/inceleme)
     google: 'https://share.google/MkOj9FDuX6fTRFj7J'
+  },
+  /**
+   * HEKİM RANDEVU PLATFORMLARI ve AKADEMİK PROFİLLER — `sameAs` için (prompt m.6).
+   *
+   * Arama motorları aynı hekimin farklı sitelerdeki profillerini `sameAs`
+   * üzerinden eşleştirir; bu, ulusal erişimde en çok işe yarayan tek
+   * yapılandırılmış veri alanıdır. Reklam değildir, bilgilendirmedir.
+   *
+   * TODO-DOGRULA: Hiçbiri doğrulanmadı, URL UYDURULMADI. Boş olanlar
+   * `sameAs` listesine girmez (filtrelenir), bu yüzden kırık link oluşmaz.
+   * Profil adresleri geldikçe buraya yapıştırmanız yeterli.
+   */
+  profiles: {
+    doktortakvimi: '',
+    googleScholar: '',
+    orcid: '',
+    researchGate: ''
   },
   /**
    * ÖZEL ONLINE DANIŞMANLIK (ücretli, randevulu, birebir WhatsApp görüntülü görüşme).
@@ -53,7 +83,7 @@ export const siteConfig = {
     // Görüşme süresi (dakika) — sabit
     durationMinutes: 20,
     // Cal.com entegrasyonu (opsiyonel). Boşsa site içi hafif planlayıcı kullanılır.
-    // PLACEHOLDER: Cal.com hesabı açılınca 'kullanıcı/etkinlik' formatında girin.
+    // TODO-DOGRULA: Cal.com hesabı açılınca 'kullanıcı/etkinlik' formatında girin.
     calcomLink: '',
     // Klinik yerel saati (slotlar bu saate göre; Türkiye kalıcı UTC+3, DST yok).
     clinicTimeZone: 'Europe/Istanbul',

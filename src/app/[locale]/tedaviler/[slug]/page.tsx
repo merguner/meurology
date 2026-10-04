@@ -20,6 +20,7 @@ import { PreAssessmentForm } from '@/components/PreAssessmentForm';
 import { JsonLd } from '@/components/JsonLd';
 import { TreatmentCard } from '@/components/TreatmentCard';
 import { InsuranceInfo } from '@/components/InsuranceInfo';
+import { MapEmbed } from '@/components/MapEmbed';
 import { storiesForTreatment } from '@/content/experiences';
 import { features } from '@/config/features';
 
@@ -72,6 +73,7 @@ export default async function TreatmentPage({
   const tn = await getTranslations('Nav');
   const tf = await getTranslations('Form');
   const te = await getTranslations('Experiences');
+  const tcontact = await getTranslations('Contact');
 
   // EURO fiyat aralığı — YÖNETMELİK: yurt içi (tr) sayfalarda fiyat gösterilmez;
   // yalnızca yabancı dil (sağlık turizmi) sayfalarında gösterilir. TL kullanılmaz.
@@ -633,6 +635,28 @@ export default async function TreatmentPage({
 
             {/* SGK / özel sigorta bilgi bloğu (içerik varsa görünür) */}
             <InsuranceInfo locale={locale} variant="inline" />
+
+            {/*
+              TEDAVİNİN YAPILDIĞI YER (prompt m.6).
+              Türkiye'de semt/şehir odaklı ayrı sayfalar açmak doorway riski
+              taşır; bunun yerine konum bilgisi ve harita tedavi sayfasının
+              kendisinde verilir. Harita facade'dır: tıklanmadan yüklenmez.
+            */}
+            <div className="rounded-xl border border-border bg-surface-2 p-5">
+              <h3 className="flex items-center gap-2 font-semibold">
+                <Icon name="pin" size={18} className="text-primary" />
+                {t('locationTitle')}
+              </h3>
+              <p className="mt-2 text-sm font-semibold">{siteConfig.address.center}</p>
+              <p className="mt-1 text-sm leading-relaxed text-muted">{siteConfig.address.full}</p>
+              <MapEmbed
+                query={siteConfig.address.mapsQuery}
+                locale={locale}
+                title={`${siteConfig.address.center} — ${t('locationTitle')}`}
+                loadLabel={tcontact('mapLoad')}
+                notice={tcontact('mapNotice')}
+              />
+            </div>
           </div>
         </aside>
       </div>

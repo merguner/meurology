@@ -22,7 +22,8 @@
     "fistul": "Fistula Repair",
     "ureterRekon": "Ureteral Reconstruction",
     "toggleSubmenu": "Toggle submenu",
-    "glossary": "Urology Glossary"
+    "glossary": "Urology Glossary",
+    "insurance": "Insurance"
   },
   "Common": {
     "whatsappCta": "Message us on WhatsApp",
@@ -115,7 +116,8 @@
       "returnToWork": "Return to work",
       "flightClearance": "Flight clearance"
     },
-    "subPagesTitle": "Treatments in this category"
+    "subPagesTitle": "Treatments in this category",
+    "locationTitle": "Where treatment takes place"
   },
   "Surgeon": {
     "title": "Surgeon Profile",
@@ -328,5 +330,10 @@
     "backTo": "Back to the international patients page:",
     "listTitle": "Information for your country",
     "listBody": "Flights, language, payment and the typical length of stay differ from country to country. See the page for your own country."
+  },
+  "Insurance": {
+    "title": "Insurance and Reimbursement",
+    "metaTitle": "Insurance and Reimbursement for Treatment in Turkey",
+    "metaDescription": "How reimbursement works for planned treatment in Turkey: why the Turkish state scheme does not apply, prior authorisation, and what to obtain in writing before you travel."
   }
 }

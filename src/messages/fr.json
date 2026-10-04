@@ -22,7 +22,8 @@
     "fistul": "Réparation de fistule",
     "ureterRekon": "Reconstruction urétérale",
     "toggleSubmenu": "Afficher le sous-menu",
-    "glossary": "Glossaire d’urologie"
+    "glossary": "Glossaire d’urologie",
+    "insurance": "Assurance"
   },
   "Common": {
     "whatsappCta": "Écrivez-nous sur WhatsApp",
@@ -115,7 +116,8 @@
       "returnToWork": "Reprise du travail",
       "flightClearance": "Autorisation de vol"
     },
-    "subPagesTitle": "Traitements de cette catégorie"
+    "subPagesTitle": "Traitements de cette catégorie",
+    "locationTitle": "Lieu de l’intervention"
   },
   "Surgeon": {
     "title": "Profil du chirurgien",
@@ -328,5 +330,10 @@
     "backTo": "Retour à la page patients internationaux :",
     "listTitle": "Informations selon votre pays",
     "listBody": "Vols, langue, paiement et durée de séjour habituelle varient d’un pays à l’autre. Consultez la page de votre pays."
+  },
+  "Insurance": {
+    "title": "Assurance et remboursement",
+    "metaTitle": "Assurance et remboursement pour une intervention en Turquie",
+    "metaDescription": "Comment se règle la prise en charge d’une intervention programmée en Turquie : autorisation préalable, assurance privée et documents à obtenir avant de partir."
   }
 }

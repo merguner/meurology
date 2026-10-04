@@ -1,13 +1,19 @@
+import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
 import { getInsuranceInfo } from '@/content/insurance';
+import { Link } from '@/i18n/navigation';
 import { Icon } from './Icon';
 
 /**
- * SGK / özel sigorta bilgi bloğu (yerli hastalar için).
+ * SGK / özel sigorta ÖZET bloğu (tedavi ve iletişim sayfalarında).
  * İçerik src/content/insurance.ts'ten gelir; boşsa hiçbir şey render etmez.
  * `variant`: 'card' (iletişim yan paneli) | 'inline' (tedavi sayfası içi).
+ *
+ * Ayrıntılı anlatım ayrı bir sayfadadır (/sgk-ve-sigorta, content/insuranceDoc.ts);
+ * bu blok oraya bağlanır. İki metnin birbiriyle çelişmemesi için ayrıntı
+ * yalnızca o sayfada tutulur, burada çoğaltılmaz.
  */
-export function InsuranceInfo({
+export async function InsuranceInfo({
   locale,
   variant = 'inline'
 }: {
@@ -16,6 +22,7 @@ export function InsuranceInfo({
 }) {
   const info = getInsuranceInfo(locale);
   if (!info) return null;
+  const t = await getTranslations('Common');
 
   return (
     <div
@@ -36,6 +43,13 @@ export function InsuranceInfo({
           </p>
         ))}
       </div>
+      <Link
+        href="/sgk-ve-sigorta"
+        className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+      >
+        {t('readMore')}
+        <Icon name="arrow" size={15} className="rtl:rotate-180" />
+      </Link>
     </div>
   );
 }

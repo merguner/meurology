@@ -22,7 +22,8 @@
     "fistul": "Fistelverschluss",
     "ureterRekon": "Harnleiter-Rekonstruktion",
     "toggleSubmenu": "Untermenü umschalten",
-    "glossary": "Urologie-Glossar"
+    "glossary": "Urologie-Glossar",
+    "insurance": "Kostenübernahme"
   },
   "Common": {
     "whatsappCta": "Schreiben Sie uns auf WhatsApp",
@@ -115,7 +116,8 @@
       "returnToWork": "Rückkehr zur Arbeit",
       "flightClearance": "Flugfreigabe"
     },
-    "subPagesTitle": "Behandlungen in dieser Kategorie"
+    "subPagesTitle": "Behandlungen in dieser Kategorie",
+    "locationTitle": "Ort der Behandlung"
   },
   "Surgeon": {
     "title": "Chirurgenprofil",
@@ -328,5 +330,10 @@
     "backTo": "Zurück zur Seite für internationale Patienten:",
     "listTitle": "Informationen für Ihr Land",
     "listBody": "Flüge, Sprache, Zahlung und die übliche Aufenthaltsdauer unterscheiden sich von Land zu Land. Sehen Sie die Seite für Ihr Land an."
+  },
+  "Insurance": {
+    "title": "Kostenübernahme",
+    "metaTitle": "Kostenübernahme bei Behandlung in der Türkei",
+    "metaDescription": "Wie die Kostenfrage bei geplanter Behandlung in der Türkei geregelt ist: vorherige Klärung mit der Krankenkasse, private Versicherung und welche Unterlagen Sie benötigen."
   }
 }

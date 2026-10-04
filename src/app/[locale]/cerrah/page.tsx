@@ -9,7 +9,7 @@ import { Link } from '@/i18n/navigation';
 import { siteConfig } from '@/config/site';
 import { PageHero } from '@/components/PageHero';
 import { VerifiedInfo } from '@/components/VerifiedInfo';
-import { VideoPlaceholder } from '@/components/VideoPlaceholder';
+import { LiteYouTube } from '@/components/LiteYouTube';
 import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { Icon } from '@/components/Icon';
 import { JsonLd } from '@/components/JsonLd';
@@ -62,10 +62,28 @@ export default async function SurgeonPage({
     .join('')
     .slice(0, 2)
     .toLocaleUpperCase(locale);
-  // Öne çıkan video ID'si girilmişse embed URL'i; değilse markalı kanal kartı.
-  const featuredVideoEmbed = siteConfig.youtubeFeaturedId
-    ? `https://www.youtube.com/embed/${siteConfig.youtubeFeaturedId}`
-    : undefined;
+  // Öne çıkan video ID'si girilmişse hafif gömme; değilse bölüm hiç basılmaz.
+  const videoId = siteConfig.youtubeFeaturedId;
+
+  /**
+   * VideoObject — YALNIZCA video ID'si VE yayın tarihi birlikte varken.
+   * Google bu şemada uploadDate'i zorunlu tutar; tarihi uydurmak
+   * yapılandırılmış veri hatası üretir, bu yüzden eksikken şema basılmaz.
+   */
+  const videoJsonLd =
+    videoId && siteConfig.featuredVideoUploadDate
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'VideoObject',
+          name: `${c.fullName} — ${t('videoTitle')}`,
+          description: c.bio[0] ?? c.title,
+          thumbnailUrl: [`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`],
+          uploadDate: siteConfig.featuredVideoUploadDate,
+          embedUrl: `https://www.youtube-nocookie.com/embed/${videoId}`,
+          contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
+          publisher: { '@type': 'Organization', name: siteConfig.name }
+        }
+      : undefined;
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -254,15 +272,18 @@ export default async function SurgeonPage({
         </aside>
       </div>
 
-      {/* Tanıtım videosu — YALNIZCA gerçek embed URL girilmişse render edilir.
-          TODO-DOGRULA: config/site.ts → youtubeFeaturedId. */}
-      {featuredVideoEmbed && (
-      <section className="container-content pb-14">
-        <h2 className="mb-4 text-xl font-bold">{t('videoTitle')}</h2>
-        <div className="max-w-3xl">
-          <VideoPlaceholder caption={t('videoTitle')} title={c.fullName} embedUrl={featuredVideoEmbed} />
-        </div>
-      </section>
+      {/* Tanıtım videosu — YALNIZCA gerçek video ID'si girilmişse render edilir.
+          TODO-DOGRULA: config/site.ts → youtubeFeaturedId.
+          Gömme tıklanınca yüklenir (LiteYouTube): sayfa açılışında YouTube'dan
+          script ve çerez inmez. */}
+      {videoId && (
+        <section className="container-content pb-14">
+          {videoJsonLd && <JsonLd data={videoJsonLd} />}
+          <h2 className="mb-4 text-xl font-bold">{t('videoTitle')}</h2>
+          <div className="max-w-3xl">
+            <LiteYouTube videoId={videoId} title={`${c.fullName} — ${t('videoTitle')}`} />
+          </div>
+        </section>
       )}
     </>
   );

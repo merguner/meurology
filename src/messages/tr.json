@@ -22,7 +22,8 @@
     "fistul": "Fistül Onarımı",
     "ureterRekon": "Üreter Rekonstrüksiyonu",
     "toggleSubmenu": "Alt menüyü aç/kapat",
-    "glossary": "Üroloji Sözlüğü"
+    "glossary": "Üroloji Sözlüğü",
+    "insurance": "SGK ve Sigorta"
   },
   "Common": {
     "whatsappCta": "Hemen WhatsApp'tan yaz",
@@ -115,7 +116,8 @@
       "returnToWork": "İşe dönüş",
       "flightClearance": "Uçuşa izin"
     },
-    "subPagesTitle": "Bu kategorideki tedaviler"
+    "subPagesTitle": "Bu kategorideki tedaviler",
+    "locationTitle": "Tedavinin yapıldığı yer"
   },
   "Surgeon": {
     "title": "Cerrah Profili",
@@ -328,5 +330,10 @@
     "backTo": "Uluslararası hasta sayfasına dönün:",
     "listTitle": "Ülkenize göre bilgi",
     "listBody": "Uçuş, dil, ödeme ve tipik kalış planı ülkeden ülkeye değişir. Kendi ülkenizin sayfasına bakın."
+  },
+  "Insurance": {
+    "title": "SGK ve Özel Sigorta",
+    "metaTitle": "SGK ve Özel Sigorta Durumu",
+    "metaDescription": "Tedavi masrafının SGK veya özel sağlık sigortanız tarafından karşılanıp karşılanmayacağını nasıl öğrenirsiniz: sözleşmeli kurum, ön onay ve önceden sorulması gereken sorular."
   }
 }

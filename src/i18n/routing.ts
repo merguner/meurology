@@ -112,6 +112,19 @@ export const pathnames = {
     ar: '/contact',
     fr: '/contact'
   },
+  /**
+   * SGK ve özel sigorta sayfası. Türkçe'de SGK'ya, diğer dillerde kendi
+   * sigortanızdan geri ödemeye odaklanır; bu yüzden slug'lar birebir çeviri
+   * değil, her pazarda aranan kavramın karşılığıdır.
+   */
+  '/sgk-ve-sigorta': {
+    tr: '/sgk-ve-ozel-sigorta',
+    en: '/insurance-and-reimbursement',
+    de: '/kostenuebernahme',
+    ru: '/insurance-and-reimbursement',
+    ar: '/insurance-and-reimbursement',
+    fr: '/assurance-et-remboursement'
+  },
   '/yasal/kvkk': {
     tr: '/yasal/kvkk',
     en: '/legal/privacy',
