@@ -27111,59 +27111,147 @@ export const treatments: Treatment[] = [
         ]
       },
       fr: {
-        title: 'Urétroplastie (chirurgie du rétrécissement de l’urètre)',
-        summary: 'Chirurgie reconstructrice offrant une solution durable au rétrécissement urétral ; cas bulbaires, péniens, étendus et reprises (redo) inclus.',
-        metaTitle: 'Urétroplastie | Chirurgie du rétrécissement de l’urètre (bulbaire, pénien, redo)',
-        metaDescription: 'Urétroplastie pour rétrécissement urétral : sténose bulbaire et pénienne, sténose étendue ou complexe et urétroplastie de reprise après échec. Expérience des cas complexes et rares.',
+        title: 'Urétroplastie (chirurgie du rétrécissement de l\'urètre)',
+        summary:
+          'Réparation définitive d\'un rétrécissement urétral. L\'incision par voie endoscopique soulage vite, mais le rétrécissement revient — et chaque répétition rend la réparation suivante plus difficile. Cette page explique comment rompre ce cycle.',
+        metaTitle: 'Urétroplastie : réparation définitive du rétrécissement urétral',
+        metaDescription:
+          'Pourquoi l\'urétrotomie ne suffit pas, le préjudice des gestes endoscopiques répétés, la greffe de muqueuse buccale, la chirurgie en un ou deux temps et les attentes réalistes en cas de reprise.',
+        quickFacts: {
+          duration: '2 à 4 heures selon la longueur',
+          anesthesia: 'Anesthésie générale',
+          hospitalStay: '1 à 3 nuits',
+          stayInTurkey: '3 à 4 semaines (la sonde est retirée sur place)',
+          catheter: '2 à 3 semaines',
+          returnToWork: '2 à 4 semaines (travail de bureau plus tôt)',
+          flightClearance: 'Après le retrait de la sonde et le contrôle'
+        },
         definition: [
-          'Le rétrécissement urétral est un resserrement du canal urinaire (urètre) par du tissu cicatriciel, responsable d’un jet faible, d’efforts de poussée et d’infections à répétition. Les gestes simples (dilatation, urétrotomie interne) soulagent à court terme, mais la sténose récidive le plus souvent.',
-          'L’urétroplastie est l’intervention reconstructrice qui répare durablement la sténose. La localisation (bulbaire ou pénienne), la longueur et les tentatives antérieures déterminent le geste. Les sténoses étendues et récidivantes (redo) exigent une expérience particulière et sont généralement adressées aux rares centres capables de les traiter en toute sécurité.'
+          'L\'urètre est le canal qui conduit l\'urine hors de la vessie. Lorsqu\'un tissu cicatriciel s\'y développe et le rétrécit, on parle de rétrécissement urétral. Les symptômes débutent insidieusement : jet faible, jet dispersé, retard au démarrage, sensation de vidange incomplète, pollakiurie et infections urinaires à répétition.',
+          'LA DISTINCTION CENTRALE : L\'URÉTROTOMIE OUVRE, L\'URÉTROPLASTIE RÉPARE. Inciser de l\'intérieur ouvre le rétrécissement, mais le tissu cicatriciel qui en est la cause demeure. Le corps cicatrise l\'incision par du tissu cicatriciel supplémentaire : le rétrécissement a donc tendance à récidiver.',
+          'C\'EST LÀ LE VRAI PRÉJUDICE DES GESTES RÉPÉTÉS : chaque incision crée une nouvelle cicatrice, le rétrécissement s\'allonge au lieu de raccourcir et les tissus voisins s\'indurent. Les urétrotomies répétées non seulement n\'aident pas, elles compliquent la reconstruction ultérieure. Une première urétrotomie se conçoit pour un rétrécissement court et bien situé ; le problème est de répéter indéfiniment le même geste.',
+          'Il existe deux approches. Pour les rétrécissements courts, le segment est réséqué et les extrémités saines sont suturées. Pour les plus longs, le canal est élargi par un greffon, le plus souvent de la muqueuse prélevée à l\'intérieur de la joue, habituée à un milieu humide et dont le site de prélèvement cicatrise vite.',
+          'UNE RECONSTRUCTION EN DEUX TEMPS N\'EST PAS UN ÉCHEC. Dans les rétrécissements très longs, très cicatriciels ou déjà opérés plusieurs fois, la réparation peut être planifiée en deux temps séparés de plusieurs mois. Pour un patient venu de l\'étranger, cela signifie deux voyages — et doit être dit avant toute réservation.'
+        ],
+        eligibility: {
+          suitable: [
+            'Hommes dont le rétrécissement a récidivé après urétrotomie ou dilatation',
+            'Hommes avec un rétrécissement long, chez qui une incision a peu de chances d\'être durable',
+            'Hommes présentant des rétrécissements sur plusieurs segments',
+            'Hommes qui se gèrent depuis des années par autosondage',
+            'Hommes avec un rétrécissement d\'origine traumatique',
+            'Hommes dont la réparation réalisée ailleurs a échoué',
+            'Hommes ayant développé un rétrécissement après chirurgie d\'hypospadias'
+          ],
+          notSuitable: [
+            'Hommes présentant une infection urinaire active : elle est traitée d\'abord',
+            'Hommes présentant une infection ou une inflammation cutanée locale ; l\'intervention est reportée',
+            'Hommes ne pouvant respecter la période de sondage et la durée de séjour — ce délai ne se raccourcit pas',
+            'Hommes nécessitant un greffon buccal mais dont l\'état bucco-dentaire ne le permet pas ; le tabac nuit à la prise du greffon',
+            'Hommes dont l\'état général ne permet pas une anesthésie générale prolongée'
+          ]
+        },
+        technology: [
+          'Urétrographie rétrograde et cystographie mictionnelle — examens de base précisant le siège et la longueur',
+          'Urétroscopie — visualisation directe',
+          'Débitmétrie et mesure du résidu post-mictionnel',
+          'Prélèvement d\'un greffon de muqueuse jugale',
+          'Muqueuse linguale ou labiale lorsque la joue a déjà été utilisée',
+          'Lambeaux cutanés sur certaines localisations',
+          'Vision grossissante et fils de suture fins'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+          note: 'La chirurgie reconstructrice fait partie des domaines d\'exercice du Pr associé Müslüm Ergün. Le plan repose sur le siège et la longueur du rétrécissement, le nombre de gestes antérieurs et l\'état du tissu disponible pour un greffon.'
         },
         expertise: {
-          redoRate: 'Une part importante des cas sont des reprises adressées après un échec ou une lésion iatrogène survenus dans un autre centre.',
-          complexCase: 'Les sténoses étendues, pan-urétrales, liées au lichen scléreux et les échecs répétés relèvent des cas complexes.',
-          advancedTechnique: 'Urétroplastie d’élargissement par greffe de muqueuse buccale (jugale) ; reconstruction en deux temps si nécessaire.'
+          redoRate: 'Une part importante des cas sont des reprises après échec ou lésion iatrogène survenus ailleurs.',
+          complexCase: 'Rétrécissements longs, pan-urétraux, liés au lichen scléreux et échecs répétés relèvent des cas complexes.',
+          advancedTechnique: 'Urétroplastie d\'augmentation par greffe de muqueuse buccale ; reconstruction en deux temps si nécessaire.'
         },
         timeline: [
-          { when: 'À distance', title: 'Évaluation du dossier', body: 'Votre urétrographie (rétrograde et mictionnelle), votre débitmétrie et vos comptes rendus opératoires antérieurs sont examinés par le chirurgien. Une pré-évaluation détaillée est indispensable dans ces cas.' },
-          { when: 'Jours 1–2', title: 'Arrivée et examens avancés', body: 'Examen clinique, urétroscopie et imagerie si nécessaire ; la longueur et le siège de la sténose sont précisés.' },
-          { when: 'Jours 2–3', title: 'Intervention', body: 'Urétroplastie par excision-anastomose ou par greffe d’élargissement, selon le type de sténose.' },
-          { when: 'Ensuite', title: 'Période de sondage', body: 'Une sonde urétrale reste en place 2 à 3 semaines ; une imagerie de contrôle est réalisée avant son retrait.' },
-          { when: 'Suivi', title: 'Suivi à long terme', body: 'Débitmétrie et suivi des symptômes, plus fréquents la première année ; le succès se juge sur la perméabilité à long terme.' }
+          { when: 'À distance', title: 'Examen de votre dossier', body: 'Vos clichés d\'urétrographie, votre débitmétrie et VOS COMPTES RENDUS OPÉRATOIRES ANTÉRIEURS sont examinés. Ces derniers sont ici le document décisif : la technique employée, le segment réparé et l\'origine du greffon modifient directement le plan. Précisez si de la muqueuse jugale a déjà été prélevée.' },
+          { when: 'Jours 1–2', title: 'Arrivée et bilan complémentaire', body: 'Examen clinique, urétroscopie et imagerie refaites si besoin ; le siège et la longueur sont confirmés. L\'ECBU doit être stérile. Si un greffon buccal est prévu, l\'état bucco-dentaire est évalué.' },
+          { when: 'Jour de l\'intervention', title: 'Réparation', body: 'Résection-anastomose ou augmentation par greffon selon le rétrécissement. Le plan peut être ajusté selon l\'état des tissus en peropératoire ; cela est discuté à l\'avance.' },
+          { when: 'Période de sondage', title: '2 à 3 semaines', body: 'La sonde reste en place le temps de la cicatrisation. Ce délai n\'est pas arbitraire et ne s\'adapte pas à un vol. Il se passe surtout à l\'hôtel ; vous êtes mobile.' },
+          { when: 'Retrait de la sonde', title: 'Imagerie de contrôle', body: 'Avant le retrait, une imagerie vérifie l\'étanchéité de la réparation. En cas de fuite, la sonde reste plus longtemps — prenez donc un billet modifiable.' },
+          { when: 'À long terme', title: 'Suivi', body: 'Débitmétrie et suivi des symptômes, plus rapprochés la première année puis réguliers. Le succès se mesure non au bloc mais à la perméabilité au fil des ans.' }
         ],
         risks: [
-          'Récidive de la sténose — surtout dans les cas étendus ou complexes',
-          'Modification transitoire de la sensibilité au site de prélèvement du greffon (face interne de la joue)',
-          'Infection, saignement et fuite urinaire',
-          'Dans les reprises, qualité tissulaire pouvant influencer le résultat'
+          'RÉCIDIVE DU RÉTRÉCISSEMENT : plus probable pour les rétrécissements longs et complexes et après de nombreux gestes antérieurs. Une reprise a un taux de succès inférieur à une première réparation, et cela doit être dit clairement',
+          'Modification transitoire de la sensibilité au site de prélèvement jugal, limitation de l\'ouverture buccale et gêne',
+          'Infection, saignement et fuite urinaire au niveau de la réparation',
+          'Difficulté à uriner après le retrait de la sonde, imposant un resondage temporaire',
+          'MODIFICATION DE L\'ÉJACULATION : selon le siège, diminution de la force ou rétention d\'une partie de l\'éjaculat',
+          'Retentissement sur l\'érection selon la localisation — rare, mais à discuter au cas par cas',
+          'Modification de la direction du jet ou dispersion',
+          'Risque thromboembolique lié à une intervention longue et à l\'immobilité ; le vol retour est planifié en conséquence'
         ],
         alternatives: [
-          'Dilatation ou urétrotomie interne (court terme ; récidive fréquente)',
-          'Auto-sondage intermittent (entretien temporaire)',
-          'Reconstruction en deux temps (cas très complexes)'
+          'Urétrotomie ou dilatation — acceptable pour un rétrécissement court, de découverte récente et bien situé ; pas une solution durable en cas de récidive',
+          'Autosondage intermittent — peut retarder la refermeture mais n\'est pas une solution et ne doit pas être présenté comme un procédé à poursuivre des années',
+          'Résection et anastomose termino-terminale — rétrécissements courts',
+          'Augmentation par muqueuse buccale — rétrécissements plus longs',
+          'Muqueuse linguale ou labiale, lambeaux cutanés — si la joue a déjà été utilisée',
+          'Reconstruction en deux temps — rétrécissements très cicatriciels et complexes',
+          'Dérivation urinaire définitive — seulement dans les cas exceptionnels où aucune réparation n\'est possible'
+        ],
+        comparison: {
+          title: 'Urétrotomie et urétroplastie : pourquoi les résultats diffèrent',
+          columns: ['Critère', 'Urétrotomie / dilatation', 'Urétroplastie'],
+          rows: [
+            { label: 'Ce qui est fait', values: ['Le rétrécissement est incisé', 'Il est réséqué ou élargi par un greffon'] },
+            { label: 'Le tissu cicatriciel', values: ['Reste en place', 'Est retiré ou contourné'] },
+            { label: 'Durée du geste', values: ['Courte', 'Longue'] },
+            { label: 'Durée de sondage', values: ['Quelques jours', '2 à 3 semaines'] },
+            { label: 'Tendance à récidiver', values: ['Élevée, surtout si le rétrécissement est long', 'Nettement moindre'] },
+            { label: 'En cas de répétition', values: ['Le rétrécissement s\'allonge et la réparation se complique', 'Une nouvelle réparation reste planifiable'] },
+            { label: 'À qui cela convient', values: ['Rétrécissement court, de découverte récente', 'Rétrécissement long, récidivant ou complexe'] }
+          ],
+          note: 'L\'essentiel ici est le calendrier : plutôt que de passer des années en gestes endoscopiques répétés, avancer la réparation définitive chez un patient adapté préserve les tissus. N\'hésitez pas à demander : « Quelle est la longueur de mon rétrécissement, où siège-t-il, et quelle est l\'étape suivante s\'il récidive encore ? »'
+        },
+        recovery: [
+          { period: '48 premières heures', body: 'La douleur est contrôlée par les antalgiques. Après prélèvement buccal, une alimentation molle est conseillée les premiers jours ; parler et mastiquer peuvent être brièvement inconfortables.' },
+          { period: 'Semaine 1', body: 'Sortie avec la sonde. La marche est permise ; le port de charges, le vélo et les positions à califourchon ne le sont pas. Évitez la constipation par les fibres et l\'hydratation.' },
+          { period: 'Semaines 2–3', body: 'La période de sondage se poursuit, surtout à l\'hôtel. Vous êtes mobile mais l\'activité reste limitée. Si la sonde se bouche ou sort, consultez sans attendre.' },
+          { period: 'Après le retrait de la sonde', body: 'Des brûlures et quelques efforts de poussée sont habituels au début ; le jet peut mettre quelques jours à se renforcer. En cas d\'impossibilité d\'uriner, consultez immédiatement.' },
+          { period: 'Semaines 4–8', body: 'Reprise progressive des activités. Pour les rapports, respectez le délai indiqué par votre chirurgien ; une reprise trop précoce sollicite la réparation.' },
+          { period: 'Première année et au-delà', body: 'Suivi régulier par débitmétrie. Si vous constatez un affaiblissement du jet, n\'attendez pas : un rétrécissement détecté tôt se traite avant l\'obstruction.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Aucune fourchette de prix fixe n’est indiquée dans cette catégorie ; le prix est communiqué après évaluation du dossier, selon la complexité du cas et la technique requise.'
+          disclaimer: 'Aucune fourchette fixe n\'est donnée dans cette catégorie. Le montant dépend de la longueur du rétrécissement, de la nécessité d\'un greffon, du caractère en un ou deux temps et de la durée du séjour ; il est communiqué par écrit après examen de votre dossier.'
         },
         packageIncludes: [
-          'Intervention et séjour hospitalier',
-          'Anesthésie et bilan préopératoire avancé',
-          'Prélèvement du greffon inclus si nécessaire',
-          'Transferts et hébergement',
-          'Interprète médical et coordinateur patient',
-          'Retrait de la sonde et suivi en ligne à long terme'
+          'Examen de votre dossier et de vos comptes rendus opératoires antérieurs',
+          'Consultation, urétroscopie et imagerie nécessaire',
+          'ECBU et bilan préopératoire',
+          'Anesthésie et bloc opératoire',
+          'Intervention, prélèvement du greffon inclus le cas échéant',
+          'Hospitalisation',
+          'Imagerie de contrôle avant le retrait de la sonde',
+          'Retrait de la sonde et évaluation avant le retour',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et coordination des patients',
+          'Suivi à distance au long cours'
         ],
         faqs: [
-          { q: 'J’ai été opéré dans un autre centre et cela a échoué ; une reprise est-elle possible ?', a: 'Oui. L’urétroplastie de reprise est un domaine dans lequel ce centre est particulièrement expérimenté. Vos comptes rendus opératoires et votre imagerie actuelle sont examinés ; selon l’état des tissus, une greffe ou une approche en deux temps est planifiée.' },
-          { q: 'Pourquoi une urétroplastie plutôt qu’une urétrotomie interne ou une dilatation ?', a: 'La dilatation et l’urétrotomie interne récidivent rapidement dans la plupart des sténoses. L’urétroplastie est la seule méthode offrant une solution durable dans les cas qui s’y prêtent.' },
-          { q: 'Combien de temps la sonde reste-t-elle et combien dure la récupération ?', a: 'Généralement 2 à 3 semaines de sondage. L’activité quotidienne légère reprend rapidement ; les efforts importants et l’évaluation du résultat à long terme demandent quelques semaines.' }
+          { q: 'J\'ai eu plusieurs urétrotomies et cela se referme. Dois-je réessayer ?', a: 'La question est légitime. Chaque incision crée une nouvelle cicatrice ; avec le temps le rétrécissement s\'allonge au lieu de raccourcir et les tissus s\'indurent. Les urétrotomies répétées non seulement n\'aident pas, elles compliquent la reconstruction définitive ultérieure. Passé un certain stade, « ouvrons encore une fois » ne va pas dans votre intérêt.' },
+          { q: 'Ma réparation réalisée ailleurs a échoué — une reprise est-elle possible ?', a: 'Le plus souvent oui, mais une seconde réparation est une autre intervention et se planifie différemment. Votre compte rendu opératoire, la technique utilisée et l\'origine du greffon déterminent ce plan. Il faut aussi dire clairement que le taux de succès est inférieur à celui d\'une première réparation et que l\'écart se creuse avec le nombre de gestes antérieurs.' },
+          { q: 'Ma muqueuse jugale a déjà été prélevée — existe-t-il d\'autres options ?', a: 'Oui. Si les deux joues ont été utilisées, on peut recourir à la muqueuse sous-linguale ou labiale ; sur certaines localisations, des lambeaux cutanés de voisinage sont possibles. Le choix dépend du siège et de la longueur. Merci de le préciser dès votre demande.' },
+          { q: 'Le prélèvement dans la bouche laisse-t-il des séquelles ?', a: 'Le site jugal cicatrise généralement vite. Les premiers jours, une limitation de l\'ouverture buccale, une gêne et une modification de la sensibilité sont possibles ; une alimentation molle est conseillée. Le tabac nuit à la cicatrisation du site donneur comme de la réparation.' },
+          { q: 'Pourquoi la sonde reste-t-elle si longtemps, peut-on raccourcir ?', a: 'Non. C\'est le temps nécessaire à une cicatrisation étanche, et il ne s\'adapte pas à un vol. Une imagerie recherche une fuite avant le retrait ; s\'il y en a une, la sonde reste plus longtemps. Prenez donc un billet modifiable et prévoyez quelques jours de marge.' },
+          { q: 'Est-il possible que tout ne se règle pas en une intervention ?', a: 'Oui. Dans les rétrécissements très cicatriciels et très longs, la réparation peut être planifiée en deux temps espacés de plusieurs mois : l\'urètre est ouvert et le greffon mis en place pour mûrir, puis tubulisé au second temps. Ce n\'est pas un échec mais l\'approche la plus susceptible d\'être durable en tissu difficile. Cela implique deux voyages et doit être dit avant toute réservation.' },
+          { q: 'Ma fonction sexuelle sera-t-elle touchée ?', a: 'Cela dépend du segment réparé. Une diminution de la force de l\'éjaculation ou la rétention d\'une partie de l\'éjaculat sont possibles. Le retentissement sur l\'érection est rare mais varie selon le siège et se discute spécifiquement avant l\'intervention.' },
+          { q: 'Comment saurai-je si l\'intervention a réussi ?', a: 'Le succès se mesure non au bloc mais à la perméabilité au fil des ans. Le suivi associe débitmétrie et interrogatoire. Si le jet faiblit, n\'attendez pas : un rétrécissement détecté tôt est bien plus simple à traiter qu\'une obstruction complète.' },
+          { q: 'Tous les centres d\'urologie pratiquent-ils cette intervention ?', a: 'L\'urétroplastie n\'est pas fréquente dans la pratique urologique courante, et les rétrécissements longs comme les reprises demandent une expérience particulière. Il est donc raisonnable de demander quelle technique est prévue, à quelle fréquence le chirurgien la réalise et ce qui sera fait si le plan change en peropératoire.' },
+          { q: 'Quels documents envoyer avant de venir ?', a: 'Les clichés d\'urétrographie eux-mêmes (pas seulement le compte rendu), un éventuel enregistrement d\'urétroscopie, la débitmétrie et le résidu post-mictionnel, TOUS VOS COMPTES RENDUS OPÉRATOIRES, le nombre et la date des urétrotomies ou dilatations, l\'éventuel prélèvement antérieur de muqueuse jugale, vos traitements et vos autres pathologies. Cela permet d\'évaluer avant le départ si la réparation sera en un ou deux temps.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urethral Strictures — Association européenne d\'urologie', url: 'https://uroweb.org/guidelines/urethral-strictures' }
         ]
       }
     }
@@ -27734,70 +27822,143 @@ export const treatments: Treatment[] = [
       },
       fr: {
         title: 'Pyéloplastie (chirurgie du syndrome de la jonction pyélo-urétérale)',
-        summary: 'Chirurgie reconstructrice préservant le rein pour l’obstruction de la jonction pyélo-urétérale (JPU) ; options ouverte, laparoscopique et robotique.',
-        metaTitle: 'Pyéloplastie | Chirurgie de la jonction pyélo-urétérale (JPU)',
-        metaDescription: 'Pyéloplastie pour syndrome de la jonction pyélo-urétérale : comparaison des méthodes ouverte, laparoscopique et robotique, déroulement, risques et résultats à long terme. Expérience des reprises et des cas complexes.',
+        summary:
+          'Réparation du rétrécissement à la sortie du rein. Le danger de cette affection est qu\'elle peut évoluer sans douleur : le rein se dilate en silence et perd sa fonction. L\'objectif est de préserver le rein.',
+        metaTitle: 'Pyéloplastie : réparation préservant le rein dans le syndrome de la jonction',
+        metaDescription:
+          'Comment se prend la décision opératoire, pourquoi la scintigraphie est déterminante, comparaison robotique et ouverte, la période avec sonde JJ et les reprises.',
+        quickFacts: {
+          duration: '2 à 4 heures',
+          anesthesia: 'Anesthésie générale',
+          hospitalStay: '2 à 3 nuits',
+          stayInTurkey: '7 à 10 jours',
+          returnToWork: '2 à 4 semaines',
+          flightClearance: 'Après le contrôle ; voler avec une sonde JJ est possible'
+        },
         definition: [
-          'L’obstruction de la jonction pyélo-urétérale (JPU) est un obstacle à la sortie du conduit qui évacue l’urine du rein ; elle entraîne une dilatation (hydronéphrose), des douleurs et, avec le temps, une perte de fonction rénale.',
-          'La pyéloplastie est l’intervention reconstructrice préservant le rein qui supprime le rétrécissement et remodèle la jonction. Les voies robotique et laparoscopique sont mini-invasives ; les cas avec échec antérieur (redo), vaisseau polaire croisant ou calcul associé exigent une expérience particulière.'
+          'Le syndrome de la jonction pyélo-urétérale est un rétrécissement à l\'endroit où le bassinet rejoint l\'uretère. L\'urine ne s\'évacue pas correctement, le bassinet se dilate (hydronéphrose) et, avec le temps, la fonction rénale peut décliner.',
+          'LE TRAIT LE PLUS IMPORTANT DE CETTE AFFECTION : ELLE PEUT NE PAS FAIRE MAL. Lorsque l\'obstacle s\'installe lentement, le rein se dilate en silence et la personne peut ne rien ressentir. Conclure « je n\'ai pas mal, donc tout va bien » est ici dangereux. Chez certains patients, une douleur lombaire apparaissant après une prise abondante de boisson ou d\'alcool est caractéristique.',
+          'LA PRÉSENCE D\'UN RÉTRÉCISSEMENT NE JUSTIFIE PAS À ELLE SEULE UNE INTERVENTION. Une dilatation à l\'imagerie ne signifie pas toujours un obstacle ; certains reins paraissent dilatés mais se vidangent correctement. Il faut démontrer que l\'obstacle retentit réellement sur le rein, et c\'est la scintigraphie rénale qui le montre : elle mesure à la fois la part fonctionnelle de ce rein et la qualité du drainage.',
+          'CE QUI ORIENTE LA DÉCISION : une fonction diminuée de ce rein à la scintigraphie ou une tendance à la baisse au suivi, un drainage nettement altéré, des épisodes douloureux répétés, un calcul associé et des infections urinaires récidivantes.',
+          'Lors de la pyéloplastie, le segment rétréci est réséqué et la jonction entre bassinet et uretère est refaite largement, en entonnoir. Chez certains patients, un vaisseau croisant en avant de l\'uretère contribue à l\'obstacle ; la jonction est alors transposée en avant de ce vaisseau.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients dont la scintigraphie montre une fonction diminuée ou une tendance à la baisse',
+            'Patients dont le drainage est nettement altéré',
+            'Patients présentant des douleurs lombaires récidivantes — une douleur après prise abondante de boisson est caractéristique',
+            'Patients ayant développé un calcul rénal associé',
+            'Patients présentant des infections urinaires récidivantes',
+            'Patients dont une endopyélotomie ou une pyéloplastie antérieure a échoué',
+            'Patients chez qui un vaisseau croisant a été identifié'
+          ],
+          notSuitable: [
+            'Patients présentant une dilatation à l\'imagerie mais une fonction et un drainage normaux à la scintigraphie : l\'intervention n\'est pas nécessaire, une surveillance suffit',
+            'Patients présentant une infection urinaire non traitée : elle est traitée d\'abord',
+            'Patients dont la fonction rénale est perdue de manière avancée et irréversible, chez qui la réparation n\'apportera pas le bénéfice attendu',
+            'Patients dont l\'état général ne permet pas une chirurgie laparoscopique ou robotique'
+          ]
+        },
+        technology: [
+          'Uroscanner — montre l\'anatomie et un éventuel vaisseau croisant',
+          'Scintigraphie rénale — base de la décision opératoire ; elle mesure fonction et drainage',
+          'Échographie — pour suivre l\'hydronéphrose',
+          'Pyéloplastie démembrée assistée par robot',
+          'Techniques laparoscopique et ouverte',
+          'Retrait d\'un calcul associé dans le même temps opératoire',
+          'Pose et retrait d\'une sonde JJ'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+          note: 'La chirurgie reconstructrice fait partie des domaines d\'exercice du Pr associé Müslüm Ergün. La décision repose sur les données de la scintigraphie, l\'anatomie à l\'imagerie et les éventuels gestes antérieurs.'
         },
         expertise: {
-          redoRate: 'Une part importante des cas sont des reprises adressées après un échec ou une lésion iatrogène survenus dans un autre centre.',
-          complexCase: 'Compression par vaisseau croisant, calcul rénal associé, variantes anatomiques telles que le rein en fer à cheval et reprises relèvent des cas complexes.',
-          advancedTechnique: 'Pyéloplastie démembrée assistée par robot ; reconstruction en tissu cicatriciel dense dans les reprises.'
+          redoRate: 'Une part importante des cas sont des reprises après échec ou lésion iatrogène survenus ailleurs.',
+          complexCase: 'Vaisseaux croisants, calculs associés, variantes anatomiques comme le rein en fer à cheval et reprises relèvent des cas complexes.',
+          advancedTechnique: 'Pyéloplastie démembrée assistée par robot ; reconstruction en tissu cicatriciel dense lors des reprises.'
         },
         timeline: [
-          { when: 'À distance', title: 'Évaluation du dossier', body: 'Votre uro-scanner et votre scintigraphie rénale (MAG3) sont examinés ; l’obstruction et la fonction rénale sont évaluées.' },
-          { when: 'Jours 1–2', title: 'Arrivée et examens', body: 'Examen clinique, complément d’imagerie si nécessaire et consultation d’anesthésie.' },
-          { when: 'Jour 3', title: 'Intervention', body: 'Pyéloplastie démembrée robotique, laparoscopique ou ouverte ; généralement 2 à 3 nuits d’hospitalisation.' },
-          { when: 'Ensuite', title: 'Période de sonde JJ', body: 'Une sonde JJ reste en place 4 à 6 semaines, puis est retirée lors d’un geste court.' },
-          { when: 'Suivi', title: 'Suivi fonctionnel', body: 'Le drainage et la fonction rénale sont surveillés par scintigraphie et échographie ; le succès se juge sur le drainage à long terme.' }
+          { when: 'À distance', title: 'Examen de votre dossier', body: 'Vos images d\'uroscanner et VOTRE SCINTIGRAPHIE sont examinées. Aucune décision solide ne se prend sans scintigraphie ; une dilatation vue en échographie ne suffit pas.' },
+          { when: 'Jours 1–2', title: 'Arrivée et bilan', body: 'Examen clinique, complément d\'imagerie, bilan sanguin et urinaire, consultation d\'anesthésie. Si l\'ECBU est positif, l\'intervention est reportée.' },
+          { when: 'Jour de l\'intervention', title: 'Réparation', body: 'Le segment rétréci est réséqué et la jonction refaite largement. En présence d\'un vaisseau croisant, la jonction est transposée en avant. Un calcul associé peut être retiré dans le même temps.' },
+          { when: 'Jours 2–3', title: 'Sortie', body: 'La plupart des patients rentrent alors. Une sonde JJ reste en place ; les symptômes qu\'elle entraîne sont expliqués.' },
+          { when: 'Avant le retour', title: 'Contrôle', body: 'Contrôle des cicatrices et autorisation de vol. Voler avec une sonde JJ ne pose en général pas de problème, mais qui la retirera et où doit être planifié par écrit.' },
+          { when: 'Semaines 4–6', title: 'Retrait de la sonde JJ', body: 'Geste court. Il peut être réalisé dans votre pays, à condition que votre urologue ait donné son accord au préalable.' },
+          { when: 'Mois 3–6 et au-delà', title: 'Suivi fonctionnel', body: 'Le drainage et la fonction rénale sont suivis par scintigraphie de contrôle et échographie. Le succès se mesure au drainage à long terme, non à l\'intervention elle-même.' }
         ],
         risks: [
-          'Symptômes transitoires liés à la sonde JJ',
-          'Fuite urinaire',
-          'Récidive du rétrécissement (plus fréquente dans les reprises)',
-          'Infection et saignement'
+          'SYMPTÔMES LIÉS À LA SONDE JJ : pollakiurie, douleur lombaire et hématurie sont habituelles et disparaissent au retrait. C\'est ce qui surprend le plus les patients ; savoir que c\'est attendu facilite nettement cette période',
+          'Fuite urinaire au niveau de la jonction — généralement gérée par la sonde et un drain',
+          'RÉCIDIVE DU RÉTRÉCISSEMENT : plus probable lors des reprises et en tissu cicatriciel dense',
+          'Saignement et infection',
+          'Infection urinaire fébrile — surtout si l\'ECBU préopératoire n\'était pas stérile',
+          'Lésion d\'organes voisins — rare',
+          'Absence d\'amélioration fonctionnelle espérée : l\'intervention rétablit le drainage mais ne récupère pas la fonction déjà perdue. Cela doit être dit clairement avant',
+          'Risque thromboembolique après chirurgie pelvienne associé à un vol long-courrier'
         ],
         alternatives: [
-          'Endopyélotomie (cas sélectionnés ; taux de succès plus faible)',
-          'Surveillance (cas sélectionnés, asymptomatiques, à fonction conservée)',
-          'Néphrectomie (uniquement pour un rein non fonctionnel, en dernier recours)'
+          'Surveillance — chez les patients présentant une dilatation mais une fonction et un drainage conservés. Surveiller signifie imager ; l\'absence de symptômes ne suffit pas',
+          'Endopyélotomie — incision par voie interne ; possible dans des cas sélectionnés mais avec un taux de récidive supérieur',
+          'Pyéloplastie robotique — largement privilégiée pour une réparation exigeant de la précision de suture',
+          'Pyéloplastie laparoscopique',
+          'Pyéloplastie ouverte — dans des cas sélectionnés, en particulier des reprises complexes',
+          'Néphrectomie — uniquement pour un rein sans fonction, source de symptômes ou d\'infections, en dernier recours'
         ],
         comparison: {
-          title: 'Pyéloplastie ouverte vs laparoscopique vs robotique',
+          title: 'Pyéloplastie ouverte, laparoscopique et robotique',
           columns: ['Critère', 'Ouverte', 'Laparoscopique', 'Robotique'],
           rows: [
-            { label: 'Caractère invasif', values: ['Grande incision', 'Petites incisions', 'Petites incisions'] },
-            { label: 'Précision des sutures', values: ['Bonne', 'Techniquement difficile', 'Très élevée'] },
+            { label: 'Incision', values: ['Une incision large', 'Petites incisions', 'Petites incisions'] },
+            { label: 'Précision de suture', values: ['Bonne', 'Techniquement exigeante', 'Élevée'] },
             { label: 'Récupération', values: ['Plus longue', 'Courte', 'Courte'] },
-            { label: 'Adaptation aux reprises / cas complexes', values: ['Sélective', 'Limitée', 'Élevée'] },
-            { label: 'Séjour', values: ['3 à 5 nuits', '2 à 3 nuits', '2 à 3 nuits'] }
+            { label: 'Adaptée aux reprises et cas complexes', values: ['Dans des cas sélectionnés', 'Limitée', 'Privilégiée'] },
+            { label: 'Hospitalisation', values: ['3 à 5 nuits', '2 à 3 nuits', '2 à 3 nuits'] },
+            { label: 'En présence d\'un vaisseau croisant', values: ['Possible', 'Possible', 'Dissection facilitée'] }
           ],
-          note: 'La méthode est choisie au cas par cas selon le type de rétrécissement, les interventions antérieures et l’anatomie.'
+          note: 'Ce qui distingue cette réparation, c\'est l\'exigence d\'une suture fine et étanche : la précision pèse donc dans le choix. La technique reste cependant adaptée au type de rétrécissement, aux antécédents chirurgicaux et à l\'anatomie. Dire « il faut du robotique » ne remplace pas cette évaluation.'
         },
+        recovery: [
+          { period: '48 premières heures', body: 'La douleur est contrôlée. La marche précoce importe pour la reprise du transit et pour réduire le risque de thrombose.' },
+          { period: 'Semaine 1', body: 'Une sensibilité des orifices est habituelle. Évitez le port de charges. Un peu de sang dans les urines, surtout après un effort, est attendu avec une sonde JJ.' },
+          { period: 'Période avec la sonde JJ (4 à 6 semaines)', body: 'Pollakiurie, douleur lombaire et sensation de tiraillement à la miction sont habituelles et cessent au retrait. Consultez immédiatement en cas de fièvre, de frissons ou d\'impossibilité d\'uriner.' },
+          { period: 'Après le retrait', body: 'Une nette diminution des symptômes est attendue. Des brûlures mictionnelles peuvent persister quelques jours.' },
+          { period: 'Mois 3–6', body: 'Une scintigraphie ou une échographie évalue l\'amélioration du drainage. Que l\'hydronéphrose ne disparaisse pas totalement ne signifie pas un échec ; l\'essentiel est le rétablissement du drainage.' },
+          { period: 'À long terme', body: 'Le suivi se poursuit. Le retour d\'une douleur lombaire ou une infection fébrile doivent conduire à une évaluation sans délai.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Aucune fourchette de prix fixe n’est indiquée dans cette catégorie ; le prix est communiqué après évaluation du dossier, selon la complexité du cas et la technique requise.'
+          disclaimer: 'Aucune fourchette fixe n\'est donnée dans cette catégorie. Le montant dépend de la technique, du caractère ou non d\'une reprise, du retrait éventuel d\'un calcul associé et de la durée du séjour ; il est communiqué par écrit après examen de votre dossier.'
         },
         packageIncludes: [
-          'Intervention et séjour hospitalier',
-          'Anesthésie et examens',
-          'Sonde JJ et son retrait',
-          'Transferts et hébergement',
-          'Interprète médical et coordinateur',
-          'Suivi fonctionnel à long terme'
+          'Examen de votre dossier et de votre scintigraphie',
+          'Consultation et complément d\'imagerie',
+          'Bilan sanguin et urinaire, ECBU',
+          'Anesthésie et bloc opératoire',
+          'Intervention et pose d\'une sonde JJ',
+          'Retrait d\'un calcul associé dans le même temps si nécessaire',
+          'Hospitalisation',
+          'Contrôle avant le retour',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et coordination des patients',
+          'Interprétation à distance du suivi fonctionnel à long terme'
         ],
         faqs: [
-          { q: 'J’ai eu une endopyélotomie ou une pyéloplastie et l’obstruction est revenue ; que peut-on faire ?', a: 'Une pyéloplastie de reprise est possible et constitue un domaine d’expérience de ce centre. Malgré le tissu cicatriciel, une reconstruction préservant le rein est planifiée ; rarement, une approche en deux temps est nécessaire.' },
-          { q: 'Robotique ou ouverte, que choisir ?', a: 'La voie robotique offre une précision de suture et une récupération rapide dans la plupart des cas ; le choix dépend toutefois du type de rétrécissement, des interventions antérieures et de l’anatomie.' },
-          { q: 'Mon rein peut-il être préservé ?', a: 'L’objectif est de préserver le rein. La part de fonction récupérable est évaluée par scintigraphie ; la néphrectomie n’est envisagée qu’en dernier recours, pour un rein non fonctionnel.' }
+          { q: 'Mon échographie montre un rein dilaté — faut-il m\'opérer ?', a: 'Non, la dilatation seule ne justifie pas une intervention. Certains reins paraissent dilatés mais se vidangent correctement. Il faut démontrer que l\'obstacle retentit sur le rein, et c\'est la scintigraphie qui le montre. Une décision prise sans elle reste incomplète.' },
+          { q: 'Je n\'ai pas mal, rien ne presse donc ?', a: 'Cette idée est dangereuse ici. Un obstacle d\'installation lente peut rester indolore pendant que le rein se dilate et perd sa fonction. Si l\'obstacle est connu, poursuivez la surveillance par scintigraphie et imagerie même sans symptôme.' },
+          { q: 'J\'ai mal au flanc après avoir beaucoup bu — qu\'est-ce que cela signifie ?', a: 'C\'est un signe caractéristique. Quand la charge liquidienne augmente, le rein doit évacuer davantage ; l\'obstacle l\'en empêche, la pression monte et la douleur apparaît. Signalez-le, car cela oriente le diagnostic.' },
+          { q: 'Mon rein peut-il être sauvé ?', a: 'C\'est précisément l\'objectif. Honnêtement toutefois, l\'intervention rétablit le drainage ; elle ne récupère pas la fonction déjà perdue. D\'où l\'importance de décider tôt. La part de fonction conservable s\'évalue à la scintigraphie.' },
+          { q: 'Le robot est-il meilleur que la voie ouverte ?', a: 'Cette réparation exige une suture fine et étanche : la précision compte et l\'approche robotique est privilégiée pour cela. La technique reste choisie selon le type de rétrécissement, les antécédents chirurgicaux et votre anatomie. L\'essentiel n\'est pas l\'appareil mais une jonction large et sans tension.' },
+          { q: 'J\'ai eu une endopyélotomie ou une pyéloplastie et le rétrécissement est revenu. Que faire ?', a: 'Une reprise est possible dans la plupart des cas, mais le tissu cicatriciel la rend plus difficile et le taux de succès est moindre. Cela doit être dit clairement. Votre compte rendu opératoire antérieur est déterminant ; un plan établi sans connaître la technique employée reste incomplet.' },
+          { q: 'Combien de temps la sonde JJ reste-t-elle et est-elle très gênante ?', a: 'En général 4 à 6 semaines. Pollakiurie, douleur lombaire et tiraillement à la miction sont habituels et cessent au retrait. C\'est ce qui surprend le plus : nous le disons donc à l\'avance, la gêne est attendue, ce n\'est pas une complication.' },
+          { q: 'Puis-je prendre l\'avion avec la sonde, et qui la retirera ?', a: 'Voler avec une sonde JJ ne pose en général pas de problème. Ce qu\'il faut planifier, c\'est qui la retire et où. C\'est un geste court réalisable dans votre pays, à condition que votre urologue ait donné son accord au préalable. Réglez ce point avant de fixer vos dates.' },
+          { q: 'L\'hydronéphrose disparaîtra-t-elle complètement ?', a: 'Pas toujours, et cela ne signifie pas nécessairement un échec. Un bassinet dilaté de longue date peut ne pas revenir à sa taille antérieure même une fois le drainage rétabli. Ce que l\'on évalue au suivi n\'est pas la réduction de taille mais le rétablissement du drainage — d\'où l\'intérêt supérieur de la scintigraphie sur l\'échographie.' },
+          { q: 'Quels documents envoyer avant de venir ?', a: 'Les images d\'uroscanner elles-mêmes (pas seulement le compte rendu), VOTRE RÉSULTAT DE SCINTIGRAPHIE, vos éventuels comptes rendus opératoires, votre fonction rénale, un ECBU, vos traitements et vos autres pathologies. En l\'absence de scintigraphie, elle sera demandée en premier : sans elle, l\'indication ne peut être évaluée correctement.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines — Association européenne d\'urologie (urologie reconstructrice)', url: 'https://uroweb.org/guidelines' }
         ]
       }
     }
@@ -28335,58 +28496,140 @@ export const treatments: Treatment[] = [
       },
       fr: {
         title: 'Réparation des fistules vésico-vaginales et urétéro-vaginales',
-        summary: 'Réparation des fistules responsables de fuites d’urine — y compris celles survenues après un accouchement ou une chirurgie pelvienne ou gynécologique. Une prise en charge respectueuse et confidentielle.',
-        metaTitle: 'Réparation de fistule | Chirurgie des fistules vésico-vaginales et urétéro-vaginales',
-        metaDescription: 'Réparation des fistules vésico-vaginales et urétéro-vaginales : chirurgie reconstructrice des fistules entraînant des fuites d’urine permanentes. Une approche respectueuse et confidentielle pour les patientes adressées de l’étranger.',
+        summary:
+          'Réparation des fistules responsables de fuites urinaires continues. Ce n\'est pas une défaillance personnelle mais une affection réparable — et deux choses comptent avant tout : le bon moment et une première réparation bien conduite.',
+        metaTitle: 'Réparation de fistule : chirurgie vésico-vaginale et urétéro-vaginale',
+        metaDescription:
+          'Ce qu\'est une fistule, pourquoi elle survient, pourquoi la première réparation est la meilleure chance, le rôle du calendrier, les techniques d\'interposition tissulaire, la récupération et la confidentialité.',
+        quickFacts: {
+          duration: '1,5 à 3 heures selon le siège',
+          anesthesia: 'Anesthésie générale ou rachidienne',
+          hospitalStay: '1 à 3 nuits',
+          stayInTurkey: '3 à 4 semaines (la sonde est retirée sur place)',
+          catheter: '2 à 3 semaines',
+          returnToWork: '3 à 4 semaines',
+          flightClearance: 'Après le retrait de la sonde et le contrôle'
+        },
         definition: [
-          'Une fistule est une communication anormale entre la vessie ou l’uretère et le vagin, provoquant une fuite d’urine continue et incontrôlable. Elle survient le plus souvent après un accouchement difficile, une chirurgie pelvienne ou gynécologique, ou une radiothérapie.',
-          'Il s’agit d’une affection médicalement réparable, et la gêne qu’elle occasionne n’a rien de honteux. La chirurgie reconstructrice vise à fermer la fistule et à rétablir une continence normale. Le moment de l’intervention, la qualité des tissus et la localisation de la fistule déterminent le résultat ; les cas récidivants, après une réparation ayant échoué, exigent une expérience particulière.'
+          'Une fistule est une communication anormale entre deux structures normalement séparées. Il s\'agit ici d\'une communication entre la vessie et le vagin (vésico-vaginale) ou entre un uretère et le vagin (urétéro-vaginale). Le résultat est une fuite d\'urine continue et incontrôlable.',
+          'DISONS-LE D\'EMBLÉE : CE N\'EST PAS DE VOTRE FAUTE ET IL N\'Y A PAS À EN AVOIR HONTE. Une fistule est une complication médicale pouvant survenir après un accouchement difficile ou prolongé, après une chirurgie gynécologique telle qu\'une hystérectomie, après une chirurgie pelvienne ou après une radiothérapie. Dans la plupart des cas, elle se répare complètement.',
+          'COMMENT RECONNAÎTRE LE SYMPTÔME : dans les autres formes de fuite urinaire, celle-ci survient dans des circonstances précises — toux, rire, ou après une urgence. Avec une fistule, la fuite est continue ; même si vous urinez normalement, il existe entre-temps une humidité permanente. Cette distinction importe, car une humidité permanente doit faire évoquer immédiatement une fistule.',
+          'LA PHRASE LA PLUS IMPORTANTE : LA PREMIÈRE RÉPARATION EST LA MEILLEURE CHANCE. Chaque tentative échouée dégrade les tissus, laisse des cicatrices et abaisse le taux de succès de la suivante. « Essayons, on reverra si cela échoue » n\'est pas la bonne approche ici. La première réparation doit être réalisée par des mains expérimentées et au bon moment.',
+          'LE CALENDRIER FAIT PARTIE DE LA DÉCISION. Si la fistule est récente et que les tissus voisins sont inflammatoires, œdématiés et encore en cicatrisation, une réparation immédiate est exposée à l\'échec. Un délai peut être nécessaire pour laisser les tissus s\'apaiser. Cette attente est difficile, et la question « pourquoi pas maintenant » est légitime — mais une réparation précipitée qui lâche coûte plus cher que l\'attente.'
+        ],
+        eligibility: {
+          suitable: [
+            'Femmes présentant une fuite urinaire continue apparue après une chirurgie gynécologique ou pelvienne',
+            'Femmes décrivant une fuite continue après un accouchement difficile ou prolongé',
+            'Femmes ayant développé une fistule après radiothérapie — groupe nécessitant une évaluation à part',
+            'Femmes dont une réparation antérieure n\'a pas arrêté la fuite',
+            'Femmes présentant plusieurs orifices fistuleux',
+            'Femmes dont la fuite est due à une lésion urétérale'
+          ],
+          notSuitable: [
+            'La période précoce tant que les tissus sont inflammatoires et œdématiés : la réparation est différée, ce qui relève du plan et non d\'un retard',
+            'Femmes présentant une infection urinaire non traitée : elle est traitée d\'abord',
+            'Femmes ne pouvant respecter la période de sondage et la durée de séjour — ce délai ne se raccourcit pas',
+            'En cas de cancer évolutif, le plan est établi à part et conjointement avec le traitement oncologique'
+          ]
+        },
+        technology: [
+          'Cystoscopie — pour préciser le siège, le nombre d\'orifices et leur distance aux méats urétéraux',
+          'Uroscanner — pour évaluer les uretères',
+          'Test au colorant — pour distinguer une fuite vésicale d\'une fuite urétérale',
+          'Scintigraphie rénale — pour évaluer la fonction en cas d\'atteinte urétérale',
+          'Voie vaginale ou abdominale selon le siège',
+          'Interposition tissulaire (par exemple lambeau de Martius) — tissu sain et bien vascularisé entre les lignes de suture',
+          'Réimplantation de l\'uretère dans la vessie'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+          note: 'La chirurgie reconstructrice fait partie des domaines d\'exercice du Pr associé Müslüm Ergün. Le plan repose sur le siège et la taille de la fistule, la qualité tissulaire, un antécédent éventuel de radiothérapie et les tentatives antérieures.'
         },
         expertise: {
-          redoRate: 'Une part importante des cas sont des reprises adressées après un échec ou une lésion iatrogène survenus dans un autre centre.',
-          complexCase: 'Les fistules post-radiques, les fistules étendues ou multifocales et les réparations ayant échoué à plusieurs reprises relèvent des cas complexes.',
-          advancedTechnique: 'Réparation par voie vaginale ou abdominale avec interposition tissulaire (par exemple lambeau de Martius) ; réimplantation urétérale.'
+          redoRate: 'Une part importante des cas sont des reprises après échec ou lésion iatrogène survenus ailleurs.',
+          complexCase: 'Fistules post-radiothérapie, fistules larges ou multiples et échecs répétés relèvent des cas complexes.',
+          advancedTechnique: 'Réparation vaginale ou abdominale soutenue par une interposition tissulaire (par exemple lambeau de Martius) ; réimplantation urétérale.'
         },
         timeline: [
-          { when: 'À distance', title: 'Évaluation confidentielle du dossier', body: 'Vos antécédents, vos comptes rendus opératoires et votre imagerie sont examinés en toute confidentialité ; le moment opportun de la réparation est déterminé.' },
-          { when: 'Jours 1–2', title: 'Arrivée et examen', body: 'Examen clinique, cystoscopie et imagerie précisent la localisation et la taille de la fistule.' },
-          { when: 'Jours 2–3', title: 'Intervention', body: 'Réparation par voie vaginale ou abdominale selon la localisation ; interposition tissulaire (lambeau) si nécessaire.' },
-          { when: 'Ensuite', title: 'Période de sondage', body: 'Une sonde reste en place 2 à 3 semaines pour permettre la cicatrisation ; les efforts importants et les rapports sexuels sont évités au début.' },
-          { when: 'Suivi', title: 'Contrôle', body: 'Un contrôle avant le retrait de la sonde confirme la disparition complète de la fuite, et le suivi est planifié.' }
+          { when: 'À distance', title: 'Examen confidentiel de votre dossier', body: 'Votre histoire, VOS COMPTES RENDUS OPÉRATOIRES ANTÉRIEURS et votre imagerie sont examinés en toute confidentialité. Le moment où la fuite a débuté et l\'intervention qui l\'a précédée constituent l\'information la plus importante.' },
+          { when: 'Jours 1–2', title: 'Arrivée et évaluation', body: 'Examen clinique, cystoscopie et imagerie précisent le siège, la taille et le nombre de fistules et distinguent fuite vésicale et urétérale. Sur demande, une professionnelle de santé est présente à chaque étape.' },
+          { when: 'Jour de l\'intervention', title: 'Réparation', body: 'Voie vaginale ou abdominale selon le siège. Si la qualité tissulaire est médiocre, un tissu sain et bien vascularisé est interposé entre les lignes de suture pour rendre la réparation plus durable.' },
+          { when: 'Période de sondage', title: '2 à 3 semaines', body: 'La sonde reste en place le temps de la cicatrisation. Ce délai n\'est pas arbitraire : une vessie distendue sollicite la réparation et peut provoquer une fuite. Il se passe surtout à l\'hôtel.' },
+          { when: 'Retrait de la sonde', title: 'Contrôle', body: 'L\'étanchéité est vérifiée avant le retrait. En cas de doute, la sonde reste plus longtemps — gardez donc un billet modifiable.' },
+          { when: 'Suivi', title: 'À long terme', body: 'Confirmation de l\'arrêt complet de la fuite et évaluation de la continence. Chez certaines femmes, une autre forme de fuite persiste après la fermeture ; elle est évaluée à part et dispose de son propre traitement.' }
         ],
         risks: [
-          'Réouverture de la réparation (récidive) — surtout dans les cas post-radiques ou complexes',
+          'LÂCHAGE DE LA RÉPARATION : plus probable après radiothérapie, pour les fistules larges et après un échec antérieur',
           'Infection et saignement',
-          'Difficulté transitoire à uriner',
-          'Rarement, nécessité d’une réparation complémentaire'
+          'Difficulté transitoire à uriner après le retrait de la sonde',
+          'Sensation de capacité vésicale réduite et pollakiurie — surtout en cas d\'antécédent de radiothérapie',
+          'UNE AUTRE FORME DE FUITE PEUT PERSISTER MALGRÉ UNE RÉPARATION RÉUSSIE : la fistule se ferme, mais une atteinte du soutien peut laisser une incontinence d\'effort. Cela ne signifie pas un échec ; c\'est une affection distincte avec son propre traitement. Le savoir à l\'avance évite une déception ultérieure',
+          'Gêne lors des rapports — surtout au début après voie vaginale ou utilisation d\'un lambeau',
+          'Sténose là où un uretère a été réparé',
+          'Nécessité d\'une nouvelle réparation dans les cas très complexes et récidivants'
         ],
         alternatives: [
-          'Tentative de fermeture spontanée sous sondage prolongé pour les petites fistules récentes (cas sélectionnés)',
-          'Attente de la cicatrisation tissulaire avant la réparation (choix du bon moment)',
-          'Dérivation urinaire dans les cas complexes (en dernier recours)'
+          'Attente d\'une fermeture spontanée sous sondage prolongé — uniquement pour de très petites fistules très récentes chez des patientes sélectionnées',
+          'Attente planifiée que les tissus s\'apaisent — non un retard mais une décision qui augmente les chances de succès',
+          'Réparation vaginale — pour les fistules bien situées ; la récupération est plus rapide',
+          'Réparation abdominale — pour les fistules hautes, proches de l\'uretère ou complexes',
+          'Réparation soutenue par un lambeau — en cas de mauvaise qualité tissulaire et en récidive',
+          'Réimplantation de l\'uretère dans la vessie — en cas de fistule urétéro-vaginale',
+          'Dérivation urinaire définitive — seulement dans des situations très avancées et exceptionnelles où aucune réparation n\'est possible'
+        ],
+        comparison: {
+          title: 'Fuite par fistule ou incontinence : comment faire la différence',
+          columns: ['Critère', 'Fuite par fistule', 'Incontinence d\'effort', 'Incontinence par urgenturie'],
+          rows: [
+            { label: 'Quand survient la fuite', values: ['En continu, indépendamment des circonstances', 'Toux, rire, port de charges', 'Après un besoin soudain'] },
+            { label: 'La nuit', values: ['Se poursuit ; le lit est mouillé', 'Généralement non', 'Possible'] },
+            { label: 'Miction normale', values: ['Possible, avec humidité permanente entre-temps', 'Normale', 'Fréquente et impérieuse'] },
+            { label: 'Date de début', values: ['Généralement après une intervention ou un accouchement', 'Insidieuse sur des années', 'Insidieuse sur des années'] },
+            { label: 'Premier examen', values: ['Cystoscopie et test au colorant', 'Examen et catalogue mictionnel', 'Catalogue mictionnel'] }
+          ],
+          note: 'La distinction importe car les traitements sont entièrement différents. Une humidité permanente, non liée aux circonstances et apparue après une intervention ou un accouchement, est considérée comme une fistule jusqu\'à preuve du contraire.'
+        },
+        recovery: [
+          { period: 'Premiers jours', body: 'Sortie avec la sonde. Qu\'elle ne se bouche pas est essentiel : si la vessie se remplit et se distend, la réparation est sollicitée. Une hydratation abondante est donc conseillée.' },
+          { period: 'Période de sondage (2 à 3 semaines)', body: 'Port de charges, efforts de poussée et constipation sont à éviter. Fibres et hydratation sont importantes. Si la sonde se bouche ou sort, ou si l\'humidité vaginale réapparaît, consultez sans attendre.' },
+          { period: 'Retrait de la sonde', body: 'L\'étanchéité est vérifiée au préalable. Une pollakiurie est habituelle les premiers jours.' },
+          { period: 'Semaines 4–6', body: 'Retour à la vie quotidienne. Pour les rapports, respectez le délai indiqué ; une reprise précoce sollicite la réparation. Après voie vaginale, les premiers rapports peuvent être inconfortables.' },
+          { period: 'À partir du 3e mois', body: 'Confirmation de l\'arrêt complet de la fuite. Si une autre forme d\'incontinence persiste, elle est évaluée et traitée séparément.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Aucune fourchette de prix fixe n’est indiquée dans cette catégorie ; le prix est communiqué après évaluation du dossier, selon la complexité du cas et la technique requise.'
+          disclaimer: 'Aucune fourchette fixe n\'est donnée dans cette catégorie. Le montant dépend du siège et de la taille de la fistule, de la nécessité d\'une interposition tissulaire, d\'une éventuelle réparation urétérale et de la durée du séjour ; il est communiqué par écrit après examen de votre dossier.'
         },
         packageIncludes: [
-          'Intervention et séjour hospitalier',
-          'Anesthésie et examens',
-          'Interposition tissulaire (lambeau) incluse si nécessaire',
-          'Interprète médicale et coordination confidentielle (sur demande)',
-          'Transferts et hébergement',
-          'Retrait de la sonde et suivi en ligne'
+          'Examen confidentiel de votre dossier',
+          'Consultation, cystoscopie et imagerie nécessaire',
+          'ECBU',
+          'Anesthésie et bloc opératoire',
+          'La réparation, interposition tissulaire comprise le cas échéant',
+          'Hospitalisation',
+          'Contrôle avant le retrait de la sonde',
+          'Interprète médicale et coordination confidentielle sur demande',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patiente + 1 accompagnant)',
+          'Suivi à distance après le retour'
         ],
         faqs: [
-          { q: 'Une réparation a été tentée dans un autre pays ou centre sans succès ; peut-elle être refaite ?', a: 'Oui. Les cas récidivants après une réparation ayant échoué constituent un domaine d’expérience de ce centre. Selon l’état des tissus, le moment opportun et, si nécessaire, une technique avec soutien tissulaire (lambeau) sont planifiés.' },
-          { q: 'Est-ce définitif, est-ce honteux ?', a: 'Non. Une fistule est une complication médicale, non une faute personnelle, et elle est réparable dans la grande majorité des cas. L’ensemble du parcours est mené dans le respect de votre intimité et en toute confidentialité.' },
-          { q: 'Le parcours reste-t-il confidentiel et puis-je demander un personnel féminin ?', a: 'Oui. Les consultations et la coordination suivent le principe de confidentialité ; sur demande, une interprète et un accompagnement féminins sont proposés.' }
+          { q: 'Est-ce définitif, et dois-je en avoir honte ?', a: 'Non, en aucune façon. Une fistule est une complication médicale, non une défaillance personnelle ni le résultat d\'une négligence de votre part, et dans la plupart des cas elle se répare complètement. Beaucoup de femmes vivent ainsi des années sans en parler — alors que c\'est une affection traitable.' },
+          { q: 'Je suis constamment humide mais j\'urine normalement. Est-ce une fistule ?', a: 'Oui, et c\'est un tableau fréquent. Avec une fistule, une partie de l\'urine suit la voie normale et une partie fuit en permanence. Une humidité permanente, non liée aux circonstances et apparue après une intervention ou un accouchement, doit faire évoquer une fistule.' },
+          { q: 'Pourquoi ne m\'opère-t-on pas tout de suite ?', a: 'La question est légitime et la plus fréquente. Si la fistule est récente, les tissus alentour sont inflammatoires et œdématiés, et une réparation dans ces tissus est exposée au lâchage. Attendre qu\'ils s\'apaisent relève du plan, non du retard. Nous savons que l\'attente est pénible, mais une réparation précipitée qui échoue coûte davantage.' },
+          { q: 'J\'ai déjà été opérée une fois et je fuis encore — peut-on réparer de nouveau ?', a: 'Le plus souvent oui. Honnêtement toutefois, chaque tentative échouée dégrade la qualité tissulaire et abaisse les chances de la suivante. La seconde réparation est donc planifiée plus soigneusement et nécessite généralement une technique soutenue par un lambeau. Votre compte rendu opératoire antérieur en est le document le plus important.' },
+          { q: 'Qu\'est-ce qu\'un lambeau et pourquoi est-il nécessaire ?', a: 'Une réparation suture deux couches tissulaires. Si la qualité est médiocre — par exemple en territoire irradié ou déjà opéré — on interpose entre elles un fragment de tissu sain et bien vascularisé. Le but est de séparer les lignes de suture et de soutenir la cicatrisation. Ce n\'est pas un « geste supplémentaire » mais une étape qui rend la réparation plus durable.' },
+          { q: 'J\'ai reçu une radiothérapie — cela change-t-il la réparation ?', a: 'Oui, et cela doit être dit clairement. Le tissu irradié est moins vascularisé et cicatrise moins bien ; le risque de lâchage est plus élevé et une technique soutenue par un lambeau est presque toujours nécessaire. Les attentes doivent se construire sur cette réalité.' },
+          { q: 'Pourquoi la sonde reste-t-elle si longtemps ?', a: 'Une vessie qui se remplit et se distend sollicite la ligne de suture et peut provoquer une fuite. La sonde maintient la vessie vide pour permettre la cicatrisation. Ce délai ne s\'adapte pas à un vol, et qu\'elle ne se bouche pas est tout aussi essentiel.' },
+          { q: 'Mes fuites cesseront-elles complètement après la réparation ?', a: 'La fuite continue liée à la fistule doit cesser. Chez certaines femmes toutefois, une atteinte du soutien laisse une autre forme de fuite — par exemple à la toux. Cela ne signifie pas un échec ; c\'est une affection distincte avec son propre traitement. Le savoir à l\'avance évite une déception.' },
+          { q: 'Est-ce confidentiel, et puis-je demander du personnel féminin ?', a: 'Oui aux deux. Vous pouvez demander la présence d\'une professionnelle lors des examens et consultations ainsi qu\'une interprète médicale ; il suffit de le préciser lors de la prise de rendez-vous. Vos informations médicales ne sont communiquées à personne sans votre accord, y compris votre accompagnant. Si l\'on vous demande des photographies ou un témoignage, vous pouvez refuser sans que cela change votre prise en charge.' },
+          { q: 'Que dois-je envoyer ?', a: 'La date de début de la fuite et l\'intervention ou l\'accouchement qui l\'a précédée, tous vos comptes rendus opératoires, les documents d\'une éventuelle réparation antérieure, les résultats de cystoscopie et d\'imagerie, un éventuel antécédent de radiothérapie, votre fonction rénale et vos traitements. Un antécédent de radiothérapie et le nombre de réparations antérieures sont les deux éléments qui modifient le plus le plan.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urinary Incontinence and Reconstructive Surgery — Association européenne d\'urologie', url: 'https://uroweb.org/guidelines' }
         ]
       }
     }
@@ -28942,61 +29185,146 @@ export const treatments: Treatment[] = [
         ]
       },
       fr: {
-        title: 'Reconstruction urétérale (sténose ou lésion étendue)',
-        summary: 'Reconstruction avancée pour une sténose ou une lésion urétérale étendue : techniques telles que la greffe de muqueuse buccale et l’interposition iléale.',
-        metaTitle: 'Reconstruction urétérale | Chirurgie des sténoses urétérales étendues',
-        metaDescription: 'Reconstruction avancée pour sténose ou lésion urétérale étendue : greffe de muqueuse buccale, interposition iléale, réimplantation urétérale. Expérience des cas complexes et des reprises.',
+        title: 'Reconstruction urétérale (sténoses longues et lésions)',
+        summary:
+          'Reconstruction avancée visant à sauver le rein dans les sténoses urétérales longues. À la plupart de ces patients on a dit que rien n\'était possible — or la longueur à elle seule ne rend pas la réparation impossible.',
+        metaTitle: 'Reconstruction urétérale : réparation préservant le rein dans les sténoses longues',
+        metaDescription:
+          'Options dans les sténoses urétérales longues, greffe de muqueuse buccale et interposition iléale, limites de la néphrostomie et de la sonde JJ permanente, reprises et attentes réalistes.',
+        quickFacts: {
+          duration: '3 à 6 heures selon la technique',
+          anesthesia: 'Anesthésie générale',
+          hospitalStay: '4 à 7 nuits',
+          stayInTurkey: '3 à 4 semaines',
+          returnToWork: '4 à 6 semaines',
+          flightClearance: 'Après l\'imagerie de contrôle'
+        },
         definition: [
-          'L’uretère est le conduit qui relie le rein à la vessie. Une sténose ou une lésion étendue peut survenir après une chirurgie de calcul, une chirurgie pelvienne ou gynécologique, une radiothérapie ou un traumatisme, et met le rein en danger.',
-          'Si les sténoses courtes se réparent par des techniques simples, les sténoses étendues nécessitent une reconstruction avancée. Des techniques telles que la greffe de muqueuse buccale, l’interposition iléale (pontage par un segment intestinal) ou l’abaissement rénal sont réalisées dans des centres expérimentés afin de préserver le rein.'
+          'L\'uretère est le fin conduit reliant le rein à la vessie. Lorsqu\'un long segment se rétrécit ou est lésé, l\'urine ne peut plus s\'évacuer du rein ; celui-ci se dilate et commence à perdre sa fonction.',
+          'LA CAUSE LA PLUS FRÉQUENTE N\'EST PAS CELLE QUE L\'ON IMAGINE : une part importante des sténoses longues fait suite à une lésion méconnue de l\'uretère lors d\'une autre intervention. Chirurgie gynécologique, chirurgie colorectale et chirurgie des calculs en font partie ; la radiothérapie et les traumatismes peuvent aussi provoquer des lésions étendues. Nous le disons sans accuser personne : l\'uretère est fin et longe des organes voisins, et cette lésion est un risque chirurgical reconnu. L\'essentiel est que le plan établi maintenant soit le bon.',
+          'LE MESSAGE CENTRAL DE CETTE PAGE : S\'ENTENDRE DIRE « CE N\'EST PAS POSSIBLE » NE SIGNIFIE PAS QUE CE NE L\'EST PAS. Les sténoses courtes se réparent par des techniques simples disponibles dans la plupart des centres. Les sténoses longues en exigent d\'autres — greffe de muqueuse buccale, interposition d\'un segment intestinal, abaissement du rein ou ascension de la vessie. Comme ces techniques sont peu pratiquées en routine, il arrive qu\'on dise au patient qu\'il n\'a plus d\'option.',
+          'L\'OBJECTIF EST TOUJOURS DE PRÉSERVER LE REIN. Honnêtement toutefois : la reconstruction rétablit le drainage, elle ne récupère pas la fonction déjà perdue. Mesurer la fonction restante par scintigraphie est donc l\'étape fondamentale pour décider si la réparation en vaut la peine.',
+          'VIVRE AVEC UNE NÉPHROSTOMIE OU UNE SONDE JJ PERMANENTE EST UN PONT, PAS UNE SOLUTION. Elles protègent le rein et font gagner du temps, mais imposent des soins constants, des changements réguliers et un risque infectieux. Se gérer ainsi pendant des années n\'est pas acceptable chez un patient chez qui une reconstruction est possible.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients dont l\'uretère a été lésé lors d\'une autre intervention et qui ont développé une sténose',
+            'Patients avec une sténose longue après chirurgie des calculs',
+            'Patients vivant avec une néphrostomie ou une sonde JJ permanente et souhaitant s\'en libérer',
+            'Patients dont une réparation antérieure a échoué',
+            'Patients avec une sténose après radiothérapie — évaluation séparée nécessaire',
+            'Patients en rein unique présentant une sténose urétérale, chez qui la réparation importe particulièrement',
+            'Patients dont la scintigraphie montre une fonction digne d\'être préservée'
+          ],
+          notSuitable: [
+            'Patients dont la scintigraphie montre une perte quasi totale de fonction sans symptômes : la réparation n\'apportera pas le bénéfice attendu',
+            'Patients présentant une infection urinaire non traitée : elle est traitée d\'abord',
+            'Patients chez qui un segment intestinal est prévu mais dont la fonction rénale est inférieure à un certain seuil ; cela s\'évalue à part',
+            'Patients dont l\'état général ne permet pas une chirurgie lourde et prolongée ; des options d\'entretien moins invasives sont alors envisagées',
+            'En cas de cancer évolutif et étendu, le plan est établi avec le traitement oncologique'
+          ]
+        },
+        technology: [
+          'Uroscanner — pour déterminer le siège et la longueur de la sténose',
+          'Scintigraphie rénale — examen clé montrant s\'il existe une fonction à préserver',
+          'Urétérographie antérograde et rétrograde — pour visualiser les deux extrémités',
+          'Urétéroscopie — visualisation directe',
+          'Urétéroplastie par greffe de muqueuse buccale',
+          'Interposition d\'un segment intestinal (interposition iléale)',
+          'Abaissement du rein et ascension de la vessie',
+          'Réimplantation de l\'uretère dans la vessie',
+          'Reconstruction assistée par robot'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+          note: 'La chirurgie reconstructrice fait partie des domaines d\'exercice du Pr associé Müslüm Ergün. Le plan repose sur la longueur et le siège de la sténose, la fonction rénale, les gestes antérieurs et un antécédent éventuel de radiothérapie.'
         },
         expertise: {
-          redoRate: 'Une part importante des cas sont des reprises adressées après un échec ou une lésion iatrogène survenus dans un autre centre.',
-          complexCase: 'Les sténoses étendues ou pan-urétérales, les situations post-radiques et les patients à rein unique relèvent des cas complexes.',
-          advancedTechnique: 'Urétéroplastie par greffe de muqueuse buccale, interposition iléale et reconstruction assistée par robot.'
+          redoRate: 'Une part importante des cas sont des reprises après échec ou lésion iatrogène survenus ailleurs.',
+          complexCase: 'Sténoses longues et pan-urétérales, sténoses post-radiothérapie et patients en rein unique relèvent des cas complexes.',
+          advancedTechnique: 'Urétéroplastie par muqueuse buccale, interposition intestinale et reconstruction assistée par robot.'
         },
         timeline: [
-          { when: 'À distance', title: 'Évaluation du dossier', body: 'Votre uro-scanner, votre scintigraphie rénale et vos comptes rendus opératoires antérieurs sont examinés en détail ; la longueur de la sténose et la fonction rénale sont déterminées.' },
-          { when: 'Jours 1–2', title: 'Arrivée et examens avancés', body: 'Examen clinique, urétéroscopie ou imagerie si nécessaire ; le plan de reconstruction est arrêté.' },
-          { when: 'Jour 3', title: 'Intervention', body: 'Greffe, interposition ou réimplantation selon la longueur du segment ; séjour généralement de plusieurs jours.' },
-          { when: 'Ensuite', title: 'Période de sonde', body: 'Une sonde JJ et/ou une sonde vésicale restent en place un certain temps ; le drainage est confirmé par imagerie de contrôle.' },
-          { when: 'Suivi', title: 'Suivi à long terme', body: 'La fonction et le drainage sont surveillés par scintigraphie et échographie ; le suivi est particulièrement déterminant dans ces cas.' }
+          { when: 'À distance', title: 'Examen de votre dossier', body: 'Vos images d\'uroscanner, VOTRE SCINTIGRAPHIE et VOS COMPTES RENDUS OPÉRATOIRES ANTÉRIEURS sont examinés en détail. Aucun plan n\'est possible sans ces trois éléments : la scintigraphie dit si la réparation en vaut la peine, le compte rendu dit ce qui a déjà été fait.' },
+          { when: 'Jours 1–2', title: 'Arrivée et bilan complémentaire', body: 'Examen clinique, urétéroscopie si besoin et complément d\'imagerie. Les deux extrémités de la sténose sont visualisées pour en établir la longueur réelle — l\'information qui détermine la technique nécessaire.' },
+          { when: 'Jour de l\'intervention', title: 'Reconstruction', body: 'Greffon, pontage ou réimplantation selon la longueur du segment. Le plan peut être ajusté selon l\'état des tissus en peropératoire ; les scénarios possibles sont discutés à l\'avance.' },
+          { when: 'À l\'hôpital', title: 'Période précoce', body: 'Si un segment intestinal a été utilisé, il faut attendre la reprise du transit et le séjour est plus long. Une sonde JJ reste en place, ainsi qu\'un drain pendant un temps.' },
+          { when: 'Semaines 4–8', title: 'Retrait de la sonde', body: 'La sonde est retirée une fois l\'étanchéité confirmée par imagerie de contrôle. Le lieu de ce geste doit être planifié à l\'avance.' },
+          { when: 'À long terme', title: 'Suivi fonctionnel', body: 'Drainage et fonction rénale sont suivis par scintigraphie et échographie. Le suivi est ici particulièrement critique : une resténose silencieuse peut endommager le rein sans provoquer de symptôme.' }
         ],
         risks: [
-          'Récidive de la sténose et nécessité d’un geste complémentaire',
-          'Effets métaboliques et production de mucus liés au segment intestinal en cas d’interposition iléale',
+          'RÉCIDIVE DE LA STÉNOSE imposant un nouveau geste — plus probable pour les segments longs et les reprises',
           'Fuite urinaire, infection et saignement',
-          'Modification de la fonction rénale'
+          'PARTICULARITÉS EN CAS D\'UTILISATION D\'UN SEGMENT INTESTINAL : la présence de mucus dans les urines est un phénomène attendu qui ne disparaît pas, et un déséquilibre des paramètres sanguins peut apparaître, imposant un suivi au long cours. Ces modifications définitives doivent être clairement discutées avant le choix de la technique',
+          'Modification transitoire ou durable du transit liée au prélèvement du segment',
+          'Modification transitoire de la sensibilité et gêne après prélèvement d\'un greffon buccal',
+          'Absence d\'amélioration fonctionnelle espérée : la reconstruction rétablit le drainage, elle ne récupère pas la fonction perdue',
+          'Risque thromboembolique lié à une intervention longue et à l\'immobilité ; le vol retour est planifié à part',
+          'Infections urinaires récidivantes'
         ],
         alternatives: [
-          'Entretien par sonde JJ au long cours ou néphrostomie (patients non opérables)',
-          'Réparation bout à bout ou réimplantation pour les sténoses courtes',
-          'Autotransplantation (dans des cas complexes sélectionnés)',
-          'Néphrectomie (uniquement pour un rein non fonctionnel, en dernier recours)'
+          'Entretien par néphrostomie ou sonde JJ permanente — protège le rein et fait gagner du temps, mais impose des soins constants, des changements réguliers et un risque infectieux. Un pont, pas une solution',
+          'Réparation termino-terminale ou réimplantation pour les sténoses courtes',
+          'Ascension de la vessie — pour les sténoses de l\'uretère pelvien',
+          'Urétéroplastie par muqueuse buccale — pour des sténoses longues sélectionnées',
+          'Interposition d\'un segment intestinal — pour les sténoses très longues ; avec des modifications définitives',
+          'Transfert du rein dans le pelvis sur ses propres vaisseaux (autotransplantation) — dans des cas complexes sélectionnés',
+          'Néphrectomie — uniquement pour un rein sans fonction, source d\'infections ou de douleurs, en dernier recours'
+        ],
+        comparison: {
+          title: 'Options selon la longueur de la sténose',
+          columns: ['Situation', 'Technique privilégiée', 'Lourdeur', 'Point de vigilance'],
+          rows: [
+            { label: 'Sténose courte', values: ['Anastomose termino-terminale ou réimplantation', 'Faible', 'Réalisable dans la plupart des centres'] },
+            { label: 'Uretère pelvien, longueur moyenne', values: ['Ascension de la vessie', 'Moyenne', 'La capacité vésicale est évaluée'] },
+            { label: 'Sténose moyenne à longue', values: ['Patch de muqueuse buccale', 'Moyenne', 'État bucco-dentaire et tabac influent sur la cicatrisation'] },
+            { label: 'Sténose très longue', values: ['Interposition d\'un segment intestinal', 'Élevée', 'Effets métaboliques et mucus définitifs'] },
+            { label: 'Patient non opérable', values: ['Néphrostomie ou sonde permanente', 'Soins constants', 'Un pont, pas une solution'] }
+          ],
+          note: 'Ce tableau montre que « sténose longue » n\'est pas une entité unique : à chaque longueur sa technique. Si une seule option vous est proposée, vous êtes en droit de demander pourquoi les autres ne s\'appliquent pas à vous.'
+        },
+        recovery: [
+          { period: 'À l\'hôpital', body: 'Si un segment intestinal a été utilisé, on attend la reprise du transit et l\'alimentation est réintroduite progressivement. La marche précoce réduit le risque thromboembolique.' },
+          { period: '2 premières semaines', body: 'Le port de charges est interdit. Pollakiurie et douleur lombaire liées à la sonde sont habituelles. Consultez immédiatement en cas de fièvre, de frissons ou d\'impossibilité d\'uriner.' },
+          { period: 'Période avec la sonde', body: 'Elle est plus longue qu\'après d\'autres interventions urologiques. L\'étanchéité est confirmée par imagerie avant le retrait.' },
+          { period: 'Si un segment intestinal a été utilisé', body: 'La présence de mucus dans les urines est attendue et définitive ; une hydratation abondante est conseillée. Des contrôles sanguins réguliers sont nécessaires au long cours.' },
+          { period: 'Mois 3–6', body: 'La scintigraphie évalue le rétablissement du drainage. C\'est le véritable critère de succès de cette reconstruction.' },
+          { period: 'À long terme', body: 'Le suivi est à vie. Une resténose silencieuse pouvant endommager le rein sans symptôme, le calendrier d\'imagerie doit être respecté même si vous vous sentez bien.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Aucune fourchette de prix fixe n’est indiquée dans cette catégorie ; le prix est communiqué après évaluation du dossier, selon la complexité du cas et la technique requise.'
+          disclaimer: 'Aucune fourchette fixe n\'est donnée dans cette catégorie. Le montant dépend de la longueur de la sténose, de la technique, du recours éventuel à un segment intestinal et de la durée du séjour ; il est communiqué par écrit après examen de votre dossier.'
         },
         packageIncludes: [
-          'Intervention et séjour hospitalier',
-          'Anesthésie et examens avancés',
-          'Inclus lorsqu’une greffe ou une interposition est nécessaire',
-          'Sonde et son retrait',
-          'Transferts et hébergement',
-          'Interprète médical et coordinateur',
-          'Suivi fonctionnel à long terme'
+          'Examen de votre dossier, de votre scintigraphie et de vos comptes rendus opératoires',
+          'Consultation et complément d\'imagerie avancée',
+          'Bilan sanguin et urinaire, ECBU',
+          'Anesthésie et bloc opératoire',
+          'Reconstruction, préparation du greffon ou du segment comprise le cas échéant',
+          'Pose d\'une sonde',
+          'Hospitalisation',
+          'Imagerie de contrôle avant le retrait de la sonde',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et coordination des patients',
+          'Interprétation à distance du suivi fonctionnel à long terme'
         ],
         faqs: [
-          { q: 'J’ai une sténose urétérale étendue et on m’a dit que « ce n’était pas opérable » ; existe-t-il des solutions ?', a: 'Les sténoses étendues peuvent être réparées dans la plupart des cas grâce à des techniques avancées telles que la greffe de muqueuse buccale ou l’interposition iléale. Votre dossier est évalué et un plan préservant le rein est établi.' },
-          { q: 'Une nouvelle tentative est-elle possible après un échec ?', a: 'Oui ; la reconstruction de reprise après une lésion iatrogène ou une réparation ayant échoué fait partie des domaines d’expérience de ce centre. Des techniques préservant le rein sont planifiées malgré le tissu cicatriciel.' },
-          { q: 'Combien de temps durent la récupération et le suivi ?', a: 'Le séjour et la durée de sondage sont plus longs que pour les autres traitements ; le succès à long terme se juge par un suivi fonctionnel régulier, déterminant dans ces cas.' }
+          { q: 'On m\'a dit qu\'un très long segment de mon uretère est rétréci et qu\'il n\'y a rien à faire. Est-ce exact ?', a: 'La longueur à elle seule ne rend pas la réparation impossible. Pour les sténoses longues il existe des techniques : patch de muqueuse buccale, interposition d\'un segment intestinal, abaissement du rein ou ascension de la vessie. Comme elles sont peu pratiquées en routine, on rencontre parfois cette réponse. Vous êtes en droit de demander l\'examen de votre dossier.' },
+          { q: 'La sténose est-elle apparue lors d\'une intervention antérieure ?', a: 'Une part importante des sténoses urétérales longues fait suite à une lésion de l\'uretère lors d\'une autre intervention. Nous le disons sans accuser personne : l\'uretère est fin et très proche d\'organes voisins, et cette lésion est un risque chirurgical reconnu. L\'essentiel est le plan établi aujourd\'hui.' },
+          { q: 'Puis-je continuer à vivre avec une néphrostomie ou une sonde permanente ?', a: 'Vous le pouvez, et chez certains patients c\'est la bonne décision. Sachez toutefois que c\'est un pont et non une solution : soins constants, changements réguliers et risque infectieux. Se gérer ainsi des années n\'est pas acceptable lorsqu\'une reconstruction est possible chez un patient adapté.' },
+          { q: 'Mon rein peut-il être sauvé ?', a: 'C\'est l\'objectif, mais la réponse vient de la scintigraphie, qui mesure la fonction restante. Si une partie est conservée, la reconstruction a du sens. Honnêtement, elle rétablit le drainage ; elle ne récupère pas la fonction déjà perdue. D\'où l\'importance de décider tôt.' },
+          { q: 'Que signifie utiliser de l\'intestin ?', a: 'Dans les sténoses très longues, un segment d\'intestin grêle est interposé comme pont entre le rein et la vessie. La technique est efficace mais comporte des modifications définitives : du mucus dans les urines, phénomène attendu qui ne disparaît pas, et un possible déséquilibre des paramètres sanguins imposant un suivi au long cours. Cela doit être clairement discuté avant le choix.' },
+          { q: 'Une réparation a déjà été tentée et la sténose est revenue — peut-on réessayer ?', a: 'Le plus souvent oui, mais le tissu cicatriciel rend la seconde reconstruction plus difficile et les chances de succès moindres. Cela doit être dit clairement. Votre compte rendu opératoire antérieur est le document le plus déterminant ; sans connaître la technique et la longueur réparée, le plan reste incomplet.' },
+          { q: 'Je n\'ai qu\'un rein — le risque est-il plus élevé ?', a: 'En rein unique, l\'importance de la reconstruction et le niveau de prudence augmentent, car il n\'y a pas de réserve. Ce n\'est pas une raison d\'éviter la chirurgie ; au contraire, la réparation préservant le rein doit être envisagée plus tôt. La planification et le suivi sont plus rapprochés.' },
+          { q: 'Combien de temps dure la convalescence ?', a: 'C\'est l\'une des convalescences les plus longues en urologie. L\'hospitalisation et la période avec sonde dépassent celles d\'autres interventions, surtout si un segment intestinal a été utilisé et que le transit doit reprendre. Prévoyez large et prenez un billet modifiable.' },
+          { q: 'Pourquoi le suivi est-il si important ?', a: 'Parce qu\'une resténose peut se développer en silence. Une sténose évoluant sans symptôme peut endommager le rein. Respectez donc le calendrier d\'imagerie même si vous vous sentez bien. Demandez votre plan par écrit : quel examen, à quelle fréquence et qui l\'interprète.' },
+          { q: 'Que dois-je envoyer ?', a: 'Les images d\'uroscanner elles-mêmes (pas seulement le compte rendu), VOTRE RÉSULTAT DE SCINTIGRAPHIE, TOUS VOS COMPTES RENDUS OPÉRATOIRES, d\'éventuelles images d\'urétérographie, votre fonction rénale, un ECBU, un éventuel antécédent de radiothérapie et vos traitements. Sans scintigraphie ni compte rendu opératoire, aucun plan sérieux n\'est possible dans ces cas.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines — Association européenne d\'urologie (urologie reconstructrice)', url: 'https://uroweb.org/guidelines' }
         ]
       }
     }
