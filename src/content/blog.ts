@@ -1206,6 +1206,1629 @@ export const blogPosts: BlogPost[] = [
         ]
       }
     }
+  },
+  {
+    slug: 'cost-of-robotic-prostatectomy-in-turkey-what-determines-the-price',
+    date: '2026-10-04',
+    category: 'healthTourism',
+    languages: ['en'],
+    treatmentSlug: 'robotik-prostatektomi',
+    sources: [
+      { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+    ],
+    i18n: {
+      en: {
+        title: 'The Cost of Robotic Prostatectomy in Turkey: What Actually Determines the Price',
+        excerpt:
+          'A headline figure tells you very little. What matters is what the figure includes, what it excludes, and which of the excluded items are likely to apply to you.',
+        metaTitle: 'Robotic Prostatectomy Cost in Turkey: What Is Included',
+        metaDescription:
+          'How robotic prostatectomy pricing works for international patients in Turkey, what a quote should include, the costs that are commonly left out, and the questions to ask before you commit.',
+        sections: [
+          {
+            heading: 'Why a single number is not an answer',
+            paragraphs: [
+              'If you search for the cost of robotic prostatectomy abroad, you will find figures that differ by a wide margin. This is not because some hospitals are generous and others are not. It is because the figures are not describing the same thing.',
+              'One quote may cover the operation and two nights in hospital. Another may cover the operation, the pathology report, the follow-up appointments and the hotel. A third may cover everything except the one thing you are most likely to need. Comparing the numbers without comparing the contents is meaningless.',
+              'The useful question is therefore not "how much is it" but "what is in it, and what is not".'
+            ]
+          },
+          {
+            heading: 'What a complete quote should cover',
+            paragraphs: [
+              'Pre-operative work-up: blood tests, anaesthetic assessment, and any imaging that has to be repeated locally because the outside study is not in a readable format.',
+              'The operation itself: surgeon, anaesthetist, theatre, the robotic instruments and the consumables. Robotic instruments have a limited number of uses and are a real cost item, so they should be named explicitly rather than hidden inside a general figure.',
+              'Hospital stay: the number of nights should be stated, along with what happens if you need an extra night.',
+              'Pathology: the removed prostate is examined, and that report determines whether further treatment is needed. It is a core part of the operation, not an extra.',
+              'Post-operative care in Turkey: catheter removal, wound checks and the consultation before you fly home.',
+              'Follow-up after you return: how PSA results will be reviewed, by whom, and for how long.'
+            ]
+          },
+          {
+            heading: 'The items that are usually excluded',
+            paragraphs: [
+              'Treatment of complications. This is the single most important exclusion. Ask directly: if there is a complication requiring a longer stay or a second procedure, who pays? A clinic that answers this clearly is telling you something about how it operates.',
+              'Additional treatment revealed by the pathology report. If the final pathology shows that the cancer extends beyond the prostate, radiotherapy or hormone treatment may be recommended. That is a separate course of treatment, usually arranged at home.',
+              'Flights, and usually the visa.',
+              'Extended accommodation if your recovery takes longer than planned.',
+              'Treatment of conditions unrelated to the surgery that are discovered during the work-up.'
+            ]
+          },
+          {
+            heading: 'Why treatment in Turkey costs less, and why that is not suspicious',
+            paragraphs: [
+              'The difference is largely structural. Staff salaries, facility costs and general price levels are lower in Turkey than in the United Kingdom, Germany or the Gulf. A hospital with the same equipment and comparable staffing has a lower cost base, and the price reflects that.',
+              'The equipment itself is not cheaper. A surgical robot costs the same in Istanbul as it does in London, and so do the single-use instruments. This is a useful sanity check: a quote that is dramatically lower than every other quote is not benefiting from local cost structure. Something else is being left out.',
+              'Be equally careful with the opposite error. A higher price does not demonstrate higher quality. It may simply reflect a larger marketing budget or an agency commission built into the figure.'
+            ]
+          },
+          {
+            heading: 'Agency commission: ask who you are actually talking to',
+            paragraphs: [
+              'Many enquiries from abroad are handled by intermediary agencies rather than by the hospital. An agency may add its commission to the hospital\'s price, and that commission is not always visible to you.',
+              'This is not automatically wrong — some agencies provide genuine coordination. But you are entitled to know whether the person quoting you works for the hospital or for a broker, and whether the surgeon named in the correspondence is the surgeon who will operate.',
+              'That second point deserves emphasis. Ask for the operating surgeon by name, and ask whether anyone else will perform parts of the procedure.'
+            ]
+          },
+          {
+            heading: 'Questions worth asking before you commit',
+            paragraphs: [
+              'Who will perform the operation, and will any part of it be delegated?',
+              'How many of these procedures does that surgeon perform, and over what period?',
+              'What exactly does the quoted figure include, in writing?',
+              'What happens, financially and practically, if there is a complication?',
+              'How long should I plan to stay in Turkey, and what is the earliest realistic flight date?',
+              'Who reviews my PSA results after I return home, and for how long?',
+              'If a clinic is reluctant to answer any of these in writing, treat that reluctance as information.'
+            ]
+          },
+          {
+            heading: 'A note on our own pricing',
+            paragraphs: [
+              'We do not publish a single headline figure for robotic prostatectomy, because the honest figure depends on your work-up, your hospital stay and whether nerve-sparing is planned. We would rather give you an itemised quote after reviewing your reports than an attractive number that changes later.',
+              'Send your PSA history, biopsy report and MRI report, and you will receive a written breakdown showing what is included and what is not.',
+              'This article is general information and does not replace medical advice. Treatment decisions are made after individual assessment.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'holep-in-turkey-what-international-patients-should-know',
+    date: '2026-10-04',
+    category: 'bph',
+    languages: ['en'],
+    treatmentSlug: 'holep',
+    sources: [
+      { label: 'EAU Guidelines on Management of Non-Neurogenic Male LUTS — European Association of Urology', url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts' }
+    ],
+    i18n: {
+      en: {
+        title: 'HoLEP in Turkey: What International Patients Should Know',
+        excerpt:
+          'HoLEP removes the obstructing prostate tissue completely rather than trimming it. For a patient travelling from abroad, that difference changes both the expected result and the recovery timetable.',
+        metaTitle: 'HoLEP in Turkey: Procedure, Recovery and Travel Planning',
+        metaDescription:
+          'What HoLEP involves, how it differs from TURP, why prostate size matters, the temporary incontinence nobody warns you about, and how long to stay in Turkey.',
+        sections: [
+          {
+            heading: 'What HoLEP actually does',
+            paragraphs: [
+              'The prostate can be pictured as an orange: an outer peel and an inner pulp. In benign enlargement it is the pulp that grows and compresses the urinary channel.',
+              'A traditional TURP shaves tissue away from the inside of that pulp. HoLEP instead separates the whole pulp from the peel using a holmium laser, pushes it into the bladder, and then breaks it up there for removal. The outer capsule stays in place.',
+              'Because the obstructing tissue is removed completely rather than partially, the improvement in urinary flow tends to be more durable and the likelihood of needing a repeat procedure years later is lower. For a patient who has travelled a long distance, that durability is a significant part of the argument.'
+            ]
+          },
+          {
+            heading: 'Prostate size is the main reason patients are referred for HoLEP',
+            paragraphs: [
+              'With TURP, the larger the prostate, the longer the operation and the more fluid is absorbed, which eventually sets a practical ceiling. Beyond that ceiling, open surgery used to be the only option.',
+              'HoLEP does not have the same ceiling. A very large prostate can be treated with the same technique as a moderate one. This is why men with large glands, who in the past would have been offered an open operation, are now frequently treated endoscopically.',
+              'If your prostate is large, the real decision is between enucleation and open surgery — not between brands of laser.'
+            ]
+          },
+          {
+            heading: 'Bleeding, and why it matters for travel',
+            paragraphs: [
+              'Bleeding tends to be well controlled during enucleation because vessels are sealed as the tissue plane is developed. This is relevant for men taking anticoagulants, and it is relevant for anyone planning a flight home.',
+              'Blood thinners still need to be managed individually before surgery. Do not stop any medication on your own; send your full medication list when you make your enquiry so that the plan can be made before you travel.'
+            ]
+          },
+          {
+            heading: 'The part that is often left out: temporary incontinence',
+            paragraphs: [
+              'After the obstructing tissue is removed, continence depends entirely on the external sphincter, which previously had help from the prostatic mechanism. That muscle needs time to adapt, and in the meantime some leakage is common.',
+              'In most men this settles over weeks. Pelvic floor exercises help, and they are easier to learn before the operation than after it.',
+              'This should be discussed openly before you book a flight. It is manageable and usually temporary, but discovering it on the plane home is a poor way to find out.'
+            ]
+          },
+          {
+            heading: 'Retrograde ejaculation',
+            paragraphs: [
+              'After the prostate tissue is removed, semen commonly passes backwards into the bladder instead of outwards. It is harmless and does not affect erections or sexual desire, but it does affect fertility and some men find it unwelcome.',
+              'If you still wish to father children, say so clearly at the consultation stage. It changes which options should be considered.'
+            ]
+          },
+          {
+            heading: 'How long to stay in Turkey',
+            paragraphs: [
+              'A realistic plan allows for arrival and pre-operative tests, the procedure, a short hospital stay, a period with the catheter, catheter removal, and a review appointment before flying.',
+              'The catheter is usually removed before you leave, so that any problem passing urine is dealt with here rather than at home. Do not plan a flight for the day after catheter removal; leave room for a check.',
+              'Build in a margin. A plan with no spare days turns a minor delay into a crisis, and pushes patients towards flying before they should.'
+            ]
+          },
+          {
+            heading: 'What to send before you travel',
+            paragraphs: [
+              'A recent PSA result, an ultrasound or other imaging giving prostate volume, a uroflowmetry result and post-void residual measurement if available, your full medication list including anticoagulants, and a summary of other medical conditions.',
+              'With these, you can be told before you buy a ticket whether HoLEP is the appropriate procedure for you — or whether something else fits your situation better. An honest answer at that stage is worth more than a quick booking.',
+              'This article is general information and does not replace medical advice.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'penile-implant-surgery-abroad-choosing-a-surgeon-safely',
+    date: '2026-10-04',
+    category: 'andrology',
+    languages: ['en'],
+    treatmentSlug: 'penil-protez',
+    sources: [
+      { label: 'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
+    ],
+    i18n: {
+      en: {
+        title: 'Penile Implant Surgery Abroad: Choosing a Surgeon Safely',
+        excerpt:
+          'An implant is irreversible and carries a real infection risk. Those two facts should shape how you choose where to have it done, far more than price or marketing.',
+        metaTitle: 'Penile Implant Abroad: How to Choose a Surgeon Safely',
+        metaDescription:
+          'What to verify before having penile implant surgery abroad: infection risk, device types, the irreversibility of the decision, realistic expectations and follow-up.',
+        sections: [
+          {
+            heading: 'Two facts that should govern the decision',
+            paragraphs: [
+              'First, a penile implant is irreversible. Placing the device requires the erectile tissue to be dilated, and natural erections do not return afterwards. If the device is ever removed without replacement, the situation is worse than before surgery.',
+              'Second, infection is the complication that matters most. An infected implant often has to be removed, and salvage is a demanding procedure. Everything in the planning of this operation — patient selection, diabetic control, preparation, technique — is organised around reducing that risk.',
+              'These two facts are why implant surgery is a poor candidate for a decision made quickly on price.'
+            ]
+          },
+          {
+            heading: 'Make sure the earlier steps have genuinely been tried',
+            paragraphs: [
+              'An implant is not the first treatment for erectile dysfunction. Oral medication, injection therapy and vacuum devices come first, and many men do well with them.',
+              'If a clinic proposes an implant without establishing what has already been tried and why it failed, that is a warning sign. A surgeon who is willing to tell you that you are not yet a candidate is demonstrating judgement, not reluctance.',
+              'It is also worth establishing whether the erectile dysfunction has an untreated underlying cause. Cardiovascular disease and diabetes frequently present this way, and an implant does not treat either.'
+            ]
+          },
+          {
+            heading: 'Diabetes and infection risk',
+            paragraphs: [
+              'Poorly controlled diabetes increases the risk of implant infection. If your blood glucose control is poor, the right advice is to improve it before surgery, even if that means postponing.',
+              'A clinic that is willing to postpone your operation for this reason is protecting you. One that is willing to proceed regardless is protecting its schedule.',
+              'Ask what glycaemic threshold the surgeon uses, and whether your current results meet it.'
+            ]
+          },
+          {
+            heading: 'Device types, briefly',
+            paragraphs: [
+              'A malleable implant consists of two semi-rigid rods. It is simple, requires no dexterity to use, and has fewer mechanical parts to fail. The penis remains in a fixed state, which some men find inconvenient.',
+              'An inflatable implant uses cylinders, a pump in the scrotum and a fluid reservoir. It gives the most natural result because the penis is flaccid when not in use, but it is a mechanical system that the patient must be able to operate, and mechanical failure is possible.',
+              'Neither is universally better. Manual dexterity, hand strength, arthritis, previous scarring inside the penis and personal priorities all affect the choice. A surgeon who offers only one type, or who recommends the same type to everyone, is not individualising the decision.'
+            ]
+          },
+          {
+            heading: 'Expectations that must be stated before surgery',
+            paragraphs: [
+              'An implant produces rigidity. It does not restore sensation, desire or ejaculation. If any of those are already impaired, they will remain so.',
+              'Many men perceive the penis as shorter after implant surgery than before. This is one of the most common sources of dissatisfaction, and it should be discussed explicitly beforehand rather than discovered afterwards.',
+              'The device is durable but not permanent in the sense of never failing. Mechanical revision may be needed years later. For a younger patient, that is a real consideration.'
+            ]
+          },
+          {
+            heading: 'What to verify about the surgeon and the hospital',
+            paragraphs: [
+              'That the named surgeon will perform the operation personally.',
+              'That the procedure takes place in a hospital with a proper operating theatre and inpatient facilities, not in an office setting.',
+              'Which device brand and model is being used, and that this is stated in writing before surgery.',
+              'What happens if infection occurs after you return home: who you contact, and what the clinic will do.',
+              'Whether the device carries a manufacturer warranty, and how a claim would be handled from your country.'
+            ]
+          },
+          {
+            heading: 'Follow-up is not optional',
+            paragraphs: [
+              'The implant is not used immediately. Healing must be complete first, and the surgeon decides when activation is appropriate; early use can cause damage.',
+              'You will also need instruction in operating the device, which is normally given in person. Plan your stay so that this happens before you fly, rather than being attempted by video call afterwards.',
+              'Agree in advance how follow-up will work once you are home, including who answers questions and how quickly.',
+              'This article is general information and does not replace medical advice. Implant surgery should follow a full assessment and an unhurried discussion.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'how-long-to-stay-in-turkey-after-prostate-surgery',
+    date: '2026-10-04',
+    category: 'healthTourism',
+    languages: ['en'],
+    treatmentSlug: 'robotik-prostatektomi',
+    sources: [
+      { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+    ],
+    i18n: {
+      en: {
+        title: 'How Long to Stay in Turkey After Prostate Surgery',
+        excerpt:
+          'The honest answer is longer than most patients expect, and the reason is the catheter. Booking a return flight too early is the most common planning mistake.',
+        metaTitle: 'How Long to Stay in Turkey After Prostate Surgery',
+        metaDescription:
+          'Planning your stay after prostate surgery in Turkey: the catheter period, when flying is safe, clot risk, what to do if plans change, and how follow-up works at home.',
+        sections: [
+          {
+            heading: 'Why the catheter sets the timetable',
+            paragraphs: [
+              'After the prostate is removed, the bladder is reconnected to the urethra. That join needs time to heal, and a catheter keeps the bladder drained while it does.',
+              'The catheter is therefore not an inconvenience that can be shortened to suit a flight. It stays in for a defined period, and it is removed here so that any difficulty passing urine afterwards is managed by the team that operated on you.',
+              'This single factor determines most of the length of your stay. Everything else fits around it.'
+            ]
+          },
+          {
+            heading: 'Do not fly the day after the catheter comes out',
+            paragraphs: [
+              'A small number of patients cannot pass urine once the catheter is removed and need it replaced temporarily. This is manageable when you are a short drive from the hospital and a serious problem when you are at an airport.',
+              'Allow at least a short review period after removal. The purpose of those days is not comfort; it is to keep a solvable problem solvable.'
+            ]
+          },
+          {
+            heading: 'Clot risk and air travel',
+            paragraphs: [
+              'Pelvic surgery and long periods of immobility both increase the risk of blood clots in the legs, which can travel to the lungs. A long-haul flight combines the two.',
+              'For this reason, flying clearance is given individually rather than by a fixed rule. It depends on the operation, your mobility, your weight, your other medical conditions and any history of clots.',
+              'When you do fly, follow the advice you are given about walking in the aisle, leg exercises, hydration and compression stockings. If any medication to reduce clot risk is prescribed, take it as directed — including after you get home.',
+              'Seek medical help immediately for calf pain or swelling, chest pain, or breathlessness, whether you are still in Turkey or already home.'
+            ]
+          },
+          {
+            heading: 'A realistic week-by-week picture',
+            paragraphs: [
+              'Arrival and assessment: blood tests, anaesthetic review, and any imaging that needs repeating. Allow a day or two before surgery rather than landing the night before.',
+              'Surgery and hospital stay: robotic surgery usually involves a short admission.',
+              'The catheter period: mostly spent at the hotel. You will be mobile and able to walk, but not to do very much more.',
+              'Catheter removal and review: including a check that you are passing urine adequately.',
+              'Then the flight home — not before.'
+            ]
+          },
+          {
+            heading: 'Plan for the possibility of staying longer',
+            paragraphs: [
+              'Book a flexible or changeable return ticket. The cost of flexibility is small compared with the cost of a last-minute rebooking, and far smaller than the cost of flying too early.',
+              'Check whether your accommodation can be extended. Ask the clinic what happens if it cannot.',
+              'Make sure your visa or permitted stay covers more days than you plan to use.',
+              'Bring a companion if you can. Practical help during the catheter period makes a real difference, and someone else can hear the discharge instructions.'
+            ]
+          },
+          {
+            heading: 'The pathology report arrives after you leave',
+            paragraphs: [
+              'The removed prostate is examined under the microscope, and that report is what determines whether any further treatment is advised. It is usually not ready before you fly.',
+              'Agree before you leave how the report will reach you, who will explain it, and in what language. A pathology report delivered as an untranslated document with no explanation is a poor end to a well-run operation.'
+            ]
+          },
+          {
+            heading: 'Follow-up after you return',
+            paragraphs: [
+              'PSA is measured at intervals after surgery, and the result is the main measure of whether the cancer has been controlled. You will usually have these tests done locally.',
+              'Establish before you leave who reviews those results, how you send them, and for how long this arrangement lasts. A named contact matters more than a general promise of support.',
+              'Also agree what to do if something goes wrong at home, and which symptoms justify going straight to a local emergency department rather than waiting for a reply.',
+              'This article is general information and does not replace medical advice. Your own timetable is set by your surgeon.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'redo-urethroplasty-after-a-failed-repair',
+    date: '2026-10-04',
+    category: 'healthTourism',
+    languages: ['en'],
+    treatmentSlug: 'uretroplasti',
+    sources: [
+      { label: 'EAU Guidelines on Urethral Strictures — European Association of Urology', url: 'https://uroweb.org/guidelines/urethral-strictures' }
+    ],
+    i18n: {
+      en: {
+        title: 'Redo Urethroplasty After a Failed Repair: Is It Possible?',
+        excerpt:
+          'Yes, in most cases — but a second repair is a different operation from the first, and it should be planned differently. What was done before determines what can be done now.',
+        metaTitle: 'Redo Urethroplasty After Failed Repair: What Is Possible',
+        metaDescription:
+          'Why urethroplasty fails, how a redo repair is planned, graft options when buccal mucosa has already been used, staged repair, and what to send for assessment.',
+        sections: [
+          {
+            heading: 'First, what "failure" usually means',
+            paragraphs: [
+              'A urethroplasty is considered to have failed when the stricture recurs to the point of causing symptoms again: a weakening stream, straining, incomplete emptying, recurrent infections.',
+              'Recurrence often appears within the first couple of years, though it can present later. The important point is that recurrence is not necessarily a sign that the original operation was done badly. Some strictures are simply difficult, and tissue healing is not fully predictable.',
+              'What matters now is not blame but information: exactly what was done, where, and with what tissue.'
+            ]
+          },
+          {
+            heading: 'Why a redo is a different operation',
+            paragraphs: [
+              'Previous surgery leaves scar tissue, altered blood supply and distorted anatomy. The planes a surgeon would normally work in may no longer be clean.',
+              'Equally important, graft material may already have been used. Buccal mucosa — tissue taken from the inside of the cheek — is the usual choice for urethral reconstruction. If one or both cheeks have already been harvested, the available options change.',
+              'This is why a redo should be planned on the basis of the previous operative notes rather than assumptions. "Repeat what was done before" is not a plan.'
+            ]
+          },
+          {
+            heading: 'The information that genuinely changes the plan',
+            paragraphs: [
+              'The operative note from the previous repair: the technique used, the length of the segment treated, and the graft source.',
+              'Whether buccal mucosa was taken, and from one side or both.',
+              'How many endoscopic procedures (urethrotomy or dilatation) have been performed, and when. Repeated endoscopic treatment extends scarring and makes reconstruction harder — this is the single most common reason a straightforward case becomes a complex one.',
+              'Current imaging of the urethra, showing the location and length of the recurrent stricture.',
+              'Flow rate and post-void residual measurements.',
+              'Whether you currently self-catheterise, and how often.'
+            ]
+          },
+          {
+            heading: 'Options when buccal mucosa is no longer available',
+            paragraphs: [
+              'If cheek tissue has already been used on both sides, other graft sources can be considered, including tissue from the inner lip or the tongue, and in some situations skin flaps raised from nearby tissue.',
+              'Each option has trade-offs in terms of donor-site discomfort, graft take and suitability for the particular segment involved. The choice depends on where the stricture is and how long it is.',
+              'A surgeon who can explain which option applies to you and why has looked at your case. One who names a single technique before seeing your notes has not.'
+            ]
+          },
+          {
+            heading: 'Staged repair: when one operation is not enough',
+            paragraphs: [
+              'In difficult redo cases, reconstruction may be planned in two stages separated by several months. In the first stage the urethra is opened and the graft is laid down to mature; in the second it is closed into a tube.',
+              'A staged plan is not a sign that something has gone wrong. In heavily scarred tissue it is often the approach most likely to give a durable result.',
+              'For an international patient this has an obvious practical consequence: two journeys, months apart. It must be discussed before any booking is made, because a staged repair cannot be compressed into one trip.'
+            ]
+          },
+          {
+            heading: 'Realistic expectations',
+            paragraphs: [
+              'Redo urethroplasty generally has a lower success rate than a first repair, and the more previous procedures there have been, the more that holds. This should be stated plainly before surgery.',
+              'Recovery is longer than after a first repair, and a catheter stays in for a period afterwards.',
+              'Possible effects on ejaculation and, depending on the location of the repair, on erections should be discussed specifically rather than mentioned in passing.'
+            ]
+          },
+          {
+            heading: 'One thing to stop doing while you decide',
+            paragraphs: [
+              'If you are being offered repeated urethrotomy or dilatation for a stricture that keeps coming back, it is worth asking what the plan is beyond the next procedure.',
+              'Each endoscopic treatment creates fresh scar tissue. A cycle of repeated dilatation does not stand still — it makes the eventual reconstruction harder. Raising this question with your current team is reasonable and is not a criticism of them.',
+              'Send your operative notes, imaging and flow studies for review, and you can be told whether a redo is feasible, whether it would be single-stage or staged, and what the realistic expectation is — before you travel anywhere.',
+              'This article is general information and does not replace medical advice.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'kidney-stone-treatment-abroad-rirs-vs-pcnl-explained',
+    date: '2026-10-04',
+    category: 'stones',
+    languages: ['en'],
+    treatmentSlug: 'rirs',
+    sources: [
+      { label: 'EAU Guidelines on Urolithiasis — European Association of Urology', url: 'https://uroweb.org/guidelines/urolithiasis' }
+    ],
+    i18n: {
+      en: {
+        title: 'Kidney Stone Treatment Abroad: RIRS vs PCNL Explained',
+        excerpt:
+          'Both are keyhole procedures and both are good operations. The question is which one suits your stone — and whether you can realistically complete treatment in a single trip.',
+        metaTitle: 'RIRS vs PCNL: Choosing Kidney Stone Treatment Abroad',
+        metaDescription:
+          'How RIRS and PCNL differ, how stone size, density and position decide the choice, stent discomfort, the risk of needing a second session, and planning treatment abroad.',
+        sections: [
+          {
+            heading: 'Two routes into the same kidney',
+            paragraphs: [
+              'RIRS involves no incision at all. A flexible instrument is passed up through the urethra, bladder and ureter into the kidney, and the stone is fragmented with a laser until it is fine enough to pass naturally.',
+              'PCNL uses a small track made through the skin of the back directly into the kidney. Because the track admits larger instruments, big stones can be broken up and physically removed in one session.',
+              'Neither is open surgery. The distinction is the route, and how much instrumentation that route allows.'
+            ]
+          },
+          {
+            heading: 'Stone size: the primary factor',
+            paragraphs: [
+              'Small stones favour RIRS. The stone is turned to dust, the fragments pass, and there is no wound.',
+              'As stones get larger the arithmetic changes. Dusting a large stone takes a long time, and not every fragment will pass, so a second or even third session may be needed. At that point PCNL, which clears the stone in one sitting, becomes the more sensible option.',
+              'For a patient travelling from abroad this matters more than it does for a local patient. A second session means either a longer stay or a second journey. Ask explicitly: what is the realistic chance that one session will not be enough?'
+            ]
+          },
+          {
+            heading: 'Density and position',
+            paragraphs: [
+              'Stones differ in hardness. The density value measured on CT indicates how much the stone will resist the laser. A very hard stone takes longer to dust, which lengthens the operation and raises pressure inside the kidney.',
+              'Position matters too, particularly for stones in the lower pole of the kidney. That is a dependent pocket from which fragments drain poorly, so even a well-dusted stone may leave residue behind. Lower pole stones therefore tip the balance towards PCNL at a smaller size than stones elsewhere.'
+            ]
+          },
+          {
+            heading: 'When RIRS is specifically preferred',
+            paragraphs: [
+              'In patients taking anticoagulants, because no track is made through kidney tissue.',
+              'In patients whose body habitus or spinal anatomy makes percutaneous access difficult.',
+              'In patients with a single functioning kidney, where preserving renal tissue carries extra weight.',
+              'When there is also a stone in the ureter that can be dealt with in the same session.'
+            ]
+          },
+          {
+            heading: 'When PCNL is specifically preferred',
+            paragraphs: [
+              'For large stones, and particularly for branched staghorn stones filling the collecting system.',
+              'When there are multiple stones and single-session clearance is the goal.',
+              'After a previous RIRS has failed to render the kidney stone-free.'
+            ]
+          },
+          {
+            heading: 'Risks, stated plainly',
+            paragraphs: [
+              'PCNL carries a higher bleeding risk than RIRS because a track is created through the kidney. Transfusion or an additional procedure is occasionally needed, and injury to neighbouring structures, while uncommon, is recognised.',
+              'RIRS risks relate mainly to the ureter: injury from instrument passage, and ureteric stricture developing later. Raised pressure within the kidney during the procedure is also relevant to infection risk.',
+              'For both, febrile infection is the complication to take most seriously. This is why a clean urine culture before surgery is not a formality. Stone surgery should not be scheduled on infected urine, and a clinic that treats this as optional is cutting a corner that matters.'
+            ]
+          },
+          {
+            heading: 'The stent nobody warns you about',
+            paragraphs: [
+              'A temporary stent between kidney and bladder is often placed after either procedure. It protects drainage, but it causes its own symptoms: urinary frequency, flank discomfort when passing urine, and blood in the urine.',
+              'These symptoms stop when the stent is removed. The practical question for an international patient is who removes it and where. Removal requires a short procedure, so establish before you travel whether it will be done in Turkey before you fly or arranged at home — and if at home, that your local urologist has agreed.',
+              'Patients are often surprised by how uncomfortable a stent can be. Knowing in advance that the discomfort is expected and temporary makes a considerable difference.'
+            ]
+          },
+          {
+            heading: 'What to send, and what to do afterwards',
+            paragraphs: [
+              'A non-contrast CT is the key study: it shows size, position and density. Also send recent kidney function tests, a urine culture, your medication list and any record of previous stone treatment.',
+              'And then the part that is routinely neglected: clearing the stone is only half the treatment. Without a change in fluid intake and, where relevant, diet, stones tend to recur. Ask for the stone composition to be analysed, and for metabolic assessment if you form stones repeatedly.',
+              'This article is general information and does not replace medical advice.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'second-opinion-for-prostate-cancer-how-to-send-your-file',
+    date: '2026-10-04',
+    category: 'oncology',
+    languages: ['en'],
+    treatmentSlug: 'prostat-kanseri',
+    sources: [
+      { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+    ],
+    i18n: {
+      en: {
+        title: 'Second Opinion for Prostate Cancer: How to Send Your File',
+        excerpt:
+          'A second opinion is only as good as the information it is based on. Sending the right documents in the right format is what separates a useful review from a generic reply.',
+        metaTitle: 'Prostate Cancer Second Opinion: What to Send and How',
+        metaDescription:
+          'Which documents are needed for a prostate cancer second opinion, why MRI must be sent as DICOM, what a proper review should tell you, and how to use the answer.',
+        sections: [
+          {
+            heading: 'Why ask for one at all',
+            paragraphs: [
+              'Prostate cancer frequently has more than one reasonable management option. Active surveillance, surgery and radiotherapy can all be defensible for the same patient, with different trade-offs in side effects and follow-up.',
+              'Because of that, a second opinion is not a vote of no confidence in your current doctor. It is a way of understanding which of several reasonable paths fits your priorities.',
+              'There is also a specific technical reason. Grading a prostate biopsy involves interpretation, and review by a second pathologist sometimes changes the grade. A change in grade can change the recommendation.'
+            ]
+          },
+          {
+            heading: 'The documents that actually matter',
+            paragraphs: [
+              'Your PSA history, not just the latest value. The trend over time carries information that a single number does not.',
+              'The full biopsy pathology report: how many cores were taken, how many were positive, which sites, the Gleason score or ISUP grade group for each, and the percentage involvement of each core.',
+              'The MRI report including the PI-RADS assessment — and, importantly, the images themselves.',
+              'Any staging scans that have been performed.',
+              'The digital rectal examination findings.',
+              'Your other medical conditions, your medication list, and your age. These are not background detail; they directly affect which treatment is appropriate.'
+            ]
+          },
+          {
+            heading: 'Send the MRI as DICOM, not as a photograph',
+            paragraphs: [
+              'This is the most common reason a second opinion turns out to be of limited value. A screenshot, a phone photograph of a screen, or a PDF containing a handful of printed slices does not allow the images to be reviewed properly.',
+              'Ask your hospital for the study on a CD or as a DICOM file set. Most radiology departments provide this on request, and many now offer a download link. The file set is large, which is normal.',
+              'Without the images, a reviewer can only comment on someone else\'s written report. That is not an independent opinion; it is a paraphrase.'
+            ]
+          },
+          {
+            heading: 'Pathology slides',
+            paragraphs: [
+              'If you want the grading itself reviewed rather than accepted as read, the slides or blocks need to be available for a pathologist to examine. Your hospital can usually release them or send digital scans.',
+              'This step takes longer than sending reports, so start it early if you want it included. It is worth considering particularly when the grading sits at a decision boundary, where a shift in grade would change the recommendation.'
+            ]
+          },
+          {
+            heading: 'What a proper second opinion should tell you',
+            paragraphs: [
+              'Which risk category your disease falls into, and why.',
+              'Which management options are reasonable for you — including active surveillance where that applies.',
+              'What each option would mean for continence and sexual function, stated specifically rather than as reassurance.',
+              'What follow-up each option requires, and for how long.',
+              'If it recommends surgery: whether nerve-sparing is likely to be possible, on one side or both, and what would cause that plan to change during the operation.',
+              'A reply that recommends a single treatment without discussing alternatives is not a second opinion. It is a sales response.'
+            ]
+          },
+          {
+            heading: 'Questions to ask in your own words',
+            paragraphs: [
+              'What happens if I do nothing for three months while I decide? For most prostate cancers the honest answer is "nothing changes materially", and a doctor who says so is being straight with you.',
+              'What would you advise if I were your relative?',
+              'What are the chances I will need additional treatment after surgery?',
+              'Urgency is rarely clinically justified in prostate cancer. If a clinic responds to your enquiry with pressure to book quickly, that pressure is commercial rather than medical.'
+            ]
+          },
+          {
+            heading: 'How to use the answer',
+            paragraphs: [
+              'A second opinion that agrees with your current plan is not wasted. It lets you proceed with confidence instead of doubt.',
+              'If the opinions differ, take the difference back to your own doctor and ask them to respond to it. The point is to understand the reasoning, not to collect opinions until one matches what you hoped to hear.',
+              'You are also entitled to have treatment where you choose. Getting a second opinion here does not commit you to being treated here, and any review you receive should be written on that basis.',
+              'This article is general information and does not replace medical advice.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'is-medical-tourism-for-urology-safe-what-to-check',
+    date: '2026-10-04',
+    category: 'healthTourism',
+    languages: ['en'],
+    sources: [
+      { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+    ],
+    i18n: {
+      en: {
+        title: 'Is Medical Tourism for Urology Safe? What to Check',
+        excerpt:
+          'Travelling for surgery can be entirely reasonable or genuinely risky, and the difference is mostly in how the care is organised rather than where it happens.',
+        metaTitle: 'Is Urological Surgery Abroad Safe? A Practical Checklist',
+        metaDescription:
+          'How to assess a clinic abroad: verifying the surgeon, hospital facilities, who handles complications, follow-up arrangements, consent, data protection and warning signs.',
+        sections: [
+          {
+            heading: 'What actually makes it risky',
+            paragraphs: [
+              'The risk in treatment abroad is rarely the operation itself. Surgical standards in a well-equipped hospital with an experienced surgeon do not change at a national border.',
+              'The risk lies in the structure around the operation: whether you were assessed properly beforehand, whether anyone is accountable if a complication occurs after you fly home, and whether follow-up is real or merely promised.',
+              'Judged that way, the questions to ask become concrete rather than a matter of general reassurance.'
+            ]
+          },
+          {
+            heading: 'Verify the surgeon, not the brand',
+            paragraphs: [
+              'Ask for the surgeon\'s name and specialist qualification, and check it against the register of the relevant national authority.',
+              'Ask whether that surgeon will perform your operation personally, and whether any part of it will be delegated. This is a reasonable question and should receive a direct answer.',
+              'Ask how many of your specific procedure they perform and over what period. Be sceptical of large round numbers presented without a timeframe — claims like that are easy to make and impossible to check.',
+              'Be sceptical, equally, of superlatives. "Leading", "best in the region" and "world-renowned" are marketing terms, not credentials.'
+            ]
+          },
+          {
+            heading: 'Check the hospital, not the website photographs',
+            paragraphs: [
+              'Which hospital will you actually be in? Named, with an address you can look up.',
+              'Does it have an intensive care unit on site? For major urological surgery this is not a luxury.',
+              'Is there a blood bank, and are there other specialties — cardiology, general surgery — available if something unexpected happens?',
+              'Marketing photographs show reception areas. The questions above are about what exists behind them.'
+            ]
+          },
+          {
+            heading: 'The complication question',
+            paragraphs: [
+              'This is the one that separates serious providers from the rest. Ask, in writing: if there is a complication requiring a longer stay or a further procedure, what happens clinically, and who pays?',
+              'Ask what happens if a complication appears after you get home. Who do you contact, how quickly do they respond, and can they communicate with your local doctor?',
+              'A clinic that answers these questions in writing is one that has thought about them. A clinic that deflects with reassurance has told you something important.'
+            ]
+          },
+          {
+            heading: 'Consent and language',
+            paragraphs: [
+              'You should receive written information about the procedure, its alternatives and its risks, in a language you genuinely understand, with enough time to read it before you are asked to sign.',
+              'Consent obtained on the morning of surgery, in a language you read with difficulty, is not meaningful consent.',
+              'If an interpreter is needed, establish whether a medical interpreter is provided, rather than relying on a family member or a translation application for a discussion about surgical risk.'
+            ]
+          },
+          {
+            heading: 'Your records and your data',
+            paragraphs: [
+              'You are entitled to copies of your operation note, your pathology report and your discharge summary. Ask whether these will be provided in English as well as the local language.',
+              'Your local doctor will need them. A patient who returns home with no documentation is difficult to look after safely.',
+              'Ask also how your medical records and images are stored and who has access. Sending scans and reports to a clinic abroad is a transfer of sensitive personal data, and you are entitled to know how it is handled.'
+            ]
+          },
+          {
+            heading: 'Warning signs',
+            paragraphs: [
+              'Pressure to decide quickly, or a discount that expires. Surgery is not a product with a sale period.',
+              'A quote given before anyone has seen your reports.',
+              'Guaranteed outcomes. No honest surgeon guarantees a result.',
+              'Patient photographs and testimonials used as proof of skill, particularly where their use is restricted by local regulation.',
+              'Reluctance to name the hospital, or to confirm the operating surgeon in writing.',
+              'An inability to say clearly who is responsible for your care once you have left the country.'
+            ]
+          },
+          {
+            heading: 'Before you book the flight',
+            paragraphs: [
+              'Tell your doctor at home what you are planning. You will need them afterwards, and they can flag problems with the plan while there is still time to change it.',
+              'Check whether your travel insurance covers planned surgery abroad. Most policies do not, and this surprises people at the worst possible moment.',
+              'Arrange follow-up at home before you leave, not after you return.',
+              'Travelling for treatment is a legitimate choice made by many people every year. Making it safely is mostly a matter of asking unglamorous questions and insisting on written answers.',
+              'This article is general information and does not replace medical advice.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'alaj-tadakhkhum-al-brustata-fi-turkiya',
+    date: '2026-10-04',
+    category: 'bph',
+    languages: ['ar'],
+    treatmentSlug: 'bph-prostat-buyumesi',
+    sources: [
+      { label: 'EAU Guidelines on Management of Non-Neurogenic Male LUTS — European Association of Urology', url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts' }
+    ],
+    i18n: {
+      ar: {
+        title: 'علاج تضخم البروستاتا في تركيا: الطرق وما الذي يحدد التكلفة',
+        excerpt:
+          'ليست كل طرق علاج تضخم البروستاتا متكافئة، والاختيار بينها يقوم على حجم الغدة وأولوياتك لا على اسم الجهاز. وهذا المقال يشرح الفروق وما ينبغي سؤاله قبل السفر.',
+        metaTitle: 'علاج تضخم البروستاتا في تركيا: الطرق والتكلفة',
+        metaDescription:
+          'طرق علاج تضخم البروستاتا الحميد، الفرق بين الاستئصال بالمنظار والاستئصال الكامل بالليزر والبخار، ما يحدد التكلفة، ومدة الإقامة اللازمة في تركيا.',
+        sections: [
+          {
+            heading: 'متى يحتاج التضخم إلى علاج أصلًا',
+            paragraphs: [
+              'تضخم البروستاتا الحميد شائع مع التقدم في العمر، لكن وجوده لا يعني بالضرورة الحاجة إلى تدخل. فكثير من الرجال يعيشون بتضخم من دون شكوى تُذكر، والعلاج يُطرح حين تبدأ الشكوى في تقييد الحياة اليومية.',
+              'ومع ذلك هناك حالات لا ينبغي فيها الانتظار: احتباس البول المتكرر، تكوّن حصاة في المثانة، التهابات بولية متكررة، تأثر وظيفة الكلى، ونزف متكرر من البروستاتا. فهذه ليست مسائل راحة بل مؤشرات على ضرر قائم.',
+              'والسؤال الذي يستحق أن يُطرح على الطبيب هو: هل حالتي تستدعي تدخلًا الآن، أم أن الأدوية والمتابعة كافية؟ الطبيب الذي يجيب بصراحة أن الانتظار ممكن هو طبيب يستحق الثقة.'
+            ]
+          },
+          {
+            heading: 'الأدوية أولًا، وحدودها',
+            paragraphs: [
+              'تُستعمل مجموعتان رئيستان: أدوية ترخي عضلات عنق المثانة فتحسّن التدفق سريعًا، وأدوية تُقلّص حجم الغدة ببطء على مدى أشهر.',
+              'وللأدوية آثار جانبية ينبغي معرفتها: دوار وهبوط في الضغط عند الوقوف، وتغيّر في القذف، وعند المجموعة الثانية احتمال تأثير على الرغبة الجنسية.',
+              'وهناك نقطة عملية مهمة: أدوية تقليص الحجم تخفض قيمة تحليل PSA تقريبًا إلى النصف. فإن كنت تستعملها فأخبر طبيبك، لأن قراءة التحليل من دون هذه المعلومة قد تُطمئن زورًا.'
+            ]
+          },
+          {
+            heading: 'الفرق الجوهري بين الطرق الجراحية',
+            paragraphs: [
+              'الاستئصال بالمنظار (TURP) يُزيل جزءًا من النسيج المسدّ عن طريق الكشط من الداخل. وهو إجراء راسخ ومعروف.',
+              'الاستئصال الكامل بالليزر (HoLEP وThuLEP) يفصل النسيج المتضخم كله عن محفظة البروستاتا ويُخرجه. وبما أن النسيج يُزال بالكامل لا جزئيًا، فإن الحاجة إلى إعادة التدخل بعد سنوات أقل، وهذه نقطة مهمة لمن يسافر من بلد آخر.',
+              'العلاج بالبخار (Rezūm) لا يزيل النسيج بل يجعل الجسم يمتصه تدريجيًا خلال أسابيع. وهو أقل تدخلًا وأكثر حفاظًا على القذف، لكن أثره يظهر متأخرًا واحتمال الحاجة إلى تدخل لاحق أعلى.',
+              'لا توجد طريقة أفضل من الأخرى على الإطلاق. السؤال الصحيح: أيّ توازن يناسبني أنا؟'
+            ]
+          },
+          {
+            heading: 'حجم البروستاتا هو العامل الأول في الاختيار',
+            paragraphs: [
+              'كلما كبرت الغدة، طال وقت الكشط في الطريقة التقليدية وزادت كمية السائل الممتص، وهذا يضع سقفًا عمليًا للطريقة.',
+              'أما طرق الاستئصال الكامل فلا تواجه هذا السقف نفسه، ولذلك تُطرح للغدد الكبيرة التي كانت تحتاج سابقًا إلى جراحة مفتوحة.',
+              'فإن كانت غدتك كبيرة، فالقرار الحقيقي ليس بين ماركات الليزر بل بين الاستئصال الكامل والطرق الأخرى.'
+            ]
+          },
+          {
+            heading: 'ما يجب قوله بصراحة: القذف الرجوعي',
+            paragraphs: [
+              'بعد إزالة نسيج البروستاتا، كثيرًا ما يرجع السائل المنوي إلى المثانة بدل خروجه. وهذا لا يضر الصحة ولا يُفسد الانتصاب ولا الرغبة، لكنه يؤثر في الإنجاب وقد يكون مزعجًا نفسيًا.',
+              'وهذه نقطة تُغفَل كثيرًا في العروض التسويقية. إن كنت لا تزال ترغب في الإنجاب فقُل ذلك صراحة في الاستشارة، لأنه يغيّر الخيارات المطروحة.',
+              'وقد يحدث أيضًا تسرّب بولي مؤقت بعد الاستئصال الكامل، ويتحسن عند معظم الرجال خلال أسابيع مع تمارين قاع الحوض. ومعرفة ذلك مسبقًا خير من اكتشافه في الطائرة.'
+            ]
+          },
+          {
+            heading: 'ما الذي يحدد التكلفة فعلًا',
+            paragraphs: [
+              'الرقم وحده لا يعني شيئًا. المهم ما يشمله العرض وما لا يشمله.',
+              'ينبغي أن يشمل العرض: الفحوص قبل العملية، العملية نفسها بأتعاب الجراح والتخدير والمستهلكات، الإقامة في المستشفى بعدد ليالٍ محدد، فحص النسيج المُزال، المتابعة قبل السفر، ثم ترتيب المتابعة بعد العودة.',
+              'وغالبًا لا يشمل: علاج المضاعفات إن حدثت، والإقامة الإضافية إن طال التعافي، وتذاكر الطيران. واسأل صراحةً ومكتوبًا: إن حدثت مضاعفة تستدعي إقامة أطول أو تدخلًا ثانيًا، من يتحمل التكلفة؟',
+              'واعلم أن انخفاض التكلفة في تركيا سببه بنية التكاليف المحلية لا رخص الأجهزة؛ فالليزر والمستهلكات أسعارها عالمية. ولذلك فالعرض المنخفض بصورة غير معقولة يعني غالبًا أن شيئًا ما حُذف من الحساب.'
+            ]
+          },
+          {
+            heading: 'مدة الإقامة والترتيبات العملية',
+            paragraphs: [
+              'خطّط لوصول قبل العملية بيوم أو يومين للفحوص، ثم العملية والإقامة القصيرة في المستشفى، ثم فترة القسطرة، ثم إزالتها ومراجعة قبل السفر.',
+              'لا تحجز طيرانك في اليوم التالي مباشرةً لإزالة القسطرة. فبعض المرضى يحتاج إلى إعادتها مؤقتًا، وهذا أمر بسيط قرب المستشفى وصعب في المطار.',
+              'واحجز تذكرة قابلة للتغيير، وتأكد أن تأشيرتك تغطي أيامًا أكثر مما خططت له.'
+            ]
+          },
+          {
+            heading: 'ما ينبغي إرساله قبل السفر',
+            paragraphs: [
+              'نتيجة PSA حديثة، تصوير يبيّن حجم البروستاتا، قياس تدفق البول والبول المتبقي إن توفرا، قائمة أدويتك كاملة وخصوصًا مميعات الدم، وملخص أمراضك الأخرى.',
+              'بهذه المعلومات يمكن أن يُقال لك قبل شراء التذكرة أيّ طريقة تناسبك — أو أن حالتك لا تحتاج جراحة أصلًا. والإجابة الصادقة في هذه المرحلة أثمن من حجز سريع.',
+              'هذا المقال للتوعية العامة ولا يُغني عن الاستشارة الطبية.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'daamat-al-qadib-fi-turkiya',
+    date: '2026-10-04',
+    category: 'andrology',
+    languages: ['ar'],
+    treatmentSlug: 'penil-protez',
+    sources: [
+      { label: 'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
+    ],
+    i18n: {
+      ar: {
+        title: 'دعامة القضيب في تركيا: ما الذي يجب معرفته قبل القرار',
+        excerpt:
+          'الدعامة قرار لا رجعة فيه، وأخطر مضاعفاتها العدوى. وهاتان الحقيقتان ينبغي أن تحكما اختيارك للجراح والمكان أكثر من السعر أو الإعلان.',
+        metaTitle: 'دعامة القضيب في تركيا: الأنواع والمخاطر والتوقعات',
+        metaDescription:
+          'أنواع دعامات القضيب، متى تُطرح الدعامة، خطر العدوى ودور السكري، التوقعات الواقعية بعد العملية، وما ينبغي التحقق منه قبل السفر.',
+        sections: [
+          {
+            heading: 'حقيقتان تحكمان القرار',
+            paragraphs: [
+              'الأولى: الدعامة لا رجعة فيها. فزرعها يتطلب توسيع الأنسجة الانتصابية، والانتصاب الطبيعي لا يعود بعدها. وإن اضطر الأمر إلى إزالة الجهاز من دون استبدال، تكون الحال أسوأ مما كانت قبل العملية.',
+              'الثانية: العدوى هي المضاعفة الأهم. فالجهاز المصاب بالعدوى كثيرًا ما يلزم إخراجه، وإنقاذ الحالة بعد ذلك إجراء صعب. وكل تفاصيل التحضير والتقنية في هذه الجراحة مُنظَّمة حول تقليل هذا الخطر.',
+              'ولهذا فإن هذه الجراحة تحديدًا ليست مما يُقرَّر بسرعة على أساس السعر.'
+            ]
+          },
+          {
+            heading: 'الدعامة ليست العلاج الأول',
+            paragraphs: [
+              'ضعف الانتصاب يُعالَج أولًا بالأدوية الفموية، ثم بالحقن الموضعي، ثم بجهاز الشفط. وكثير من الرجال يستفيدون من هذه المراحل.',
+              'فإذا عُرضت عليك الدعامة من دون أن يُسأل عمّا جرّبته ولماذا لم ينجح، فهذه علامة تستحق التوقف. والجراح الذي يقول لك «لست مرشحًا للدعامة بعد» يُظهر حُسن تقدير لا ترددًا.',
+              'ومن المهم أيضًا البحث عن سبب كامن غير معالَج. فضعف الانتصاب كثيرًا ما يكون أول علامة على مرض في شرايين القلب أو على السكري، والدعامة لا تعالج أيًّا منهما.'
+            ]
+          },
+          {
+            heading: 'السكري وخطر العدوى',
+            paragraphs: [
+              'ضعف ضبط السكر يرفع خطر عدوى الدعامة. وإن كان تحليل السكر التراكمي لديك مرتفعًا، فالنصيحة الصحيحة هي ضبطه قبل العملية ولو تطلّب ذلك تأجيلها.',
+              'والعيادة التي تقبل تأجيل عمليتك لهذا السبب تحميك. والتي تمضي رغم ذلك تحمي جدولها.',
+              'اسأل: ما الحد الذي يشترطه الجراح في تحليل السكر التراكمي، وهل نتيجتي الحالية تحققه؟'
+            ]
+          },
+          {
+            heading: 'نوعا الدعامة',
+            paragraphs: [
+              'الدعامة المرنة (القابلة للثني) قضيبان نصف صلبين يُثنى القضيب بهما للأعلى عند الحاجة وللأسفل بعدها. وميزتها البساطة: لا آلية تُتعلَّم ولا مهارة يدوية مطلوبة واحتمال العطل الميكانيكي أقل. وعيبها أن القضيب يبقى بدرجة ثبات دائمة قد تكون مزعجة عند اللبس.',
+              'الدعامة الهيدروليكية (القابلة للنفخ) تتكون من أسطوانتين ومضخة في كيس الصفن وخزان سائل. وتعطي النتيجة الأقرب إلى الطبيعي لأن القضيب يبقى رخوًا حين لا تُستعمل. لكنها نظام ميكانيكي يحتاج إلى مهارة في الاستعمال، والعطل وارد.',
+              'ولا يوجد نوع أفضل للجميع. فمهارة اليد وقوة القبضة والتهاب المفاصل والتليف السابق داخل القضيب وأولوياتك الشخصية كلها تدخل في الاختيار. والجراح الذي يعرض نوعًا واحدًا على كل المرضى لا يُفرِّد القرار.'
+            ]
+          },
+          {
+            heading: 'توقعات يجب قولها قبل العملية لا بعدها',
+            paragraphs: [
+              'الدعامة توفر الانتصاب فقط. وهي لا تُعيد الإحساس ولا الرغبة ولا القذف. فإن كان أيٌّ منها متأثرًا قبل العملية فسيبقى كذلك.',
+              'كثير من الرجال يشعرون أن القضيب أقصر مما كان قبل العملية. وهذا من أكثر أسباب عدم الرضا، ويجب أن يُقال صراحةً قبل الجراحة لا أن يُكتشف بعدها.',
+              'والجهاز متين لكنه ليس أبديًا؛ فقد يحتاج إلى استبدال بعد سنوات بسبب عطل ميكانيكي. وهذا اعتبار حقيقي للمريض الأصغر سنًا.'
+            ]
+          },
+          {
+            heading: 'الخصوصية: سؤال مشروع ويجب أن يُجاب',
+            paragraphs: [
+              'كثير من المرضى يسافرون لهذه العملية تحديدًا حرصًا على الخصوصية، وهذا حق مشروع.',
+              'اسأل كيف تُحفظ ملفاتك ومن يطّلع عليها، وبأيّ اسم تُحجز الإقامة، وهل تُرسَل رسائل أو مواد تسويقية إلى هاتفك بعد العلاج، وهل يُطلب منك تصوير أو شهادة. من حقك رفض ذلك كله، ولا يجوز ربط العلاج بالموافقة عليه.',
+              'واحذر من العيادات التي تعرض صور مرضى أو شهاداتهم دليلًا على المهارة؛ فما يفعلونه بصور غيرك قد يفعلونه بصورك.'
+            ]
+          },
+          {
+            heading: 'ما ينبغي التحقق منه قبل السفر',
+            paragraphs: [
+              'أن الجراح المذكور باسمه هو من سيُجري العملية بنفسه.',
+              'أن العملية في مستشفى بغرفة عمليات نظامية وإقامة داخلية، لا في عيادة.',
+              'ماركة الجهاز وطرازه مكتوبين قبل العملية.',
+              'ماذا يحدث إن ظهرت عدوى بعد عودتك إلى بلدك: بمن تتصل وماذا ستفعل العيادة.',
+              'وأن تُخصَّص أيام كافية في تركيا لتعلّم استعمال الجهاز شخصيًا قبل السفر، لا عبر مكالمة فيديو لاحقًا.',
+              'هذا المقال للتوعية العامة ولا يُغني عن الاستشارة الطبية. والقرار يُتخذ بعد تقييم كامل ونقاش غير متعجل.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'jirahat-sartan-al-brustata-bil-robot-fi-istanbul',
+    date: '2026-10-04',
+    category: 'oncology',
+    languages: ['ar'],
+    treatmentSlug: 'robotik-prostatektomi',
+    sources: [
+      { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+    ],
+    i18n: {
+      ar: {
+        title: 'جراحة سرطان البروستاتا بالروبوت في إسطنبول: ما الذي يجب أن تعرفه',
+        excerpt:
+          'الروبوت أداة بيد الجراح لا بديل عنه. والأسئلة التي تستحق الطرح تتعلق بالجراح وبما يحدث بعد العملية، لا باسم الجهاز.',
+        metaTitle: 'استئصال البروستاتا بالروبوت في إسطنبول: الإجراء والتعافي',
+        metaDescription:
+          'كيف تجري جراحة سرطان البروستاتا بالروبوت، ما الذي يتغير بعدها في التحكم بالبول والوظيفة الجنسية، الحفاظ على الأعصاب، مدة الإقامة والمتابعة بعد العودة.',
+        sections: [
+          {
+            heading: 'الروبوت لا يُجري العملية',
+            paragraphs: [
+              'العبارة التسويقية «عملية بالروبوت» توحي بأن الجهاز يعمل وحده، وهذا غير صحيح. الجراح هو من يُجري كل حركة، والروبوت يُترجم حركة يديه إلى أدوات دقيقة داخل الجسم مع رؤية مكبّرة ومجسّمة.',
+              'وفائدة ذلك حقيقية: دقة أعلى في مساحة ضيقة، ونزف أقل عادةً، وجروح صغيرة. لكن النتيجة النهائية تعتمد على من يجلس خلف الجهاز لا على الجهاز نفسه.',
+              'ولذلك فالسؤال «هل عندكم روبوت؟» أقل أهمية بكثير من السؤال «من سيُجري عمليتي، وكم عملية من هذا النوع يُجري؟»'
+            ]
+          },
+          {
+            heading: 'ما الذي يُزال في العملية',
+            paragraphs: [
+              'تُزال البروستاتا كاملة مع الحويصلتين المنويتين، ثم تُوصَل المثانة بالإحليل من جديد. وقد تُزال العقد اللمفية في الحوض إذا كان خطر الانتشار يستدعي ذلك.',
+              'ولأن البروستاتا تُزال بكاملها، فإن السائل المنوي لا يعود يُقذف بعد العملية. وهذا يعني انتهاء القدرة على الإنجاب بالطريقة الطبيعية، وهو أمر ينبغي قوله صراحةً قبل العملية لا بعدها.',
+              'والنشوة الجنسية تبقى ممكنة من دون قذف عند كثير من الرجال، لكن الإحساس يختلف.'
+            ]
+          },
+          {
+            heading: 'التحكم بالبول: الحقيقة التي تُقال ناقصة',
+            paragraphs: [
+              'آلية التحكم بالبول عندك جزءان: آلية داخل البروستاتا وعضلة عاصرة خارجية تحتها. وبإزالة البروستاتا تذهب الآلية الداخلية، فتتحمل العضلة الخارجية العمل وحدها.',
+              'ولذلك فتسرّب البول بعد سحب القسطرة ليس مضاعفة بل مرحلة انتقالية متوقعة. ويتحسن عند معظم الرجال خلال أسابيع إلى أشهر، وقد يستمر التحسن حتى سنة.',
+              'والترتيب المعتاد للتحسن: الجفاف ليلًا أولًا، ثم التحكم أثناء الجلوس والوقوف، وآخر ما يتحسن هو لحظات الجهد — السعال والعطاس وحمل الثقيل. ومعرفة هذا الترتيب تمنع القلق في غير موضعه.',
+              'وتمارين قاع الحوض مفيدة فعلًا بشرط تحريك العضلة الصحيحة. وتعلّمها قبل العملية أسهل بكثير من تعلّمها بعدها.'
+            ]
+          },
+          {
+            heading: 'الحفاظ على الأعصاب: ممكن لكن ليس دائمًا',
+            paragraphs: [
+              'على جانبي البروستاتا حزمتان من الأعصاب والأوعية لهما دور في آلية الانتصاب. وإن أمكن الحفاظ عليهما ارتفع احتمال عودة الوظيفة الجنسية.',
+              'لكن القاعدة الثابتة هي: استئصال الورم كاملًا أولًا، ثم الحفاظ على العصب إن أمكن. فإن امتد الورم قرب الحزمة، كان العمل قريبًا منها مخاطرةً بترك خلايا ورمية، ولا يصح ذلك.',
+              'والقرار ليس «كل شيء أو لا شيء»؛ فقد يُحافَظ على جانب واحد إن كان الورم في الجانب الآخر، وقد تختلف درجة القرب المقبولة. والجراح الذي يشرح لك هذا التوازن أصدق ممن يقول «لا تقلق، سنحافظ على الأعصاب».',
+              'وحتى مع الحفاظ عليها، عودة الوظيفة تحتاج أشهرًا وتتأثر بالعمر والسكري وأمراض الشرايين والتدخين والحالة قبل العملية.'
+            ]
+          },
+          {
+            heading: 'مدة الإقامة في تركيا تحددها القسطرة',
+            paragraphs: [
+              'بعد وصل المثانة بالإحليل تحتاج المنطقة إلى وقت للالتئام، وتبقى القسطرة مدة محددة لتصريف البول خلالها.',
+              'وتُسحب القسطرة هنا قبل سفرك، ليُعالَج أيّ تعذّر في التبول قرب المستشفى لا في المطار. ولا تحجز رحلتك في اليوم التالي مباشرةً للسحب.',
+              'والسفر الجوي بعد جراحة الحوض يتطلب إذنًا طبيًا فرديًا بسبب خطر الجلطات. التزم بالتعليمات عن المشي في الممر وشرب الماء والجوارب الضاغطة، واطلب المساعدة فورًا عند ألم أو تورم في الساق أو ضيق في النفس.'
+            ]
+          },
+          {
+            heading: 'تقرير علم الأنسجة يصل بعد سفرك',
+            paragraphs: [
+              'البروستاتا المُزالة تُفحَص مجهريًا، وهذا التقرير هو ما يحدد إن كان يلزم علاج إضافي. وهو غالبًا لا يكون جاهزًا قبل سفرك.',
+              'فاتفق قبل المغادرة: كيف يصلك التقرير، ومن يشرحه لك، وبأيّ لغة. فتقرير مرضي يصل بلا شرح نهاية سيئة لعملية جيدة.',
+              'واتفق كذلك على من يراجع نتائج PSA بعد عودتك ولأيّ مدة. فاسم شخص مسؤول أثمن من وعد عام بالدعم.',
+              'هذا المقال للتوعية العامة ولا يُغني عن الاستشارة الطبية.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'hasawat-al-kula-mata-tahtaj-ila-jiraha',
+    date: '2026-10-04',
+    category: 'stones',
+    languages: ['ar'],
+    treatmentSlug: 'bobrek-tasi',
+    sources: [
+      { label: 'EAU Guidelines on Urolithiasis — European Association of Urology', url: 'https://uroweb.org/guidelines/urolithiasis' }
+    ],
+    i18n: {
+      ar: {
+        title: 'حصوات الكلى: متى تحتاج إلى جراحة ومتى تنتظر',
+        excerpt:
+          'ليست كل حصاة تحتاج إلى تدخل، وليس كل انتظار آمنًا. والفرق بينهما يقوم على حجم الحصاة وموضعها وعلى علامات محددة لا يجوز تجاهلها.',
+        metaTitle: 'حصوات الكلى: متى تلزم الجراحة ومتى يكفي الانتظار',
+        metaDescription:
+          'متى تحتاج حصوات الكلى إلى تدخل، العلامات الخطرة التي تستدعي المراجعة الفورية، الفرق بين تفتيت الحصى والتنظير والجراحة عبر الجلد، والوقاية من التكرار.',
+        sections: [
+          {
+            heading: 'العلامة التي لا تحتمل الانتظار',
+            paragraphs: [
+              'قبل أيّ تفصيل آخر: إذا اجتمع ألم المغص الكلوي مع الحمى والرعشة، فهذه حالة إسعافية. فاجتماع انسداد المجرى البولي مع عدوى قد يتطور بسرعة ويستدعي تصريفًا عاجلًا، ولا يصح تأجيله إلى موعد العيادة.',
+              'وكذلك انقطاع البول تمامًا، أو ألم لا يسكن بالمسكنات، أو قيء يمنع شرب السوائل — كلها أسباب للمراجعة الفورية.',
+              'أما المغص من دون حمى فمؤلم لكنه ليس بالضرورة إسعافيًا بالدرجة نفسها.'
+            ]
+          },
+          {
+            heading: 'متى يمكن الانتظار',
+            paragraphs: [
+              'الحصوات الصغيرة في الحالب كثيرًا ما تنزل وحدها خلال أسابيع، وقد تُعطى أدوية تساعد على نزولها مع المسكنات وشرب السوائل.',
+              'والحصوات الصغيرة الساكنة داخل الكلى من دون أعراض يمكن متابعتها بالتصوير من دون تدخل، بشرط أن تكون المتابعة منتظمة لا منسية.',
+              'لكن الانتظار له حدود: إذا لم تنزل الحصاة خلال المدة المعقولة، أو تكرر المغص، أو ظهر تأثير على الكلية، فالتدخل أولى.'
+            ]
+          },
+          {
+            heading: 'الصمت أخطر من الألم أحيانًا',
+            paragraphs: [
+              'نقطة يجهلها كثيرون: الانسداد المزمن قد لا يؤلم. فالكلية تتوسع ببطء وتفقد وظيفتها تدريجيًا من دون أن يشعر صاحبها.',
+              'ولهذا فغياب الألم ليس دليل سلامة إذا كانت هناك حصاة معروفة. والحصاة التي تُترك سنوات من دون متابعة قد تُكلّف وظيفة الكلية.',
+              'وهذا أيضًا سبب أهمية التصوير في المتابعة، لا الاكتفاء بغياب الشكوى.'
+            ]
+          },
+          {
+            heading: 'الطرق المتاحة باختصار',
+            paragraphs: [
+              'التفتيت بالموجات الصادمة (ESWL) يُجرى من خارج الجسم من دون إدخال أدوات. مناسب لحصوات مختارة في الحجم والموضع والكثافة، ويحتاج أحيانًا إلى أكثر من جلسة، وقد تسبب الشظايا النازلة مغصًا.',
+              'تنظير الحالب والكلية المرن (RIRS) يدخل عبر المجرى البولي من دون أيّ شق، ويُفتِّت الحصاة بالليزر حتى تصير غبارًا ينزل مع البول.',
+              'الجراحة عبر الجلد (PCNL) تدخل إلى الكلية عبر نفق صغير في الظهر، وهي الطريقة الأساسية للحصوات الكبيرة والمتشعبة لأنها تُنظّفها في جلسة واحدة.',
+              'واختيار الطريقة يقوم على حجم الحصاة وكثافتها على التصوير المقطعي وموضعها داخل الكلية، وعلى أدويتك وبنيتك الجسمية. وحصوات القطب السفلي للكلية حالة خاصة لأن الشظايا تتصرف منها بصعوبة.'
+            ]
+          },
+          {
+            heading: 'الدعامة (الستنت) وما ينبغي توقعه منها',
+            paragraphs: [
+              'كثيرًا ما تُوضع دعامة مؤقتة بين الكلية والمثانة بعد التدخل لضمان التصريف.',
+              'والدعامة نفسها تُسبب أعراضًا: كثرة التبول، وألمًا في الخاصرة عند التبول، ودمًا في البول. وهذه الأعراض تزول بإزالتها.',
+              'والسؤال العملي للمريض القادم من الخارج: من يُزيلها وأين؟ فاتفق على ذلك قبل السفر، سواء بإزالتها في تركيا قبل عودتك أو بترتيب ذلك مع طبيبك في بلدك بموافقته.'
+            ]
+          },
+          {
+            heading: 'إزالة الحصاة نصف العلاج فقط',
+            paragraphs: [
+              'إن لم يتغير شيء في نمط حياتك، فالحصوات تميل إلى التكرار. ولهذا فتحليل تركيب الحصاة النازلة أو المُستخرَجة خطوة مهمة تُهمَل كثيرًا.',
+              'زيادة كمية السوائل اليومية هي أبسط إجراء وقائي وأكثرها إهمالًا. أما التوصيات الغذائية فتختلف باختلاف نوع الحصاة، ولا تُعطى قائمة واحدة للجميع.',
+              'وفي منطقة الخليج تحديدًا، الحرارة والتعرق يرفعان تركيز البول، ولذلك فكمية السوائل التي تكفي في مناخ بارد قد لا تكفي هنا.',
+              'هذا المقال للتوعية العامة ولا يُغني عن الاستشارة الطبية.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'al-khususiya-fi-ilaj-tibb-al-dhukura',
+    date: '2026-10-04',
+    category: 'andrology',
+    languages: ['ar'],
+    treatmentSlug: 'androloji',
+    sources: [
+      { label: 'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
+    ],
+    i18n: {
+      ar: {
+        title: 'الخصوصية في علاج طب الذكورة: حقك وكيف تتحقق منه',
+        excerpt:
+          'الخصوصية ليست خدمة إضافية تُمنح، بل حق يُمارَس. وهذا المقال يشرح ما يمكنك طلبه صراحةً، وما ينبغي أن ترفضه من دون تردد.',
+        metaTitle: 'الخصوصية في علاج طب الذكورة: ما حقك وكيف تتحقق منه',
+        metaDescription:
+          'كيف تُحفظ خصوصيتك في علاج أمراض الذكورة: سرية الملفات، التصوير والشهادات، الترجمة، الحجز والإقامة، والتواصل بعد العلاج.',
+        sections: [
+          {
+            heading: 'لماذا هذا الموضوع يستحق مقالًا مستقلًا',
+            paragraphs: [
+              'مشكلات الانتصاب والعقم ومشكلات القذف من أكثر ما يتردد المريض في طرحه، وكثيرون يؤجلون العلاج سنوات لهذا السبب وحده.',
+              'والتأجيل ليس بلا ثمن. فضعف الانتصاب قد يكون أول علامة على مرض في شرايين القلب أو على السكري، ومشكلات العقم يحدّها الزمن. أي أن الحرج قد يؤخر تشخيص مرض آخر أهم.',
+              'ولذلك فمعرفة ما يحق لك طلبه من خصوصية ليست ترفًا، بل وسيلة تجعل طلب العلاج ممكنًا.'
+            ]
+          },
+          {
+            heading: 'سرية الملف الطبي',
+            paragraphs: [
+              'ملفك الطبي سري بحكم مهنة الطب، ولا يجوز إطلاع أحد عليه من دون إذنك — ولا حتى أقرب الناس إليك.',
+              'ومن حقك أن تسأل: من يطّلع على ملفي داخل المستشفى؟ وأين تُحفظ الصور والتقارير؟ وكم مدة الاحتفاظ بها؟',
+              'وإن كنت ترسل تقاريرك من بلدك قبل السفر، فأنت تنقل بيانات صحية حساسة. من حقك معرفة إلى أين تصل ومن يقرؤها.'
+            ]
+          },
+          {
+            heading: 'التصوير والشهادات: ارفض من دون حرج',
+            paragraphs: [
+              'لا يجوز تصويرك أو تسجيلك أو استعمال شهادتك في أيّ مادة تعريفية إلا بموافقة مكتوبة منفصلة منك.',
+              'وموافقتك على العلاج شيء، وموافقتك على استعمال صورتك شيء آخر تمامًا. ولا يجوز أبدًا ربط العلاج أو سعره بقبولك التصوير أو كتابة شهادة.',
+              'ومن حقك سحب موافقتك لاحقًا. وإن طُلب منك التصوير بإلحاح، فهذا في ذاته معلومة عن طريقة عمل المكان.',
+              'والعيادة التي تعرض صور مرضى آخرين وشهاداتهم على موقعها تخبرك ضمنًا بما قد تفعله بصورك.'
+            ]
+          },
+          {
+            heading: 'الترجمة: من يسمع ما تقول',
+            paragraphs: [
+              'في استشارات طب الذكورة تحديدًا، وجود مترجم يعني وجود شخص ثالث يسمع تفاصيل خاصة جدًا.',
+              'من حقك أن تطلب مترجمًا طبيًا ملتزمًا بالسرية المهنية، لا أن يُستعان بمرافق أو بأحد العاملين عرضًا. ومن حقك أن تطلب مترجمًا من جنس معين إن كان ذلك يريحك.',
+              'والاعتماد على تطبيقات الترجمة في نقاش عن مخاطر جراحية ليس كافيًا، لا من حيث الدقة ولا من حيث الخصوصية.'
+            ]
+          },
+          {
+            heading: 'الحجز والإقامة والفواتير',
+            paragraphs: [
+              'اسأل بأيّ اسم ستُحجز الإقامة، وهل يظهر اسم العيادة أو نوع العلاج في الحجز.',
+              'واسأل ماذا يُكتب في الفاتورة والإيصالات، وهل يظهر فيها اسم الإجراء. فهذه مسألة عملية لمن يسافر مع أسرته.',
+              'واسأل كيف تصلك الرسائل والنتائج: هل تُرسَل رسائل نصية باسم العيادة إلى هاتفك؟ ومن حقك طلب قناة تواصل محددة ومنع غيرها.'
+            ]
+          },
+          {
+            heading: 'بعد العلاج: التسويق ليس جزءًا من الرعاية',
+            paragraphs: [
+              'من حقك رفض استعمال بياناتك في أيّ تواصل تسويقي، وأن يُحترم هذا الرفض.',
+              'وإن وصلتك بعد العلاج رسائل ترويجية أو عروض لم تطلبها، فهذا تجاوز وليس خدمة.',
+              'ومن حقك أيضًا الحصول على نسخة من تقاريرك الطبية بصيغة تستطيع تسليمها لطبيبك في بلدك، لأنك ستحتاجها.'
+            ]
+          },
+          {
+            heading: 'أسئلة اطرحها قبل أن تحجز',
+            paragraphs: [
+              'من سيطّلع على ملفي، وأين يُحفظ، ولأيّ مدة؟',
+              'هل سيُطلب مني التصوير أو كتابة شهادة، وهل أستطيع الرفض من دون أن يتأثر علاجي؟',
+              'هل المترجم ملتزم بالسرية المهنية؟',
+              'بأيّ اسم تُحجز الإقامة وماذا يظهر في الفاتورة؟',
+              'هل تُستعمل بياناتي في تواصل تسويقي، وكيف أرفض ذلك؟',
+              'الإجابة الواضحة عن هذه الأسئلة أهم من أيّ وعد عام بالخصوصية.',
+              'هذا المقال للتوعية العامة ولا يُغني عن الاستشارة الطبية.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'holep-in-der-tuerkei-ablauf-kosten-und-nachsorge',
+    date: '2026-10-04',
+    category: 'bph',
+    languages: ['de'],
+    treatmentSlug: 'holep',
+    sources: [
+      { label: 'EAU Guidelines on Management of Non-Neurogenic Male LUTS — European Association of Urology', url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts' }
+    ],
+    i18n: {
+      de: {
+        title: 'HoLEP in der Türkei: Ablauf, Kosten und Nachsorge',
+        excerpt:
+          'HoLEP entfernt das verengende Prostatagewebe vollständig statt es abzutragen. Für Patientinnen und Patienten aus dem Ausland verändert dieser Unterschied sowohl das Ergebnis als auch die Reiseplanung.',
+        metaTitle: 'HoLEP in der Türkei: Ablauf, Kosten, Aufenthalt und Nachsorge',
+        metaDescription:
+          'Wie HoLEP abläuft, warum die Prostatagröße entscheidend ist, die vorübergehende Inkontinenz, was ein seriöses Angebot enthält und wie die Nachsorge in Deutschland organisiert wird.',
+        sections: [
+          {
+            heading: 'Was bei HoLEP tatsächlich geschieht',
+            paragraphs: [
+              'Die Prostata lässt sich mit einer Orange vergleichen: außen die Schale, innen das Fruchtfleisch. Bei der gutartigen Vergrößerung wächst das Innere und drückt die Harnröhre zusammen.',
+              'Die klassische TURP trägt von innen Gewebe ab. HoLEP löst stattdessen das gesamte Innengewebe mit einem Holmium-Laser von der Kapsel, schiebt es in die Blase und zerkleinert es dort zur Entfernung. Die äußere Kapsel bleibt erhalten.',
+              'Weil das verengende Gewebe vollständig und nicht nur teilweise entfernt wird, ist das Ergebnis in der Regel dauerhafter und ein erneuter Eingriff nach Jahren seltener nötig. Wer für die Operation reist, sollte genau diesen Punkt gewichten.'
+            ]
+          },
+          {
+            heading: 'Warum die Prostatagröße den Ausschlag gibt',
+            paragraphs: [
+              'Bei der TURP steigen mit der Drüsengröße die Operationsdauer und die Menge der aufgenommenen Spülflüssigkeit. Daraus ergibt sich eine praktische Obergrenze, jenseits derer früher offen operiert wurde.',
+              'Für die Enukleation gilt diese Grenze so nicht. Auch sehr große Drüsen lassen sich mit derselben Technik behandeln. Deshalb werden heute viele Männer endoskopisch operiert, denen früher eine offene Operation angeboten worden wäre.',
+              'Ist Ihre Prostata groß, lautet die eigentliche Frage also nicht "welcher Laser", sondern "Enukleation oder offene Operation".'
+            ]
+          },
+          {
+            heading: 'Blutung und Blutverdünner',
+            paragraphs: [
+              'Bei der Enukleation werden die Gefäße beim Lösen der Gewebeschicht verschlossen, sodass die Blutung meist gut kontrollierbar ist. Das ist für Männer mit gerinnungshemmender Medikation relevant und ebenso für die Rückreise.',
+              'Gerinnungshemmer müssen dennoch individuell geplant werden. Setzen Sie kein Medikament eigenmächtig ab, sondern senden Sie Ihre vollständige Medikamentenliste bereits bei der Anfrage mit, damit die Planung vor der Reise steht.'
+            ]
+          },
+          {
+            heading: 'Der Punkt, der oft verschwiegen wird',
+            paragraphs: [
+              'Nach Entfernung des Innengewebes hängt die Kontinenz allein vom äußeren Schließmuskel ab, der zuvor Unterstützung hatte. Dieser Muskel braucht Zeit, und in der Zwischenzeit ist unwillkürlicher Harnabgang häufig.',
+              'Bei den meisten Männern bessert sich das über Wochen. Beckenbodentraining hilft — und es lässt sich vor der Operation deutlich leichter erlernen als danach.',
+              'Hinzu kommt die retrograde Ejakulation: Der Samen gelangt häufig in die Blase statt nach außen. Das ist unschädlich und beeinträchtigt weder Erektion noch Lust, betrifft aber die Zeugungsfähigkeit. Wer noch Kinder möchte, sollte das ausdrücklich ansprechen.'
+            ]
+          },
+          {
+            heading: 'Was ein seriöses Angebot enthalten muss',
+            paragraphs: [
+              'Eine einzelne Zahl sagt wenig. Entscheidend ist, was enthalten ist und was nicht.',
+              'Enthalten sein sollten: Voruntersuchungen, der Eingriff mit Operateur, Anästhesie und Verbrauchsmaterial, der Klinikaufenthalt mit konkret genannter Nächtezahl, die feingewebliche Untersuchung des entfernten Gewebes, die Kontrolle vor dem Rückflug sowie die Regelung der weiteren Nachsorge.',
+              'Nicht enthalten sind üblicherweise: die Behandlung von Komplikationen, eine verlängerte Unterkunft und die Flüge. Fragen Sie ausdrücklich und schriftlich nach: Wer trägt die Kosten, wenn eine Komplikation einen längeren Aufenthalt oder einen zweiten Eingriff erfordert?',
+              'Dass eine Behandlung in der Türkei weniger kostet, liegt an der Kostenstruktur vor Ort, nicht an günstigerer Technik. Lasergeräte und Verbrauchsmaterial kosten überall gleich. Ein auffällig niedriges Angebot spart deshalb an etwas anderem.'
+            ]
+          },
+          {
+            heading: 'Kostenübernahme: klären Sie das vorher',
+            paragraphs: [
+              'Eine geplante Behandlung im Ausland wird von der gesetzlichen Krankenversicherung nicht selbstverständlich erstattet. Eine Erstattung setzt in der Regel eine vorherige Klärung mit der Krankenkasse voraus.',
+              'Klären Sie das, bevor Sie buchen, und holen Sie die Auskunft schriftlich ein. Eine Klinik im Ausland kann Ihnen keine Zusage Ihrer Kasse geben — und sollte das auch nicht andeuten.',
+              'Fragen Sie außerdem, ob Sie Operationsbericht, Histologiebefund und Entlassungsbrief in deutscher Sprache erhalten. Ihre weiterbehandelnden Ärztinnen und Ärzte werden diese Unterlagen benötigen.'
+            ]
+          },
+          {
+            heading: 'Aufenthaltsdauer und Nachsorge',
+            paragraphs: [
+              'Planen Sie Anreise und Voruntersuchungen, den Eingriff mit kurzem Klinikaufenthalt, die Katheterphase, die Katheterentfernung und eine Kontrolle vor dem Rückflug.',
+              'Buchen Sie den Rückflug nicht auf den Tag nach der Katheterentfernung. Manche Patienten können danach zunächst nicht spontan Wasser lassen — in Kliniknähe ein lösbares Problem, am Flughafen nicht.',
+              'Vereinbaren Sie vor der Abreise, wer die Nachsorge in Deutschland übernimmt. Sprechen Sie mit Ihrer Urologin oder Ihrem Urologen vor der Reise, nicht erst danach.',
+              'Dieser Beitrag dient der allgemeinen Information und ersetzt keine ärztliche Beratung.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'roboterprostatektomie-im-ausland-worauf-achten',
+    date: '2026-10-04',
+    category: 'oncology',
+    languages: ['de'],
+    treatmentSlug: 'robotik-prostatektomi',
+    sources: [
+      { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+    ],
+    i18n: {
+      de: {
+        title: 'Roboterprostatektomie im Ausland — worauf achten',
+        excerpt:
+          'Der Roboter operiert nicht. Entscheidend sind die Person am Steuerpult, die Struktur um den Eingriff herum und die Frage, wer zuständig ist, wenn Sie längst wieder zu Hause sind.',
+        metaTitle: 'Roboterprostatektomie im Ausland: Worauf Sie achten sollten',
+        metaDescription:
+          'Was bei einer Roboterprostatektomie im Ausland zu prüfen ist: Operateur, Klinik, Nervenschonung, Kontinenz, Histologiebefund, Nachsorge in Deutschland und Warnsignale.',
+        sections: [
+          {
+            heading: 'Der Roboter ist ein Instrument, kein Operateur',
+            paragraphs: [
+              'Die Formulierung "Operation durch den Roboter" ist irreführend. Jede Bewegung führt die Chirurgin oder der Chirurg aus; das System überträgt die Handbewegungen auf feine Instrumente und liefert eine vergrößerte dreidimensionale Sicht.',
+              'Der Nutzen ist real: mehr Präzision auf engem Raum, meist weniger Blutverlust, kleine Zugänge. Das Ergebnis hängt jedoch von der Person am Steuerpult ab, nicht vom Gerät.',
+              'Die Frage "Haben Sie einen Roboter?" ist deshalb weit weniger aussagekräftig als "Wer operiert mich, und wie viele dieser Eingriffe führt diese Person durch?"'
+            ]
+          },
+          {
+            heading: 'Was Sie über den Operateur prüfen sollten',
+            paragraphs: [
+              'Name und Facharztqualifikation, nachprüfbar beim zuständigen nationalen Register.',
+              'Die ausdrückliche Zusage, dass diese Person selbst operiert und keine Teile des Eingriffs delegiert werden. Diese Frage ist legitim und gehört klar beantwortet.',
+              'Die Zahl der durchgeführten Eingriffe mit Zeitraum. Große runde Zahlen ohne Zeitangabe sind leicht behauptet und nicht überprüfbar.',
+              'Skepsis gegenüber Superlativen: "führend" oder "weltbekannt" sind Werbebegriffe, keine Qualifikationen.'
+            ]
+          },
+          {
+            heading: 'Nervenschonung ehrlich besprochen',
+            paragraphs: [
+              'Beidseits der Prostata verlaufen Nerven-Gefäß-Bündel, die für die Erektion eine Rolle spielen. Können sie erhalten werden, steigt die Wahrscheinlichkeit, dass die Funktion zurückkehrt.',
+              'Die Reihenfolge ist jedoch unverrückbar: zuerst die vollständige Tumorentfernung, dann — wenn möglich — der Nervenerhalt. Reicht der Tumor nahe an das Bündel, erhöht nervnahes Arbeiten das Risiko, Tumorgewebe zurückzulassen.',
+              'Die Entscheidung ist kein Entweder-oder. Je nach Befund kann einseitig geschont werden, und der Abstand lässt sich abstufen. Wer Ihnen diesen Abwägungsprozess erklärt, ist glaubwürdiger als wer pauschal sagt, die Nerven würden selbstverständlich erhalten.',
+              'Auch bei erhaltenen Nerven braucht die Funktion Monate. Alter, Diabetes, Gefäßerkrankungen, Rauchen und die Funktion vor der Operation beeinflussen das Ergebnis.'
+            ]
+          },
+          {
+            heading: 'Kontinenz: der realistische Verlauf',
+            paragraphs: [
+              'Mit der Prostata entfällt ein Teil des Kontinenzmechanismus; der äußere Schließmuskel übernimmt allein. Harnverlust nach dem Entfernen des Katheters ist daher ein erwarteter Übergang, keine Komplikation.',
+              'Typischerweise kehrt zuerst die nächtliche Trockenheit zurück, dann die Kontrolle in Ruhe; am längsten dauert es bei Belastung — Husten, Niesen, Heben. Die Besserung kann bis zu einem Jahr anhalten.',
+              'Beckenbodentraining hilft, wenn der richtige Muskel angesteuert wird. Lernen Sie die Technik vor der Operation.'
+            ]
+          },
+          {
+            heading: 'Der Histologiebefund kommt nach Ihrer Abreise',
+            paragraphs: [
+              'Die entfernte Prostata wird feingeweblich untersucht. Dieser Befund entscheidet darüber, ob eine weitere Behandlung nötig ist — und er liegt meist erst vor, wenn Sie bereits zu Hause sind.',
+              'Vereinbaren Sie vor der Abreise schriftlich, wie der Befund Sie erreicht, wer ihn erläutert und in welcher Sprache. Ein unübersetztes Dokument ohne Erklärung ist ein schlechter Abschluss einer gut geführten Operation.',
+              'Bestehen Sie auf Operationsbericht, Histologiebefund und Entlassungsbrief in deutscher Sprache. Ohne diese Unterlagen ist eine sichere Weiterbehandlung in Deutschland schwierig.'
+            ]
+          },
+          {
+            heading: 'Nachsorge und Kostenfragen',
+            paragraphs: [
+              'Nach der Operation wird der PSA-Wert in Abständen kontrolliert; er ist der entscheidende Verlaufsparameter. Klären Sie, wer diese Werte beurteilt, wie Sie sie übermitteln und über welchen Zeitraum diese Zusage gilt.',
+              'Sprechen Sie vor der Reise mit Ihrer Urologin oder Ihrem Urologen in Deutschland. Sie brauchen diese Anbindung danach.',
+              'Eine geplante Auslandsbehandlung wird von der gesetzlichen Krankenversicherung nicht automatisch erstattet; klären Sie das vorab schriftlich mit Ihrer Kasse. Prüfen Sie außerdem, ob Ihre Reiseversicherung geplante Eingriffe überhaupt einschließt — meist ist das nicht der Fall.'
+            ]
+          },
+          {
+            heading: 'Warnsignale',
+            paragraphs: [
+              'Zeitdruck oder befristete Preisnachlässe. Eine Operation ist kein Angebot mit Ablaufdatum.',
+              'Ein Preis, bevor jemand Ihre Befunde gesehen hat.',
+              'Zugesicherte Ergebnisse. Seriöse Operateure garantieren keine Resultate.',
+              'Unklarheit darüber, in welcher Klinik Sie behandelt werden, oder Zurückhaltung, den Operateur schriftlich zu benennen.',
+              'Keine klare Auskunft darüber, wer zuständig ist, sobald Sie das Land verlassen haben.',
+              'Beim Prostatakarzinom ist Eile klinisch selten begründet. Entsteht Druck, ist er meist kaufmännischer Natur.',
+              'Dieser Beitrag dient der allgemeinen Information und ersetzt keine ärztliche Beratung.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'penisprothese-ablauf-und-realistische-erwartungen',
+    date: '2026-10-04',
+    category: 'andrology',
+    languages: ['de'],
+    treatmentSlug: 'penil-protez',
+    sources: [
+      { label: 'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
+    ],
+    i18n: {
+      de: {
+        title: 'Penisprothese: Ablauf und realistische Erwartungen',
+        excerpt:
+          'Der Eingriff ist nicht rückgängig zu machen, und die Infektion ist die Komplikation, auf die es ankommt. Beides sollte die Entscheidung stärker bestimmen als Preis oder Werbung.',
+        metaTitle: 'Penisprothese: Ablauf, Prothesentypen und realistische Erwartungen',
+        metaDescription:
+          'Wann eine Penisprothese infrage kommt, Unterschiede zwischen biegsamer und hydraulischer Prothese, Infektionsrisiko, Diabetes, realistische Erwartungen und Nachsorge.',
+        sections: [
+          {
+            heading: 'Zwei Tatsachen vorweg',
+            paragraphs: [
+              'Erstens: Der Eingriff ist irreversibel. Für das Einbringen der Prothese muss das Schwellkörpergewebe aufgedehnt werden; natürliche Erektionen kehren danach nicht zurück. Müsste die Prothese ohne Ersatz entfernt werden, wäre die Situation schlechter als vorher.',
+              'Zweitens: Die Infektion ist die gefürchtetste Komplikation, weil ein infiziertes Implantat häufig entfernt werden muss. Patientenauswahl, Blutzuckereinstellung, Vorbereitung und Technik sind sämtlich darauf ausgerichtet, dieses Risiko zu senken.',
+              'Beides spricht dagegen, diese Entscheidung schnell und preisgetrieben zu treffen.'
+            ]
+          },
+          {
+            heading: 'Die Prothese steht am Ende, nicht am Anfang',
+            paragraphs: [
+              'Bei Erektionsstörungen kommen zuerst Tabletten, dann die Injektionstherapie, dann Vakuumsysteme. Viele Männer kommen damit gut zurecht.',
+              'Wird Ihnen eine Prothese angeboten, ohne dass jemand erfragt, was Sie bereits versucht haben und warum es nicht geholfen hat, ist das ein Warnsignal. Wer Ihnen sagt, Sie seien noch kein Kandidat, zeigt Urteilsvermögen.',
+              'Ebenso wichtig: Erektionsstörungen sind häufig ein frühes Zeichen einer Gefäßerkrankung oder eines Diabetes. Eine Prothese behandelt keines von beidem.'
+            ]
+          },
+          {
+            heading: 'Diabetes und Infektionsrisiko',
+            paragraphs: [
+              'Eine schlecht eingestellte Blutzuckerlage erhöht das Infektionsrisiko deutlich. Ist Ihr Langzeitwert hoch, lautet die richtige Empfehlung, die Einstellung vor dem Eingriff zu verbessern — auch wenn das eine Verschiebung bedeutet.',
+              'Eine Klinik, die aus diesem Grund verschiebt, schützt Sie. Eine, die trotzdem operiert, schützt ihren Operationsplan.',
+              'Fragen Sie konkret, welchen Grenzwert der Operateur voraussetzt und ob Ihr aktueller Wert ihn erfüllt.'
+            ]
+          },
+          {
+            heading: 'Die beiden Prothesentypen',
+            paragraphs: [
+              'Die biegsame Prothese besteht aus zwei halbstarren Stäben. Der Penis wird bei Bedarf nach oben gebogen und danach wieder abgelegt. Vorteil: einfache Handhabung, keine Mechanik, weniger technische Defekte. Nachteil: Der Penis bleibt dauerhaft in einem festen Zustand, was beim Ankleiden stören kann.',
+              'Die hydraulische Prothese besteht aus Zylindern, einer Pumpe im Hodensack und einem Flüssigkeitsreservoir. Sie liefert das natürlichste Ergebnis, weil der Penis im Ruhezustand weich bleibt. Dafür ist sie ein mechanisches System, das bedient werden muss und ausfallen kann.',
+              'Keiner der Typen ist grundsätzlich überlegen. Handkraft und Feinmotorik, Arthrose, vorbestehende Vernarbungen im Schwellkörper und persönliche Prioritäten bestimmen die Wahl. Wer allen Patienten denselben Typ empfiehlt, individualisiert nicht.'
+            ]
+          },
+          {
+            heading: 'Erwartungen, die vorher ausgesprochen gehören',
+            paragraphs: [
+              'Die Prothese stellt die Steifigkeit her. Sie stellt weder Empfindung noch Lust noch Ejakulation wieder her. Was vorher eingeschränkt war, bleibt eingeschränkt.',
+              'Viele Männer empfinden den Penis nach dem Eingriff als kürzer als zuvor. Das ist einer der häufigsten Gründe für Unzufriedenheit und gehört ausdrücklich vor die Operation, nicht danach.',
+              'Die Prothese ist langlebig, aber nicht unbegrenzt haltbar. Nach Jahren kann ein mechanischer Defekt einen Wechsel erforderlich machen — für jüngere Patienten ein realer Punkt.'
+            ]
+          },
+          {
+            heading: 'Was vor einer Behandlung im Ausland zu klären ist',
+            paragraphs: [
+              'Dass die namentlich genannte Person selbst operiert.',
+              'Dass der Eingriff in einer Klinik mit regulärem Operationssaal und stationärer Versorgung stattfindet, nicht in einer Praxis.',
+              'Welches Fabrikat und Modell verwendet wird — schriftlich, vor der Operation.',
+              'Was geschieht, wenn nach Ihrer Rückkehr eine Infektion auftritt: wen Sie erreichen und was die Klinik dann tut.',
+              'Ob eine Herstellergarantie besteht und wie ein Garantiefall aus Deutschland abgewickelt wird.',
+              'Planen Sie genügend Tage ein, um die Bedienung der Prothese vor Ort persönlich zu lernen. Die Prothese wird erst nach abgeschlossener Heilung in Gebrauch genommen; den Zeitpunkt legt der Operateur fest, eine zu frühe Nutzung kann schaden.',
+              'Dieser Beitrag dient der allgemeinen Information und ersetzt keine ärztliche Beratung.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'zweitmeinung-bei-prostatakrebs-aus-deutschland',
+    date: '2026-10-04',
+    category: 'oncology',
+    languages: ['de'],
+    treatmentSlug: 'prostat-kanseri',
+    sources: [
+      { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+    ],
+    i18n: {
+      de: {
+        title: 'Zweitmeinung bei Prostatakrebs aus Deutschland',
+        excerpt:
+          'Eine Zweitmeinung ist nur so gut wie die Unterlagen, auf denen sie beruht. Entscheidend ist, die richtigen Dokumente im richtigen Format zu senden — insbesondere die MRT als DICOM.',
+        metaTitle: 'Zweitmeinung Prostatakrebs: Welche Unterlagen Sie senden sollten',
+        metaDescription:
+          'Welche Befunde für eine Zweitmeinung beim Prostatakarzinom nötig sind, warum die MRT als DICOM gesendet werden muss, was eine gute Zweitmeinung leistet und wie Sie sie nutzen.',
+        sections: [
+          {
+            heading: 'Warum überhaupt eine Zweitmeinung',
+            paragraphs: [
+              'Beim Prostatakarzinom gibt es häufig mehr als einen vertretbaren Weg. Aktive Überwachung, Operation und Strahlentherapie können bei derselben Konstellation jeweils begründbar sein — mit unterschiedlichen Nebenwirkungsprofilen und unterschiedlicher Nachsorge.',
+              'Eine Zweitmeinung ist deshalb kein Misstrauensvotum gegenüber Ihrer behandelnden Ärztin oder Ihrem Arzt, sondern ein Weg zu verstehen, welcher dieser Wege zu Ihren Prioritäten passt.',
+              'Hinzu kommt ein fachlicher Grund: Die Graduierung einer Prostatabiopsie beruht auf Beurteilung. Eine Referenzbegutachtung durch eine zweite Pathologie kann die Einstufung verändern — und mit ihr die Empfehlung.'
+            ]
+          },
+          {
+            heading: 'Welche Unterlagen wirklich gebraucht werden',
+            paragraphs: [
+              'Der PSA-Verlauf, nicht nur der letzte Wert. Die Entwicklung über die Zeit enthält Information, die eine Einzelmessung nicht hat.',
+              'Der vollständige Biopsiebefund: Zahl der entnommenen und der befallenen Stanzen, Lokalisation, Gleason-Score beziehungsweise ISUP-Gruppe je Stanze und der prozentuale Befall.',
+              'Der MRT-Befund einschließlich PI-RADS — und vor allem die Bilddaten selbst.',
+              'Vorliegende Staging-Untersuchungen.',
+              'Der Tastbefund.',
+              'Begleiterkrankungen, Medikamentenliste und Alter. Das ist kein Beiwerk, sondern beeinflusst unmittelbar, welche Behandlung sinnvoll ist.'
+            ]
+          },
+          {
+            heading: 'Die MRT als DICOM senden, nicht als Foto',
+            paragraphs: [
+              'Dies ist der häufigste Grund dafür, dass eine Zweitmeinung wenig wert ist. Ein Bildschirmfoto oder ein PDF mit einzelnen ausgedruckten Schichten erlaubt keine echte Beurteilung.',
+              'Bitten Sie Ihre Radiologie um die Untersuchung auf CD oder als DICOM-Datensatz. Nach dem Patientenrechtegesetz haben Sie Anspruch auf Kopien Ihrer Unterlagen; viele Einrichtungen stellen inzwischen auch einen Download bereit. Dass die Datenmenge groß ist, ist normal.',
+              'Ohne die Bilddaten kann eine Zweitmeinung nur den fremden schriftlichen Befund wiedergeben. Das ist keine unabhängige Beurteilung, sondern eine Umformulierung.'
+            ]
+          },
+          {
+            heading: 'Histologische Präparate',
+            paragraphs: [
+              'Soll die Graduierung selbst überprüft und nicht nur übernommen werden, müssen die Schnitte oder Blöcke zur Verfügung stehen. Ihr Institut kann sie herausgeben oder digitalisierte Scans versenden.',
+              'Dieser Schritt dauert länger als das Versenden von Berichten; beginnen Sie früh damit. Besonders sinnvoll ist er, wenn die Einstufung an einer Entscheidungsgrenze liegt, an der eine Änderung die Empfehlung kippen würde.'
+            ]
+          },
+          {
+            heading: 'Was eine gute Zweitmeinung leisten muss',
+            paragraphs: [
+              'Die Zuordnung zu einer Risikogruppe — mit Begründung.',
+              'Die vertretbaren Optionen, ausdrücklich einschließlich aktiver Überwachung, wo diese infrage kommt.',
+              'Was jede Option konkret für Kontinenz und Sexualfunktion bedeutet, benannt statt beschwichtigt.',
+              'Welche Nachsorge jede Option erfordert und über welchen Zeitraum.',
+              'Bei empfohlener Operation: ob Nervenschonung voraussichtlich möglich ist, ein- oder beidseitig, und was diesen Plan intraoperativ ändern würde.',
+              'Eine Antwort, die eine einzige Behandlung empfiehlt, ohne Alternativen zu erörtern, ist keine Zweitmeinung, sondern ein Verkaufsgespräch.'
+            ]
+          },
+          {
+            heading: 'Zeitdruck und wie Sie die Antwort nutzen',
+            paragraphs: [
+              'Fragen Sie ruhig: Was passiert, wenn ich drei Monate lang nichts entscheide? Beim Prostatakarzinom lautet die ehrliche Antwort meist, dass sich nichts Wesentliches ändert.',
+              'Entsteht nach Ihrer Anfrage Druck, schnell zu buchen, ist dieser Druck kaufmännisch und nicht medizinisch begründet.',
+              'Deckt sich die Zweitmeinung mit Ihrem bisherigen Plan, war sie nicht umsonst — Sie gehen den Weg dann mit Sicherheit statt mit Zweifel. Weichen die Einschätzungen ab, legen Sie die Abweichung Ihrer behandelnden Ärztin oder Ihrem Arzt vor und bitten um Stellungnahme.',
+              'Eine Zweitmeinung verpflichtet Sie zu nichts. Sie können sie einholen und sich anschließend in Deutschland behandeln lassen; jede seriöse Stellungnahme wird auf dieser Grundlage verfasst.',
+              'Dieser Beitrag dient der allgemeinen Information und ersetzt keine ärztliche Beratung.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'prostatectomie-robotique-en-turquie-deroulement-et-couts',
+    date: '2026-10-04',
+    category: 'oncology',
+    languages: ['fr'],
+    treatmentSlug: 'robotik-prostatektomi',
+    sources: [
+      { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+    ],
+    i18n: {
+      fr: {
+        title: 'Prostatectomie robotique en Turquie : déroulement et coûts',
+        excerpt:
+          'Le robot n\'opère pas. Ce qui compte, c\'est la personne à la console, ce que contient réellement le devis, et qui répond de vous une fois rentré chez vous.',
+        metaTitle: 'Prostatectomie robotique en Turquie : déroulement, coûts, suivi',
+        metaDescription:
+          'Comment se déroule une prostatectomie robotique, préservation nerveuse, continence, ce que doit contenir un devis, durée du séjour et organisation du suivi au retour.',
+        sections: [
+          {
+            heading: 'Le robot est un instrument, pas un opérateur',
+            paragraphs: [
+              'L\'expression « opération par robot » laisse croire que la machine agit seule. Ce n\'est pas le cas : chaque geste est effectué par le chirurgien, le système transmettant les mouvements de ses mains à des instruments fins, avec une vision agrandie et en relief.',
+              'Le bénéfice est réel : précision dans un espace étroit, saignement généralement moindre, incisions de petite taille. Mais le résultat dépend de la personne à la console, pas de l\'appareil.',
+              'La question « avez-vous un robot ? » est donc bien moins utile que « qui m\'opérera, et combien d\'interventions de ce type cette personne réalise-t-elle ? ».'
+            ]
+          },
+          {
+            heading: 'Ce qui est retiré, et ce que cela implique',
+            paragraphs: [
+              'La prostate est retirée en totalité avec les vésicules séminales, puis la vessie est raccordée à l\'urètre. Un curage ganglionnaire pelvien est réalisé lorsque le risque le justifie.',
+              'La prostate étant retirée, il n\'y a plus d\'éjaculation après l\'intervention. La procréation naturelle n\'est donc plus possible, et ce point doit être énoncé clairement avant l\'opération.',
+              'L\'orgasme reste possible sans éjaculation chez beaucoup d\'hommes, mais la sensation est différente.'
+            ]
+          },
+          {
+            heading: 'Continence : le déroulement réel',
+            paragraphs: [
+              'Avec la prostate disparaît une partie du mécanisme de continence ; le sphincter externe assure seul cette fonction et doit s\'y adapter. Les fuites après le retrait de la sonde constituent donc une phase de transition attendue, non une complication.',
+              'L\'ordre habituel de récupération est le suivant : d\'abord les nuits sèches, puis le contrôle au repos, et en dernier les efforts — toux, éternuement, port de charges. L\'amélioration peut se poursuivre jusqu\'à un an.',
+              'La rééducation périnéale est efficace à condition de solliciter le bon muscle. Apprenez la technique avant l\'intervention : c\'est nettement plus simple qu\'après.'
+            ]
+          },
+          {
+            heading: 'Préservation nerveuse : ce qu\'il faut comprendre',
+            paragraphs: [
+              'De part et d\'autre de la prostate cheminent des bandelettes vasculo-nerveuses qui interviennent dans le mécanisme de l\'érection. Leur préservation augmente la probabilité d\'une récupération.',
+              'L\'ordre des priorités est toutefois invariable : exérèse complète de la tumeur d\'abord, préservation nerveuse ensuite si elle est possible. Si la tumeur s\'approche de la bandelette, travailler au plus près augmente le risque de laisser du tissu tumoral.',
+              'Ce n\'est pas un choix binaire : la préservation peut être unilatérale, et le degré de proximité acceptable se module selon le bilan. Un chirurgien qui vous explique cet arbitrage est plus fiable que celui qui affirme d\'emblée que les nerfs seront préservés.',
+              'Même préservés, les nerfs mettent des mois à récupérer, et l\'âge, le diabète, les maladies vasculaires, le tabac et la fonction antérieure pèsent sur le résultat.'
+            ]
+          },
+          {
+            heading: 'Ce que doit contenir un devis',
+            paragraphs: [
+              'Un chiffre isolé ne renseigne sur rien. Ce qui compte est le contenu.',
+              'Doivent y figurer : le bilan préopératoire, l\'intervention avec chirurgien, anesthésie, instruments robotiques et consommables, le séjour hospitalier avec un nombre de nuits précisé, l\'examen anatomopathologique de la pièce opératoire, la consultation avant le départ, et les modalités du suivi après le retour.',
+              'Ne sont généralement pas inclus : la prise en charge des complications, l\'hébergement prolongé et les vols. Posez la question explicitement et par écrit : en cas de complication nécessitant un séjour prolongé ou une seconde intervention, qui paie ?',
+              'Si les coûts sont moindres en Turquie, c\'est en raison de la structure locale des coûts, non d\'un matériel moins cher : un robot et ses instruments à usage limité coûtent le même prix partout. Un devis anormalement bas omet donc quelque chose.'
+            ]
+          },
+          {
+            heading: 'Durée du séjour',
+            paragraphs: [
+              'C\'est la sonde qui fixe le calendrier. L\'anastomose entre vessie et urètre doit cicatriser, et la sonde reste en place pendant une durée définie.',
+              'Elle est retirée sur place, avant votre départ, afin qu\'une éventuelle difficulté à uriner soit prise en charge près de l\'hôpital et non à l\'aéroport. Ne réservez pas votre vol au lendemain du retrait.',
+              'Le voyage aérien après une chirurgie pelvienne expose à un risque thromboembolique ; l\'autorisation de vol est donnée au cas par cas. Respectez les consignes de marche, d\'hydratation et de contention, et consultez immédiatement en cas de douleur ou gonflement du mollet, de douleur thoracique ou d\'essoufflement.'
+            ]
+          },
+          {
+            heading: 'Compte rendu anatomopathologique et suivi',
+            paragraphs: [
+              'La pièce opératoire est analysée, et ce compte rendu détermine la nécessité éventuelle d\'un traitement complémentaire. Il est rarement disponible avant votre départ.',
+              'Convenez avant de partir de la manière dont il vous parviendra, de qui vous l\'expliquera et dans quelle langue. Exigez le compte rendu opératoire, le résultat anatomopathologique et le compte rendu d\'hospitalisation en français : votre urologue en aura besoin.',
+              'Le PSA est contrôlé à intervalles réguliers après l\'intervention. Déterminez qui interprète ces résultats, comment vous les transmettez et pour quelle durée cet engagement vaut.',
+              'Vérifiez enfin les conditions de prise en charge d\'une intervention programmée à l\'étranger auprès de votre organisme d\'assurance maladie, avant de réserver et par écrit.',
+              'Cet article est une information générale et ne remplace pas un avis médical.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'calculs-renaux-rirs-ou-nlpc-comment-choisir',
+    date: '2026-10-04',
+    category: 'stones',
+    languages: ['fr'],
+    treatmentSlug: 'rirs',
+    sources: [
+      { label: 'EAU Guidelines on Urolithiasis — European Association of Urology', url: 'https://uroweb.org/guidelines/urolithiasis' }
+    ],
+    i18n: {
+      fr: {
+        title: 'Calculs rénaux : RIRS ou NLPC, comment choisir',
+        excerpt:
+          'Les deux techniques sont mini-invasives et toutes deux donnent de bons résultats. La question est de savoir laquelle convient à votre calcul — et si une seule séance suffira.',
+        metaTitle: 'Calculs rénaux : RIRS ou NLPC, critères de choix',
+        metaDescription:
+          'Différences entre RIRS et NLPC, rôle de la taille, de la densité et de la localisation du calcul, risques, sonde JJ, et organisation du traitement à l\'étranger.',
+        sections: [
+          {
+            heading: 'Deux voies d\'accès au même rein',
+            paragraphs: [
+              'La RIRS ne comporte aucune incision. Un instrument souple est monté par les voies naturelles — urètre, vessie, uretère — jusqu\'au rein, et le calcul est pulvérisé au laser jusqu\'à devenir assez fin pour être éliminé dans les urines.',
+              'La NLPC passe par un trajet de petit calibre créé à travers la peau du dos, directement dans le rein. Ce trajet admet des instruments plus larges, ce qui permet de fragmenter et d\'extraire de gros calculs en une seule séance.',
+              'Aucune des deux n\'est une chirurgie ouverte. La différence tient à la voie d\'abord et au calibre des instruments qu\'elle autorise.'
+            ]
+          },
+          {
+            heading: 'La taille du calcul : le critère principal',
+            paragraphs: [
+              'Les petits calculs relèvent plutôt de la RIRS : le calcul est réduit en poussière, les fragments s\'éliminent, et il ne reste aucune cicatrice.',
+              'Au-delà d\'une certaine taille, le calcul change. Pulvériser un gros calcul prend du temps, et tous les fragments ne s\'évacuent pas : une deuxième séance, voire une troisième, peut être nécessaire. La NLPC, qui traite le calcul en une fois, devient alors plus logique.',
+              'Pour un patient venu de l\'étranger, ce point est déterminant. Une seconde séance signifie un séjour prolongé ou un second voyage. Demandez explicitement quelle est la probabilité qu\'une séance ne suffise pas.'
+            ]
+          },
+          {
+            heading: 'Densité et localisation',
+            paragraphs: [
+              'Tous les calculs n\'ont pas la même dureté. La densité mesurée au scanner indique la résistance au laser ; un calcul très dense allonge l\'intervention et augmente la pression dans le rein.',
+              'La localisation compte également, en particulier pour les calculs du calice inférieur : il s\'agit d\'une cavité déclive dont les fragments se drainent mal. Même bien pulvérisé, un calcul peut y laisser des résidus. Ces calculs orientent donc vers la NLPC pour une taille plus faible qu\'ailleurs.'
+            ]
+          },
+          {
+            heading: 'Quand la RIRS est préférée',
+            paragraphs: [
+              'Chez les patients sous anticoagulants, puisqu\'aucun trajet n\'est créé à travers le parenchyme rénal.',
+              'Lorsque la morphologie ou l\'anatomie du rachis rend l\'abord percutané difficile.',
+              'Chez les patients en rein unique fonctionnel, où la préservation du parenchyme prend un poids supplémentaire.',
+              'Lorsqu\'un calcul urétéral peut être traité dans la même séance.'
+            ]
+          },
+          {
+            heading: 'Quand la NLPC est préférée',
+            paragraphs: [
+              'Pour les calculs volumineux, et en particulier les calculs coralliformes occupant les cavités rénales.',
+              'En cas de calculs multiples, lorsque l\'objectif est l\'absence de résidu en une séance.',
+              'Après échec d\'une RIRS n\'ayant pas permis d\'obtenir un rein sans calcul.'
+            ]
+          },
+          {
+            heading: 'Risques énoncés clairement',
+            paragraphs: [
+              'La NLPC comporte un risque hémorragique supérieur, le trajet traversant le parenchyme rénal. Une transfusion ou un geste complémentaire est parfois nécessaire ; l\'atteinte d\'organes voisins, rare, est documentée.',
+              'Les risques de la RIRS concernent surtout l\'uretère : traumatisme lié au passage des instruments, et sténose urétérale secondaire. L\'élévation de la pression intrarénale pendant l\'intervention intervient aussi dans le risque infectieux.',
+              'Dans les deux cas, l\'infection fébrile est la complication à prendre le plus au sérieux. D\'où l\'importance d\'un ECBU stérile avant l\'intervention : on ne programme pas une chirurgie du calcul sur des urines infectées, et un centre qui traite ce point comme une formalité prend un raccourci qui compte.'
+            ]
+          },
+          {
+            heading: 'La sonde JJ, et l\'après',
+            paragraphs: [
+              'Une sonde JJ temporaire est fréquemment mise en place entre le rein et la vessie. Elle sécurise le drainage mais provoque ses propres symptômes : pollakiurie, douleur lombaire à la miction, hématurie. Ces symptômes disparaissent à son retrait.',
+              'La question pratique pour un patient étranger est de savoir qui la retire et où. Convenez-en avant de partir : soit le retrait a lieu en Turquie avant votre vol, soit il est organisé avec votre urologue, avec son accord préalable.',
+              'Enfin, retirer le calcul ne représente que la moitié du traitement. Sans modification des apports hydriques et, selon le cas, de l\'alimentation, les calculs récidivent. Demandez l\'analyse de la composition du calcul et, en cas de récidives, un bilan métabolique.',
+              'Cet article est une information générale et ne remplace pas un avis médical.'
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    slug: 'roboticheskaya-prostatektomiya-v-turcii',
+    date: '2026-10-04',
+    category: 'oncology',
+    languages: ['ru'],
+    treatmentSlug: 'robotik-prostatektomi',
+    sources: [
+      { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+    ],
+    i18n: {
+      ru: {
+        title: 'Роботическая простатэктомия в Турции: как проходит лечение',
+        excerpt:
+          'Робот не оперирует сам. Значение имеют хирург за консолью, то, что на самом деле включено в смету, и то, кто отвечает за вас после возвращения домой.',
+        metaTitle: 'Роботическая простатэктомия в Турции: ход лечения и стоимость',
+        metaDescription:
+          'Как проходит роботическая простатэктомия, сохранение нервов, восстановление удержания мочи, что должно входить в смету, срок пребывания и наблюдение после возвращения.',
+        sections: [
+          {
+            heading: 'Робот — это инструмент, а не хирург',
+            paragraphs: [
+              'Формулировка «операцию выполняет робот» вводит в заблуждение. Каждое движение совершает хирург; система передаёт движения его рук тонким инструментам и даёт увеличенное объёмное изображение.',
+              'Польза при этом реальная: точность в узком пространстве, как правило меньшая кровопотеря, небольшие разрезы. Но результат зависит от того, кто сидит за консолью, а не от аппарата.',
+              'Поэтому вопрос «есть ли у вас робот» гораздо менее важен, чем вопрос «кто будет меня оперировать и сколько таких операций этот хирург выполняет».'
+            ]
+          },
+          {
+            heading: 'Что удаляют и что это означает',
+            paragraphs: [
+              'Предстательную железу удаляют целиком вместе с семенными пузырьками, после чего мочевой пузырь соединяют с мочеиспускательным каналом. При соответствующем риске удаляют и тазовые лимфатические узлы.',
+              'Поскольку железу удаляют полностью, семяизвержения после операции не будет. Это означает утрату способности к естественному зачатию, и об этом нужно сказать прямо до операции, а не после.',
+              'Оргазм без семяизвержения у многих мужчин сохраняется, но ощущение становится иным.'
+            ]
+          },
+          {
+            heading: 'Удержание мочи: как это происходит на самом деле',
+            paragraphs: [
+              'Вместе с железой утрачивается часть механизма удержания, и наружный сфинктер начинает работать один. Поэтому подтекание мочи после удаления катетера — это ожидаемый переходный период, а не осложнение.',
+              'Обычный порядок восстановления такой: сначала появляются сухие ночи, затем контроль в покое, и в последнюю очередь — при нагрузке: кашле, чихании, подъёме тяжестей. Улучшение может продолжаться до года.',
+              'Упражнения для мышц тазового дна действительно помогают, но при условии, что работает нужная мышца. Освойте технику до операции — после этого сделать это заметно труднее.'
+            ]
+          },
+          {
+            heading: 'Сохранение нервов: возможно, но не всегда',
+            paragraphs: [
+              'По обеим сторонам железы проходят сосудисто-нервные пучки, участвующие в механизме эрекции. Если их удаётся сохранить, вероятность возвращения функции выше.',
+              'Однако порядок приоритетов неизменен: сначала полное удаление опухоли, затем, если это возможно, сохранение нервов. Если опухоль подходит близко к пучку, работа вплотную к нему повышает риск оставить опухолевую ткань.',
+              'Это не выбор по принципу «всё или ничего»: сохранение может быть односторонним, а степень близости — разной. Хирург, который объясняет вам этот баланс, заслуживает большего доверия, чем тот, кто сразу обещает сохранить нервы.',
+              'Даже при сохранённых нервах восстановление занимает месяцы и зависит от возраста, диабета, состояния сосудов, курения и функции до операции.'
+            ]
+          },
+          {
+            heading: 'Что должно входить в смету',
+            paragraphs: [
+              'Отдельно взятая цифра ничего не говорит. Значение имеет состав.',
+              'Должны входить: дооперационное обследование; сама операция с оплатой хирурга, анестезии, роботических инструментов и расходных материалов; пребывание в стационаре с указанием числа ночей; гистологическое исследование удалённой железы; осмотр перед вылетом; порядок наблюдения после возвращения.',
+              'Обычно не входят: лечение осложнений, продление проживания и авиабилеты. Спросите прямо и письменно: кто оплачивает лечение, если осложнение потребует более длительного пребывания или повторного вмешательства.',
+              'Более низкая стоимость в Турции объясняется местной структурой затрат, а не дешёвым оборудованием: робот и его инструменты стоят одинаково везде. Поэтому необычно низкое предложение означает, что что-то из расчёта исключено.'
+            ]
+          },
+          {
+            heading: 'Срок пребывания определяет катетер',
+            paragraphs: [
+              'Место соединения мочевого пузыря с мочеиспускательным каналом должно зажить, и на это время устанавливают катетер.',
+              'Катетер удаляют здесь, до вашего отъезда, чтобы возможное затруднение мочеиспускания решалось рядом с больницей, а не в аэропорту. Не покупайте билет на следующий день после удаления катетера.',
+              'Перелёт после операции на органах таза связан с риском тромбоза, поэтому разрешение на полёт даётся индивидуально. Соблюдайте рекомендации о ходьбе в салоне, питье и компрессионном трикотаже, а при боли или отёке голени, боли в груди или одышке немедленно обращайтесь за помощью.'
+            ]
+          },
+          {
+            heading: 'Гистологический результат и наблюдение',
+            paragraphs: [
+              'Удалённую железу исследуют под микроскопом, и именно это заключение определяет, нужно ли дополнительное лечение. Как правило, оно готово уже после вашего отъезда.',
+              'Договоритесь заранее, как вы получите заключение, кто его объяснит и на каком языке. Попросите протокол операции, гистологическое заключение и выписку — они понадобятся вашему врачу.',
+              'После операции ПСА контролируют через определённые промежутки времени. Выясните, кто оценивает эти результаты, как вы их передаёте и на какой срок рассчитана эта договорённость.',
+              'Эта статья носит общий информационный характер и не заменяет консультацию врача.'
+            ]
+          }
+        ],
+      }
+    }
   }
 ];
 
