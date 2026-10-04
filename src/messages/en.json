@@ -218,7 +218,10 @@
     "addressLabel": "Address",
     "centerLabel": "Clinic / Surgery Center",
     "viewOnMaps": "View on map",
-    "mapTitle": "Clinic location — map"
+    "mapTitle": "Clinic location — map",
+    "mapLoad": "Load the map",
+    "mapNotice": "The map is provided by Google. Once you load it, certain data including your IP address may be sent to Google.",
+    "callCta": "Call"
   },
   "Form": {
     "title": "Pre-assessment form",
@@ -251,7 +254,10 @@
   "Legal": {
     "kvkkTitle": "KVKK / GDPR Privacy Notice",
     "consentTitle": "Explicit Consent Text",
-    "lastUpdated": "Last updated"
+    "lastUpdated": "Last updated",
+    "cookiesTitle": "Cookie Policy",
+    "termsTitle": "Terms of Use",
+    "disclaimerTitle": "Medical Disclaimer"
   },
   "Footer": {
     "tagline": "Urological surgery and health tourism for international patients.",
@@ -265,7 +271,11 @@
     "contactTitle": "Contact",
     "licenseLabel": "Republic of Türkiye Ministry of Health International Health Tourism Authorisation Certificate",
     "diplomaLabel": "Medical registration no",
-    "verbisLabel": "VERBİS registration no"
+    "verbisLabel": "VERBİS registration no",
+    "cookies": "Cookie Policy",
+    "terms": "Terms of Use",
+    "disclaimer": "Medical Disclaimer",
+    "cookiePrefs": "Cookie preferences"
   },
   "NotFound": {
     "title": "Page not found",
@@ -293,5 +303,12 @@
       "reconstructive": "Reconstructive urology",
       "general": "General urology terms"
     }
+  },
+  "Consent": {
+    "title": "Your cookie choice",
+    "body": "Besides the cookies needed for the site to work, we would like to use analytics cookies only to measure visit statistics. If you decline, no analytics request is sent at all.",
+    "policyLink": "Cookie Policy",
+    "accept": "Accept",
+    "reject": "Decline"
   }
 }

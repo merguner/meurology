@@ -218,7 +218,10 @@
     "addressLabel": "Adresse",
     "centerLabel": "Clinique / Centre chirurgical",
     "viewOnMaps": "Voir sur la carte",
-    "mapTitle": "Emplacement de la clinique — carte"
+    "mapTitle": "Emplacement de la clinique — carte",
+    "mapLoad": "Charger la carte",
+    "mapNotice": "La carte est fournie par Google. Une fois chargée, certaines données dont votre adresse IP peuvent être transmises à Google.",
+    "callCta": "Appeler"
   },
   "Form": {
     "title": "Formulaire de pré-évaluation",
@@ -251,7 +254,10 @@
   "Legal": {
     "kvkkTitle": "Avis de confidentialité KVKK / RGPD",
     "consentTitle": "Texte de consentement explicite",
-    "lastUpdated": "Dernière mise à jour"
+    "lastUpdated": "Dernière mise à jour",
+    "cookiesTitle": "Politique relative aux cookies",
+    "termsTitle": "Conditions d’utilisation",
+    "disclaimerTitle": "Avertissement médical"
   },
   "Footer": {
     "tagline": "Chirurgie urologique et tourisme médical pour patients internationaux.",
@@ -265,7 +271,11 @@
     "contactTitle": "Contact",
     "licenseLabel": "Certificat d'autorisation de tourisme médical international du ministère de la Santé de la République de Türkiye",
     "diplomaLabel": "N° d'inscription à l'ordre",
-    "verbisLabel": "N° d'enregistrement VERBİS"
+    "verbisLabel": "N° d'enregistrement VERBİS",
+    "cookies": "Politique cookies",
+    "terms": "Conditions d’utilisation",
+    "disclaimer": "Avertissement médical",
+    "cookiePrefs": "Préférences cookies"
   },
   "NotFound": {
     "title": "Page introuvable",
@@ -293,5 +303,12 @@
       "reconstructive": "Urologie reconstructrice",
       "general": "Termes généraux d’urologie"
     }
+  },
+  "Consent": {
+    "title": "Votre choix concernant les cookies",
+    "body": "Outre les cookies nécessaires au fonctionnement du site, nous souhaitons utiliser des cookies de mesure d’audience uniquement pour compter les visites. Si vous refusez, aucune requête de mesure n’est envoyée.",
+    "policyLink": "Politique cookies",
+    "accept": "Accepter",
+    "reject": "Refuser"
   }
 }

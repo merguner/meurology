@@ -24,7 +24,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog',
     '/iletisim',
     '/yasal/kvkk',
-    '/yasal/acik-riza'
+    '/yasal/acik-riza',
+    '/yasal/cerez-politikasi',
+    '/yasal/kullanim-kosullari',
+    '/yasal/tibbi-sorumluluk-reddi'
   ] as const;
 
   const dynamicHrefs = [

@@ -109,6 +109,30 @@ export const pathnames = {
     ar: '/legal/privacy',
     fr: '/mentions-legales/confidentialite'
   },
+  '/yasal/cerez-politikasi': {
+    tr: '/yasal/cerez-politikasi',
+    en: '/legal/cookie-policy',
+    de: '/rechtliches/cookie-richtlinie',
+    ru: '/legal/cookie-policy',
+    ar: '/legal/cookie-policy',
+    fr: '/mentions-legales/politique-cookies'
+  },
+  '/yasal/kullanim-kosullari': {
+    tr: '/yasal/kullanim-kosullari',
+    en: '/legal/terms-of-use',
+    de: '/rechtliches/nutzungsbedingungen',
+    ru: '/legal/terms-of-use',
+    ar: '/legal/terms-of-use',
+    fr: '/mentions-legales/conditions-utilisation'
+  },
+  '/yasal/tibbi-sorumluluk-reddi': {
+    tr: '/yasal/tibbi-sorumluluk-reddi',
+    en: '/legal/medical-disclaimer',
+    de: '/rechtliches/medizinischer-haftungsausschluss',
+    ru: '/legal/medical-disclaimer',
+    ar: '/legal/medical-disclaimer',
+    fr: '/mentions-legales/avertissement-medical'
+  },
   '/yasal/acik-riza': {
     tr: '/yasal/acik-riza',
     en: '/legal/consent',

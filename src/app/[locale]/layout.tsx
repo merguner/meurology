@@ -8,6 +8,7 @@ import { siteConfig } from '@/config/site';
 import { ThemeScript } from '@/components/ThemeScript';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
+import { CookieConsent } from '@/components/CookieConsent';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { JsonLd } from '@/components/JsonLd';
 import { buildAlternates, getPathname } from '@/i18n/navigation';
@@ -108,6 +109,7 @@ export default async function LocaleLayout({
           <main id="main">{children}</main>
           <SiteFooter />
           <FloatingWhatsApp />
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>

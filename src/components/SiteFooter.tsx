@@ -4,6 +4,7 @@ import { navItemsFor } from '@/config/nav';
 import { siteConfig } from '@/config/site';
 import { contactConfig } from '@/config/contact';
 import { SocialLinks } from './SocialLinks';
+import { CookiePrefsButton } from './CookieConsent';
 import { Icon } from './Icon';
 import { getLocale } from 'next-intl/server';
 import { resolveConsultation } from '@/content/consultation';
@@ -142,13 +143,35 @@ export async function SiteFooter() {
                 {t('consent')}
               </Link>
             </li>
+            <li>
+              <Link href="/yasal/cerez-politikasi" className="text-sm text-muted transition-colors hover:text-fg">
+                {t('cookies')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/yasal/kullanim-kosullari" className="text-sm text-muted transition-colors hover:text-fg">
+                {t('terms')}
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/yasal/tibbi-sorumluluk-reddi"
+                className="text-sm text-muted transition-colors hover:text-fg"
+              >
+                {t('disclaimer')}
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-border">
         <div className="container-content flex flex-col gap-3 py-5 text-xs text-muted md:flex-row md:items-center md:justify-between">
-          <p>© {year} {siteConfig.name}. {t('rights')}</p>
+          <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>© {year} {siteConfig.name}. {t('rights')}</span>
+            {/* Analitik yapılandırılmamışsa bu düğme hiç render edilmez. */}
+            <CookiePrefsButton label={t('cookiePrefs')} />
+          </p>
           <p className="max-w-xl md:text-end">{t('medicalDisclaimer')}</p>
         </div>
       </div>

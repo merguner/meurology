@@ -8,6 +8,7 @@ import { PreAssessmentForm } from '@/components/PreAssessmentForm';
 import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { Icon } from '@/components/Icon';
 import { InsuranceInfo } from '@/components/InsuranceInfo';
+import { MapEmbed } from '@/components/MapEmbed';
 
 export async function generateMetadata({
   params
@@ -113,20 +114,14 @@ export default async function ContactPage({
               </li>
             </ul>
 
-            {/* Gömülü Google Haritası (anahtarsız iframe embed) */}
-            <div className="mt-4 overflow-hidden rounded-xl border border-border">
-              <iframe
-                title={t('mapTitle')}
-                src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                  siteConfig.address.mapsQuery
-                )}&hl=${locale}&z=15&output=embed`}
-                width="100%"
-                height="240"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="block w-full border-0"
-              />
-            </div>
+            {/* Google Haritası — tıklanana kadar yüklenmez (çerez politikası). */}
+            <MapEmbed
+              query={siteConfig.address.mapsQuery}
+              locale={locale}
+              title={t('mapTitle')}
+              loadLabel={t('mapLoad')}
+              notice={t('mapNotice')}
+            />
           </div>
 
           {/* SGK / özel sigorta bilgi bloğu (içerik varsa görünür) */}

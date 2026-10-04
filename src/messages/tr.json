@@ -218,7 +218,10 @@
     "addressLabel": "Adres",
     "centerLabel": "Klinik / Ameliyat Merkezi",
     "viewOnMaps": "Haritada görüntüle",
-    "mapTitle": "Klinik konumu — harita"
+    "mapTitle": "Klinik konumu — harita",
+    "mapLoad": "Haritayı yükle",
+    "mapNotice": "Harita Google tarafından sağlanır. Yüklediğinizde IP adresiniz dâhil bazı veriler Google’a iletilebilir.",
+    "callCta": "Ara"
   },
   "Form": {
     "title": "Ön değerlendirme formu",
@@ -251,7 +254,10 @@
   "Legal": {
     "kvkkTitle": "KVKK / GDPR Aydınlatma Metni",
     "consentTitle": "Açık Rıza Metni",
-    "lastUpdated": "Son güncelleme"
+    "lastUpdated": "Son güncelleme",
+    "cookiesTitle": "Çerez Politikası",
+    "termsTitle": "Kullanım Koşulları",
+    "disclaimerTitle": "Tıbbi Sorumluluk Reddi"
   },
   "Footer": {
     "tagline": "Uluslararası hastalar için ürolojik cerrahi ve sağlık turizmi.",
@@ -265,7 +271,11 @@
     "contactTitle": "İletişim",
     "licenseLabel": "T.C. Sağlık Bakanlığı Uluslararası Sağlık Turizmi Yetki Belgesi",
     "diplomaLabel": "Diploma tescil no",
-    "verbisLabel": "VERBİS kayıt no"
+    "verbisLabel": "VERBİS kayıt no",
+    "cookies": "Çerez Politikası",
+    "terms": "Kullanım Koşulları",
+    "disclaimer": "Tıbbi Sorumluluk Reddi",
+    "cookiePrefs": "Çerez tercihleri"
   },
   "NotFound": {
     "title": "Sayfa bulunamadı",
@@ -293,5 +303,12 @@
       "reconstructive": "Rekonstrüktif üroloji",
       "general": "Genel üroloji terimleri"
     }
+  },
+  "Consent": {
+    "title": "Çerez tercihiniz",
+    "body": "Sitenin çalışması için gereken çerezler dışında, yalnızca ziyaret istatistiklerini ölçmek için analitik çerez kullanmak istiyoruz. Reddederseniz hiçbir analitik çağrısı yapılmaz.",
+    "policyLink": "Çerez Politikası",
+    "accept": "Kabul et",
+    "reject": "Reddet"
   }
 }

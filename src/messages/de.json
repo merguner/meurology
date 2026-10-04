@@ -218,7 +218,10 @@
     "addressLabel": "Adresse",
     "centerLabel": "Klinik / Operationszentrum",
     "viewOnMaps": "Auf Karte ansehen",
-    "mapTitle": "Klinikstandort — Karte"
+    "mapTitle": "Klinikstandort — Karte",
+    "mapLoad": "Karte laden",
+    "mapNotice": "Die Karte wird von Google bereitgestellt. Nach dem Laden können bestimmte Daten einschließlich Ihrer IP-Adresse an Google übermittelt werden.",
+    "callCta": "Anrufen"
   },
   "Form": {
     "title": "Vorabbewertungsformular",
@@ -251,7 +254,10 @@
   "Legal": {
     "kvkkTitle": "KVKK / DSGVO-Datenschutzerklärung",
     "consentTitle": "Ausdrückliche Einwilligung",
-    "lastUpdated": "Zuletzt aktualisiert"
+    "lastUpdated": "Zuletzt aktualisiert",
+    "cookiesTitle": "Cookie-Richtlinie",
+    "termsTitle": "Nutzungsbedingungen",
+    "disclaimerTitle": "Medizinischer Haftungsausschluss"
   },
   "Footer": {
     "tagline": "Urologische Chirurgie und Gesundheitstourismus für internationale Patienten.",
@@ -265,7 +271,11 @@
     "contactTitle": "Kontakt",
     "licenseLabel": "Zulassung für internationalen Gesundheitstourismus des Gesundheitsministeriums der Republik Türkei",
     "diplomaLabel": "Approbationsnummer",
-    "verbisLabel": "VERBİS-Registernummer"
+    "verbisLabel": "VERBİS-Registernummer",
+    "cookies": "Cookie-Richtlinie",
+    "terms": "Nutzungsbedingungen",
+    "disclaimer": "Medizinischer Haftungsausschluss",
+    "cookiePrefs": "Cookie-Einstellungen"
   },
   "NotFound": {
     "title": "Seite nicht gefunden",
@@ -293,5 +303,12 @@
       "reconstructive": "Rekonstruktive Urologie",
       "general": "Allgemeine urologische Begriffe"
     }
+  },
+  "Consent": {
+    "title": "Ihre Cookie-Auswahl",
+    "body": "Neben den für den Betrieb der Website nötigen Cookies möchten wir Analyse-Cookies ausschließlich zur Messung von Besuchsstatistiken einsetzen. Bei Ablehnung wird keinerlei Analyseanfrage gesendet.",
+    "policyLink": "Cookie-Richtlinie",
+    "accept": "Akzeptieren",
+    "reject": "Ablehnen"
   }
 }
