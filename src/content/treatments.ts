@@ -183,7 +183,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat; hangi basamağın uygulanacağına göre belirgin biçimde değişir (değerlendirme, botoks veya nöromodülasyon). Kesin teklif, basamak belirlendikten sonra verilir.'
+            'Tutar; hangi basamağın uygulanacağına göre belirgin biçimde değişir (değerlendirme, botoks veya nöromodülasyon). Kesin teklif, basamak belirlendikten sonra verilir.'
         },
         packageIncludes: [
           'Kadın ürolojisi değerlendirmesi ve işeme günlüğü yorumu',
@@ -885,7 +885,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat; yalnızca orşiektomi mi yoksa evreleme ve sonrasında kemoterapi gibi ek tedaviler mi gerekeceğine göre belirgin biçimde değişir. Kesin teklif, patoloji ve evreleme tamamlandıktan sonra verilebilir.'
+            'Tutar; yalnızca orşiektomi mi yoksa evreleme ve sonrasında kemoterapi gibi ek tedaviler mi gerekeceğine göre belirgin biçimde değişir. Kesin teklif, patoloji ve evreleme tamamlandıktan sonra verilebilir.'
         },
         packageIncludes: [
           'Üroloji değerlendirmesi ve skrotal ultrason',
@@ -1591,7 +1591,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat; seçilen yönteme (sentetik askı, otolog fasya askısı veya dolgu maddesi) ve ek değerlendirme gerekip gerekmediğine göre değişir. Kesin teklif, değerlendirme sonrasında verilir.'
+            'Tutar; seçilen yönteme (sentetik askı, otolog fasya askısı veya dolgu maddesi) ve ek değerlendirme gerekip gerekmediğine göre değişir. Kesin teklif, değerlendirme sonrasında verilir.'
         },
         packageIncludes: [
           'Kadın ürolojisi değerlendirmesi ve öksürük testi',
@@ -2280,7 +2280,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat seans başına belirlenir ve birden fazla seans gerekebileceği için toplam maliyet değişkendir. Kesin teklif, tomografi değerlendirmesinden sonra verilir.'
+            'Tutar seans başına belirlenir ve birden fazla seans gerekebileceği için toplam maliyet değişkendir. Kesin teklif, tomografi değerlendirmesinden sonra verilir.'
         },
         packageIncludes: [
           'Üroloji değerlendirmesi, tomografi ve idrar kültürü',
@@ -2984,7 +2984,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat; yalnızca mikro-TESE mi yoksa sperm dondurma ve embriyoloji laboratuvarı hizmetleriyle birlikte mi planlandığına göre değişir. Kesin teklif, tetkikler tamamlandıktan sonra verilir.'
+            'Tutar; yalnızca mikro-TESE mi yoksa sperm dondurma ve embriyoloji laboratuvarı hizmetleriyle birlikte mi planlandığına göre değişir. Kesin teklif, tetkikler tamamlandıktan sonra verilir.'
         },
         packageIncludes: [
           'Androloji değerlendirmesi ve fizik muayene',
@@ -3683,7 +3683,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat; parsiyel mi radikal mi yapılacağına, laparoskopik mi robotik mi yaklaşıldığına ve hastanede kalış süresine göre değişir. Kesin teklif, görüntüleme değerlendirmesinden sonra verilir.'
+            'Tutar; parsiyel mi radikal mi yapılacağına, laparoskopik mi robotik mi yaklaşıldığına ve hastanede kalış süresine göre değişir. Kesin teklif, görüntüleme değerlendirmesinden sonra verilir.'
         },
         packageIncludes: [
           'Üroloji değerlendirmesi ve görüntülemelerin incelenmesi',
@@ -4379,7 +4379,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat; yalnızca TUR-M mi yoksa mesane içi tedavi kürleri veya radikal cerrahi mi gerekeceğine göre belirgin biçimde değişir. Kesin teklif, patoloji sonucu netleştikten sonra verilebilir.'
+            'Tutar; yalnızca TUR-M mi yoksa mesane içi tedavi kürleri veya radikal cerrahi mi gerekeceğine göre belirgin biçimde değişir. Kesin teklif, patoloji sonucu netleştikten sonra verilebilir.'
         },
         packageIncludes: [
           'Üroloji değerlendirmesi, görüntüleme ve idrar sitolojisi',
@@ -5069,7 +5069,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat; seçilen yönteme (plikasyon, greft veya protez ile düzeltme) göre belirgin biçimde değişir. Kesin teklif, değerlendirme sonrasında verilir.'
+            'Tutar; seçilen yönteme (plikasyon, greft veya protez ile düzeltme) göre belirgin biçimde değişir. Kesin teklif, değerlendirme sonrasında verilir.'
         },
         packageIncludes: [
           'Androloji değerlendirmesi ve penil Doppler ultrason',
@@ -5737,7 +5737,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat; tek taraflı mı iki taraflı mı ameliyat yapılacağına ve ek tetkiklere göre değişir. Kesin teklif, değerlendirme sonrasında verilir.'
+            'Tutar; tek taraflı mı iki taraflı mı ameliyat yapılacağına ve ek tetkiklere göre değişir. Kesin teklif, değerlendirme sonrasında verilir.'
         },
         packageIncludes: [
           'Androloji değerlendirmesi ve ayakta fizik muayene',
@@ -8194,7 +8194,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat; taşın hacmine, tek mi birden fazla giriş yolu gerekeceğine ve ek işlem ihtiyacına göre değişir. Kesin teklif, tomografi değerlendirmesinden sonra verilir.'
+            'Tutar; taşın hacmine, tek mi birden fazla giriş yolu gerekeceğine ve ek işlem ihtiyacına göre değişir. Kesin teklif, tomografi değerlendirmesinden sonra verilir.'
         },
         packageIncludes: [
           'Ameliyat öncesi üroloji değerlendirmesi, tomografi ve idrar kültürü',
@@ -9448,7 +9448,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat; taşın boyutuna, tek mi iki taraflı mı işlem yapılacağına ve ek seans gerekip gerekmediğine göre değişir. Kesin teklif, tomografi değerlendirmesinden sonra verilir.'
+            'Tutar; taşın boyutuna, tek mi iki taraflı mı işlem yapılacağına ve ek seans gerekip gerekmediğine göre değişir. Kesin teklif, tomografi değerlendirmesinden sonra verilir.'
         },
         packageIncludes: [
           'İşlem öncesi üroloji değerlendirmesi, tomografi ve idrar kültürü',
@@ -10670,7 +10670,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat, uygulanacak buhar atımı sayısına ve prostat anatomisine göre değişir. Kesin teklif, değerlendirme sonrasında verilir.'
+            'Tutar, uygulanacak buhar atımı sayısına ve prostat anatomisine göre değişir. Kesin teklif, değerlendirme sonrasında verilir.'
         },
         packageIncludes: [
           'İşlem öncesi üroloji değerlendirmesi, ultrason ve akım ölçümü',
@@ -11883,7 +11883,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat; prostat hacmine, kullanılan enerji sistemine ve hastanede kalış süresine göre değişir. Kesin teklif, değerlendirme sonrasında verilir.'
+            'Tutar; prostat hacmine, kullanılan enerji sistemine ve hastanede kalış süresine göre değişir. Kesin teklif, değerlendirme sonrasında verilir.'
         },
         packageIncludes: [
           'Ameliyat öncesi üroloji değerlendirmesi ve tetkikler',
@@ -13091,7 +13091,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat, MR ve biyopsinin birlikte mi yoksa ayrı mı planlandığına göre değişir. Kesin teklif, hangi tetkiklerin gerektiği netleştikten sonra verilir.'
+            'Tutar, MR ve biyopsinin birlikte mi yoksa ayrı mı planlandığına göre değişir. Kesin teklif, hangi tetkiklerin gerektiği netleştikten sonra verilir.'
         },
         packageIncludes: [
           'Multiparametrik prostat MR değerlendirmesi',
@@ -14231,7 +14231,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat seçilen tedaviye göre değişir ve ilgili tedavi sayfasında belirtilir. Kesin teklif, risk grubu ve tedavi planı netleştikten sonra verilir.'
+            'Tutar seçilen tedaviye göre değişir ve ilgili tedavi sayfasında belirtilir. Kesin teklif, risk grubu ve tedavi planı netleştikten sonra verilir.'
         },
         packageIncludes: [
           'Dosya değerlendirmesi ve risk grubunun belirlenmesi',
@@ -16618,7 +16618,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat seçilen yönteme ve kullanılan malzemeye göre değişir. Teklif, ancak cerrahi uygunluk doğrulandıktan sonra verilir.'
+            'Tutar seçilen yönteme ve kullanılan malzemeye göre değişir. Teklif, ancak cerrahi uygunluk doğrulandıktan sonra verilir.'
         },
         packageIncludes: [
           'Değerlendirme, ölçüm ve beklenti görüşmesi',
@@ -17798,7 +17798,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat, seçilen protez tipine ve markasına göre belirgin biçimde değişir. Kesin teklif, protez tipi kararlaştırıldıktan sonra verilir.'
+            'Tutar, seçilen protez tipine ve markasına göre belirgin biçimde değişir. Kesin teklif, protez tipi kararlaştırıldıktan sonra verilir.'
         },
         packageIncludes: [
           'Ameliyat ve hastane yatışı',
@@ -19075,7 +19075,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat; prostat hacmi, işlem süresi, eşlik eden girişimler ve kalış süresine göre değişir. Kesin teklif dosya değerlendirmesi sonrasında verilir.'
+            'Tutar; prostat hacmi, işlem süresi, eşlik eden girişimler ve kalış süresine göre değişir. Kesin teklif dosya değerlendirmesi sonrasında verilir.'
         },
         packageIncludes: [
           'Ameliyat ve hastane yatışı',
@@ -20284,7 +20284,7 @@ export const treatments: Treatment[] = [
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat; prostat hacmi, eşlik eden işlemler ve kalış süresine göre değişir. Kesin teklif ön değerlendirme sonrasında verilir.'
+            'Tutar; prostat hacmi, eşlik eden işlemler ve kalış süresine göre değişir. Kesin teklif ön değerlendirme sonrasında verilir.'
         },
         packageIncludes: [
           'Ameliyat ve hastane yatışı',
@@ -22575,6 +22575,7 @@ export const treatments: Treatment[] = [
   },
   {
     slug: 'bobrek-tasi',
+    lastReviewed: '2026-10-04',
     // TODO-DOGRULA: böbrek taşı EUR fiyat aralığı girilecek (priceRangeEUR).
     icon: 'stone',
     i18n: {
@@ -23404,6 +23405,7 @@ export const treatments: Treatment[] = [
   },
   {
     slug: 'bph-prostat-buyumesi',
+    lastReviewed: '2026-10-04',
     // TODO-DOGRULA: BPH EUR fiyat aralığı girilecek (priceRangeEUR).
     icon: 'prostate',
     i18n: {
@@ -24275,6 +24277,7 @@ export const treatments: Treatment[] = [
   },
   {
     slug: 'androloji',
+    lastReviewed: '2026-10-04',
     icon: 'andrology',
     offersConsultation: true, // mahremiyet öncelikli hastalar için ücretli özel görüşme
     i18n: {
@@ -25086,6 +25089,7 @@ export const treatments: Treatment[] = [
   },
   {
     slug: 'uroonkoloji',
+    lastReviewed: '2026-10-04',
     icon: 'oncology',
     i18n: {
       tr: {
@@ -25897,6 +25901,7 @@ export const treatments: Treatment[] = [
   },
   {
     slug: 'kadin-urolojisi',
+    lastReviewed: '2026-10-04',
     icon: 'female',
     i18n: {
       tr: {
@@ -26726,6 +26731,7 @@ export const treatments: Treatment[] = [
   },
   {
     slug: 'uretroplasti',
+    lastReviewed: '2026-10-04',
     icon: 'urethra',
     category: 'reconstructive',
     i18n: {
@@ -27597,6 +27603,7 @@ export const treatments: Treatment[] = [
   },
   {
     slug: 'piyeloplasti',
+    lastReviewed: '2026-10-04',
     icon: 'kidney',
     category: 'reconstructive',
     i18n: {
@@ -28450,6 +28457,7 @@ export const treatments: Treatment[] = [
   },
   {
     slug: 'fistul-onarimi',
+    lastReviewed: '2026-10-04',
     icon: 'repair',
     category: 'reconstructive',
     i18n: {
@@ -29285,6 +29293,7 @@ export const treatments: Treatment[] = [
   },
   {
     slug: 'ureter-rekonstruksiyonu',
+    lastReviewed: '2026-10-04',
     icon: 'graft',
     category: 'reconstructive',
     i18n: {
