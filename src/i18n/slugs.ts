@@ -24,6 +24,22 @@ export const treatmentSlugMap = {
     ru: 'roboticheskaya-prostatektomiya',
     ar: 'robotic-prostatectomy'
   },
+  rirs: {
+    tr: 'rirs-fleksibl-ureteroskopi',
+    en: 'rirs-flexible-ureteroscopy',
+    de: 'rirs-flexible-ureteroskopie',
+    fr: 'rirs-ureteroscopie-souple',
+    ru: 'rirs-gibkaya-ureteroskopiya',
+    ar: 'rirs-flexible-ureteroscopy'
+  },
+  pcnl: {
+    tr: 'pcnl-perkutan-nefrolitotomi',
+    en: 'pcnl-percutaneous-nephrolithotomy',
+    de: 'pcnl-perkutane-nephrolitholapaxie',
+    fr: 'nlpc-nephrolithotomie-percutanee',
+    ru: 'pcnl-perkutannaya-nefrolitotomiya',
+    ar: 'pcnl-percutaneous-nephrolithotomy'
+  },
   turp: {
     tr: 'turp-prostat-rezeksiyonu',
     en: 'turp-prostate-resection',

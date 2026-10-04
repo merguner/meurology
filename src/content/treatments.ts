@@ -15,6 +15,2465 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
+     * Böbrek taşı hub'ının altındaki perkütan yöntem (prompt m.4.1).
+     * RIRS ile ÜSTÜNLÜK KARŞILAŞTIRMASI YAPILMAZ; PCNL büyük ve geyik
+     * boynuzu taşların yöntemidir. KANAMA en önemli risk olarak açıkça
+     * yazılıdır (nadiren transfüzyon/embolizasyon). Üst kutup girişinde
+     * akciğer zarı riski belirtilmiştir.
+     * Kaynak: EAU Urolithiasis kılavuzu.
+     * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     */
+    slug: 'pcnl',
+    parent: 'bobrek-tasi',
+    lastReviewed: '2026-10-04',
+    icon: 'kidney',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'PCNL: Büyük Böbrek Taşlarında Perkütan Cerrahi',
+        summary:
+          'Böğürden açılan yaklaşık bir santimetrelik bir giriş yoluyla böbreğe ulaşılıp büyük taşların tek seansta temizlendiği yöntem. Geyik boynuzu taşlarda standart yaklaşımdır.',
+        metaTitle: 'PCNL Nedir? Büyük Böbrek Taşı Ameliyatı',
+        metaDescription:
+          'PCNL (perkütan nefrolitotomi) yönteminin kimlere uygulandığı, nasıl yapıldığı, kanama dahil riskleri, iyileşme süreci ve RIRS ile farkları.',
+        quickFacts: {
+          duration: '60–120 dakika',
+          anesthesia: 'Genel anestezi',
+          hospitalStay: '2–3 gece',
+          stayInTurkey: '7–10 gün',
+          returnToWork: '1–2 hafta',
+          flightClearance: '7–10 gün'
+        },
+        definition: [
+          'PCNL (perkütan nefrolitotomi), büyük böbrek taşlarının böğürden açılan küçük bir giriş yoluyla temizlendiği yöntemdir. Görüntüleme eşliğinde böbreğe ince bir iğneyle ulaşılır, bu yol kademeli olarak genişletilerek yaklaşık bir santimetrelik bir kanal oluşturulur ve bu kanaldan nefroskop adı verilen cihaz böbreğin içine gönderilir.',
+          'Taş doğrudan görülerek lazer veya pnömotik enerjiyle parçalanır ve parçalar aynı kanaldan dışarı alınır. RIRS’ten en önemli farkı budur: parçalar idrarla atılmayı beklemek yerine doğrudan çıkarılır. Bu nedenle büyük taş yükünde tek seansta sonuç alma olasılığı daha yüksektir.',
+          'PCNL özellikle geyik boynuzu taşlarda — yani böbreğin toplayıcı sistemini dolduran, dallanmış yapıdaki taşlarda — standart yaklaşım kabul edilir. Bu taşlar bırakıldığında tekrarlayan enfeksiyona ve böbrek işlevinin kalıcı kaybına yol açabilir.',
+          'Giriş kanalının çapı küçültülerek yapılan uygulamalara mini-PCNL denir. Daha küçük kanal, böbrek dokusunda daha az hasar ve genellikle daha az kanama anlamına gelir; buna karşılık parçaların çıkarılması daha uzun sürebilir. Hangi çapın seçileceği taşın büyüklüğüne göre belirlenir.',
+          'EN ÖNEMLİ RİSK KANAMADIR. Böbrek kan damarlarından zengin bir organdır ve içinden geçilerek girilir. Kanamaların çoğu kendiliğinden durur; ancak nadiren kan nakli ya da kanayan damarın radyoloji eşliğinde kapatılması (embolizasyon) gerekebilir. Bu nedenle kan sulandırıcı kullanan hastalarda ilaç düzeni ameliyat öncesinde planlanır.',
+          'İşlem sonunda böbrekle cilt arasına nefrostomi adı verilen bir dren konabilir ya da seçilmiş hastalarda drensiz (tubeless) yaklaşım tercih edilebilir. Bu karar; taşın temizlenme durumuna, kanama miktarına ve böbreğin durumuna göre ameliyat sırasında verilir.'
+        ],
+        eligibility: {
+          suitable: [
+            'Böbrek içinde büyük taşı olan hastalar',
+            'Geyik boynuzu şeklinde, toplayıcı sistemi dolduran taşı olan hastalar',
+            'Alt kutupta yerleşmiş, büyük ve sert taşı olan hastalar',
+            'Vücut dışından taş kırma (ESWL) veya RIRS denenmiş ancak sonuç alınamamış hastalar',
+            'Çok sayıda taşı olan ve tek seansta temizlenmesi hedeflenen hastalar',
+            'Taşın tıkanıklığa ve tekrarlayan enfeksiyona yol açtığı, böbrek işlevinin tehdit altında olduğu durumlar'
+          ],
+          notSuitable: [
+            'Küçük taşı olan hastalar — RIRS veya ESWL daha az girişimsel seçeneklerdir',
+            'Tedavi edilmemiş idrar yolu enfeksiyonu olan hastalar — işlem öncesi mutlaka tedavi edilir',
+            'Kanama bozukluğu kontrol altına alınmamış hastalar — önce bu durum düzenlenir',
+            'Kan sulandırıcı tedavisi kesilemeyen hastalar — RIRS daha uygun olabilir',
+            'Genel anestezi alması uygun olmayan hastalar',
+            'Böbreğe güvenli giriş yolunun bulunamadığı anatomik durumlar'
+          ]
+        },
+        technology: [
+          'Ultrason ve/veya skopi eşliğinde böbreğe giriş',
+          'Standart veya mini çaplı nefroskop',
+          'Lazer veya pnömotik taş kırma sistemi',
+          'Taşsızlığın ameliyat sırasında ve sonrasında görüntülemeyle doğrulanması',
+          'Taşın kimyasal analizi ve tekrarı önlemeye yönelik metabolik değerlendirme'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Böbrek taşı cerrahisinin tüm yöntemleri Doç. Dr. Müslüm Ergün’ün uygulama alanı içindedir. PCNL kararı; taşın boyutu ve yapısı, böbreğin anatomisi, kanama riski ve hastanın eşlik eden hastalıkları birlikte değerlendirilerek verilir.'
+        },
+        timeline: [
+          {
+            when: 'Ameliyat öncesi',
+            title: 'Değerlendirme ve hazırlık',
+            body: 'Kontrastsız tomografi ile taşın hacmi ve dağılımı, böbreğin anatomisi ve güvenli giriş yolu planlanır. İdrar kültürü alınır; enfeksiyon varsa işlem ertelenir. Kan sulandırıcı ilaçların düzeni ayarlanır.'
+          },
+          {
+            when: 'Ameliyat günü',
+            title: 'Giriş ve taşın temizlenmesi',
+            body: 'Genel anestezi altında, görüntüleme eşliğinde böğürden böbreğe ulaşılır. Kanal genişletilir, taş parçalanarak dışarı alınır. İşlem genellikle 60–120 dakika sürer.'
+          },
+          {
+            when: '1. gün',
+            title: 'Dren ve gözlem',
+            body: 'Nefrostomi dreni takıldıysa idrar rengi ve kanama izlenir. Ağrı kontrol altına alınır ve erken dönemde ayağa kalkılması desteklenir.'
+          },
+          {
+            when: '2–3. gün',
+            title: 'Dren çıkarımı ve taburculuk',
+            body: 'Kanama azaldığında ve idrar berraklaştığında dren çıkarılır. Görüntülemeyle kalan taş olup olmadığı değerlendirilir ve hasta taburcu edilir.'
+          },
+          {
+            when: '1–2. hafta',
+            title: 'Toparlanma',
+            body: 'Böğürdeki giriş yerinde hassasiyet azalır. Masa başı işe dönülebilir; ağır kaldırma ve zorlu egzersiz bu dönemde yapılmaz.'
+          },
+          {
+            when: '1–3. ay',
+            title: 'Kontrol ve koruma',
+            body: 'Görüntülemeyle taşsızlık doğrulanır. Taş analizi sonucuna göre sıvı, beslenme ve gerekirse ilaç içeren koruma planı uygulanır.'
+          }
+        ],
+        risks: [
+          'KANAMA: en önemli risktir. Çoğu kanama kendiliğinden durur; nadiren kan nakli veya kanayan damarın radyoloji eşliğinde kapatılması (embolizasyon) gerekebilir',
+          'Enfeksiyon ve kan zehirlenmesi (ürosepsis) — işlem öncesi idrar kültürü ve enfeksiyonun tedavisi bu nedenle zorunludur; ateş ve titreme olursa vakit kaybetmeden başvurulmalıdır',
+          'Akciğer zarına (plevra) girilmesi — yalnızca böbreğin üst kutbundan girildiğinde söz konusudur; gerekirse göğüs tüpü takılır',
+          'Komşu organların yaralanması — bağırsak, karaciğer veya dalak; çok seyrek görülür',
+          'Geride taş parçası kalması ve ikinci bir seans ya da ek işlem gerekmesi',
+          'İdrar kaçağı ve drenin daha uzun süre kalması',
+          'Taşın tekrarlaması — koruyucu önlem alınmazsa taş hastalığı tekrar edebilir'
+        ],
+        alternatives: [
+          'RIRS (esnek endoskopla kapalı yöntem) — küçük ve orta boyutlu taşlarda',
+          'Mini-PCNL — daha küçük giriş kanalıyla, orta büyüklükteki taşlarda',
+          'Vücut dışından ses dalgasıyla taş kırma (ESWL) — uygun boyut ve yerleşimdeki taşlarda',
+          'Birden fazla yöntemin birlikte planlanması — çok yüklü taşlarda',
+          'Laparoskopik veya açık taş cerrahisi — çok seyrek, özel anatomik durumlarda'
+        ],
+        comparison: {
+          title: 'PCNL ile RIRS karşılaştırması',
+          columns: ['Ölçüt', 'PCNL', 'RIRS'],
+          rows: [
+            { label: 'Giriş yolu', values: ['Böğürden yaklaşık 1 cm', 'İdrar yolundan, kesi yok'] },
+            { label: 'Uygun taş boyutu', values: ['Büyük ve geyik boynuzu', 'Küçük–orta'] },
+            { label: 'Taş parçalarının akıbeti', values: ['Doğrudan dışarı alınır', 'Çoğunlukla idrarla atılması beklenir'] },
+            { label: 'Tek seansta taşsızlık', values: ['Büyük taşlarda olasılık daha yüksek', 'Küçük taşlarda yüksek'] },
+            { label: 'Kanama riski', values: ['Daha yüksek', 'Daha düşük'] },
+            { label: 'Hastanede kalış', values: ['2–3 gece', 'Günübirlik veya 1 gece'] },
+            { label: 'İşe dönüş', values: ['1–2 hafta', '3–7 gün'] }
+          ],
+          note:
+            'İki yöntem birbirinin alternatifi değil, farklı taş yüklerinin çözümüdür. Taş büyüdükçe PCNL, küçüldükçe RIRS öne çıkar. Bazı hastalarda ikisi aynı tedavi planı içinde birlikte kullanılır.'
+        },
+        recovery: [
+          {
+            period: 'İlk 24 saat',
+            body: 'Hastanede gözlem altında kalınır. İdrarda kan beklenen bir bulgudur. Ağrı ilaçla kontrol altına alınır ve erken ayağa kalkış desteklenir.'
+          },
+          {
+            period: '2–3. gün',
+            body: 'Kanama azaldığında dren çıkarılır. Giriş yerinde hassasiyet olabilir. Taburculuk bu dönemde gerçekleşir.'
+          },
+          {
+            period: '1. hafta',
+            body: 'Hafif yürüyüş serbesttir. Ağır kaldırma, zorlu egzersiz ve ıkınma yasaktır. Bol sıvı alımı önerilir.'
+          },
+          {
+            period: '2. hafta',
+            body: 'Masa başı işe dönülebilir. Giriş yerindeki hassasiyet büyük ölçüde geçmiştir.'
+          },
+          {
+            period: '1–3. ay',
+            body: 'Görüntülemeyle taşsızlık doğrulanır. Taş analizine göre koruyucu plan uygulanmaya başlanır.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat; taşın hacmine, tek mi birden fazla giriş yolu gerekeceğine ve ek işlem ihtiyacına göre değişir. Kesin teklif, tomografi değerlendirmesinden sonra verilir.'
+        },
+        packageIncludes: [
+          'Ameliyat öncesi üroloji değerlendirmesi, tomografi ve idrar kültürü',
+          'PCNL ameliyatı ve anestezi',
+          'Hastanede 2–3 gece konaklama',
+          'Nefrostomi dreni bakımı ve çıkarılması',
+          'Ameliyat sonrası kontrol görüntülemesi',
+          'Taşın kimyasal analizi ve koruyucu öneriler',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve ülkenize döndükten sonra uzaktan takip'
+        ],
+        faqs: [
+          {
+            q: 'PCNL’de ne kadar büyüklükte bir kesi yapılıyor?',
+            a: 'Böğürde yaklaşık bir santimetrelik tek bir giriş yeri açılır. Bu, açık ameliyattaki büyük kesiyle karşılaştırılamayacak kadar küçüktür ve iyileştiğinde küçük bir iz bırakır. Mini-PCNL’de bu çap daha da küçüktür.'
+          },
+          {
+            q: 'Neden RIRS yerine PCNL öneriliyor?',
+            a: 'Taşın büyüklüğü ve yapısı nedeniyle. PCNL’de parçalar doğrudan dışarı alındığı için büyük taş yükünde tek seansta sonuç alma olasılığı daha yüksektir. Geyik boynuzu taşlarda bu yöntem standart kabul edilir. Küçük taşlarda ise RIRS daha az girişimsel olduğu için tercih edilir.'
+          },
+          {
+            q: 'En önemli risk nedir?',
+            a: 'Kanamadır. Böbrek kan damarlarından zengin bir organdır ve içinden geçilerek girilir. Kanamaların çoğu kendiliğinden durur; nadiren kan nakli veya kanayan damarın radyoloji eşliğinde kapatılması gerekebilir. Bu nedenle kan sulandırıcı kullanıyorsanız ilaç düzeniniz ameliyat öncesinde planlanır.'
+          },
+          {
+            q: 'Akciğerime zarar gelir mi?',
+            a: 'Bu risk yalnızca böbreğin üst kutbundan girilmesi gerektiğinde söz konusudur ve akciğer zarına girilmesi anlamına gelir. Giriş yolu görüntüleme eşliğinde bu riski en aza indirecek şekilde planlanır. Gerekirse geçici bir göğüs tüpü takılır.'
+          },
+          {
+            q: 'Nefrostomi dreni nedir, mutlaka takılır mı?',
+            a: 'Böbrekle cilt arasına konan, idrarı dışarı alan bir borudur. Her hastada takılmaz; taş tam temizlenmişse, kanama azsa ve böbrek uygunsa drensiz (tubeless) yaklaşım tercih edilebilir. Karar ameliyat sırasında verilir.'
+          },
+          {
+            q: 'Taşımın tamamı tek seansta temizlenir mi?',
+            a: 'Büyük taşlarda tek seansta temizleme olasılığı diğer yöntemlere göre daha yüksektir, ancak garanti değildir. Çok yüklü veya çok dallanmış taşlarda ikinci bir giriş yolu, ikinci bir seans ya da RIRS ile tamamlama planlanabilir. Bu baştan konuşulur.'
+          },
+          {
+            q: 'Ameliyattan sonra idrarımda kan olması normal mi?',
+            a: 'Evet, ilk günlerde beklenen bir bulgudur ve giderek azalır. Koyu renkli, pıhtılı kanama, ateş veya giderek artan ağrı olursa vakit kaybetmeden başvurulmalıdır.'
+          },
+          {
+            q: 'Böbreğime kalıcı zarar verir mi?',
+            a: 'Giriş kanalı böbrek dokusundan geçer, ancak bu kanal iyileşir. Buna karşılık geyik boynuzu gibi büyük taşların bırakılması tekrarlayan enfeksiyona ve böbrek işlevinin kalıcı kaybına yol açabilir. Dolayısıyla çoğu durumda tedavi etmemenin riski, tedavi etmenin riskinden daha büyüktür.'
+          },
+          {
+            q: 'Taşım tekrar oluşur mu?',
+            a: 'Koruyucu önlem alınmazsa taş hastalığı tekrar edebilir. Çıkarılan taşın kimyasal analizi yapılır ve sonuca göre sıvı alımı, beslenme ve gerekirse ilaç içeren bir koruma planı oluşturulur.'
+          },
+          {
+            q: 'Ne zaman uçabilir ve işe dönebilirim?',
+            a: 'Genellikle 7–10 gün sonra uçuşa izin verilir; yurt dışından gelen hastalar için 7–10 günlük kalış planlanır. Masa başı işe 1–2 hafta içinde dönülebilir; ağır fiziksel iş için 4–6 hafta beklenmesi önerilir.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      },
+      en: {
+        title: 'PCNL: Percutaneous Surgery for Large Kidney Stones',
+        summary:
+          'A method in which the kidney is reached through an entry of about one centimetre in the flank and large stones are cleared in a single sitting. It is the standard approach for staghorn stones.',
+        metaTitle: 'What Is PCNL? Surgery for Large Kidney Stones',
+        metaDescription:
+          'Who PCNL (percutaneous nephrolithotomy) is used for, how it is carried out, its risks including bleeding, the recovery process and how it differs from RIRS.',
+        quickFacts: {
+          duration: '60–120 minutes',
+          anesthesia: 'General anaesthesia',
+          hospitalStay: '2–3 nights',
+          stayInTurkey: '7–10 days',
+          returnToWork: '1–2 weeks',
+          flightClearance: '7–10 days'
+        },
+        definition: [
+          'PCNL (percutaneous nephrolithotomy) clears large kidney stones through a small entry made in the flank. Under imaging guidance the kidney is reached with a fine needle, this tract is widened in stages to create a channel of about one centimetre, and a device called a nephroscope is passed through it into the kidney.',
+          'The stone is seen directly and broken up with laser or pneumatic energy, and the fragments are removed through the same channel. This is the most important difference from RIRS: rather than waiting for the fragments to pass with the urine, they are taken out directly. For a large stone burden the chance of clearing everything in one sitting is therefore higher.',
+          'PCNL is regarded as the standard approach particularly for staghorn stones — branched stones that fill the collecting system of the kidney. Left in place, these stones can lead to recurrent infection and permanent loss of kidney function.',
+          'Procedures carried out through a narrower tract are called mini-PCNL. A smaller channel means less damage to the kidney tissue and generally less bleeding; on the other hand, removing the fragments can take longer. Which calibre is chosen depends on the size of the stone.',
+          'THE MOST IMPORTANT RISK IS BLEEDING. The kidney is an organ rich in blood vessels, and access is gained by passing through it. Most bleeding stops on its own; rarely, a blood transfusion or closing the bleeding vessel under radiological guidance (embolisation) may be needed. For this reason the medication schedule of patients on blood thinners is planned before surgery.',
+          'At the end of the procedure a drain called a nephrostomy may be placed between the kidney and the skin, or in selected patients a tubeless approach may be preferred. This decision is taken during the operation according to how completely the stone has been cleared, how much bleeding there has been and the condition of the kidney.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients with a large stone inside the kidney',
+            'Patients with a staghorn stone that fills the collecting system',
+            'Patients with a large, hard stone sitting in the lower pole',
+            'Patients in whom shock wave lithotripsy (ESWL) or RIRS has been tried without success',
+            'Patients with multiple stones where clearance in a single sitting is the aim',
+            'Situations where the stone causes obstruction and recurrent infection and kidney function is under threat'
+          ],
+          notSuitable: [
+            'Patients with a small stone — RIRS or ESWL are less invasive options',
+            'Patients with an untreated urinary tract infection — this must be treated before the procedure',
+            'Patients with an uncontrolled bleeding disorder — this is corrected first',
+            'Patients whose blood-thinning treatment cannot be interrupted — RIRS may be more appropriate',
+            'Patients for whom general anaesthesia is unsuitable',
+            'Anatomical situations in which no safe tract to the kidney can be found'
+          ]
+        },
+        technology: [
+          'Access to the kidney under ultrasound and/or fluoroscopic guidance',
+          'Standard or mini-calibre nephroscope',
+          'Laser or pneumatic lithotripsy system',
+          'Confirmation of stone clearance by imaging during and after the operation',
+          'Chemical analysis of the stone and metabolic assessment aimed at preventing recurrence'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'All methods of kidney stone surgery fall within Assoc. Prof. Müslüm Ergün’s area of practice. The decision to perform PCNL is made by weighing the size and structure of the stone, the anatomy of the kidney, the bleeding risk and the patient’s accompanying illnesses together.'
+        },
+        timeline: [
+          {
+            when: 'Before surgery',
+            title: 'Assessment and preparation',
+            body: 'A non-contrast CT scan establishes the volume and distribution of the stone, the anatomy of the kidney and a safe route of entry. A urine culture is taken; if there is infection the procedure is postponed. The schedule for blood-thinning medication is arranged.'
+          },
+          {
+            when: 'Day of surgery',
+            title: 'Access and clearing the stone',
+            body: 'Under general anaesthesia and imaging guidance the kidney is reached through the flank. The channel is widened, the stone is broken up and the fragments removed. The procedure usually takes 60–120 minutes.'
+          },
+          {
+            when: 'Day 1',
+            title: 'Drain and observation',
+            body: 'If a nephrostomy drain has been placed, the colour of the urine and any bleeding are monitored. Pain is brought under control and getting up early is encouraged.'
+          },
+          {
+            when: 'Days 2–3',
+            title: 'Drain removal and discharge',
+            body: 'Once the bleeding settles and the urine clears, the drain is removed. Imaging establishes whether any stone remains and the patient is discharged.'
+          },
+          {
+            when: 'Weeks 1–2',
+            title: 'Recovery',
+            body: 'Tenderness at the entry site in the flank lessens. A return to desk work is possible; heavy lifting and strenuous exercise are not done during this period.'
+          },
+          {
+            when: 'Months 1–3',
+            title: 'Check-up and prevention',
+            body: 'Imaging confirms that the kidney is stone-free. According to the stone analysis, a protective plan covering fluids, diet and, where needed, medication is put into practice.'
+          }
+        ],
+        risks: [
+          'BLEEDING: the most important risk. Most bleeding stops on its own; rarely, a blood transfusion or closing the bleeding vessel under radiological guidance (embolisation) may be needed',
+          'Infection and blood poisoning (urosepsis) — this is why a urine culture before the procedure and treatment of any infection are compulsory; fever and shivering require immediate medical attention',
+          'Entering the lining of the lung (pleura) — only relevant when access is through the upper pole of the kidney; a chest drain is placed if needed',
+          'Injury to neighbouring organs — bowel, liver or spleen; very uncommon',
+          'Fragments of stone left behind, requiring a second sitting or a further procedure',
+          'Urine leakage and the drain having to stay in longer',
+          'Recurrence of the stone — stone disease can come back if preventive measures are not taken'
+        ],
+        alternatives: [
+          'RIRS (the closed method with a flexible endoscope) — for small and moderately sized stones',
+          'Mini-PCNL — through a narrower tract, for moderately sized stones',
+          'Shock wave lithotripsy (ESWL) from outside the body — for stones of suitable size and position',
+          'Planning more than one method together — for very heavy stone burdens',
+          'Laparoscopic or open stone surgery — very rarely, in special anatomical situations'
+        ],
+        comparison: {
+          title: 'PCNL compared with RIRS',
+          columns: ['Criterion', 'PCNL', 'RIRS'],
+          rows: [
+            { label: 'Route of entry', values: ['About 1 cm in the flank', 'Through the urinary passage, no incision'] },
+            { label: 'Suitable stone size', values: ['Large and staghorn', 'Small to moderate'] },
+            { label: 'What happens to the fragments', values: ['Removed directly', 'Mostly left to pass with the urine'] },
+            { label: 'Stone-free in one sitting', values: ['Higher chance for large stones', 'High for small stones'] },
+            { label: 'Bleeding risk', values: ['Higher', 'Lower'] },
+            { label: 'Hospital stay', values: ['2–3 nights', 'Day case or 1 night'] },
+            { label: 'Return to work', values: ['1–2 weeks', '3–7 days'] }
+          ],
+          note:
+            'The two methods are not alternatives to one another but solutions to different stone burdens. The larger the stone, the more PCNL comes to the fore; the smaller it is, the more RIRS does. In some patients both are used within the same treatment plan.'
+        },
+        recovery: [
+          {
+            period: 'First 24 hours',
+            body: 'The patient stays in hospital under observation. Blood in the urine is an expected finding. Pain is controlled with medication and getting up early is encouraged.'
+          },
+          {
+            period: 'Days 2–3',
+            body: 'Once the bleeding settles the drain is removed. There may be tenderness at the entry site. Discharge takes place during this period.'
+          },
+          {
+            period: 'Week 1',
+            body: 'Gentle walking is allowed. Heavy lifting, strenuous exercise and straining are not. Plenty of fluids are advised.'
+          },
+          {
+            period: 'Week 2',
+            body: 'A return to desk work is possible. The tenderness at the entry site has largely gone.'
+          },
+          {
+            period: 'Months 1–3',
+            body: 'Imaging confirms that the kidney is stone-free. The preventive plan based on the stone analysis is put into practice.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies with the volume of the stone, whether one or more tracts are needed and whether a further procedure is required. A firm quotation is given after the CT scan has been assessed.'
+        },
+        packageIncludes: [
+          'Pre-operative urological assessment, CT scan and urine culture',
+          'The PCNL operation and anaesthesia',
+          '2–3 nights in hospital',
+          'Care and removal of the nephrostomy drain',
+          'Post-operative check imaging',
+          'Chemical analysis of the stone and preventive advice',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and remote follow-up after you return home'
+        ],
+        faqs: [
+          {
+            q: 'How big an incision is made for PCNL?',
+            a: 'A single entry of about one centimetre is made in the flank. This is incomparably smaller than the large incision of open surgery and leaves a small mark once healed. In mini-PCNL the calibre is smaller still.'
+          },
+          {
+            q: 'Why is PCNL being recommended rather than RIRS?',
+            a: 'Because of the size and structure of the stone. In PCNL the fragments are removed directly, so for a large stone burden the chance of clearing everything in one sitting is higher. For staghorn stones this method is regarded as standard. For small stones RIRS is preferred because it is less invasive.'
+          },
+          {
+            q: 'What is the most important risk?',
+            a: 'Bleeding. The kidney is an organ rich in blood vessels and access is gained by passing through it. Most bleeding stops on its own; rarely, a transfusion or closing the bleeding vessel under radiological guidance may be needed. This is why, if you take blood thinners, your medication schedule is planned before surgery.'
+          },
+          {
+            q: 'Could my lung be harmed?',
+            a: 'This risk only arises when access has to be made through the upper pole of the kidney, and it means entering the lining of the lung. The route of entry is planned under imaging guidance so as to minimise this risk. A temporary chest drain is placed if needed.'
+          },
+          {
+            q: 'What is a nephrostomy drain — is one always placed?',
+            a: 'It is a tube placed between the kidney and the skin that carries urine out. It is not placed in every patient; if the stone has been completely cleared, bleeding is minimal and the kidney is suitable, a tubeless approach may be preferred. The decision is made during the operation.'
+          },
+          {
+            q: 'Will my stone be cleared completely in one sitting?',
+            a: 'For large stones the chance of clearance in one sitting is higher than with other methods, but it is not guaranteed. For very heavy or highly branched stones a second tract, a second sitting or completion with RIRS may be planned. This is discussed from the outset.'
+          },
+          {
+            q: 'Is blood in my urine after the operation normal?',
+            a: 'Yes, it is an expected finding in the first few days and steadily lessens. Dark bleeding with clots, fever or steadily increasing pain requires prompt medical attention.'
+          },
+          {
+            q: 'Will it cause lasting harm to my kidney?',
+            a: 'The access tract passes through kidney tissue, but this tract heals. Against that, leaving a large stone such as a staghorn in place can lead to recurrent infection and permanent loss of kidney function. In most situations, therefore, the risk of not treating is greater than the risk of treating.'
+          },
+          {
+            q: 'Will my stone come back?',
+            a: 'Stone disease can recur if preventive measures are not taken. The retrieved stone is analysed chemically and, according to the result, a protective plan covering fluid intake, diet and, where needed, medication is drawn up.'
+          },
+          {
+            q: 'When can I fly and return to work?',
+            a: 'Flying is usually permitted after 7–10 days; a stay of 7–10 days is planned for patients travelling from abroad. A return to desk work is possible within 1–2 weeks; for heavy physical work, waiting 4–6 weeks is advised.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      },
+      de: {
+        title: 'PCNL: perkutane Chirurgie bei großen Nierensteinen',
+        summary:
+          'Ein Verfahren, bei dem die Niere über einen etwa einen Zentimeter großen Zugang in der Flanke erreicht und große Steine in einer Sitzung entfernt werden. Bei Ausgusssteinen gilt es als Standardvorgehen.',
+        metaTitle: 'Was ist die PCNL? Operation bei großen Nierensteinen',
+        metaDescription:
+          'Bei wem die PCNL (perkutane Nephrolitholapaxie) eingesetzt wird, wie sie abläuft, ihre Risiken einschließlich Blutung, der Heilungsverlauf und die Unterschiede zur RIRS.',
+        quickFacts: {
+          duration: '60–120 Minuten',
+          anesthesia: 'Vollnarkose',
+          hospitalStay: '2–3 Nächte',
+          stayInTurkey: '7–10 Tage',
+          returnToWork: '1–2 Wochen',
+          flightClearance: '7–10 Tage'
+        },
+        definition: [
+          'Bei der PCNL (perkutane Nephrolitholapaxie) werden große Nierensteine über einen kleinen Zugang in der Flanke entfernt. Unter bildgebender Kontrolle wird die Niere mit einer feinen Nadel erreicht, dieser Weg wird schrittweise auf etwa einen Zentimeter erweitert, und durch diesen Kanal wird ein Nephroskop genanntes Gerät in die Niere eingeführt.',
+          'Der Stein wird unter direkter Sicht mit Laser- oder pneumatischer Energie zerkleinert, und die Fragmente werden durch denselben Kanal entfernt. Das ist der wichtigste Unterschied zur RIRS: Statt auf den Abgang der Fragmente mit dem Urin zu warten, werden sie unmittelbar herausgeholt. Bei großer Steinlast ist die Chance höher, in einer Sitzung alles zu entfernen.',
+          'Als Standardvorgehen gilt die PCNL insbesondere bei Ausgusssteinen — also verzweigten Steinen, die das Hohlsystem der Niere ausfüllen. Bleiben solche Steine liegen, können sie zu wiederkehrenden Infekten und zum dauerhaften Verlust der Nierenfunktion führen.',
+          'Eingriffe über einen schmaleren Kanal heißen Mini-PCNL. Ein kleinerer Kanal bedeutet weniger Schädigung des Nierengewebes und in der Regel weniger Blutung; dafür kann das Herausholen der Fragmente länger dauern. Welcher Durchmesser gewählt wird, richtet sich nach der Größe des Steins.',
+          'DAS WICHTIGSTE RISIKO IST DIE BLUTUNG. Die Niere ist ein gefäßreiches Organ, und der Zugang führt durch sie hindurch. Die meisten Blutungen kommen von selbst zum Stillstand; selten sind eine Bluttransfusion oder der radiologisch gesteuerte Verschluss des blutenden Gefäßes (Embolisation) nötig. Deshalb wird bei Patienten unter Blutverdünnern das Medikamentenschema vor der Operation geplant.',
+          'Am Ende des Eingriffs kann zwischen Niere und Haut eine Drainage, die sogenannte Nephrostomie, eingelegt werden, oder es wird bei ausgewählten Patienten ein drainagefreies Vorgehen bevorzugt. Diese Entscheidung fällt während der Operation nach dem Grad der Steinfreiheit, dem Ausmaß der Blutung und dem Zustand der Niere.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patienten mit einem großen Stein in der Niere',
+            'Patienten mit einem Ausgussstein, der das Hohlsystem ausfüllt',
+            'Patienten mit einem großen, harten Stein im unteren Kelch',
+            'Patienten, bei denen Stoßwellenbehandlung (ESWL) oder RIRS ohne Erfolg versucht wurde',
+            'Patienten mit zahlreichen Steinen, bei denen die Entfernung in einer Sitzung angestrebt wird',
+            'Situationen, in denen der Stein eine Abflussbehinderung und wiederkehrende Infekte verursacht und die Nierenfunktion bedroht ist'
+          ],
+          notSuitable: [
+            'Patienten mit kleinem Stein — RIRS oder ESWL sind weniger eingreifende Optionen',
+            'Patienten mit unbehandeltem Harnwegsinfekt — dieser wird vor dem Eingriff unbedingt behandelt',
+            'Patienten mit nicht eingestellter Gerinnungsstörung — diese wird zuerst korrigiert',
+            'Patienten, deren Blutverdünnung nicht unterbrochen werden kann — die RIRS kann geeigneter sein',
+            'Patienten, für die eine Vollnarkose nicht infrage kommt',
+            'Anatomische Situationen, in denen kein sicherer Zugangsweg zur Niere gefunden wird'
+          ]
+        },
+        technology: [
+          'Zugang zur Niere unter Ultraschall- und/oder Durchleuchtungskontrolle',
+          'Nephroskop in Standard- oder Mini-Kaliber',
+          'Laser- oder pneumatisches Lithotripsiesystem',
+          'Bestätigung der Steinfreiheit durch Bildgebung während und nach der Operation',
+          'Chemische Analyse des Steins und Stoffwechselabklärung zur Vorbeugung eines Rückfalls'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Sämtliche Verfahren der Nierensteinchirurgie gehören zum Tätigkeitsbereich von Doz. Dr. Müslüm Ergün. Die Entscheidung zur PCNL fällt unter gemeinsamer Abwägung von Größe und Struktur des Steins, Anatomie der Niere, Blutungsrisiko und Begleiterkrankungen des Patienten.'
+        },
+        timeline: [
+          {
+            when: 'Vor der Operation',
+            title: 'Abklärung und Vorbereitung',
+            body: 'Eine Computertomographie ohne Kontrastmittel bestimmt Volumen und Verteilung des Steins, die Anatomie der Niere und einen sicheren Zugangsweg. Eine Urinkultur wird abgenommen; bei einem Infekt wird der Eingriff verschoben. Das Schema der Blutverdünner wird angepasst.'
+          },
+          {
+            when: 'Operationstag',
+            title: 'Zugang und Entfernung des Steins',
+            body: 'In Vollnarkose und unter bildgebender Kontrolle wird die Niere über die Flanke erreicht. Der Kanal wird erweitert, der Stein zerkleinert und herausgeholt. Der Eingriff dauert meist 60–120 Minuten.'
+          },
+          {
+            when: 'Tag 1',
+            title: 'Drainage und Überwachung',
+            body: 'Wurde eine Nephrostomie eingelegt, werden Urinfarbe und Blutung überwacht. Der Schmerz wird kontrolliert und frühes Aufstehen gefördert.'
+          },
+          {
+            when: 'Tag 2–3',
+            title: 'Entfernung der Drainage und Entlassung',
+            body: 'Lässt die Blutung nach und klart der Urin auf, wird die Drainage gezogen. Bildgebend wird geprüft, ob Steinreste verblieben sind, und der Patient wird entlassen.'
+          },
+          {
+            when: 'Woche 1–2',
+            title: 'Erholung',
+            body: 'Die Empfindlichkeit an der Eintrittsstelle in der Flanke lässt nach. Die Rückkehr an den Schreibtisch ist möglich; schweres Heben und anstrengender Sport unterbleiben in dieser Zeit.'
+          },
+          {
+            when: 'Monat 1–3',
+            title: 'Kontrolle und Vorbeugung',
+            body: 'Die Steinfreiheit wird bildgebend bestätigt. Nach der Steinanalyse wird ein Schutzplan mit Trinkmenge, Ernährung und bei Bedarf Medikamenten umgesetzt.'
+          }
+        ],
+        risks: [
+          'BLUTUNG: das wichtigste Risiko. Die meisten Blutungen kommen von selbst zum Stillstand; selten sind eine Bluttransfusion oder der radiologisch gesteuerte Verschluss des blutenden Gefäßes (Embolisation) nötig',
+          'Infektion und Blutvergiftung (Urosepsis) — deshalb sind eine Urinkultur vor dem Eingriff und die Behandlung eines Infekts zwingend; bei Fieber und Schüttelfrost ist unverzüglich ärztliche Hilfe erforderlich',
+          'Eröffnung des Lungenfells (Pleura) — nur relevant, wenn der Zugang über den oberen Nierenpol erfolgt; bei Bedarf wird eine Thoraxdrainage eingelegt',
+          'Verletzung von Nachbarorganen — Darm, Leber oder Milz; sehr selten',
+          'Zurückgebliebene Steinfragmente, die eine zweite Sitzung oder einen weiteren Eingriff erfordern',
+          'Urinleckage und längeres Verbleiben der Drainage',
+          'Erneute Steinbildung — ohne vorbeugende Maßnahmen kann das Steinleiden wiederkehren'
+        ],
+        alternatives: [
+          'RIRS (geschlossenes Verfahren mit flexiblem Endoskop) — bei kleinen und mittelgroßen Steinen',
+          'Mini-PCNL — über einen schmaleren Zugang, bei mittelgroßen Steinen',
+          'Stoßwellenbehandlung von außen (ESWL) — bei Steinen geeigneter Größe und Lage',
+          'Gemeinsame Planung mehrerer Verfahren — bei sehr großer Steinlast',
+          'Laparoskopische oder offene Steinchirurgie — sehr selten, bei besonderen anatomischen Verhältnissen'
+        ],
+        comparison: {
+          title: 'PCNL im Vergleich zur RIRS',
+          columns: ['Kriterium', 'PCNL', 'RIRS'],
+          rows: [
+            { label: 'Zugangsweg', values: ['Etwa 1 cm in der Flanke', 'Über die Harnwege, kein Schnitt'] },
+            { label: 'Geeignete Steingröße', values: ['Groß und Ausgussstein', 'Klein bis mittelgroß'] },
+            { label: 'Verbleib der Fragmente', values: ['Werden unmittelbar entfernt', 'Gehen meist mit dem Urin ab'] },
+            { label: 'Steinfreiheit in einer Sitzung', values: ['Bei großen Steinen höhere Chance', 'Bei kleinen Steinen hoch'] },
+            { label: 'Blutungsrisiko', values: ['Höher', 'Geringer'] },
+            { label: 'Klinikaufenthalt', values: ['2–3 Nächte', 'Ambulant oder 1 Nacht'] },
+            { label: 'Rückkehr zur Arbeit', values: ['1–2 Wochen', '3–7 Tage'] }
+          ],
+          note:
+            'Die beiden Verfahren sind keine Alternativen zueinander, sondern Lösungen für unterschiedliche Steinlasten. Je größer der Stein, desto mehr tritt die PCNL hervor; je kleiner, desto mehr die RIRS. Bei manchen Patienten werden beide innerhalb desselben Behandlungsplans eingesetzt.'
+        },
+        recovery: [
+          {
+            period: 'Erste 24 Stunden',
+            body: 'Der Patient bleibt unter Überwachung in der Klinik. Blut im Urin ist ein zu erwartender Befund. Der Schmerz wird medikamentös kontrolliert und frühes Aufstehen gefördert.'
+          },
+          {
+            period: 'Tag 2–3',
+            body: 'Lässt die Blutung nach, wird die Drainage gezogen. An der Eintrittsstelle kann es empfindlich sein. Die Entlassung erfolgt in dieser Zeit.'
+          },
+          {
+            period: 'Woche 1',
+            body: 'Leichtes Gehen ist erlaubt. Schweres Heben, anstrengender Sport und Pressen sind untersagt. Reichliches Trinken wird empfohlen.'
+          },
+          {
+            period: 'Woche 2',
+            body: 'Die Rückkehr an den Schreibtisch ist möglich. Die Empfindlichkeit an der Eintrittsstelle ist weitgehend abgeklungen.'
+          },
+          {
+            period: 'Monat 1–3',
+            body: 'Die Steinfreiheit wird bildgebend bestätigt. Der auf der Steinanalyse beruhende Vorbeugeplan wird umgesetzt.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Der Preis richtet sich nach dem Volumen des Steins, danach, ob ein oder mehrere Zugangswege nötig sind, und nach dem Bedarf an weiteren Eingriffen. Ein verbindliches Angebot erfolgt nach Beurteilung der Computertomographie.'
+        },
+        packageIncludes: [
+          'Urologische Abklärung, Computertomographie und Urinkultur vor der Operation',
+          'PCNL-Operation und Narkose',
+          '2–3 Nächte stationärer Aufenthalt',
+          'Pflege und Entfernung der Nephrostomie-Drainage',
+          'Kontrollbildgebung nach der Operation',
+          'Chemische Analyse des Steins und Empfehlungen zur Vorbeugung',
+          'Transfers Flughafen–Krankenhaus–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und Fernbetreuung nach Ihrer Rückkehr'
+        ],
+        faqs: [
+          {
+            q: 'Wie groß ist der Schnitt bei der PCNL?',
+            a: 'In der Flanke wird eine einzelne Eintrittsstelle von etwa einem Zentimeter angelegt. Das ist unvergleichlich kleiner als der große Schnitt einer offenen Operation und hinterlässt nach der Heilung ein kleines Mal. Bei der Mini-PCNL ist der Durchmesser noch geringer.'
+          },
+          {
+            q: 'Warum wird mir statt RIRS die PCNL empfohlen?',
+            a: 'Wegen Größe und Struktur des Steins. Bei der PCNL werden die Fragmente unmittelbar entfernt, sodass bei großer Steinlast die Chance höher ist, in einer Sitzung alles zu beseitigen. Bei Ausgusssteinen gilt dieses Verfahren als Standard. Bei kleinen Steinen wird die RIRS bevorzugt, weil sie weniger eingreifend ist.'
+          },
+          {
+            q: 'Was ist das wichtigste Risiko?',
+            a: 'Die Blutung. Die Niere ist ein gefäßreiches Organ, und der Zugang führt durch sie hindurch. Die meisten Blutungen kommen von selbst zum Stillstand; selten sind eine Transfusion oder der radiologisch gesteuerte Verschluss des blutenden Gefäßes nötig. Deshalb wird Ihr Medikamentenschema vor der Operation geplant, wenn Sie Blutverdünner einnehmen.'
+          },
+          {
+            q: 'Kann meine Lunge Schaden nehmen?',
+            a: 'Dieses Risiko besteht nur, wenn der Zugang über den oberen Nierenpol erfolgen muss, und bedeutet die Eröffnung des Lungenfells. Der Zugangsweg wird unter bildgebender Kontrolle so geplant, dass dieses Risiko möglichst gering bleibt. Bei Bedarf wird vorübergehend eine Thoraxdrainage eingelegt.'
+          },
+          {
+            q: 'Was ist eine Nephrostomie-Drainage, wird sie immer gelegt?',
+            a: 'Es ist ein Schlauch zwischen Niere und Haut, der den Urin ableitet. Er wird nicht bei jedem Patienten gelegt; ist der Stein vollständig entfernt, die Blutung gering und die Niere geeignet, kann ein drainagefreies Vorgehen bevorzugt werden. Die Entscheidung fällt während der Operation.'
+          },
+          {
+            q: 'Wird mein Stein in einer Sitzung vollständig entfernt?',
+            a: 'Bei großen Steinen ist die Chance dafür höher als bei anderen Verfahren, garantiert ist sie jedoch nicht. Bei sehr großer Last oder stark verzweigten Steinen können ein zweiter Zugangsweg, eine zweite Sitzung oder die Vervollständigung mittels RIRS geplant werden. Das wird von Anfang an besprochen.'
+          },
+          {
+            q: 'Ist Blut im Urin nach der Operation normal?',
+            a: 'Ja, in den ersten Tagen ist das ein zu erwartender Befund, der stetig abnimmt. Dunkle Blutung mit Gerinnseln, Fieber oder zunehmende Schmerzen erfordern unverzüglich ärztliche Hilfe.'
+          },
+          {
+            q: 'Nimmt meine Niere dauerhaft Schaden?',
+            a: 'Der Zugangskanal führt durch Nierengewebe, doch dieser Kanal heilt. Demgegenüber kann es zu wiederkehrenden Infekten und zum dauerhaften Verlust der Nierenfunktion führen, wenn große Steine wie Ausgusssteine belassen werden. In den meisten Situationen ist das Risiko, nicht zu behandeln, daher größer als das Risiko der Behandlung.'
+          },
+          {
+            q: 'Kann mein Stein wiederkommen?',
+            a: 'Ohne vorbeugende Maßnahmen kann das Steinleiden wiederkehren. Der entfernte Stein wird chemisch analysiert, und entsprechend dem Ergebnis wird ein Schutzplan mit Trinkmenge, Ernährung und bei Bedarf Medikamenten erstellt.'
+          },
+          {
+            q: 'Wann darf ich fliegen und arbeiten?',
+            a: 'Fliegen ist meist nach 7–10 Tagen erlaubt; für Patienten aus dem Ausland wird ein Aufenthalt von 7–10 Tagen geplant. An den Schreibtisch kann man innerhalb von 1–2 Wochen zurückkehren; bei schwerer körperlicher Arbeit werden 4–6 Wochen empfohlen.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — Europäische Gesellschaft für Urologie',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      },
+      fr: {
+        title: 'NLPC : chirurgie percutanée des gros calculs rénaux',
+        summary:
+          'Une méthode qui atteint le rein par un orifice d’environ un centimètre au flanc et permet d’éliminer les gros calculs en une seule séance. C’est l’approche standard des calculs coralliformes.',
+        metaTitle: 'Qu’est-ce que la NLPC ? Chirurgie des gros calculs rénaux',
+        metaDescription:
+          'À qui s’adresse la NLPC (néphrolithotomie percutanée), comment elle se déroule, ses risques dont l’hémorragie, la convalescence et ses différences avec la RIRS.',
+        quickFacts: {
+          duration: '60–120 minutes',
+          anesthesia: 'Anesthésie générale',
+          hospitalStay: '2–3 nuits',
+          stayInTurkey: '7–10 jours',
+          returnToWork: '1–2 semaines',
+          flightClearance: '7–10 jours'
+        },
+        definition: [
+          'La NLPC (néphrolithotomie percutanée) permet d’éliminer de gros calculs rénaux par un petit orifice pratiqué au flanc. Sous contrôle de l’imagerie, le rein est atteint à l’aide d’une fine aiguille ; ce trajet est élargi progressivement pour créer un canal d’environ un centimètre, et un appareil appelé néphroscope y est introduit jusque dans le rein.',
+          'Le calcul est vu directement et fragmenté par énergie laser ou pneumatique, puis les fragments sont retirés par ce même canal. C’est la différence essentielle avec la RIRS : au lieu d’attendre que les fragments s’éliminent dans les urines, on les extrait directement. Pour une charge lithiasique importante, la chance de tout éliminer en une séance est donc plus élevée.',
+          'La NLPC est considérée comme l’approche standard notamment pour les calculs coralliformes — des calculs ramifiés qui remplissent les cavités du rein. Laissés en place, ils peuvent entraîner des infections à répétition et une perte définitive de la fonction rénale.',
+          'Les interventions réalisées par un canal de plus petit diamètre sont appelées mini-NLPC. Un canal plus étroit signifie moins de lésions du parenchyme rénal et généralement moins de saignement ; en contrepartie, l’extraction des fragments peut être plus longue. Le diamètre retenu dépend de la taille du calcul.',
+          'LE RISQUE LE PLUS IMPORTANT EST L’HÉMORRAGIE. Le rein est un organe richement vascularisé et l’abord le traverse. La plupart des saignements s’arrêtent spontanément ; rarement, une transfusion ou l’occlusion du vaisseau hémorragique sous contrôle radiologique (embolisation) peut être nécessaire. C’est pourquoi, chez les patients sous anticoagulants, la gestion du traitement est planifiée avant l’intervention.',
+          'En fin d’intervention, un drain appelé néphrostomie peut être laissé entre le rein et la peau, ou bien, chez des patients sélectionnés, une approche sans drain peut être préférée. Cette décision est prise pendant l’opération selon le degré d’élimination du calcul, l’importance du saignement et l’état du rein.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients porteurs d’un gros calcul dans le rein',
+            'Patients porteurs d’un calcul coralliforme remplissant les cavités rénales',
+            'Patients porteurs d’un calcul volumineux et dur situé dans le calice inférieur',
+            'Patients chez qui la lithotritie par ondes de choc (ESWL) ou la RIRS a été tentée sans succès',
+            'Patients porteurs de calculs multiples chez qui une élimination en une séance est visée',
+            'Situations où le calcul provoque une obstruction et des infections répétées et où la fonction rénale est menacée'
+          ],
+          notSuitable: [
+            'Patients porteurs d’un petit calcul — la RIRS ou l’ESWL sont des options moins invasives',
+            'Patients présentant une infection urinaire non traitée — elle est impérativement traitée avant le geste',
+            'Patients présentant un trouble de la coagulation non équilibré — il est corrigé d’abord',
+            'Patients dont le traitement anticoagulant ne peut être interrompu — la RIRS peut être plus adaptée',
+            'Patients chez qui l’anesthésie générale n’est pas envisageable',
+            'Situations anatomiques où aucun trajet d’abord sûr vers le rein n’est trouvé'
+          ]
+        },
+        technology: [
+          'Abord du rein sous contrôle échographique et/ou radioscopique',
+          'Néphroscope de calibre standard ou mini',
+          'Système de lithotritie laser ou pneumatique',
+          'Confirmation de l’absence de calcul par imagerie pendant et après l’intervention',
+          'Analyse chimique du calcul et bilan métabolique visant à prévenir la récidive'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Toutes les techniques de chirurgie des calculs rénaux relèvent du champ de pratique du Dr Müslüm Ergün, maître de conférences. La décision de réaliser une NLPC repose sur l’évaluation conjointe de la taille et de la structure du calcul, de l’anatomie du rein, du risque hémorragique et des maladies associées du patient.'
+        },
+        timeline: [
+          {
+            when: 'Avant l’intervention',
+            title: 'Évaluation et préparation',
+            body: 'Un scanner sans injection précise le volume et la répartition du calcul, l’anatomie du rein et le trajet d’abord sûr. Un ECBU est réalisé ; en cas d’infection, le geste est reporté. La gestion des anticoagulants est organisée.'
+          },
+          {
+            when: 'Jour de l’intervention',
+            title: 'Abord et élimination du calcul',
+            body: 'Sous anesthésie générale et contrôle de l’imagerie, le rein est atteint par le flanc. Le canal est élargi, le calcul fragmenté puis extrait. L’intervention dure généralement 60 à 120 minutes.'
+          },
+          {
+            when: 'Jour 1',
+            title: 'Drain et surveillance',
+            body: 'Si un drain de néphrostomie a été posé, la couleur des urines et le saignement sont surveillés. La douleur est contrôlée et le lever précoce encouragé.'
+          },
+          {
+            when: 'Jours 2–3',
+            title: 'Retrait du drain et sortie',
+            body: 'Quand le saignement diminue et que les urines s’éclaircissent, le drain est retiré. L’imagerie évalue la présence éventuelle de fragments résiduels et le patient sort.'
+          },
+          {
+            when: 'Semaines 1–2',
+            title: 'Récupération',
+            body: 'La sensibilité au point d’entrée du flanc diminue. Le retour au travail de bureau est possible ; le port de charges et les exercices intenses sont proscrits durant cette période.'
+          },
+          {
+            when: 'Mois 1–3',
+            title: 'Contrôle et prévention',
+            body: 'L’imagerie confirme l’absence de calcul. Selon l’analyse du calcul, un plan de protection portant sur l’hydratation, l’alimentation et, au besoin, un traitement est appliqué.'
+          }
+        ],
+        risks: [
+          'HÉMORRAGIE : le risque le plus important. La plupart des saignements s’arrêtent spontanément ; rarement, une transfusion ou l’occlusion du vaisseau hémorragique sous contrôle radiologique (embolisation) peut être nécessaire',
+          'Infection et septicémie (urosepsis) — c’est pourquoi un ECBU avant le geste et le traitement de toute infection sont impératifs ; fièvre et frissons imposent une consultation immédiate',
+          'Effraction de la plèvre — uniquement lorsque l’abord passe par le pôle supérieur du rein ; un drain thoracique est posé si nécessaire',
+          'Lésion des organes voisins — intestin, foie ou rate ; très rare',
+          'Fragments de calcul résiduels nécessitant une seconde séance ou un geste complémentaire',
+          'Fuite d’urine et maintien prolongé du drain',
+          'Récidive du calcul — la maladie lithiasique peut revenir en l’absence de mesures préventives'
+        ],
+        alternatives: [
+          'RIRS (méthode fermée par endoscope souple) — pour les calculs petits et moyens',
+          'Mini-NLPC — par un canal plus étroit, pour les calculs de taille moyenne',
+          'Lithotritie par ondes de choc externes (ESWL) — pour les calculs de taille et de position adaptées',
+          'Planification conjointe de plusieurs méthodes — en cas de charge lithiasique très importante',
+          'Chirurgie laparoscopique ou ouverte du calcul — très rarement, dans des situations anatomiques particulières'
+        ],
+        comparison: {
+          title: 'NLPC comparée à la RIRS',
+          columns: ['Critère', 'NLPC', 'RIRS'],
+          rows: [
+            { label: 'Voie d’abord', values: ['Environ 1 cm au flanc', 'Par les voies naturelles, sans incision'] },
+            { label: 'Taille de calcul adaptée', values: ['Volumineuse et coralliforme', 'Petite à moyenne'] },
+            { label: 'Devenir des fragments', values: ['Extraits directement', 'Éliminés le plus souvent dans les urines'] },
+            { label: 'Absence de calcul en une séance', values: ['Chance plus élevée pour les gros calculs', 'Élevée pour les petits calculs'] },
+            { label: 'Risque hémorragique', values: ['Plus élevé', 'Plus faible'] },
+            { label: 'Hospitalisation', values: ['2–3 nuits', 'Ambulatoire ou 1 nuit'] },
+            { label: 'Reprise du travail', values: ['1–2 semaines', '3–7 jours'] }
+          ],
+          note:
+            'Les deux méthodes ne s’opposent pas : elles répondent à des charges lithiasiques différentes. Plus le calcul est gros, plus la NLPC s’impose ; plus il est petit, plus la RIRS se distingue. Chez certains patients, les deux s’intègrent au même plan de traitement.'
+        },
+        recovery: [
+          {
+            period: 'Premières 24 heures',
+            body: 'Le patient reste en surveillance à l’hôpital. Du sang dans les urines est attendu. La douleur est contrôlée par les médicaments et le lever précoce est encouragé.'
+          },
+          {
+            period: 'Jours 2–3',
+            body: 'Quand le saignement diminue, le drain est retiré. Le point d’entrée peut être sensible. La sortie a lieu durant cette période.'
+          },
+          {
+            period: 'Semaine 1',
+            body: 'La marche légère est permise. Le port de charges, les exercices intenses et les efforts de poussée sont interdits. Il est conseillé de boire abondamment.'
+          },
+          {
+            period: 'Semaine 2',
+            body: 'Le retour au travail de bureau est possible. La sensibilité au point d’entrée a largement disparu.'
+          },
+          {
+            period: 'Mois 1–3',
+            body: 'L’imagerie confirme l’absence de calcul. Le plan préventif fondé sur l’analyse du calcul est mis en œuvre.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Le prix varie selon le volume du calcul, selon qu’un ou plusieurs trajets d’abord sont nécessaires et selon le besoin d’un geste complémentaire. Un devis ferme est remis après analyse du scanner.'
+        },
+        packageIncludes: [
+          'Évaluation urologique, scanner et ECBU avant l’intervention',
+          'Intervention NLPC et anesthésie',
+          '2–3 nuits d’hospitalisation',
+          'Soins et retrait du drain de néphrostomie',
+          'Imagerie de contrôle postopératoire',
+          'Analyse chimique du calcul et conseils de prévention',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et suivi à distance après votre retour'
+        ],
+        faqs: [
+          {
+            q: 'Quelle est la taille de l’incision pour la NLPC ?',
+            a: 'Un seul orifice d’environ un centimètre est pratiqué au flanc. C’est incomparablement plus petit que la grande incision de la chirurgie ouverte, et cela laisse une petite marque une fois cicatrisé. En mini-NLPC, le diamètre est encore plus réduit.'
+          },
+          {
+            q: 'Pourquoi me propose-t-on une NLPC plutôt qu’une RIRS ?',
+            a: 'En raison de la taille et de la structure du calcul. En NLPC, les fragments sont extraits directement, de sorte que la chance de tout éliminer en une séance est plus élevée lorsque la charge lithiasique est importante. Pour les calculs coralliformes, cette méthode est considérée comme standard. Pour les petits calculs, la RIRS est préférée car elle est moins invasive.'
+          },
+          {
+            q: 'Quel est le risque le plus important ?',
+            a: 'L’hémorragie. Le rein est un organe richement vascularisé et l’abord le traverse. La plupart des saignements s’arrêtent spontanément ; rarement, une transfusion ou l’occlusion du vaisseau hémorragique sous contrôle radiologique peut être nécessaire. C’est pourquoi, si vous prenez des anticoagulants, votre traitement est planifié avant l’intervention.'
+          },
+          {
+            q: 'Mon poumon peut-il être lésé ?',
+            a: 'Ce risque n’existe que lorsque l’abord doit passer par le pôle supérieur du rein, et il correspond à une effraction de la plèvre. Le trajet d’abord est planifié sous imagerie de façon à réduire ce risque au minimum. Un drain thoracique temporaire est posé si nécessaire.'
+          },
+          {
+            q: 'Qu’est-ce qu’un drain de néphrostomie, est-il toujours posé ?',
+            a: 'C’est un tube placé entre le rein et la peau qui évacue les urines. Il n’est pas posé chez tous les patients ; si le calcul a été entièrement retiré, que le saignement est minime et que le rein s’y prête, une approche sans drain peut être préférée. La décision est prise pendant l’intervention.'
+          },
+          {
+            q: 'Mon calcul sera-t-il entièrement éliminé en une séance ?',
+            a: 'Pour les gros calculs, la chance d’y parvenir en une séance est plus élevée qu’avec les autres méthodes, mais ce n’est pas garanti. Pour les calculs très volumineux ou très ramifiés, un second trajet d’abord, une seconde séance ou un complément par RIRS peuvent être prévus. Cela se discute d’emblée.'
+          },
+          {
+            q: 'Est-il normal d’avoir du sang dans les urines après l’opération ?',
+            a: 'Oui, c’est attendu les premiers jours et cela diminue progressivement. Un saignement foncé avec caillots, de la fièvre ou une douleur croissante imposent une consultation sans délai.'
+          },
+          {
+            q: 'Cela abîmera-t-il définitivement mon rein ?',
+            a: 'Le canal d’abord traverse le parenchyme rénal, mais ce canal cicatrise. En revanche, laisser en place un gros calcul comme un calcul coralliforme peut entraîner des infections à répétition et une perte définitive de la fonction rénale. Dans la plupart des situations, le risque de ne pas traiter est donc supérieur au risque de traiter.'
+          },
+          {
+            q: 'Mon calcul peut-il récidiver ?',
+            a: 'La maladie lithiasique peut revenir si aucune mesure préventive n’est prise. Le calcul retiré est analysé chimiquement et, selon le résultat, un plan de protection portant sur l’hydratation, l’alimentation et, au besoin, un traitement médicamenteux est établi.'
+          },
+          {
+            q: 'Quand puis-je prendre l’avion et reprendre le travail ?',
+            a: 'Le vol est généralement autorisé après 7 à 10 jours ; pour les patients venant de l’étranger, un séjour de 7 à 10 jours est prévu. Le travail de bureau peut reprendre en 1 à 2 semaines ; pour les travaux physiques lourds, il est conseillé d’attendre 4 à 6 semaines.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — Association européenne d’urologie',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      },
+      ru: {
+        title: 'Чрескожная нефролитотомия при крупных камнях почки',
+        summary:
+          'Метод, при котором до почки добираются через вход около одного сантиметра в поясничной области и удаляют крупные камни за один сеанс. При коралловидных камнях это стандартный подход.',
+        metaTitle: 'Что такое чрескожная нефролитотомия? Операция при крупных камнях почки',
+        metaDescription:
+          'Кому выполняют чрескожную нефролитотомию, как она проводится, её риски, включая кровотечение, восстановление и отличия от RIRS.',
+        quickFacts: {
+          duration: '60–120 минут',
+          anesthesia: 'Общая анестезия',
+          hospitalStay: '2–3 ночи',
+          stayInTurkey: '7–10 дней',
+          returnToWork: '1–2 недели',
+          flightClearance: '7–10 дней'
+        },
+        definition: [
+          'Чрескожная нефролитотомия — это удаление крупных камней почки через небольшой вход в поясничной области. Под контролем визуализации до почки добираются тонкой иглой, этот ход постепенно расширяют примерно до одного сантиметра, и через него в почку вводят прибор, который называется нефроскоп.',
+          'Камень видят напрямую и дробят лазерной или пневматической энергией, а фрагменты удаляют через тот же ход. В этом главное отличие от RIRS: вместо ожидания, пока фрагменты выйдут с мочой, их извлекают сразу. Поэтому при большой каменной нагрузке выше шанс добиться результата за один сеанс.',
+          'Этот метод считается стандартным прежде всего при коралловидных камнях — то есть разветвлённых камнях, заполняющих чашечно-лоханочную систему почки. Если такие камни оставить, они могут привести к повторяющимся инфекциям и стойкой потере функции почки.',
+          'Вмешательства через ход меньшего диаметра называют мини-нефролитотомией. Более узкий ход означает меньшее повреждение ткани почки и, как правило, меньшее кровотечение; зато извлечение фрагментов может занять больше времени. Какой диаметр выбрать, определяется размером камня.',
+          'САМЫЙ ВАЖНЫЙ РИСК — КРОВОТЕЧЕНИЕ. Почка богата кровеносными сосудами, а доступ проходит сквозь неё. Большинство кровотечений останавливается само; редко может потребоваться переливание крови или закрытие кровоточащего сосуда под контролем рентгенолога (эмболизация). Поэтому у пациентов, принимающих разжижающие кровь препараты, схему приёма планируют до операции.',
+          'В конце вмешательства между почкой и кожей может быть установлен дренаж — нефростома, либо у отобранных пациентов предпочитают подход без дренажа. Это решение принимают во время операции исходя из полноты удаления камня, объёма кровотечения и состояния почки.'
+        ],
+        eligibility: {
+          suitable: [
+            'Пациенты с крупным камнем внутри почки',
+            'Пациенты с коралловидным камнем, заполняющим чашечно-лоханочную систему',
+            'Пациенты с крупным и твёрдым камнем в нижней чашечке',
+            'Пациенты, у которых дистанционное дробление (ДЛТ) или RIRS оказались безуспешными',
+            'Пациенты с множественными камнями, у которых цель — удалить всё за один сеанс',
+            'Ситуации, когда камень вызывает нарушение оттока и повторные инфекции, а функция почки под угрозой'
+          ],
+          notSuitable: [
+            'Пациенты с небольшим камнем — RIRS или ДЛТ менее травматичны',
+            'Пациенты с нелеченой инфекцией мочевых путей — её обязательно лечат до вмешательства',
+            'Пациенты с некомпенсированным нарушением свёртывания крови — сначала его корректируют',
+            'Пациенты, у которых нельзя прервать приём разжижающих кровь препаратов — RIRS может подойти лучше',
+            'Пациенты, которым не подходит общая анестезия',
+            'Анатомические ситуации, при которых безопасный ход к почке найти не удаётся'
+          ]
+        },
+        technology: [
+          'Доступ к почке под контролем ультразвука и (или) рентгеноскопии',
+          'Нефроскоп стандартного или малого калибра',
+          'Лазерная или пневматическая система дробления камней',
+          'Подтверждение отсутствия камней визуализацией во время и после операции',
+          'Химический анализ камня и обменное обследование для предотвращения рецидива'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Все методы хирургии камней почки входят в практику доц. д-ра Мюслюма Эргюна. Решение о чрескожной нефролитотомии принимается при совместной оценке размера и строения камня, анатомии почки, риска кровотечения и сопутствующих заболеваний пациента.'
+        },
+        timeline: [
+          {
+            when: 'До операции',
+            title: 'Обследование и подготовка',
+            body: 'Компьютерная томография без контраста определяет объём и расположение камня, анатомию почки и безопасный ход доступа. Берут посев мочи; при инфекции вмешательство откладывают. Корректируют схему приёма разжижающих кровь препаратов.'
+          },
+          {
+            when: 'День операции',
+            title: 'Доступ и удаление камня',
+            body: 'Под общей анестезией и контролем визуализации до почки добираются через поясничную область. Ход расширяют, камень дробят и извлекают. Обычно вмешательство занимает 60–120 минут.'
+          },
+          {
+            when: '1-й день',
+            title: 'Дренаж и наблюдение',
+            body: 'Если установлена нефростома, следят за цветом мочи и кровотечением. Боль берут под контроль и поощряют раннее вставание.'
+          },
+          {
+            when: '2–3-й день',
+            title: 'Удаление дренажа и выписка',
+            body: 'Когда кровотечение уменьшается и моча светлеет, дренаж удаляют. Визуализацией оценивают, остались ли фрагменты, и пациента выписывают.'
+          },
+          {
+            when: '1–2-я неделя',
+            title: 'Восстановление',
+            body: 'Чувствительность в области входа в пояснице уменьшается. Можно вернуться к работе за столом; поднятие тяжестей и напряжённые упражнения в этот период исключены.'
+          },
+          {
+            when: '1–3-й месяц',
+            title: 'Контроль и профилактика',
+            body: 'Отсутствие камней подтверждают визуализацией. По результату анализа камня применяют план защиты, включающий питьевой режим, питание и при необходимости лекарства.'
+          }
+        ],
+        risks: [
+          'КРОВОТЕЧЕНИЕ: самый важный риск. Большинство кровотечений останавливается само; редко может потребоваться переливание крови или закрытие кровоточащего сосуда под контролем рентгенолога (эмболизация)',
+          'Инфекция и заражение крови (уросепсис) — именно поэтому посев мочи до вмешательства и лечение инфекции обязательны; при лихорадке и ознобе нужно обратиться к врачу немедленно',
+          'Проникновение в плевру — только при доступе через верхний полюс почки; при необходимости устанавливают плевральный дренаж',
+          'Повреждение соседних органов — кишечника, печени или селезёнки; встречается очень редко',
+          'Оставшиеся фрагменты камня, требующие второго сеанса или дополнительного вмешательства',
+          'Подтекание мочи и более долгое пребывание дренажа',
+          'Повторное образование камня — без профилактических мер мочекаменная болезнь может вернуться'
+        ],
+        alternatives: [
+          'RIRS (закрытый метод с гибким эндоскопом) — при малых и средних камнях',
+          'Мини-нефролитотомия — через более узкий ход, при камнях среднего размера',
+          'Дистанционное дробление ударной волной (ДЛТ) — при подходящем размере и расположении камня',
+          'Совместное планирование нескольких методов — при очень большой каменной нагрузке',
+          'Лапароскопическая или открытая операция по поводу камня — очень редко, при особой анатомии'
+        ],
+        comparison: {
+          title: 'Сравнение чрескожной нефролитотомии и RIRS',
+          columns: ['Критерий', 'Чрескожная нефролитотомия', 'RIRS'],
+          rows: [
+            { label: 'Путь доступа', values: ['Около 1 см в поясничной области', 'Через мочевыводящие пути, без разреза'] },
+            { label: 'Подходящий размер камня', values: ['Крупный и коралловидный', 'Малый и средний'] },
+            { label: 'Судьба фрагментов', values: ['Извлекаются сразу', 'В основном выходят с мочой'] },
+            { label: 'Полное удаление за один сеанс', values: ['При крупных камнях шанс выше', 'При малых камнях высокий'] },
+            { label: 'Риск кровотечения', values: ['Выше', 'Ниже'] },
+            { label: 'Пребывание в стационаре', values: ['2–3 ночи', 'Амбулаторно или 1 ночь'] },
+            { label: 'Возвращение к работе', values: ['1–2 недели', '3–7 дней'] }
+          ],
+          note:
+            'Эти методы не альтернатива друг другу, а решения для разной каменной нагрузки. Чем крупнее камень, тем больше на первый план выходит чрескожный метод; чем мельче — тем больше RIRS. У части пациентов оба применяются в рамках одного плана лечения.'
+        },
+        recovery: [
+          {
+            period: 'Первые 24 часа',
+            body: 'Пациент остаётся под наблюдением в стационаре. Кровь в моче — ожидаемое явление. Боль контролируют лекарствами, раннее вставание поощряется.'
+          },
+          {
+            period: '2–3-й день',
+            body: 'Когда кровотечение уменьшается, дренаж удаляют. В области входа возможна чувствительность. В этот период происходит выписка.'
+          },
+          {
+            period: '1-я неделя',
+            body: 'Лёгкая ходьба разрешена. Поднятие тяжестей, напряжённые упражнения и натуживание запрещены. Рекомендуется обильное питьё.'
+          },
+          {
+            period: '2-я неделя',
+            body: 'Можно вернуться к работе за столом. Чувствительность в области входа в основном прошла.'
+          },
+          {
+            period: '1–3-й месяц',
+            body: 'Отсутствие камней подтверждают визуализацией. Начинают применять профилактический план, основанный на анализе камня.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Стоимость зависит от объёма камня, от того, нужен ли один или несколько ходов доступа, и от потребности в дополнительном вмешательстве. Точное предложение даётся после оценки компьютерной томографии.'
+        },
+        packageIncludes: [
+          'Урологическое обследование, компьютерная томография и посев мочи до операции',
+          'Операция чрескожной нефролитотомии и анестезия',
+          '2–3 ночи в стационаре',
+          'Уход за нефростомой и её удаление',
+          'Контрольная визуализация после операции',
+          'Химический анализ камня и профилактические рекомендации',
+          'Трансферы аэропорт–больница–отель',
+          'Проживание (пациент + 1 сопровождающий)',
+          'Медицинский переводчик и дистанционное наблюдение после возвращения домой'
+        ],
+        faqs: [
+          {
+            q: 'Какого размера делают разрез?',
+            a: 'В поясничной области делают один вход размером около одного сантиметра. Это несопоставимо меньше большого разреза открытой операции и после заживления оставляет небольшой след. При мини-нефролитотомии диаметр ещё меньше.'
+          },
+          {
+            q: 'Почему вместо RIRS рекомендуют чрескожный метод?',
+            a: 'Из-за размера и строения камня. При чрескожном методе фрагменты извлекают сразу, поэтому при большой каменной нагрузке шанс убрать всё за один сеанс выше. При коралловидных камнях этот метод считается стандартом. При небольших камнях предпочитают RIRS как менее травматичный.'
+          },
+          {
+            q: 'Какой риск самый важный?',
+            a: 'Кровотечение. Почка богата кровеносными сосудами, а доступ проходит сквозь неё. Большинство кровотечений останавливается само; редко может потребоваться переливание крови или закрытие кровоточащего сосуда под контролем рентгенолога. Поэтому, если вы принимаете разжижающие кровь препараты, схему приёма планируют до операции.'
+          },
+          {
+            q: 'Может ли пострадать лёгкое?',
+            a: 'Такой риск возникает только тогда, когда доступ приходится выполнять через верхний полюс почки, и означает проникновение в плевру. Ход доступа планируют под контролем визуализации так, чтобы свести этот риск к минимуму. При необходимости устанавливают временный плевральный дренаж.'
+          },
+          {
+            q: 'Что такое нефростома, всегда ли её ставят?',
+            a: 'Это трубка между почкой и кожей, отводящая мочу. Её ставят не каждому пациенту; если камень удалён полностью, кровотечение незначительное и состояние почки позволяет, могут предпочесть подход без дренажа. Решение принимают во время операции.'
+          },
+          {
+            q: 'Уберут ли камень полностью за один сеанс?',
+            a: 'При крупных камнях шанс сделать это за один сеанс выше, чем у других методов, но гарантии нет. При очень большой нагрузке или сильно разветвлённых камнях могут планировать второй ход доступа, второй сеанс или завершение с помощью RIRS. Это обсуждается с самого начала.'
+          },
+          {
+            q: 'Нормально ли, что после операции в моче есть кровь?',
+            a: 'Да, в первые дни это ожидаемо и постепенно уменьшается. Тёмное кровотечение со сгустками, лихорадка или нарастающая боль требуют немедленного обращения к врачу.'
+          },
+          {
+            q: 'Повредит ли это почку навсегда?',
+            a: 'Ход доступа проходит через ткань почки, но он заживает. При этом оставленный крупный камень, например коралловидный, может привести к повторяющимся инфекциям и стойкой потере функции почки. Поэтому в большинстве ситуаций риск не лечить выше риска лечения.'
+          },
+          {
+            q: 'Может ли камень образоваться снова?',
+            a: 'Без профилактических мер мочекаменная болезнь может вернуться. Извлечённый камень анализируют химически и по результату составляют план защиты, включающий питьевой режим, питание и при необходимости лекарства.'
+          },
+          {
+            q: 'Когда можно лететь и выходить на работу?',
+            a: 'Перелёт обычно разрешают через 7–10 дней; для пациентов из-за рубежа планируется пребывание 7–10 дней. К работе за столом можно вернуться за 1–2 недели; при тяжёлом физическом труде рекомендуется подождать 4–6 недель.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — Европейская ассоциация урологии',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      },
+      ar: {
+        title: 'تفتيت حصى الكلى عبر الجلد للحصى الكبيرة',
+        summary:
+          'طريقة يُوصَل بها إلى الكلية عبر منفذ يبلغ نحو سنتيمتر واحد في الخاصرة، وتُنظَّف الحصى الكبيرة في جلسة واحدة. وهي الأسلوب المعياري في الحصى المرجانية.',
+        metaTitle: 'ما هو تفتيت حصى الكلى عبر الجلد؟ جراحة الحصى الكبيرة',
+        metaDescription:
+          'لمن يُطبَّق تفتيت حصى الكلى عبر الجلد، وكيف يُجرى، ومخاطره بما فيها النزف، ومسار التعافي، والفرق بينه وبين عملية RIRS.',
+        quickFacts: {
+          duration: '60–120 دقيقة',
+          anesthesia: 'تخدير عام',
+          hospitalStay: '2–3 ليالٍ',
+          stayInTurkey: '7–10 أيام',
+          returnToWork: '1–2 أسبوع',
+          flightClearance: '7–10 أيام'
+        },
+        definition: [
+          'تفتيت حصى الكلى عبر الجلد هو إزالة الحصى الكبيرة في الكلية عبر منفذ صغير يُفتح في الخاصرة. وبمرافقة التصوير يُوصَل إلى الكلية بإبرة رفيعة، ثم يُوسَّع هذا الممر تدريجيًا حتى يصير قناة بنحو سنتيمتر واحد، ويُمرَّر عبرها جهاز يُسمى منظار الكلية إلى داخل الكلية.',
+          'تُرى الحصاة مباشرةً وتُفتَّت بطاقة الليزر أو بالطاقة الهوائية، وتُخرَج الشظايا عبر القناة نفسها. وهذا أهم فرق عن عملية RIRS: فبدل انتظار خروج الشظايا مع البول تُخرَج مباشرةً. ولذلك يكون احتمال الوصول إلى نتيجة في جلسة واحدة أعلى عند الحمل الكبير من الحصى.',
+          'ويُعدّ هذا الأسلوب معياريًا خصوصًا في الحصى المرجانية — أي الحصى المتفرعة التي تملأ الجهاز المجمِّع في الكلية. فإذا تُركت هذه الحصى فقد تؤدي إلى التهابات متكررة وفقدان دائم لوظيفة الكلية.',
+          'وتُسمى الإجراءات التي يُصغَّر فيها قطر قناة الدخول التفتيتَ المصغّر عبر الجلد. والقناة الأصغر تعني ضررًا أقل في نسيج الكلية ونزفًا أقل في الغالب؛ في المقابل قد يستغرق إخراج الشظايا وقتًا أطول. ويُحدَّد القطر المختار بحسب حجم الحصاة.',
+          'أهم خطر هو النزف. فالكلية عضو غني بالأوعية الدموية والدخول يتم باختراقها. ويتوقف معظم النزف تلقائيًا؛ لكن قد يلزم نادرًا نقل دم أو إغلاق الوعاء النازف بمرافقة الأشعة (الإصمام). ولهذا تُخطَّط جرعات مميّعات الدم قبل العملية عند من يتناولونها.',
+          'وفي نهاية الإجراء قد يُوضَع نزح بين الكلية والجلد يُسمى فغر الكلية، أو قد يُفضَّل عند مرضى مختارين الأسلوبُ من دون نزح. ويُتخذ هذا القرار أثناء العملية بحسب مدى نظافة الحصى ومقدار النزف وحال الكلية.'
+        ],
+        eligibility: {
+          suitable: [
+            'المرضى الذين لديهم حصاة كبيرة داخل الكلية',
+            'المرضى الذين لديهم حصاة مرجانية تملأ الجهاز المجمِّع',
+            'المرضى الذين لديهم حصاة كبيرة وصلبة في القطب السفلي',
+            'المرضى الذين جُرِّب لديهم تفتيت الحصى بالموجات التصادمية أو عملية RIRS من دون نتيجة',
+            'المرضى الذين لديهم حصى متعددة ويُستهدف تنظيفها في جلسة واحدة',
+            'الحالات التي تسبب فيها الحصاة انسدادًا والتهابات متكررة وتكون فيها وظيفة الكلية مهددة'
+          ],
+          notSuitable: [
+            'المرضى الذين لديهم حصاة صغيرة — فعملية RIRS أو الموجات التصادمية خياران أقل تدخلًا',
+            'المرضى المصابون بالتهاب غير معالَج في المسالك البولية — يُعالَج قبل الإجراء بالضرورة',
+            'المرضى الذين لديهم اضطراب تخثّر غير مضبوط — تُصحَّح الحالة أولًا',
+            'المرضى الذين لا يمكن إيقاف مميّعات الدم لديهم — قد تكون عملية RIRS أنسب',
+            'المرضى الذين لا يناسبهم التخدير العام',
+            'الحالات التشريحية التي لا يُعثر فيها على ممر دخول آمن إلى الكلية'
+          ]
+        },
+        technology: [
+          'الدخول إلى الكلية بمرافقة الموجات فوق الصوتية و/أو التنظير الشعاعي',
+          'منظار كلية بقياس عادي أو مصغّر',
+          'نظام تفتيت بالليزر أو بالطاقة الهوائية',
+          'تأكيد خلو الكلية من الحصى بالتصوير أثناء العملية وبعدها',
+          'التحليل الكيميائي للحصاة والتقييم الاستقلابي للوقاية من التكرار'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'تقع طرق جراحة حصى الكلى كلها ضمن مجال ممارسة الأستاذ المشارك الدكتور مسلم إرغون. ويُتخذ قرار التفتيت عبر الجلد بتقييم حجم الحصاة وبنيتها وتشريح الكلية وخطر النزف والأمراض المرافقة لدى المريض معًا.'
+        },
+        timeline: [
+          {
+            when: 'قبل العملية',
+            title: 'التقييم والتحضير',
+            body: 'يُخطَّط حجم الحصاة وتوزعها وتشريح الكلية وممر الدخول الآمن بالتصوير المقطعي من دون صبغة. وتُؤخذ زراعة بول؛ فإن وُجد التهاب أُجِّل الإجراء. ويُضبَط نظام مميّعات الدم.'
+          },
+          {
+            when: 'يوم العملية',
+            title: 'الدخول وتنظيف الحصى',
+            body: 'تحت تخدير عام وبمرافقة التصوير يُوصَل إلى الكلية عبر الخاصرة. وتُوسَّع القناة وتُفتَّت الحصاة وتُخرَج شظاياها. ويستغرق الإجراء عادةً 60–120 دقيقة.'
+          },
+          {
+            when: 'اليوم 1',
+            title: 'النزح والمراقبة',
+            body: 'إن وُضع نزح فغر الكلية فتُراقَب درجة لون البول والنزف. وتُضبَط الآلام ويُشجَّع النهوض المبكر.'
+          },
+          {
+            when: 'اليوم 2–3',
+            title: 'نزع النزح والخروج',
+            body: 'عندما يقلّ النزف ويصفو البول يُنزَع النزح. ويُقيَّم بالتصوير ما إذا بقيت شظايا، ثم يُخرَّج المريض.'
+          },
+          {
+            when: 'الأسبوع 1–2',
+            title: 'التعافي',
+            body: 'تخفّ حساسية موضع الدخول في الخاصرة. ويمكن العودة إلى العمل المكتبي؛ أما رفع الأثقال والتمارين الشاقة فلا تُمارَس في هذه المرحلة.'
+          },
+          {
+            when: 'الشهر 1–3',
+            title: 'المتابعة والوقاية',
+            body: 'يُؤكَّد خلو الكلية من الحصى بالتصوير. وبحسب تحليل الحصاة تُطبَّق خطة وقاية تشمل السوائل والتغذية والأدوية عند الحاجة.'
+          }
+        ],
+        risks: [
+          'النزف: أهم خطر. ويتوقف معظم النزف تلقائيًا؛ وقد يلزم نادرًا نقل دم أو إغلاق الوعاء النازف بمرافقة الأشعة (الإصمام)',
+          'العدوى وتسمّم الدم (الإنتان البولي) — ولهذا فإن زراعة البول قبل الإجراء وعلاج الالتهاب أمران إلزاميان؛ وعند الحمى والقشعريرة تجب المراجعة فورًا',
+          'دخول غشاء الرئة (الجنب) — ولا يكون ذلك إلا عند الدخول من القطب العلوي للكلية؛ ويُوضَع أنبوب صدري عند الحاجة',
+          'إصابة الأعضاء المجاورة — الأمعاء أو الكبد أو الطحال؛ ونادرة جدًا',
+          'بقاء شظايا من الحصاة تستلزم جلسة ثانية أو إجراءً إضافيًا',
+          'تسرّب البول وبقاء النزح مدة أطول',
+          'تكرار الحصاة — إذ قد يعود داء الحصى من دون تدابير وقائية'
+        ],
+        alternatives: [
+          'عملية RIRS (الطريقة المغلقة بالمنظار المرن) — في الحصى الصغيرة والمتوسطة',
+          'التفتيت المصغّر عبر الجلد — عبر قناة دخول أضيق، في الحصى متوسطة الحجم',
+          'تفتيت الحصى بالموجات التصادمية من خارج الجسم — في الحصى ذات الحجم والموضع المناسبين',
+          'التخطيط لأكثر من طريقة معًا — في الحصى ذات الحمل الكبير جدًا',
+          'جراحة الحصى بالمنظار البطني أو المفتوحة — نادرًا جدًا وفي حالات تشريحية خاصة'
+        ],
+        comparison: {
+          title: 'مقارنة بين التفتيت عبر الجلد وعملية RIRS',
+          columns: ['المعيار', 'التفتيت عبر الجلد', 'RIRS'],
+          rows: [
+            { label: 'ممر الدخول', values: ['نحو 1 سم في الخاصرة', 'عبر المجرى البولي من دون شقّ'] },
+            { label: 'حجم الحصاة المناسب', values: ['كبير ومرجاني', 'صغير إلى متوسط'] },
+            { label: 'مصير شظايا الحصى', values: ['تُخرَج مباشرةً', 'يُنتظر خروجها مع البول غالبًا'] },
+            { label: 'الخلو من الحصى في جلسة واحدة', values: ['احتمال أعلى في الحصى الكبيرة', 'عالٍ في الحصى الصغيرة'] },
+            { label: 'خطر النزف', values: ['أعلى', 'أقل'] },
+            { label: 'الإقامة في المستشفى', values: ['2–3 ليالٍ', 'في اليوم نفسه أو ليلة واحدة'] },
+            { label: 'العودة إلى العمل', values: ['1–2 أسبوع', '3–7 أيام'] }
+          ],
+          note:
+            'ليست الطريقتان بديلتين إحداهما عن الأخرى، بل حلّان لحملين مختلفين من الحصى. فكلما كبرت الحصاة برز التفتيت عبر الجلد، وكلما صغرت برزت عملية RIRS. وعند بعض المرضى تُستعمل الطريقتان ضمن خطة علاجية واحدة.'
+        },
+        recovery: [
+          {
+            period: 'أول 24 ساعة',
+            body: 'يبقى المريض تحت المراقبة في المستشفى. ووجود دم في البول أمر متوقع. وتُضبَط الآلام بالأدوية ويُشجَّع النهوض المبكر.'
+          },
+          {
+            period: 'اليوم 2–3',
+            body: 'عندما يقلّ النزف يُنزَع النزح. وقد تكون هناك حساسية في موضع الدخول. ويتم الخروج من المستشفى في هذه المرحلة.'
+          },
+          {
+            period: 'الأسبوع 1',
+            body: 'المشي الخفيف مسموح. ورفع الأثقال والتمارين الشاقة والحزق ممنوعة. ويُنصح بشرب السوائل بكثرة.'
+          },
+          {
+            period: 'الأسبوع 2',
+            body: 'يمكن العودة إلى العمل المكتبي. وتكون الحساسية في موضع الدخول قد زالت إلى حد كبير.'
+          },
+          {
+            period: 'الشهر 1–3',
+            body: 'يُؤكَّد خلو الكلية من الحصى بالتصوير. ويبدأ تطبيق الخطة الوقائية المبنية على تحليل الحصاة.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'يتغير السعر بحسب حجم الحصاة، وما إذا كان سيلزم ممر دخول واحد أم أكثر، وبحسب الحاجة إلى إجراء إضافي. ويُقدَّم العرض النهائي بعد تقييم التصوير المقطعي.'
+        },
+        packageIncludes: [
+          'تقييم المسالك البولية والتصوير المقطعي وزراعة البول قبل العملية',
+          'عملية التفتيت عبر الجلد والتخدير',
+          'الإقامة في المستشفى 2–3 ليالٍ',
+          'العناية بنزح فغر الكلية ونزعه',
+          'تصوير المتابعة بعد العملية',
+          'التحليل الكيميائي للحصاة والنصائح الوقائية',
+          'التنقلات بين المطار والمستشفى والفندق',
+          'الإقامة (المريض + مرافق واحد)',
+          'مترجم طبي ومتابعة عن بُعد بعد عودتك إلى بلدك'
+        ],
+        faqs: [
+          {
+            q: 'ما حجم الشقّ في هذه العملية؟',
+            a: 'يُفتح في الخاصرة منفذ واحد بنحو سنتيمتر. وهو أصغر بما لا يُقارَن من الشقّ الكبير في الجراحة المفتوحة، ويترك أثرًا صغيرًا بعد الالتئام. أما في التفتيت المصغّر فالقطر أصغر من ذلك.'
+          },
+          {
+            q: 'لماذا يُنصَح بالتفتيت عبر الجلد بدل عملية RIRS؟',
+            a: 'بسبب حجم الحصاة وبنيتها. ففي التفتيت عبر الجلد تُخرَج الشظايا مباشرةً، ولذلك يكون احتمال التنظيف في جلسة واحدة أعلى عند الحمل الكبير من الحصى. وفي الحصى المرجانية يُعدّ هذا الأسلوب معياريًا. أما في الحصى الصغيرة فتُفضَّل عملية RIRS لأنها أقل تدخلًا.'
+          },
+          {
+            q: 'ما أهم خطر؟',
+            a: 'النزف. فالكلية عضو غني بالأوعية الدموية والدخول يتم باختراقها. ويتوقف معظم النزف تلقائيًا؛ وقد يلزم نادرًا نقل دم أو إغلاق الوعاء النازف بمرافقة الأشعة. ولهذا تُخطَّط جرعات دوائك قبل العملية إن كنت تتناول مميّعات الدم.'
+          },
+          {
+            q: 'هل قد تتضرر رئتي؟',
+            a: 'لا يُطرح هذا الخطر إلا عند الحاجة إلى الدخول من القطب العلوي للكلية، ويعني دخول غشاء الرئة. ويُخطَّط ممر الدخول بمرافقة التصوير بما يقلّل هذا الخطر إلى أدنى حد. ويُوضَع أنبوب صدري مؤقت عند الحاجة.'
+          },
+          {
+            q: 'ما هو نزح فغر الكلية، وهل يُوضَع دائمًا؟',
+            a: 'هو أنبوب يُوضَع بين الكلية والجلد لتصريف البول. ولا يُوضَع عند كل مريض؛ فإن كانت الحصاة قد نُظِّفت تمامًا والنزف قليلًا والكلية مناسبة فقد يُفضَّل الأسلوب من دون نزح. ويُتخذ القرار أثناء العملية.'
+          },
+          {
+            q: 'هل تُنظَّف حصاتي كاملة في جلسة واحدة؟',
+            a: 'في الحصى الكبيرة يكون احتمال التنظيف في جلسة واحدة أعلى منه في الطرق الأخرى، لكنه ليس مضمونًا. وفي الحصى الشديدة الحمل أو الكثيرة التفرع قد يُخطَّط ممر دخول ثانٍ أو جلسة ثانية أو إتمام العلاج بعملية RIRS. ويُتحدث عن ذلك من البداية.'
+          },
+          {
+            q: 'هل من الطبيعي وجود دم في بولي بعد العملية؟',
+            a: 'نعم، وهو أمر متوقع في الأيام الأولى ويتناقص تدريجيًا. أما النزف الداكن مع جلطات أو الحمى أو الألم المتزايد فتستدعي المراجعة من دون تأخير.'
+          },
+          {
+            q: 'هل يُلحق ذلك ضررًا دائمًا بكليتي؟',
+            a: 'تمرّ قناة الدخول عبر نسيج الكلية، لكن هذه القناة تلتئم. في المقابل فإن ترك الحصى الكبيرة كالمرجانية قد يؤدي إلى التهابات متكررة وفقدان دائم لوظيفة الكلية. ولذلك فإن خطر عدم العلاج في معظم الحالات أكبر من خطر العلاج.'
+          },
+          {
+            q: 'هل تتكرر الحصاة لديّ؟',
+            a: 'قد يعود داء الحصى إذا لم تُتخذ تدابير وقائية. وتُحلَّل الحصاة المستخرجة كيميائيًا، وبحسب النتيجة تُوضع خطة وقاية تشمل كمية السوائل والتغذية والأدوية عند الحاجة.'
+          },
+          {
+            q: 'متى يمكنني السفر جوًا والعودة إلى العمل؟',
+            a: 'يُسمح بالسفر جوًا عادةً بعد 7–10 أيام؛ ويُخطَّط للمرضى القادمين من الخارج بإقامة 7–10 أيام. ويمكن العودة إلى العمل المكتبي خلال 1–2 أسبوع؛ أما العمل البدني الشاق فيُنصح بانتظار 4–6 أسابيع.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — الجمعية الأوروبية للمسالك البولية',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      }
+    }
+  },
+  {
+    /**
+     * Böbrek taşı hub'ının altındaki kapalı yöntem (prompt m.4.1).
+     * RIRS ile PCNL arasında ÜSTÜNLÜK İDDİA EDİLMEZ; seçim taş boyutu,
+     * yeri ve böbrek anatomisine göre yapılır. JJ stent yakınmaları ve
+     * ikinci seans ihtimali AÇIKÇA yazılıdır.
+     * Kaynak: EAU Urolithiasis kılavuzu.
+     * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     */
+    slug: 'rirs',
+    parent: 'bobrek-tasi',
+    lastReviewed: '2026-10-04',
+    icon: 'kidney',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'RIRS: Esnek Endoskopla Böbrek Taşı Tedavisi',
+        summary:
+          'Vücutta hiç kesi açılmadan, idrar yolundan böbreğe ulaşılarak taşın lazerle toz haline getirildiği yöntem. Kimlere uygun, JJ stent neden takılır ve iyileşme nasıl olur?',
+        metaTitle: 'RIRS Nedir? Kapalı Böbrek Taşı Ameliyatı',
+        metaDescription:
+          'RIRS (retrograd intrarenal cerrahi) yönteminin kimlere uygun olduğu, nasıl uygulandığı, JJ stent dönemi, riskleri ve PCNL ile karşılaştırması.',
+        quickFacts: {
+          duration: '45–90 dakika',
+          anesthesia: 'Genel anestezi',
+          hospitalStay: 'Günübirlik veya 1 gece',
+          stayInTurkey: '4–6 gün',
+          returnToWork: '3–7 gün',
+          flightClearance: '2–3 gün'
+        },
+        definition: [
+          'RIRS (retrograd intrarenal cerrahi), böbrek taşının vücutta hiçbir kesi açılmadan tedavi edildiği yöntemdir. Bükülebilen ince bir endoskop idrar yolundan girilerek mesaneye, oradan idrar borusuna (üreter) ve sonunda böbreğin içine ulaştırılır. Taş doğrudan görülerek lazer enerjisiyle ya toz haline getirilir ya da küçük parçalara ayrılır.',
+          'Cihazın ucu bükülebildiği için böbreğin ulaşılması zor bölgelerine, özellikle alt kutup denilen alana da erişilebilir. Bu, taşın yerine göre yöntemin seçilme nedenlerinden biridir.',
+          'Lazerle taş toz haline getirildiğinde parçaların çoğu idrarla kendiliğinden atılır; daha büyük parçalar ise özel bir sepet yardımıyla dışarı alınabilir. İşlem boyunca üreteri korumak ve aleti rahat hareket ettirmek için genellikle üretere ince bir kılıf yerleştirilir.',
+          'İŞLEM SONRASI JJ STENT: Çoğu hastada işlem sonunda böbrekle mesane arasına JJ stent adı verilen ince, esnek bir boru yerleştirilir. Amaç, şişmeye bağlı tıkanmayı önlemek ve taş tozunun rahat atılmasını sağlamaktır. Stent birkaç gün ile birkaç hafta arasında kalır ve ayaktan, kısa bir işlemle çıkarılır.',
+          'STENT YAKINLARI GERÇEKTİR. Stent takılıyken sık idrara çıkma, idrar sonunda rahatsızlık, belde dolgunluk hissi ve idrarda hafif kanama görülebilir. Bunlar genellikle stent çıkarıldıktan sonra hızla geçer; işlem başarısız olduğu anlamına gelmez. Bu durumun baştan bilinmesi, süreci çok daha rahat geçirmenizi sağlar.',
+          'Üreter çok dar olan bazı hastalarda, ilk seansta böbreğe ulaşmak mümkün olmayabilir. Bu durumda önce JJ stent takılarak üreterin genişlemesi beklenir ve işlem birkaç hafta sonra yapılır. Bu bir komplikasyon değil, planlı bir iki aşamalı yaklaşımdır.'
+        ],
+        eligibility: {
+          suitable: [
+            'Böbrek içinde orta boyutlu taşı olan hastalar',
+            'Böbreğin alt kutbunda yerleşmiş, kendiliğinden düşmesi zor taşlar',
+            'Vücut dışından ses dalgasıyla taş kırma (ESWL) denenmiş ancak sonuç alınamamış hastalar',
+            'Kanama bozukluğu olan veya kan sulandırıcı kullanan hastalar — perkütan yönteme göre daha düşük kanama riski taşır',
+            'Kilolu hastalar ve perkütan girişimin teknik olarak zor olduğu anatomiler',
+            'Tek böbrekli hastalar — böbrek dokusuna girilmediği için tercih edilebilir',
+            'Her iki böbrekte taşı olup aynı yatışta iki tarafın da tedavi edilmesi planlanan hastalar'
+          ],
+          notSuitable: [
+            'Çok büyük veya geyik boynuzu şeklinde taşı olan hastalar — perkütan yöntem daha uygundur',
+            'Tedavi edilmemiş idrar yolu enfeksiyonu olan hastalar — işlem öncesi mutlaka tedavi gerekir',
+            'Üreterde geçişe izin vermeyen darlık bulunan hastalar — önce bu sorun çözülür',
+            'Genel anestezi alması uygun olmayan hastalar',
+            'Taşın çok sert olduğu ve çok sayıda seans gerekeceği öngörülen durumlar — perkütan yöntem tek seansta sonuç verebilir'
+          ]
+        },
+        technology: [
+          'Bükülebilir (fleksibl) üreterorenoskop',
+          'Holmiyum veya tulyum fiber lazer sistemi',
+          'Üreteral erişim kılıfı — üreteri korur ve böbrek içi basıncı düşürmeye yardımcı olur',
+          'Taş sepeti ile parça çıkarma',
+          'Çıkarılan taşın kimyasal analizi ve tekrarı önlemeye yönelik değerlendirme'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Böbrek taşı cerrahisinin tüm yöntemleri Doç. Dr. Müslüm Ergün’ün uygulama alanı içindedir. Hangi yöntemin seçileceği; taşın boyutu, yoğunluğu, yerleşimi, böbreğin anatomisi ve hastanın genel durumu birlikte değerlendirilerek belirlenir.'
+        },
+        timeline: [
+          {
+            when: 'İşlem öncesi',
+            title: 'Değerlendirme',
+            body: 'Kontrastsız bilgisayarlı tomografi ile taşın boyutu, yeri ve yoğunluğu belirlenir. İdrar kültürü alınır; enfeksiyon varsa işlem ertelenerek önce tedavi edilir.'
+          },
+          {
+            when: 'İşlem günü',
+            title: 'Lazerle taşın tedavisi',
+            body: 'Genel anestezi altında, kesi yapılmadan idrar yolundan böbreğe ulaşılır. Taş doğrudan görülerek lazerle toz haline getirilir. İşlem genellikle 45–90 dakika sürer ve sonunda JJ stent takılır.'
+          },
+          {
+            when: 'İlk 24 saat',
+            title: 'Gözlem',
+            body: 'Çoğu hasta aynı gün veya ertesi gün taburcu olur. İdrarda pembe renk ve belde hafif dolgunluk hissi beklenen bulgulardır.'
+          },
+          {
+            when: '1–2. hafta',
+            title: 'Stent dönemi',
+            body: 'Taş tozu bu dönemde atılır. Sık idrara çıkma ve idrar sonunda rahatsızlık görülebilir; bol sıvı alımı önerilir.'
+          },
+          {
+            when: 'Stent çıkarıldıktan sonra',
+            title: 'Kontrol ve koruma',
+            body: 'Stent ayaktan, kısa bir işlemle çıkarılır. Görüntülemeyle taşsızlık değerlendirilir. Taş analizi sonucuna göre tekrarı önleyici beslenme ve sıvı planı yapılır.'
+          }
+        ],
+        risks: [
+          'ENFEKSİYON VE KAN ZEHİRLENMESİ (ürosepsis): en ciddi risktir; işlem öncesi idrar kültürü alınması ve enfeksiyonun tedavi edilmesi bu nedenle zorunludur. Ateş ve titreme olursa vakit kaybetmeden başvurulmalıdır',
+          'İdrarda kanama — genellikle hafiftir ve kendiliğinden geçer',
+          'JJ stente bağlı yakınmalar — sık idrara çıkma, belde dolgunluk, idrar sonunda rahatsızlık; stent çıkınca geçer',
+          'Üreterde yaralanma veya sonradan darlık gelişmesi — seyrek görülür',
+          'Geride taş parçası kalması ve ikinci bir seans gerekmesi',
+          'İlk seansta böbreğe ulaşılamaması — üreter darsa önce stent takılıp işlem ertelenebilir',
+          'Taşın tekrarlaması — koruyucu önlemler alınmazsa taş hastalığı tekrar edebilir'
+        ],
+        alternatives: [
+          'Vücut dışından ses dalgasıyla taş kırma (ESWL) — uygun boyut ve yerleşimdeki taşlarda',
+          'PCNL (perkütan nefrolitotomi) — büyük ve geyik boynuzu taşlarda',
+          'Mini-PCNL — orta büyüklükteki taşlarda daha küçük giriş yoluyla',
+          'İlaçla düşürme denemesi ve izlem — küçük, aşağı inmiş taşlarda',
+          'Açık veya laparoskopik taş cerrahisi — çok seyrek, özel durumlarda'
+        ],
+        comparison: {
+          title: 'RIRS ile PCNL karşılaştırması',
+          columns: ['Ölçüt', 'RIRS', 'PCNL'],
+          rows: [
+            { label: 'Cilt kesisi', values: ['Yok', 'Böğürde yaklaşık 1 cm'] },
+            { label: 'Uygun taş boyutu', values: ['Küçük–orta', 'Büyük ve geyik boynuzu'] },
+            { label: 'Hastanede kalış', values: ['Günübirlik veya 1 gece', '2–3 gece'] },
+            { label: 'Kanama riski', values: ['Daha düşük', 'Daha yüksek'] },
+            { label: 'Tek seansta taşsızlık', values: ['Küçük taşlarda yüksek, büyük taşlarda ek seans gerekebilir', 'Büyük taşlarda tek seansta sonuç alma olasılığı daha yüksek'] },
+            { label: 'JJ stent', values: ['Genellikle takılır', 'Nefrostomi veya stent gerekebilir'] },
+            { label: 'İşe dönüş', values: ['3–7 gün', '1–2 hafta'] }
+          ],
+          note:
+            'İki yöntem birbirinin rakibi değil, farklı durumların çözümüdür. Küçük ve orta taşlarda RIRS, büyük yük oluşturan taşlarda PCNL öne çıkar. Bazı hastalarda ikisi birlikte planlanabilir.'
+        },
+        recovery: [
+          {
+            period: 'İlk 48 saat',
+            body: 'İdrarda pembe renk ve belde hafif dolgunluk beklenir. Bol sıvı alınması, taş tozunun atılmasına yardımcı olur.'
+          },
+          {
+            period: '3–7. gün',
+            body: 'Günlük yaşama dönülür. Masa başı işe bu dönemde dönülebilir. Ağır kaldırmadan kaçınılır.'
+          },
+          {
+            period: '1–2. hafta',
+            body: 'Stent yerindedir ve yakınmalara yol açabilir. Bu dönemde bol su içmek ve hekimin önerdiği ilaçları kullanmak rahatlatır.'
+          },
+          {
+            period: 'Stent çıkarımı',
+            body: 'Kısa, ayaktan bir işlemle çıkarılır. Yakınmalar hızla geriler.'
+          },
+          {
+            period: '1–3. ay',
+            body: 'Görüntülemeyle taşsızlık doğrulanır. Taş analizine göre koruyucu plan uygulanmaya başlanır.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat; taşın boyutuna, tek mi iki taraflı mı işlem yapılacağına ve ek seans gerekip gerekmediğine göre değişir. Kesin teklif, tomografi değerlendirmesinden sonra verilir.'
+        },
+        packageIncludes: [
+          'İşlem öncesi üroloji değerlendirmesi, tomografi ve idrar kültürü',
+          'RIRS işlemi, lazer kullanımı ve anestezi',
+          'JJ stent takılması ve çıkarılması',
+          'Hastanede gözlem veya 1 gece konaklama',
+          'Taşın kimyasal analizi ve koruyucu öneriler',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve ülkenize döndükten sonra uzaktan takip'
+        ],
+        faqs: [
+          {
+            q: 'RIRS’te vücudumda kesi açılacak mı?',
+            a: 'Hayır. Hiçbir kesi yapılmaz. Bükülebilen ince bir endoskop idrar yolundan girilerek mesaneye, idrar borusuna ve böbreğe ulaştırılır. Dışarıdan görünen bir yara izi kalmaz.'
+          },
+          {
+            q: 'Taş nasıl çıkarılıyor?',
+            a: 'Taş doğrudan görülerek lazer enerjisiyle toz haline getirilir. Tozlaşan parçaların çoğu idrarla kendiliğinden atılır. Daha büyük parçalar gerekirse özel bir sepetle dışarı alınır.'
+          },
+          {
+            q: 'JJ stent neden takılıyor ve ne kadar kalıyor?',
+            a: 'İşlem sonrası şişmeye bağlı tıkanmayı önlemek ve taş tozunun rahat atılmasını sağlamak için takılır. Genellikle birkaç gün ile birkaç hafta arasında kalır. Ayaktan yapılan kısa bir işlemle çıkarılır.'
+          },
+          {
+            q: 'Stent rahatsız eder mi?',
+            a: 'Evet, edebilir ve bu beklenen bir durumdur. Sık idrara çıkma, idrar sonunda rahatsızlık, belde dolgunluk hissi ve idrarda hafif kanama görülebilir. Bunlar stent çıkarıldıktan sonra genellikle hızla geçer ve işlemin başarısız olduğu anlamına gelmez.'
+          },
+          {
+            q: 'Tek seansta taşım tamamen temizlenir mi?',
+            a: 'Taşın boyutuna, sertliğine ve sayısına bağlıdır. Küçük ve orta boyutlu taşlarda tek seans çoğu zaman yeterlidir. Taş yükü fazlaysa ikinci bir seans planlanabilir; bu baştan konuşulur ve bir başarısızlık göstergesi değildir.'
+          },
+          {
+            q: 'En önemli risk nedir?',
+            a: 'Enfeksiyonun kana karışması (ürosepsis) en ciddi risktir. Bu nedenle işlem öncesinde idrar kültürü alınır ve enfeksiyon varsa mutlaka tedavi edilir. İşlem sonrası ateş ve titreme olursa vakit kaybetmeden başvurulmalıdır.'
+          },
+          {
+            q: 'RIRS mi PCNL mi daha iyi?',
+            a: 'Tek bir "daha iyi" yöntem yoktur; ikisi farklı durumların çözümüdür. Küçük ve orta boyutlu taşlarda RIRS kesi gerektirmediği ve kanama riski daha düşük olduğu için öne çıkar. Büyük ve geyik boynuzu taşlarda ise PCNL tek seansta sonuç alma olasılığı daha yüksek olduğu için tercih edilir.'
+          },
+          {
+            q: 'İlk seansta böbreğe ulaşılamazsa ne olur?',
+            a: 'Üreter bazı hastalarda cihazın geçişine izin vermeyecek kadar dardır. Bu durumda önce JJ stent takılır ve üreterin kendiliğinden genişlemesi beklenir; işlem birkaç hafta sonra yapılır. Bu bir komplikasyon değil, planlı bir yaklaşımdır.'
+          },
+          {
+            q: 'Taşım tekrar oluşur mu?',
+            a: 'Koruyucu önlem alınmazsa taş hastalığı tekrar edebilir. Bu nedenle çıkarılan taşın kimyasal analizi yapılır ve sonuca göre sıvı alımı, beslenme ve gerekirse ilaç içeren bir koruma planı oluşturulur.'
+          },
+          {
+            q: 'Ne zaman uçabilir ve işe dönebilirim?',
+            a: 'Genellikle 2–3 gün sonra uçuşa izin verilir; yurt dışından gelen hastalar için 4–6 günlük kalış planlanır. Masa başı işe 3–7 gün içinde dönülebilir. Stent çıkarımı için ülkenize dönmeden önce plan yapılır ya da kendi ülkenizde yapılmak üzere ayarlanır.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      },
+      en: {
+        title: 'RIRS: Kidney Stone Treatment with a Flexible Endoscope',
+        summary:
+          'A method in which the kidney is reached through the urinary passage, with no incision anywhere on the body, and the stone is turned to dust with a laser. Who is it suitable for, why is a JJ stent placed and what is recovery like?',
+        metaTitle: 'What Is RIRS? Kidney Stone Surgery Without an Incision',
+        metaDescription:
+          'Who RIRS (retrograde intrarenal surgery) is suitable for, how it is carried out, the JJ stent period, the risks and how it compares with PCNL.',
+        quickFacts: {
+          duration: '45–90 minutes',
+          anesthesia: 'General anaesthesia',
+          hospitalStay: 'Day case or 1 night',
+          stayInTurkey: '4–6 days',
+          returnToWork: '3–7 days',
+          flightClearance: '2–3 days'
+        },
+        definition: [
+          'RIRS (retrograde intrarenal surgery) treats a kidney stone without any incision being made in the body. A slim, bendable endoscope is passed through the urinary passage into the bladder, then up the urinary tube (ureter) and finally into the kidney. The stone is seen directly and either turned to dust or broken into small pieces with laser energy.',
+          'Because the tip of the instrument bends, areas of the kidney that are hard to reach can also be accessed, particularly the region known as the lower pole. Depending on where the stone sits, this is one of the reasons the method is chosen.',
+          'When the stone is turned to dust with the laser, most of the particles pass out on their own with the urine; larger pieces can be retrieved with a special basket. Throughout the procedure a thin sheath is usually placed in the ureter to protect it and to allow the instrument to move freely.',
+          'A JJ STENT AFTERWARDS: in most patients a thin, flexible tube called a JJ stent is placed between the kidney and the bladder at the end of the procedure. Its purpose is to prevent blockage from swelling and to let the stone dust pass easily. The stent stays in for anything from a few days to a few weeks and is removed in a short outpatient procedure.',
+          'STENT SYMPTOMS ARE REAL. While the stent is in place you may have to pass urine frequently, feel discomfort at the end of passing urine, notice a sense of fullness in the flank and see slight bleeding in the urine. These usually settle quickly once the stent is removed; they do not mean the procedure has failed. Knowing about this in advance makes the period far easier to get through.',
+          'In some men whose ureter is very narrow, it may not be possible to reach the kidney at the first sitting. A JJ stent is then placed first so that the ureter can widen, and the procedure is carried out a few weeks later. This is not a complication but a planned two-stage approach.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients with a moderately sized stone inside the kidney',
+            'Stones sitting in the lower pole of the kidney that are unlikely to pass on their own',
+            'Patients in whom shock wave lithotripsy (ESWL) has been tried without success',
+            'Patients with a bleeding disorder or on blood thinners — the bleeding risk is lower than with the percutaneous method',
+            'Patients who are overweight, and anatomies in which percutaneous access would be technically difficult',
+            'Patients with a single kidney — it may be preferred as the kidney tissue is not entered',
+            'Patients with stones in both kidneys where treating both sides in one admission is planned'
+          ],
+          notSuitable: [
+            'Patients with a very large or staghorn stone — the percutaneous method is more appropriate',
+            'Patients with an untreated urinary tract infection — this must be treated before the procedure',
+            'Patients with a stricture in the ureter that does not allow passage — this is dealt with first',
+            'Patients for whom general anaesthesia is unsuitable',
+            'Situations where the stone is very hard and many sittings are expected to be needed — the percutaneous method may achieve the result in one'
+          ]
+        },
+        technology: [
+          'Flexible ureterorenoscope',
+          'Holmium or thulium fibre laser system',
+          'Ureteral access sheath — protects the ureter and helps keep pressure inside the kidney down',
+          'Stone basket for retrieving fragments',
+          'Chemical analysis of the retrieved stone and assessment aimed at preventing recurrence'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'All methods of kidney stone surgery fall within Assoc. Prof. Müslüm Ergün’s area of practice. Which method is chosen is determined by weighing the size, density and position of the stone, the anatomy of the kidney and the patient’s general condition together.'
+        },
+        timeline: [
+          {
+            when: 'Before the procedure',
+            title: 'Assessment',
+            body: 'A non-contrast CT scan establishes the size, position and density of the stone. A urine culture is taken; if there is infection the procedure is postponed and the infection treated first.'
+          },
+          {
+            when: 'Day of the procedure',
+            title: 'Treating the stone with the laser',
+            body: 'Under general anaesthesia the kidney is reached through the urinary passage with no incision. The stone is seen directly and turned to dust with the laser. The procedure usually takes 45–90 minutes and a JJ stent is placed at the end.'
+          },
+          {
+            when: 'First 24 hours',
+            title: 'Observation',
+            body: 'Most patients are discharged the same day or the next. A pink tinge to the urine and a mild sense of fullness in the flank are expected.'
+          },
+          {
+            when: 'Weeks 1–2',
+            title: 'Stent period',
+            body: 'The stone dust passes during this period. Frequency and discomfort at the end of passing urine can occur; plenty of fluids are advised.'
+          },
+          {
+            when: 'After the stent is removed',
+            title: 'Check-up and prevention',
+            body: 'The stent is removed in a short outpatient procedure. Imaging confirms that the kidney is stone-free. According to the stone analysis, a diet and fluid plan is drawn up to prevent recurrence.'
+          }
+        ],
+        risks: [
+          'INFECTION AND BLOOD POISONING (urosepsis): the most serious risk; this is why a urine culture before the procedure and treatment of any infection are compulsory. Fever and shivering require immediate medical attention',
+          'Blood in the urine — usually slight and settles on its own',
+          'Symptoms from the JJ stent — frequency, fullness in the flank, discomfort at the end of passing urine; these go once the stent is out',
+          'Injury to the ureter or a stricture developing later — uncommon',
+          'Fragments of stone left behind and a second sitting being needed',
+          'Not being able to reach the kidney at the first sitting — if the ureter is narrow, a stent may be placed and the procedure postponed',
+          'Recurrence of the stone — stone disease can come back if preventive measures are not taken'
+        ],
+        alternatives: [
+          'Shock wave lithotripsy (ESWL) from outside the body — for stones of suitable size and position',
+          'PCNL (percutaneous nephrolithotomy) — for large and staghorn stones',
+          'Mini-PCNL — for moderately sized stones, through a smaller tract',
+          'A trial of medical expulsive therapy and surveillance — for small stones that have moved down',
+          'Open or laparoscopic stone surgery — very rarely, in special situations'
+        ],
+        comparison: {
+          title: 'RIRS compared with PCNL',
+          columns: ['Criterion', 'RIRS', 'PCNL'],
+          rows: [
+            { label: 'Skin incision', values: ['None', 'About 1 cm in the flank'] },
+            { label: 'Suitable stone size', values: ['Small to moderate', 'Large and staghorn'] },
+            { label: 'Hospital stay', values: ['Day case or 1 night', '2–3 nights'] },
+            { label: 'Bleeding risk', values: ['Lower', 'Higher'] },
+            { label: 'Stone-free in one sitting', values: ['High for small stones; a further sitting may be needed for large ones', 'A higher chance of clearing large stones in one sitting'] },
+            { label: 'JJ stent', values: ['Usually placed', 'A nephrostomy tube or stent may be needed'] },
+            { label: 'Return to work', values: ['3–7 days', '1–2 weeks'] }
+          ],
+          note:
+            'The two methods are not rivals but solutions to different situations. RIRS stands out for small and moderate stones, PCNL for stones that form a large burden. In some patients the two can be planned together.'
+        },
+        recovery: [
+          {
+            period: 'First 48 hours',
+            body: 'A pink tinge to the urine and mild fullness in the flank are expected. Drinking plenty of fluids helps the stone dust to pass.'
+          },
+          {
+            period: 'Days 3–7',
+            body: 'Daily life resumes. A return to desk work is possible during this period. Heavy lifting is avoided.'
+          },
+          {
+            period: 'Weeks 1–2',
+            body: 'The stent is in place and can cause symptoms. Drinking plenty of water and taking the medication your doctor advises bring relief.'
+          },
+          {
+            period: 'Stent removal',
+            body: 'It is removed in a short outpatient procedure. The symptoms settle quickly.'
+          },
+          {
+            period: 'Months 1–3',
+            body: 'Imaging confirms that the kidney is stone-free. A preventive plan based on the stone analysis is put into practice.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies with the size of the stone, whether one or both sides are treated and whether a further sitting is needed. A firm quotation is given after the CT scan has been assessed.'
+        },
+        packageIncludes: [
+          'Pre-procedure urological assessment, CT scan and urine culture',
+          'The RIRS procedure, laser use and anaesthesia',
+          'Placement and removal of the JJ stent',
+          'Observation in hospital or 1 night’s stay',
+          'Chemical analysis of the stone and preventive advice',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and remote follow-up after you return home'
+        ],
+        faqs: [
+          {
+            q: 'Will an incision be made in my body for RIRS?',
+            a: 'No. No incision at all is made. A slim, bendable endoscope is passed through the urinary passage into the bladder, up the urinary tube and into the kidney. No visible scar is left.'
+          },
+          {
+            q: 'How is the stone removed?',
+            a: 'The stone is seen directly and turned to dust with laser energy. Most of the dust passes out on its own with the urine. Larger pieces are retrieved with a special basket if necessary.'
+          },
+          {
+            q: 'Why is a JJ stent placed and how long does it stay?',
+            a: 'It is placed to prevent blockage from post-procedure swelling and to let the stone dust pass easily. It usually stays in for anything from a few days to a few weeks and is removed in a short outpatient procedure.'
+          },
+          {
+            q: 'Is the stent uncomfortable?',
+            a: 'Yes, it can be, and this is expected. Frequency, discomfort at the end of passing urine, a sense of fullness in the flank and slight bleeding in the urine may occur. These usually settle quickly once the stent is removed and do not mean the procedure has failed.'
+          },
+          {
+            q: 'Will my stone be cleared completely in one sitting?',
+            a: 'That depends on the size, hardness and number of stones. For small and moderate stones one sitting is usually enough. If the stone burden is heavy, a second sitting may be planned; this is discussed from the outset and is not a sign of failure.'
+          },
+          {
+            q: 'What is the most important risk?',
+            a: 'Infection passing into the blood (urosepsis) is the most serious risk. That is why a urine culture is taken beforehand and any infection is treated. If fever and shivering occur after the procedure, seek medical attention without delay.'
+          },
+          {
+            q: 'Which is better, RIRS or PCNL?',
+            a: 'There is no single "better" method; the two are solutions to different situations. For small and moderate stones RIRS stands out because it requires no incision and carries a lower bleeding risk. For large and staghorn stones PCNL is preferred because the chance of clearing them in one sitting is higher.'
+          },
+          {
+            q: 'What happens if the kidney cannot be reached at the first sitting?',
+            a: 'In some patients the ureter is too narrow to allow the instrument through. A JJ stent is then placed first and the ureter is allowed to widen on its own; the procedure is carried out a few weeks later. This is not a complication but a planned approach.'
+          },
+          {
+            q: 'Will my stone come back?',
+            a: 'Stone disease can recur if preventive measures are not taken. For this reason the retrieved stone is analysed chemically and, according to the result, a protective plan covering fluid intake, diet and, where needed, medication is drawn up.'
+          },
+          {
+            q: 'When can I fly and return to work?',
+            a: 'Flying is usually permitted after 2–3 days; a stay of 4–6 days is planned for patients travelling from abroad. A return to desk work is possible within 3–7 days. Removal of the stent is planned before you go home, or arranged to be done in your own country.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      },
+      de: {
+        title: 'RIRS: Nierensteinbehandlung mit dem flexiblen Endoskop',
+        summary:
+          'Ein Verfahren, bei dem die Niere ohne jeden Hautschnitt über die Harnwege erreicht und der Stein mit dem Laser zu Staub zerlegt wird. Für wen eignet es sich, warum wird eine DJ-Schiene eingelegt und wie verläuft die Heilung?',
+        metaTitle: 'Was ist RIRS? Nierensteinoperation ohne Schnitt',
+        metaDescription:
+          'Für wen sich RIRS (retrograde intrarenale Chirurgie) eignet, wie das Verfahren abläuft, die Zeit mit der DJ-Schiene, die Risiken und der Vergleich mit der PCNL.',
+        quickFacts: {
+          duration: '45–90 Minuten',
+          anesthesia: 'Vollnarkose',
+          hospitalStay: 'Ambulant oder 1 Nacht',
+          stayInTurkey: '4–6 Tage',
+          returnToWork: '3–7 Tage',
+          flightClearance: '2–3 Tage'
+        },
+        definition: [
+          'Bei der RIRS (retrograde intrarenale Chirurgie) wird ein Nierenstein behandelt, ohne dass am Körper ein Schnitt gesetzt wird. Ein schlankes, biegbares Endoskop wird über die Harnwege in die Blase, von dort in den Harnleiter und schließlich in die Niere vorgeschoben. Der Stein wird unter direkter Sicht mit Laserenergie entweder zu Staub zerlegt oder in kleine Stücke gebrochen.',
+          'Da sich die Spitze des Instruments biegen lässt, sind auch schwer erreichbare Bereiche der Niere zugänglich, insbesondere die als unterer Kelch bezeichnete Region. Je nach Lage des Steins ist das einer der Gründe für die Wahl dieses Verfahrens.',
+          'Wird der Stein mit dem Laser zu Staub zerlegt, gehen die meisten Partikel von selbst mit dem Urin ab; größere Stücke lassen sich mit einem speziellen Körbchen bergen. Während des Eingriffs wird meist eine dünne Schleuse in den Harnleiter eingelegt, um ihn zu schützen und das Instrument frei bewegen zu können.',
+          'DANACH EINE DJ-SCHIENE: Bei den meisten Patienten wird am Ende des Eingriffs ein dünner, biegsamer Schlauch, die sogenannte DJ-Schiene, zwischen Niere und Blase eingelegt. Sie soll eine schwellungsbedingte Blockade verhindern und den Abgang des Steinstaubs erleichtern. Die Schiene bleibt wenige Tage bis einige Wochen und wird in einem kurzen ambulanten Eingriff entfernt.',
+          'BESCHWERDEN DURCH DIE SCHIENE SIND REAL. Solange die Schiene liegt, können häufiger Harndrang, Unbehagen am Ende des Wasserlassens, ein Völlegefühl in der Flanke und leichtes Blut im Urin auftreten. Nach Entfernung der Schiene vergehen sie meist rasch; sie bedeuten nicht, dass der Eingriff misslungen ist. Dies vorab zu wissen, macht diese Zeit deutlich erträglicher.',
+          'Bei manchen Patienten mit sehr engem Harnleiter lässt sich die Niere beim ersten Mal nicht erreichen. Dann wird zunächst eine DJ-Schiene eingelegt, damit sich der Harnleiter weitet, und der Eingriff erfolgt einige Wochen später. Das ist keine Komplikation, sondern ein geplantes zweizeitiges Vorgehen.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patienten mit einem mittelgroßen Stein in der Niere',
+            'Steine im unteren Nierenkelch, die kaum von selbst abgehen',
+            'Patienten, bei denen die Stoßwellenbehandlung (ESWL) ohne Erfolg versucht wurde',
+            'Patienten mit Gerinnungsstörung oder unter Blutverdünnern — das Blutungsrisiko ist geringer als beim perkutanen Verfahren',
+            'Übergewichtige Patienten und Anatomien, bei denen ein perkutaner Zugang technisch schwierig wäre',
+            'Patienten mit Einzelniere — es kann bevorzugt werden, da das Nierengewebe nicht durchstochen wird',
+            'Patienten mit Steinen in beiden Nieren, bei denen beide Seiten in einem Aufenthalt behandelt werden sollen'
+          ],
+          notSuitable: [
+            'Patienten mit sehr großem oder Ausgussstein — das perkutane Verfahren ist geeigneter',
+            'Patienten mit unbehandeltem Harnwegsinfekt — dieser muss vor dem Eingriff behandelt werden',
+            'Patienten mit einer Harnleiterenge, die keine Passage erlaubt — dieses Problem wird zuerst gelöst',
+            'Patienten, für die eine Vollnarkose nicht infrage kommt',
+            'Situationen, in denen der Stein sehr hart ist und viele Sitzungen zu erwarten sind — das perkutane Verfahren kann das Ergebnis in einer Sitzung bringen'
+          ]
+        },
+        technology: [
+          'Flexibles Ureterorenoskop',
+          'Holmium- oder Thulium-Faserlasersystem',
+          'Harnleiter-Zugangsschleuse — schützt den Harnleiter und hilft, den Druck in der Niere niedrig zu halten',
+          'Steinkörbchen zur Bergung von Fragmenten',
+          'Chemische Analyse des geborgenen Steins und Abklärung zur Vorbeugung eines Rückfalls'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Sämtliche Verfahren der Nierensteinchirurgie gehören zum Tätigkeitsbereich von Doz. Dr. Müslüm Ergün. Welches Verfahren gewählt wird, bestimmt die gemeinsame Abwägung von Größe, Dichte und Lage des Steins, der Anatomie der Niere und dem Allgemeinzustand des Patienten.'
+        },
+        timeline: [
+          {
+            when: 'Vor dem Eingriff',
+            title: 'Abklärung',
+            body: 'Eine Computertomographie ohne Kontrastmittel bestimmt Größe, Lage und Dichte des Steins. Eine Urinkultur wird abgenommen; bei einem Infekt wird der Eingriff verschoben und zuerst behandelt.'
+          },
+          {
+            when: 'Tag des Eingriffs',
+            title: 'Behandlung des Steins mit dem Laser',
+            body: 'In Vollnarkose wird die Niere ohne Schnitt über die Harnwege erreicht. Der Stein wird unter direkter Sicht mit dem Laser zu Staub zerlegt. Der Eingriff dauert meist 45–90 Minuten; am Ende wird eine DJ-Schiene eingelegt.'
+          },
+          {
+            when: 'Erste 24 Stunden',
+            title: 'Überwachung',
+            body: 'Die meisten Patienten werden am selben oder am nächsten Tag entlassen. Rosa verfärbter Urin und ein leichtes Völlegefühl in der Flanke sind zu erwarten.'
+          },
+          {
+            when: 'Woche 1–2',
+            title: 'Zeit mit der Schiene',
+            body: 'In dieser Zeit geht der Steinstaub ab. Häufiger Harndrang und Unbehagen am Ende des Wasserlassens können auftreten; reichliches Trinken wird empfohlen.'
+          },
+          {
+            when: 'Nach Entfernung der Schiene',
+            title: 'Kontrolle und Vorbeugung',
+            body: 'Die Schiene wird in einem kurzen ambulanten Eingriff entfernt. Die Steinfreiheit wird bildgebend überprüft. Je nach Steinanalyse wird ein Ernährungs- und Trinkplan zur Vorbeugung erstellt.'
+          }
+        ],
+        risks: [
+          'INFEKTION UND BLUTVERGIFTUNG (Urosepsis): das schwerwiegendste Risiko; deshalb sind eine Urinkultur vor dem Eingriff und die Behandlung eines Infekts zwingend. Bei Fieber und Schüttelfrost ist unverzüglich ärztliche Hilfe erforderlich',
+          'Blut im Urin — meist gering und von selbst abklingend',
+          'Beschwerden durch die DJ-Schiene — häufiger Harndrang, Völlegefühl in der Flanke, Unbehagen am Ende des Wasserlassens; sie vergehen nach Entfernung der Schiene',
+          'Verletzung des Harnleiters oder eine später auftretende Enge — selten',
+          'Zurückgebliebene Steinfragmente und die Notwendigkeit einer zweiten Sitzung',
+          'Die Niere ist beim ersten Mal nicht erreichbar — bei engem Harnleiter kann eine Schiene gelegt und der Eingriff verschoben werden',
+          'Erneute Steinbildung — ohne vorbeugende Maßnahmen kann das Steinleiden wiederkehren'
+        ],
+        alternatives: [
+          'Stoßwellenbehandlung von außen (ESWL) — bei Steinen geeigneter Größe und Lage',
+          'PCNL (perkutane Nephrolitholapaxie) — bei großen und Ausgusssteinen',
+          'Mini-PCNL — bei mittelgroßen Steinen über einen kleineren Zugang',
+          'Versuch des medikamentösen Steinabgangs und Beobachtung — bei kleinen, bereits abgewanderten Steinen',
+          'Offene oder laparoskopische Steinchirurgie — sehr selten, in besonderen Situationen'
+        ],
+        comparison: {
+          title: 'RIRS im Vergleich zur PCNL',
+          columns: ['Kriterium', 'RIRS', 'PCNL'],
+          rows: [
+            { label: 'Hautschnitt', values: ['Keiner', 'Etwa 1 cm in der Flanke'] },
+            { label: 'Geeignete Steingröße', values: ['Klein bis mittelgroß', 'Groß und Ausgussstein'] },
+            { label: 'Klinikaufenthalt', values: ['Ambulant oder 1 Nacht', '2–3 Nächte'] },
+            { label: 'Blutungsrisiko', values: ['Geringer', 'Höher'] },
+            { label: 'Steinfreiheit in einer Sitzung', values: ['Bei kleinen Steinen hoch; bei großen kann eine weitere Sitzung nötig sein', 'Bei großen Steinen höhere Chance, in einer Sitzung frei zu werden'] },
+            { label: 'DJ-Schiene', values: ['Wird meist eingelegt', 'Nephrostomie oder Schiene können nötig sein'] },
+            { label: 'Rückkehr zur Arbeit', values: ['3–7 Tage', '1–2 Wochen'] }
+          ],
+          note:
+            'Die beiden Verfahren sind keine Konkurrenten, sondern Lösungen für unterschiedliche Situationen. Bei kleinen und mittelgroßen Steinen tritt RIRS hervor, bei großer Steinlast die PCNL. Bei manchen Patienten lassen sich beide gemeinsam planen.'
+        },
+        recovery: [
+          {
+            period: 'Erste 48 Stunden',
+            body: 'Rosa verfärbter Urin und ein leichtes Völlegefühl in der Flanke sind zu erwarten. Reichliches Trinken hilft beim Abgang des Steinstaubs.'
+          },
+          {
+            period: 'Tag 3–7',
+            body: 'Der Alltag wird wieder aufgenommen. Die Rückkehr an den Schreibtisch ist in dieser Zeit möglich. Schweres Heben wird vermieden.'
+          },
+          {
+            period: 'Woche 1–2',
+            body: 'Die Schiene liegt und kann Beschwerden verursachen. Viel Wasser zu trinken und die vom Arzt empfohlenen Medikamente einzunehmen, verschafft Linderung.'
+          },
+          {
+            period: 'Entfernung der Schiene',
+            body: 'Sie wird in einem kurzen ambulanten Eingriff entfernt. Die Beschwerden gehen rasch zurück.'
+          },
+          {
+            period: 'Monat 1–3',
+            body: 'Die Steinfreiheit wird bildgebend bestätigt. Der auf der Steinanalyse beruhende Vorbeugeplan wird umgesetzt.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Der Preis richtet sich nach der Steingröße, danach, ob eine oder beide Seiten behandelt werden, und danach, ob eine weitere Sitzung nötig ist. Ein verbindliches Angebot erfolgt nach Beurteilung der Computertomographie.'
+        },
+        packageIncludes: [
+          'Urologische Abklärung, Computertomographie und Urinkultur vor dem Eingriff',
+          'RIRS-Eingriff, Lasereinsatz und Narkose',
+          'Einlegen und Entfernen der DJ-Schiene',
+          'Überwachung in der Klinik oder 1 Übernachtung',
+          'Chemische Analyse des Steins und Empfehlungen zur Vorbeugung',
+          'Transfers Flughafen–Krankenhaus–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und Fernbetreuung nach Ihrer Rückkehr'
+        ],
+        faqs: [
+          {
+            q: 'Wird für die RIRS an meinem Körper geschnitten?',
+            a: 'Nein. Es wird überhaupt nicht geschnitten. Ein schlankes, biegbares Endoskop wird über die Harnwege in die Blase, den Harnleiter und die Niere vorgeschoben. Es bleibt keine von außen sichtbare Narbe.'
+          },
+          {
+            q: 'Wie wird der Stein entfernt?',
+            a: 'Der Stein wird unter direkter Sicht mit Laserenergie zu Staub zerlegt. Der größte Teil des Staubs geht von selbst mit dem Urin ab. Größere Stücke werden bei Bedarf mit einem speziellen Körbchen geborgen.'
+          },
+          {
+            q: 'Warum wird eine DJ-Schiene eingelegt und wie lange bleibt sie?',
+            a: 'Sie wird eingelegt, um eine schwellungsbedingte Blockade nach dem Eingriff zu verhindern und den Abgang des Steinstaubs zu erleichtern. Meist bleibt sie wenige Tage bis einige Wochen und wird in einem kurzen ambulanten Eingriff entfernt.'
+          },
+          {
+            q: 'Stört die Schiene?',
+            a: 'Ja, das kann sie, und das ist zu erwarten. Häufiger Harndrang, Unbehagen am Ende des Wasserlassens, ein Völlegefühl in der Flanke und leichtes Blut im Urin können auftreten. Nach Entfernung der Schiene vergehen sie meist rasch und bedeuten nicht, dass der Eingriff misslungen ist.'
+          },
+          {
+            q: 'Wird mein Stein in einer Sitzung vollständig entfernt?',
+            a: 'Das hängt von Größe, Härte und Anzahl der Steine ab. Bei kleinen und mittelgroßen Steinen genügt meist eine Sitzung. Ist die Steinlast groß, kann eine zweite Sitzung geplant werden; das wird von Anfang an besprochen und ist kein Zeichen des Misserfolgs.'
+          },
+          {
+            q: 'Was ist das wichtigste Risiko?',
+            a: 'Der Übertritt einer Infektion ins Blut (Urosepsis) ist das schwerwiegendste Risiko. Deshalb wird vorab eine Urinkultur abgenommen und ein Infekt in jedem Fall behandelt. Treten nach dem Eingriff Fieber und Schüttelfrost auf, ist unverzüglich ärztliche Hilfe nötig.'
+          },
+          {
+            q: 'Was ist besser, RIRS oder PCNL?',
+            a: 'Ein einzelnes "besseres" Verfahren gibt es nicht; beide lösen unterschiedliche Situationen. Bei kleinen und mittelgroßen Steinen tritt RIRS hervor, weil kein Schnitt nötig ist und das Blutungsrisiko geringer ausfällt. Bei großen und Ausgusssteinen wird die PCNL bevorzugt, weil die Chance höher ist, in einer Sitzung steinfrei zu werden.'
+          },
+          {
+            q: 'Was geschieht, wenn die Niere beim ersten Mal nicht erreichbar ist?',
+            a: 'Bei manchen Patienten ist der Harnleiter zu eng für das Instrument. Dann wird zuerst eine DJ-Schiene eingelegt, damit er sich von selbst weitet; der Eingriff erfolgt einige Wochen später. Das ist keine Komplikation, sondern ein geplantes Vorgehen.'
+          },
+          {
+            q: 'Kann mein Stein wiederkommen?',
+            a: 'Ohne vorbeugende Maßnahmen kann das Steinleiden wiederkehren. Deshalb wird der geborgene Stein chemisch analysiert, und entsprechend dem Ergebnis wird ein Schutzplan mit Trinkmenge, Ernährung und bei Bedarf Medikamenten erstellt.'
+          },
+          {
+            q: 'Wann darf ich fliegen und arbeiten?',
+            a: 'Fliegen ist meist nach 2–3 Tagen erlaubt; für Patienten aus dem Ausland wird ein Aufenthalt von 4–6 Tagen geplant. An den Schreibtisch kann man innerhalb von 3–7 Tagen zurückkehren. Die Entfernung der Schiene wird vor Ihrer Abreise geplant oder so vereinbart, dass sie in Ihrem Heimatland erfolgt.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — Europäische Gesellschaft für Urologie',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      },
+      fr: {
+        title: 'RIRS : traitement des calculs rénaux par endoscope souple',
+        summary:
+          'Une méthode qui atteint le rein par les voies naturelles, sans aucune incision, et pulvérise le calcul au laser. À qui convient-elle, pourquoi pose-t-on une sonde JJ et comment se passe la convalescence ?',
+        metaTitle: 'Qu’est-ce que la RIRS ? Chirurgie des calculs rénaux sans incision',
+        metaDescription:
+          'À qui convient la RIRS (chirurgie rétrograde intrarénale), comment elle se déroule, la période avec la sonde JJ, les risques et la comparaison avec la NLPC.',
+        quickFacts: {
+          duration: '45–90 minutes',
+          anesthesia: 'Anesthésie générale',
+          hospitalStay: 'Ambulatoire ou 1 nuit',
+          stayInTurkey: '4–6 jours',
+          returnToWork: '3–7 jours',
+          flightClearance: '2–3 jours'
+        },
+        definition: [
+          'La RIRS (chirurgie rétrograde intrarénale) traite un calcul du rein sans aucune incision sur le corps. Un endoscope fin et souple est introduit par le canal urinaire jusqu’à la vessie, puis remonte l’uretère et pénètre enfin dans le rein. Le calcul est vu directement et, grâce à l’énergie laser, pulvérisé ou fragmenté en petits morceaux.',
+          'Comme l’extrémité de l’instrument se courbe, les zones du rein difficiles d’accès sont également atteintes, en particulier la région appelée calice inférieur. Selon la position du calcul, c’est l’une des raisons du choix de cette méthode.',
+          'Lorsque le calcul est pulvérisé au laser, la plupart des particules s’éliminent spontanément dans les urines ; les fragments plus gros peuvent être retirés à l’aide d’un panier spécifique. Pendant l’intervention, une gaine fine est généralement placée dans l’uretère pour le protéger et permettre à l’instrument de se mouvoir librement.',
+          'UNE SONDE JJ APRÈS LE GESTE : chez la plupart des patients, un tube fin et souple appelé sonde JJ est placé en fin d’intervention entre le rein et la vessie. Il vise à éviter une obstruction liée à l’œdème et à faciliter l’élimination des poussières de calcul. La sonde reste en place de quelques jours à quelques semaines et se retire lors d’un geste ambulatoire bref.',
+          'LES GÊNES LIÉES À LA SONDE SONT RÉELLES. Tant que la sonde est en place, on peut ressentir des mictions fréquentes, une gêne en fin de miction, une sensation de pesanteur lombaire et observer un léger saignement urinaire. Ces troubles disparaissent généralement vite après le retrait ; ils ne signifient pas que le geste a échoué. Le savoir à l’avance rend cette période bien plus facile à traverser.',
+          'Chez certains patients dont l’uretère est très étroit, il peut être impossible d’atteindre le rein lors de la première séance. On pose alors d’abord une sonde JJ pour laisser l’uretère se dilater, et l’intervention a lieu quelques semaines plus tard. Ce n’est pas une complication mais une démarche planifiée en deux temps.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients porteurs d’un calcul de taille moyenne dans le rein',
+            'Calculs situés dans le calice inférieur, peu susceptibles de s’éliminer seuls',
+            'Patients chez qui la lithotritie par ondes de choc (ESWL) a été tentée sans succès',
+            'Patients présentant un trouble de la coagulation ou sous anticoagulants — le risque hémorragique est plus faible qu’avec la voie percutanée',
+            'Patients en surpoids et anatomies où l’abord percutané serait techniquement difficile',
+            'Patients ayant un rein unique — la méthode peut être préférée car le parenchyme rénal n’est pas traversé',
+            'Patients porteurs de calculs des deux côtés chez qui le traitement bilatéral en une même hospitalisation est prévu'
+          ],
+          notSuitable: [
+            'Patients porteurs d’un calcul très volumineux ou coralliforme — la voie percutanée est plus adaptée',
+            'Patients présentant une infection urinaire non traitée — elle doit impérativement être traitée avant le geste',
+            'Patients présentant un rétrécissement urétéral empêchant le passage — ce problème est réglé d’abord',
+            'Patients chez qui l’anesthésie générale n’est pas envisageable',
+            'Situations où le calcul est très dur et où de nombreuses séances sont prévisibles — la voie percutanée peut donner le résultat en une seule'
+          ]
+        },
+        technology: [
+          'Urétérorénoscope souple',
+          'Système laser à fibre holmium ou thulium',
+          'Gaine d’accès urétérale — protège l’uretère et aide à maintenir une pression basse dans le rein',
+          'Panier d’extraction des fragments',
+          'Analyse chimique du calcul retiré et bilan visant à prévenir la récidive'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Toutes les techniques de chirurgie des calculs rénaux relèvent du champ de pratique du Dr Müslüm Ergün, maître de conférences. Le choix de la technique repose sur l’évaluation conjointe de la taille, de la densité et de la position du calcul, de l’anatomie du rein et de l’état général du patient.'
+        },
+        timeline: [
+          {
+            when: 'Avant l’intervention',
+            title: 'Évaluation',
+            body: 'Un scanner sans injection précise la taille, la position et la densité du calcul. Un ECBU est réalisé ; en cas d’infection, le geste est reporté et l’infection traitée d’abord.'
+          },
+          {
+            when: 'Jour de l’intervention',
+            title: 'Traitement du calcul au laser',
+            body: 'Sous anesthésie générale, le rein est atteint par les voies naturelles sans incision. Le calcul est vu directement et pulvérisé au laser. L’intervention dure généralement 45 à 90 minutes et une sonde JJ est posée à la fin.'
+          },
+          {
+            when: 'Premières 24 heures',
+            title: 'Surveillance',
+            body: 'La plupart des patients sortent le jour même ou le lendemain. Des urines rosées et une légère pesanteur lombaire sont attendues.'
+          },
+          {
+            when: 'Semaines 1–2',
+            title: 'Période avec la sonde',
+            body: 'Les poussières de calcul s’éliminent durant cette période. Des mictions fréquentes et une gêne en fin de miction peuvent survenir ; il est conseillé de boire abondamment.'
+          },
+          {
+            when: 'Après le retrait de la sonde',
+            title: 'Contrôle et prévention',
+            body: 'La sonde est retirée lors d’un geste ambulatoire bref. L’imagerie confirme l’absence de calcul. Selon l’analyse du calcul, un plan d’alimentation et d’hydratation est établi pour prévenir la récidive.'
+          }
+        ],
+        risks: [
+          'INFECTION ET SEPTICÉMIE (urosepsis) : le risque le plus grave ; c’est pourquoi un ECBU avant le geste et le traitement de toute infection sont impératifs. Fièvre et frissons imposent une consultation immédiate',
+          'Sang dans les urines — généralement léger et cédant spontanément',
+          'Gênes liées à la sonde JJ — mictions fréquentes, pesanteur lombaire, gêne en fin de miction ; elles disparaissent au retrait',
+          'Lésion de l’uretère ou apparition secondaire d’un rétrécissement — peu fréquent',
+          'Fragments de calcul résiduels et nécessité d’une seconde séance',
+          'Impossibilité d’atteindre le rein à la première séance — si l’uretère est étroit, une sonde peut être posée et le geste reporté',
+          'Récidive du calcul — la maladie lithiasique peut revenir en l’absence de mesures préventives'
+        ],
+        alternatives: [
+          'Lithotritie par ondes de choc externes (ESWL) — pour les calculs de taille et de position adaptées',
+          'NLPC (néphrolithotomie percutanée) — pour les calculs volumineux et coralliformes',
+          'Mini-NLPC — pour les calculs de taille moyenne, par un trajet plus étroit',
+          'Essai d’expulsion médicamenteuse et surveillance — pour les petits calculs déjà descendus',
+          'Chirurgie ouverte ou laparoscopique du calcul — très rarement, dans des situations particulières'
+        ],
+        comparison: {
+          title: 'RIRS comparée à la NLPC',
+          columns: ['Critère', 'RIRS', 'NLPC'],
+          rows: [
+            { label: 'Incision cutanée', values: ['Aucune', 'Environ 1 cm au flanc'] },
+            { label: 'Taille de calcul adaptée', values: ['Petite à moyenne', 'Volumineuse et coralliforme'] },
+            { label: 'Hospitalisation', values: ['Ambulatoire ou 1 nuit', '2–3 nuits'] },
+            { label: 'Risque hémorragique', values: ['Plus faible', 'Plus élevé'] },
+            { label: 'Absence de calcul en une séance', values: ['Élevée pour les petits calculs ; une séance supplémentaire peut être nécessaire pour les gros', 'Chance plus élevée de tout retirer en une séance pour les gros calculs'] },
+            { label: 'Sonde JJ', values: ['Généralement posée', 'Une néphrostomie ou une sonde peut être nécessaire'] },
+            { label: 'Reprise du travail', values: ['3–7 jours', '1–2 semaines'] }
+          ],
+          note:
+            'Les deux méthodes ne sont pas concurrentes mais répondent à des situations différentes. La RIRS se distingue pour les calculs petits et moyens, la NLPC pour ceux qui représentent une charge importante. Chez certains patients, les deux peuvent être planifiées ensemble.'
+        },
+        recovery: [
+          {
+            period: 'Premières 48 heures',
+            body: 'Des urines rosées et une légère pesanteur lombaire sont attendues. Boire abondamment aide à éliminer les poussières de calcul.'
+          },
+          {
+            period: 'Jours 3–7',
+            body: 'La vie quotidienne reprend. Le retour au travail de bureau est possible durant cette période. Le port de charges est évité.'
+          },
+          {
+            period: 'Semaines 1–2',
+            body: 'La sonde est en place et peut provoquer des gênes. Boire beaucoup d’eau et prendre les médicaments conseillés par le médecin apportent du soulagement.'
+          },
+          {
+            period: 'Retrait de la sonde',
+            body: 'Il se fait lors d’un geste ambulatoire bref. Les gênes régressent rapidement.'
+          },
+          {
+            period: 'Mois 1–3',
+            body: 'L’imagerie confirme l’absence de calcul. Le plan préventif fondé sur l’analyse du calcul est mis en œuvre.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Le prix varie selon la taille du calcul, selon qu’un ou deux côtés sont traités et selon qu’une séance supplémentaire est nécessaire. Un devis ferme est remis après analyse du scanner.'
+        },
+        packageIncludes: [
+          'Évaluation urologique, scanner et ECBU avant le geste',
+          'Intervention RIRS, utilisation du laser et anesthésie',
+          'Pose et retrait de la sonde JJ',
+          'Surveillance à l’hôpital ou 1 nuit d’hospitalisation',
+          'Analyse chimique du calcul et conseils de prévention',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et suivi à distance après votre retour'
+        ],
+        faqs: [
+          {
+            q: 'Va-t-on m’inciser pour la RIRS ?',
+            a: 'Non. Aucune incision n’est pratiquée. Un endoscope fin et souple est introduit par le canal urinaire jusqu’à la vessie, puis dans l’uretère et le rein. Aucune cicatrice visible ne subsiste.'
+          },
+          {
+            q: 'Comment le calcul est-il retiré ?',
+            a: 'Le calcul est vu directement et pulvérisé par l’énergie laser. La majeure partie des poussières s’élimine spontanément dans les urines. Les fragments plus gros sont retirés au besoin à l’aide d’un panier spécifique.'
+          },
+          {
+            q: 'Pourquoi pose-t-on une sonde JJ et combien de temps reste-t-elle ?',
+            a: 'Elle est posée pour éviter une obstruction liée à l’œdème postopératoire et faciliter l’élimination des poussières. Elle reste généralement de quelques jours à quelques semaines et se retire lors d’un geste ambulatoire bref.'
+          },
+          {
+            q: 'La sonde est-elle gênante ?',
+            a: 'Oui, elle peut l’être, et c’est attendu. Mictions fréquentes, gêne en fin de miction, sensation de pesanteur lombaire et léger saignement urinaire sont possibles. Ces troubles disparaissent généralement vite après le retrait et ne signifient pas que le geste a échoué.'
+          },
+          {
+            q: 'Mon calcul sera-t-il entièrement éliminé en une séance ?',
+            a: 'Cela dépend de la taille, de la dureté et du nombre de calculs. Pour les calculs petits et moyens, une séance suffit le plus souvent. Si la charge lithiasique est importante, une seconde séance peut être programmée ; cela se discute d’emblée et n’est pas un signe d’échec.'
+          },
+          {
+            q: 'Quel est le risque le plus important ?',
+            a: 'Le passage de l’infection dans le sang (urosepsis) est le risque le plus grave. C’est pourquoi un ECBU est réalisé au préalable et toute infection est traitée. En cas de fièvre et de frissons après le geste, il faut consulter sans délai.'
+          },
+          {
+            q: 'RIRS ou NLPC, qu’est-ce qui est mieux ?',
+            a: 'Il n’existe pas de méthode unique « meilleure » ; les deux répondent à des situations différentes. Pour les calculs petits et moyens, la RIRS se distingue car elle n’exige aucune incision et comporte un risque hémorragique plus faible. Pour les calculs volumineux et coralliformes, la NLPC est préférée car la chance de tout retirer en une séance est plus élevée.'
+          },
+          {
+            q: 'Que se passe-t-il si le rein n’est pas atteignable à la première séance ?',
+            a: 'Chez certains patients, l’uretère est trop étroit pour laisser passer l’instrument. On pose alors d’abord une sonde JJ pour qu’il se dilate de lui-même ; l’intervention a lieu quelques semaines plus tard. Ce n’est pas une complication mais une démarche planifiée.'
+          },
+          {
+            q: 'Mon calcul peut-il récidiver ?',
+            a: 'La maladie lithiasique peut revenir si aucune mesure préventive n’est prise. C’est pourquoi le calcul retiré est analysé chimiquement et, selon le résultat, un plan de protection portant sur l’hydratation, l’alimentation et, au besoin, un traitement médicamenteux est établi.'
+          },
+          {
+            q: 'Quand puis-je prendre l’avion et reprendre le travail ?',
+            a: 'Le vol est généralement autorisé après 2 à 3 jours ; pour les patients venant de l’étranger, un séjour de 4 à 6 jours est prévu. Le travail de bureau peut reprendre en 3 à 7 jours. Le retrait de la sonde est planifié avant votre départ ou organisé pour être réalisé dans votre pays.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — Association européenne d’urologie',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      },
+      ru: {
+        title: 'RIRS: лечение камней почки гибким эндоскопом',
+        summary:
+          'Метод, при котором до почки добираются через мочевыводящие пути без единого разреза, а камень превращают в пыль лазером. Кому подходит, зачем ставят стент и как проходит восстановление?',
+        metaTitle: 'Что такое RIRS? Операция на камнях почки без разреза',
+        metaDescription:
+          'Кому подходит RIRS (ретроградная интраренальная хирургия), как она проводится, период со стентом, риски и сравнение с чрескожной нефролитотомией.',
+        quickFacts: {
+          duration: '45–90 минут',
+          anesthesia: 'Общая анестезия',
+          hospitalStay: 'Амбулаторно или 1 ночь',
+          stayInTurkey: '4–6 дней',
+          returnToWork: '3–7 дней',
+          flightClearance: '2–3 дня'
+        },
+        definition: [
+          'RIRS (ретроградная интраренальная хирургия) — это лечение камня почки без каких-либо разрезов на теле. Тонкий гибкий эндоскоп вводят через мочевыводящие пути в мочевой пузырь, затем проводят по мочеточнику и наконец в почку. Камень видят напрямую и с помощью лазерной энергии либо превращают в пыль, либо дробят на мелкие части.',
+          'Поскольку кончик инструмента сгибается, доступны и труднодостижимые отделы почки, в частности область нижней чашечки. В зависимости от расположения камня это одна из причин выбора данного метода.',
+          'Когда камень превращён лазером в пыль, большая часть частиц выходит сама с мочой; более крупные фрагменты можно извлечь специальной корзинкой. На время вмешательства в мочеточник обычно устанавливают тонкий кожух, чтобы защитить его и дать инструменту свободно двигаться.',
+          'СТЕНТ ПОСЛЕ ВМЕШАТЕЛЬСТВА: у большинства пациентов в конце процедуры между почкой и мочевым пузырём устанавливают тонкую гибкую трубку — мочеточниковый стент. Его задача — предотвратить блок из-за отёка и облегчить выход каменной пыли. Стент остаётся от нескольких дней до нескольких недель и удаляется короткой амбулаторной процедурой.',
+          'ЖАЛОБЫ, СВЯЗАННЫЕ СО СТЕНТОМ, РЕАЛЬНЫ. Пока стент установлен, возможны частое мочеиспускание, неприятные ощущения в конце мочеиспускания, чувство тяжести в пояснице и небольшая примесь крови в моче. После удаления стента они обычно быстро проходят и не означают, что вмешательство оказалось неудачным. Знание об этом заранее делает этот период гораздо легче.',
+          'У некоторых пациентов с очень узким мочеточником достичь почки в первом сеансе не удаётся. Тогда сначала ставят стент и дают мочеточнику расшириться, а вмешательство выполняют через несколько недель. Это не осложнение, а запланированный двухэтапный подход.'
+        ],
+        eligibility: {
+          suitable: [
+            'Пациенты с камнем среднего размера внутри почки',
+            'Камни в нижней чашечке почки, которые вряд ли выйдут самостоятельно',
+            'Пациенты, у которых дистанционное дробление ударной волной (ДЛТ) было безуспешным',
+            'Пациенты с нарушением свёртывания крови или принимающие разжижающие кровь препараты — риск кровотечения ниже, чем при чрескожном методе',
+            'Пациенты с избыточным весом и анатомией, при которой чрескожный доступ технически труден',
+            'Пациенты с единственной почкой — метод может быть предпочтителен, так как ткань почки не прокалывается',
+            'Пациенты с камнями в обеих почках, которым планируют лечение обеих сторон за одну госпитализацию'
+          ],
+          notSuitable: [
+            'Пациенты с очень крупным или коралловидным камнем — чрескожный метод подходит лучше',
+            'Пациенты с нелеченой инфекцией мочевых путей — её обязательно лечат до вмешательства',
+            'Пациенты с сужением мочеточника, не допускающим прохождения инструмента — сначала решают эту проблему',
+            'Пациенты, которым не подходит общая анестезия',
+            'Случаи, когда камень очень твёрдый и ожидается много сеансов — чрескожный метод может дать результат за один'
+          ]
+        },
+        technology: [
+          'Гибкий уретерореноскоп',
+          'Гольмиевая или тулиевая волоконная лазерная система',
+          'Мочеточниковый кожух доступа — защищает мочеточник и помогает удерживать низкое давление внутри почки',
+          'Корзинка для извлечения фрагментов',
+          'Химический анализ извлечённого камня и обследование для предотвращения рецидива'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Все методы хирургии камней почки входят в практику доц. д-ра Мюслюма Эргюна. Какой метод выбрать, определяется совместной оценкой размера, плотности и расположения камня, анатомии почки и общего состояния пациента.'
+        },
+        timeline: [
+          {
+            when: 'До вмешательства',
+            title: 'Обследование',
+            body: 'Компьютерная томография без контраста определяет размер, расположение и плотность камня. Берут посев мочи; при инфекции вмешательство откладывают и сначала её лечат.'
+          },
+          {
+            when: 'День вмешательства',
+            title: 'Лечение камня лазером',
+            body: 'Под общей анестезией почки достигают через мочевыводящие пути без разрезов. Камень видят напрямую и превращают лазером в пыль. Обычно вмешательство занимает 45–90 минут, в конце устанавливают стент.'
+          },
+          {
+            when: 'Первые 24 часа',
+            title: 'Наблюдение',
+            body: 'Большинство пациентов выписывают в тот же или на следующий день. Розоватая моча и лёгкое чувство тяжести в пояснице ожидаемы.'
+          },
+          {
+            when: '1–2-я неделя',
+            title: 'Период со стентом',
+            body: 'В этот период выходит каменная пыль. Возможны частое мочеиспускание и неприятные ощущения в его конце; рекомендуется обильное питьё.'
+          },
+          {
+            when: 'После удаления стента',
+            title: 'Контроль и профилактика',
+            body: 'Стент удаляют короткой амбулаторной процедурой. Отсутствие камней подтверждают при визуализации. По результату анализа камня составляют план питания и питьевого режима для профилактики рецидива.'
+          }
+        ],
+        risks: [
+          'ИНФЕКЦИЯ И ЗАРАЖЕНИЕ КРОВИ (уросепсис): самый серьёзный риск; именно поэтому посев мочи до вмешательства и лечение инфекции обязательны. При лихорадке и ознобе нужно обратиться к врачу немедленно',
+          'Кровь в моче — обычно незначительная и проходит сама',
+          'Жалобы из-за стента — частое мочеиспускание, тяжесть в пояснице, дискомфорт в конце мочеиспускания; после удаления стента проходят',
+          'Повреждение мочеточника или развитие сужения в дальнейшем — встречается нечасто',
+          'Оставшиеся фрагменты камня и необходимость второго сеанса',
+          'Невозможность достичь почки в первом сеансе — при узком мочеточнике могут поставить стент и отложить вмешательство',
+          'Повторное образование камня — без профилактических мер мочекаменная болезнь может вернуться'
+        ],
+        alternatives: [
+          'Дистанционное дробление ударной волной (ДЛТ) — при подходящем размере и расположении камня',
+          'Чрескожная нефролитотомия — при крупных и коралловидных камнях',
+          'Мини-нефролитотомия — при камнях среднего размера, через более узкий ход',
+          'Попытка медикаментозного изгнания и наблюдение — при небольших камнях, уже спустившихся вниз',
+          'Открытая или лапароскопическая операция по поводу камня — очень редко, в особых ситуациях'
+        ],
+        comparison: {
+          title: 'Сравнение RIRS и чрескожной нефролитотомии',
+          columns: ['Критерий', 'RIRS', 'Чрескожная нефролитотомия'],
+          rows: [
+            { label: 'Разрез кожи', values: ['Нет', 'Около 1 см в поясничной области'] },
+            { label: 'Подходящий размер камня', values: ['Малый и средний', 'Крупный и коралловидный'] },
+            { label: 'Пребывание в стационаре', values: ['Амбулаторно или 1 ночь', '2–3 ночи'] },
+            { label: 'Риск кровотечения', values: ['Ниже', 'Выше'] },
+            { label: 'Полное удаление за один сеанс', values: ['Высокое при малых камнях; при крупных может потребоваться ещё сеанс', 'При крупных камнях выше шанс всё убрать за один сеанс'] },
+            { label: 'Мочеточниковый стент', values: ['Обычно устанавливается', 'Может потребоваться нефростома или стент'] },
+            { label: 'Возвращение к работе', values: ['3–7 дней', '1–2 недели'] }
+          ],
+          note:
+            'Эти два метода не соперники, а решения для разных ситуаций. При малых и средних камнях выделяется RIRS, при большой каменной нагрузке — чрескожная нефролитотомия. У части пациентов их можно запланировать вместе.'
+        },
+        recovery: [
+          {
+            period: 'Первые 48 часов',
+            body: 'Ожидаемы розоватая моча и лёгкая тяжесть в пояснице. Обильное питьё помогает выходу каменной пыли.'
+          },
+          {
+            period: '3–7-й день',
+            body: 'Возвращение к обычной жизни. В этот период можно вернуться к работе за столом. Поднятия тяжестей следует избегать.'
+          },
+          {
+            period: '1–2-я неделя',
+            body: 'Стент на месте и может вызывать жалобы. Облегчение приносят обильное питьё воды и приём рекомендованных врачом препаратов.'
+          },
+          {
+            period: 'Удаление стента',
+            body: 'Выполняется короткой амбулаторной процедурой. Жалобы быстро уменьшаются.'
+          },
+          {
+            period: '1–3-й месяц',
+            body: 'Отсутствие камней подтверждают при визуализации. Начинают применять профилактический план, основанный на анализе камня.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Стоимость зависит от размера камня, от того, одну или обе стороны лечат, и от того, нужен ли дополнительный сеанс. Точное предложение даётся после оценки компьютерной томографии.'
+        },
+        packageIncludes: [
+          'Урологическое обследование, компьютерная томография и посев мочи до вмешательства',
+          'Процедура RIRS, применение лазера и анестезия',
+          'Установка и удаление мочеточникового стента',
+          'Наблюдение в стационаре или 1 ночь пребывания',
+          'Химический анализ камня и профилактические рекомендации',
+          'Трансферы аэропорт–больница–отель',
+          'Проживание (пациент + 1 сопровождающий)',
+          'Медицинский переводчик и дистанционное наблюдение после возвращения домой'
+        ],
+        faqs: [
+          {
+            q: 'Будет ли при RIRS разрез на теле?',
+            a: 'Нет. Никаких разрезов не делают. Тонкий гибкий эндоскоп вводят через мочевыводящие пути в мочевой пузырь, затем в мочеточник и почку. Видимого рубца не остаётся.'
+          },
+          {
+            q: 'Как удаляют камень?',
+            a: 'Камень видят напрямую и превращают в пыль лазерной энергией. Большая часть пыли выходит сама с мочой. Более крупные фрагменты при необходимости извлекают специальной корзинкой.'
+          },
+          {
+            q: 'Зачем ставят стент и сколько он стоит?',
+            a: 'Его ставят, чтобы предотвратить блок из-за отёка после вмешательства и облегчить выход каменной пыли. Обычно он остаётся от нескольких дней до нескольких недель и удаляется короткой амбулаторной процедурой.'
+          },
+          {
+            q: 'Доставляет ли стент неудобства?',
+            a: 'Да, может, и это ожидаемо. Возможны частое мочеиспускание, дискомфорт в его конце, чувство тяжести в пояснице и небольшая примесь крови в моче. После удаления стента они обычно быстро проходят и не означают неудачи вмешательства.'
+          },
+          {
+            q: 'Уберут ли камень полностью за один сеанс?',
+            a: 'Это зависит от размера, твёрдости и количества камней. При малых и средних камнях одного сеанса чаще всего достаточно. При большой каменной нагрузке может быть запланирован второй сеанс; это обсуждается с самого начала и не является признаком неудачи.'
+          },
+          {
+            q: 'Какой риск самый важный?',
+            a: 'Попадание инфекции в кровь (уросепсис) — самый серьёзный риск. Поэтому заранее берут посев мочи, а инфекцию обязательно лечат. Если после вмешательства появятся лихорадка и озноб, нужно обратиться к врачу без промедления.'
+          },
+          {
+            q: 'Что лучше — RIRS или чрескожная нефролитотомия?',
+            a: 'Единственного «лучшего» метода нет; это решения для разных ситуаций. При малых и средних камнях выделяется RIRS, поскольку не требует разреза и несёт меньший риск кровотечения. При крупных и коралловидных камнях предпочитают чрескожную нефролитотомию, так как шанс убрать всё за один сеанс выше.'
+          },
+          {
+            q: 'Что будет, если в первом сеансе до почки не добраться?',
+            a: 'У некоторых пациентов мочеточник слишком узкий для инструмента. Тогда сначала ставят стент и дают мочеточнику расшириться самостоятельно; вмешательство выполняют через несколько недель. Это не осложнение, а запланированный подход.'
+          },
+          {
+            q: 'Может ли камень образоваться снова?',
+            a: 'Без профилактических мер мочекаменная болезнь может вернуться. Поэтому извлечённый камень анализируют химически и по результату составляют план защиты, включающий питьевой режим, питание и при необходимости лекарства.'
+          },
+          {
+            q: 'Когда можно лететь и выходить на работу?',
+            a: 'Перелёт обычно разрешают через 2–3 дня; для пациентов из-за рубежа планируется пребывание 4–6 дней. К работе за столом можно вернуться за 3–7 дней. Удаление стента планируют до вашего отъезда либо организуют так, чтобы оно было выполнено в вашей стране.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — Европейская ассоциация урологии',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      },
+      ar: {
+        title: 'RIRS: علاج حصى الكلى بالمنظار المرن',
+        summary:
+          'طريقة يُوصَل فيها إلى الكلية عبر المجرى البولي من دون أي شقّ في الجسم، وتُفتَّت الحصاة بالليزر حتى تصير غبارًا. لمن تصلح، ولماذا تُوضع دعامة الحالب، وكيف يجري التعافي؟',
+        metaTitle: 'ما هي عملية RIRS؟ جراحة حصى الكلى من دون شقّ',
+        metaDescription:
+          'لمن تصلح عملية RIRS (الجراحة الراجعة داخل الكلية)، وكيف تُطبَّق، ومرحلة دعامة الحالب، ومخاطرها، ومقارنتها بتفتيت الحصى عبر الجلد.',
+        quickFacts: {
+          duration: '45–90 دقيقة',
+          anesthesia: 'تخدير عام',
+          hospitalStay: 'في اليوم نفسه أو ليلة واحدة',
+          stayInTurkey: '4–6 أيام',
+          returnToWork: '3–7 أيام',
+          flightClearance: '2–3 أيام'
+        },
+        definition: [
+          'عملية RIRS (الجراحة الراجعة داخل الكلية) هي علاج حصاة الكلية من دون إحداث أي شقّ في الجسم. يُدخَل منظار رفيع قابل للانحناء عبر المجرى البولي إلى المثانة، ثم يُصعَد به في الحالب حتى داخل الكلية. وتُرى الحصاة مباشرةً وتُفتَّت بطاقة الليزر حتى تصير غبارًا أو تتجزأ إلى قطع صغيرة.',
+          'ولأن طرف الجهاز ينحني، يمكن الوصول أيضًا إلى مناطق الكلية صعبة المنال، ولا سيما المنطقة المسماة القطب السفلي. وهذا، بحسب موضع الحصاة، أحد أسباب اختيار هذه الطريقة.',
+          'عندما تتحول الحصاة بالليزر إلى غبار يخرج معظم الدقائق تلقائيًا مع البول؛ أما القطع الأكبر فيمكن إخراجها بسلة خاصة. وأثناء الإجراء تُوضَع عادةً غلافة رفيعة في الحالب لحمايته ولتمكين الجهاز من الحركة بحرية.',
+          'دعامة الحالب بعد الإجراء: تُوضَع عند معظم المرضى في نهاية العملية أنبوبة رفيعة مرنة بين الكلية والمثانة تُسمّى دعامة الحالب. والغرض منها منع الانسداد الناتج عن التورم وتسهيل خروج غبار الحصى. وتبقى الدعامة من بضعة أيام إلى بضعة أسابيع، وتُنزع بإجراء قصير من دون مبيت.',
+          'الشكاوى المرتبطة بالدعامة حقيقية. فما دامت موضوعة قد يحدث تبول متكرر وانزعاج في نهاية التبول وشعور بالامتلاء في الخاصرة ونزف خفيف في البول. وتزول هذه الأعراض عادةً بسرعة بعد نزع الدعامة؛ وهي لا تعني أن الإجراء قد فشل. ومعرفة ذلك مسبقًا تجعل هذه المرحلة أيسر كثيرًا.',
+          'وعند بعض المرضى ذوي الحالب الضيق جدًا قد يتعذّر الوصول إلى الكلية في الجلسة الأولى. وعندها تُوضَع دعامة أولًا ليتسع الحالب، ويُجرى التدخل بعد بضعة أسابيع. وهذا ليس مضاعفة بل أسلوب مخطط له على مرحلتين.'
+        ],
+        eligibility: {
+          suitable: [
+            'المرضى الذين لديهم حصاة متوسطة الحجم داخل الكلية',
+            'الحصى الواقعة في القطب السفلي للكلية والتي يصعب نزولها تلقائيًا',
+            'المرضى الذين جُرِّب لديهم تفتيت الحصى بالموجات التصادمية من خارج الجسم من دون نتيجة',
+            'المرضى المصابون باضطراب تخثّر أو الذين يتناولون مميّعات الدم — إذ خطر النزف أقل منه في الطريق عبر الجلد',
+            'المرضى ذوو الوزن الزائد والحالات التشريحية التي يصعب فيها الدخول عبر الجلد تقنيًا',
+            'المرضى ذوو الكلية الواحدة — إذ قد تُفضَّل لأن نسيج الكلية لا يُخترَق',
+            'المرضى الذين لديهم حصى في الكليتين ويُخطَّط لعلاج الجانبين في الإقامة نفسها'
+          ],
+          notSuitable: [
+            'المرضى الذين لديهم حصاة ضخمة جدًا أو مرجانية الشكل — الطريق عبر الجلد أنسب',
+            'المرضى المصابون بالتهاب غير معالَج في المسالك البولية — يجب علاجه قبل الإجراء بالضرورة',
+            'المرضى الذين لديهم تضيّق في الحالب لا يسمح بالمرور — تُحلّ هذه المشكلة أولًا',
+            'المرضى الذين لا يناسبهم التخدير العام',
+            'الحالات التي تكون فيها الحصاة شديدة الصلابة ويُتوقع فيها عدد كبير من الجلسات — إذ قد يحقق الطريق عبر الجلد النتيجة في جلسة واحدة'
+          ]
+        },
+        technology: [
+          'منظار حالبي كلوي مرن',
+          'نظام ليزر بألياف الهولميوم أو الثوليوم',
+          'غلافة دخول حالبية — تحمي الحالب وتساعد على خفض الضغط داخل الكلية',
+          'سلة لإخراج شظايا الحصى',
+          'التحليل الكيميائي للحصاة المستخرجة وتقييم للوقاية من التكرار'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'تقع طرق جراحة حصى الكلى كلها ضمن مجال ممارسة الأستاذ المشارك الدكتور مسلم إرغون. ويُحدَّد الأسلوب المختار بتقييم حجم الحصاة وكثافتها وموضعها وتشريح الكلية والحالة العامة للمريض معًا.'
+        },
+        timeline: [
+          {
+            when: 'قبل الإجراء',
+            title: 'التقييم',
+            body: 'يُحدَّد حجم الحصاة وموضعها وكثافتها بالتصوير المقطعي من دون صبغة. وتُؤخذ زراعة بول؛ فإن وُجد التهاب أُجِّل الإجراء وعُولج أولًا.'
+          },
+          {
+            when: 'يوم الإجراء',
+            title: 'معالجة الحصاة بالليزر',
+            body: 'تحت تخدير عام يُوصَل إلى الكلية عبر المجرى البولي من دون شقّ. وتُرى الحصاة مباشرةً وتُفتَّت بالليزر حتى تصير غبارًا. ويستغرق الإجراء عادةً 45–90 دقيقة، وتُوضَع في نهايته دعامة الحالب.'
+          },
+          {
+            when: 'أول 24 ساعة',
+            title: 'المراقبة',
+            body: 'يُخرَّج معظم المرضى في اليوم نفسه أو في اليوم التالي. واللون الوردي في البول والشعور الخفيف بالامتلاء في الخاصرة من الأمور المتوقعة.'
+          },
+          {
+            when: 'الأسبوع 1–2',
+            title: 'مرحلة الدعامة',
+            body: 'يخرج غبار الحصى في هذه المرحلة. وقد يحدث تبول متكرر وانزعاج في نهاية التبول؛ ويُنصح بشرب السوائل بكثرة.'
+          },
+          {
+            when: 'بعد نزع الدعامة',
+            title: 'المتابعة والوقاية',
+            body: 'تُنزع الدعامة بإجراء قصير من دون مبيت. ويُتحقق من خلو الكلية من الحصى بالتصوير. وبحسب تحليل الحصاة تُوضع خطة للسوائل والتغذية تمنع التكرار.'
+          }
+        ],
+        risks: [
+          'العدوى وتسمّم الدم (الإنتان البولي): أخطر المضاعفات؛ ولهذا فإن أخذ زراعة البول قبل الإجراء وعلاج الالتهاب أمران إلزاميان. وعند الحمى والقشعريرة تجب المراجعة فورًا',
+          'نزف في البول — خفيف عادةً ويزول تلقائيًا',
+          'شكاوى بسبب دعامة الحالب — تبول متكرر وامتلاء في الخاصرة وانزعاج في نهاية التبول؛ وتزول بنزع الدعامة',
+          'إصابة الحالب أو حدوث تضيّق لاحقًا — غير شائع',
+          'بقاء شظايا من الحصاة والحاجة إلى جلسة ثانية',
+          'تعذّر الوصول إلى الكلية في الجلسة الأولى — فإن كان الحالب ضيقًا قد تُوضَع دعامة ويُؤجَّل الإجراء',
+          'تكرار الحصاة — إذ قد يعود داء الحصى من دون تدابير وقائية'
+        ],
+        alternatives: [
+          'تفتيت الحصى بالموجات التصادمية من خارج الجسم — في الحصى ذات الحجم والموضع المناسبين',
+          'تفتيت الحصى عبر الجلد — في الحصى الكبيرة والمرجانية',
+          'التفتيت المصغّر عبر الجلد — في الحصى متوسطة الحجم عبر ممر أضيق',
+          'محاولة إنزال الحصاة بالأدوية مع المتابعة — في الحصى الصغيرة التي نزلت بالفعل',
+          'جراحة الحصى المفتوحة أو بالمنظار البطني — نادرًا جدًا وفي حالات خاصة'
+        ],
+        comparison: {
+          title: 'مقارنة بين RIRS وتفتيت الحصى عبر الجلد',
+          columns: ['المعيار', 'RIRS', 'التفتيت عبر الجلد'],
+          rows: [
+            { label: 'شقّ الجلد', values: ['لا يوجد', 'نحو 1 سم في الخاصرة'] },
+            { label: 'حجم الحصاة المناسب', values: ['صغير إلى متوسط', 'كبير ومرجاني'] },
+            { label: 'الإقامة في المستشفى', values: ['في اليوم نفسه أو ليلة واحدة', '2–3 ليالٍ'] },
+            { label: 'خطر النزف', values: ['أقل', 'أعلى'] },
+            { label: 'الخلو من الحصى في جلسة واحدة', values: ['عالٍ في الحصى الصغيرة؛ وقد تلزم جلسة إضافية في الكبيرة', 'احتمال أعلى لإزالة الحصى الكبيرة في جلسة واحدة'] },
+            { label: 'دعامة الحالب', values: ['تُوضَع عادةً', 'قد يلزم أنبوب كلوي أو دعامة'] },
+            { label: 'العودة إلى العمل', values: ['3–7 أيام', '1–2 أسبوع'] }
+          ],
+          note:
+            'ليست الطريقتان متنافستين بل حلّان لحالتين مختلفتين. ففي الحصى الصغيرة والمتوسطة تبرز RIRS، وفي الحصى ذات الحمل الكبير يبرز التفتيت عبر الجلد. وعند بعض المرضى يمكن التخطيط لهما معًا.'
+        },
+        recovery: [
+          {
+            period: 'أول 48 ساعة',
+            body: 'يُتوقع لون وردي في البول وشعور خفيف بالامتلاء في الخاصرة. وشرب السوائل بكثرة يساعد على خروج غبار الحصى.'
+          },
+          {
+            period: 'اليوم 3–7',
+            body: 'تُستأنف الحياة اليومية. ويمكن العودة إلى العمل المكتبي في هذه المرحلة. ويُتجنَّب رفع الأثقال.'
+          },
+          {
+            period: 'الأسبوع 1–2',
+            body: 'الدعامة موضوعة وقد تسبب شكاوى. وشرب الماء بكثرة واستعمال الأدوية التي يوصي بها الطبيب يخففان الأعراض.'
+          },
+          {
+            period: 'نزع الدعامة',
+            body: 'يتم بإجراء قصير من دون مبيت. وتتراجع الشكاوى بسرعة.'
+          },
+          {
+            period: 'الشهر 1–3',
+            body: 'يُؤكَّد خلو الكلية من الحصى بالتصوير. ويبدأ تطبيق الخطة الوقائية المبنية على تحليل الحصاة.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'يتغير السعر بحسب حجم الحصاة، وما إذا كان العلاج لجانب واحد أم للجانبين، وما إذا كانت ستلزم جلسة إضافية. ويُقدَّم العرض النهائي بعد تقييم التصوير المقطعي.'
+        },
+        packageIncludes: [
+          'تقييم المسالك البولية والتصوير المقطعي وزراعة البول قبل الإجراء',
+          'إجراء RIRS واستعمال الليزر والتخدير',
+          'وضع دعامة الحالب ونزعها',
+          'المراقبة في المستشفى أو الإقامة ليلة واحدة',
+          'التحليل الكيميائي للحصاة والنصائح الوقائية',
+          'التنقلات بين المطار والمستشفى والفندق',
+          'الإقامة (المريض + مرافق واحد)',
+          'مترجم طبي ومتابعة عن بُعد بعد عودتك إلى بلدك'
+        ],
+        faqs: [
+          {
+            q: 'هل سيُجرى شقّ في جسمي من أجل RIRS؟',
+            a: 'لا. لا يُجرى أي شقّ على الإطلاق. فيُدخَل منظار رفيع قابل للانحناء عبر المجرى البولي إلى المثانة ثم إلى الحالب فالكلية. ولا تبقى ندبة ظاهرة من الخارج.'
+          },
+          {
+            q: 'كيف تُخرَج الحصاة؟',
+            a: 'تُرى الحصاة مباشرةً وتُفتَّت بطاقة الليزر حتى تصير غبارًا. ويخرج معظم الغبار تلقائيًا مع البول. أما القطع الأكبر فتُخرَج عند اللزوم بسلة خاصة.'
+          },
+          {
+            q: 'لماذا تُوضَع دعامة الحالب وكم تبقى؟',
+            a: 'تُوضَع لمنع الانسداد الناتج عن التورم بعد الإجراء ولتسهيل خروج غبار الحصى. وتبقى عادةً من بضعة أيام إلى بضعة أسابيع، وتُنزع بإجراء قصير من دون مبيت.'
+          },
+          {
+            q: 'هل تسبب الدعامة إزعاجًا؟',
+            a: 'نعم، قد تسبب، وهذا أمر متوقع. فقد يحدث تبول متكرر وانزعاج في نهاية التبول وشعور بالامتلاء في الخاصرة ونزف خفيف في البول. وتزول هذه الأعراض عادةً بسرعة بعد نزع الدعامة، ولا تعني أن الإجراء قد فشل.'
+          },
+          {
+            q: 'هل تُزال حصاتي كاملة في جلسة واحدة؟',
+            a: 'يعتمد ذلك على حجم الحصى وصلابتها وعددها. ففي الحصى الصغيرة والمتوسطة تكفي جلسة واحدة في الغالب. وإن كان حمل الحصى كبيرًا فقد تُخطَّط جلسة ثانية؛ ويُتحدث عن ذلك من البداية وهو ليس دليل فشل.'
+          },
+          {
+            q: 'ما أهم خطر؟',
+            a: 'انتقال العدوى إلى الدم (الإنتان البولي) أخطر ما في الأمر. ولهذا تُؤخذ زراعة بول قبل الإجراء ويُعالَج أي التهاب بالضرورة. وإن ظهرت حمى وقشعريرة بعد الإجراء وجبت المراجعة من دون تأخير.'
+          },
+          {
+            q: 'أيّهما أفضل: RIRS أم التفتيت عبر الجلد؟',
+            a: 'لا توجد طريقة واحدة "أفضل"؛ فكلتاهما حلّ لحالة مختلفة. ففي الحصى الصغيرة والمتوسطة تبرز RIRS لأنها لا تتطلب شقًّا وخطر النزف فيها أقل. أما في الحصى الكبيرة والمرجانية فيُفضَّل التفتيت عبر الجلد لأن احتمال إزالتها كلها في جلسة واحدة أعلى.'
+          },
+          {
+            q: 'ماذا يحدث إذا تعذّر الوصول إلى الكلية في الجلسة الأولى؟',
+            a: 'يكون الحالب عند بعض المرضى أضيق من أن يمرّ منه الجهاز. وعندها تُوضَع دعامة أولًا ويُترك الحالب ليتسع من تلقاء نفسه؛ ويُجرى التدخل بعد بضعة أسابيع. وهذا ليس مضاعفة بل أسلوب مخطط له.'
+          },
+          {
+            q: 'هل تتكرر الحصاة لديّ؟',
+            a: 'قد يعود داء الحصى إذا لم تُتخذ تدابير وقائية. ولهذا تُحلَّل الحصاة المستخرجة كيميائيًا، وبحسب النتيجة تُوضع خطة وقاية تشمل كمية السوائل والتغذية والأدوية عند الحاجة.'
+          },
+          {
+            q: 'متى يمكنني السفر جوًا والعودة إلى العمل؟',
+            a: 'يُسمح بالسفر جوًا عادةً بعد 2–3 أيام؛ ويُخطَّط للمرضى القادمين من الخارج بإقامة 4–6 أيام. ويمكن العودة إلى العمل المكتبي خلال 3–7 أيام. ويُخطَّط لنزع الدعامة قبل عودتك أو يُرتَّب لإجرائه في بلدك.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — الجمعية الأوروبية للمسالك البولية',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      }
+    }
+  },
+  {
+    /**
      * BPH hub'ının altındaki minimal invaziv seçenek (prompt m.4.1).
      * Rezūm cerrahiye ALTERNATİF DEĞİL, farklı bir seçenektir; etkisi
      * kademelidir ve doku alınmadığı için patoloji yapılamaz. Yeniden
