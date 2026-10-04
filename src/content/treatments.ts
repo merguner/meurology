@@ -15,6 +15,1379 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
+     * Kadın ürolojisi hub'ının altındaki ilk alt sayfa (prompt m.4.1).
+     * ÜÇ ZORUNLU DÜRÜSTLÜK NOKTASI:
+     * 1. STRES ve SIKIŞMA tipi kaçırma AYRI hastalıklardır ve tedavileri
+     *    taban tabana zıttır. Yanlış tanı yanlış ameliyata yol açar.
+     * 2. PELVİK TABAN EGZERZİSİ İLK BASAMAKTIR ve gerçekten işe yarar;
+     *    doğrudan ameliyata gitmek yanlıştır.
+     * 3. SENTETİK ASKI (MESH) TARTIŞMASI AÇIKÇA ANLATILMIŞTIR — bazı
+     *    ülkelerde kullanımı kısıtlandı/askıya alındı. Hasta bunu zaten
+     *    internette okuyacak; gizlemek güveni yok eder. Alternatifler
+     *    (otolog fasya askısı, kolposüspansiyon, dolgu maddesi) verilmiştir.
+     * Kaynak: EAU Non-neurogenic Female LUTS kılavuzu.
+     * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     */
+    slug: 'stres-inkontinans',
+    parent: 'kadin-urolojisi',
+    lastReviewed: '2026-10-04',
+    icon: 'female',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'Stres Tipi İdrar Kaçırma: Tedavi Seçenekleri',
+        summary:
+          'Öksürürken, hapşırırken veya spor yaparken idrar kaçırma. Önce doğru tipin belirlenmesi, sonra en az girişimsel basamaktan başlanması gerekir — ameliyat ilk seçenek değildir.',
+        metaTitle: 'Stres Tipi İdrar Kaçırma: Egzersizden Askı Ameliyatına',
+        metaDescription:
+          'Stres ve sıkışma tipi kaçırmanın farkı, pelvik taban egzersizinin neden ilk basamak olduğu, askı ameliyatı, sentetik mesh tartışması ve alternatifleri.',
+        quickFacts: {
+          duration: 'Askı ameliyatı 30–45 dakika',
+          anesthesia: 'Spinal veya genel anestezi',
+          hospitalStay: 'Günübirlik veya 1 gece',
+          stayInTurkey: '5–7 gün',
+          returnToWork: '1–2 hafta',
+          flightClearance: '5–7 gün'
+        },
+        definition: [
+          'Stres tipi idrar kaçırma, karın içi basıncın arttığı anlarda — öksürme, hapşırma, gülme, ağır kaldırma veya spor sırasında — istem dışı idrar gelmesidir. Buradaki "stres" ruhsal gerginlik değil, mesane üzerine binen fiziksel yüktür. Nedeni, idrar kanalını kapalı tutan destek yapılarının ve kasların zayıflamasıdır; doğum, menopoz, kronik öksürük, kabızlık ve kilo fazlası başlıca katkıda bulunan etkenlerdir.',
+          'ÖNCE HANGİ TİP OLDUĞU BELİRLENMELİDİR; BU AYRIM HER ŞEYİ DEĞİŞTİRİR. Stres tipinde kaçırma ani bir sıkışma hissi olmadan, doğrudan fiziksel zorlanmayla olur. Sıkışma (urge) tipinde ise önce dayanılmaz bir tuvalete gitme ihtiyacı doğar ve yetişemeden kaçırılır. İkisi farklı hastalıklardır: stres tipinde destek yapısı sorunu vardır, sıkışma tipinde mesane kası aşırı çalışır.',
+          'BU AYRIM NEDEN BU KADAR ÖNEMLİ? Çünkü tedavileri taban tabana zıttır. Sıkışma tipine askı ameliyatı yapmak fayda getirmez, hatta işeme güçlüğü yaratabilir. Birçok kadın yanlış tipin tedavisini görür. Karışık (hem stres hem sıkışma) tipte ise hangi yakınmanın baskın olduğu belirlenir ve önce o ele alınır.',
+          'PELVİK TABAN EGZERSİZİ İLK BASAMAKTIR VE GERÇEKTEN İŞE YARAR. Doğru kası doğru şekilde çalıştırmak, düzenli ve en az üç ay sürdürüldüğünde birçok kadında yakınmayı belirgin biçimde azaltır. Burada iki tuzak vardır: birincisi yanlış kası kasmak (karın veya kalça), ikincisi birkaç hafta sonra bırakmak. Bu nedenle mümkünse bir fizyoterapist eşliğinde öğrenilmesi önerilir. Bu basamak atlanıp doğrudan ameliyata gidilmesi doğru değildir.',
+          'Kilo verme, kabızlığın giderilmesi ve kronik öksürüğün tedavisi de tedavinin parçasıdır. Bunlar "yan öneri" değildir; karın içi basıncı azalttıkları için doğrudan etki ederler.',
+          'AMELİYAT: ORTA ÜRETRAL ASKI. Egzersiz ve yaşam tarzı düzenlemesi yeterli gelmediğinde, idrar kanalının orta bölümünün altına bir askı yerleştirilerek öksürük anında kanalın desteklenmesi sağlanır. Askı sentetik bir şerit (mesh) olabileceği gibi, hastanın kendi dokusundan (otolog fasya) da hazırlanabilir.'
+        ],
+        eligibility: {
+          suitable: [
+            'Stres tipi kaçırması olduğu muayene ve öyküyle doğrulanmış kadınlar',
+            'En az üç ay düzenli pelvik taban egzersizi yaptığı hâlde yeterli fayda görmeyenler',
+            'Yakınması günlük yaşamını, çalışmasını veya sosyal hayatını kısıtlayan hastalar',
+            'Kilo, kabızlık ve kronik öksürük gibi katkıda bulunan etkenleri ele alınmış hastalar',
+            'Doğurganlığını tamamlamış hastalar — gebelik askının etkisini bozabilir'
+          ],
+          notSuitable: [
+            'Sıkışma (urge) tipi baskın olan hastalar — askı ameliyatı bu tipte fayda sağlamaz, işeme güçlüğü yaratabilir',
+            'Egzersiz basamağını hiç denememiş hastalar — önce bu basamak uygulanır',
+            'Gebelik planlayan hastalar — doğum sonrasına ertelenir',
+            'Aktif idrar yolu enfeksiyonu olan hastalar — önce tedavi edilir',
+            'Mesanesini tam boşaltamayan hastalar — önce ürodinamik değerlendirme gerekir',
+            'Eşlik eden ileri derecede pelvik organ sarkması olan hastalar — tedavi planı birlikte kurgulanır'
+          ]
+        },
+        technology: [
+          'Ayrıntılı öykü ve işeme günlüğü — tipin belirlenmesinde en değerli araçtır',
+          'Öksürük (stres) testi ile kaçağın gösterilmesi',
+          'İşeme sonrası kalan idrarın ölçülmesi',
+          'Ürodinamik inceleme — karışık tipte, geçirilmiş ameliyat varlığında veya tanı net değilse',
+          'Orta üretral askı (sentetik şerit veya otolog fasya)',
+          'Üretral dolgu maddesi uygulaması — seçilmiş hastalarda'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Kadın ürolojisi ve işlevsel üroloji, Doç. Dr. Müslüm Ergün’ün çalışma alanları arasındadır. Yaklaşım, önce tipin doğru belirlenmesine ve en az girişimsel basamaktan başlanmasına dayanır; ameliyat kararı ancak muhafazakâr tedavi yeterli gelmediğinde verilir.'
+        },
+        timeline: [
+          {
+            when: '1. adım',
+            title: 'Tipin belirlenmesi',
+            body: 'Kaçırmanın hangi durumlarda olduğu ayrıntılı sorgulanır ve birkaç günlük işeme günlüğü istenir. Muayenede öksürük testi yapılır. Bu adım ameliyat kararından çok daha önemlidir.'
+          },
+          {
+            when: '2. adım',
+            title: 'Katkıda bulunan etkenlerin ele alınması',
+            body: 'Kilo, kabızlık, kronik öksürük ve idrar yolu enfeksiyonu değerlendirilir. Bunlar düzeltilmeden yapılan tedavinin sonucu daha kötüdür.'
+          },
+          {
+            when: '3. adım',
+            title: 'Pelvik taban egzersizi (en az 3 ay)',
+            body: 'Doğru kası doğru şekilde çalıştırmak öğretilir, tercihen fizyoterapist eşliğinde. Düzenli sürdürüldüğünde birçok hastada ameliyata gerek kalmaz.'
+          },
+          {
+            when: '4. adım',
+            title: 'Yeterli fayda yoksa cerrahi değerlendirme',
+            body: 'Gerekiyorsa ürodinamik inceleme yapılır. Askı türü (sentetik veya kendi dokusu) ve alternatifler hastayla birlikte konuşulur.'
+          },
+          {
+            when: 'Ameliyat günü',
+            title: 'Askı yerleştirilmesi',
+            body: 'Spinal veya genel anestezi altında, vajinal küçük bir kesiden askı idrar kanalının orta bölümünün altına yerleştirilir. İşlem 30–45 dakika sürer.'
+          },
+          {
+            when: '6. hafta ve sonrası',
+            title: 'Değerlendirme ve takip',
+            body: 'Sonuç değerlendirilir. Pelvik taban egzersizine ameliyattan sonra da devam edilmesi önerilir.'
+          }
+        ],
+        risks: [
+          'SENTETİK ASKIYA (MESH) İLİŞKİN TARTIŞMA: Bazı ülkelerde sentetik askıların kullanımı, bildirilen komplikasyonlar nedeniyle kısıtlanmış veya askıya alınmıştır. Bu gerçektir ve sizden saklanmamalıdır. Bildirilen sorunlar arasında askının dokudan açığa çıkması (erozyon), kalıcı kasık veya ilişki ağrısı ve çıkarılması güç olan komplikasyonlar yer alır. Bu nedenle karar, alternatifler açıkça anlatıldıktan sonra sizinle birlikte verilmelidir',
+          'Yeni ortaya çıkan sıkışma hissi (de novo urgency) — ameliyattan sonra başlayabilir',
+          'İşeme güçlüğü veya mesanenin tam boşalmaması — askı fazla gerginse',
+          'İdrar yolu enfeksiyonu',
+          'Kanama ve mesane yaralanması — ameliyat sırasında, seyrek',
+          'Kaçırmanın tamamen geçmemesi veya zamanla kısmen geri gelmesi',
+          'Ağrı — kasıkta, uyluk içinde veya ilişki sırasında',
+          'Gebelik sonrası etkinin azalması — bu nedenle doğurganlığı tamamlanmamış hastalarda ameliyat ertelenir'
+        ],
+        alternatives: [
+          'Pelvik taban egzersizi — ilk basamak; mümkünse fizyoterapist eşliğinde, en az 3 ay',
+          'Kilo verme, kabızlığın ve kronik öksürüğün tedavisi',
+          'Vajinal pesser (destek halkası) — ameliyat istemeyen veya uygun olmayan hastalarda',
+          'Üretral dolgu maddesi enjeksiyonu — daha az girişimsel, etkisi genellikle geçicidir ve tekrarlanabilir',
+          'OTOLOG FASYA ASKISI — hastanın kendi dokusundan hazırlanan askı; sentetik materyal istemeyen hastalar için önemli bir seçenektir',
+          'Kolposüspansiyon — sentetik materyal kullanılmayan, daha eski ama hâlâ geçerli bir cerrahi yöntem',
+          'Hiçbir şey yapmamak ve ped kullanmak — yakınma hafifse meşru bir tercihtir'
+        ],
+        comparison: {
+          title: 'Stres ve sıkışma tipi idrar kaçırma — ayrım tedaviyi belirler',
+          columns: ['Ölçüt', 'Stres tipi', 'Sıkışma (urge) tipi'],
+          rows: [
+            { label: 'Ne zaman kaçırılır', values: ['Öksürme, hapşırma, zorlanma anında', 'Ani ve dayanılmaz sıkışmanın ardından'] },
+            { label: 'Öncesinde sıkışma hissi', values: ['Yok', 'Belirgin'] },
+            { label: 'Gece kaçırma', values: ['Seyrek', 'Daha sık'] },
+            { label: 'Altta yatan sorun', values: ['Destek yapılarının zayıflaması', 'Mesane kasının aşırı çalışması'] },
+            { label: 'İlk basamak', values: ['Pelvik taban egzersizi', 'Mesane eğitimi ve ilaç'] },
+            { label: 'Askı ameliyatı', values: ['Uygun olabilir', 'Uygun değildir — fayda getirmez'] }
+          ],
+          note:
+            'Karışık tipte her iki yakınma birliktedir; hangisi baskınsa önce o tedavi edilir. Yanlış tipin tedavi edilmesi, hem yakınmanın geçmemesine hem de gereksiz bir ameliyata yol açar.'
+        },
+        recovery: [
+          {
+            period: 'İlk 48 saat',
+            body: 'Hafif rahatsızlık ve lekelenme tarzı kanama beklenir. İdrarın tam boşalıp boşalmadığı kontrol edilir.'
+          },
+          {
+            period: '1. hafta',
+            body: 'Hafif yürüyüş serbesttir. Ağır kaldırma, ıkınma ve karın kaslarını zorlayan hareketler yasaktır.'
+          },
+          {
+            period: '2–4. hafta',
+            body: 'Masa başı işe dönülebilir. Kabızlıktan kaçınmak önemlidir; ıkınma askı üzerinde yük oluşturur.'
+          },
+          {
+            period: '6. hafta',
+            body: 'Cinsel yaşama ve spora dönüş bu dönemde, hekim onayıyla planlanır. Sonuç değerlendirilir.'
+          },
+          {
+            period: 'Uzun dönem',
+            body: 'Pelvik taban egzersizine devam edilmesi önerilir. Yeni bir yakınma (ağrı, işeme güçlüğü, kanama) ortaya çıkarsa geciktirmeden başvurulmalıdır.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat; seçilen yönteme (sentetik askı, otolog fasya askısı veya dolgu maddesi) ve ek değerlendirme gerekip gerekmediğine göre değişir. Kesin teklif, değerlendirme sonrasında verilir.'
+        },
+        packageIncludes: [
+          'Kadın ürolojisi değerlendirmesi ve öksürük testi',
+          'İşeme sonrası kalan idrar ölçümü',
+          'Gerekirse ürodinamik inceleme',
+          'Askı ameliyatı ve anestezi',
+          'Günübirlik işlem veya 1 gece konaklama',
+          'Pelvik taban egzersizi eğitimi',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve ülkenize döndükten sonra uzaktan takip'
+        ],
+        faqs: [
+          {
+            q: 'Mesh (sentetik askı) güvenli mi? Olumsuz haberler okudum.',
+            a: 'Okuduklarınız gerçek. Bazı ülkelerde sentetik askıların kullanımı, bildirilen komplikasyonlar nedeniyle kısıtlanmış veya askıya alınmıştır. Bildirilen sorunlar arasında askının dokudan açığa çıkması, kalıcı kasık veya ilişki ağrısı ve çıkarılmasının güç olması yer alır. Bunları size söylemeyen bir yaklaşıma güvenmeyin. Aynı zamanda bu yöntem birçok kadında iyi sonuç vermiştir. Doğru olan, size hem yararı hem riski anlatmak ve sentetik materyal içermeyen alternatifleri (kendi dokunuzdan askı, kolposüspansiyon, dolgu maddesi) açıkça sunmaktır. Karar sizindir.'
+          },
+          {
+            q: 'Kendi dokumdan askı yapılabilir mi?',
+            a: 'Evet. Otolog fasya askısında, karın duvarınızdan veya uyluğunuzdan alınan kendi dokunuz askı olarak kullanılır. Sentetik materyale bağlı erozyon riski ortadan kalkar. Karşılığında ikinci bir kesi gerekir ve ameliyat daha uzun sürer. Sentetik materyal istemiyorsanız bu seçenek mutlaka konuşulmalıdır.'
+          },
+          {
+            q: 'Önce egzersiz yapmam şart mı? Doğrudan ameliyat olamaz mıyım?',
+            a: 'Pelvik taban egzersizi ilk basamaktır ve atlanmaması gerekir. Doğru yapıldığında ve en az üç ay sürdürüldüğünde birçok kadında yakınma belirgin biçimde azalır ve ameliyata gerek kalmaz. Ameliyatın geri dönüşü zordur; önce geri dönüşü olan basamağı denemek mantıklıdır.'
+          },
+          {
+            q: 'Egzersizi doğru yaptığımı nasıl anlarım?',
+            a: 'En sık yapılan hata karın, kalça veya bacak kaslarını kasmaktır. Doğru kas, idrarı tutmaya çalışırken kasılan kastır. Nefesinizi tutmadan, karnınızı sıkmadan yapılmalıdır. Mümkünse bir fizyoterapistle öğrenin; yanlış yapılan egzersiz işe yaramadığı gibi "egzersiz fayda etmedi" yanılgısına yol açar.'
+          },
+          {
+            q: 'Kaçırmam tamamen geçecek mi?',
+            a: 'Hedef yakınmanın günlük yaşamınızı kısıtlamayacak düzeye inmesidir. Bir kısım kadında kaçırma tamamen geçer, bir kısmında belirgin biçimde azalır. Zamanla kısmen geri gelmesi de mümkündür. Size tam ve kalıcı kuruluk garantisi veren bir yaklaşıma karşı dikkatli olun.'
+          },
+          {
+            q: 'Ameliyattan sonra sıkışma hissi başlar mı?',
+            a: 'Bir kısım hastada ameliyat sonrası yeni bir sıkışma hissi ortaya çıkabilir (de novo urgency). Bu bilinen bir durumdur ve genellikle mesane eğitimi ve ilaçla yönetilebilir. Ameliyat öncesinde bu olasılığın konuşulmuş olması önemlidir.'
+          },
+          {
+            q: 'Doğum yapmayı planlıyorum, ameliyat olabilir miyim?',
+            a: 'Ameliyatın doğurganlık tamamlandıktan sonraya ertelenmesi önerilir. Gebelik ve doğum, yerleştirilen askının etkisini azaltabilir; bu durumda yapılan ameliyatın faydası kısa sürebilir.'
+          },
+          {
+            q: 'Ürodinamik inceleme herkese yapılır mı?',
+            a: 'Hayır. Öykü ve muayene tanıyı net olarak koyuyorsa gerekmeyebilir. Ancak karışık tip varsa, daha önce bu bölgeye ameliyat olduysanız, mesaneniz tam boşalmıyorsa veya bulgular çelişkiliyse ürodinami istenir — çünkü yanlış tanıyla yapılan ameliyat işe yaramaz.'
+          },
+          {
+            q: 'Ne zaman işe ve spora dönebilirim?',
+            a: 'Masa başı işe genellikle 1–2 hafta içinde dönülür. Spor, ağır kaldırma ve cinsel yaşama dönüş için 6 hafta beklenmesi ve hekim onayı alınması önerilir. Erken dönüş askı üzerinde yük oluşturur.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Non-neurogenic Female LUTS — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts'
+          }
+        ]
+      },
+      en: {
+        title: 'Stress Urinary Incontinence: the Treatment Options',
+        summary:
+          'Leaking urine when you cough, sneeze or exercise. The type has to be established first, and treatment should begin with the least invasive step — surgery is not the first option.',
+        metaTitle: 'Stress Urinary Incontinence: From Exercises to Sling Surgery',
+        metaDescription:
+          'The difference between stress and urgency incontinence, why pelvic floor training comes first, sling surgery, the synthetic mesh controversy and the alternatives.',
+        quickFacts: {
+          duration: 'Sling surgery 30–45 minutes',
+          anesthesia: 'Spinal or general anaesthesia',
+          hospitalStay: 'Day case or 1 night',
+          stayInTurkey: '5–7 days',
+          returnToWork: '1–2 weeks',
+          flightClearance: '5–7 days'
+        },
+        definition: [
+          'Stress urinary incontinence is the involuntary loss of urine at moments when pressure inside the abdomen rises — coughing, sneezing, laughing, lifting or exercising. The "stress" here is not emotional tension but the physical load placed on the bladder. The cause is weakening of the muscles and supporting structures that keep the urinary passage closed; childbirth, the menopause, a chronic cough, constipation and excess weight are the main contributing factors.',
+          'THE TYPE MUST BE ESTABLISHED FIRST, AND THAT DISTINCTION CHANGES EVERYTHING. In the stress type, leaking occurs with physical strain and without any preceding urge. In the urgency type, an overwhelming need to pass urine comes first and the leak happens before the toilet can be reached. These are different conditions: in the stress type the supporting structure is at fault, in the urgency type the bladder muscle is overactive.',
+          'WHY DOES THIS DISTINCTION MATTER SO MUCH? Because the treatments are opposites. A sling operation brings no benefit in the urgency type and can cause difficulty passing urine. Many women are treated for the wrong type. Where the picture is mixed, it is established which complaint predominates and that one is addressed first.',
+          'PELVIC FLOOR TRAINING IS THE FIRST STEP AND IT GENUINELY WORKS. Exercising the right muscle in the right way, kept up regularly for at least three months, markedly reduces symptoms in many women. There are two pitfalls here: tightening the wrong muscle (abdomen or buttocks), and giving up after a few weeks. For that reason learning it with a physiotherapist is advisable where possible. Skipping this step and going straight to surgery is not the right course.',
+          'Losing weight, relieving constipation and treating a chronic cough are also part of treatment. These are not "side recommendations"; they act directly by reducing pressure inside the abdomen.',
+          'SURGERY: THE MID-URETHRAL SLING. When exercise and lifestyle changes are not enough, a sling is placed beneath the middle part of the urinary passage so that it is supported at the moment of a cough. The sling may be a synthetic tape (mesh) or may be fashioned from the patient’s own tissue (autologous fascia).'
+        ],
+        eligibility: {
+          suitable: [
+            'Women in whom the stress type has been confirmed by history and examination',
+            'Women who have gained insufficient benefit despite at least three months of regular pelvic floor training',
+            'Women whose symptoms restrict daily life, work or social activity',
+            'Women in whom contributing factors such as weight, constipation and chronic cough have been addressed',
+            'Women who have completed their family — pregnancy can undo the effect of a sling'
+          ],
+          notSuitable: [
+            'Women in whom the urgency type predominates — a sling brings no benefit in this type and can cause difficulty passing urine',
+            'Women who have not tried the exercise step at all — that step comes first',
+            'Women planning a pregnancy — surgery is deferred until afterwards',
+            'Women with an active urinary tract infection — this is treated first',
+            'Women who do not empty the bladder fully — urodynamic assessment is needed first',
+            'Women with marked accompanying pelvic organ prolapse — the treatment plan is drawn up together'
+          ]
+        },
+        technology: [
+          'Detailed history and a bladder diary — the most valuable tool for establishing the type',
+          'Demonstrating the leak with a cough (stress) test',
+          'Measuring residual urine after voiding',
+          'Urodynamic study — in mixed type, after previous surgery, or where the diagnosis is not clear',
+          'Mid-urethral sling (synthetic tape or autologous fascia)',
+          'Urethral bulking agent injection — in selected women'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Female and functional urology are among Assoc. Prof. Müslüm Ergün’s areas of work. The approach rests on establishing the type correctly first and starting with the least invasive step; a decision to operate is taken only when conservative treatment has not been enough.'
+        },
+        timeline: [
+          {
+            when: 'Step 1',
+            title: 'Establishing the type',
+            body: 'You are asked in detail about the circumstances in which leaking occurs and a bladder diary is requested for a few days. A cough test is carried out at examination. This step matters far more than the decision to operate.'
+          },
+          {
+            when: 'Step 2',
+            title: 'Addressing contributing factors',
+            body: 'Weight, constipation, chronic cough and urinary infection are assessed. Treatment given without correcting these produces poorer results.'
+          },
+          {
+            when: 'Step 3',
+            title: 'Pelvic floor training (at least 3 months)',
+            body: 'You are taught to exercise the right muscle in the right way, preferably with a physiotherapist. Kept up regularly, this spares many women an operation.'
+          },
+          {
+            when: 'Step 4',
+            title: 'Surgical assessment if benefit is insufficient',
+            body: 'A urodynamic study is carried out if needed. The type of sling (synthetic or your own tissue) and the alternatives are discussed with you.'
+          },
+          {
+            when: 'Day of surgery',
+            title: 'Placing the sling',
+            body: 'Under spinal or general anaesthesia, the sling is placed beneath the middle of the urinary passage through a small vaginal incision. The procedure takes 30–45 minutes.'
+          },
+          {
+            when: 'Week 6 onwards',
+            title: 'Assessment and follow-up',
+            body: 'The outcome is assessed. Continuing pelvic floor exercises after surgery is advised.'
+          }
+        ],
+        risks: [
+          'THE SYNTHETIC SLING (MESH) CONTROVERSY: in some countries the use of synthetic slings has been restricted or suspended because of reported complications. That is a fact and it should not be withheld from you. The problems reported include the sling becoming exposed through the tissue (erosion), persistent groin or intercourse pain, and complications that are difficult to put right by removal. For that reason the decision should be taken together with you, after the alternatives have been set out plainly',
+          'New-onset urgency (de novo urgency) — this can begin after surgery',
+          'Difficulty passing urine or incomplete emptying — if the sling is too tight',
+          'Urinary tract infection',
+          'Bleeding and bladder injury — during surgery, uncommon',
+          'The leaking not resolving completely, or partially returning over time',
+          'Pain — in the groin, inner thigh or during intercourse',
+          'The effect lessening after a pregnancy — which is why surgery is deferred in women who have not completed their family'
+        ],
+        alternatives: [
+          'Pelvic floor training — the first step; with a physiotherapist where possible, for at least 3 months',
+          'Weight loss and treatment of constipation and chronic cough',
+          'A vaginal pessary (support ring) — for women who do not want, or are unsuited to, surgery',
+          'Urethral bulking agent injection — less invasive; the effect is usually temporary and it can be repeated',
+          'AUTOLOGOUS FASCIAL SLING — a sling fashioned from the patient’s own tissue; an important option for women who do not want synthetic material',
+          'Colposuspension — an older but still valid operation that uses no synthetic material',
+          'Doing nothing and using pads — a legitimate choice where symptoms are mild'
+        ],
+        comparison: {
+          title: 'Stress versus urgency incontinence — the distinction determines treatment',
+          columns: ['Criterion', 'Stress type', 'Urgency type'],
+          rows: [
+            { label: 'When leaking occurs', values: ['On coughing, sneezing, straining', 'After a sudden overwhelming urge'] },
+            { label: 'Preceding urge', values: ['None', 'Marked'] },
+            { label: 'Leaking at night', values: ['Uncommon', 'More common'] },
+            { label: 'Underlying problem', values: ['Weakened supporting structures', 'Overactive bladder muscle'] },
+            { label: 'First step', values: ['Pelvic floor training', 'Bladder training and medication'] },
+            { label: 'Sling surgery', values: ['May be appropriate', 'Not appropriate — brings no benefit'] }
+          ],
+          note:
+            'In the mixed type both complaints occur together; whichever predominates is treated first. Treating the wrong type means both that the symptom persists and that an unnecessary operation has been performed.'
+        },
+        recovery: [
+          {
+            period: 'First 48 hours',
+            body: 'Mild discomfort and spotting are expected. Whether the bladder empties fully is checked.'
+          },
+          {
+            period: 'Week 1',
+            body: 'Gentle walking is allowed. Heavy lifting, straining and movements that load the abdominal muscles are not.'
+          },
+          {
+            period: 'Weeks 2–4',
+            body: 'A return to desk work is possible. Avoiding constipation matters; straining puts load on the sling.'
+          },
+          {
+            period: 'Week 6',
+            body: 'A return to sexual activity and sport is planned during this period with the surgeon’s approval. The outcome is assessed.'
+          },
+          {
+            period: 'Long term',
+            body: 'Continuing pelvic floor exercises is advised. If a new symptom appears (pain, difficulty passing urine, bleeding), seek advice without delay.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies with the method chosen (synthetic sling, autologous fascial sling or bulking agent) and whether further assessment is required. A firm quotation is given after assessment.'
+        },
+        packageIncludes: [
+          'Female urology assessment and cough test',
+          'Measurement of residual urine after voiding',
+          'Urodynamic study where needed',
+          'The sling operation and anaesthesia',
+          'Day-case procedure or 1 night’s stay',
+          'Instruction in pelvic floor exercises',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and remote follow-up after you return home'
+        ],
+        faqs: [
+          {
+            q: 'Is mesh safe? I have read negative reports.',
+            a: 'What you have read is true. In some countries the use of synthetic slings has been restricted or suspended because of reported complications. The problems reported include the sling becoming exposed through the tissue, persistent groin or intercourse pain, and difficulty in removing it. Do not trust anyone who does not tell you this. At the same time, the method has given good results for many women. The right thing is to explain both the benefit and the risk to you and to set out plainly the alternatives that contain no synthetic material (a sling from your own tissue, colposuspension, a bulking agent). The decision is yours.'
+          },
+          {
+            q: 'Can a sling be made from my own tissue?',
+            a: 'Yes. In an autologous fascial sling, tissue taken from your own abdominal wall or thigh is used as the sling. The risk of erosion associated with synthetic material disappears. In return, a second incision is needed and the operation takes longer. If you do not want synthetic material, this option must be discussed.'
+          },
+          {
+            q: 'Must I do the exercises first? Can I not go straight to surgery?',
+            a: 'Pelvic floor training is the first step and should not be skipped. Done correctly and kept up for at least three months, it markedly reduces symptoms in many women and spares them an operation. Surgery is hard to reverse; it makes sense to try the reversible step first.'
+          },
+          {
+            q: 'How do I know I am doing the exercises correctly?',
+            a: 'The commonest mistake is tightening the abdominal, buttock or leg muscles. The right muscle is the one you tighten when trying to hold urine in. It should be done without holding your breath or squeezing your abdomen. Learn it with a physiotherapist if you can; exercises done wrongly not only fail to work but lead to the mistaken conclusion that "exercise did not help".'
+          },
+          {
+            q: 'Will the leaking stop completely?',
+            a: 'The aim is to bring symptoms down to a level that does not restrict your daily life. In some women the leaking stops altogether, in others it is markedly reduced. It can also return partially over time. Be wary of anyone guaranteeing complete and permanent dryness.'
+          },
+          {
+            q: 'Can urgency start after the operation?',
+            a: 'In some women a new sensation of urgency appears after surgery (de novo urgency). This is a recognised occurrence and can usually be managed with bladder training and medication. What matters is that the possibility was discussed before surgery.'
+          },
+          {
+            q: 'I am planning to have a baby — can I have the operation?',
+            a: 'Deferring surgery until you have completed your family is advised. Pregnancy and childbirth can reduce the effect of a sling, so an operation done beforehand may be short-lived in its benefit.'
+          },
+          {
+            q: 'Does everyone have a urodynamic study?',
+            a: 'No. If the history and examination establish the diagnosis clearly, it may not be needed. But urodynamics is requested where the picture is mixed, where you have had previous surgery in this area, where the bladder does not empty fully, or where the findings conflict — because an operation based on the wrong diagnosis does not work.'
+          },
+          {
+            q: 'When can I return to work and sport?',
+            a: 'A return to desk work is usually possible within 1–2 weeks. For sport, heavy lifting and sexual activity, waiting 6 weeks and obtaining the surgeon’s approval is advised. Returning early puts load on the sling.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Non-neurogenic Female LUTS — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts'
+          }
+        ]
+      },
+      de: {
+        title: 'Belastungsinkontinenz: die Behandlungsmöglichkeiten',
+        summary: 'Harnverlust beim Husten, Niesen oder Sport. Zuerst muss der Typ bestimmt werden, und die Behandlung beginnt mit der am wenigsten eingreifenden Stufe — eine Operation ist nicht die erste Option.',
+        metaTitle: 'Belastungsinkontinenz: von der Übung bis zur Schlingenoperation',
+        metaDescription: 'Der Unterschied zwischen Belastungs- und Dranginkontinenz, warum Beckenbodentraining an erster Stelle steht, die Schlingenoperation, die Netz-Debatte und die Alternativen.',
+        quickFacts: { duration: 'Schlingenoperation 30–45 Minuten', anesthesia: 'Spinal- oder Vollnarkose', hospitalStay: 'Ambulant oder 1 Nacht', stayInTurkey: '5–7 Tage', returnToWork: '1–2 Wochen', flightClearance: '5–7 Tage' },
+        definition: [
+          'Belastungsinkontinenz ist der unwillkürliche Harnverlust in Momenten, in denen der Druck im Bauchraum steigt — beim Husten, Niesen, Lachen, Heben oder Sport. „Belastung" meint hier nicht seelische Anspannung, sondern die körperliche Last auf der Blase. Ursache ist die Schwächung der Muskeln und Strukturen, die die Harnröhre verschlossen halten; Geburten, die Wechseljahre, chronischer Husten, Verstopfung und Übergewicht sind die wichtigsten begünstigenden Faktoren.',
+          'ZUERST MUSS DER TYP BESTIMMT WERDEN, UND DIESE UNTERSCHEIDUNG ÄNDERT ALLES. Beim Belastungstyp tritt der Harnverlust bei körperlicher Anstrengung auf, ohne vorangehenden Harndrang. Beim Drangtyp entsteht zuerst ein übermächtiger Harndrang, und der Verlust erfolgt, bevor die Toilette erreicht ist. Es sind verschiedene Erkrankungen: beim Belastungstyp liegt das Problem in der Stützstruktur, beim Drangtyp in einem überaktiven Blasenmuskel.',
+          'WARUM IST DIESE UNTERSCHEIDUNG SO WICHTIG? Weil die Behandlungen gegensätzlich sind. Eine Schlingenoperation nützt beim Drangtyp nichts und kann Probleme beim Wasserlassen verursachen. Viele Frauen werden für den falschen Typ behandelt. Beim Mischtyp wird bestimmt, welche Beschwerde überwiegt, und diese zuerst angegangen.',
+          'BECKENBODENTRAINING IST DIE ERSTE STUFE UND ES WIRKT WIRKLICH. Den richtigen Muskel richtig zu trainieren und dies mindestens drei Monate regelmäßig fortzuführen, verringert die Beschwerden bei vielen Frauen deutlich. Zwei Fallen gibt es: den falschen Muskel anzuspannen (Bauch oder Gesäß) und nach wenigen Wochen aufzugeben. Deshalb ist es ratsam, es nach Möglichkeit mit einer Physiotherapeutin zu erlernen. Diese Stufe zu überspringen und direkt zu operieren ist nicht richtig.',
+          'Gewichtsabnahme, die Behandlung von Verstopfung und chronischem Husten gehören ebenfalls zur Therapie. Das sind keine „Nebenempfehlungen"; sie wirken unmittelbar, weil sie den Druck im Bauchraum senken.',
+          'OPERATION: DIE MITTURETHRALE SCHLINGE. Reichen Übungen und Lebensstiländerung nicht aus, wird unter dem mittleren Abschnitt der Harnröhre eine Schlinge eingelegt, damit sie im Moment des Hustens gestützt wird. Die Schlinge kann ein Kunststoffband (Netz) sein oder aus körpereigenem Gewebe der Patientin gefertigt werden.'
+        ],
+        eligibility: {
+          suitable: ['Frauen, bei denen der Belastungstyp durch Anamnese und Untersuchung bestätigt ist', 'Frauen, die trotz mindestens dreimonatigem regelmäßigem Beckenbodentraining nicht ausreichend profitieren', 'Frauen, deren Beschwerden Alltag, Arbeit oder soziales Leben einschränken', 'Frauen, bei denen begünstigende Faktoren wie Gewicht, Verstopfung und chronischer Husten angegangen wurden', 'Frauen mit abgeschlossener Familienplanung — eine Schwangerschaft kann die Wirkung der Schlinge zunichtemachen'],
+          notSuitable: ['Frauen mit überwiegendem Drangtyp — eine Schlinge nützt hier nicht und kann Probleme beim Wasserlassen verursachen', 'Frauen, die die Übungsstufe gar nicht versucht haben — diese kommt zuerst', 'Frauen mit Kinderwunsch — die Operation wird aufgeschoben', 'Frauen mit akutem Harnwegsinfekt — dieser wird zuerst behandelt', 'Frauen, die die Blase nicht vollständig entleeren — zuvor ist eine urodynamische Abklärung nötig', 'Frauen mit ausgeprägtem begleitendem Beckenorganvorfall — der Behandlungsplan wird gemeinsam erstellt']
+        },
+        technology: ['Ausführliche Anamnese und Miktionstagebuch — das wertvollste Mittel zur Typbestimmung', 'Nachweis des Harnverlusts mit dem Hustentest', 'Messung des Restharns nach dem Wasserlassen', 'Urodynamische Untersuchung — beim Mischtyp, nach Voroperationen oder bei unklarer Diagnose', 'Mitturethrale Schlinge (Kunststoffband oder körpereigene Faszie)', 'Injektion eines Bulking-Agents in die Harnröhre — bei ausgewählten Frauen'],
+        surgeonExperience: { caseVolume: '', note: 'Urogynäkologie und funktionelle Urologie gehören zu den Arbeitsgebieten von Doz. Dr. Müslüm Ergün. Das Vorgehen beruht darauf, zuerst den Typ richtig zu bestimmen und mit der am wenigsten eingreifenden Stufe zu beginnen; eine Operationsentscheidung fällt erst, wenn die konservative Behandlung nicht genügt hat.' },
+        timeline: [
+          { when: 'Schritt 1', title: 'Bestimmung des Typs', body: 'Es wird genau erfragt, in welchen Situationen der Harnverlust auftritt, und ein Miktionstagebuch über einige Tage verlangt. Bei der Untersuchung erfolgt ein Hustentest. Dieser Schritt ist weit wichtiger als die Operationsentscheidung.' },
+          { when: 'Schritt 2', title: 'Begünstigende Faktoren angehen', body: 'Gewicht, Verstopfung, chronischer Husten und Harnwegsinfekt werden beurteilt. Eine Behandlung ohne deren Korrektur bringt schlechtere Ergebnisse.' },
+          { when: 'Schritt 3', title: 'Beckenbodentraining (mindestens 3 Monate)', body: 'Es wird vermittelt, den richtigen Muskel richtig zu trainieren, möglichst mit einer Physiotherapeutin. Regelmäßig fortgeführt erspart das vielen Frauen eine Operation.' },
+          { when: 'Schritt 4', title: 'Operative Abklärung bei unzureichendem Nutzen', body: 'Falls nötig erfolgt eine urodynamische Untersuchung. Die Art der Schlinge (Kunststoff oder eigenes Gewebe) und die Alternativen werden mit Ihnen besprochen.' },
+          { when: 'Operationstag', title: 'Einlegen der Schlinge', body: 'In Spinal- oder Vollnarkose wird die Schlinge über einen kleinen vaginalen Schnitt unter dem mittleren Abschnitt der Harnröhre platziert. Der Eingriff dauert 30–45 Minuten.' },
+          { when: 'Ab Woche 6', title: 'Beurteilung und Nachsorge', body: 'Das Ergebnis wird beurteilt. Das Beckenbodentraining sollte auch nach der Operation fortgeführt werden.' }
+        ],
+        risks: ['DIE DEBATTE UM KUNSTSTOFFSCHLINGEN (NETZE): In einigen Ländern wurde der Einsatz von Kunststoffschlingen wegen gemeldeter Komplikationen eingeschränkt oder ausgesetzt. Das ist eine Tatsache und darf Ihnen nicht vorenthalten werden. Zu den gemeldeten Problemen zählen das Durchtreten der Schlinge durch das Gewebe (Erosion), anhaltende Schmerzen in der Leiste oder beim Geschlechtsverkehr sowie Komplikationen, die sich durch Entfernung nur schwer beheben lassen. Die Entscheidung sollte deshalb gemeinsam mit Ihnen getroffen werden, nachdem die Alternativen klar dargelegt wurden', 'Neu auftretender Harndrang (De-novo-Urgency) — kann nach der Operation beginnen', 'Erschwertes Wasserlassen oder unvollständige Entleerung — wenn die Schlinge zu straff liegt', 'Harnwegsinfekt', 'Blutung und Blasenverletzung — während der Operation, selten', 'Der Harnverlust verschwindet nicht vollständig oder kehrt teilweise zurück', 'Schmerzen — in der Leiste, an der Oberschenkelinnenseite oder beim Geschlechtsverkehr', 'Nachlassen der Wirkung nach einer Schwangerschaft — weshalb bei nicht abgeschlossener Familienplanung aufgeschoben wird'],
+        alternatives: ['Beckenbodentraining — erste Stufe; möglichst mit Physiotherapie, mindestens 3 Monate', 'Gewichtsabnahme sowie Behandlung von Verstopfung und chronischem Husten', 'Vaginales Pessar (Stützring) — für Frauen, die keine Operation wünschen oder für sie nicht geeignet sind', 'Injektion eines Bulking-Agents in die Harnröhre — weniger eingreifend; die Wirkung ist meist vorübergehend und wiederholbar', 'AUTOLOGE FASZIENSCHLINGE — eine Schlinge aus körpereigenem Gewebe; eine wichtige Option für Frauen, die kein Kunststoffmaterial wünschen', 'Kolposuspension — ein älteres, aber weiterhin gültiges Verfahren ohne Kunststoffmaterial', 'Nichts tun und Vorlagen verwenden — bei geringen Beschwerden eine legitime Wahl'],
+        comparison: {
+          title: 'Belastungs- und Dranginkontinenz — die Unterscheidung bestimmt die Behandlung',
+          columns: ['Kriterium', 'Belastungstyp', 'Drangtyp'],
+          rows: [
+            { label: 'Wann der Verlust auftritt', values: ['Beim Husten, Niesen, Pressen', 'Nach plötzlichem, übermächtigem Drang'] },
+            { label: 'Vorangehender Harndrang', values: ['Keiner', 'Ausgeprägt'] },
+            { label: 'Harnverlust nachts', values: ['Selten', 'Häufiger'] },
+            { label: 'Zugrunde liegendes Problem', values: ['Geschwächte Stützstrukturen', 'Überaktiver Blasenmuskel'] },
+            { label: 'Erste Stufe', values: ['Beckenbodentraining', 'Blasentraining und Medikamente'] },
+            { label: 'Schlingenoperation', values: ['Kann angezeigt sein', 'Nicht angezeigt — bringt keinen Nutzen'] }
+          ],
+          note: 'Beim Mischtyp bestehen beide Beschwerden; behandelt wird zuerst die überwiegende. Den falschen Typ zu behandeln bedeutet, dass die Beschwerde bleibt und zugleich unnötig operiert wurde.'
+        },
+        recovery: [
+          { period: 'Erste 48 Stunden', body: 'Leichte Beschwerden und Schmierblutungen sind zu erwarten. Es wird geprüft, ob sich die Blase vollständig entleert.' },
+          { period: 'Woche 1', body: 'Leichtes Gehen ist erlaubt. Schweres Heben, Pressen und Bewegungen, die die Bauchmuskeln belasten, sind untersagt.' },
+          { period: 'Woche 2–4', body: 'Die Rückkehr an den Schreibtisch ist möglich. Verstopfung zu vermeiden ist wichtig; Pressen belastet die Schlinge.' },
+          { period: 'Woche 6', body: 'Die Rückkehr zu Sexualität und Sport wird in dieser Zeit mit Zustimmung des Operateurs geplant. Das Ergebnis wird beurteilt.' },
+          { period: 'Langfristig', body: 'Das Beckenbodentraining sollte fortgeführt werden. Treten neue Beschwerden auf (Schmerzen, erschwertes Wasserlassen, Blutung), suchen Sie unverzüglich Rat.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Der Preis richtet sich nach dem gewählten Verfahren (Kunststoffschlinge, autologe Faszienschlinge oder Bulking-Agent) und danach, ob eine weitere Abklärung nötig ist. Ein verbindliches Angebot erfolgt nach der Abklärung.' },
+        packageIncludes: ['Urogynäkologische Abklärung und Hustentest', 'Messung des Restharns', 'Bei Bedarf urodynamische Untersuchung', 'Schlingenoperation und Narkose', 'Ambulanter Eingriff oder 1 Übernachtung', 'Anleitung zum Beckenbodentraining', 'Transfers Flughafen–Krankenhaus–Hotel', 'Unterkunft (Patientin + 1 Begleitperson)', 'Medizinischer Dolmetscher und Fernbetreuung nach Ihrer Rückkehr'],
+        faqs: [
+          { q: 'Sind Netze sicher? Ich habe negative Berichte gelesen.', a: 'Was Sie gelesen haben, trifft zu. In einigen Ländern wurde der Einsatz von Kunststoffschlingen wegen gemeldeter Komplikationen eingeschränkt oder ausgesetzt. Zu den gemeldeten Problemen zählen das Durchtreten durch das Gewebe, anhaltende Schmerzen in der Leiste oder beim Geschlechtsverkehr und die schwierige Entfernbarkeit. Vertrauen Sie niemandem, der Ihnen das verschweigt. Zugleich hat das Verfahren vielen Frauen gute Ergebnisse gebracht. Richtig ist, Ihnen Nutzen und Risiko zu erklären und die Alternativen ohne Kunststoffmaterial (Schlinge aus eigenem Gewebe, Kolposuspension, Bulking-Agent) offen darzulegen. Die Entscheidung liegt bei Ihnen.' },
+          { q: 'Kann eine Schlinge aus meinem eigenen Gewebe gemacht werden?', a: 'Ja. Bei der autologen Faszienschlinge wird Gewebe aus Ihrer Bauchwand oder Ihrem Oberschenkel als Schlinge verwendet. Das mit Kunststoff verbundene Erosionsrisiko entfällt. Dafür ist ein zweiter Schnitt nötig und die Operation dauert länger. Wenn Sie kein Kunststoffmaterial wünschen, muss diese Option besprochen werden.' },
+          { q: 'Muss ich erst Übungen machen? Kann ich nicht gleich operiert werden?', a: 'Beckenbodentraining ist die erste Stufe und sollte nicht übersprungen werden. Richtig ausgeführt und mindestens drei Monate fortgeführt, verringert es die Beschwerden bei vielen Frauen deutlich und erspart die Operation. Eine Operation ist schwer rückgängig zu machen; es ist sinnvoll, zuerst die umkehrbare Stufe zu versuchen.' },
+          { q: 'Woran erkenne ich, dass ich richtig übe?', a: 'Der häufigste Fehler ist, Bauch-, Gesäß- oder Beinmuskeln anzuspannen. Der richtige Muskel ist jener, den Sie anspannen, wenn Sie den Harn zurückhalten. Es sollte ohne Luftanhalten und ohne Bauchpressen geschehen. Lernen Sie es möglichst mit einer Physiotherapeutin; falsch ausgeführte Übungen wirken nicht und führen zu dem Trugschluss, „Übungen helfen nicht".' },
+          { q: 'Hört der Harnverlust ganz auf?', a: 'Ziel ist, die Beschwerden auf ein Maß zu senken, das Ihren Alltag nicht einschränkt. Bei einem Teil der Frauen hört der Verlust ganz auf, bei anderen nimmt er deutlich ab. Ein teilweises Wiederauftreten mit der Zeit ist ebenfalls möglich. Seien Sie vorsichtig, wenn Ihnen vollständige und dauerhafte Trockenheit zugesagt wird.' },
+          { q: 'Kann nach der Operation Harndrang auftreten?', a: 'Bei einem Teil der Frauen entsteht nach der Operation ein neues Drangempfinden. Das ist bekannt und lässt sich meist mit Blasentraining und Medikamenten beherrschen. Wichtig ist, dass diese Möglichkeit vorher besprochen wurde.' },
+          { q: 'Ich möchte noch Kinder — kann ich operiert werden?', a: 'Es wird empfohlen, die Operation bis nach abgeschlossener Familienplanung aufzuschieben. Schwangerschaft und Geburt können die Wirkung der Schlinge mindern, sodass der Nutzen einer vorher durchgeführten Operation nur kurz anhält.' },
+          { q: 'Wird bei allen eine Urodynamik gemacht?', a: 'Nein. Stellen Anamnese und Untersuchung die Diagnose eindeutig, kann sie entbehrlich sein. Bei Mischtyp, nach Voroperationen in diesem Bereich, bei unvollständiger Blasenentleerung oder widersprüchlichen Befunden wird sie jedoch verlangt — denn eine Operation auf falscher Diagnose wirkt nicht.' },
+          { q: 'Wann darf ich wieder arbeiten und Sport treiben?', a: 'An den Schreibtisch meist innerhalb von 1–2 Wochen. Für Sport, schweres Heben und Geschlechtsverkehr werden 6 Wochen und die Zustimmung des Operateurs empfohlen. Zu frühe Belastung wirkt auf die Schlinge.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-neurogenic Female LUTS — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
+        ]
+      },
+      fr: {
+        title: 'Incontinence urinaire d’effort : les options thérapeutiques',
+        summary: 'Fuites d’urine à la toux, à l’éternuement ou au sport. Il faut d’abord déterminer le type, puis commencer par l’étape la moins invasive — la chirurgie n’est pas la première option.',
+        metaTitle: 'Incontinence urinaire d’effort : de la rééducation à la bandelette',
+        metaDescription: 'La différence entre incontinence d’effort et par urgenturie, pourquoi la rééducation périnéale vient en premier, la bandelette sous-urétrale, la polémique sur les prothèses et les alternatives.',
+        quickFacts: { duration: 'Pose de bandelette 30–45 minutes', anesthesia: 'Rachianesthésie ou anesthésie générale', hospitalStay: 'Ambulatoire ou 1 nuit', stayInTurkey: '5–7 jours', returnToWork: '1–2 semaines', flightClearance: '5–7 jours' },
+        definition: [
+          'L’incontinence urinaire d’effort est une perte involontaire d’urine lorsque la pression abdominale augmente : toux, éternuement, rire, port de charges ou sport. Le mot « effort » ne renvoie pas à une tension psychique mais à la charge physique exercée sur la vessie. La cause est l’affaiblissement des muscles et des structures qui maintiennent l’urètre fermé ; accouchements, ménopause, toux chronique, constipation et surpoids en sont les principaux facteurs favorisants.',
+          'LE TYPE DOIT ÊTRE DÉTERMINÉ EN PREMIER, ET CETTE DISTINCTION CHANGE TOUT. Dans l’incontinence d’effort, la fuite survient lors d’un effort physique, sans besoin impérieux préalable. Dans l’incontinence par urgenturie, un besoin irrépressible survient d’abord et la fuite se produit avant d’atteindre les toilettes. Ce sont deux affections distinctes : dans la première, le soutien est en cause ; dans la seconde, le muscle vésical est hyperactif.',
+          'POURQUOI CETTE DISTINCTION EST-ELLE SI IMPORTANTE ? Parce que les traitements sont opposés. Une bandelette n’apporte aucun bénéfice dans l’urgenturie et peut gêner la miction. Beaucoup de femmes sont traitées pour le mauvais type. En cas de forme mixte, on détermine la plainte prédominante et on la traite d’abord.',
+          'LA RÉÉDUCATION PÉRINÉALE EST LA PREMIÈRE ÉTAPE ET ELLE FONCTIONNE RÉELLEMENT. Travailler le bon muscle de la bonne manière, régulièrement et pendant au moins trois mois, réduit nettement les symptômes chez beaucoup de femmes. Deux écueils : contracter le mauvais muscle (abdomen ou fessiers) et abandonner après quelques semaines. Il est donc conseillé d’apprendre avec une kinésithérapeute lorsque c’est possible. Sauter cette étape pour aller directement à la chirurgie n’est pas la bonne démarche.',
+          'La perte de poids, le traitement de la constipation et de la toux chronique font aussi partie du traitement. Ce ne sont pas des « conseils annexes » : ils agissent directement en réduisant la pression abdominale.',
+          'CHIRURGIE : LA BANDELETTE SOUS-URÉTRALE. Lorsque la rééducation et les mesures hygiéno-diététiques ne suffisent pas, une bandelette est placée sous la partie moyenne de l’urètre afin de le soutenir au moment de la toux. Elle peut être une bandelette synthétique ou être confectionnée à partir des propres tissus de la patiente (aponévrose autologue).'
+        ],
+        eligibility: {
+          suitable: ['Femmes chez qui le type « effort » est confirmé par l’interrogatoire et l’examen', 'Femmes insuffisamment améliorées malgré au moins trois mois de rééducation périnéale régulière', 'Femmes dont les symptômes limitent la vie quotidienne, professionnelle ou sociale', 'Femmes chez qui les facteurs favorisants (poids, constipation, toux chronique) ont été pris en charge', 'Femmes ayant terminé leur projet parental — une grossesse peut annuler l’effet de la bandelette'],
+          notSuitable: ['Femmes chez qui l’urgenturie prédomine — la bandelette n’apporte rien et peut gêner la miction', 'Femmes n’ayant jamais essayé la rééducation — cette étape vient d’abord', 'Femmes envisageant une grossesse — l’intervention est reportée', 'Femmes présentant une infection urinaire active — elle est traitée d’abord', 'Femmes ne vidant pas complètement la vessie — un bilan urodynamique est nécessaire au préalable', 'Femmes présentant un prolapsus pelvien marqué associé — le plan est établi conjointement']
+        },
+        technology: ['Interrogatoire détaillé et calendrier mictionnel — l’outil le plus utile pour déterminer le type', 'Mise en évidence de la fuite par le test à la toux', 'Mesure du résidu post-mictionnel', 'Bilan urodynamique — en cas de forme mixte, d’antécédent chirurgical ou de diagnostic incertain', 'Bandelette sous-urétrale (synthétique ou aponévrose autologue)', 'Injection d’un agent de comblement urétral — chez des patientes sélectionnées'],
+        surgeonExperience: { caseVolume: '', note: 'L’urologie féminine et fonctionnelle fait partie des domaines d’activité du Dr Müslüm Ergün, maître de conférences. La démarche consiste à déterminer d’abord correctement le type et à commencer par l’étape la moins invasive ; la décision opératoire n’intervient que si le traitement conservateur n’a pas suffi.' },
+        timeline: [
+          { when: 'Étape 1', title: 'Détermination du type', body: 'On recherche précisément dans quelles circonstances surviennent les fuites et un calendrier mictionnel de quelques jours est demandé. Un test à la toux est réalisé à l’examen. Cette étape compte bien plus que la décision opératoire.' },
+          { when: 'Étape 2', title: 'Prise en charge des facteurs favorisants', body: 'Poids, constipation, toux chronique et infection urinaire sont évalués. Un traitement entrepris sans les corriger donne de moins bons résultats.' },
+          { when: 'Étape 3', title: 'Rééducation périnéale (au moins 3 mois)', body: 'On apprend à travailler le bon muscle de la bonne manière, de préférence avec une kinésithérapeute. Poursuivie régulièrement, elle évite l’opération à beaucoup de femmes.' },
+          { when: 'Étape 4', title: 'Évaluation chirurgicale si le bénéfice est insuffisant', body: 'Un bilan urodynamique est réalisé si nécessaire. Le type de bandelette (synthétique ou tissu propre) et les alternatives sont discutés avec vous.' },
+          { when: 'Jour de l’intervention', title: 'Pose de la bandelette', body: 'Sous rachianesthésie ou anesthésie générale, la bandelette est placée sous la partie moyenne de l’urètre par une petite incision vaginale. Le geste dure 30 à 45 minutes.' },
+          { when: 'À partir de la 6e semaine', title: 'Évaluation et suivi', body: 'Le résultat est évalué. Il est conseillé de poursuivre la rééducation périnéale après l’intervention.' }
+        ],
+        risks: ['LA POLÉMIQUE SUR LES BANDELETTES SYNTHÉTIQUES : dans certains pays, leur utilisation a été restreinte ou suspendue en raison de complications rapportées. C’est un fait et il ne doit pas vous être caché. Parmi les problèmes rapportés figurent l’exposition de la bandelette à travers les tissus (érosion), des douleurs persistantes de l’aine ou lors des rapports, et des complications difficiles à corriger par un retrait. La décision doit donc être prise avec vous, après exposé clair des alternatives', 'Urgenturie de novo — peut apparaître après l’intervention', 'Difficulté à uriner ou vidange incomplète — si la bandelette est trop tendue', 'Infection urinaire', 'Saignement et plaie vésicale — en peropératoire, rares', 'Disparition incomplète des fuites ou réapparition partielle avec le temps', 'Douleurs — à l’aine, à la face interne de la cuisse ou lors des rapports', 'Diminution de l’effet après une grossesse — d’où le report chez les femmes n’ayant pas terminé leur projet parental'],
+        alternatives: ['Rééducation périnéale — première étape ; avec une kinésithérapeute si possible, au moins 3 mois', 'Perte de poids, traitement de la constipation et de la toux chronique', 'Pessaire vaginal (anneau de soutien) — pour les femmes ne souhaitant pas ou ne pouvant pas être opérées', 'Injection d’un agent de comblement urétral — moins invasive ; effet généralement transitoire et renouvelable', 'BANDELETTE APONÉVROTIQUE AUTOLOGUE — confectionnée à partir des tissus de la patiente ; option importante pour celles qui refusent le matériel synthétique', 'Colposuspension — technique plus ancienne mais toujours valable, sans matériel synthétique', 'Ne rien faire et utiliser des protections — choix légitime si la gêne est modérée'],
+        comparison: {
+          title: 'Incontinence d’effort et par urgenturie — la distinction détermine le traitement',
+          columns: ['Critère', 'Type effort', 'Type urgenturie'],
+          rows: [
+            { label: 'Quand survient la fuite', values: ['À la toux, l’éternuement, l’effort', 'Après un besoin soudain et irrépressible'] },
+            { label: 'Besoin impérieux préalable', values: ['Absent', 'Marqué'] },
+            { label: 'Fuites nocturnes', values: ['Rares', 'Plus fréquentes'] },
+            { label: 'Problème sous-jacent', values: ['Affaiblissement des structures de soutien', 'Hyperactivité du muscle vésical'] },
+            { label: 'Première étape', values: ['Rééducation périnéale', 'Rééducation vésicale et médicaments'] },
+            { label: 'Pose de bandelette', values: ['Peut être indiquée', 'Non indiquée — sans bénéfice'] }
+          ],
+          note: 'Dans la forme mixte, les deux plaintes coexistent ; on traite d’abord la prédominante. Traiter le mauvais type signifie à la fois que le symptôme persiste et qu’une intervention inutile a été réalisée.'
+        },
+        recovery: [
+          { period: 'Premières 48 heures', body: 'Gêne légère et saignements minimes sont attendus. On vérifie que la vessie se vide complètement.' },
+          { period: 'Semaine 1', body: 'La marche légère est permise. Le port de charges, les efforts de poussée et les mouvements sollicitant les abdominaux sont interdits.' },
+          { period: 'Semaines 2–4', body: 'Le retour au travail de bureau est possible. Éviter la constipation est important ; pousser sollicite la bandelette.' },
+          { period: 'Semaine 6', body: 'La reprise de la vie sexuelle et du sport se planifie à cette période avec l’accord du chirurgien. Le résultat est évalué.' },
+          { period: 'Long terme', body: 'Il est conseillé de poursuivre la rééducation périnéale. En cas de symptôme nouveau (douleur, difficulté à uriner, saignement), consultez sans tarder.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Le prix varie selon la technique retenue (bandelette synthétique, aponévrose autologue ou agent de comblement) et selon la nécessité d’examens complémentaires. Un devis ferme est remis après l’évaluation.' },
+        packageIncludes: ['Évaluation en urologie féminine et test à la toux', 'Mesure du résidu post-mictionnel', 'Bilan urodynamique si nécessaire', 'Pose de la bandelette et anesthésie', 'Geste ambulatoire ou 1 nuit d’hospitalisation', 'Apprentissage de la rééducation périnéale', 'Transferts aéroport–hôpital–hôtel', 'Hébergement (patiente + 1 accompagnant)', 'Interprète médical et suivi à distance après votre retour'],
+        faqs: [
+          { q: 'Les bandelettes synthétiques sont-elles sûres ? J’ai lu des articles négatifs.', a: 'Ce que vous avez lu est exact. Dans certains pays, leur usage a été restreint ou suspendu en raison de complications rapportées : exposition à travers les tissus, douleurs persistantes de l’aine ou lors des rapports, difficulté de retrait. Ne faites pas confiance à qui ne vous le dit pas. En même temps, cette technique a donné de bons résultats à beaucoup de femmes. Ce qui est juste, c’est de vous exposer le bénéfice comme le risque et de présenter clairement les alternatives sans matériel synthétique (bandelette issue de vos tissus, colposuspension, agent de comblement). La décision vous appartient.' },
+          { q: 'Peut-on faire une bandelette avec mes propres tissus ?', a: 'Oui. Dans la bandelette aponévrotique autologue, un tissu prélevé sur votre paroi abdominale ou votre cuisse sert de bandelette. Le risque d’érosion lié au matériel synthétique disparaît. En contrepartie, une seconde incision est nécessaire et l’intervention est plus longue. Si vous refusez le matériel synthétique, cette option doit être discutée.' },
+          { q: 'Dois-je vraiment faire la rééducation d’abord ? Ne puis-je pas être opérée directement ?', a: 'La rééducation périnéale est la première étape et ne doit pas être sautée. Bien faite et poursuivie au moins trois mois, elle réduit nettement les symptômes chez beaucoup de femmes et évite l’opération. La chirurgie est difficilement réversible ; il est logique d’essayer d’abord l’étape réversible.' },
+          { q: 'Comment savoir si je fais correctement les exercices ?', a: 'L’erreur la plus fréquente est de contracter les abdominaux, les fessiers ou les jambes. Le bon muscle est celui que vous contractez en essayant de retenir l’urine. Cela se fait sans bloquer la respiration ni serrer le ventre. Apprenez-le si possible avec une kinésithérapeute ; mal faits, les exercices ne servent à rien et font croire à tort que « la rééducation ne marche pas ».' },
+          { q: 'Les fuites vont-elles disparaître totalement ?', a: 'L’objectif est de ramener les symptômes à un niveau qui ne limite plus votre vie quotidienne. Chez certaines femmes les fuites cessent complètement, chez d’autres elles diminuent nettement. Une réapparition partielle avec le temps est également possible. Méfiez-vous de qui vous garantit une continence totale et définitive.' },
+          { q: 'Une urgenturie peut-elle apparaître après l’opération ?', a: 'Chez certaines femmes, un besoin impérieux nouveau apparaît après l’intervention. C’est un phénomène connu, généralement contrôlable par la rééducation vésicale et les médicaments. L’important est que cette éventualité ait été exposée avant.' },
+          { q: 'Je souhaite avoir un enfant — puis-je être opérée ?', a: 'Il est conseillé de reporter l’intervention après la fin du projet parental. Grossesse et accouchement peuvent réduire l’effet de la bandelette, et le bénéfice d’une opération antérieure risque d’être bref.' },
+          { q: 'Le bilan urodynamique est-il systématique ?', a: 'Non. Si l’interrogatoire et l’examen posent clairement le diagnostic, il peut être inutile. Il est en revanche demandé en cas de forme mixte, d’antécédent chirurgical dans cette région, de vidange vésicale incomplète ou de constatations discordantes — car une opération fondée sur un diagnostic erroné ne fonctionne pas.' },
+          { q: 'Quand puis-je reprendre le travail et le sport ?', a: 'Le travail de bureau est généralement possible en 1 à 2 semaines. Pour le sport, le port de charges et les rapports, il est conseillé d’attendre 6 semaines avec l’accord du chirurgien. Une reprise précoce sollicite la bandelette.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-neurogenic Female LUTS — Association européenne d’urologie', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
+        ]
+      },
+      ru: {
+        title: 'Стрессовое недержание мочи: варианты лечения',
+        summary: 'Подтекание мочи при кашле, чихании или физической нагрузке. Сначала нужно определить тип, а лечение начинать с наименее травматичной ступени — операция не первый вариант.',
+        metaTitle: 'Стрессовое недержание мочи: от упражнений до слинговой операции',
+        metaDescription: 'Чем стрессовое недержание отличается от ургентного, почему тренировка мышц тазового дна идёт первой, слинговая операция, споры о синтетических сетках и альтернативы.',
+        quickFacts: { duration: 'Слинговая операция 30–45 минут', anesthesia: 'Спинальная или общая анестезия', hospitalStay: 'Амбулаторно или 1 ночь', stayInTurkey: '5–7 дней', returnToWork: '1–2 недели', flightClearance: '5–7 дней' },
+        definition: [
+          'Стрессовое недержание мочи — это непроизвольная потеря мочи в моменты повышения давления в животе: при кашле, чихании, смехе, подъёме тяжестей или занятиях спортом. Слово «стрессовое» здесь означает не душевное напряжение, а физическую нагрузку на мочевой пузырь. Причина — ослабление мышц и структур, удерживающих мочеиспускательный канал закрытым; главные способствующие факторы — роды, менопауза, хронический кашель, запоры и лишний вес.',
+          'СНАЧАЛА НУЖНО ОПРЕДЕЛИТЬ ТИП, И ЭТО РАЗЛИЧИЕ МЕНЯЕТ ВСЁ. При стрессовом типе подтекание происходит при физическом усилии, без предшествующего позыва. При ургентном типе сначала возникает непреодолимый позыв, и потеря случается прежде, чем удаётся дойти до туалета. Это разные состояния: при стрессовом нарушена опорная структура, при ургентном мышца пузыря работает избыточно.',
+          'ПОЧЕМУ ЭТО РАЗЛИЧИЕ ТАК ВАЖНО? Потому что лечение прямо противоположно. Слинговая операция при ургентном типе пользы не приносит и может затруднить мочеиспускание. Многих женщин лечат не от того типа. При смешанной форме определяют, какая жалоба преобладает, и сначала занимаются ею.',
+          'ТРЕНИРОВКА МЫШЦ ТАЗОВОГО ДНА — ПЕРВАЯ СТУПЕНЬ, И ОНА ДЕЙСТВИТЕЛЬНО РАБОТАЕТ. Если правильно работать нужной мышцей регулярно и не менее трёх месяцев, у многих женщин жалобы заметно уменьшаются. Здесь две ловушки: напрягать не ту мышцу (живот или ягодицы) и бросить через несколько недель. Поэтому по возможности стоит освоить упражнения с физиотерапевтом. Пропускать эту ступень и идти сразу на операцию неправильно.',
+          'Снижение веса, устранение запоров и лечение хронического кашля тоже часть лечения. Это не «побочные советы»: они действуют напрямую, снижая давление в животе.',
+          'ОПЕРАЦИЯ: СРЕДИННЫЙ УРЕТРАЛЬНЫЙ СЛИНГ. Когда упражнений и изменений образа жизни недостаточно, под среднюю часть мочеиспускательного канала помещают петлю, чтобы в момент кашля он получал опору. Петля может быть синтетической лентой (сеткой) либо изготовленной из собственных тканей пациентки.'
+        ],
+        eligibility: {
+          suitable: ['Женщины, у которых стрессовый тип подтверждён расспросом и осмотром', 'Женщины, не получившие достаточного улучшения несмотря на не менее чем трёхмесячную регулярную тренировку мышц тазового дна', 'Женщины, у которых жалобы ограничивают повседневную жизнь, работу или общение', 'Женщины, у которых учтены способствующие факторы: вес, запоры, хронический кашель', 'Женщины, завершившие деторождение — беременность может свести эффект слинга на нет'],
+          notSuitable: ['Женщины с преобладанием ургентного типа — слинг пользы не принесёт и может затруднить мочеиспускание', 'Женщины, вовсе не пробовавшие упражнения — эта ступень идёт первой', 'Женщины, планирующие беременность — операцию откладывают', 'Женщины с активной инфекцией мочевых путей — её лечат в первую очередь', 'Женщины, не опорожняющие пузырь полностью — сначала нужно уродинамическое обследование', 'Женщины с выраженным сопутствующим опущением органов таза — план составляют совместно']
+        },
+        technology: ['Подробный расспрос и дневник мочеиспускания — самый ценный инструмент для определения типа', 'Выявление подтекания кашлевой пробой', 'Измерение остаточной мочи после мочеиспускания', 'Уродинамическое исследование — при смешанной форме, после перенесённых операций или при неясном диагнозе', 'Срединный уретральный слинг (синтетическая лента или собственная фасция)', 'Введение объёмообразующего препарата в уретру — у отобранных женщин'],
+        surgeonExperience: { caseVolume: '', note: 'Женская и функциональная урология входят в сферу работы доц. д-ра Мюслюма Эргюна. Подход строится на том, чтобы сначала верно определить тип и начать с наименее травматичной ступени; решение об операции принимается лишь тогда, когда консервативного лечения оказалось недостаточно.' },
+        timeline: [
+          { when: 'Шаг 1', title: 'Определение типа', body: 'Подробно выясняют, при каких обстоятельствах происходит подтекание, и просят вести дневник мочеиспускания несколько дней. На осмотре проводят кашлевую пробу. Этот шаг важнее, чем решение об операции.' },
+          { when: 'Шаг 2', title: 'Работа со способствующими факторами', body: 'Оценивают вес, запоры, хронический кашель и инфекцию мочевых путей. Лечение без их коррекции даёт худшие результаты.' },
+          { when: 'Шаг 3', title: 'Тренировка мышц тазового дна (не менее 3 месяцев)', body: 'Учат работать нужной мышцей правильно, по возможности с физиотерапевтом. При регулярных занятиях это избавляет многих женщин от операции.' },
+          { when: 'Шаг 4', title: 'Хирургическая оценка при недостаточной пользе', body: 'При необходимости выполняют уродинамическое исследование. Тип слинга (синтетический или из собственной ткани) и альтернативы обсуждают с вами.' },
+          { when: 'День операции', title: 'Установка слинга', body: 'Под спинальной или общей анестезией слинг помещают под среднюю часть мочеиспускательного канала через небольшой влагалищный разрез. Вмешательство занимает 30–45 минут.' },
+          { when: 'С 6-й недели', title: 'Оценка и наблюдение', body: 'Оценивают результат. Рекомендуется продолжать упражнения для мышц тазового дна и после операции.' }
+        ],
+        risks: ['СПОРЫ ВОКРУГ СИНТЕТИЧЕСКИХ СЕТОК: в ряде стран применение синтетических слингов было ограничено или приостановлено из-за сообщений об осложнениях. Это факт, и его не следует от вас скрывать. Среди описанных проблем — обнажение слинга через ткани (эрозия), стойкая боль в паху или при близости, а также осложнения, которые трудно исправить удалением. Поэтому решение должно приниматься вместе с вами после того, как альтернативы изложены прямо', 'Впервые возникшие резкие позывы — могут начаться после операции', 'Затруднённое мочеиспускание или неполное опорожнение — если слинг натянут слишком туго', 'Инфекция мочевых путей', 'Кровотечение и повреждение мочевого пузыря — во время операции, нечасто', 'Неполное прекращение подтекания или его частичный возврат со временем', 'Боль — в паху, по внутренней поверхности бедра или при близости', 'Ослабление эффекта после беременности — поэтому при незавершённом деторождении операцию откладывают'],
+        alternatives: ['Тренировка мышц тазового дна — первая ступень; по возможности с физиотерапевтом, не менее 3 месяцев', 'Снижение веса, лечение запоров и хронического кашля', 'Влагалищный пессарий (поддерживающее кольцо) — для женщин, не желающих или которым не подходит операция', 'Введение объёмообразующего препарата в уретру — менее травматично; эффект обычно временный и процедуру можно повторять', 'СЛИНГ ИЗ СОБСТВЕННОЙ ФАСЦИИ — петля из тканей самой пациентки; важный вариант для тех, кто не хочет синтетического материала', 'Кольпосуспензия — более старая, но по-прежнему действующая операция без синтетического материала', 'Ничего не предпринимать и пользоваться прокладками — законный выбор при лёгких жалобах'],
+        comparison: {
+          title: 'Стрессовое и ургентное недержание — различие определяет лечение',
+          columns: ['Критерий', 'Стрессовый тип', 'Ургентный тип'],
+          rows: [
+            { label: 'Когда происходит подтекание', values: ['При кашле, чихании, натуживании', 'После внезапного непреодолимого позыва'] },
+            { label: 'Предшествующий позыв', values: ['Отсутствует', 'Выражен'] },
+            { label: 'Подтекание ночью', values: ['Редко', 'Чаще'] },
+            { label: 'Что лежит в основе', values: ['Ослабление опорных структур', 'Избыточная работа мышцы пузыря'] },
+            { label: 'Первая ступень', values: ['Тренировка мышц тазового дна', 'Тренировка мочевого пузыря и лекарства'] },
+            { label: 'Слинговая операция', values: ['Может подойти', 'Не подходит — пользы не приносит'] }
+          ],
+          note: 'При смешанной форме присутствуют обе жалобы; сначала лечат преобладающую. Лечение не того типа означает и сохранение жалобы, и напрасно выполненную операцию.'
+        },
+        recovery: [
+          { period: 'Первые 48 часов', body: 'Ожидаемы лёгкий дискомфорт и мажущие выделения. Проверяют, полностью ли опорожняется мочевой пузырь.' },
+          { period: '1-я неделя', body: 'Лёгкая ходьба разрешена. Поднятие тяжестей, натуживание и движения, нагружающие мышцы живота, запрещены.' },
+          { period: '2–4-я неделя', body: 'Можно вернуться к работе за столом. Важно избегать запоров; натуживание нагружает слинг.' },
+          { period: '6-я неделя', body: 'Возвращение к половой жизни и спорту планируют в этот период с разрешения хирурга. Оценивают результат.' },
+          { period: 'Долгосрочно', body: 'Рекомендуется продолжать упражнения для мышц тазового дна. При появлении новой жалобы (боль, затруднение мочеиспускания, кровотечение) обращайтесь без промедления.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Стоимость зависит от выбранного метода (синтетический слинг, слинг из собственной фасции или объёмообразующий препарат) и от необходимости дополнительного обследования. Точное предложение даётся после обследования.' },
+        packageIncludes: ['Обследование по женской урологии и кашлевая проба', 'Измерение остаточной мочи', 'Уродинамическое исследование при необходимости', 'Слинговая операция и анестезия', 'Амбулаторная процедура или 1 ночь в стационаре', 'Обучение упражнениям для мышц тазового дна', 'Трансферы аэропорт–больница–отель', 'Проживание (пациентка + 1 сопровождающий)', 'Медицинский переводчик и дистанционное наблюдение после возвращения домой'],
+        faqs: [
+          { q: 'Безопасны ли сетки? Я читала негативные публикации.', a: 'То, что вы читали, правда. В ряде стран применение синтетических слингов ограничили или приостановили из-за сообщений об осложнениях: обнажение через ткани, стойкая боль в паху или при близости, трудность удаления. Не доверяйте тем, кто вам об этом не говорит. Вместе с тем у многих женщин метод дал хороший результат. Правильно — объяснить вам и пользу, и риск и прямо изложить альтернативы без синтетического материала (слинг из ваших тканей, кольпосуспензия, объёмообразующий препарат). Решение за вами.' },
+          { q: 'Можно ли сделать слинг из моих собственных тканей?', a: 'Да. При слинге из собственной фасции в качестве петли используют ткань, взятую с вашей брюшной стенки или бедра. Риск эрозии, связанный с синтетическим материалом, исчезает. Взамен нужен второй разрез, и операция длится дольше. Если вы не хотите синтетического материала, этот вариант обязательно нужно обсудить.' },
+          { q: 'Обязательно ли сначала делать упражнения? Нельзя ли сразу оперироваться?', a: 'Тренировка мышц тазового дна — первая ступень, и пропускать её не следует. Выполняемая правильно и не менее трёх месяцев, она заметно уменьшает жалобы у многих женщин и избавляет от операции. Операцию трудно обратить; разумно сначала попробовать обратимую ступень.' },
+          { q: 'Как понять, что я делаю упражнения правильно?', a: 'Самая частая ошибка — напрягать мышцы живота, ягодиц или ног. Нужная мышца — та, которую вы напрягаете, пытаясь удержать мочу. Делать это следует не задерживая дыхание и не напрягая живот. По возможности освойте упражнения с физиотерапевтом; выполненные неправильно, они не работают и приводят к ложному выводу, что «упражнения не помогли».' },
+          { q: 'Подтекание пройдёт полностью?', a: 'Цель — снизить жалобы до уровня, который не ограничивает вашу повседневную жизнь. У части женщин подтекание прекращается полностью, у других заметно уменьшается. Возможен и частичный возврат со временем. С осторожностью относитесь к обещаниям полной и постоянной сухости.' },
+          { q: 'Могут ли после операции появиться резкие позывы?', a: 'У части женщин после операции возникает новое ощущение резких позывов. Это известное явление, обычно управляемое тренировкой мочевого пузыря и лекарствами. Важно, чтобы такая возможность обсуждалась до операции.' },
+          { q: 'Я планирую рожать — можно ли оперироваться?', a: 'Рекомендуется отложить операцию до завершения деторождения. Беременность и роды могут уменьшить эффект слинга, и польза заранее выполненной операции окажется недолгой.' },
+          { q: 'Уродинамику делают всем?', a: 'Нет. Если расспрос и осмотр ясно устанавливают диагноз, она может не понадобиться. Но её назначают при смешанной форме, после перенесённых операций в этой области, при неполном опорожнении пузыря или при противоречивых данных — потому что операция на ошибочном диагнозе не работает.' },
+          { q: 'Когда можно вернуться к работе и спорту?', a: 'К работе за столом обычно через 1–2 недели. Для спорта, подъёма тяжестей и половой жизни рекомендуется подождать 6 недель и получить разрешение хирурга. Ранняя нагрузка приходится на слинг.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-neurogenic Female LUTS — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
+        ]
+      },
+      ar: {
+        title: 'سلس البول الجهدي: خيارات العلاج',
+        summary: 'تسرّب البول عند السعال أو العطاس أو ممارسة الرياضة. ينبغي أولًا تحديد النوع ثم البدء بالخطوة الأقل تدخلًا — والجراحة ليست الخيار الأول.',
+        metaTitle: 'سلس البول الجهدي: من التمارين إلى عملية الشريط',
+        metaDescription: 'الفرق بين السلس الجهدي وسلس الإلحاح، ولماذا تأتي تمارين قاع الحوض أولًا، وعملية الشريط، والجدل حول الشرائح الصناعية، والبدائل.',
+        quickFacts: { duration: 'عملية الشريط 30–45 دقيقة', anesthesia: 'تخدير نصفي أو عام', hospitalStay: 'في اليوم نفسه أو ليلة واحدة', stayInTurkey: '5–7 أيام', returnToWork: '1–2 أسبوع', flightClearance: '5–7 أيام' },
+        definition: [
+          'سلس البول الجهدي هو خروج البول من دون إرادة في لحظات ارتفاع الضغط داخل البطن: عند السعال أو العطاس أو الضحك أو رفع الأثقال أو الرياضة. وكلمة «الجهد» هنا لا تعني التوتر النفسي بل الحمل البدني على المثانة. والسبب ضعف العضلات والبنى التي تُبقي المجرى البولي مغلقًا؛ وأهم العوامل المساعدة الولادات وسنّ اليأس والسعال المزمن والإمساك وزيادة الوزن.',
+          'يجب تحديد النوع أولًا، وهذا التمييز يغيّر كل شيء. ففي النوع الجهدي يحدث التسرّب مع المجهود البدني من دون إلحاح سابق. أما في نوع الإلحاح فيأتي أولًا شعور لا يُقاوَم بالحاجة إلى التبول ويحدث التسرّب قبل بلوغ الحمّام. وهما مرضان مختلفان: ففي الجهدي خلل في بنية الدعم، وفي الإلحاحي فرط نشاط في عضلة المثانة.',
+          'لماذا هذا التمييز بهذه الأهمية؟ لأن العلاجين متعاكسان. فعملية الشريط لا تنفع في نوع الإلحاح وقد تسبب صعوبة في التبول. وكثير من النساء يُعالَجن من النوع الخطأ. وفي النوع المختلط يُحدَّد أي الشكويين أغلب ويُعالَج أولًا.',
+          'تمارين قاع الحوض هي الخطوة الأولى وهي تنفع فعلًا. فتمرين العضلة الصحيحة بالطريقة الصحيحة، بانتظام ولثلاثة أشهر على الأقل، يقلل الشكوى بوضوح عند كثير من النساء. وهنا مَزلقان: شدّ العضلة الخطأ (البطن أو الأرداف)، والتوقف بعد أسابيع قليلة. ولذلك يُنصح بتعلمها مع أخصائي علاج طبيعي إن أمكن. وتخطّي هذه الخطوة والذهاب مباشرةً إلى الجراحة ليس صوابًا.',
+          'وإنقاص الوزن وعلاج الإمساك والسعال المزمن جزء من العلاج أيضًا. وهذه ليست «نصائح جانبية»؛ فهي تؤثر مباشرةً لأنها تخفض الضغط داخل البطن.',
+          'الجراحة: الشريط تحت منتصف الإحليل. فعندما لا تكفي التمارين وتعديل نمط الحياة، يُوضَع شريط تحت الجزء الأوسط من المجرى البولي ليدعمه لحظة السعال. وقد يكون الشريط شريحة صناعية أو يُصنَع من نسيج المريضة نفسها.'
+        ],
+        eligibility: {
+          suitable: ['النساء اللواتي تأكد لديهن النوع الجهدي بالقصة والفحص', 'من لم يحصلن على فائدة كافية رغم ثلاثة أشهر على الأقل من تمارين قاع الحوض المنتظمة', 'من تُقيّد شكواهن حياتهن اليومية أو عملهن أو حياتهن الاجتماعية', 'من عولجت لديهن العوامل المساعدة كالوزن والإمساك والسعال المزمن', 'من أكملن الإنجاب — فالحمل قد يُلغي أثر الشريط'],
+          notSuitable: ['من يغلب لديهن نوع الإلحاح — فالشريط لا ينفع وقد يسبب صعوبة في التبول', 'من لم يجرّبن خطوة التمارين إطلاقًا — فهي تأتي أولًا', 'من يخططن للحمل — تُؤجَّل العملية', 'من لديهن التهاب نشط في المسالك البولية — يُعالَج أولًا', 'من لا تُفرِغ مثانتهن تمامًا — يلزم تقييم ديناميكي بولي أولًا', 'من لديهن هبوط واضح مرافق في أعضاء الحوض — تُوضَع الخطة بالتشاور']
+        },
+        technology: ['قصة مفصّلة ومفكرة تبول — أثمن أداة لتحديد النوع', 'إظهار التسرّب باختبار السعال', 'قياس البول المتبقي بعد التبول', 'الدراسة الديناميكية البولية — في النوع المختلط أو بعد عمليات سابقة أو عند عدم وضوح التشخيص', 'شريط تحت منتصف الإحليل (شريحة صناعية أو لفافة من نسيج المريضة)', 'حقن مادة مالئة في الإحليل — عند مريضات مختارات'],
+        surgeonExperience: { caseVolume: '', note: 'المسالك البولية النسائية والوظيفية من مجالات عمل الأستاذ المشارك الدكتور مسلم إرغون. ويقوم النهج على تحديد النوع بدقة أولًا والبدء بالخطوة الأقل تدخلًا؛ ولا يُتخذ قرار الجراحة إلا إذا لم يكفِ العلاج المحافظ.' },
+        timeline: [
+          { when: 'الخطوة 1', title: 'تحديد النوع', body: 'يُسأل بالتفصيل عن الظروف التي يحدث فيها التسرّب وتُطلَب مفكرة تبول لبضعة أيام. ويُجرى اختبار السعال في الفحص. وهذه الخطوة أهم بكثير من قرار الجراحة.' },
+          { when: 'الخطوة 2', title: 'معالجة العوامل المساعدة', body: 'يُقيَّم الوزن والإمساك والسعال المزمن والتهاب المسالك. والعلاج من دون تصحيحها يعطي نتائج أسوأ.' },
+          { when: 'الخطوة 3', title: 'تمارين قاع الحوض (3 أشهر على الأقل)', body: 'يُعلَّم تمرين العضلة الصحيحة بالطريقة الصحيحة، ويُفضَّل مع أخصائي علاج طبيعي. والمواظبة عليها تُغني كثيرات عن العملية.' },
+          { when: 'الخطوة 4', title: 'التقييم الجراحي عند عدم كفاية الفائدة', body: 'تُجرى الدراسة الديناميكية عند اللزوم. ويُناقَش معك نوع الشريط (صناعي أو من نسيجك) والبدائل.' },
+          { when: 'يوم العملية', title: 'وضع الشريط', body: 'تحت تخدير نصفي أو عام يُوضَع الشريط تحت منتصف المجرى البولي عبر شقّ مهبلي صغير. ويستغرق الإجراء 30–45 دقيقة.' },
+          { when: 'من الأسبوع 6', title: 'التقييم والمتابعة', body: 'تُقيَّم النتيجة. ويُنصح بمواصلة تمارين قاع الحوض بعد العملية أيضًا.' }
+        ],
+        risks: ['الجدل حول الشرائح الصناعية: قُيِّد استعمال الشرائح الصناعية أو عُلِّق في بعض البلدان بسبب مضاعفات مُبلَّغ عنها. وهذه حقيقة لا يجوز إخفاؤها عنك. ومن المشكلات المُبلَّغ عنها بروز الشريحة عبر النسيج (التآكل)، وألم مستمر في المغبن أو أثناء الجماع، ومضاعفات يصعب إصلاحها بالنزع. ولذلك ينبغي أن يُتخذ القرار معك بعد عرض البدائل بوضوح', 'إلحاح بولي مستجد — قد يبدأ بعد العملية', 'صعوبة التبول أو عدم إفراغ المثانة تمامًا — إذا كان الشريط مشدودًا أكثر من اللازم', 'التهاب المسالك البولية', 'النزف وإصابة المثانة — أثناء العملية، وهما غير شائعين', 'عدم زوال التسرّب تمامًا أو عودته جزئيًا مع الوقت', 'ألم — في المغبن أو باطن الفخذ أو أثناء الجماع', 'تراجع الأثر بعد الحمل — ولهذا تُؤجَّل العملية عند من لم يُكملن الإنجاب'],
+        alternatives: ['تمارين قاع الحوض — الخطوة الأولى؛ مع أخصائي علاج طبيعي إن أمكن، ولثلاثة أشهر على الأقل', 'إنقاص الوزن وعلاج الإمساك والسعال المزمن', 'فرزجة مهبلية (حلقة داعمة) — لمن لا ترغب في الجراحة أو لا تناسبها', 'حقن مادة مالئة في الإحليل — أقل تدخلًا؛ وأثرها مؤقت غالبًا ويمكن تكراره', 'شريط من لفافة المريضة نفسها — خيار مهم لمن لا ترغب في المادة الصناعية', 'تعليق المثانة (الكولبوسسبنشن) — أسلوب أقدم لكنه ما زال صالحًا ولا يستعمل مادة صناعية', 'عدم فعل شيء واستعمال الفوط — خيار مشروع إذا كانت الشكوى خفيفة'],
+        comparison: {
+          title: 'السلس الجهدي وسلس الإلحاح — التمييز يحدد العلاج',
+          columns: ['المعيار', 'النوع الجهدي', 'نوع الإلحاح'],
+          rows: [
+            { label: 'متى يحدث التسرّب', values: ['عند السعال والعطاس والحزق', 'بعد إلحاح مفاجئ لا يُقاوَم'] },
+            { label: 'الإلحاح السابق للتسرّب', values: ['لا يوجد', 'واضح'] },
+            { label: 'التسرّب ليلًا', values: ['نادر', 'أكثر شيوعًا'] },
+            { label: 'المشكلة الكامنة', values: ['ضعف بنى الدعم', 'فرط نشاط عضلة المثانة'] },
+            { label: 'الخطوة الأولى', values: ['تمارين قاع الحوض', 'تدريب المثانة والأدوية'] },
+            { label: 'عملية الشريط', values: ['قد تكون مناسبة', 'غير مناسبة — لا تفيد'] }
+          ],
+          note: 'في النوع المختلط تجتمع الشكويان؛ ويُعالَج الأغلب منهما أولًا. وعلاج النوع الخطأ يعني بقاء الشكوى وإجراء عملية بلا لزوم في آنٍ معًا.'
+        },
+        recovery: [
+          { period: 'أول 48 ساعة', body: 'يُتوقع انزعاج خفيف ونزف على هيئة تبقّع. ويُتحقق من إفراغ المثانة تمامًا.' },
+          { period: 'الأسبوع 1', body: 'المشي الخفيف مسموح. ورفع الأثقال والحزق والحركات التي تُجهد عضلات البطن ممنوعة.' },
+          { period: 'الأسبوع 2–4', body: 'يمكن العودة إلى العمل المكتبي. ومن المهم تجنّب الإمساك؛ فالحزق يُحمِّل الشريط.' },
+          { period: 'الأسبوع 6', body: 'تُخطَّط العودة إلى الحياة الجنسية والرياضة في هذه المرحلة بموافقة الجرّاح. وتُقيَّم النتيجة.' },
+          { period: 'المدى الطويل', body: 'يُنصح بمواصلة تمارين قاع الحوض. وإن ظهرت شكوى جديدة (ألم أو صعوبة تبول أو نزف) فراجِعي من دون تأخير.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'يتغير السعر بحسب الأسلوب المختار (شريحة صناعية أو شريط من لفافة المريضة أو مادة مالئة) وبحسب الحاجة إلى تقييم إضافي. ويُقدَّم العرض النهائي بعد التقييم.' },
+        packageIncludes: ['تقييم المسالك البولية النسائية واختبار السعال', 'قياس البول المتبقي بعد التبول', 'الدراسة الديناميكية البولية عند الحاجة', 'عملية الشريط والتخدير', 'إجراء في اليوم نفسه أو إقامة ليلة واحدة', 'تعليم تمارين قاع الحوض', 'التنقلات بين المطار والمستشفى والفندق', 'الإقامة (المريضة + مرافق واحد)', 'مترجم طبي ومتابعة عن بُعد بعد عودتك إلى بلدك'],
+        faqs: [
+          { q: 'هل الشرائح الصناعية آمنة؟ قرأت أخبارًا سلبية.', a: 'ما قرأتِه صحيح. فقد قُيِّد استعمالها أو عُلِّق في بعض البلدان بسبب مضاعفات مُبلَّغ عنها: بروزها عبر النسيج، وألم مستمر في المغبن أو أثناء الجماع، وصعوبة نزعها. فلا تثقي بمن لا يخبرك بذلك. وفي الوقت نفسه أعطى هذا الأسلوب نتائج جيدة لكثير من النساء. والصواب أن يُشرَح لك النفع والخطر معًا وأن تُعرَض البدائل الخالية من المادة الصناعية بوضوح (شريط من نسيجك، تعليق المثانة، مادة مالئة). والقرار قرارك.' },
+          { q: 'هل يمكن صنع الشريط من نسيجي أنا؟', a: 'نعم. ففي الشريط اللفافي الذاتي يُستعمل نسيج يُؤخَذ من جدار بطنك أو فخذك. ويزول خطر التآكل المرتبط بالمادة الصناعية. في المقابل يلزم شقّ ثانٍ وتطول العملية. فإن كنتِ لا ترغبين في المادة الصناعية فيجب مناقشة هذا الخيار.' },
+          { q: 'هل التمارين أولًا شرط؟ ألا يمكنني إجراء العملية مباشرةً؟', a: 'تمارين قاع الحوض هي الخطوة الأولى ولا ينبغي تخطّيها. فإن أُحسِن أداؤها وتواصلت ثلاثة أشهر على الأقل قلّت الشكوى بوضوح عند كثيرات وأغنت عن العملية. والعملية يصعب الرجوع عنها؛ فمن المنطقي تجربة الخطوة القابلة للرجوع أولًا.' },
+          { q: 'كيف أعرف أنني أؤدي التمارين بشكل صحيح؟', a: 'أكثر الأخطاء شيوعًا شدّ عضلات البطن أو الأرداف أو الساقين. والعضلة الصحيحة هي التي تشدّينها عند محاولة حبس البول. ويكون ذلك من دون حبس النفس ومن دون شدّ البطن. وتعلّميها مع أخصائي علاج طبيعي إن أمكن؛ فالتمارين الخاطئة لا تنفع وتُوقِع في وهم أن «التمارين لم تفد».' },
+          { q: 'هل سيزول التسرّب تمامًا؟', a: 'الهدف خفض الشكوى إلى حد لا يقيّد حياتك اليومية. فعند بعض النساء يزول التسرّب تمامًا، وعند أخريات يقلّ بوضوح. وعودته جزئيًا مع الوقت واردة أيضًا. فاحذري من يضمن لك جفافًا تامًا ودائمًا.' },
+          { q: 'هل قد يبدأ الإلحاح بعد العملية؟', a: 'عند بعض النساء يظهر إحساس إلحاح جديد بعد العملية. وهذا أمر معروف ويمكن ضبطه عادةً بتدريب المثانة والأدوية. والمهم أن يكون هذا الاحتمال قد نُوقش قبل العملية.' },
+          { q: 'أخطط للإنجاب، فهل يمكنني إجراء العملية؟', a: 'يُنصح بتأجيل العملية إلى ما بعد اكتمال الإنجاب. فالحمل والولادة قد يقلّلان أثر الشريط، فتكون فائدة عملية أُجريت قبلهما قصيرة الأمد.' },
+          { q: 'هل تُجرى الدراسة الديناميكية للجميع؟', a: 'لا. فإن كانت القصة والفحص يضعان التشخيص بوضوح فقد لا تلزم. لكنها تُطلَب في النوع المختلط، أو بعد عمليات سابقة في هذه المنطقة، أو عند عدم إفراغ المثانة تمامًا، أو عند تعارض المعطيات — لأن عملية مبنية على تشخيص خاطئ لا تنفع.' },
+          { q: 'متى أعود إلى العمل والرياضة؟', a: 'إلى العمل المكتبي خلال 1–2 أسبوع عادةً. أما الرياضة ورفع الأثقال والحياة الجنسية فيُنصح بانتظار 6 أسابيع وأخذ موافقة الجرّاح. فالعودة المبكرة تُحمِّل الشريط.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-neurogenic Female LUTS — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
+        ]
+      }
+    }
+  },
+  {
+    /**
+     * Böbrek taşı hub'ının altındaki girişimsel olmayan yöntem (prompt m.4.1).
+     * DÜRÜSTLÜK: ESWL "ameliyatsız" diye pazarlanır ama TEK SEANSTA SONUÇ
+     * GARANTİSİ YOKTUR; birden fazla seans gerekebilir ve parçalar haftalar
+     * içinde düşer. Taş sertliği (Hounsfield) ve cilt-taş mesafesinin
+     * başarıyı etkilediği açıkça yazılıdır. Steinstrasse riski belirtilmiştir.
+     * Kaynak: EAU Urolithiasis kılavuzu.
+     * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     */
+    slug: 'eswl',
+    parent: 'bobrek-tasi',
+    lastReviewed: '2026-10-04',
+    icon: 'kidney',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'ESWL: Vücut Dışından Ses Dalgasıyla Taş Kırma',
+        summary:
+          'Vücuda hiç girilmeden, dışarıdan gönderilen ses dalgalarıyla taşın kırılması. Girişimsel değildir ama her taşa uygun değildir ve tek seansta sonuç garanti edilemez.',
+        metaTitle: 'ESWL Nedir? Ameliyatsız Böbrek Taşı Kırma',
+        metaDescription:
+          'ESWL’in nasıl uygulandığı, hangi taşlarda işe yaradığı, kaç seans gerekebileceği, steinstrasse dahil riskleri ve RIRS ile karşılaştırması.',
+        quickFacts: {
+          duration: '30–60 dakika',
+          anesthesia: 'Ağrı kesici veya hafif sedasyon',
+          hospitalStay: 'Yok — günübirlik',
+          stayInTurkey: '3–5 gün (tek seans için)',
+          returnToWork: '1–2 gün',
+          flightClearance: '1–2 gün'
+        },
+        definition: [
+          'ESWL (vücut dışından şok dalgasıyla taş kırma), cilde temas eden bir başlıktan gönderilen ses dalgalarının taş üzerinde odaklanarak onu küçük parçalara ayırmasıdır. Vücuda hiçbir alet sokulmaz, kesi yapılmaz. Hasta genellikle işlemden birkaç saat sonra evine döner.',
+          'ÖNEMLİ: TAŞ İŞLEM SIRASINDA ÇIKMAZ. ESWL taşı kırar; kırılan parçalar sonraki günler ve haftalar içinde idrarla kendiliğinden düşer. Bu düşme sürecinde kolik tarzı ağrı olabilir. Yani "taşım gitti" demek için işlem günü değil, takip görüntülemesi beklenir.',
+          'HER TAŞA UYGUN DEĞİLDİR VE BU BİR AYRINTI DEĞİL, TEMEL BELİRLEYİCİDİR. Başarıyı etkileyen üç şey vardır: taşın sertliği, boyutu ve cilde olan uzaklığı. Tomografide ölçülen yoğunluk (Hounsfield değeri) yüksekse taş serttir ve ses dalgasıyla kırılması zorlaşır. Kilolu hastalarda cilt ile taş arasındaki mesafe arttığı için dalganın enerjisi azalır. Ayrıca böbreğin alt kutbundaki taşlarda parçalar yerçekimi nedeniyle kolay atılamayabilir.',
+          'BİRDEN FAZLA SEANS GEREKEBİLİR. Tek seansta tam sonuç alınamayan hastalarda işlem tekrarlanır; seanslar arasında genellikle birkaç hafta beklenir. Bu bir başarısızlık değil, yöntemin bilinen özelliğidir. Size "tek seansta biter" diyen bir yaklaşıma karşı dikkatli olun.',
+          'İşlem öncesinde idrar kültürü alınması zorunludur. Tedavi edilmemiş bir enfeksiyon varken taşın kırılması, bakterinin kana karışmasına yol açabilir. Ayrıca kan sulandırıcı kullanan hastalarda ilaç düzeni önceden ayarlanmalıdır; ESWL kanama riski taşır.'
+        ],
+        eligibility: {
+          suitable: [
+            'Böbrekte veya üst idrar borusunda küçük–orta boyutlu taşı olan hastalar',
+            'Tomografide yoğunluğu düşük, yani daha yumuşak taşı olan hastalar',
+            'Cilt ile taş arasındaki mesafenin uygun olduğu, aşırı kilolu olmayan hastalar',
+            'Anestezi almak istemeyen veya alması riskli olan hastalar',
+            'Böbrek anatomisi parçaların atılmasına uygun olan hastalar',
+            'Çocuk hastalar — seçilmiş olgularda tercih edilen yöntemlerden biridir'
+          ],
+          notSuitable: [
+            'Gebeler — kesin olarak uygulanmaz',
+            'Tedavi edilmemiş idrar yolu enfeksiyonu olan hastalar — önce enfeksiyon tedavi edilir',
+            'Kanama bozukluğu olan veya kan sulandırıcısı kesilemeyen hastalar',
+            'Taşın altında, idrarın akışını engelleyen bir darlık bulunan hastalar — parçalar düşemez',
+            'Çok sert (yüksek yoğunluklu) veya çok büyük taşı olan hastalar',
+            'Kontrol altına alınmamış yüksek tansiyonu olan hastalar',
+            'Taşın cilde uzaklığı nedeniyle dalganın yeterince ulaşamadığı hastalar'
+          ]
+        },
+        technology: [
+          'Litotriptör — odaklanmış şok dalgası üreteci',
+          'Floroskopi ve/veya ultrason ile taşın hedeflenmesi',
+          'Kontrastsız bilgisayarlı tomografi ile taş yoğunluğunun (Hounsfield) ve cilt-taş mesafesinin ölçülmesi',
+          'İşlem sonrası takip görüntülemesi ile taşsızlığın doğrulanması',
+          'Taş analizi ve tekrarı önlemeye yönelik değerlendirme'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Böbrek taşı tedavisinin tüm basamakları Doç. Dr. Müslüm Ergün’ün uygulama alanı içindedir. ESWL kararı; taşın yoğunluğu, boyutu, yerleşimi ve cilde uzaklığı birlikte değerlendirilerek verilir — uygun olmayan taşta ısrar etmek hastaya zaman kaybettirir.'
+        },
+        timeline: [
+          {
+            when: '1. adım',
+            title: 'Uygunluk değerlendirmesi',
+            body: 'Kontrastsız tomografi ile taşın boyutu, yoğunluğu ve cilde uzaklığı ölçülür. Bu üç değer ESWL’in işe yarayıp yaramayacağını büyük ölçüde gösterir.'
+          },
+          {
+            when: '2. adım',
+            title: 'Enfeksiyon taraması',
+            body: 'İdrar kültürü alınır. Enfeksiyon varsa işlem ertelenir ve önce tedavi edilir; bu adım atlanamaz.'
+          },
+          {
+            when: 'İşlem günü',
+            title: 'Şok dalgası uygulaması',
+            body: 'Hasta masaya yatırılır, taş görüntüleme ile hedeflenir ve odaklanmış dalgalar gönderilir. İşlem 30–60 dakika sürer; ağrı kesici veya hafif sedasyon yeterlidir.'
+          },
+          {
+            when: 'İlk günler',
+            title: 'Parçaların düşmesi',
+            body: 'Kırılan parçalar idrarla atılmaya başlar. Bu dönemde kolik tarzı ağrı ve idrarda kan görülebilir; bol sıvı alınması önerilir.'
+          },
+          {
+            when: '2–4. hafta',
+            title: 'Kontrol görüntülemesi',
+            body: 'Taşsızlık görüntüleme ile değerlendirilir. Parçalar kaldıysa ikinci bir seans veya başka bir yöntem planlanır.'
+          },
+          {
+            when: 'Sonrası',
+            title: 'Koruma planı',
+            body: 'Düşen taş toplanabilirse kimyasal analizi yapılır ve tekrarı önlemeye yönelik sıvı-beslenme planı oluşturulur.'
+          }
+        ],
+        risks: [
+          'TEK SEANSTA SONUÇ ALINAMAMASI: en sık karşılaşılan durumdur. Birden fazla seans gerekebilir; bu bir komplikasyon değil, yöntemin bilinen özelliğidir',
+          'Parçaların düşerken kolik tarzı şiddetli ağrıya yol açması',
+          'STEINSTRASSE ("taş yolu"): kırılan parçaların idrar borusunda üst üste dizilerek tıkanıklık yapması; ek girişim gerektirebilir',
+          'İdrarda kan — işlem sonrası birkaç gün beklenen bulgudur',
+          'Böbrek çevresinde kanama veya hematom — seyrek',
+          'Enfeksiyon ve kan zehirlenmesi — bu nedenle işlem öncesi idrar kültürü zorunludur',
+          'Parçaların tamamen atılamaması ve geride taş kalması',
+          'Taşın tekrarlaması — koruyucu önlem alınmazsa'
+        ],
+        alternatives: [
+          'İzlem ve ilaçla düşürme denemesi — küçük, aşağı inmiş taşlarda',
+          'RIRS (esnek endoskopla lazerle kırma) — sert taşlarda ve alt kutup taşlarında daha öngörülebilir sonuç verir',
+          'PCNL — büyük ve geyik boynuzu taşlarda',
+          'Üreteroskopi — idrar borusundaki taşlarda',
+          'Taş yoğunluğu çok yüksekse doğrudan endoskopik yönteme geçmek — gereksiz ESWL seansından kaçınmak için'
+        ],
+        comparison: {
+          title: 'ESWL ile RIRS karşılaştırması',
+          columns: ['Ölçüt', 'ESWL', 'RIRS'],
+          rows: [
+            { label: 'Vücuda giriş', values: ['Yok — tamamen dışarıdan', 'İdrar yolundan, kesi yok'] },
+            { label: 'Anestezi', values: ['Ağrı kesici veya hafif sedasyon', 'Genel anestezi'] },
+            { label: 'Taş sertliğinin etkisi', values: ['Belirleyici — sert taşta başarı düşer', 'Sertlikten daha az etkilenir'] },
+            { label: 'Sonucun ortaya çıkışı', values: ['Haftalar içinde, parçalar düştükçe', 'İşlem sırasında'] },
+            { label: 'Seans sayısı', values: ['Birden fazla olabilir', 'Genellikle tek seans'] },
+            { label: 'JJ stent', values: ['Genellikle gerekmez', 'Genellikle takılır'] },
+            { label: 'İşe dönüş', values: ['1–2 gün', '3–7 gün'] }
+          ],
+          note:
+            'ESWL daha az girişimseldir ama sonucu daha az öngörülebilirdir. Uygun taşta mükemmel bir seçenek, uygun olmayan taşta ise zaman kaybıdır. Karar tomografideki yoğunluk ve mesafe ölçümleriyle verilir.'
+        },
+        recovery: [
+          {
+            period: 'İlk 24 saat',
+            body: 'Belde hassasiyet ve idrarda pembe renk beklenir. Bol sıvı alınması parçaların atılmasına yardımcı olur.'
+          },
+          {
+            period: '2–7. gün',
+            body: 'Parçalar düşmeye başlar; kolik tarzı ağrı olabilir. Hekimin önerdiği ağrı kesici kullanılır. Ateş, titreme veya idrar yapamama olursa vakit kaybetmeden başvurulmalıdır.'
+          },
+          {
+            period: '2–4. hafta',
+            body: 'Parçaların atılımı büyük ölçüde tamamlanır. Kontrol görüntülemesi bu dönemde yapılır.'
+          },
+          {
+            period: 'Sonrası',
+            body: 'Kalan parça varsa ikinci seans veya endoskopik yöntem planlanır. Taş analizine göre koruyucu plan uygulanır.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat seans başına belirlenir ve birden fazla seans gerekebileceği için toplam maliyet değişkendir. Kesin teklif, tomografi değerlendirmesinden sonra verilir.'
+        },
+        packageIncludes: [
+          'Üroloji değerlendirmesi, tomografi ve idrar kültürü',
+          'ESWL seansı ve ağrı kontrolü',
+          'Günübirlik işlem ve gözlem',
+          'Kontrol görüntülemesi',
+          'Düşen taşın analizi (toplanabilirse) ve koruyucu öneriler',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve ülkenize döndükten sonra uzaktan takip'
+        ],
+        faqs: [
+          {
+            q: 'Taş işlem sırasında çıkacak mı?',
+            a: 'Hayır. ESWL taşı kırar, çıkarmaz. Kırılan parçalar sonraki günler ve haftalar içinde idrarla kendiliğinden düşer. Bu nedenle sonucu işlem günü değil, 2–4 hafta sonraki kontrol görüntülemesiyle değerlendiririz.'
+          },
+          {
+            q: 'Tek seansta biter mi?',
+            a: 'Garanti edilemez. Bir kısım hastada tek seans yeterlidir, bir kısmında ikinci hatta üçüncü seans gerekir. Bu yöntemin bilinen bir özelliğidir ve başarısızlık sayılmaz. Size tek seans garantisi veren bir yaklaşıma karşı dikkatli olun.'
+          },
+          {
+            q: 'Benim taşım ESWL’e uygun mu?',
+            a: 'Bunu üç ölçü belirler: taşın tomografideki yoğunluğu (sertliği), boyutu ve cilde olan uzaklığı. Sert, çok büyük veya cilde uzak taşlarda ESWL’in işe yarama olasılığı düşer; bu durumda doğrudan endoskopik yönteme geçmek size zaman kazandırır.'
+          },
+          {
+            q: 'Ağrılı mı?',
+            a: 'Dalgaların geçtiği noktada vuruş hissi olur. Çoğu hasta ağrı kesici veya hafif sedasyonla rahat eder; genel anestezi genellikle gerekmez. Asıl rahatsızlık işlem sırasında değil, sonraki günlerde parçalar düşerken yaşanan kolik ağrısıdır.'
+          },
+          {
+            q: 'Steinstrasse nedir?',
+            a: 'Kırılan parçaların idrar borusunda üst üste dizilerek tıkanıklık yapmasıdır; adı "taş yolu" anlamına gelir. Ağrı ve idrar akışında engel yaratır. Çoğu zaman kendiliğinden açılır, ancak bazen JJ stent takılması veya endoskopik girişim gerekebilir.'
+          },
+          {
+            q: 'İşlem öncesi neden idrar kültürü isteniyor?',
+            a: 'Çünkü tedavi edilmemiş bir enfeksiyon varken taşı kırmak, bakterinin kana karışmasına yol açabilir. Bu ciddi bir tablodur ve önlenebilir. Bu nedenle kültür alınması ve gerekirse önce enfeksiyonun tedavi edilmesi atlanamaz bir adımdır.'
+          },
+          {
+            q: 'Kan sulandırıcı kullanıyorum, olabilir miyim?',
+            a: 'ESWL kanama riski taşıdığı için kan sulandırıcı kullanımı önceden değerlendirilmelidir. İlacın kesilmesi mümkün değilse ESWL uygun olmayabilir; bu durumda RIRS daha güvenli bir seçenek olarak gündeme gelir.'
+          },
+          {
+            q: 'Ne zaman uçabilirim?',
+            a: 'Genellikle 1–2 gün sonra. Ancak parçalar düşerken kolik ağrısı olabileceğini göz önünde bulundurun; uzun bir uçuş sırasında bu rahatsız edici olabilir. Yurt dışından gelen hastalar için 3–5 günlük kalış planlanır.'
+          },
+          {
+            q: 'Taşım tekrar eder mi?',
+            a: 'Koruyucu önlem alınmazsa taş hastalığı tekrar edebilir. Düşen parçayı toplayabilirseniz saklayın; kimyasal analizi tekrarı önleyici planın temelini oluşturur.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      },
+      en: {
+        title: 'ESWL: Shock Wave Lithotripsy from Outside the Body',
+        summary:
+          'Breaking the stone with sound waves delivered from outside, with nothing entering the body. It is non-invasive, but it does not suit every stone and a result in one session cannot be guaranteed.',
+        metaTitle: 'What Is ESWL? Breaking Kidney Stones Without Surgery',
+        metaDescription:
+          'How ESWL is carried out, which stones it works on, how many sessions may be needed, the risks including steinstrasse, and how it compares with RIRS.',
+        quickFacts: {
+          duration: '30–60 minutes',
+          anesthesia: 'Painkillers or light sedation',
+          hospitalStay: 'None — day case',
+          stayInTurkey: '3–5 days (for one session)',
+          returnToWork: '1–2 days',
+          flightClearance: '1–2 days'
+        },
+        definition: [
+          'ESWL (extracorporeal shock wave lithotripsy) uses sound waves delivered from a head in contact with the skin, focused on the stone so as to break it into small pieces. No instrument is passed into the body and no incision is made. The patient usually goes home a few hours after the procedure.',
+          'IMPORTANT: THE STONE DOES NOT COME OUT DURING THE PROCEDURE. ESWL breaks the stone; the fragments then pass out on their own with the urine over the following days and weeks. Colicky pain can occur while they pass. So the point at which you can say "the stone has gone" is not the day of treatment but the follow-up imaging.',
+          'IT DOES NOT SUIT EVERY STONE, AND THAT IS NOT A DETAIL BUT THE DECIDING FACTOR. Three things govern success: the hardness of the stone, its size and its distance from the skin. If the density measured on CT (the Hounsfield value) is high, the stone is hard and more difficult to break with sound waves. In heavier patients the distance between skin and stone increases and the energy reaching it falls. Stones in the lower pole of the kidney may also be hard to clear because gravity works against the fragments.',
+          'MORE THAN ONE SESSION MAY BE NEEDED. Where a single session does not fully clear the stone, the procedure is repeated, usually after a gap of a few weeks. That is not a failure but a known feature of the method. Be wary of anyone who tells you it will be finished in one session.',
+          'A urine culture before the procedure is compulsory. Breaking a stone while an untreated infection is present can allow bacteria to enter the bloodstream. The schedule for blood-thinning medication must also be arranged in advance, because ESWL carries a bleeding risk.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients with a small to moderately sized stone in the kidney or upper ureter',
+            'Patients whose stone is of low density on CT, that is softer',
+            'Patients who are not very overweight, where the skin-to-stone distance is favourable',
+            'Patients who do not want, or for whom it is risky to have, an anaesthetic',
+            'Patients whose kidney anatomy allows the fragments to clear',
+            'Children — in selected cases it is among the preferred methods'
+          ],
+          notSuitable: [
+            'Pregnant women — it is absolutely not performed',
+            'Patients with an untreated urinary tract infection — the infection is treated first',
+            'Patients with a bleeding disorder, or whose blood thinners cannot be stopped',
+            'Patients with a narrowing below the stone obstructing urine flow — the fragments cannot pass',
+            'Patients with a very hard (high-density) or very large stone',
+            'Patients with uncontrolled high blood pressure',
+            'Patients in whom the distance to the skin means the waves cannot reach the stone adequately'
+          ]
+        },
+        technology: [
+          'Lithotripter — a focused shock wave generator',
+          'Targeting the stone with fluoroscopy and/or ultrasound',
+          'Measuring stone density (Hounsfield) and skin-to-stone distance on non-contrast CT',
+          'Confirming stone clearance with follow-up imaging',
+          'Stone analysis and assessment aimed at preventing recurrence'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Every step of kidney stone treatment falls within Assoc. Prof. Müslüm Ergün’s area of practice. The decision to use ESWL is made by weighing the density, size, position and skin distance of the stone together — persisting with ESWL on an unsuitable stone costs the patient time.'
+        },
+        timeline: [
+          {
+            when: 'Step 1',
+            title: 'Assessing suitability',
+            body: 'Non-contrast CT measures the size, density and skin distance of the stone. These three figures largely indicate whether ESWL will work.'
+          },
+          {
+            when: 'Step 2',
+            title: 'Screening for infection',
+            body: 'A urine culture is taken. If there is infection the procedure is postponed and the infection treated first; this step cannot be skipped.'
+          },
+          {
+            when: 'Day of the procedure',
+            title: 'Delivering the shock waves',
+            body: 'The patient lies on the table, the stone is targeted using imaging and focused waves are delivered. The procedure takes 30–60 minutes; painkillers or light sedation are enough.'
+          },
+          {
+            when: 'First days',
+            title: 'The fragments pass',
+            body: 'The broken pieces begin to pass with the urine. Colicky pain and blood in the urine can occur during this time; plenty of fluids are advised.'
+          },
+          {
+            when: 'Weeks 2–4',
+            title: 'Follow-up imaging',
+            body: 'Clearance is assessed with imaging. If fragments remain, a second session or a different method is planned.'
+          },
+          {
+            when: 'Afterwards',
+            title: 'Prevention plan',
+            body: 'If a passed fragment can be collected it is analysed chemically, and a fluid and diet plan is drawn up to prevent recurrence.'
+          }
+        ],
+        risks: [
+          'NOT CLEARING IN ONE SESSION: the most frequent outcome to allow for. More than one session may be needed; this is not a complication but a known feature of the method',
+          'Severe colicky pain as the fragments pass',
+          'STEINSTRASSE ("stone street"): fragments lining up in the ureter and causing obstruction; this may require a further procedure',
+          'Blood in the urine — expected for a few days after the procedure',
+          'Bleeding or a haematoma around the kidney — uncommon',
+          'Infection and blood poisoning — which is why a urine culture beforehand is compulsory',
+          'Fragments not clearing completely, leaving stone behind',
+          'Recurrence of the stone — if no preventive measures are taken'
+        ],
+        alternatives: [
+          'Surveillance and a trial of medical expulsive therapy — for small stones that have moved down',
+          'RIRS (laser fragmentation with a flexible endoscope) — gives a more predictable result for hard stones and lower pole stones',
+          'PCNL — for large and staghorn stones',
+          'Ureteroscopy — for stones in the ureter',
+          'Going straight to an endoscopic method where stone density is very high — to avoid a futile ESWL session'
+        ],
+        comparison: {
+          title: 'ESWL compared with RIRS',
+          columns: ['Criterion', 'ESWL', 'RIRS'],
+          rows: [
+            { label: 'Entering the body', values: ['None — entirely from outside', 'Through the urinary passage, no incision'] },
+            { label: 'Anaesthesia', values: ['Painkillers or light sedation', 'General anaesthesia'] },
+            { label: 'Effect of stone hardness', values: ['Decisive — success falls with hard stones', 'Less affected by hardness'] },
+            { label: 'When the result appears', values: ['Over weeks, as fragments pass', 'During the procedure'] },
+            { label: 'Number of sessions', values: ['May be more than one', 'Usually a single session'] },
+            { label: 'JJ stent', values: ['Usually not needed', 'Usually placed'] },
+            { label: 'Return to work', values: ['1–2 days', '3–7 days'] }
+          ],
+          note:
+            'ESWL is less invasive but its result is less predictable. It is an excellent option for a suitable stone and a waste of time for an unsuitable one. The decision rests on the density and distance measurements from the CT.'
+        },
+        recovery: [
+          {
+            period: 'First 24 hours',
+            body: 'Tenderness in the flank and a pink tinge to the urine are expected. Plenty of fluids help the fragments to pass.'
+          },
+          {
+            period: 'Days 2–7',
+            body: 'The fragments begin to pass; colicky pain can occur. Take the painkiller your doctor advises. Fever, shivering or inability to pass urine require prompt medical attention.'
+          },
+          {
+            period: 'Weeks 2–4',
+            body: 'Passage of the fragments is largely complete. Follow-up imaging is carried out during this period.'
+          },
+          {
+            period: 'Afterwards',
+            body: 'If fragments remain, a second session or an endoscopic method is planned. A preventive plan is applied according to the stone analysis.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price is set per session, and because more than one session may be needed the total cost varies. A firm quotation is given after the CT has been assessed.'
+        },
+        packageIncludes: [
+          'Urological assessment, CT scan and urine culture',
+          'The ESWL session and pain control',
+          'Day-case procedure and observation',
+          'Follow-up imaging',
+          'Analysis of a passed fragment (if one can be collected) and preventive advice',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and remote follow-up after you return home'
+        ],
+        faqs: [
+          {
+            q: 'Will the stone come out during the procedure?',
+            a: 'No. ESWL breaks the stone, it does not remove it. The fragments pass out on their own with the urine over the following days and weeks. For that reason we judge the result not on the day of treatment but on follow-up imaging at 2–4 weeks.'
+          },
+          {
+            q: 'Will one session be enough?',
+            a: 'It cannot be guaranteed. In some patients one session is enough; in others a second or even a third is needed. That is a known feature of the method and is not counted as a failure. Be wary of anyone guaranteeing a single session.'
+          },
+          {
+            q: 'Is my stone suitable for ESWL?',
+            a: 'Three measurements decide it: the density (hardness) of the stone on CT, its size and its distance from the skin. For hard, very large or deeply placed stones the chance that ESWL will work falls, and going straight to an endoscopic method saves you time.'
+          },
+          {
+            q: 'Is it painful?',
+            a: 'There is a tapping sensation where the waves pass. Most patients are comfortable with painkillers or light sedation; a general anaesthetic is usually not needed. The real discomfort is not during the procedure but in the days afterwards, as the fragments pass.'
+          },
+          {
+            q: 'What is steinstrasse?',
+            a: 'It is when the fragments line up in the ureter and cause an obstruction; the name means "stone street". It causes pain and blocks the flow of urine. It often clears on its own, but sometimes a JJ stent or an endoscopic procedure is needed.'
+          },
+          {
+            q: 'Why is a urine culture requested before the procedure?',
+            a: 'Because breaking a stone while an untreated infection is present can allow bacteria to enter the bloodstream. That is a serious situation and it is preventable. Taking a culture and, where needed, treating the infection first is therefore a step that cannot be skipped.'
+          },
+          {
+            q: 'I take blood thinners — can I have it?',
+            a: 'Because ESWL carries a bleeding risk, blood-thinning medication must be assessed beforehand. If the drug cannot be stopped, ESWL may not be suitable, and RIRS then comes into consideration as a safer option.'
+          },
+          {
+            q: 'When can I fly?',
+            a: 'Usually after 1–2 days. Bear in mind, though, that colicky pain can occur as the fragments pass, which may be unpleasant on a long flight. A stay of 3–5 days is planned for patients travelling from abroad.'
+          },
+          {
+            q: 'Will my stone come back?',
+            a: 'Stone disease can recur if no preventive measures are taken. If you can collect a passed fragment, keep it; its chemical analysis forms the basis of the plan to prevent recurrence.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Urolithiasis — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/urolithiasis'
+          }
+        ]
+      },
+      de: {
+        title: 'ESWL: Stoßwellenlithotripsie von außen',
+        summary: 'Der Stein wird mit von außen gesendeten Schallwellen zertrümmert, ohne dass etwas in den Körper eingeführt wird. Das Verfahren ist nicht eingreifend, passt aber nicht zu jedem Stein, und ein Ergebnis in einer Sitzung lässt sich nicht zusagen.',
+        metaTitle: 'Was ist ESWL? Nierensteine ohne Operation zertrümmern',
+        metaDescription: 'Wie die ESWL abläuft, bei welchen Steinen sie wirkt, wie viele Sitzungen nötig sein können, die Risiken einschließlich Steinstraße und der Vergleich mit der RIRS.',
+        quickFacts: { duration: '30–60 Minuten', anesthesia: 'Schmerzmittel oder leichte Sedierung', hospitalStay: 'Keiner — ambulant', stayInTurkey: '3–5 Tage (für eine Sitzung)', returnToWork: '1–2 Tage', flightClearance: '1–2 Tage' },
+        definition: [
+          'Bei der ESWL (extrakorporale Stoßwellenlithotripsie) werden Schallwellen von einem auf der Haut aufliegenden Kopf ausgesandt und auf den Stein fokussiert, um ihn in kleine Stücke zu zerlegen. Es wird kein Instrument in den Körper eingeführt und nicht geschnitten. Der Patient geht meist wenige Stunden nach dem Eingriff nach Hause.',
+          'WICHTIG: DER STEIN GEHT NICHT WÄHREND DES EINGRIFFS AB. Die ESWL zertrümmert ihn; die Bruchstücke gehen in den folgenden Tagen und Wochen von selbst mit dem Urin ab. Dabei können kolikartige Schmerzen auftreten. Ob der Stein weg ist, zeigt daher nicht der Behandlungstag, sondern die Kontrollbildgebung.',
+          'ES PASST NICHT ZU JEDEM STEIN, UND DAS IST KEINE NEBENSACHE, SONDERN DAS ENTSCHEIDENDE. Drei Dinge bestimmen den Erfolg: Härte, Größe und Hautabstand des Steins. Ist die im CT gemessene Dichte (Hounsfield-Wert) hoch, ist der Stein hart und mit Schallwellen schwerer zu zertrümmern. Bei schwereren Patienten wächst der Abstand zwischen Haut und Stein, und die ankommende Energie nimmt ab. Auch Steine im unteren Nierenkelch sind schwer zu klären, weil die Schwerkraft dem Abgang entgegenwirkt.',
+          'MEHRERE SITZUNGEN KÖNNEN NÖTIG SEIN. Bleibt eine Sitzung ohne vollständigen Erfolg, wird der Eingriff wiederholt, meist nach einigen Wochen Abstand. Das ist kein Misserfolg, sondern eine bekannte Eigenschaft des Verfahrens. Seien Sie vorsichtig, wenn Ihnen gesagt wird, es sei mit einer Sitzung erledigt.',
+          'Eine Urinkultur vor dem Eingriff ist zwingend. Einen Stein bei unbehandeltem Infekt zu zertrümmern, kann Bakterien in die Blutbahn gelangen lassen. Auch die Einnahme von Blutverdünnern muss vorher geregelt werden, denn die ESWL birgt ein Blutungsrisiko.'
+        ],
+        eligibility: {
+          suitable: ['Patienten mit kleinem bis mittelgroßem Stein in Niere oder oberem Harnleiter', 'Patienten mit im CT niedrig dichtem, also weicherem Stein', 'Nicht stark übergewichtige Patienten mit günstigem Haut-Stein-Abstand', 'Patienten, die keine Narkose wünschen oder bei denen sie riskant wäre', 'Patienten, deren Nierenanatomie den Abgang der Fragmente zulässt', 'Kinder — in ausgewählten Fällen eines der bevorzugten Verfahren'],
+          notSuitable: ['Schwangere — wird keinesfalls durchgeführt', 'Patienten mit unbehandeltem Harnwegsinfekt — zuerst wird der Infekt behandelt', 'Patienten mit Gerinnungsstörung oder nicht absetzbaren Blutverdünnern', 'Patienten mit einer Enge unterhalb des Steins, die den Harnabfluss behindert — die Fragmente können nicht abgehen', 'Patienten mit sehr hartem (hochdichtem) oder sehr großem Stein', 'Patienten mit nicht eingestelltem Bluthochdruck', 'Patienten, bei denen die Wellen wegen des Hautabstands den Stein nicht ausreichend erreichen'],
+        },
+        technology: ['Lithotripter — fokussierter Stoßwellengenerator', 'Zielen auf den Stein mit Durchleuchtung und/oder Ultraschall', 'Messung von Steindichte (Hounsfield) und Haut-Stein-Abstand im Nativ-CT', 'Bestätigung der Steinfreiheit durch Kontrollbildgebung', 'Steinanalyse und Abklärung zur Vorbeugung eines Rückfalls'],
+        surgeonExperience: { caseVolume: '', note: 'Alle Stufen der Nierensteinbehandlung gehören zum Tätigkeitsbereich von Doz. Dr. Müslüm Ergün. Die Entscheidung zur ESWL fällt unter gemeinsamer Abwägung von Dichte, Größe, Lage und Hautabstand des Steins — an einem ungeeigneten Stein festzuhalten kostet den Patienten Zeit.' },
+        timeline: [
+          { when: 'Schritt 1', title: 'Prüfung der Eignung', body: 'Das Nativ-CT misst Größe, Dichte und Hautabstand des Steins. Diese drei Werte zeigen weitgehend, ob die ESWL wirken wird.' },
+          { when: 'Schritt 2', title: 'Infektscreening', body: 'Eine Urinkultur wird abgenommen. Bei einem Infekt wird der Eingriff verschoben und zuerst behandelt; dieser Schritt ist nicht verzichtbar.' },
+          { when: 'Tag des Eingriffs', title: 'Abgabe der Stoßwellen', body: 'Der Patient liegt auf dem Tisch, der Stein wird bildgebend angepeilt und fokussierte Wellen werden abgegeben. Der Eingriff dauert 30–60 Minuten; Schmerzmittel oder leichte Sedierung genügen.' },
+          { when: 'Erste Tage', title: 'Abgang der Fragmente', body: 'Die Bruchstücke beginnen mit dem Urin abzugehen. Dabei können kolikartige Schmerzen und Blut im Urin auftreten; reichliches Trinken wird empfohlen.' },
+          { when: 'Woche 2–4', title: 'Kontrollbildgebung', body: 'Die Steinfreiheit wird bildgebend beurteilt. Sind Fragmente geblieben, werden eine zweite Sitzung oder ein anderes Verfahren geplant.' },
+          { when: 'Danach', title: 'Vorbeugeplan', body: 'Lässt sich ein abgegangenes Fragment auffangen, wird es chemisch analysiert und ein Trink- und Ernährungsplan zur Vorbeugung erstellt.' }
+        ],
+        risks: ['KEIN VOLLSTÄNDIGER ERFOLG IN EINER SITZUNG: der häufigste Verlauf. Mehrere Sitzungen können nötig sein; das ist keine Komplikation, sondern eine bekannte Eigenschaft des Verfahrens', 'Starke kolikartige Schmerzen beim Abgang der Fragmente', 'STEINSTRASSE: Die Fragmente reihen sich im Harnleiter auf und verursachen eine Blockade; ein weiterer Eingriff kann nötig werden', 'Blut im Urin — für einige Tage nach dem Eingriff zu erwarten', 'Blutung oder Hämatom um die Niere — selten', 'Infektion und Blutvergiftung — deshalb ist die Urinkultur vorher zwingend', 'Unvollständiger Abgang der Fragmente mit verbliebenem Steinmaterial', 'Erneute Steinbildung — ohne vorbeugende Maßnahmen'],
+        alternatives: ['Beobachtung und Versuch des medikamentösen Steinabgangs — bei kleinen, abgewanderten Steinen', 'RIRS (Laserzertrümmerung mit flexiblem Endoskop) — bei harten Steinen und Steinen im unteren Kelch vorhersehbarer', 'PCNL — bei großen und Ausgusssteinen', 'Ureteroskopie — bei Steinen im Harnleiter', 'Bei sehr hoher Steindichte direkt ein endoskopisches Verfahren — um eine aussichtslose ESWL-Sitzung zu vermeiden'],
+        comparison: {
+          title: 'ESWL im Vergleich zur RIRS',
+          columns: ['Kriterium', 'ESWL', 'RIRS'],
+          rows: [
+            { label: 'Eindringen in den Körper', values: ['Keines — vollständig von außen', 'Über die Harnwege, kein Schnitt'] },
+            { label: 'Narkose', values: ['Schmerzmittel oder leichte Sedierung', 'Vollnarkose'] },
+            { label: 'Einfluss der Steinhärte', values: ['Entscheidend — bei harten Steinen sinkt der Erfolg', 'Weniger von der Härte abhängig'] },
+            { label: 'Wann das Ergebnis sichtbar wird', values: ['Über Wochen, während die Fragmente abgehen', 'Während des Eingriffs'] },
+            { label: 'Zahl der Sitzungen', values: ['Kann mehr als eine sein', 'Meist eine Sitzung'] },
+            { label: 'DJ-Schiene', values: ['Meist nicht nötig', 'Wird meist eingelegt'] },
+            { label: 'Rückkehr zur Arbeit', values: ['1–2 Tage', '3–7 Tage'] }
+          ],
+          note: 'Die ESWL ist weniger eingreifend, ihr Ergebnis aber weniger vorhersehbar. Beim geeigneten Stein eine ausgezeichnete Option, beim ungeeigneten Zeitverlust. Entschieden wird anhand von Dichte und Abstand im CT.'
+        },
+        recovery: [
+          { period: 'Erste 24 Stunden', body: 'Empfindlichkeit in der Flanke und rosa verfärbter Urin sind zu erwarten. Reichliches Trinken hilft beim Abgang der Fragmente.' },
+          { period: 'Tag 2–7', body: 'Die Fragmente beginnen abzugehen; kolikartige Schmerzen sind möglich. Nehmen Sie das verordnete Schmerzmittel. Fieber, Schüttelfrost oder Unvermögen zu urinieren erfordern unverzüglich ärztliche Hilfe.' },
+          { period: 'Woche 2–4', body: 'Der Abgang ist weitgehend abgeschlossen. In dieser Zeit erfolgt die Kontrollbildgebung.' },
+          { period: 'Danach', body: 'Sind Fragmente geblieben, werden eine zweite Sitzung oder ein endoskopisches Verfahren geplant. Nach der Steinanalyse wird der Vorbeugeplan umgesetzt.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Der Preis gilt je Sitzung; da mehrere Sitzungen nötig sein können, sind die Gesamtkosten veränderlich. Ein verbindliches Angebot erfolgt nach Beurteilung des CT.' },
+        packageIncludes: ['Urologische Abklärung, CT und Urinkultur', 'ESWL-Sitzung und Schmerzkontrolle', 'Ambulanter Eingriff und Überwachung', 'Kontrollbildgebung', 'Analyse eines abgegangenen Fragments (falls auffangbar) und Empfehlungen zur Vorbeugung', 'Transfers Flughafen–Krankenhaus–Hotel', 'Unterkunft (Patient + 1 Begleitperson)', 'Medizinischer Dolmetscher und Fernbetreuung nach Ihrer Rückkehr'],
+        faqs: [
+          { q: 'Geht der Stein während des Eingriffs ab?', a: 'Nein. Die ESWL zertrümmert den Stein, sie entfernt ihn nicht. Die Fragmente gehen in den folgenden Tagen und Wochen von selbst mit dem Urin ab. Deshalb beurteilen wir das Ergebnis nicht am Behandlungstag, sondern an der Kontrollbildgebung nach 2–4 Wochen.' },
+          { q: 'Reicht eine Sitzung?', a: 'Das lässt sich nicht zusagen. Bei einem Teil der Patienten genügt eine Sitzung, bei anderen sind eine zweite oder gar dritte nötig. Das ist eine bekannte Eigenschaft des Verfahrens und gilt nicht als Misserfolg. Seien Sie vorsichtig, wenn Ihnen eine einzige Sitzung garantiert wird.' },
+          { q: 'Ist mein Stein für die ESWL geeignet?', a: 'Das bestimmen drei Messwerte: die Dichte (Härte) des Steins im CT, seine Größe und sein Abstand zur Haut. Bei harten, sehr großen oder tief gelegenen Steinen sinkt die Aussicht auf Erfolg; dann spart der direkte Weg zu einem endoskopischen Verfahren Zeit.' },
+          { q: 'Ist es schmerzhaft?', a: 'An der Durchtrittsstelle spürt man ein Klopfen. Die meisten Patienten kommen mit Schmerzmitteln oder leichter Sedierung gut zurecht; eine Vollnarkose ist meist nicht nötig. Unangenehm ist weniger der Eingriff als der Abgang der Fragmente in den Tagen danach.' },
+          { q: 'Was ist eine Steinstraße?', a: 'Dabei reihen sich die Fragmente im Harnleiter auf und verursachen eine Blockade. Sie führt zu Schmerzen und behindert den Harnabfluss. Oft löst sie sich von selbst, manchmal sind eine DJ-Schiene oder ein endoskopischer Eingriff nötig.' },
+          { q: 'Warum wird vorher eine Urinkultur verlangt?', a: 'Weil das Zertrümmern eines Steins bei unbehandeltem Infekt Bakterien in die Blutbahn gelangen lassen kann. Das ist ein ernstes Zustandsbild und vermeidbar. Die Kultur und gegebenenfalls die vorherige Behandlung sind deshalb nicht verzichtbar.' },
+          { q: 'Ich nehme Blutverdünner — geht das?', a: 'Da die ESWL ein Blutungsrisiko birgt, müssen Blutverdünner vorab beurteilt werden. Lässt sich das Medikament nicht absetzen, ist die ESWL möglicherweise ungeeignet; dann kommt die RIRS als sicherere Option infrage.' },
+          { q: 'Wann darf ich fliegen?', a: 'Meist nach 1–2 Tagen. Bedenken Sie aber, dass beim Abgang der Fragmente Koliken auftreten können, was auf einem langen Flug unangenehm ist. Für Patienten aus dem Ausland wird ein Aufenthalt von 3–5 Tagen geplant.' },
+          { q: 'Kann mein Stein wiederkommen?', a: 'Ohne vorbeugende Maßnahmen kann das Steinleiden wiederkehren. Können Sie ein abgegangenes Fragment auffangen, heben Sie es auf; seine chemische Analyse ist die Grundlage des Vorbeugeplans.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urolithiasis — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/urolithiasis' }
+        ]
+      },
+      fr: {
+        title: 'LEOC : lithotritie extracorporelle par ondes de choc',
+        summary: 'Le calcul est fragmenté par des ondes sonores envoyées de l’extérieur, sans que rien ne pénètre dans le corps. La méthode n’est pas invasive, mais elle ne convient pas à tous les calculs et un résultat en une séance ne peut être garanti.',
+        metaTitle: 'Qu’est-ce que la LEOC ? Fragmenter un calcul rénal sans chirurgie',
+        metaDescription: 'Comment se déroule la LEOC, sur quels calculs elle agit, combien de séances peuvent être nécessaires, les risques dont la « rue de calculs », et la comparaison avec la RIRS.',
+        quickFacts: { duration: '30–60 minutes', anesthesia: 'Antalgiques ou sédation légère', hospitalStay: 'Aucune — ambulatoire', stayInTurkey: '3–5 jours (pour une séance)', returnToWork: '1–2 jours', flightClearance: '1–2 jours' },
+        definition: [
+          'La LEOC (lithotritie extracorporelle par ondes de choc) utilise des ondes sonores émises par une tête au contact de la peau et focalisées sur le calcul afin de le fragmenter. Aucun instrument n’est introduit dans le corps et aucune incision n’est pratiquée. Le patient rentre généralement chez lui quelques heures après.',
+          'IMPORTANT : LE CALCUL NE SORT PAS PENDANT LE GESTE. La LEOC le fragmente ; les morceaux s’éliminent ensuite seuls dans les urines au cours des jours et des semaines suivants. Des douleurs de type colique peuvent survenir pendant cette élimination. Ce n’est donc pas le jour du traitement mais l’imagerie de contrôle qui permet de dire que le calcul est parti.',
+          'ELLE NE CONVIENT PAS À TOUS LES CALCULS, ET CE N’EST PAS UN DÉTAIL MAIS LE FACTEUR DÉCISIF. Trois éléments gouvernent le résultat : la dureté du calcul, sa taille et sa distance à la peau. Si la densité mesurée au scanner (valeur Hounsfield) est élevée, le calcul est dur et plus difficile à fragmenter. Chez les patients corpulents, la distance peau-calcul augmente et l’énergie reçue diminue. Les calculs du calice inférieur sont également difficiles à éliminer, la gravité s’opposant au passage des fragments.',
+          'PLUSIEURS SÉANCES PEUVENT ÊTRE NÉCESSAIRES. Lorsqu’une séance ne suffit pas, le geste est répété, généralement après quelques semaines. Ce n’est pas un échec mais une caractéristique connue de la méthode. Méfiez-vous de qui vous annonce que tout sera réglé en une séance.',
+          'Un ECBU avant le geste est impératif. Fragmenter un calcul en présence d’une infection non traitée peut faire passer des bactéries dans le sang. La gestion des anticoagulants doit aussi être organisée à l’avance, car la LEOC comporte un risque hémorragique.'
+        ],
+        eligibility: {
+          suitable: ['Patients porteurs d’un calcul de petite à moyenne taille du rein ou de l’uretère proximal', 'Patients dont le calcul est de faible densité au scanner, donc plus tendre', 'Patients sans surpoids important, chez qui la distance peau-calcul est favorable', 'Patients ne souhaitant pas d’anesthésie ou chez qui elle serait risquée', 'Patients dont l’anatomie rénale permet l’élimination des fragments', 'Enfants — dans des cas sélectionnés, l’une des méthodes privilégiées'],
+          notSuitable: ['Femmes enceintes — formellement contre-indiquée', 'Patients présentant une infection urinaire non traitée — elle est traitée d’abord', 'Patients présentant un trouble de la coagulation ou dont les anticoagulants ne peuvent être interrompus', 'Patients présentant un rétrécissement sous le calcul gênant l’écoulement — les fragments ne peuvent pas passer', 'Patients porteurs d’un calcul très dur (haute densité) ou très volumineux', 'Patients dont l’hypertension n’est pas équilibrée', 'Patients chez qui la distance à la peau empêche les ondes d’atteindre suffisamment le calcul'],
+        },
+        technology: ['Lithotriteur — générateur d’ondes de choc focalisées', 'Ciblage du calcul par radioscopie et/ou échographie', 'Mesure de la densité (Hounsfield) et de la distance peau-calcul au scanner sans injection', 'Confirmation de l’absence de calcul par imagerie de contrôle', 'Analyse du calcul et bilan de prévention des récidives'],
+        surgeonExperience: { caseVolume: '', note: 'Toutes les étapes du traitement des calculs rénaux relèvent du champ de pratique du Dr Müslüm Ergün, maître de conférences. La décision de LEOC repose sur la densité, la taille, la situation et la distance à la peau du calcul — s’obstiner sur un calcul inadapté fait perdre du temps au patient.' },
+        timeline: [
+          { when: 'Étape 1', title: 'Évaluation de l’éligibilité', body: 'Le scanner sans injection mesure la taille, la densité et la distance à la peau du calcul. Ces trois valeurs indiquent largement si la LEOC sera efficace.' },
+          { when: 'Étape 2', title: 'Dépistage d’une infection', body: 'Un ECBU est réalisé. En cas d’infection, le geste est reporté et l’infection traitée d’abord ; cette étape ne peut être omise.' },
+          { when: 'Jour du geste', title: 'Délivrance des ondes de choc', body: 'Le patient est installé sur la table, le calcul est ciblé par imagerie et les ondes focalisées sont délivrées. Le geste dure 30 à 60 minutes ; antalgiques ou sédation légère suffisent.' },
+          { when: 'Premiers jours', title: 'Élimination des fragments', body: 'Les morceaux commencent à s’éliminer dans les urines. Des coliques et du sang dans les urines sont possibles ; il est conseillé de boire abondamment.' },
+          { when: 'Semaines 2–4', title: 'Imagerie de contrôle', body: 'L’absence de calcul est évaluée par imagerie. S’il reste des fragments, une seconde séance ou une autre méthode est programmée.' },
+          { when: 'Ensuite', title: 'Plan de prévention', body: 'Si un fragment éliminé peut être recueilli, il est analysé chimiquement et un plan d’hydratation et d’alimentation est établi.' }
+        ],
+        risks: ['ABSENCE DE RÉSULTAT COMPLET EN UNE SÉANCE : l’éventualité la plus fréquente. Plusieurs séances peuvent être nécessaires ; ce n’est pas une complication mais une caractéristique connue', 'Coliques intenses lors du passage des fragments', 'RUE DE CALCULS (steinstrasse) : les fragments s’alignent dans l’uretère et provoquent une obstruction ; un geste complémentaire peut être nécessaire', 'Sang dans les urines — attendu quelques jours après', 'Saignement ou hématome périrénal — rare', 'Infection et septicémie — d’où l’ECBU obligatoire au préalable', 'Élimination incomplète des fragments avec persistance de matériel', 'Récidive du calcul — en l’absence de mesures préventives'],
+        alternatives: ['Surveillance et essai d’expulsion médicamenteuse — pour les petits calculs déjà descendus', 'RIRS (fragmentation laser par endoscope souple) — résultat plus prévisible pour les calculs durs et du calice inférieur', 'NLPC — pour les calculs volumineux et coralliformes', 'Urétéroscopie — pour les calculs de l’uretère', 'Passage direct à une méthode endoscopique si la densité est très élevée — pour éviter une séance de LEOC vouée à l’échec'],
+        comparison: {
+          title: 'LEOC comparée à la RIRS',
+          columns: ['Critère', 'LEOC', 'RIRS'],
+          rows: [
+            { label: 'Pénétration dans le corps', values: ['Aucune — entièrement de l’extérieur', 'Par les voies naturelles, sans incision'] },
+            { label: 'Anesthésie', values: ['Antalgiques ou sédation légère', 'Anesthésie générale'] },
+            { label: 'Influence de la dureté', values: ['Déterminante — le succès chute sur un calcul dur', 'Moins sensible à la dureté'] },
+            { label: 'Moment du résultat', values: ['Sur plusieurs semaines, à mesure de l’élimination', 'Pendant le geste'] },
+            { label: 'Nombre de séances', values: ['Possiblement plusieurs', 'Généralement une seule'] },
+            { label: 'Sonde JJ', values: ['Généralement inutile', 'Généralement posée'] },
+            { label: 'Reprise du travail', values: ['1–2 jours', '3–7 jours'] }
+          ],
+          note: 'La LEOC est moins invasive mais son résultat est moins prévisible. Excellente option pour un calcul adapté, perte de temps pour un calcul inadapté. La décision repose sur les mesures de densité et de distance au scanner.'
+        },
+        recovery: [
+          { period: 'Premières 24 heures', body: 'Sensibilité lombaire et urines rosées sont attendues. Boire abondamment aide à l’élimination des fragments.' },
+          { period: 'Jours 2–7', body: 'Les fragments commencent à s’éliminer ; des coliques sont possibles. Prenez l’antalgique prescrit. Fièvre, frissons ou impossibilité d’uriner imposent une consultation sans délai.' },
+          { period: 'Semaines 2–4', body: 'L’élimination est largement achevée. L’imagerie de contrôle est réalisée à cette période.' },
+          { period: 'Ensuite', body: 'S’il reste des fragments, une seconde séance ou une méthode endoscopique est programmée. Le plan préventif est appliqué selon l’analyse du calcul.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Le prix s’entend par séance et, plusieurs séances pouvant être nécessaires, le coût total est variable. Un devis ferme est remis après analyse du scanner.' },
+        packageIncludes: ['Évaluation urologique, scanner et ECBU', 'Séance de LEOC et contrôle de la douleur', 'Geste ambulatoire et surveillance', 'Imagerie de contrôle', 'Analyse d’un fragment éliminé (s’il peut être recueilli) et conseils de prévention', 'Transferts aéroport–hôpital–hôtel', 'Hébergement (patient + 1 accompagnant)', 'Interprète médical et suivi à distance après votre retour'],
+        faqs: [
+          { q: 'Le calcul va-t-il sortir pendant le geste ?', a: 'Non. La LEOC fragmente le calcul, elle ne le retire pas. Les morceaux s’éliminent seuls dans les urines au cours des jours et des semaines suivants. Nous jugeons donc le résultat non pas le jour du traitement mais sur l’imagerie de contrôle à 2–4 semaines.' },
+          { q: 'Une séance suffira-t-elle ?', a: 'Cela ne peut être garanti. Chez certains patients une séance suffit ; chez d’autres il en faut une deuxième, voire une troisième. C’est une caractéristique connue de la méthode et non un échec. Méfiez-vous de qui garantit une séance unique.' },
+          { q: 'Mon calcul se prête-t-il à la LEOC ?', a: 'Trois mesures en décident : la densité (dureté) au scanner, la taille et la distance à la peau. Pour les calculs durs, très volumineux ou profonds, la probabilité de succès diminue ; aller directement à une méthode endoscopique vous fait gagner du temps.' },
+          { q: 'Est-ce douloureux ?', a: 'On ressent des coups là où passent les ondes. La plupart des patients sont à l’aise avec des antalgiques ou une sédation légère ; l’anesthésie générale est rarement nécessaire. La gêne vient surtout des coliques des jours suivants, lors de l’élimination.' },
+          { q: 'Qu’est-ce que la « rue de calculs » ?', a: 'C’est l’alignement des fragments dans l’uretère provoquant une obstruction. Elle entraîne des douleurs et gêne l’écoulement des urines. Elle se résout souvent seule, mais une sonde JJ ou un geste endoscopique est parfois nécessaire.' },
+          { q: 'Pourquoi un ECBU avant le geste ?', a: 'Parce que fragmenter un calcul en présence d’une infection non traitée peut faire passer des bactéries dans le sang. C’est grave et évitable. Réaliser l’ECBU et, si besoin, traiter d’abord l’infection est donc une étape incontournable.' },
+          { q: 'Je prends des anticoagulants — est-ce possible ?', a: 'La LEOC comportant un risque hémorragique, le traitement anticoagulant doit être évalué au préalable. S’il ne peut être interrompu, la LEOC peut être inadaptée ; la RIRS s’envisage alors comme option plus sûre.' },
+          { q: 'Quand puis-je prendre l’avion ?', a: 'Généralement après 1 à 2 jours. Gardez toutefois à l’esprit que des coliques peuvent survenir lors de l’élimination des fragments, ce qui est pénible sur un vol long. Un séjour de 3 à 5 jours est prévu pour les patients venant de l’étranger.' },
+          { q: 'Mon calcul peut-il récidiver ?', a: 'La maladie lithiasique peut revenir sans mesures préventives. Si vous pouvez recueillir un fragment éliminé, conservez-le : son analyse chimique fonde le plan de prévention.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urolithiasis — Association européenne d’urologie', url: 'https://uroweb.org/guidelines/urolithiasis' }
+        ]
+      },
+      ru: {
+        title: 'ДЛТ: дистанционная ударно-волновая литотрипсия',
+        summary: 'Камень дробят звуковыми волнами, посылаемыми снаружи, ничего не вводя в тело. Метод нетравматичный, но подходит не каждому камню, и результат за один сеанс гарантировать нельзя.',
+        metaTitle: 'Что такое ДЛТ? Дробление камней почки без операции',
+        metaDescription: 'Как проводится дистанционная литотрипсия, при каких камнях она работает, сколько сеансов может понадобиться, риски, включая «каменную дорожку», и сравнение с RIRS.',
+        quickFacts: { duration: '30–60 минут', anesthesia: 'Обезболивающие или лёгкая седация', hospitalStay: 'Нет — амбулаторно', stayInTurkey: '3–5 дней (на один сеанс)', returnToWork: '1–2 дня', flightClearance: '1–2 дня' },
+        definition: [
+          'Дистанционная ударно-волновая литотрипсия — это дробление камня звуковыми волнами, которые посылает головка, прилегающая к коже, и которые фокусируются на камне. В тело не вводят никаких инструментов и не делают разрезов. Пациент обычно уходит домой через несколько часов.',
+          'ВАЖНО: КАМЕНЬ НЕ ВЫХОДИТ ВО ВРЕМЯ ПРОЦЕДУРЫ. Литотрипсия дробит его; осколки сами выходят с мочой в последующие дни и недели. При их отхождении возможна боль по типу колики. Поэтому сказать «камня больше нет» позволяет не день лечения, а контрольная визуализация.',
+          'МЕТОД ПОДХОДИТ НЕ КАЖДОМУ КАМНЮ, И ЭТО НЕ ДЕТАЛЬ, А ГЛАВНОЕ. Успех определяют три вещи: твёрдость камня, его размер и расстояние до кожи. Если плотность по компьютерной томографии (значение Хаунсфилда) высокая, камень твёрдый и хуже поддаётся дроблению. У пациентов с большим весом расстояние от кожи до камня увеличивается, и доходящая энергия падает. Камни нижней чашечки тоже трудно вывести, поскольку сила тяжести мешает отхождению осколков.',
+          'МОЖЕТ ПОНАДОБИТЬСЯ НЕСКОЛЬКО СЕАНСОВ. Если за один сеанс камень не удалось убрать полностью, процедуру повторяют, обычно через несколько недель. Это не неудача, а известная особенность метода. С осторожностью относитесь к тем, кто обещает всё закончить за один сеанс.',
+          'Посев мочи до процедуры обязателен. Дробление камня при нелеченой инфекции может привести к попаданию бактерий в кровь. Приём разжижающих кровь препаратов тоже нужно урегулировать заранее, поскольку литотрипсия несёт риск кровотечения.'
+        ],
+        eligibility: {
+          suitable: ['Пациенты с камнем малого или среднего размера в почке либо верхнем отделе мочеточника', 'Пациенты, у которых камень низкой плотности по томографии, то есть более мягкий', 'Пациенты без выраженного избытка веса, у которых расстояние от кожи до камня благоприятное', 'Пациенты, не желающие анестезии или для которых она рискованна', 'Пациенты, анатомия почки которых позволяет осколкам выйти', 'Дети — в отобранных случаях один из предпочтительных методов'],
+          notSuitable: ['Беременные — категорически не проводится', 'Пациенты с нелеченой инфекцией мочевых путей — сначала лечат инфекцию', 'Пациенты с нарушением свёртывания крови или те, у кого нельзя отменить разжижающие препараты', 'Пациенты с сужением ниже камня, мешающим оттоку мочи, — осколки не смогут выйти', 'Пациенты с очень твёрдым (высокой плотности) или очень крупным камнем', 'Пациенты с неконтролируемым повышенным давлением', 'Пациенты, у которых из-за расстояния до кожи волны не достигают камня в достаточной мере'],
+        },
+        technology: ['Литотриптор — генератор сфокусированных ударных волн', 'Наведение на камень с помощью рентгеноскопии и (или) ультразвука', 'Измерение плотности камня (по Хаунсфилду) и расстояния от кожи по томографии без контраста', 'Подтверждение отсутствия камней контрольной визуализацией', 'Анализ камня и обследование для предотвращения рецидива'],
+        surgeonExperience: { caseVolume: '', note: 'Все этапы лечения камней почки входят в практику доц. д-ра Мюслюма Эргюна. Решение о литотрипсии принимают при совместной оценке плотности, размера, расположения камня и расстояния до кожи — настаивать на методе при неподходящем камне значит терять время пациента.' },
+        timeline: [
+          { when: 'Шаг 1', title: 'Оценка пригодности', body: 'Томография без контраста измеряет размер, плотность и расстояние камня до кожи. Эти три значения во многом показывают, сработает ли метод.' },
+          { when: 'Шаг 2', title: 'Проверка на инфекцию', body: 'Берут посев мочи. При инфекции процедуру откладывают и сначала лечат; этот шаг пропускать нельзя.' },
+          { when: 'День процедуры', title: 'Подача ударных волн', body: 'Пациента укладывают на стол, камень наводят по изображению и подают сфокусированные волны. Процедура занимает 30–60 минут; достаточно обезболивающих или лёгкой седации.' },
+          { when: 'Первые дни', title: 'Отхождение осколков', body: 'Осколки начинают выходить с мочой. В это время возможны боль по типу колики и кровь в моче; рекомендуется обильное питьё.' },
+          { when: '2–4-я неделя', title: 'Контрольная визуализация', body: 'Отсутствие камней оценивают по снимкам. Если осколки остались, планируют второй сеанс или другой метод.' },
+          { when: 'Далее', title: 'План профилактики', body: 'Если вышедший осколок удалось собрать, его анализируют химически и составляют план питья и питания для профилактики.' }
+        ],
+        risks: ['ОТСУТСТВИЕ ПОЛНОГО РЕЗУЛЬТАТА ЗА ОДИН СЕАНС: самое частое развитие событий. Может понадобиться несколько сеансов; это не осложнение, а известная особенность метода', 'Сильная боль по типу колики при отхождении осколков', '«КАМЕННАЯ ДОРОЖКА»: осколки выстраиваются в мочеточнике и вызывают закупорку; может потребоваться дополнительное вмешательство', 'Кровь в моче — ожидаема в течение нескольких дней после процедуры', 'Кровотечение или гематома вокруг почки — редко', 'Инфекция и заражение крови — поэтому посев мочи заранее обязателен', 'Неполное отхождение осколков с остатком камня', 'Повторное образование камня — без профилактических мер'],
+        alternatives: ['Наблюдение и попытка медикаментозного изгнания — при небольших спустившихся камнях', 'RIRS (дробление лазером гибким эндоскопом) — даёт более предсказуемый результат при твёрдых камнях и камнях нижней чашечки', 'Чрескожная нефролитотомия — при крупных и коралловидных камнях', 'Уретероскопия — при камнях мочеточника', 'Прямой переход к эндоскопическому методу при очень высокой плотности камня — чтобы не тратить сеанс впустую'],
+        comparison: {
+          title: 'Сравнение дистанционной литотрипсии и RIRS',
+          columns: ['Критерий', 'Дистанционная литотрипсия', 'RIRS'],
+          rows: [
+            { label: 'Проникновение в тело', values: ['Нет — полностью снаружи', 'Через мочевыводящие пути, без разреза'] },
+            { label: 'Анестезия', values: ['Обезболивающие или лёгкая седация', 'Общая анестезия'] },
+            { label: 'Влияние твёрдости камня', values: ['Решающее — при твёрдом камне успех падает', 'Меньше зависит от твёрдости'] },
+            { label: 'Когда виден результат', values: ['В течение недель, по мере отхождения', 'Во время процедуры'] },
+            { label: 'Число сеансов', values: ['Может быть больше одного', 'Обычно один'] },
+            { label: 'Мочеточниковый стент', values: ['Обычно не нужен', 'Обычно устанавливается'] },
+            { label: 'Возвращение к работе', values: ['1–2 дня', '3–7 дней'] }
+          ],
+          note: 'Литотрипсия менее травматична, но её результат менее предсказуем. При подходящем камне это отличный вариант, при неподходящем — потеря времени. Решение принимают по измерениям плотности и расстояния на томографии.'
+        },
+        recovery: [
+          { period: 'Первые 24 часа', body: 'Ожидаемы чувствительность в пояснице и розоватая моча. Обильное питьё помогает отхождению осколков.' },
+          { period: '2–7-й день', body: 'Осколки начинают отходить; возможна боль по типу колики. Принимайте назначенное обезболивающее. При лихорадке, ознобе или невозможности помочиться нужно обратиться к врачу без промедления.' },
+          { period: '2–4-я неделя', body: 'Отхождение в основном завершается. В этот период проводят контрольную визуализацию.' },
+          { period: 'Далее', body: 'Если осколки остались, планируют второй сеанс или эндоскопический метод. По анализу камня применяют профилактический план.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Стоимость указывается за сеанс, и, поскольку сеансов может понадобиться несколько, итоговая сумма переменна. Точное предложение даётся после оценки томографии.' },
+        packageIncludes: ['Урологическое обследование, томография и посев мочи', 'Сеанс литотрипсии и контроль боли', 'Амбулаторная процедура и наблюдение', 'Контрольная визуализация', 'Анализ вышедшего осколка (если его удастся собрать) и профилактические рекомендации', 'Трансферы аэропорт–больница–отель', 'Проживание (пациент + 1 сопровождающий)', 'Медицинский переводчик и дистанционное наблюдение после возвращения домой'],
+        faqs: [
+          { q: 'Выйдет ли камень во время процедуры?', a: 'Нет. Литотрипсия дробит камень, но не удаляет его. Осколки сами выходят с мочой в последующие дни и недели. Поэтому результат мы оцениваем не в день лечения, а по контрольной визуализации через 2–4 недели.' },
+          { q: 'Хватит ли одного сеанса?', a: 'Гарантировать нельзя. У части пациентов одного сеанса достаточно, у других нужен второй, а иногда и третий. Это известная особенность метода, а не неудача. С осторожностью относитесь к обещаниям одного сеанса.' },
+          { q: 'Подходит ли мой камень для литотрипсии?', a: 'Это определяют три измерения: плотность (твёрдость) камня по томографии, его размер и расстояние до кожи. При твёрдых, очень крупных или глубоко расположенных камнях вероятность успеха снижается, и прямой переход к эндоскопическому методу сэкономит вам время.' },
+          { q: 'Это больно?', a: 'В месте прохождения волн ощущаются удары. Большинству пациентов достаточно обезболивающих или лёгкой седации; общая анестезия обычно не нужна. Основной дискомфорт связан не с самой процедурой, а с коликами в последующие дни при отхождении осколков.' },
+          { q: 'Что такое «каменная дорожка»?', a: 'Это выстраивание осколков в мочеточнике с образованием закупорки. Она вызывает боль и мешает оттоку мочи. Чаще разрешается сама, но иногда нужны мочеточниковый стент или эндоскопическое вмешательство.' },
+          { q: 'Зачем перед процедурой нужен посев мочи?', a: 'Потому что дробление камня при нелеченой инфекции может привести к попаданию бактерий в кровь. Это серьёзно и предотвратимо. Поэтому посев и, при необходимости, предварительное лечение инфекции — шаг, который пропускать нельзя.' },
+          { q: 'Я принимаю разжижающие кровь препараты — можно ли мне?', a: 'Поскольку литотрипсия несёт риск кровотечения, приём таких препаратов нужно оценить заранее. Если отменить их нельзя, метод может не подойти; тогда как более безопасный вариант рассматривается RIRS.' },
+          { q: 'Когда можно лететь?', a: 'Обычно через 1–2 дня. Но учтите, что при отхождении осколков возможны колики, а это неприятно в длительном перелёте. Для пациентов из-за рубежа планируется пребывание 3–5 дней.' },
+          { q: 'Может ли камень образоваться снова?', a: 'Без профилактических мер мочекаменная болезнь может вернуться. Если сможете собрать вышедший осколок, сохраните его: его химический анализ ляжет в основу плана профилактики.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urolithiasis — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/urolithiasis' }
+        ]
+      },
+      ar: {
+        title: 'تفتيت الحصى بالموجات التصادمية من خارج الجسم',
+        summary: 'تُفتَّت الحصاة بموجات صوتية تُرسَل من الخارج من دون إدخال شيء إلى الجسم. والطريقة غير جراحية، لكنها لا تناسب كل حصاة ولا يمكن ضمان النتيجة في جلسة واحدة.',
+        metaTitle: 'ما هو تفتيت الحصى بالموجات التصادمية؟ من دون جراحة',
+        metaDescription: 'كيف يُجرى التفتيت بالموجات التصادمية، وفي أي الحصى ينفع، وكم جلسة قد تلزم، والمخاطر ومنها طريق الحصى، ومقارنته بعملية RIRS.',
+        quickFacts: { duration: '30–60 دقيقة', anesthesia: 'مسكنات أو تركين خفيف', hospitalStay: 'لا يوجد — في اليوم نفسه', stayInTurkey: '3–5 أيام (لجلسة واحدة)', returnToWork: '1–2 يوم', flightClearance: '1–2 يوم' },
+        definition: [
+          'تفتيت الحصى بالموجات التصادمية من خارج الجسم هو تفتيت الحصاة بموجات صوتية تُرسَل من رأس ملامس للجلد وتُركَّز على الحصاة. ولا يُدخَل أي جهاز إلى الجسم ولا يُجرى شقّ. ويعود المريض إلى بيته عادةً بعد ساعات قليلة.',
+          'مهم: لا تخرج الحصاة أثناء الإجراء. فالتفتيت يكسرها؛ والشظايا تنزل وحدها مع البول في الأيام والأسابيع التالية. وقد يحدث ألم مغصي أثناء نزولها. ولذلك فإن ما يثبت زوال الحصاة ليس يوم العلاج بل تصوير المتابعة.',
+          'لا تناسب الطريقة كل حصاة، وهذا ليس تفصيلًا بل هو الفيصل. فثلاثة أمور تحدد النجاح: صلابة الحصاة وحجمها وبُعدها عن الجلد. فإن كانت الكثافة المقاسة في التصوير المقطعي (قيمة هاونسفيلد) عالية كانت الحصاة صلبة ويصعب كسرها بالموجات. وعند زائدي الوزن تزداد المسافة بين الجلد والحصاة فتقلّ الطاقة الواصلة. كما يصعب إخراج حصى القطب السفلي لأن الجاذبية تعاكس نزول الشظايا.',
+          'قد تلزم أكثر من جلسة. فإن لم تكفِ جلسة واحدة يُعاد الإجراء، عادةً بعد بضعة أسابيع. وهذا ليس فشلًا بل خاصية معروفة للطريقة. فاحذر من يقول لك إن الأمر ينتهي بجلسة واحدة.',
+          'زراعة البول قبل الإجراء إلزامية. فتفتيت حصاة مع وجود التهاب غير معالَج قد يُدخل الجراثيم إلى الدم. كما يجب ترتيب مميّعات الدم مسبقًا لأن هذا الإجراء يحمل خطر نزف.'
+        ],
+        eligibility: {
+          suitable: ['من لديهم حصاة صغيرة إلى متوسطة في الكلية أو أعلى الحالب', 'من حصاتهم منخفضة الكثافة في التصوير، أي ألين', 'غير زائدي الوزن بشدة ممن تكون المسافة بين الجلد والحصاة مناسبة', 'من لا يرغبون في التخدير أو يكون خطرًا عليهم', 'من يسمح تشريح كليتهم بنزول الشظايا', 'الأطفال — وهي في حالات مختارة من الطرق المفضلة'],
+          notSuitable: ['الحوامل — لا تُجرى إطلاقًا', 'من لديهم التهاب غير معالَج في المسالك البولية — يُعالَج أولًا', 'من لديهم اضطراب تخثّر أو لا يمكن إيقاف مميّعات الدم لديهم', 'من لديهم تضيّق أسفل الحصاة يعيق جريان البول — فلن تنزل الشظايا', 'من حصاتهم شديدة الصلابة (عالية الكثافة) أو كبيرة جدًا', 'من ضغطهم الدموي غير مضبوط', 'من لا تصل الموجات إلى حصاتهم بما يكفي بسبب بُعدها عن الجلد'],
+        },
+        technology: ['جهاز التفتيت — مولّد موجات تصادمية مركّزة', 'تصويب الحصاة بالتنظير الشعاعي و/أو الموجات فوق الصوتية', 'قياس كثافة الحصاة (هاونسفيلد) والمسافة بين الجلد والحصاة بالتصوير المقطعي من دون صبغة', 'تأكيد خلو الكلية من الحصى بتصوير المتابعة', 'تحليل الحصاة والتقييم للوقاية من التكرار'],
+        surgeonExperience: { caseVolume: '', note: 'جميع مراحل علاج حصى الكلى ضمن مجال ممارسة الأستاذ المشارك الدكتور مسلم إرغون. ويُتخذ قرار التفتيت بتقييم كثافة الحصاة وحجمها وموضعها وبُعدها عن الجلد معًا — والإصرار على الطريقة في حصاة غير مناسبة يُضيّع وقت المريض.' },
+        timeline: [
+          { when: 'الخطوة 1', title: 'تقييم الملاءمة', body: 'يقيس التصوير المقطعي من دون صبغة حجم الحصاة وكثافتها وبُعدها عن الجلد. وهذه القيم الثلاث تبيّن إلى حد كبير ما إذا كان التفتيت سينفع.' },
+          { when: 'الخطوة 2', title: 'فحص الالتهاب', body: 'تُؤخذ زراعة بول. فإن وُجد التهاب أُجِّل الإجراء وعُولج أولًا؛ وهذه خطوة لا يجوز تخطّيها.' },
+          { when: 'يوم الإجراء', title: 'إرسال الموجات', body: 'يُمدَّد المريض على الطاولة وتُصوَّب الحصاة بالتصوير وتُرسَل الموجات المركّزة. ويستغرق الإجراء 30–60 دقيقة؛ وتكفي المسكنات أو التركين الخفيف.' },
+          { when: 'الأيام الأولى', title: 'نزول الشظايا', body: 'تبدأ الشظايا بالنزول مع البول. وقد يحدث ألم مغصي ودم في البول؛ ويُنصح بشرب السوائل بكثرة.' },
+          { when: 'الأسبوع 2–4', title: 'تصوير المتابعة', body: 'يُقيَّم خلو الكلية من الحصى بالتصوير. فإن بقيت شظايا خُطِّط لجلسة ثانية أو لطريقة أخرى.' },
+          { when: 'بعد ذلك', title: 'خطة الوقاية', body: 'إن أمكن جمع شظية نازلة حُلِّلت كيميائيًا ووُضعت خطة سوائل وتغذية للوقاية.' }
+        ],
+        risks: ['عدم تحقق النتيجة الكاملة في جلسة واحدة: وهو الأكثر حدوثًا. وقد تلزم أكثر من جلسة؛ وهذا ليس مضاعفة بل خاصية معروفة للطريقة', 'ألم مغصي شديد أثناء نزول الشظايا', 'طريق الحصى: اصطفاف الشظايا في الحالب وإحداث انسداد؛ وقد يستلزم إجراءً إضافيًا', 'دم في البول — متوقع أيامًا بعد الإجراء', 'نزف أو تجمّع دموي حول الكلية — نادر', 'العدوى وتسمّم الدم — ولهذا فإن زراعة البول قبل الإجراء إلزامية', 'عدم نزول الشظايا بالكامل وبقاء جزء من الحصاة', 'تكرار الحصاة — من دون تدابير وقائية'],
+        alternatives: ['المتابعة ومحاولة الإنزال بالأدوية — في الحصى الصغيرة التي نزلت بالفعل', 'عملية RIRS (التفتيت بالليزر بالمنظار المرن) — نتيجتها أكثر قابلية للتنبؤ في الحصى الصلبة وحصى القطب السفلي', 'التفتيت عبر الجلد — في الحصى الكبيرة والمرجانية', 'تنظير الحالب — في حصى الحالب', 'الانتقال مباشرةً إلى طريقة تنظيرية عند الكثافة العالية جدًا — لتفادي جلسة بلا طائل'],
+        comparison: {
+          title: 'مقارنة بين التفتيت بالموجات التصادمية وعملية RIRS',
+          columns: ['المعيار', 'الموجات التصادمية', 'RIRS'],
+          rows: [
+            { label: 'الدخول إلى الجسم', values: ['لا يوجد — من الخارج تمامًا', 'عبر المجرى البولي من دون شقّ'] },
+            { label: 'التخدير', values: ['مسكنات أو تركين خفيف', 'تخدير عام'] },
+            { label: 'أثر صلابة الحصاة', values: ['حاسم — ينخفض النجاح في الحصاة الصلبة', 'أقل تأثرًا بالصلابة'] },
+            { label: 'متى تظهر النتيجة', values: ['خلال أسابيع مع نزول الشظايا', 'أثناء الإجراء'] },
+            { label: 'عدد الجلسات', values: ['قد يزيد عن واحدة', 'جلسة واحدة عادةً'] },
+            { label: 'دعامة الحالب', values: ['لا تلزم عادةً', 'تُوضَع عادةً'] },
+            { label: 'العودة إلى العمل', values: ['1–2 يوم', '3–7 أيام'] }
+          ],
+          note: 'التفتيت بالموجات أقل تدخلًا لكن نتيجته أقل قابلية للتنبؤ. وهو خيار ممتاز في الحصاة المناسبة ومضيعة للوقت في غير المناسبة. ويُتخذ القرار بقياسي الكثافة والمسافة في التصوير المقطعي.'
+        },
+        recovery: [
+          { period: 'أول 24 ساعة', body: 'يُتوقع ألم خفيف في الخاصرة ولون وردي في البول. وشرب السوائل بكثرة يساعد على نزول الشظايا.' },
+          { period: 'اليوم 2–7', body: 'تبدأ الشظايا بالنزول؛ وقد يحدث ألم مغصي. استعمل المسكن الذي يصفه الطبيب. وعند الحمى أو القشعريرة أو العجز عن التبول تجب المراجعة من دون تأخير.' },
+          { period: 'الأسبوع 2–4', body: 'يكتمل نزول الشظايا إلى حد كبير. ويُجرى تصوير المتابعة في هذه المرحلة.' },
+          { period: 'بعد ذلك', body: 'إن بقيت شظايا خُطِّط لجلسة ثانية أو لطريقة تنظيرية. وتُطبَّق خطة الوقاية بحسب تحليل الحصاة.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'يُحدَّد السعر لكل جلسة، ولأن الجلسات قد تتعدد فالكلفة الإجمالية متغيرة. ويُقدَّم العرض النهائي بعد تقييم التصوير المقطعي.' },
+        packageIncludes: ['تقييم المسالك البولية والتصوير المقطعي وزراعة البول', 'جلسة التفتيت وضبط الألم', 'إجراء في اليوم نفسه مع فترة مراقبة', 'تصوير المتابعة', 'تحليل الشظية النازلة (إن أمكن جمعها) والنصائح الوقائية', 'التنقلات بين المطار والمستشفى والفندق', 'الإقامة (المريض + مرافق واحد)', 'مترجم طبي ومتابعة عن بُعد بعد عودتك إلى بلدك'],
+        faqs: [
+          { q: 'هل تخرج الحصاة أثناء الإجراء؟', a: 'لا. فالتفتيت يكسر الحصاة ولا يُخرجها. والشظايا تنزل وحدها مع البول في الأيام والأسابيع التالية. ولذلك نقيّم النتيجة لا في يوم العلاج بل بتصوير المتابعة بعد 2–4 أسابيع.' },
+          { q: 'هل تكفي جلسة واحدة؟', a: 'لا يمكن ضمان ذلك. فعند جزء من المرضى تكفي جلسة، وعند آخرين تلزم ثانية بل ثالثة. وهذه خاصية معروفة للطريقة ولا تُعدّ فشلًا. فاحذر من يضمن لك جلسة واحدة.' },
+          { q: 'هل تناسب حصاتي هذه الطريقة؟', a: 'تحدد ذلك ثلاثة قياسات: كثافة الحصاة (صلابتها) في التصوير وحجمها وبُعدها عن الجلد. ففي الحصى الصلبة أو الكبيرة جدًا أو العميقة ينخفض احتمال النجاح، والانتقال مباشرةً إلى طريقة تنظيرية يوفّر عليك الوقت.' },
+          { q: 'هل الإجراء مؤلم؟', a: 'يُحسّ بطَرْق في موضع مرور الموجات. ويرتاح معظم المرضى بالمسكنات أو التركين الخفيف؛ والتخدير العام غير لازم عادةً. أما الانزعاج الحقيقي فليس أثناء الإجراء بل في الأيام التالية مع نزول الشظايا.' },
+          { q: 'ما هو طريق الحصى؟', a: 'هو اصطفاف الشظايا في الحالب وإحداثها انسدادًا. ويسبب ألمًا ويعيق جريان البول. وغالبًا ينفرج وحده، لكن قد تلزم أحيانًا دعامة حالب أو تدخل تنظيري.' },
+          { q: 'لماذا تُطلَب زراعة البول قبل الإجراء؟', a: 'لأن تفتيت حصاة مع وجود التهاب غير معالَج قد يُدخل الجراثيم إلى الدم. وهذه حالة خطيرة ويمكن منعها. ولذلك فإن أخذ الزراعة وعلاج الالتهاب عند اللزوم خطوة لا يجوز تخطّيها.' },
+          { q: 'أتناول مميّعات الدم، فهل يمكنني إجراؤه؟', a: 'لأن الإجراء يحمل خطر نزف فيجب تقييم مميّعات الدم مسبقًا. فإن تعذّر إيقاف الدواء فقد لا يناسبك؛ وعندها تُطرح عملية RIRS كخيار أكثر أمانًا.' },
+          { q: 'متى يمكنني السفر جوًا؟', a: 'بعد 1–2 يوم عادةً. لكن ضع في حسبانك أن نزول الشظايا قد يسبب مغصًا، وهو مزعج في رحلة طويلة. ويُخطَّط للمرضى القادمين من الخارج بإقامة 3–5 أيام.' },
+          { q: 'هل تتكرر الحصاة؟', a: 'قد يعود داء الحصى من دون تدابير وقائية. فإن استطعت جمع شظية نازلة فاحتفظ بها؛ فتحليلها الكيميائي أساس خطة الوقاية.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urolithiasis — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/urolithiasis' }
+        ]
+      }
+    }
+  },
+  {
+    /**
      * Androloji hub'ının altında (prompt m.4.1).
      * ÜÇ KRİTİK DÜRÜSTLÜK NOKTASI:
      * 1. Mikro-TESE'de SPERM BULUNACAĞI GARANTİ EDİLEMEZ. Bu sayfanın en

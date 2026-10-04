@@ -24,6 +24,30 @@ export const treatmentSlugMap = {
     ru: 'roboticheskaya-prostatektomiya',
     ar: 'robotic-prostatectomy'
   },
+  eswl: {
+    tr: 'eswl-ses-dalgasiyla-tas-kirma',
+    en: 'eswl-shock-wave-lithotripsy',
+    de: 'eswl-stosswellenlithotripsie',
+    fr: 'leoc-lithotritie-ondes-de-choc',
+    ru: 'dlt-distancionnaya-litotripsiya',
+    ar: 'eswl-shock-wave-lithotripsy'
+  },
+  'testis-kanseri': {
+    tr: 'testis-kanseri',
+    en: 'testicular-cancer',
+    de: 'hodenkrebs',
+    fr: 'cancer-du-testicule',
+    ru: 'rak-yaichka',
+    ar: 'testicular-cancer'
+  },
+  'stres-inkontinans': {
+    tr: 'stres-inkontinans-idrar-kacirma',
+    en: 'stress-urinary-incontinence',
+    de: 'belastungsinkontinenz',
+    fr: 'incontinence-urinaire-effort',
+    ru: 'stressovoe-nederzhanie-mochi',
+    ar: 'stress-urinary-incontinence'
+  },
   'peyronie-hastaligi': {
     tr: 'peyronie-hastaligi',
     en: 'peyronies-disease',
