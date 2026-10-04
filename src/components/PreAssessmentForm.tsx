@@ -7,6 +7,7 @@ import { publishedTreatments } from '@/content/treatments';
 import { resolveContent } from '@/content/types';
 import type { Locale } from '@/i18n/routing';
 import { Icon } from './Icon';
+import { TurnstileWidget } from './TurnstileWidget';
 import { CountrySelect } from './CountrySelect';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
@@ -62,10 +63,26 @@ export function PreAssessmentForm({
           consent,
           locale,
           // Honeypot — gerçek kullanıcı boş bırakır; bot doldurursa sunucu reddeder.
-          company: String(fd.get('company') ?? '')
+          company: String(fd.get('company') ?? ''),
+          turnstileToken: String(fd.get('turnstileToken') ?? '')
         })
       });
-      if (!res.ok) throw new Error('request_failed');
+      if (!res.ok) {
+        // Sunucu telefonu geçersiz bulduysa genel hata yerine nedenini göster;
+        // hasta neyi düzelteceğini bilsin (libphonenumber doğrulaması).
+        let code = '';
+        try {
+          code = ((await res.json()) as { error?: string }).error ?? '';
+        } catch {
+          /* gövde okunamadıysa genel hataya düş */
+        }
+        if (code === 'invalid_phone') {
+          setStatus('idle');
+          setClientError(t('validationPhone'));
+          return;
+        }
+        throw new Error('request_failed');
+      }
       setStatus('success');
       form.reset();
     } catch {
@@ -151,6 +168,9 @@ export function PreAssessmentForm({
         <input type="checkbox" name="consent" className="mt-1 h-4 w-4 shrink-0 rounded border-border accent-[rgb(var(--c-primary))]" required />
         <span className="text-muted">{t('consent')} {req}</span>
       </label>
+
+      {/* Turnstile — anahtar yoksa hiç render edilmez (yer tutucu bırakmaz). */}
+      <TurnstileWidget locale={locale} />
 
       {clientError && (
         <p role="alert" className="flex items-center gap-2 text-sm text-danger">

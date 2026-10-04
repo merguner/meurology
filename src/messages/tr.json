@@ -249,7 +249,8 @@
     "errorBody": "Formunuzu şu anda gönderemedik. Lütfen tekrar deneyin veya WhatsApp'tan bize ulaşın.",
     "validationName": "Lütfen adınızı girin.",
     "validationContact": "Lütfen e-posta veya telefon bilgisi girin.",
-    "requiredMark": "zorunlu"
+    "requiredMark": "zorunlu",
+    "validationPhone": "Telefon numarası geçerli görünmüyor. Lütfen ülke kodunu da içerecek şekilde yazın (ör. +90 532 063 09 69) veya ülkenizi seçin."
   },
   "Legal": {
     "kvkkTitle": "KVKK / GDPR Aydınlatma Metni",

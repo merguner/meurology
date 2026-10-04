@@ -249,7 +249,8 @@
     "errorBody": "Wir konnten Ihr Formular gerade nicht senden. Bitte versuchen Sie es erneut oder erreichen Sie uns auf WhatsApp.",
     "validationName": "Bitte geben Sie Ihren Namen ein.",
     "validationContact": "Bitte geben Sie eine E-Mail oder Telefonnummer ein.",
-    "requiredMark": "erforderlich"
+    "requiredMark": "erforderlich",
+    "validationPhone": "Die Telefonnummer scheint nicht gültig zu sein. Bitte geben Sie sie mit Ländervorwahl an (z. B. +90 532 063 09 69) oder wählen Sie Ihr Land aus."
   },
   "Legal": {
     "kvkkTitle": "KVKK / DSGVO-Datenschutzerklärung",

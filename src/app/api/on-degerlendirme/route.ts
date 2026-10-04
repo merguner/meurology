@@ -4,6 +4,9 @@ import { siteConfig, whatsappLink } from '@/config/site';
 import { getTreatment } from '@/content/treatments';
 import { resolveContent } from '@/content/types';
 import type { Locale } from '@/i18n/routing';
+import { autoReplyCopy, isRtlLocale } from '@/content/autoReply';
+import { parsePhoneNumberFromString, type CountryCode } from 'libphonenumber-js';
+import { verifyTurnstile } from '@/config/turnstile';
 
 // nodemailer Node.js API'leri (net/tls) kullanır — Edge değil, Node runtime gerekir.
 export const runtime = 'nodejs';
@@ -37,6 +40,8 @@ export interface PreAssessmentPayload {
   message?: string;
   consent: boolean;
   locale?: string;
+  /** Turnstile jetonu — yalnızca Turnstile yapılandırılmışsa dolu gelir. */
+  turnstileToken?: string;
   /** Honeypot — botlar doldurur; gerçek kullanıcıya görünmez. Dolu ise reddedilir. */
   company?: string;
 }
@@ -115,12 +120,43 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
+  // Turnstile — yalnızca gizli anahtar tanımlıysa zorunludur, aksi halde
+  // atlanır (honeypot ve hız sınırı her durumda devrededir).
+  const turnstileOk = await verifyTurnstile(data.turnstileToken, ip);
+  if (!turnstileOk) {
+    console.warn('[on-degerlendirme] Turnstile doğrulaması başarısız — IP:', ip);
+    return NextResponse.json({ ok: false, error: 'captcha_failed' }, { status: 403 });
+  }
+
   // Sunucu tarafı doğrulama (istemci doğrulamasına ek güvenlik).
   if (!data.name || data.name.trim().length < 2) {
     return NextResponse.json({ ok: false, error: 'invalid_name' }, { status: 422 });
   }
   const hasEmail = Boolean(data.email && isValidEmail(data.email));
-  const hasPhone = Boolean(data.phone && data.phone.trim().length >= 6);
+
+  // Telefon: uluslararası biçim doğrulaması (prompt m.5.1 — libphonenumber).
+  // Hasta ülke seçtiyse o ülkeye göre, seçmediyse yalnızca +ülke kodlu biçim
+  // kabul edilir. Geçerliyse E.164'e normalleştirilir ki WhatsApp bağlantısı
+  // ve CRM kaydı tutarlı olsun.
+  let normalizedPhone = '';
+  if (data.phone && data.phone.trim()) {
+    const region =
+      data.country && /^[A-Za-z]{2}$/.test(data.country)
+        ? (data.country.toUpperCase() as CountryCode)
+        : undefined;
+    try {
+      const parsed = parsePhoneNumberFromString(data.phone.trim(), region);
+      if (!parsed || !parsed.isValid()) {
+        return NextResponse.json({ ok: false, error: 'invalid_phone' }, { status: 422 });
+      }
+      normalizedPhone = parsed.number; // E.164, ör. +905320630969
+    } catch {
+      return NextResponse.json({ ok: false, error: 'invalid_phone' }, { status: 422 });
+    }
+  }
+  const hasPhone = normalizedPhone !== '';
+  if (hasPhone) data.phone = normalizedPhone;
+
   if (!hasEmail && !hasPhone) {
     return NextResponse.json({ ok: false, error: 'missing_contact' }, { status: 422 });
   }
@@ -252,9 +288,90 @@ export async function POST(request: Request) {
       // "Yanıtla" doğrudan hastaya gitsin (e-posta verdiyse).
       ...(hasEmail ? { replyTo: data.email as string } : {})
     });
+    // ---- Hastaya otomatik yanıt (prompt m.5.1) --------------------------
+    // Bildirimden SONRA ve ayrı try/catch içinde: yanıt gönderilemese bile
+    // başvuru başarılı sayılır, çünkü klinik bildirimi zaten ulaştı.
+    if (hasEmail) {
+      try {
+        const c = autoReplyCopy(locale);
+        const rtl = isRtlLocale(locale);
+        const dirAttr = rtl ? 'rtl' : 'ltr';
+        const align = rtl ? 'right' : 'left';
+        await transporter.sendMail({
+          from: `"ME Urology Clinic" <${SMTP_USER}>`,
+          to: data.email as string,
+          subject: c.subject,
+          html: `
+<div dir="${dirAttr}" style="font-family:Arial,Helvetica,sans-serif;max-width:600px;margin:0 auto;color:#111;text-align:${align};">
+  <p style="margin:0 0 12px;">${esc(c.greeting(data.name as string))}</p>
+  <p style="margin:0 0 12px;">${esc(c.received)}</p>
+  <p style="margin:0 0 12px;"><strong>${esc(c.timing)}</strong></p>
+  <p style="margin:0 0 16px;">${esc(c.whatNext)}</p>
+  <div style="padding:12px;background:#fff4f4;border-radius:8px;color:#8a1c1c;font-size:14px;margin-bottom:16px;">${esc(
+    c.emergency
+  )}</div>
+  <p style="margin:0 0 16px;color:#555;font-size:13px;">${esc(c.disclaimer)}</p>
+  <p style="margin:0;font-weight:600;">${esc(c.signature)}</p>
+</div>`,
+          text: [
+            c.greeting(data.name as string),
+            '',
+            c.received,
+            '',
+            c.timing,
+            '',
+            c.whatNext,
+            '',
+            c.emergency,
+            '',
+            c.disclaimer,
+            '',
+            c.signature
+          ].join('\n')
+        });
+      } catch (err) {
+        console.error('[on-degerlendirme] Otomatik yanıt gönderilemedi (başvuru yine de geçerli):', err);
+      }
+    }
   } catch (err) {
     console.error('[on-degerlendirme] E-posta bildirimi gönderilemedi:', err);
     return NextResponse.json({ ok: false, error: 'delivery_failed' }, { status: 503 });
+  }
+
+  // ---- CRM kaydı (prompt m.5.1) -----------------------------------------
+  // CRM_WEBHOOK_URL tanımlıysa başvuru oraya da POST edilir (Google Sheets /
+  // Airtable / Zapier webhook'u fark etmez). Başarısız olursa başvuru yine
+  // geçerlidir; e-posta bildirimi birincil kanaldır.
+  const webhook = process.env.CRM_WEBHOOK_URL;
+  if (webhook) {
+    try {
+      const res = await fetch(webhook, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(process.env.CRM_WEBHOOK_TOKEN
+            ? { Authorization: `Bearer ${process.env.CRM_WEBHOOK_TOKEN}` }
+            : {})
+        },
+        body: JSON.stringify({
+          at,
+          name: data.name,
+          country: data.country ?? '',
+          email: data.email ?? '',
+          phone: data.phone ?? '',
+          treatment: data.treatment ?? '',
+          message: data.message ?? '',
+          locale: data.locale ?? 'tr',
+          consentTextVersion
+        }),
+        signal: AbortSignal.timeout(5000)
+      });
+      if (!res.ok) {
+        console.error('[on-degerlendirme] CRM webhook yanıtı başarısız:', res.status);
+      }
+    } catch (err) {
+      console.error('[on-degerlendirme] CRM webhook çağrılamadı (başvuru yine de geçerli):', err);
+    }
   }
 
   return NextResponse.json({ ok: true });

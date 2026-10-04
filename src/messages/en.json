@@ -249,7 +249,8 @@
     "errorBody": "We couldn't send your form right now. Please try again or reach us on WhatsApp.",
     "validationName": "Please enter your name.",
     "validationContact": "Please enter an email or phone number.",
-    "requiredMark": "required"
+    "requiredMark": "required",
+    "validationPhone": "That phone number does not look valid. Please include the country code (e.g. +90 532 063 09 69) or select your country."
   },
   "Legal": {
     "kvkkTitle": "KVKK / GDPR Privacy Notice",

@@ -249,7 +249,8 @@
     "errorBody": "Nous n'avons pas pu envoyer votre formulaire. Veuillez réessayer ou nous contacter sur WhatsApp.",
     "validationName": "Veuillez saisir votre nom.",
     "validationContact": "Veuillez saisir une adresse e-mail ou un numéro de téléphone.",
-    "requiredMark": "obligatoire"
+    "requiredMark": "obligatoire",
+    "validationPhone": "Ce numéro de téléphone ne semble pas valide. Merci d’indiquer l’indicatif du pays (ex. +90 532 063 09 69) ou de sélectionner votre pays."
   },
   "Legal": {
     "kvkkTitle": "Avis de confidentialité KVKK / RGPD",
