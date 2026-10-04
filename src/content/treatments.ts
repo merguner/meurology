@@ -2158,7 +2158,9 @@ export const treatments: Treatment[] = [
           'ÖNEMLİ: TAŞ İŞLEM SIRASINDA ÇIKMAZ. ESWL taşı kırar; kırılan parçalar sonraki günler ve haftalar içinde idrarla kendiliğinden düşer. Bu düşme sürecinde kolik tarzı ağrı olabilir. Yani "taşım gitti" demek için işlem günü değil, takip görüntülemesi beklenir.',
           'HER TAŞA UYGUN DEĞİLDİR VE BU BİR AYRINTI DEĞİL, TEMEL BELİRLEYİCİDİR. Başarıyı etkileyen üç şey vardır: taşın sertliği, boyutu ve cilde olan uzaklığı. Tomografide ölçülen yoğunluk (Hounsfield değeri) yüksekse taş serttir ve ses dalgasıyla kırılması zorlaşır. Kilolu hastalarda cilt ile taş arasındaki mesafe arttığı için dalganın enerjisi azalır. Ayrıca böbreğin alt kutbundaki taşlarda parçalar yerçekimi nedeniyle kolay atılamayabilir.',
           'BİRDEN FAZLA SEANS GEREKEBİLİR. Tek seansta tam sonuç alınamayan hastalarda işlem tekrarlanır; seanslar arasında genellikle birkaç hafta beklenir. Bu bir başarısızlık değil, yöntemin bilinen özelliğidir. Size "tek seansta biter" diyen bir yaklaşıma karşı dikkatli olun.',
-          'İşlem öncesinde idrar kültürü alınması zorunludur. Tedavi edilmemiş bir enfeksiyon varken taşın kırılması, bakterinin kana karışmasına yol açabilir. Ayrıca kan sulandırıcı kullanan hastalarda ilaç düzeni önceden ayarlanmalıdır; ESWL kanama riski taşır.'
+          'İşlem öncesinde idrar kültürü alınması zorunludur. Tedavi edilmemiş bir enfeksiyon varken taşın kırılması, bakterinin kana karışmasına yol açabilir. Ayrıca kan sulandırıcı kullanan hastalarda ilaç düzeni önceden ayarlanmalıdır; ESWL kanama riski taşır.',
+          'ESWL\'nin en belirgin üstünlüğü vücuda hiçbir alet girmemesidir; bu nedenle uygun taşlarda ilk akla gelen seçeneklerdendir. Buna karşılık uygunluk dar bir çerçeveye bağlıdır: taşın boyutu, böbrek içindeki yerleşimi ve tomografideki yoğunluğu birlikte değerlendirilir.',
+          'TAŞ KIRILDIKTAN SONRA İŞ BİTMEZ. Parçaların idrar yoluyla düşmesi gerekir ve bu süreç haftalar alabilir; bu sırada kolik tarzı ağrı olabilir. Parçaların üretere dizilerek tıkanıklık yapması bilinen bir durumdur. Bu nedenle işlem sonrası görüntüleme erken değil, parçaların düşmesine zaman tanınarak yapılır.'
         ],
         eligibility: {
           suitable: [
@@ -2326,7 +2328,13 @@ export const treatments: Treatment[] = [
           {
             q: 'Taşım tekrar eder mi?',
             a: 'Koruyucu önlem alınmazsa taş hastalığı tekrar edebilir. Düşen parçayı toplayabilirseniz saklayın; kimyasal analizi tekrarı önleyici planın temelini oluşturur.'
-          }
+          },
+          { q: 'Kaç seans gerekir?', a: 'Bu taşın boyutuna, yerleşimine ve tomografideki yoğunluğuna bağlıdır; birden fazla seans sık gerekir. Yurt dışından geliyorsanız bu bilgi kalış sürenizi doğrudan etkiler, bu yüzden tek seansın yeterli olup olmayacağını önceden sorun.' },
+          { q: 'İşlemden sonra hangi belirtilerde hemen başvurmalıyım?', a: 'Ateş ve titreme, hiç idrar çıkaramama, ilaçla geçmeyen ağrı ve durmayan kanama. Buna karşılık idrarda bir süre kan görülmesi ve parçalar düşerken kolik tarzı ağrı beklenen bulgulardır; bunlar için ağrı kesici planı önceden verilir.' },
+          { q: 'Taşım kırıldı ama şikâyetim sürüyor, başarısız mı oldu?', a: 'Hemen böyle bir sonuca varmayın. Parçaların idrar yoluyla düşmesi haftalar alabilir ve bu sırada şikâyet sürebilir. Bu nedenle sonuç değerlendirmesi erken değil, parçaların düşmesine zaman tanınarak yapılır. Ancak ateş veya idrar çıkaramama varsa beklemek doğru değildir.' },
+          { q: 'İşlem sırasında ağrı duyar mıyım?', a: 'ESWL genellikle sedasyon altında uygulanır, bu sırada ağrı duymazsınız. İşlem sonrasında ise parçalar düşerken kolik tarzı ağrı olabilir; bunun için ağrı kesici planı önceden verilir. Bu ağrının ne zaman normal, ne zaman başvuru gerektiren bir durum olduğu da size anlatılır.' },
+          { q: 'Hangi taşlarda ESWL uygun değildir?', a: 'Gebelikte, kontrol altına alınmamış kanama bozukluğunda ve taşın altında darlık bulunduğunda uygun değildir. Ayrıca çok sert taşlarda ve alt kaliks yerleşiminde başarı şansı düşer, çünkü parçalar oradan zor boşalır. Bu nedenle tomografideki yoğunluk değeri yöntem seçiminde belirleyicidir.' },
+          { q: 'Kan sulandırıcı kullanıyorum, ESWL olabilir miyim?', a: 'Kontrol altına alınmamış kanama bozukluğu ESWL için uygun değildir. Kan sulandırıcı kullanıyorsanız plan ayrıca yapılır ve çoğu zaman başka bir yöntem öne çıkar. İlacınızı kendi kararınızla kesmeyin; tam listenizi başvuru sırasında gönderin.' }
         ],
         sources: [
           {
@@ -3535,7 +3543,9 @@ export const treatments: Treatment[] = [
           'Tanı görüntülemeyle konur. Kontrastlı bilgisayarlı tomografi veya MR, kitlenin kanlanma özelliğini göstererek iyi huylu bir yapıdan (örneğin basit kist veya anjiyomiyolipom) ayırt edilmesini sağlar. Böbrek tümörlerinde biyopsi her hastada yapılmaz; görüntüleme çoğu zaman yeterince yol göstericidir ve biyopsi yalnızca kararı değiştirecekse istenir.',
           'ASIL SORU ŞUDUR: BÖBREĞİN NE KADARI KORUNABİLİR? Küçük ve uygun yerleşimli tümörlerde yalnızca tümör ve çevresindeki ince bir doku şeridi çıkarılır (parsiyel nefrektomi); böbreğin geri kalanı çalışmaya devam eder. Büyük, merkezi yerleşimli veya damar yapılarını saran tümörlerde böbreğin tamamı alınır (radikal nefrektomi).',
           'BÖBREK DOKUSUNU KORUMAK NEDEN ÖNEMLİDİR? Çünkü ileride diğer böbrekte de sorun çıkabilir ve böbrek işlevindeki kayıp kalp-damar sağlığını da etkiler. Bu nedenle teknik olarak mümkün ve onkolojik olarak güvenli olduğunda parsiyel nefrektomi tercih edilir. Ancak "mümkünse" ifadesi önemlidir: tümörün tam olarak çıkarılması her zaman önceliklidir.',
-          'KÜÇÜK KİTLELERDE AKTİF İZLEM MEŞRU BİR SEÇENEKTİR. Çok küçük tümörlerin bir kısmı yavaş büyür ve bazıları iyi huyludur. İleri yaştaki veya ameliyat riski yüksek hastalarda, kitleyi belirli aralıklarla görüntüleyerek izlemek ve ancak büyüme gösterirse müdahale etmek kabul edilen bir yaklaşımdır. Her kitlenin hemen ameliyat edilmesi gerekmez.'
+          'KÜÇÜK KİTLELERDE AKTİF İZLEM MEŞRU BİR SEÇENEKTİR. Çok küçük tümörlerin bir kısmı yavaş büyür ve bazıları iyi huyludur. İleri yaştaki veya ameliyat riski yüksek hastalarda, kitleyi belirli aralıklarla görüntüleyerek izlemek ve ancak büyüme gösterirse müdahale etmek kabul edilen bir yaklaşımdır. Her kitlenin hemen ameliyat edilmesi gerekmez.',
+          'BÖBREK TÜMÖRLERİNİN ÖNEMLİ BİR BÖLÜMÜ BUGÜN RASTLANTISAL BULUNUR: başka bir nedenle çekilen görüntülemede fark edilir. Bu kötü bir haber gibi görünse de aslında iyi bir haberdir, çünkü erken ve küçük yakalanan tümörlerde böbreğin tamamını almak yerine yalnızca tümörlü kısmın alınması mümkün olabilir.',
+          'ORGAN KORUYUCU CERRAHİ SADECE BİR TERCİH DEĞİL, BİR SAĞLIK MESELESİDİR. Böbrek dokusunun korunması, özellikle tek böbrekli, şeker hastası veya böbrek işlevi sınırlı hastalarda uzun dönemde belirleyicidir. Bu nedenle "böbreğin tamamı mı alınacak" sorusu ameliyat öncesinde mutlaka sorulmalıdır.'
         ],
         eligibility: {
           suitable: [
@@ -3704,7 +3714,9 @@ export const treatments: Treatment[] = [
           {
             q: 'Ne zaman uçabilirim?',
             a: 'Genellikle 10–14 gün sonra. Bu, karın içine girilen ve iyileşme süresi gerektiren bir ameliyattır; erken uçuş bacak damarlarında pıhtı riskini artırır. Yurt dışından gelen hastalar için 10–14 günlük kalış planlanır.'
-          }
+          },
+          { q: 'Böbreğimin tamamı mı alınacak?', a: 'Her zaman değil. Uygun boyut ve yerleşimdeki tümörlerde yalnızca tümörlü kısım alınabilir. Bu, böbrek işlevinin korunması açısından önemlidir, özellikle tek böbrekli, şeker hastası veya böbrek işlevi sınırlı hastalarda. Bu soruyu ameliyat öncesinde doğrudan sorun ve cevabın görüntülemeye dayandığından emin olun.' },
+          { q: 'Ameliyattan sonra böbrek işlevim nasıl etkilenir?', a: 'Alınan doku miktarına ve diğer böbreğinizin durumuna bağlıdır. Organ koruyucu cerrahinin amacı tam olarak bu etkiyi sınırlamaktır. Ameliyat sonrası böbrek işlev testleri takip edilir; tansiyon ve şeker kontrolü uzun dönemde kalan böbreğin korunması açısından önemlidir.' }
         ],
         sources: [
           {
@@ -4220,7 +4232,9 @@ export const treatments: Treatment[] = [
           'EN ÖNEMLİ RİSK ETKENİ SİGARADIR. Mesane, idrarla atılan maddelerin uzun süre temas ettiği bir organdır; sigara dumanındaki maddeler böbreklerden süzülüp mesanede birikir. Boya, kauçuk ve bazı kimyasal sektörlerde uzun süreli mesleki maruziyet de risk taşır.',
           'Tanıda temel yöntem sistoskopidir: idrar yolundan ince bir kamerayla mesanenin içine bakılır. Buna görüntüleme (çoğunlukla bilgisayarlı tomografi ürografi) ve idrar sitolojisi eşlik eder. Ultrason tek başına yeterli değildir; küçük veya düz (yüzeyel yayılan) tümörleri gösteremeyebilir.',
           'BÜTÜN TEDAVİ KARARINI BELİRLEYEN SORU ŞUDUR: tümör mesane kasına girmiş midir? Kasa girmemiş (yüzeyel) tümörlerde mesane korunur ve tedavi mesane içinden yürütülür. Kasa girmiş tümörlerde ise mesanenin tamamının alınması gündeme gelir. Bu ayrım TUR-M ile alınan dokunun patolojik incelemesiyle yapılır.',
-          'TUR-M (mesane tümörünün idrar yolundan alınması) hem tedavi hem tanı işlemidir: tümör çıkarılır ve aynı zamanda kas tabakasının tutulup tutulmadığı anlaşılır. Patolog raporunda kas dokusu görülmemişse veya tümör yüksek dereceliyse, 2–6 hafta sonra ikinci bir TUR-M (re-TUR) yapılması gerekebilir. Bu bir hata ya da başarısızlık değil, planlı bir basamaktır.'
+          'TUR-M (mesane tümörünün idrar yolundan alınması) hem tedavi hem tanı işlemidir: tümör çıkarılır ve aynı zamanda kas tabakasının tutulup tutulmadığı anlaşılır. Patolog raporunda kas dokusu görülmemişse veya tümör yüksek dereceliyse, 2–6 hafta sonra ikinci bir TUR-M (re-TUR) yapılması gerekebilir. Bu bir hata ya da başarısızlık değil, planlı bir basamaktır.',
+          'BU HASTALIKTA TAKİP, TEDAVİNİN AYRILMAZ PARÇASIDIR. Yüzeyel mesane tümörleri tedavi edildikten sonra tekrarlama eğilimindedir; bu nedenle düzenli sistoskopi takibi yapılır. Takipten çıkmak, erken yakalanabilecek bir tekrarın geç fark edilmesine yol açar ve bu, tedavinin kendisini geçersiz kılabilir.',
+          'SİGARA BU HASTALIKTA EN İYİ BİLİNEN DEĞİŞTİRİLEBİLİR ETKENDİR ve önemi tanı konduktan sonra sona ermez. Ayrıca sigara yara iyileşmesini ve ameliyat sonrası akciğer komplikasyonlarını doğrudan etkiler. Ameliyat öncesi dönem bırakmak için geç değildir.'
         ],
         eligibility: {
           suitable: [
@@ -4385,7 +4399,9 @@ export const treatments: Treatment[] = [
           {
             q: 'Ülkeme döndükten sonra takibimi orada yaptırabilir miyim?',
             a: 'Evet, hatta tercih edilen budur. Patoloji raporu, risk grubu ve takip aralıkları yazılı olarak verilir; böylece kendi ülkenizdeki üroloğunuz sistoskopileri planlayabilir. Önemli olan takibin yapılmasıdır, nerede yapıldığı değil.'
-          }
+          },
+          { q: 'Takip ne sıklıkta yapılacak ve ben yurt dışındayım, nasıl olacak?', a: 'Takip aralıkları tümörün özelliklerine göre belirlenir ve ilk dönemde daha sıktır. Yurt dışından geliyorsanız hangi tetkiklerin kendi ülkenizde yapılabileceği, sonuçların nasıl iletileceği ve kimin değerlendireceği seyahat tarihinizi kesinleştirmeden önce planlanmalıdır. Takip takviminizi yazılı olarak isteyin.' },
+          { q: 'Ameliyat raporumu ve patoloji sonucumu anlayacağım dilde alabilir miyim?', a: 'Evet ve bunu talep etmelisiniz. Kendi ülkenizdeki hekiminizin sizi güvenle takip edebilmesi için ameliyat notu, patoloji raporu ve taburculuk özetine ihtiyacı olacaktır. Bu belgeleri anlamadığınız bir dilde ve açıklamasız almak, iyi yürütülmüş bir tedavinin kötü bitmesidir.' }
         ],
         sources: [
           {
@@ -4903,7 +4919,9 @@ export const treatments: Treatment[] = [
           'HASTALIĞIN İKİ DÖNEMİ VARDIR VE BU AYRIM TEDAVİYİ BELİRLER. Aktif (inflamatuar) dönemde ağrı vardır ve eğrilik haftalar içinde değişmeye devam eder. Durağan (stabil) dönemde ağrı geçmiştir ve eğrilik en az üç–altı aydır aynı kalmıştır.',
           'AKTİF DÖNEMDE AMELİYAT YAPILMAZ. Bunun sebebi basittir: eğrilik hâlâ değişiyorsa, bugün düzeltilen açı altı ay sonra yeniden bozulabilir. Bu nedenle önce hastalığın durulması beklenir. Bekleme süresi boş geçmez; ağrının kontrolü ve izlem bu dönemin parçasıdır.',
           'Neden olduğu tam olarak bilinmemektedir. Cinsel ilişki sırasında oluşan küçük tekrarlayıcı zorlanmaların, yatkınlığı olan kişilerde iyileşme sürecini bozarak plak oluşumuna yol açtığı düşünülür. Şeker hastalığı, Dupuytren kontraktürü (el içinde benzer doku sertleşmesi) ve bazı bağ dokusu özellikleri yatkınlıkla ilişkilendirilmiştir.',
-          'GERÇEKÇİ BEKLENTİ: Cerrahinin amacı penisi ameliyat öncesi hâline veya hastalık öncesi hâline döndürmek değildir. Amaç, cinsel ilişkiyi mümkün kılacak kadar düzeltmektir. Hafif bir eğriliğin kalması başarısızlık sayılmaz. Size "tamamen düzelecek" diyen bir yaklaşıma karşı dikkatli olun.'
+          'GERÇEKÇİ BEKLENTİ: Cerrahinin amacı penisi ameliyat öncesi hâline veya hastalık öncesi hâline döndürmek değildir. Amaç, cinsel ilişkiyi mümkün kılacak kadar düzeltmektir. Hafif bir eğriliğin kalması başarısızlık sayılmaz. Size "tamamen düzelecek" diyen bir yaklaşıma karşı dikkatli olun.',
+          'BU HASTALIKTA ZAMANLAMA TEDAVİNİN PARÇASIDIR. Hastalığın önce eğriliğin ve ağrının arttığı hareketli bir dönemi, ardından durağan bir dönemi vardır. Cerrahi düzeltme, durum durağan hâle geldikten sonra planlanır; henüz ilerlemekte olan bir dönemde yapılan düzeltme sonrasında yeniden değişebilir.',
+          'Bir diğer önemli nokta: eğrilik ile sertleşme sorunu sık birlikte bulunur. Yalnızca eğriliğe odaklanıp sertleşmeyi sorgulamayan bir plan eksiktir, çünkü ikisi birlikte varsa yalnızca eğriliğin düzeltilmesi beklenen faydayı vermeyebilir.'
         ],
         eligibility: {
           suitable: [
@@ -5058,7 +5076,14 @@ export const treatments: Treatment[] = [
           {
             q: 'Ne zaman cinsel yaşama dönebilirim?',
             a: 'Genellikle 6–8 hafta sonra, hekim onayıyla. Erken dönüş dikişleri zorlayabilir ve sonucu bozabilir. Bu süre greft uygulananlarda daha uzun olabilir.'
-          }
+          },
+          { q: 'Eğriliğim ilerliyor, hemen ameliyat olmalı mıyım?', a: 'Hayır. Bu hastalıkta önce eğriliğin ve ağrının durağan hâle gelmesi beklenir. Henüz ilerlemekte olan bir dönemde yapılan düzeltme, sonrasında eğriliğin yeniden değişmesiyle sonuçsuz kalabilir. Bu bekleme süresi zorlayıcıdır ama planın parçasıdır.' },
+          { q: 'Ameliyat penisimi kısaltır mı?', a: 'Kullanılan tekniğe göre değişir. Kısaltıcı tekniklerde eğrilik düzeltilir ancak boyda bir miktar kısalma olabilir; bu, ameliyattan önce açıkça konuşulması gereken ve memnuniyetsizliğin en sık nedeni olan konudur. Uzatıcı tekniklerde boy daha iyi korunur ancak sertleşmenin etkilenme olasılığı farklıdır.' },
+          { q: 'Eğrilik tamamen düzelecek mi?', a: 'Amaç cinsel ilişkiyi mümkün kılacak ölçüde düzeltmektir, matematiksel olarak sıfır eğrilik elde etmek değil. Hafif bir eğriliğin kalması beklenen bir sonuçtur ve başarısızlık sayılmaz. Size tam düzelme vaat eden bir anlatıma temkinli yaklaşın.' },
+          { q: 'Sertleşme sorunum da var, bu kararı değiştirir mi?', a: 'Evet, doğrudan değiştirir. Eğriliğin yanında belirgin sertleşme sorunu da varsa, yalnızca eğriliği düzeltmek yeterli olmayabilir; bu durumda protez ile birlikte düzeltme gündeme gelir. Bu nedenle değerlendirmede sertleşme durumunuzun ayrıca sorgulanması gerekir.' },
+          { q: 'Ameliyatsız tedavi seçenekleri işe yarar mı?', a: 'Hastalığın hareketli döneminde ağrının azaltılmasına ve ilerlemenin yavaşlatılmasına yönelik yaklaşımlar vardır; bunlar değerlendirmede konuşulur. Ancak yerleşmiş ve belirgin bir eğriliğin ameliyatsız tamamen düzeltilmesi gerçekçi bir beklenti değildir. Size bunu vaat eden bir yaklaşıma temkinli yaklaşın.' },
+          { q: 'Gelmeden önce ne göndermeliyim?', a: 'Eğriliğin fotoğrafla belgelenmesi bu hastalıkta değerlendirmeyi belirgin biçimde kolaylaştırır; mahremiyetiniz korunarak incelenir ve izniniz olmadan hiçbir yerde kullanılmaz. Ayrıca şikâyetin ne zaman başladığı, eğriliğin son aylarda değişip değişmediği, ağrı olup olmadığı, sertleşme durumunuz ve kullandığınız ilaçlar gereklidir.' },
+          { q: 'Hastalığın hangi döneminde olduğumu nasıl anlarım?', a: 'Hareketli dönemde eğrilik son aylarda değişmeye devam eder ve sertleşme sırasında ağrı olabilir. Durağan dönemde ise eğrilik bir süredir aynı kalmıştır ve ağrı geçmiştir. Bu ayrımı yapmak için şikâyetlerinizin zaman içindeki seyrini anlatmanız gerekir; bu nedenle "ne zaman başladı ve son üç ayda değişti mi" soruları sorulur.' }
         ],
         sources: [
           {
@@ -5535,7 +5560,9 @@ export const treatments: Treatment[] = [
           'Varikoselin testise verdiği zararın temel mekanizması ısıdır. Testisin sağlıklı sperm üretmesi için vücuttan biraz daha serin olması gerekir; bu yüzden testisler vücut dışındadır. Genişlemiş damarlarda biriken kan, testis çevresindeki sıcaklığı yükseltir ve sperm üretimini olumsuz etkileyebilir.',
           'EN ÖNEMLİ YANLIŞ ANLAMA ŞUDUR: varikosel saptanan her erkeğin ameliyat olması gerekmez. Varikosel çok yaygındır ve taşıyan erkeklerin büyük kısmı sorunsuz biçimde çocuk sahibi olur. Ameliyat kararı, varikoselin varlığına değil, size zarar verdiğine dair bulguya dayanır: sperm değerlerinde bozulma, testiste küçülme veya geçmeyen ağrı.',
           'Muayenede varikosel üç derecede tanımlanır: yalnızca ıkınmayla hissedilen (1. derece), elle hissedilen (2. derece) ve dışarıdan görülebilen (3. derece). Muayene ayakta yapılır; yatarak yapılan muayene yanıltıcı olabilir. Ultrason bulguyu doğrular ve testis hacimlerini ölçer.',
-          'ÖNEMLİ UYARI: Varikosel ileri yaşta aniden ortaya çıktıysa, yalnızca sağ taraftaysa veya yatınca kaybolmuyorsa, bunun böbrek bölgesindeki bir kitleye bağlı olup olmadığı araştırılmalıdır. Bu nadir bir durumdur ancak atlanmaması gerekir.'
+          'ÖNEMLİ UYARI: Varikosel ileri yaşta aniden ortaya çıktıysa, yalnızca sağ taraftaysa veya yatınca kaybolmuyorsa, bunun böbrek bölgesindeki bir kitleye bağlı olup olmadığı araştırılmalıdır. Bu nadir bir durumdur ancak atlanmaması gerekir.',
+          'VARİKOSELİN BULUNMASI TEK BAŞINA AMELİYAT GEREKÇESİ DEĞİLDİR. Hiçbir şikâyeti olmayan, sperm değerleri normal olan ve çocuk sorunu yaşamayan bir erkekte varikoselin saptanması müdahale gerektirmez. Ameliyat; elle hissedilen varikosel, bozulmuş sperm değerleri ve çocuk sahibi olamama bir araya geldiğinde değerlendirilir.',
+          'EŞİN DEĞERLENDİRİLMESİ ATLANMAMALIDIR. Çocuk sahibi olamama bir çift sorunudur; erkekte varikosel bulunduğunda incelemenin orada durması sık yapılan bir hatadır. Kadının yumurtlama düzeni, tüplerinin durumu ve yaşı sonucu doğrudan etkiler ve ameliyattan beklenen faydanın değerlendirilmesinde belirleyicidir.'
         ],
         eligibility: {
           suitable: [
@@ -5707,7 +5734,9 @@ export const treatments: Treatment[] = [
           {
             q: 'Ne zaman uçabilir ve işe dönebilirim?',
             a: 'Genellikle 3–5 gün sonra uçuşa izin verilir; yurt dışından gelen hastalar için 4–6 günlük kalış planlanır. Masa başı işe 3–7 gün içinde dönülebilir. Ağır kaldırma ve spor için 2–4 hafta beklenmesi önerilir.'
-          }
+          },
+          { q: 'Ameliyattan sonra ne zaman sonuç bekleyebilirim?', a: 'Sperm üretimi yaklaşık üç aylık bir döngüdür; bu nedenle ameliyattan hemen sonra yapılan sperm testi anlamlı değildir. Genellikle üçüncü aydan itibaren tekrarlanan analizlerle değişim izlenir. Bu bekleme süresi çiftler için zorlayıcıdır ama kaçınılmazdır.' },
+          { q: 'Sperm değerlerim düzelirse gebelik kesin olur mu?', a: 'Hayır. Sperm sayısı veya hareketliliğinin artması ile gebelik elde edilmesi aynı şey değildir; biri olmadan diğeri olabilir. Bu nedenle ameliyat öncesinde "ne olursa başarılı sayacağız" sorusunun cevabının netleştirilmesi önemlidir. Kesin sonuç vaat eden bir anlatıma temkinli yaklaşın.' }
         ],
         sources: [
           {
@@ -7978,7 +8007,9 @@ export const treatments: Treatment[] = [
           'PCNL özellikle geyik boynuzu taşlarda — yani böbreğin toplayıcı sistemini dolduran, dallanmış yapıdaki taşlarda — standart yaklaşım kabul edilir. Bu taşlar bırakıldığında tekrarlayan enfeksiyona ve böbrek işlevinin kalıcı kaybına yol açabilir.',
           'Giriş kanalının çapı küçültülerek yapılan uygulamalara mini-PCNL denir. Daha küçük kanal, böbrek dokusunda daha az hasar ve genellikle daha az kanama anlamına gelir; buna karşılık parçaların çıkarılması daha uzun sürebilir. Hangi çapın seçileceği taşın büyüklüğüne göre belirlenir.',
           'EN ÖNEMLİ RİSK KANAMADIR. Böbrek kan damarlarından zengin bir organdır ve içinden geçilerek girilir. Kanamaların çoğu kendiliğinden durur; ancak nadiren kan nakli ya da kanayan damarın radyoloji eşliğinde kapatılması (embolizasyon) gerekebilir. Bu nedenle kan sulandırıcı kullanan hastalarda ilaç düzeni ameliyat öncesinde planlanır.',
-          'İşlem sonunda böbrekle cilt arasına nefrostomi adı verilen bir dren konabilir ya da seçilmiş hastalarda drensiz (tubeless) yaklaşım tercih edilebilir. Bu karar; taşın temizlenme durumuna, kanama miktarına ve böbreğin durumuna göre ameliyat sırasında verilir.'
+          'İşlem sonunda böbrekle cilt arasına nefrostomi adı verilen bir dren konabilir ya da seçilmiş hastalarda drensiz (tubeless) yaklaşım tercih edilebilir. Bu karar; taşın temizlenme durumuna, kanama miktarına ve böbreğin durumuna göre ameliyat sırasında verilir.',
+          'PCNL, böbreğe sırttan açılan yaklaşık bir santimetrelik bir tünelden çalışılmasını sağlar. Bu tünel daha kalın aletlerin geçmesine izin verdiği için büyük ve dallanmış taşlar tek seansta parçalanıp dışarı alınabilir; yöntemin asıl üstünlüğü budur.',
+          'Buna karşılık böbrek dokusundan geçilmesi nedeniyle kanama riski diğer yöntemlere göre yüksektir ve bu açıkça konuşulmalıdır. Nadiren kan verilmesi veya ek girişim gerekebilir. Bu nedenle kanama bozukluğu olan ve kan sulandırıcı kullanan hastalarda plan ayrıca değerlendirilir.'
         ],
         eligibility: {
           suitable: [
@@ -8153,7 +8184,9 @@ export const treatments: Treatment[] = [
           {
             q: 'Ne zaman uçabilir ve işe dönebilirim?',
             a: 'Genellikle 7–10 gün sonra uçuşa izin verilir; yurt dışından gelen hastalar için 7–10 günlük kalış planlanır. Masa başı işe 1–2 hafta içinde dönülebilir; ağır fiziksel iş için 4–6 hafta beklenmesi önerilir.'
-          }
+          },
+          { q: 'İşlemden sonra hangi belirtilerde hemen başvurmalıyım?', a: 'Ateş ve titreme, idrarda giderek artan kanama, hiç idrar çıkaramama ve giderek artan ağrı. Ateşli enfeksiyon bu işlemde en ciddiye alınması gereken durumdur; bu nedenle ameliyat öncesi idrar kültürünün temiz olması şarttır ve bu kural esnetilmez.' },
+          { q: 'Sırtımdaki giriş yeri iz bırakır mı?', a: 'Giriş yaklaşık bir santimetre genişliğindedir ve küçük bir iz bırakır. İlk iki hafta bölgede hassasiyet olur; ağır kaldırmaktan kaçınılır ve yara bakımı taburculukta anlatılır. Bu iz, açık taş cerrahisinde kalan ize göre belirgin biçimde küçüktür.' }
         ],
         sources: [
           {
@@ -9225,7 +9258,9 @@ export const treatments: Treatment[] = [
           'Lazerle taş toz haline getirildiğinde parçaların çoğu idrarla kendiliğinden atılır; daha büyük parçalar ise özel bir sepet yardımıyla dışarı alınabilir. İşlem boyunca üreteri korumak ve aleti rahat hareket ettirmek için genellikle üretere ince bir kılıf yerleştirilir.',
           'İŞLEM SONRASI JJ STENT: Çoğu hastada işlem sonunda böbrekle mesane arasına JJ stent adı verilen ince, esnek bir boru yerleştirilir. Amaç, şişmeye bağlı tıkanmayı önlemek ve taş tozunun rahat atılmasını sağlamaktır. Stent birkaç gün ile birkaç hafta arasında kalır ve ayaktan, kısa bir işlemle çıkarılır.',
           'STENT YAKINLARI GERÇEKTİR. Stent takılıyken sık idrara çıkma, idrar sonunda rahatsızlık, belde dolgunluk hissi ve idrarda hafif kanama görülebilir. Bunlar genellikle stent çıkarıldıktan sonra hızla geçer; işlem başarısız olduğu anlamına gelmez. Bu durumun baştan bilinmesi, süreci çok daha rahat geçirmenizi sağlar.',
-          'Üreter çok dar olan bazı hastalarda, ilk seansta böbreğe ulaşmak mümkün olmayabilir. Bu durumda önce JJ stent takılarak üreterin genişlemesi beklenir ve işlem birkaç hafta sonra yapılır. Bu bir komplikasyon değil, planlı bir iki aşamalı yaklaşımdır.'
+          'Üreter çok dar olan bazı hastalarda, ilk seansta böbreğe ulaşmak mümkün olmayabilir. Bu durumda önce JJ stent takılarak üreterin genişlemesi beklenir ve işlem birkaç hafta sonra yapılır. Bu bir komplikasyon değil, planlı bir iki aşamalı yaklaşımdır.',
+          'RIRS\'in en belirgin özelliği vücutta hiçbir kesi bulunmamasıdır; alet doğal idrar yolundan ilerletilir. Bu nedenle kan sulandırıcı kullanan hastalarda ve sırttan girişi zorlaştıran durumlarda öne çıkar.',
+          'ÖNEMLİ BİR SINIR: taş büyüdükçe tozlaştırma süresi uzar ve bütün parçaların dışarı atılması beklenemeyeceği için ikinci seans gerekebilir. Yurt dışından gelen hasta için bu, kalış süresinin uzaması ya da ikinci bir seyahat demektir; bu nedenle tek seansın yetip yetmeyeceği önceden sorulmalıdır.'
         ],
         eligibility: {
           suitable: [
@@ -9394,7 +9429,9 @@ export const treatments: Treatment[] = [
           {
             q: 'Ne zaman uçabilir ve işe dönebilirim?',
             a: 'Genellikle 2–3 gün sonra uçuşa izin verilir; yurt dışından gelen hastalar için 4–6 günlük kalış planlanır. Masa başı işe 3–7 gün içinde dönülebilir. Stent çıkarımı için ülkenize dönmeden önce plan yapılır ya da kendi ülkenizde yapılmak üzere ayarlanır.'
-          }
+          },
+          { q: 'Stent takılacak mı ve kim alacak?', a: 'İşlemden sonra böbreğin boşalmasını güvence altına almak için geçici bir stent konulabilir. Stentliyken sık idrara çıkma, kasıkta ağrı ve idrarda kan olağandır ve stent alınınca geçer. Yurt dışından geliyorsanız stentin ne kadar kalacağını, kimin ve nerede alacağını ayrılmadan önce yazılı olarak netleştirin.' },
+          { q: 'Taşım neden oluştu, yine olur mu?', a: 'Hiçbir şey değişmezse taşlar tekrarlama eğilimindedir. Bu nedenle çıkarılan taşın kimyasal analizi yapılmalı ve sıvı alımı gözden geçirilmelidir. Günlük sıvı miktarını artırmak en basit ve en çok ihmal edilen önlemdir; sıcak iklimde yaşıyorsanız serin iklimde yeterli olan miktar size yetmeyebilir.' }
         ],
         sources: [
           {
@@ -10436,7 +10473,9 @@ export const treatments: Treatment[] = [
           'Buhar yalnızca verildiği bölgede etkilidir; prostatın dış kapsülüne ve çevre yapılara yayılmaz. Bu özelliği, mesane boynu ve cinsel işlevle ilgili yapıların korunmasına katkı sağlar. Prostatın orta lobu büyümüşse bu bölge de aynı seansta tedavi edilebilir.',
           'İşlem lokal anestezi ya da hafif sedasyonla, genellikle 10–20 dakikada tamamlanır ve hasta aynı gün evine döner. İşlem sonrasında birkaç gün sonda takılı kalır; çünkü ısıya bağlı şişme geçici olarak idrar akışını zorlaştırabilir.',
           'ÖNEMLİ BİR SINIR: Rezūm’de doku çıkarılmadığı için patolojik inceleme yapılamaz. Prostat kanseri şüphesi varsa bu önce ayrı olarak değerlendirilmelidir. Ayrıca yöntem her prostat için uygun değildir; çok büyük hacimli prostatlarda ve mesane işlevi bozulmuş hastalarda beklenen yarar sağlanmayabilir.',
-          'CİNSEL İŞLEV: Rezūm, boşalmanın geriye kaçması (retrograd boşalma) açısından cerrahi yöntemlere kıyasla daha koruyucu kabul edilir ve bu, yöntemin tercih edilme nedenlerinden biridir. Ancak hiçbir işlemde cinsel işlevin aynen korunacağı garanti edilemez.'
+          'CİNSEL İŞLEV: Rezūm, boşalmanın geriye kaçması (retrograd boşalma) açısından cerrahi yöntemlere kıyasla daha koruyucu kabul edilir ve bu, yöntemin tercih edilme nedenlerinden biridir. Ancak hiçbir işlemde cinsel işlevin aynen korunacağı garanti edilemez.',
+          'REZÜM\'ÜN ETKİSİ HEMEN BAŞLAMAZ. Buhar verilen doku zamanla vücut tarafından emilir ve prostat haftalar içinde küçülür. İlk haftalarda şikâyetlerin geçici olarak artması olağandır ve işlemin başarısız olduğu anlamına gelmez. Hızlı sonuç bekleyen bir hasta için bu durum hayal kırıklığı yaratabilir; bu yüzden önceden bilinmelidir.',
+          'Yöntemin tercih edilme nedeni boşalmayı koruma açısından öne çıkmasıdır. Buna karşılık dokunun tamamen çıkarıldığı yöntemlere göre zaman içinde yeniden girişim gerekme olasılığı daha yüksektir. Bu, kararı verirken tartılması gereken denge noktasıdır.'
         ],
         eligibility: {
           suitable: [
@@ -10603,7 +10642,11 @@ export const treatments: Treatment[] = [
           {
             q: 'Ne zaman uçabilirim?',
             a: 'Genellikle 3–5 gün sonra uçuşa izin verilir. Yurt dışından gelen hastalar için 4–6 günlük bir kalış planlanır; bu süre sondanın çıkarılacağı kontrol muayenesini de kapsar.'
-          }
+          },
+          { q: 'İşlemden sonra şikâyetlerim arttı, bir sorun mu var?', a: 'İlk haftalarda şikâyetlerin geçici olarak artması bu yöntemde beklenen bir durumdur ve işlemin başarısız olduğu anlamına gelmez. Asıl düzelme birkaç hafta içinde belirginleşir. Ancak ateş, idrar yapamama veya giderek artan ağrı beklenen bulgular değildir; bu durumlarda gecikmeden başvurun.' },
+          { q: 'İleride yeniden işlem gerekirse ne yapılır?', a: 'Rezüm uygulanmış bir hastada ileride dokunun çıkarıldığı yöntemler uygulanabilir; bu seçenekler kapanmaz. Zaten yöntemin bilinen özelliği, dokunun tamamen çıkarıldığı yöntemlere göre yeniden girişim olasılığının daha yüksek olmasıdır. Bunu baştan bilerek karar vermek, sonradan hayal kırıklığı yaşamaktan iyidir.' },
+          { q: 'Prostatım çok büyük, Rezüm bana uygun mu?', a: 'Çok büyük prostatlarda bu yöntem yeterli olmayabilir. Ayrıca mesanede taş gelişmiş olanlarda, idrarını hiç yapamayıp sondaya bağlı kalmış hastalarda ve tekrarlayan ciddi kanaması olanlarda dokunun çıkarıldığı yöntemler öne çıkar. Prostat hacminiz değerlendirilmeden bu soruya cevap verilemez.' },
+          { q: 'İşlemden sonra sonda takılır mı?', a: 'Kısa süreli sonda kullanılabilir. Sonda çekildikten sonra idrar yaparken yanma, sık idrara çıkma ve idrarda kan görülmesi beklenen bulgulardır. Dönüş uçuşunuzu sonda çekiminin ertesi gününe planlamayın.' }
         ],
         sources: [
           {
@@ -11634,7 +11677,9 @@ export const treatments: Treatment[] = [
           'TURP, iyi huylu prostat büyümesinin cerrahi tedavisinde uzun yıllardır referans yöntem olarak kabul edilir. Yeni yöntemler bu yöntemle karşılaştırılarak değerlendirilir. Orta büyüklükteki prostatlarda yaygın olarak tercih edilir; çok büyük prostatlarda ise enükleasyon yöntemleri (HoLEP, ThuLEP) veya açık cerrahi gündeme gelebilir.',
           'İşlem sırasında iki farklı enerji sistemi kullanılabilir. Monopolar TURP’ta yıkama için tuz içermeyen sıvı kullanılır; bu sıvının dolaşıma fazla geçmesi TUR sendromu denilen, kandaki sodyum düzeyinin düşmesiyle seyreden bir tabloya yol açabilir. Bipolar TURP’ta ise yıkama serum fizyolojikle yapılır ve bu risk ortadan kalkar. Bipolar sistem ayrıca daha uzun süreli işlemlere imkân tanır.',
           'TURP bir kanser ameliyatı değildir; iyi huylu büyümenin yarattığı tıkanıklığı giderir. Bununla birlikte çıkarılan dokunun tamamı patolojiye gönderilir, çünkü beklenmedik şekilde kanser hücresi bulunabilir. Bu durumda tedavi planı yeniden değerlendirilir.',
-          'RETROGRAD BOŞALMA BEKLENEN BİR SONUÇTUR. İşlem mesane boynunu genişlettiği için, boşalma sırasında meni dışarı çıkmak yerine mesaneye geri kaçabilir ve sonra idrarla atılır. Bu durum orgazm hissini ortadan kaldırmaz ve zararlı değildir; ancak doğurganlığı etkiler. Çocuk sahibi olmayı planlıyorsanız bunu ameliyat öncesinde mutlaka konuşun. Ereksiyon işlevi genellikle etkilenmez, fakat hiçbir ameliyatta bu konuda garanti verilemez.'
+          'RETROGRAD BOŞALMA BEKLENEN BİR SONUÇTUR. İşlem mesane boynunu genişlettiği için, boşalma sırasında meni dışarı çıkmak yerine mesaneye geri kaçabilir ve sonra idrarla atılır. Bu durum orgazm hissini ortadan kaldırmaz ve zararlı değildir; ancak doğurganlığı etkiler. Çocuk sahibi olmayı planlıyorsanız bunu ameliyat öncesinde mutlaka konuşun. Ereksiyon işlevi genellikle etkilenmez, fakat hiçbir ameliyatta bu konuda garanti verilemez.',
+          'TURP, prostat büyümesinin cerrahi tedavisinde uzun süredir kullanılan ve sonuçları iyi bilinen yerleşik bir yöntemdir. Küçük ve orta büyüklükteki prostatlarda etkili sonuç verir; çıkarılan doku patolojik olarak incelenir.',
+          'Sınırı prostatın büyüklüğüdür: bez büyüdükçe işlem süresi ve emilen sıvı miktarı arttığı için pratik bir tavan oluşur. Bu sınırın üzerindeki prostatlarda dokunun bütün hâlinde çıkarıldığı enükleasyon yöntemleri öne çıkar. Bu nedenle yöntem seçiminde ilk bakılan şey prostat hacmidir.'
         ],
         eligibility: {
           suitable: [
@@ -11803,7 +11848,11 @@ export const treatments: Treatment[] = [
           {
             q: 'Ne zaman uçabilirim ve işe dönebilirim?',
             a: 'Genellikle 7–10 gün sonra uçuşa izin verilir; yurt dışından gelen hastalar için 5–7 günlük kalış planlanır. Masa başı işe 2–3 hafta içinde dönülebilir; ağır fiziksel iş ve ağır kaldırma için 4–6 hafta beklenmesi önerilir.'
-          }
+          },
+          { q: 'Ameliyattan sonra ne zaman uçabilirim?', a: 'Sonda burada çekilir ve kontrol yapılır; uçuş onayı bundan sonra verilir. Sonda çekiminin ertesi gününe uçuş planlamayın. Ayrıca ameliyattan sonraki ilk haftalarda ağır kaldırmaktan ve ıkınmaktan kaçınmanız, kanamayı önlemek açısından önemlidir.' },
+          { q: 'Çıkarılan doku inceleniyor mu?', a: 'Evet. TURP\'ta çıkarılan parçalar patolojik olarak incelenir ve bu inceleme beklenmedik bir kanserin yakalanmasına imkân verebilir. Dokunun çıkarılmadığı yöntemlerde böyle bir inceleme yapılamaz; bu, yöntem seçerken dikkate alınması gereken bir ayrıntıdır.' },
+          { q: 'Ameliyattan sonra idrar kaçırır mıyım?', a: 'TURP sonrası kalıcı idrar kaçırma seyrektir; ancak ilk dönemde sıkışma hissi ve sık idrara çıkma olabilir. Bu şikâyetler genellikle haftalar içinde azalır. Pelvik taban egzersizlerini ameliyattan önce öğrenmek bu dönemi kolaylaştırır.' },
+          { q: 'Zamanla yeniden ameliyat gerekebilir mi?', a: 'TURP\'ta prostat dokusunun bir bölümü yerinde kaldığı için, yıllar içinde kalan dokunun yeniden büyümesi ve şikâyetlerin tekrarlaması mümkündür. Dokunun tamamen çıkarıldığı enükleasyon yöntemlerinde bu olasılık daha düşüktür. Yurt dışından geliyorsanız ikinci bir seyahat ihtimalini bu kararda tartın.' }
         ],
         sources: [
           {
@@ -12839,7 +12888,9 @@ export const treatments: Treatment[] = [
           'Tek bir ölçümle karar verilmez. Enfeksiyon düşünülüyorsa önce tedavi edilir ve PSA birkaç hafta sonra tekrarlanır. Ayrıca mutlak değere ek olarak başka ölçütler de değerlendirilir: PSA yoğunluğu (PSA değerinin prostat hacmine oranı), serbest/total PSA oranı ve PSA’nın zaman içindeki artış hızı. Bu ek ölçütler, büyük bir prostatın doğal olarak daha yüksek PSA üretebileceğini hesaba katmayı sağlar.',
           'Yaş da önemlidir: genç bir erkekte normal kabul edilen bir değer, ileri yaşta farklı yorumlanır. Bu nedenle "PSA 4’ün altındaysa sorun yok" gibi tek bir eşik kullanmak doğru değildir; değerlendirme kişiye göre yapılır.',
           'MR BİYOPSİDEN ÖNCE GELİR. Günümüzde, PSA yüksekliği olan hastada doğrudan biyopsiye geçilmesi önerilmez. Önce multiparametrik prostat MR çekilir ve bulunan lezyonlar PI-RADS adı verilen 1–5 arası bir ölçekle puanlanır: düşük puan şüphenin düşük, yüksek puan şüphenin belirgin olduğunu gösterir. Bu yaklaşım hem gereksiz biyopsileri azaltır hem de önemli kanserlerin atlanma olasılığını düşürür.',
-          'Biyopsi kararı verilirse, MR’da işaretlenen alandan hedefli örnek alınır (füzyon biyopsi); genellikle buna prostatın farklı bölgelerinden alınan sistematik örnekler eşlik eder. Biyopsi iki yoldan yapılabilir: makattan (transrektal) veya perineden, yani testislerle makat arasındaki cilt bölgesinden (transperineal). Transperineal yolda bağırsak florasıyla temas olmadığı için enfeksiyon riski daha düşüktür.'
+          'Biyopsi kararı verilirse, MR’da işaretlenen alandan hedefli örnek alınır (füzyon biyopsi); genellikle buna prostatın farklı bölgelerinden alınan sistematik örnekler eşlik eder. Biyopsi iki yoldan yapılabilir: makattan (transrektal) veya perineden, yani testislerle makat arasındaki cilt bölgesinden (transperineal). Transperineal yolda bağırsak florasıyla temas olmadığı için enfeksiyon riski daha düşüktür.',
+          'PSA TEK BİR SAYI OLARAK DEĞİL, BİR SEYİR OLARAK OKUNUR. Tek bir yüksek değer çoğu zaman tek başına karar verdirmez; tekrarlanması, enfeksiyon şüphesi varsa tedavi sonrası yeniden bakılması ve zaman içindeki değişiminin değerlendirilmesi gerekir.',
+          'Bu nedenle size yalnızca tek bir PSA değerine dayanarak doğrudan biyopsi önerildiyse, önce değerin tekrarlanıp tekrarlanmadığını ve MR çekilip çekilmediğini sormakta haklısınız. Bu sorular süreci geciktirmek için değil, gereksiz bir biyopsiden kaçınmak ya da gerekli biyopsiyi doğru yere yönlendirmek içindir.'
         ],
         eligibility: {
           suitable: [
@@ -12992,7 +13043,12 @@ export const treatments: Treatment[] = [
           {
             q: 'Sonuç ne kadar sürede çıkar ve nasıl okunur?',
             a: 'Patoloji sonucu genellikle birkaç gün içinde hazır olur. Kanser saptanırsa rapor ISUP derecesini (1–5) ve kaç örnekte tümör bulunduğunu belirtir. Bu bilgiler PSA ve evreyle birleştirilerek risk grubunuz belirlenir ve tedavi seçenekleri buna göre konuşulur.'
-          }
+          },
+          { q: 'PSA değerimi etkileyebilecek bir şey yaptım mı?', a: 'Olabilir. Cinsel ilişki, bisiklet sürmek, sonda takılması, prostat muayenesi ve idrar yolu enfeksiyonu PSA değerini geçici olarak yükseltebilir. Ayrıca prostat küçülten ilaçlar (5-alfa redüktaz inhibitörleri) PSA değerini yaklaşık yarıya düşürür. Bu ilaçları kullanıyorsanız mutlaka söyleyin; aksi hâlde dikkat gerektiren bir değer normal gibi yorumlanabilir.' },
+          { q: 'MR temiz çıkarsa biyopsiden kaçınabilir miyim?', a: 'Her zaman değil, ama karar görüntüye dayanarak verilir. MR\'da şüpheli odak görülmemesi biyopsi kararını yeniden değerlendirmeye imkân verir; ancak bu karar PSA seviyesi ve seyri, muayene bulgusu, aile öyküsü ve yaşla birlikte alınır. MR her tümörü göstermez.' },
+          { q: 'Biyopsi kanseri yayar mı?', a: 'Bu yaygın bir endişedir ancak biyopsinin kanseri yaydığına dair bir kanıt yoktur. Biyopsinin bilinen riskleri enfeksiyon ve kanamadır; bunlar önceden anlatılır ve yönetilir.' },
+          { q: 'Biyopsiden sonra hangi belirtilerde hemen başvurmalıyım?', a: 'Ateş ve titreme, idrar yapamama, giderek artan ağrı ve durmayan kanama durumunda gecikmeden başvurun. Buna karşılık idrarda, menide ve dışkıda bir süre kan görülmesi beklenen bir durumdur; menideki kahverengi renk haftalarca sürebilir ve normaldir.' },
+          { q: 'MR\'ı rapor olarak göndersem yeter mi?', a: 'Hayır ve bu en sık yapılan hatadır. Yalnızca rapor metni gönderildiğinde yapılabilecek tek şey başkasının yorumunu tekrarlamaktır. MR\'ın görüntü dosyası (DICOM) olarak gönderilmesi gerekir; hastanenizin radyoloji bölümü bunu CD olarak veya indirme bağlantısıyla verebilir. Dosyanın büyük olması normaldir.' }
         ],
         sources: [
           {
@@ -13943,7 +13999,9 @@ export const treatments: Treatment[] = [
           'TANI NASIL KONUR: Süreç genellikle yükselen bir PSA değeri veya parmakla muayenede saptanan bir sertlikle başlar. Günümüzde doğrudan biyopsiye geçilmez; önce multiparametrik prostat MR çekilir. MR şüpheli bir alan gösterirse, bu alandan hedefli örnek alınır (füzyon biyopsi). Bu yaklaşım, gereksiz biyopsileri azaltır ve önemli kanserlerin atlanmasını önler.',
           'BİYOPSİ SONUCU NE ANLATIR: Patolog, kanser hücrelerinin mikroskop altında ne kadar saldırgan göründüğünü Gleason skoruyla puanlar; bu skor ISUP derecesi olarak 1–5 arası beş gruba sadeleştirilir. ISUP 1 en yavaş seyirli, ISUP 5 en saldırgan gruptur. Ayrıca kaç örnekte ve hangi bölgelerde tümör bulunduğu da kaydedilir.',
           'RİSK GRUBU: PSA değeri, ISUP derecesi ve tümörün evresi birlikte değerlendirilerek hastalık düşük, orta veya yüksek riskli olarak sınıflandırılır. Tedavi kararının temelini bu sınıflandırma oluşturur. Gerekli görülürse hastalığın yayılıp yayılmadığını araştırmak için ek görüntüleme (kemik sintigrafisi, PSMA PET gibi) istenir.',
-          'KARARI NE BELİRLER: Risk grubunuz tek başına yeterli değildir. Yaşınız, beklenen yaşam süreniz, eşlik eden hastalıklarınız, idrar ve cinsel işlevleriniz ve kendi önceliğiniz birlikte değerlendirilir. Aynı risk grubundaki iki hastaya farklı tedaviler önerilebilir; bu bir tutarsızlık değil, kişiye özel karar vermenin doğal sonucudur.'
+          'KARARI NE BELİRLER: Risk grubunuz tek başına yeterli değildir. Yaşınız, beklenen yaşam süreniz, eşlik eden hastalıklarınız, idrar ve cinsel işlevleriniz ve kendi önceliğiniz birlikte değerlendirilir. Aynı risk grubundaki iki hastaya farklı tedaviler önerilebilir; bu bir tutarsızlık değil, kişiye özel karar vermenin doğal sonucudur.',
+          'PROSTAT KANSERİNDE ÇOĞU ZAMAN BİRDEN FAZLA MAKUL YOL VARDIR. Aktif izlem, cerrahi ve radyoterapi aynı hasta için savunulabilir olabilir; aralarındaki fark yan etki profili ve takip gerekliliğidir. Bu nedenle doğru soru "hangisi daha iyi" değil, "hangi yan etkiyle yaşamayı tercih ederim" sorusudur.',
+          'KARAR İÇİN ACELE ETMEYİN. Bu hastalıkta birkaç haftalık bir karar süresi tıbbi olarak sorun yaratmaz. Size hemen karar vermeniz için baskı yapılıyorsa, bu baskının tıbbi bir gerekçesi olup olmadığını sorun. İkinci görüş almak hakkınızdır ve tedaviyi nerede olacağınızı değiştirmek zorunda bırakmaz.'
         ],
         eligibility: {
           suitable: [
@@ -14110,7 +14168,11 @@ export const treatments: Treatment[] = [
           {
             q: 'Ailemde prostat kanseri var, ne yapmalıyım?',
             a: 'Birinci derece akrabasında prostat kanseri olan erkeklerde değerlendirmeye daha erken başlanması önerilir. Hangi yaşta başlanacağı ve hangi sıklıkta tekrarlanacağı kişisel risk profilinize göre belirlenir; bunu hekiminizle konuşmanız doğru olur.'
-          }
+          },
+          { q: 'Gelmeden önce hangi belgeleri göndermeliyim?', a: 'PSA değerlerinizin zaman içindeki seyri, biyopsi patoloji raporunuzun tamamı (kaç kor alındığı, kaçında tümör olduğu, Gleason veya ISUP derecesi ve her korun tutulum yüzdesi), MR raporu ve MR görüntülerinin kendisi, varsa evreleme tetkikleri, kullandığınız ilaçların listesi, diğer hastalıklarınız ve yaşınız. Son üçü ayrıntı değildir; hangi tedavinin uygun olduğunu doğrudan etkiler.' },
+          { q: 'Aktif izlem "hiçbir şey yapmamak" mı?', a: 'Hayır ve bu yanlış anlaşılma sık görülür. Aktif izlem; düzenli PSA ölçümü, muayene, MR ve gerektiğinde tekrar biyopsi ile yakın takip demektir. Disiplin gerektirir ve takipten çıkıldığında anlamını yitirir. Buna karşılık uygun hastada gereksiz yan etkilerden korur ve hem cerrahi hem radyoterapi seçeneğini açık bırakır.' },
+          { q: 'Patoloji sonucum beklenenden kötü çıkarsa ne olur?', a: 'Bu ihtimal ameliyat öncesinde konuşulmalıdır. Çıkarılan dokuda cerrahi sınırda tümör bulunması veya hastalığın düşünülenden ileri evrede çıkması mümkündür. Bu, ameliyatın başarısız olduğu anlamına gelmez; ek tedavi gerekebileceği anlamına gelir. Genellikle radyoterapi, bazen hormon tedavisi gündeme gelir.' },
+          { q: 'Tedaviden sonra takip nasıl yapılır?', a: 'Takibin temel ölçütü PSA değeridir ve belirli aralıklarla ölçülür. Yurt dışından geliyorsanız bu ölçümleri kendi ülkenizde yaptırmanız beklenir. Ayrılmadan önce şunları netleştirin: sonuçları kim değerlendirecek, nasıl ileteceksiniz ve bu düzenleme ne kadar sürecek. Genel bir destek vaadi yerine sorumlu bir isim isteyin.' }
         ],
         sources: [
           {
@@ -15102,7 +15164,9 @@ export const treatments: Treatment[] = [
           'EN ÖNEMLİ KURAL — ONKOLOJİK GÜVENLİK ÖNCE GELİR: Sinir koruma, kanserin tam olarak çıkarılması pahasına yapılmaz. Tümör sinir demetine komşuysa veya o bölgeye uzanıyorsa, demet korunmaya çalışıldığında geride kanser hücresi kalma (pozitif cerrahi sınır) riski artar. Böyle bir durumda doğru karar, sinir korumaktan vazgeçmektir. Cinsel işlev önemlidir; ancak hastalığın kontrolü önceliklidir.',
           'Sinir koruma bir "evet-hayır" seçeneği değildir, derecelidir. İki taraflı tam koruma, tek taraflı koruma ve kısmi koruma mümkündür. Cerrah, prostatı saran fasya katmanlarının hangisinden geçeceğine karar verir; bu plan ne kadar prostata yakın olursa sinirler o kadar çok korunur, ancak onkolojik güvenlik payı o kadar azalır.',
           'Kararı belirleyen başlıca etkenler: tümörün multiparametrik MR’daki yeri ve kapsülle ilişkisi, biyopsi sonucu (ISUP derecesi ve hangi kadranlarda tümör olduğu), PSA değeri, parmakla muayene bulgusu ve ameliyat öncesi ereksiyon işleviniz. Bu değerlendirme ameliyat öncesinde yapılır, ancak ameliyat sırasında görülen anatomiye göre güncellenebilir.',
-          'DÜRÜST BEKLENTİ: Sinirlerin korunması, ereksiyon işlevinin geri dönme ŞANSINI artırır; geri döneceğini GARANTİ ETMEZ. Sonucu belirleyen başka etkenler de vardır: yaşınız, ameliyat öncesi ereksiyon kaliteniz, diyabet ve kalp-damar hastalığı varlığı, sigara kullanımı ve korumanın tek mi çift taraflı mı yapılabildiği. Toparlanma aylar sürer ve genellikle kademeli olur.'
+          'DÜRÜST BEKLENTİ: Sinirlerin korunması, ereksiyon işlevinin geri dönme ŞANSINI artırır; geri döneceğini GARANTİ ETMEZ. Sonucu belirleyen başka etkenler de vardır: yaşınız, ameliyat öncesi ereksiyon kaliteniz, diyabet ve kalp-damar hastalığı varlığı, sigara kullanımı ve korumanın tek mi çift taraflı mı yapılabildiği. Toparlanma aylar sürer ve genellikle kademeli olur.',
+          'BU TEKNİK BİR TERCİH DEĞİL, BİR UYGUNLUK MESELESİDİR. Sinirlerin korunup korunamayacağı kanserin yerleşimine ve yaygınlığına bağlıdır. Değişmeyen kural şudur: önce kanserin tamamen çıkarılması, sonra mümkünse sinirin korunması. Bu sıra hiçbir koşulda tersine çevrilmez.',
+          'Karar ikili de değildir. Kanser prostatın bir tarafındaysa o taraf gereken genişlikte çıkarılıp diğer tarafta koruma yapılabilir; ayrıca sinir demetine ne kadar yakın çalışılacağı da ayarlanabilir. Bu nedenle plan ameliyat öncesinde kesinleştirilemez ve ameliyat sırasındaki görüntüye göre güncellenebilir.'
         ],
         eligibility: {
           suitable: [
@@ -15267,7 +15331,11 @@ export const treatments: Treatment[] = [
           {
             q: 'Ameliyattan önce yapabileceğim bir şey var mı?',
             a: 'Evet. Sigarayı bırakmak, kan şekerini ve tansiyonu düzenlemek, fiziksel aktiviteyi artırmak damar sağlığını destekler ve toparlanma şansını olumlu etkiler. Ameliyat öncesi ereksiyon kaliteniz, ameliyat sonrası sonucun en güçlü belirleyicilerinden biridir.'
-          }
+          },
+          { q: 'Ameliyat öncesi cinsel işlevim bu kararı etkiler mi?', a: 'Evet ve bu en çok göz ardı edilen başlıktır. Ameliyattan önce belirgin sertleşme sorunu olan bir hastada sinirlerin korunması beklenen faydayı sağlamayabilir. Bu nedenle değerlendirmede mevcut işlev durumunuzun açıkça sorgulanması ve kaydedilmesi gerekir; sonrasında neyin değişip neyin değişmediğini anlamanın başka yolu yoktur.' },
+          { q: 'Sinirler korunduysa ne zaman sonuç almayı beklemeliyim?', a: 'Sinir dokusu ameliyat sırasında gerilme ve ısı etkisine maruz kalır; toparlanması aylar sürer ve bu süre 6–12 ayı bulabilir. Bu dönemde erken bir değerlendirme yapıp umutsuzluğa kapılmak doğru değildir. Bu süreçte penil rehabilitasyon adı verilen bir yaklaşım uygulanabilir; bunu kontrollerinizde gündeme getirin.' },
+          { q: 'Hangi belgeler bu kararın verilmesi için gerekli?', a: 'Biyopsi patoloji raporunuzun tamamı (hangi bölgelerden alınan örneklerde tümör çıktığı ve dereceleri), multiparametrik MR raporu ve MR görüntülerinin kendisi, PSA seyriniz, parmakla muayene bulgusu ve ameliyat öncesi cinsel işlev durumunuz. Bu sonuncusu olmadan sinir korumanın size sağlayacağı beklenen fayda değerlendirilemez.' },
+          { q: 'Ameliyat sırasında plan değişirse bana sorulacak mı?', a: 'Hayır; ameliyat sırasında karar verilmesi gereken durumlarda sizi uyandırmak mümkün değildir. Bu nedenle olası senaryolar ameliyat ÖNCESİNDE konuşulur ve hangi durumda korumadan vazgeçileceği birlikte kararlaştırılır. Bu konuşmanın yapılmış olması, onamın gerçek anlamda alınmış olması demektir.' }
         ],
         sources: [
           {
@@ -16292,7 +16360,9 @@ export const treatments: Treatment[] = [
           'ÖNCE EN ÖNEMLİ BİLGİ: Avrupa Üroloji Derneği dâhil başlıca ürolojik kılavuzlar, penis boyu NORMAL SINIRLAR İÇİNDE olan erkeklerde kozmetik amaçlı büyütme işlemlerini rutin olarak ÖNERMEMEKTEDİR. Bu işlemlerin etkinliğine ve uzun dönem güvenliğine ilişkin kanıt düzeyi sınırlıdır. Bu, işlemlerin hiçbir koşulda yapılmadığı anlamına gelmez; seçilmiş ve doğru değerlendirilmiş durumlarla sınırlı olduğu anlamına gelir.',
           'Başvuran erkeklerin önemli bir bölümünde ölçüm normal aralıktadır. Buna rağmen kişi boyunu yetersiz algılıyorsa, bu durum "penil dismorfofobi" olarak adlandırılır ve cerrahi değil, psikoseksüel değerlendirme gerektirir. Ameliyat, algıya dayalı bir rahatsızlığı çözmez; çoğu zaman memnuniyetsizliği sürdürür.',
           'Gerçek tıbbi endikasyonlar ayrıdır ve bunlar cerrahi değerlendirmeyi hak eder: mikropenis, gömük penis (buried penis), travma veya önceki cerrahi sonrası oluşan boy kaybı, Peyronie hastalığına bağlı kısalma ve eğrilik.',
-          'Uygulanan başlıca yaklaşımlar şunlardır. BOY İÇİN: askı bağının (suspansuar ligament) gevşetilmesi — penisin gövde içinde kalan kısmını dışarı çıkararak sarkık hâldeki görünür boyu artırmayı hedefler; ereksiyon hâlindeki boyu artırmaz. ÇEVRE İÇİN: yağ enjeksiyonu, dermal greft veya dolgu maddeleri — kalınlık artışı hedeflenir, ancak emilim, asimetri ve nodül oluşumu görülebilir.'
+          'Uygulanan başlıca yaklaşımlar şunlardır. BOY İÇİN: askı bağının (suspansuar ligament) gevşetilmesi — penisin gövde içinde kalan kısmını dışarı çıkararak sarkık hâldeki görünür boyu artırmayı hedefler; ereksiyon hâlindeki boyu artırmaz. ÇEVRE İÇİN: yağ enjeksiyonu, dermal greft veya dolgu maddeleri — kalınlık artışı hedeflenir, ancak emilim, asimetri ve nodül oluşumu görülebilir.',
+          'BU ALANDA BEKLENTİ YÖNETİMİ, TEKNİĞİN KENDİSİNDEN DAHA BELİRLEYİCİDİR. İnternette dolaşan iddiaların önemli bir bölümü ölçüm koşulları belirtilmemiş, seçilmiş sonuçlardır. Değerlendirmede size özel ve gerçekçi bir aralık konuşulur; bunu yapmayan, muayene etmeden rakam veren bir yaklaşımın dayanağı yoktur.',
+          'AYRICA HER BAŞVURU CERRAHİ GEREKTİRMEZ. Bazı erkeklerde ölçüler normal sınırlardadır ve asıl zorlanma ölçüye ilişkin yoğun kaygıdan kaynaklanır. Bu durumda cerrahi memnuniyet sağlamaz, kaygı sürer. Uygun olmayan hastaya işlem önermemek, bu alandaki en önemli hekim sorumluluğudur.'
         ],
         eligibility: {
           suitable: [
@@ -16463,7 +16533,15 @@ export const treatments: Treatment[] = [
           {
             q: 'Başvurum gizli kalır mı?',
             a: 'Evet. Androloji başvurularında tüm görüşme ve koordinasyon gizlilik esasıyla yürütülür. Kliniğe gelmeden önce ücretli online danışmanlık ile birebir görüşebilirsiniz.'
-          }
+          },
+          { q: 'İnternette gördüğüm sonuçlar gerçekçi mi?', a: 'Çoğu zaman değil. Bu alanda paylaşılan iddiaların önemli bir bölümü seçilmiş, abartılı veya ölçüm koşulları belirtilmemiş sonuçlardır. Gerçekçi beklenti, değerlendirme sırasında size özel olarak konuşulur. Size belirli bir rakam vaat eden bir yaklaşım, henüz sizi muayene bile etmemişse bu vaadin dayanağı yoktur.' },
+          { q: 'Asıl sorunum ölçü olmayabilir mi?', a: 'Evet ve bu dürüstçe konuşulması gereken bir konudur. Bazı erkeklerde ölçüler normal sınırlarda olduğu hâlde ölçüye ilişkin yoğun bir kaygı bulunur. Bu durumda cerrahi memnuniyet sağlamaz; işlem sonrası kaygı sürer, hatta artabilir. Değerlendirmede bu ayrım yapılır ve uygun olmayan hastaya işlem önerilmez.' },
+          { q: 'İşlemden sonra cinsel işlevim etkilenir mi?', a: 'Bu, uygulanan yönteme göre değişir ve ameliyat öncesinde ayrıntılı konuşulur. Dokuda his değişikliği, sertleşme açısı değişikliği ve iyileşme döneminde geçici rahatsızlık olabilir. Cinsel yaşama dönüş zamanı hekiminiz tarafından belirlenir; erken dönüş iyileşmeyi olumsuz etkiler.' },
+          { q: 'Gelmeden önce hangi bilgileri göndermeliyim?', a: 'Beklentinizin ne olduğunu kendi cümlelerinizle, daha önce yapılmış bir işlem varsa kayıtlarını, kullandığınız ilaçları ve diğer hastalıklarınızı. Şeker hastalığı ve sigara kullanımı yara iyileşmesini doğrudan etkilediği için bunları mutlaka belirtin.' },
+          { q: 'İşlemden sonra ne kadar süre cinsel perhiz gerekir?', a: 'Bu süre uygulanan yönteme göre değişir ve hekiminiz tarafından belirlenir. Erken dönüş iyileşmeyi doğrudan olumsuz etkiler; iyileşmekte olan dokunun zorlanması sonucu kalıcı biçimde bozabilir. Bu süreyi kendi kararınızla kısaltmayın.' },
+          { q: 'Sigara kullanıyorum, bir etkisi olur mu?', a: 'Evet ve bu alanda etkisi belirgindir. Sigara dokunun kanlanmasını azaltır, yara iyileşmesini geciktirir ve komplikasyon olasılığını artırır. Ameliyat öncesi dönemde bırakmak, sonucu doğrudan etkileyen ve tamamen sizin elinizde olan tek değişkendir.' },
+          { q: 'Daha önce başka bir merkezde işlem yaptırdım, memnun değilim. Düzeltilebilir mi?', a: 'Bu değerlendirilmesi gereken ayrı bir durumdur ve ilk işlemden daha zordur. Önceki işlemin ne olduğu, hangi malzemenin kullanıldığı ve ameliyat notunuz belirleyicidir; bu bilgiler olmadan ciddi bir plan yapılamaz. Ayrıca düzeltme ameliyatlarında beklentinin daha da dikkatli konuşulması gerekir, çünkü doku bir kez daha müdahale görmüş olacaktır.' },
+          { q: 'İşlem öncesi hangi değerlendirmeler yapılır?', a: 'Muayene, hormon değerlendirmesi ve gerekirse damarsal inceleme yapılır. Ayrıca sertleşme işlevinizin mevcut durumu kaydedilir: bu, işlem sonrası neyin değişip neyin değişmediğini anlamanın tek yoludur. Beklentinizin gerçekçiliği de bu görüşmenin bir parçasıdır ve aceleye getirilmez.' }
         ],
         sources: [
           {
@@ -18719,7 +18797,9 @@ export const treatments: Treatment[] = [
           'HoLEP, bu tıkayıcı dokunun holmiyum lazer yardımıyla kapsülünden ayrılıp bütün hâlinde çıkarıldığı kapalı bir ameliyattır. Holmiyum lazer darbeli (pulsed) çalışır; dokuyu çok kısa aralıklarla gönderilen enerji darbeleriyla keser ve aynı anda kanamayı kontrol eder. İşlem tamamen idrar kanalından yapılır, vücutta kesi açılmaz.',
           'HoLEP’i diğer yöntemlerden ayıran en önemli özellik, PROSTAT HACMİNDEN BAĞIMSIZ uygulanabilmesidir. Avrupa Üroloji Derneği kılavuzlarında, küçük prostatlarda TURP’a ve büyük prostatlarda açık (basit) prostatektomiye alternatif olarak yer alır. Enükleasyon teknikleri arasında uzun dönem takip verisi en geniş olan yöntem de HoLEP’tir.',
           'Çıkarılan doku mesane içinde morselatörle küçültülerek alınır ve tamamı patolojiye gönderilir. Dokuyu buharlaştıran yöntemlerde bu inceleme mümkün olmaz; HoLEP’te ise beklenmedik bir kanser odağı varsa tanı konulabilir.',
-          'HoLEP’in bilinen bir özelliği, cerrah açısından öğrenme eğrisinin dik olmasıdır. Yöntemin sonuçları, uygulayan ekibin deneyimiyle doğrudan ilişkilidir; bu nedenle merkez seçimi, yöntem seçimi kadar önemlidir.'
+          'HoLEP’in bilinen bir özelliği, cerrah açısından öğrenme eğrisinin dik olmasıdır. Yöntemin sonuçları, uygulayan ekibin deneyimiyle doğrudan ilişkilidir; bu nedenle merkez seçimi, yöntem seçimi kadar önemlidir.',
+          'HoLEP ile klasik rezeksiyon arasındaki fark, dokunun ne kadarının alındığıdır: rezeksiyonda iç kısım traşlanır, enükleasyonda ise bütün hâlinde kapsülden ayrılıp çıkarılır. Dokunun tamamen alınması, yıllar içinde yeniden girişim gerekme olasılığını azaltır. Yurt dışından gelen bir hasta için bu kalıcılık, kararın önemli bir parçasıdır.',
+          'Enükleasyonun ikinci belirgin üstünlüğü kanama kontrolüdür: doku kapsülden ayrılırken kanayan damarlar işlem sırasında kapatılır. Bu nedenle kan sulandırıcı kullanan ve kanama açısından riskli hastalarda öne çıkan bir seçenek olarak değerlendirilir.'
         ],
         eligibility: {
           suitable: [
@@ -18886,7 +18966,13 @@ export const treatments: Treatment[] = [
           {
             q: 'Kan sulandırıcı kullanıyorum, HoLEP uygun mu?',
             a: 'Lazer enükleasyonun kanama kontrolü, bu hastalarda yöntemi değerlendirilebilir kılar. Ancak ilacın kesilip kesilmeyeceğine sizi takip eden hekimle birlikte karar verilir; kendi başınıza bırakmayın.'
-          }
+          },
+          { q: 'Prostatım çok büyük, HoLEP yine de yapılabilir mi?', a: 'Evet; enükleasyonun öne çıktığı durum tam olarak budur. Klasik yöntemlerde prostat büyüdükçe işlem süresi ve emilen sıvı miktarı arttığı için pratik bir sınır oluşur. Enükleasyonda böyle bir tavan yoktur; bez tamamen çıkarılabildiği için çok büyük prostatlarda da aynı mantıkla çalışılır.' },
+          { q: 'Kan sulandırıcı kullanıyorum, bu ameliyat bana uygun mu?', a: 'Enükleasyonda doku kapsülden ayrılırken kanayan damarlar işlem sırasında kapatıldığı için kanama kontrolü iyidir ve bu hastalarda öne çıkan bir seçenektir. Yine de ilaç yönetimi her hastada ayrı planlanır; ilacınızı kendi kararınızla kesmeyin ve tam listenizi başvuruda gönderin.' },
+          { q: 'Geçici idrar kaçırma ne kadar sürer?', a: 'Çoğu hastada haftalar içinde düzelir, bazı hastalarda birkaç ayı bulabilir. Önce gece kuruluğu gelir, ardından dinlenirken kontrol; en son düzelen zorlanma anlarıdır. "Hiç olmaz" demek doğru değildir; olabileceğini bilerek ameliyata girmek, beklenmedik bir durumla karşılaşmaktan iyidir.' },
+          { q: 'Ameliyattan sonra ne zaman uçabilirim?', a: 'Sonda burada çekilir ve kontrol yapılır; uçuş onayı bundan sonra verilir. Sonda çekiminin ertesi gününe uçuş planlamayın, çünkü az sayıda hastada sonda geçici olarak yeniden takılabilir.' },
+          { q: 'Hâlâ çocuk sahibi olmak istiyorum, bu ameliyat uygun mu?', a: 'Bunu değerlendirmenin başında söyleyin. Doku çıkarılan yöntemlerden sonra meninin mesaneye geri kaçması sık görülür ve bu doğal yolla çocuk sahibi olmayı zorlaştırır. Çocuk isteği varsa plan değişir; sonradan söylemek geri alınamayan bir sonuç getirir.' },
+          { q: 'Ameliyattan sonra PSA değerim ne olur?', a: 'Prostatın iç kısmı çıkarıldığı için PSA değerinde düşme beklenir. Bu düşmenin ne kadar olacağı çıkarılan doku miktarına bağlıdır. Takipte PSA ölçülmeye devam edilir; önemli olan değerin zaman içindeki seyridir. Bu ameliyat kanser riskini ortadan kaldırmaz, çünkü prostatın dış kısmı yerinde kalır.' }
         ],
         sources: [
           {
@@ -19889,7 +19975,9 @@ export const treatments: Treatment[] = [
           'İyi huylu prostat büyümesi (BPH), yaşla birlikte prostat dokusunun büyüyerek idrar kanalını dıştan sıkıştırmasıdır. Zayıf idrar akımı, idrara başlamakta zorlanma, gece birkaç kez kalkma ve mesanenin tam boşalmadığı hissi en sık görülen şikâyetlerdir. İlerleyen durumlarda idrar yapamama (retansiyon), tekrarlayan idrar yolu enfeksiyonu veya mesane taşı gelişebilir.',
           'ThuLEP, tıkanıklığa yol açan prostat dokusunun tulyum lazer yardımıyla kapsülünden ayrılarak BÜTÜN HÂLİNDE çıkarıldığı endoskopik bir ameliyattır. Vücutta kesi yapılmaz; tüm işlem idrar kanalından girilerek gerçekleştirilir. Klasik TURP’ta doku küçük parçalar hâlinde kazınırken, enükleasyonda tıkayıcı doku bir bütün olarak soyulur; bu yaklaşım açık prostat ameliyatındaki mantığın kapalı yöntemle uygulanmasıdır.',
           'Tulyum lazer sürekli dalga üretir; dokuyu keserken aynı anda küçük damarları da kapatır. Bu özellik kanama kontrolünü kolaylaştırdığı için, büyük hacimli prostatlarda ve kan sulandırıcı kullanımı nedeniyle dikkat gerektiren seçilmiş hastalarda tercih edilebilir hâle gelir.',
-          'Enükleasyonla çıkarılan doku, morselatör adı verilen bir cihazla mesane içinde küçültülerek dışarı alınır ve PATOLOJİK İNCELEMEYE gönderilir. Bu, dokunun buharlaştırıldığı yöntemlere göre önemli bir farktır: beklenmedik bir kanser odağı varsa tanı atlanmaz.'
+          'Enükleasyonla çıkarılan doku, morselatör adı verilen bir cihazla mesane içinde küçültülerek dışarı alınır ve PATOLOJİK İNCELEMEYE gönderilir. Bu, dokunun buharlaştırıldığı yöntemlere göre önemli bir farktır: beklenmedik bir kanser odağı varsa tanı atlanmaz.',
+          'ThuLEP ve HoLEP ayrı ameliyatlar değildir; ikisi de prostatın idrar yolunu sıkıştıran iç kısmını bütün hâlinde ayırıp çıkarır (enükleasyon). Fark, bu ayırma işleminde kullanılan lazerin cinsindedir. Sonuçları birbirine yakındır ve cerrahın hangi sistemle çalıştığı, lazerin markasından daha belirleyicidir.',
+          'Bu yöntemin öne çıktığı durum büyük prostatlardır: klasik yöntemlerde prostat büyüdükçe pratik bir sınır oluşurken, enükleasyonda bez tamamen çıkarılabildiği için böyle bir tavan yoktur. Ayrıca çıkarılan doku patolojik olarak incelenebilir; bu, beklenmedik bir kanserin yakalanmasına imkân verir.'
         ],
         eligibility: {
           suitable: [
@@ -20068,7 +20156,15 @@ export const treatments: Treatment[] = [
           {
             q: 'Ameliyattan sonra ne zaman uçabilirim?',
             a: 'Kontrol muayenesi yapıldıktan sonra, genellikle işlemden 7 gün sonra uçuş onayı verilir. Uzun uçuşlarda pıhtı riskini azaltmak için hareket ve sıvı alımı önerilir.'
-          }
+          },
+          { q: 'ThuLEP ile HoLEP arasında benim için anlamlı bir fark var mı?', a: 'İkisi de aynı işi yapar: prostatın idrar yolunu sıkıştıran iç kısmını bütün hâlinde ayırıp çıkarır. Fark, kullanılan lazerin cinsindedir. Sonuçları birbirine yakındır ve cerrahın hangi sistemle daha çok çalıştığı, lazerin markasından daha belirleyicidir. Sorulması gereken soru markanın ne olduğu değil, prostatın tamamının çıkarılıp çıkarılmayacağıdır.' },
+          { q: 'Ameliyattan sonra idrar kaçırır mıyım?', a: 'Prostatın iç kısmı çıkarıldığında idrar tutma görevi tek bir kasa kalır ve bu kasın uyum sağlaması zaman alır. Bu nedenle bir süre kaçırma görülebilir; çoğu hastada haftalar içinde düzelir. Pelvik taban egzersizlerini ameliyattan ÖNCE öğrenmek bu süreci belirgin biçimde kolaylaştırır.' },
+          { q: 'Çıkarılan doku inceleniyor mu?', a: 'Evet ve bu önemli bir ayrıntıdır. Doku çıkarılan yöntemlerde çıkan parçalar patolojik olarak incelenir; bu inceleme beklenmedik bir kanserin yakalanmasına imkân verebilir. Dokunun çıkarılmadığı yöntemlerde böyle bir inceleme olmaz.' },
+          { q: 'Gelmeden önce hangi belgeleri göndermeliyim?', a: 'Prostat hacmini gösteren görüntüleme, varsa üroflowmetri ve işeme sonrası kalan idrar ölçümü, güncel PSA değeri, idrar tahlili, kullandığınız tüm ilaçların listesi (özellikle kan sulandırıcılar) ve diğer hastalıklarınız.' },
+          { q: 'Ameliyattan sonra ne zaman uçabilirim?', a: 'Sonda burada çekilir ve kontrol yapılır; uçuş onayı bundan sonra verilir. Sonda çekiminin ertesi gününe uçuş planlamayın, çünkü az sayıda hastada sonda geçici olarak yeniden takılmak zorunda kalabilir ve bu durum hastane yakınındayken kolayca çözülür.' },
+          { q: 'Şikâyetlerim ameliyattan sonra tekrar başlarsa ne olur?', a: 'Her tekrar prostat kaynaklı olmayabilir. Mesane kaynaklı sıkışma ve sık idrara çıkma şikâyetleri prostat ameliyatından sonra da devam edebilir, çünkü bunların kaynağı prostat değildir. Bu nedenle yeniden değerlendirme yapılır; doğrudan ikinci bir prostat girişimi düşünülmez.' },
+          { q: 'Ameliyat kaç gün hastanede kalmamı gerektirir?', a: 'Genellikle bir gece yeterlidir. Ancak Türkiye\'deki toplam kalış sürenizi belirleyen hastane yatışı değil, sondanın çekilmesi ve sonrasındaki kontroldür. Bu nedenle kalış planınızı yatış süresine göre değil, sonda sürecine göre yapın ve birkaç gün marj bırakın.' },
+          { q: 'Ameliyattan önce kan sulandırıcımı kesmeli miyim?', a: 'Kendi kararınızla kesinlikle kesmeyin. Bu ilaçların ne zaman ve nasıl yönetileceği, onları size yazan hekimle birlikte planlanır; bazı hastalarda kesilmesi daha riskli olabilir. Tam ilaç listenizi başvuru sırasında gönderin ki bu plan siz yola çıkmadan önce yapılsın.' }
         ],
         sources: [
           {
