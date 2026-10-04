@@ -15,6 +15,715 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
+     * Kadın ürolojisi hub'ının ikinci alt sayfası; stres inkontinansın
+     * karşı kutbu (prompt m.4.1). Sakral nöromodülasyon, botoks ve pelvik taban
+     * AYRI İNCE SAYFALAR yerine tedavi basamağı içinde ele alınmıştır —
+     * klinik olarak doğru olan budur.
+     * DÖRT DÜRÜSTLÜK NOKTASI:
+     * 1. SIKIŞMA + İDRARDA KAN BASİT AAM DEĞİLDİR; sistoskopi gerekir.
+     *    Bu bir güvenlik mesajıdır, atlanmamalıdır.
+     * 2. ANTİKOLİNERJİK İLAÇLARIN YAŞLIDA BİLİŞSEL ETKİ ENDİŞESİ yazılıdır.
+     * 3. BOTOKS SONRASI KENDİ KENDİNE SONDA TAKMA İHTİMALİ açıkça belirtilmiş;
+     *    hastanın buna istekli olması şart koşulmuştur.
+     * 4. SAKRAL NÖROMODÜLASYONDA ÖNCE TEST DÖNEMİ vardır — hasta kalıcı
+     *    cihaza baştan mecbur değildir. Bu hasta lehine bir gerçektir.
+     * AAM'nin genellikle YÖNETİLEN bir durum olduğu, "kesin kür" vaat
+     * edilmediği yazılmıştır.
+     * Kaynak: EAU Non-neurogenic Female LUTS kılavuzu.
+     * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     */
+    slug: 'asiri-aktif-mesane',
+    parent: 'kadin-urolojisi',
+    lastReviewed: '2026-10-04',
+    icon: 'female',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'Aşırı Aktif Mesane ve Sıkışma Tipi Kaçırma',
+        summary:
+          'Ani ve dayanılmaz tuvalete gitme ihtiyacı, sık idrara çıkma ve bazen yetişememe. Tedavi basamaklıdır ve çoğu hastada ilaç ya da ameliyata gerek kalmadan belirgin düzelme sağlanır.',
+        metaTitle: 'Aşırı Aktif Mesane: Nedenleri ve Tedavi Basamakları',
+        metaDescription:
+          'Sıkışma tipi kaçırmanın nedenleri, önce nelerin dışlanması gerektiği, mesane eğitimi, ilaçlar ve yan etkileri, mesane botoksu ve sakral nöromodülasyon.',
+        quickFacts: {
+          duration: 'Değerlendirme 30–45 dakika',
+          anesthesia: 'Tanıda gerekmez',
+          hospitalStay: 'Yok (botoks ve nöromodülasyon ayrıdır)',
+          stayInTurkey: '3–5 gün (değerlendirme ve botoks için)',
+          returnToWork: 'Aynı gün (botoks sonrası 1–2 gün)',
+          flightClearance: 'Kısıtlama yok'
+        },
+        definition: [
+          'Aşırı aktif mesane (AAM), ani ve ertelenmesi güç bir tuvalete gitme ihtiyacıyla seyreden durumdur. Buna sık idrara çıkma ve gece uyanma eşlik eder; bir kısım hastada tuvalete yetişilemeden kaçırma olur (sıkışma tipi kaçırma). Altta yatan sorun, mesane kasının dolum sırasında istem dışı kasılmasıdır.',
+          'BU, STRES TİPİ KAÇIRMADAN FARKLI BİR HASTALIKTIR. Stres tipinde öksürme veya zorlanma anında, sıkışma hissi olmadan kaçırılır; burada ise önce dayanılmaz bir ihtiyaç doğar. Bu ayrım önemlidir çünkü tedaviler farklıdır: AAM’de askı ameliyatı fayda getirmez. İkisi birlikte olduğunda (karışık tip) hangisinin baskın olduğu belirlenir.',
+          'ÖNCE BAŞKA NEDENLER DIŞLANIR. Aşırı aktif mesane bir dışlama tanısıdır. İdrar yolu enfeksiyonu, mesane taşı, kontrol altında olmayan şeker hastalığı, bazı ilaçlar ve aşırı sıvı veya kafein tüketimi aynı yakınmayı yapar. Bunlar düzeltilmeden ilaca başlamak hem gereksiz hem etkisizdir.',
+          'ÖNEMLİ GÜVENLİK UYARISI: SIKIŞMA YAKINMASINA İDRARDA KAN EŞLİK EDİYORSA BU BASİT BİR AŞIRI AKTİF MESANE DEĞİLDİR. İdrarda kan, mesane içinde araştırılması gereken bir bulgudur ve sistoskopi gerektirir. Özellikle sigara öyküsü olanlarda bu atlanmamalıdır. Yakınmayı "mesanem hassas" diye geçiştirmek tanıyı geciktirir.',
+          'TEDAVİ BASAMAKLIDIR VE İLK BASAMAK İLAÇ DEĞİLDİR. Mesane eğitimi, sıvı ve kafein düzenlemesi ile pelvik taban egzersizi birlikte uygulandığında birçok hastada belirgin düzelme sağlar. Mesane eğitimi, tuvalete gitme aralıklarının kademeli olarak uzatılmasıdır; sıkışma hissi geldiğinde hemen koşmak yerine kısa süre beklemeyi öğrenmek bu işin özüdür.',
+          'GERÇEKÇİ BEKLENTİ: Aşırı aktif mesane çoğu zaman tamamen ortadan kaldırılan değil, YÖNETİLEN bir durumdur. Hedef yakınmanın günlük yaşamınızı kısıtlamayacak düzeye inmesidir. Bu hedefe ulaşmak çoğu hastada mümkündür; "kesin ve kalıcı kür" vaadi ise gerçekçi değildir.'
+        ],
+        eligibility: {
+          suitable: [
+            'Ani sıkışma hissi, sık idrara çıkma ve gece uyanma yakınması olan hastalar',
+            'Sıkışmaya yetişemeden kaçıran hastalar',
+            'Enfeksiyon ve diğer nedenler dışlanmış hastalar',
+            'Mesane eğitimi ve yaşam tarzı düzenlemesinden yeterli fayda görmeyen hastalar — ilaç basamağına geçilir',
+            'İlaca yanıt vermeyen veya yan etkileri nedeniyle ilacı sürdüremeyen hastalar — botoks veya nöromodülasyon gündeme gelir'
+          ],
+          notSuitable: [
+            'İdrarında kan bulunan hastalar — önce sistoskopi ile araştırılmalıdır, bu basit AAM değildir',
+            'Tedavi edilmemiş idrar yolu enfeksiyonu olan hastalar — önce tedavi edilir',
+            'Mesanesini tam boşaltamayan hastalar — AAM ilaçları durumu kötüleştirebilir; önce ürodinamik değerlendirme gerekir',
+            'Stres tipi baskın olan hastalar — tedavi farklıdır',
+            'Botoks için: işlem sonrası gerekirse kendi kendine sonda takmaya istekli veya buna fiziksel olarak uygun olmayan hastalar'
+          ]
+        },
+        technology: [
+          'İşeme günlüğü — kaç kez, ne miktarda, hangi sıkışmayla; tanının temel aracıdır',
+          'İdrar tahlili ve kültürü — enfeksiyonun dışlanması',
+          'İşeme sonrası kalan idrarın ölçülmesi',
+          'Sistoskopi — idrarda kan varsa veya yakınma atipikse',
+          'Ürodinamik inceleme — seçilmiş hastalarda',
+          'Mesane içine botulinum toksini uygulaması',
+          'Sakral nöromodülasyon — önce test dönemi, sonra kalıcı cihaz'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Kadın ürolojisi ve işlevsel üroloji, Doç. Dr. Müslüm Ergün’ün çalışma alanları arasındadır. Aşırı aktif mesanede yaklaşım basamaklıdır: önce nedenin dışlanması, sonra davranışsal tedavi, ardından ilaç ve gerekirse girişimsel seçenekler.'
+        },
+        timeline: [
+          {
+            when: '1. adım',
+            title: 'Diğer nedenlerin dışlanması',
+            body: 'İdrar tahlili ve kültürü yapılır, kan şekeri değerlendirilir, kullanılan ilaçlar gözden geçirilir. İdrarda kan varsa sistoskopi planlanır — bu adım atlanamaz.'
+          },
+          {
+            when: '2. adım',
+            title: 'İşeme günlüğü',
+            body: 'Birkaç gün boyunca ne zaman, ne kadar idrara çıktığınızı ve sıkışmanın şiddetini kaydedersiniz. Bu basit kayıt, pahalı testlerden daha fazla bilgi verir ve tedavinin etkisini ölçmekte de kullanılır.'
+          },
+          {
+            when: '3. adım',
+            title: 'Mesane eğitimi ve yaşam tarzı',
+            body: 'Tuvalete gitme aralıkları kademeli olarak uzatılır. Kafein ve gazlı içecekler azaltılır, akşam sıvı alımı düzenlenir, kabızlık giderilir. Pelvik taban egzersizi sıkışma hissini bastırmakta da yardımcıdır.'
+          },
+          {
+            when: '4. adım',
+            title: 'İlaç tedavisi',
+            body: 'Mesane kasını gevşeten ilaçlar başlanır. Etkinin ortaya çıkması haftalar alabilir; bu nedenle erken bırakmamak önemlidir. Yan etki olursa ilaç değiştirilebilir.'
+          },
+          {
+            when: '5. adım',
+            title: 'Mesane içine botulinum toksini',
+            body: 'İlaca yanıt alınamazsa, sistoskopi eşliğinde mesane kasına uygulanır. Etkisi geçicidir ve belirli aralıklarla tekrarlanması gerekir.'
+          },
+          {
+            when: '6. adım',
+            title: 'Sakral nöromodülasyon',
+            body: 'Mesaneyi kontrol eden sinirlerin hafif elektrik uyarısıyla düzenlenmesi. Önce geçici bir test dönemi uygulanır; yalnızca fayda görülürse kalıcı cihaz yerleştirilir.'
+          }
+        ],
+        risks: [
+          'TANININ ATLANMASI: Sıkışma yakınmasına idrarda kan eşlik ediyorsa ve bu araştırılmazsa, mesane içindeki bir sorun gözden kaçabilir. Bu sayfadaki en önemli uyarıdır',
+          'İlaç yan etkileri: ağız kuruluğu, kabızlık, bulanık görme — ilacın bırakılmasının en sık nedenidir',
+          'YAŞLI HASTALARDA BİLİŞSEL ETKİ: Antikolinerjik grubu ilaçların ileri yaşta dikkat ve bellek üzerine etkisi konusunda kaygılar bildirilmiştir. Bu nedenle yaşlı hastalarda ilaç seçimi ve toplam antikolinerjik yük dikkatle değerlendirilmelidir',
+          'BOTOKS SONRASI İDRAR YAPAMAMA: Mesane kası fazla gevşerse mesane tam boşalmayabilir ve geçici olarak kendi kendine sonda takmak gerekebilir. Bu ihtimal işlem öncesinde konuşulmalı ve hasta buna istekli olmalıdır; aksi hâlde botoks uygun bir seçenek değildir',
+          'Botoks sonrası idrar yolu enfeksiyonu',
+          'Botoksun etkisinin geçici olması — tekrar uygulama gerekir',
+          'Nöromodülasyonda: cihaz bölgesinde ağrı, elektrot yer değiştirmesi, batarya değişimi ihtiyacı, enfeksiyon',
+          'Yakınmanın tamamen ortadan kalkmaması — hedef yönetimdir, kür değildir'
+        ],
+        alternatives: [
+          'Mesane eğitimi ve sıvı-kafein düzenlemesi — ilk basamak, ilaçsız',
+          'Pelvik taban egzersizi — sıkışma hissini bastırmakta yardımcıdır',
+          'Kilo verme ve kabızlığın giderilmesi',
+          'Ağızdan ilaç tedavisi — mesane kasını gevşeten gruplar',
+          'Vajinal östrojen — menopoz sonrası seçilmiş hastalarda, yakınmayı azaltabilir',
+          'Mesane içine botulinum toksini — ilaca yanıtsız hastalarda, etkisi geçici',
+          'Tibial sinir uyarımı — daha az girişimsel, seanslar hâlinde uygulanır',
+          'Sakral nöromodülasyon — test dönemi sonrası kalıcı cihaz'
+        ],
+        comparison: {
+          title: 'İlaca yanıt alınamadığında: botoks, tibial uyarım ve nöromodülasyon',
+          columns: ['Ölçüt', 'Mesane botoksu', 'Tibial sinir uyarımı', 'Sakral nöromodülasyon'],
+          rows: [
+            { label: 'Girişim düzeyi', values: ['Sistoskopi eşliğinde enjeksiyon', 'Ayak bileğinden ince iğne', 'Cerrahi cihaz yerleştirme'] },
+            { label: 'Etki süresi', values: ['Geçici — tekrar gerekir', 'Seanslar sürdürülmelidir', 'Kalıcı cihazla sürekli'] },
+            { label: 'Önce deneme imkânı', values: ['Yok — uygulanır ve beklenir', 'Seanslarla denenebilir', 'VAR — test dönemi sonrası karar'] },
+            { label: 'Başlıca risk', values: ['İdrar yapamama, sonda ihtiyacı', 'Düşük', 'Cihaz sorunları, batarya değişimi'] },
+            { label: 'Kime uygun', values: ['Gerekirse sonda takmaya istekli hastalar', 'Düzenli seansa gelebilen hastalar', 'Diğerleri yetersizse'] }
+          ],
+          note:
+            'Sakral nöromodülasyonun test dönemi önemli bir avantajdır: kalıcı cihaza baştan karar vermek zorunda değilsiniz, önce fayda görüp görmediğinizi denersiniz.'
+        },
+        recovery: [
+          {
+            period: 'Mesane eğitimi dönemi',
+            body: 'İlk haftalarda zorlanmak olağandır. Aralıkları birden değil kademeli uzatın; günlük tutmak ilerlemeyi görmenizi sağlar.'
+          },
+          {
+            period: 'İlaç başlangıcı — ilk 4–8 hafta',
+            body: 'Etkinin ortaya çıkması zaman alır. Ağız kuruluğu ve kabızlık görülebilir; su tüketimi ve lifli beslenme yardımcı olur. Yan etki dayanılmazsa ilacı kendiniz kesmeden hekiminize söyleyin.'
+          },
+          {
+            period: 'Botoks sonrası ilk hafta',
+            body: 'İdrarda yanma ve hafif kanama olabilir. Mesanenin tam boşalıp boşalmadığı kontrol edilir. İdrar yapmakta zorlanırsanız hemen başvurun.'
+          },
+          {
+            period: 'Botoks sonrası 2–12. hafta',
+            body: 'Etki bu dönemde en belirgindir. Zamanla azaldığında tekrar uygulama planlanır.'
+          },
+          {
+            period: 'Nöromodülasyon test dönemi',
+            body: 'Birkaç gün–hafta süren denemede günlük tutarak fayda değerlendirilir. Anlamlı düzelme varsa kalıcı cihaz planlanır.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat; hangi basamağın uygulanacağına göre belirgin biçimde değişir (değerlendirme, botoks veya nöromodülasyon). Kesin teklif, basamak belirlendikten sonra verilir.'
+        },
+        packageIncludes: [
+          'Kadın ürolojisi değerlendirmesi ve işeme günlüğü yorumu',
+          'İdrar tahlili ve kültürü',
+          'İşeme sonrası kalan idrar ölçümü',
+          'Gerekirse sistoskopi veya ürodinamik inceleme',
+          'Mesane eğitimi ve pelvik taban egzersizi eğitimi',
+          'Uygulanacaksa mesane içi botoks işlemi',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve ülkenize döndükten sonra uzaktan takip'
+        ],
+        faqs: [
+          {
+            q: 'Sürekli tuvalete gidiyorum ama tahlillerim normal. Bir şeyim yok mu?',
+            a: 'Tahlillerin normal olması yakınmanızın gerçek olmadığı anlamına gelmez. Aşırı aktif mesanede idrar tahlili ve görüntüleme çoğu zaman normaldir; tanı yakınmaya ve işeme günlüğüne dayanır. Yakınmanız gerçektir ve tedavi edilebilir.'
+          },
+          {
+            q: 'İdrarımda da ara sıra kan görüyorum, bu normal mi?',
+            a: 'Hayır ve bu önemlidir. Sıkışma yakınmasına idrarda kan eşlik ediyorsa, bu basit bir aşırı aktif mesane değildir. Mesane içinde araştırılması gereken bir durum olabilir ve sistoskopi gerekir. Özellikle sigara öykünüz varsa bu araştırma ertelenmemelidir.'
+          },
+          {
+            q: 'Mesane eğitimi gerçekten işe yarıyor mu?',
+            a: 'Evet ve çoğu hasta hafife alır. Sıkışma hissi geldiğinde hemen tuvalete koşmak mesaneyi daha küçük hacimlerde kasılmaya alıştırır; bu bir kısır döngüdür. Eğitimde amaç bu döngüyü kırmaktır. İlk haftalar zordur, ancak düzenli uygulandığında birçok hastada ilaç ihtiyacını azaltır veya ortadan kaldırır.'
+          },
+          {
+            q: 'İlacı ne kadar kullanacağım? Yan etkileri rahatsız ediyor.',
+            a: 'Ağız kuruluğu ve kabızlık en sık yan etkilerdir ve ilacın bırakılmasının başlıca nedenidir. İlacı kendiniz kesmeyin — farklı bir gruba geçmek veya dozu ayarlamak çoğu zaman sorunu çözer. Ayrıca etkinin ortaya çıkması haftalar alabilir; erken bırakmak "işe yaramadı" yanılgısına yol açar.'
+          },
+          {
+            q: 'Annem yaşlı, bu ilaçlar hafızasını etkiler mi?',
+            a: 'Bu haklı bir sorudur. Antikolinerjik grubu ilaçların ileri yaşta dikkat ve bellek üzerine etkisi konusunda kaygılar bildirilmiştir. Bu nedenle yaşlı hastalarda ilaç seçimi dikkatle yapılmalı, hastanın kullandığı diğer ilaçlarla birlikte toplam yük değerlendirilmelidir. Bu konuyu hekiminizle açıkça konuşun; alternatif ilaç grupları ve ilaçsız seçenekler vardır.'
+          },
+          {
+            q: 'Mesane botoksu sonrası sonda takmam gerekir mi?',
+            a: 'Bir kısım hastada mesane fazla gevşer ve tam boşalmaz; bu durumda geçici olarak kendi kendinize sonda takmanız gerekebilir. Bu ihtimal düşük olsa da gerçektir ve işlem öncesinde konuşulmalıdır. Buna istekli değilseniz veya fiziksel olarak uygun değilseniz botoks sizin için doğru seçenek olmayabilir.'
+          },
+          {
+            q: 'Botoksun etkisi kalıcı mı?',
+            a: 'Hayır, geçicidir. Etki zamanla azalır ve belirli aralıklarla tekrarlanması gerekir. Bu bir başarısızlık değil, yöntemin bilinen özelliğidir ve baştan bilinmesi gerekir.'
+          },
+          {
+            q: 'Sakral nöromodülasyonda doğrudan cihaz mı takılıyor?',
+            a: 'Hayır — ve bu önemli bir avantajdır. Önce geçici bir test dönemi uygulanır. Bu dönemde günlük tutarak gerçekten fayda görüp görmediğiniz değerlendirilir. Yalnızca anlamlı düzelme varsa kalıcı cihaz yerleştirilir. Yani kalıcı cihaza baştan karar vermek zorunda değilsiniz.'
+          },
+          {
+            q: 'Bu hastalık tamamen geçer mi?',
+            a: 'Aşırı aktif mesane çoğu zaman tamamen ortadan kaldırılan değil, yönetilen bir durumdur. Hedef, yakınmanın günlük yaşamınızı kısıtlamayacak düzeye inmesidir ve bu hedefe ulaşmak çoğu hastada mümkündür. Size kesin ve kalıcı kür vaat eden bir yaklaşıma karşı dikkatli olun.'
+          },
+          {
+            q: 'Gece de kalkıyorum, bunun ayrı bir nedeni olabilir mi?',
+            a: 'Evet. Gece idrara kalkmanın nedeni her zaman mesane değildir: akşam saatlerinde fazla sıvı alımı, bacaklarda biriken ödemin gece dolaşıma geçmesi, uyku apnesi, kalp yetmezliği ve bazı ilaçlar da bunu yapar. Bu nedenle gece uyanma ayrıca sorgulanır; yalnızca mesaneye yönelik tedavi her zaman yeterli olmaz.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Non-neurogenic Female LUTS — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts'
+          }
+        ]
+      },
+      en: {
+        title: 'Overactive Bladder and Urgency Incontinence',
+        summary:
+          'A sudden, hard-to-defer need to pass urine, going frequently, and sometimes not getting there in time. Treatment is stepwise, and most women improve markedly without needing medication or surgery.',
+        metaTitle: 'Overactive Bladder: Causes and the Steps of Treatment',
+        metaDescription:
+          'The causes of urgency incontinence, what must be excluded first, bladder training, medication and its side effects, bladder Botox and sacral neuromodulation.',
+        quickFacts: {
+          duration: 'Assessment 30–45 minutes',
+          anesthesia: 'Not needed for diagnosis',
+          hospitalStay: 'None (Botox and neuromodulation are separate)',
+          stayInTurkey: '3–5 days (for assessment and Botox)',
+          returnToWork: 'Same day (1–2 days after Botox)',
+          flightClearance: 'No restriction'
+        },
+        definition: [
+          'Overactive bladder (OAB) is a condition marked by a sudden need to pass urine that is hard to put off. It is accompanied by going frequently and waking at night; in some women the leak happens before the toilet is reached (urgency incontinence). The underlying problem is involuntary contraction of the bladder muscle during filling.',
+          'THIS IS A DIFFERENT CONDITION FROM STRESS INCONTINENCE. In the stress type the leak occurs with coughing or straining and without any urge; here an overwhelming need comes first. The distinction matters because the treatments differ: a sling operation brings no benefit in OAB. Where both occur together (mixed type), it is established which predominates.',
+          'OTHER CAUSES ARE EXCLUDED FIRST. Overactive bladder is a diagnosis of exclusion. A urinary tract infection, a bladder stone, poorly controlled diabetes, certain medicines and excessive fluid or caffeine all produce the same symptoms. Starting medication before these are corrected is both unnecessary and ineffective.',
+          'AN IMPORTANT SAFETY WARNING: IF URGENCY IS ACCOMPANIED BY BLOOD IN THE URINE, THIS IS NOT SIMPLE OVERACTIVE BLADDER. Blood in the urine is a finding that must be investigated inside the bladder and requires cystoscopy. This must not be overlooked, particularly in anyone with a smoking history. Dismissing the symptom as "a sensitive bladder" delays the diagnosis.',
+          'TREATMENT IS STEPWISE AND THE FIRST STEP IS NOT MEDICATION. Bladder training, managing fluid and caffeine, and pelvic floor exercises together produce marked improvement in many women. Bladder training means lengthening the intervals between visits to the toilet step by step; the essence of it is learning to wait briefly when the urge comes rather than rushing straight there.',
+          'A REALISTIC EXPECTATION: overactive bladder is usually a condition that is MANAGED rather than abolished. The aim is to bring symptoms down to a level that does not restrict your daily life, and that aim is achievable for most women. A promise of a definitive, permanent cure is not realistic.'
+        ],
+        eligibility: {
+          suitable: [
+            'Women with sudden urgency, frequency and waking at night',
+            'Women who leak before reaching the toilet',
+            'Women in whom infection and other causes have been excluded',
+            'Women who gain insufficient benefit from bladder training and lifestyle change — the medication step follows',
+            'Women who do not respond to medication or cannot continue it because of side effects — Botox or neuromodulation comes into consideration'
+          ],
+          notSuitable: [
+            'Women with blood in the urine — this must be investigated by cystoscopy first; it is not simple OAB',
+            'Women with an untreated urinary tract infection — this is treated first',
+            'Women who do not empty the bladder fully — OAB medicines can make matters worse; urodynamic assessment is needed first',
+            'Women in whom the stress type predominates — the treatment differs',
+            'For Botox: women who are unwilling, or physically unable, to self-catheterise if it becomes necessary afterwards'
+          ]
+        },
+        technology: [
+          'A bladder diary — how often, how much, with what urgency; the core tool of diagnosis',
+          'Urine test and culture — excluding infection',
+          'Measuring residual urine after voiding',
+          'Cystoscopy — where there is blood in the urine or the picture is atypical',
+          'Urodynamic study — in selected women',
+          'Botulinum toxin instilled into the bladder',
+          'Sacral neuromodulation — a test phase first, then the permanent device'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Female and functional urology are among Assoc. Prof. Müslüm Ergün’s areas of work. The approach in overactive bladder is stepwise: excluding other causes first, then behavioural treatment, then medication and, where needed, interventional options.'
+        },
+        timeline: [
+          {
+            when: 'Step 1',
+            title: 'Excluding other causes',
+            body: 'A urine test and culture are carried out, blood glucose is assessed and your medicines are reviewed. If there is blood in the urine, cystoscopy is planned — that step cannot be skipped.'
+          },
+          {
+            when: 'Step 2',
+            title: 'The bladder diary',
+            body: 'Over a few days you record when and how much you pass urine and how severe the urgency is. This simple record gives more information than expensive tests and is also used to measure the effect of treatment.'
+          },
+          {
+            when: 'Step 3',
+            title: 'Bladder training and lifestyle',
+            body: 'The intervals between visits to the toilet are lengthened step by step. Caffeine and fizzy drinks are reduced, evening fluid intake is adjusted and constipation is relieved. Pelvic floor exercises also help in suppressing the urge.'
+          },
+          {
+            when: 'Step 4',
+            title: 'Medication',
+            body: 'Medicines that relax the bladder muscle are started. The effect can take weeks to appear, so it matters not to give up early. If side effects occur, the drug can be changed.'
+          },
+          {
+            when: 'Step 5',
+            title: 'Botulinum toxin into the bladder',
+            body: 'If medication does not work, it is instilled into the bladder muscle under cystoscopic vision. Its effect is temporary and it has to be repeated at intervals.'
+          },
+          {
+            when: 'Step 6',
+            title: 'Sacral neuromodulation',
+            body: 'Regulating the nerves that control the bladder with a mild electrical signal. A temporary test phase comes first; the permanent device is placed only if benefit is seen.'
+          }
+        ],
+        risks: [
+          'MISSING THE DIAGNOSIS: if urgency is accompanied by blood in the urine and this is not investigated, a problem inside the bladder can be missed. That is the most important warning on this page',
+          'Side effects of medication: dry mouth, constipation, blurred vision — the commonest reason the drug is abandoned',
+          'COGNITIVE EFFECTS IN OLDER PATIENTS: concerns have been reported about the effect of anticholinergic medicines on attention and memory in later life. The choice of drug and the total anticholinergic burden should therefore be weighed carefully in older women',
+          'INABILITY TO PASS URINE AFTER BOTOX: if the bladder muscle relaxes too much, the bladder may not empty fully and temporary self-catheterisation may be required. This possibility must be discussed beforehand and the patient must be willing; otherwise Botox is not a suitable option',
+          'Urinary tract infection after Botox',
+          'The effect of Botox being temporary — repeat treatment is needed',
+          'With neuromodulation: pain at the device site, lead displacement, the need for battery replacement, infection',
+          'The symptoms not disappearing altogether — the aim is management, not cure'
+        ],
+        alternatives: [
+          'Bladder training and fluid/caffeine management — the first step, without medication',
+          'Pelvic floor exercises — these help in suppressing the urge',
+          'Weight loss and relief of constipation',
+          'Oral medication — groups that relax the bladder muscle',
+          'Vaginal oestrogen — in selected women after the menopause, it can reduce symptoms',
+          'Botulinum toxin into the bladder — for women unresponsive to medication; the effect is temporary',
+          'Tibial nerve stimulation — less invasive, given as a course of sessions',
+          'Sacral neuromodulation — a permanent device after a test phase'
+        ],
+        comparison: {
+          title: 'When medication does not work: Botox, tibial stimulation and neuromodulation',
+          columns: ['Criterion', 'Bladder Botox', 'Tibial nerve stimulation', 'Sacral neuromodulation'],
+          rows: [
+            { label: 'Level of intervention', values: ['Injection under cystoscopic vision', 'A fine needle at the ankle', 'Surgical placement of a device'] },
+            { label: 'Duration of effect', values: ['Temporary — repeats needed', 'Sessions must be maintained', 'Continuous, with a permanent device'] },
+            { label: 'Possible to try first?', values: ['No — it is given and you wait', 'Can be tried over sessions', 'YES — decision after a test phase'] },
+            { label: 'Main risk', values: ['Inability to pass urine, need for a catheter', 'Low', 'Device problems, battery replacement'] },
+            { label: 'Who it suits', values: ['Women willing to self-catheterise if needed', 'Women able to attend regular sessions', 'When the others are insufficient'] }
+          ],
+          note:
+            'The test phase of sacral neuromodulation is a real advantage: you do not have to commit to a permanent device at the outset but can first find out whether it helps you.'
+        },
+        recovery: [
+          {
+            period: 'The bladder training period',
+            body: 'Finding it hard in the first weeks is normal. Lengthen the intervals gradually rather than all at once; keeping a diary lets you see your progress.'
+          },
+          {
+            period: 'Starting medication — first 4–8 weeks',
+            body: 'The effect takes time to appear. Dry mouth and constipation may occur; drinking water and a high-fibre diet help. If a side effect is intolerable, tell your doctor rather than stopping the drug yourself.'
+          },
+          {
+            period: 'First week after Botox',
+            body: 'Burning on passing urine and slight bleeding can occur. Whether the bladder empties fully is checked. If you have difficulty passing urine, seek advice at once.'
+          },
+          {
+            period: 'Weeks 2–12 after Botox',
+            body: 'The effect is most marked during this period. When it lessens over time, repeat treatment is planned.'
+          },
+          {
+            period: 'The neuromodulation test phase',
+            body: 'Over a trial of several days to weeks, the benefit is assessed by keeping a diary. If there is meaningful improvement, the permanent device is planned.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies markedly with which step is applied (assessment, Botox or neuromodulation). A firm quotation is given once the step has been determined.'
+        },
+        packageIncludes: [
+          'Female urology assessment and interpretation of the bladder diary',
+          'Urine test and culture',
+          'Measurement of residual urine after voiding',
+          'Cystoscopy or urodynamic study where needed',
+          'Instruction in bladder training and pelvic floor exercises',
+          'The bladder Botox procedure if it is to be given',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and remote follow-up after you return home'
+        ],
+        faqs: [
+          {
+            q: 'I am constantly going to the toilet but my tests are normal. Is there nothing wrong?',
+            a: 'Normal tests do not mean your symptoms are not real. In overactive bladder the urine test and imaging are usually normal; the diagnosis rests on the symptoms and the bladder diary. Your symptoms are real and they can be treated.'
+          },
+          {
+            q: 'I also see blood in my urine occasionally — is that normal?',
+            a: 'No, and it matters. If urgency is accompanied by blood in the urine, this is not simple overactive bladder. It may be a condition inside the bladder that needs investigating, and cystoscopy is required. If you have a smoking history in particular, that investigation should not be deferred.'
+          },
+          {
+            q: 'Does bladder training really work?',
+            a: 'Yes, and most women underestimate it. Rushing to the toilet the moment the urge comes trains the bladder to contract at ever smaller volumes; that is a vicious circle. The point of training is to break it. The first weeks are hard, but applied regularly it reduces or removes the need for medication in many women.'
+          },
+          {
+            q: 'How long will I take the medication? The side effects bother me.',
+            a: 'Dry mouth and constipation are the commonest side effects and the main reason the drug is abandoned. Do not stop it yourself — switching to a different group or adjusting the dose usually solves the problem. The effect can also take weeks to appear; giving up early leads to the mistaken conclusion that "it did not work".'
+          },
+          {
+            q: 'My mother is elderly — will these drugs affect her memory?',
+            a: 'That is a fair question. Concerns have been reported about the effect of anticholinergic medicines on attention and memory in later life. The choice of drug should therefore be made carefully in older patients, and the total burden assessed alongside their other medicines. Discuss this openly with your doctor; alternative drug groups and non-drug options exist.'
+          },
+          {
+            q: 'Will I have to catheterise myself after bladder Botox?',
+            a: 'In some women the bladder relaxes too much and does not empty fully; temporary self-catheterisation may then be needed. The possibility is low but real, and it must be discussed beforehand. If you are unwilling or physically unable to do it, Botox may not be the right option for you.'
+          },
+          {
+            q: 'Is the effect of Botox permanent?',
+            a: 'No, it is temporary. The effect wears off over time and has to be repeated at intervals. That is not a failure but a known feature of the method, and it should be understood from the outset.'
+          },
+          {
+            q: 'With sacral neuromodulation, is the device implanted straight away?',
+            a: 'No — and this is a real advantage. A temporary test phase comes first. During it you keep a diary and it is assessed whether you genuinely benefit. The permanent device is placed only if there is meaningful improvement. In other words, you do not have to commit to a permanent device at the outset.'
+          },
+          {
+            q: 'Will this condition go away completely?',
+            a: 'Overactive bladder is usually a condition that is managed rather than abolished. The aim is to bring symptoms down to a level that does not restrict your daily life, and that is achievable for most women. Be wary of anyone promising a definitive, permanent cure.'
+          },
+          {
+            q: 'I also get up at night — could that have a separate cause?',
+            a: 'Yes. Waking at night to pass urine is not always the bladder: drinking a lot in the evening, fluid that has collected in the legs returning to the circulation at night, sleep apnoea, heart failure and certain medicines all cause it. Night waking is therefore asked about separately; treatment aimed only at the bladder is not always enough.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Non-neurogenic Female LUTS — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts'
+          }
+        ]
+      },
+      de: {
+        title: 'Überaktive Blase und Dranginkontinenz',
+        summary: 'Ein plötzlicher, kaum aufschiebbarer Harndrang, häufiges Wasserlassen und manchmal der Verlust, bevor die Toilette erreicht ist. Die Behandlung ist stufenweise, und die meisten Frauen bessern sich deutlich ohne Medikamente oder Operation.',
+        metaTitle: 'Überaktive Blase: Ursachen und Behandlungsstufen',
+        metaDescription: 'Ursachen der Dranginkontinenz, was zuerst auszuschließen ist, Blasentraining, Medikamente und ihre Nebenwirkungen, Blasen-Botox und sakrale Neuromodulation.',
+        quickFacts: { duration: 'Abklärung 30–45 Minuten', anesthesia: 'Für die Diagnostik nicht nötig', hospitalStay: 'Keiner (Botox und Neuromodulation gesondert)', stayInTurkey: '3–5 Tage (Abklärung und Botox)', returnToWork: 'Am selben Tag (nach Botox 1–2 Tage)', flightClearance: 'Keine Einschränkung' },
+        definition: [
+          'Die überaktive Blase ist ein Zustand mit plötzlichem, schwer aufschiebbarem Harndrang. Hinzu kommen häufiges Wasserlassen und nächtliches Aufwachen; bei einem Teil der Frauen geht Urin verloren, bevor die Toilette erreicht ist (Dranginkontinenz). Zugrunde liegt eine unwillkürliche Kontraktion des Blasenmuskels während der Füllung.',
+          'DIES IST EINE ANDERE ERKRANKUNG ALS DIE BELASTUNGSINKONTINENZ. Dort tritt der Verlust beim Husten oder Pressen auf, ohne Drang; hier entsteht zuerst ein übermächtiges Bedürfnis. Die Unterscheidung zählt, weil die Behandlungen verschieden sind: Eine Schlingenoperation nützt bei der überaktiven Blase nichts. Treten beide zusammen auf (Mischtyp), wird bestimmt, was überwiegt.',
+          'ZUERST WERDEN ANDERE URSACHEN AUSGESCHLOSSEN. Die überaktive Blase ist eine Ausschlussdiagnose. Harnwegsinfekt, Blasenstein, schlecht eingestellter Diabetes, bestimmte Medikamente sowie übermäßige Flüssigkeits- oder Koffeinzufuhr erzeugen dieselben Beschwerden. Mit Medikamenten zu beginnen, bevor diese korrigiert sind, ist unnötig und wirkungslos.',
+          'WICHTIGER SICHERHEITSHINWEIS: GEHT DER DRANG MIT BLUT IM URIN EINHER, IST DAS KEINE EINFACHE ÜBERAKTIVE BLASE. Blut im Urin ist ein Befund, der in der Blase abgeklärt werden muss und eine Blasenspiegelung erfordert. Besonders bei Rauchergeschichte darf das nicht übersehen werden. Die Beschwerde als „empfindliche Blase" abzutun, verzögert die Diagnose.',
+          'DIE BEHANDLUNG IST STUFENWEISE, UND DIE ERSTE STUFE IST KEIN MEDIKAMENT. Blasentraining, geregelte Flüssigkeits- und Koffeinzufuhr sowie Beckenbodentraining bringen zusammen bei vielen Frauen eine deutliche Besserung. Blasentraining bedeutet, die Abstände zwischen den Toilettengängen schrittweise zu verlängern; der Kern ist, beim Drang kurz zu warten statt sofort loszulaufen.',
+          'EINE REALISTISCHE ERWARTUNG: Die überaktive Blase ist meist ein Zustand, der BEHERRSCHT und nicht beseitigt wird. Ziel ist, die Beschwerden auf ein Maß zu senken, das den Alltag nicht einschränkt — und das ist bei den meisten Frauen erreichbar. Die Zusage einer endgültigen, dauerhaften Heilung ist unrealistisch.'
+        ],
+        eligibility: {
+          suitable: ['Frauen mit plötzlichem Harndrang, häufigem Wasserlassen und nächtlichem Aufwachen', 'Frauen, die vor Erreichen der Toilette Urin verlieren', 'Frauen, bei denen Infekt und andere Ursachen ausgeschlossen wurden', 'Frauen, die von Blasentraining und Lebensstiländerung nicht ausreichend profitieren — es folgt die Medikamentenstufe', 'Frauen, die auf Medikamente nicht ansprechen oder sie wegen Nebenwirkungen nicht fortführen können — Botox oder Neuromodulation kommen infrage'],
+          notSuitable: ['Frauen mit Blut im Urin — zuerst Abklärung per Blasenspiegelung; das ist keine einfache überaktive Blase', 'Frauen mit unbehandeltem Harnwegsinfekt — dieser wird zuerst behandelt', 'Frauen, die die Blase nicht vollständig entleeren — die Medikamente können es verschlimmern; zuvor urodynamische Abklärung', 'Frauen mit überwiegender Belastungsinkontinenz — die Behandlung unterscheidet sich', 'Für Botox: Frauen, die nicht bereit oder körperlich nicht in der Lage sind, sich bei Bedarf selbst zu katheterisieren']
+        },
+        technology: ['Miktionstagebuch — wie oft, welche Menge, welcher Drang; das zentrale Diagnosemittel', 'Urinuntersuchung und -kultur — Ausschluss eines Infekts', 'Messung des Restharns nach dem Wasserlassen', 'Blasenspiegelung — bei Blut im Urin oder untypischem Bild', 'Urodynamische Untersuchung — bei ausgewählten Frauen', 'Botulinumtoxin in die Blase', 'Sakrale Neuromodulation — zuerst Testphase, dann dauerhaftes Gerät'],
+        surgeonExperience: { caseVolume: '', note: 'Urogynäkologie und funktionelle Urologie gehören zu den Arbeitsgebieten von Doz. Dr. Müslüm Ergün. Bei der überaktiven Blase ist das Vorgehen stufenweise: zuerst Ausschluss anderer Ursachen, dann Verhaltenstherapie, danach Medikamente und bei Bedarf eingreifende Optionen.' },
+        timeline: [
+          { when: 'Schritt 1', title: 'Ausschluss anderer Ursachen', body: 'Urinuntersuchung und -kultur werden durchgeführt, der Blutzucker beurteilt und die Medikamente durchgesehen. Bei Blut im Urin wird eine Blasenspiegelung geplant — dieser Schritt ist nicht verzichtbar.' },
+          { when: 'Schritt 2', title: 'Das Miktionstagebuch', body: 'Über einige Tage notieren Sie, wann und wie viel Sie Wasser lassen und wie stark der Drang ist. Diese einfache Aufzeichnung liefert mehr als teure Tests und dient auch der Erfolgsmessung.' },
+          { when: 'Schritt 3', title: 'Blasentraining und Lebensstil', body: 'Die Abstände zwischen den Toilettengängen werden schrittweise verlängert. Koffein und kohlensäurehaltige Getränke werden reduziert, die abendliche Trinkmenge angepasst und Verstopfung behoben. Beckenbodentraining hilft zusätzlich, den Drang zu unterdrücken.' },
+          { when: 'Schritt 4', title: 'Medikamentöse Therapie', body: 'Medikamente, die den Blasenmuskel entspannen, werden begonnen. Die Wirkung kann Wochen brauchen; deshalb ist es wichtig, nicht früh aufzugeben. Bei Nebenwirkungen kann das Präparat gewechselt werden.' },
+          { when: 'Schritt 5', title: 'Botulinumtoxin in die Blase', body: 'Spricht die Medikation nicht an, wird es unter Sicht der Blasenspiegelung in den Blasenmuskel eingebracht. Die Wirkung ist vorübergehend und muss in Abständen wiederholt werden.' },
+          { when: 'Schritt 6', title: 'Sakrale Neuromodulation', body: 'Regulierung der blasensteuernden Nerven durch einen schwachen elektrischen Reiz. Zuerst erfolgt eine vorübergehende Testphase; das dauerhafte Gerät wird nur bei nachgewiesenem Nutzen eingesetzt.' }
+        ],
+        risks: ['ÜBERSEHEN DER DIAGNOSE: Geht der Drang mit Blut im Urin einher und wird das nicht abgeklärt, kann ein Problem in der Blase übersehen werden. Das ist der wichtigste Hinweis dieser Seite', 'Nebenwirkungen der Medikamente: Mundtrockenheit, Verstopfung, verschwommenes Sehen — der häufigste Grund für das Absetzen', 'KOGNITIVE EFFEKTE BEI ÄLTEREN PATIENTINNEN: Zur Wirkung anticholinerger Medikamente auf Aufmerksamkeit und Gedächtnis im höheren Alter wurden Bedenken berichtet. Die Präparatewahl und die gesamte anticholinerge Last sollten bei älteren Frauen daher sorgfältig abgewogen werden', 'UNVERMÖGEN ZU URINIEREN NACH BOTOX: Entspannt sich der Blasenmuskel zu stark, entleert sich die Blase womöglich nicht vollständig, und eine vorübergehende Selbstkatheterisierung kann nötig werden. Diese Möglichkeit muss vorher besprochen werden und die Patientin muss dazu bereit sein; andernfalls ist Botox keine geeignete Option', 'Harnwegsinfekt nach Botox', 'Die vorübergehende Wirkung von Botox — Wiederholung nötig', 'Bei der Neuromodulation: Schmerzen an der Geräteregion, Elektrodenverschiebung, Batteriewechsel, Infektion', 'Die Beschwerden verschwinden nicht vollständig — das Ziel ist Beherrschung, nicht Heilung'],
+        alternatives: ['Blasentraining und geregelte Flüssigkeits-/Koffeinzufuhr — erste Stufe, ohne Medikamente', 'Beckenbodentraining — hilft, den Drang zu unterdrücken', 'Gewichtsabnahme und Behebung von Verstopfung', 'Medikamente zum Einnehmen — Gruppen, die den Blasenmuskel entspannen', 'Vaginale Östrogene — bei ausgewählten Frauen nach der Menopause beschwerdelindernd', 'Botulinumtoxin in die Blase — bei Nichtansprechen auf Medikamente; Wirkung vorübergehend', 'Tibialis-Nervenstimulation — weniger eingreifend, in Sitzungen', 'Sakrale Neuromodulation — dauerhaftes Gerät nach einer Testphase'],
+        comparison: {
+          title: 'Wenn Medikamente nicht wirken: Botox, Tibialisstimulation und Neuromodulation',
+          columns: ['Kriterium', 'Blasen-Botox', 'Tibialis-Nervenstimulation', 'Sakrale Neuromodulation'],
+          rows: [
+            { label: 'Grad des Eingriffs', values: ['Injektion unter Blasenspiegelung', 'Feine Nadel am Knöchel', 'Operative Geräteimplantation'] },
+            { label: 'Wirkdauer', values: ['Vorübergehend — Wiederholung nötig', 'Sitzungen müssen fortgeführt werden', 'Dauerhaft mit implantiertem Gerät'] },
+            { label: 'Vorher ausprobierbar?', values: ['Nein — es wird gegeben und abgewartet', 'Über Sitzungen erprobbar', 'JA — Entscheidung nach Testphase'] },
+            { label: 'Hauptrisiko', values: ['Unvermögen zu urinieren, Katheterbedarf', 'Gering', 'Geräteprobleme, Batteriewechsel'] },
+            { label: 'Für wen geeignet', values: ['Frauen, die sich nötigenfalls selbst katheterisieren', 'Frauen, die regelmäßig kommen können', 'Wenn die übrigen nicht genügen'] }
+          ],
+          note: 'Die Testphase der sakralen Neuromodulation ist ein echter Vorteil: Sie müssen sich nicht von vornherein auf ein dauerhaftes Gerät festlegen, sondern prüfen zuerst, ob es Ihnen hilft.'
+        },
+        recovery: [
+          { period: 'Phase des Blasentrainings', body: 'In den ersten Wochen Mühe zu haben ist normal. Verlängern Sie die Abstände schrittweise, nicht auf einmal; ein Tagebuch macht Fortschritte sichtbar.' },
+          { period: 'Medikamentenbeginn — erste 4–8 Wochen', body: 'Die Wirkung braucht Zeit. Mundtrockenheit und Verstopfung können auftreten; Trinken und ballaststoffreiche Kost helfen. Ist eine Nebenwirkung unerträglich, sagen Sie es Ihrem Arzt, statt das Mittel selbst abzusetzen.' },
+          { period: 'Erste Woche nach Botox', body: 'Brennen beim Wasserlassen und leichte Blutung sind möglich. Es wird geprüft, ob sich die Blase vollständig entleert. Bei Schwierigkeiten beim Wasserlassen sofort melden.' },
+          { period: 'Woche 2–12 nach Botox', body: 'In dieser Zeit ist die Wirkung am stärksten. Lässt sie nach, wird eine Wiederholung geplant.' },
+          { period: 'Testphase der Neuromodulation', body: 'Über einige Tage bis Wochen wird der Nutzen anhand eines Tagebuchs beurteilt. Bei deutlicher Besserung wird das dauerhafte Gerät geplant.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Der Preis unterscheidet sich deutlich je nach angewandter Stufe (Abklärung, Botox oder Neuromodulation). Ein verbindliches Angebot erfolgt, sobald die Stufe feststeht.' },
+        packageIncludes: ['Urogynäkologische Abklärung und Auswertung des Miktionstagebuchs', 'Urinuntersuchung und -kultur', 'Messung des Restharns', 'Bei Bedarf Blasenspiegelung oder urodynamische Untersuchung', 'Anleitung zu Blasentraining und Beckenbodentraining', 'Bei Durchführung: Blasen-Botox', 'Transfers Flughafen–Krankenhaus–Hotel', 'Unterkunft (Patientin + 1 Begleitperson)', 'Medizinischer Dolmetscher und Fernbetreuung nach Ihrer Rückkehr'],
+        faqs: [
+          { q: 'Ich muss ständig zur Toilette, meine Befunde sind aber normal. Habe ich nichts?', a: 'Normale Befunde bedeuten nicht, dass Ihre Beschwerden unwirklich sind. Bei der überaktiven Blase sind Urinuntersuchung und Bildgebung meist normal; die Diagnose beruht auf den Beschwerden und dem Miktionstagebuch. Ihre Beschwerden sind real und behandelbar.' },
+          { q: 'Ich sehe gelegentlich auch Blut im Urin, ist das normal?', a: 'Nein, und das ist wichtig. Geht der Drang mit Blut im Urin einher, ist das keine einfache überaktive Blase. Es kann ein Zustand in der Blase vorliegen, der abgeklärt werden muss, und dafür ist eine Blasenspiegelung nötig. Bei Rauchergeschichte sollte diese Abklärung nicht aufgeschoben werden.' },
+          { q: 'Wirkt Blasentraining wirklich?', a: 'Ja, und die meisten unterschätzen es. Beim ersten Drang sofort loszulaufen gewöhnt die Blase daran, sich bei immer kleineren Mengen zusammenzuziehen; das ist ein Teufelskreis. Das Training soll ihn durchbrechen. Die ersten Wochen sind schwer, doch regelmäßig angewandt verringert oder erübrigt es bei vielen Frauen Medikamente.' },
+          { q: 'Wie lange nehme ich das Medikament? Die Nebenwirkungen stören mich.', a: 'Mundtrockenheit und Verstopfung sind die häufigsten Nebenwirkungen und der Hauptgrund für das Absetzen. Setzen Sie es nicht selbst ab — ein Wechsel der Gruppe oder eine Dosisanpassung löst das Problem meist. Zudem kann die Wirkung Wochen brauchen; frühes Aufgeben führt zu dem Trugschluss, „es hat nicht geholfen".' },
+          { q: 'Meine Mutter ist älter — wirken sich diese Mittel auf ihr Gedächtnis aus?', a: 'Eine berechtigte Frage. Zur Wirkung anticholinerger Medikamente auf Aufmerksamkeit und Gedächtnis im höheren Alter wurden Bedenken berichtet. Deshalb sollte die Präparatewahl bei älteren Patientinnen sorgfältig erfolgen und die Gesamtlast zusammen mit den übrigen Medikamenten beurteilt werden. Sprechen Sie das offen an; es gibt alternative Gruppen und Optionen ohne Medikamente.' },
+          { q: 'Muss ich mich nach Blasen-Botox selbst katheterisieren?', a: 'Bei einem Teil der Frauen entspannt sich die Blase zu stark und entleert sich nicht vollständig; dann kann eine vorübergehende Selbstkatheterisierung nötig sein. Die Wahrscheinlichkeit ist gering, aber real, und das muss vorher besprochen werden. Sind Sie dazu nicht bereit oder körperlich nicht in der Lage, ist Botox womöglich nicht die richtige Option.' },
+          { q: 'Hält die Wirkung von Botox an?', a: 'Nein, sie ist vorübergehend. Die Wirkung lässt mit der Zeit nach und muss in Abständen wiederholt werden. Das ist kein Misserfolg, sondern eine bekannte Eigenschaft, die man von Anfang an kennen sollte.' },
+          { q: 'Wird bei der sakralen Neuromodulation sofort ein Gerät eingesetzt?', a: 'Nein — und das ist ein echter Vorteil. Zuerst erfolgt eine vorübergehende Testphase. In dieser wird anhand eines Tagebuchs beurteilt, ob Sie wirklich profitieren. Nur bei deutlicher Besserung wird das dauerhafte Gerät eingesetzt. Sie müssen sich also nicht von vornherein festlegen.' },
+          { q: 'Geht diese Erkrankung ganz weg?', a: 'Die überaktive Blase ist meist ein Zustand, der beherrscht und nicht beseitigt wird. Ziel ist, die Beschwerden auf ein Maß zu senken, das Ihren Alltag nicht einschränkt — das ist bei den meisten Frauen erreichbar. Seien Sie vorsichtig, wenn Ihnen eine endgültige, dauerhafte Heilung zugesagt wird.' },
+          { q: 'Ich stehe auch nachts auf — kann das eine eigene Ursache haben?', a: 'Ja. Nächtliches Wasserlassen liegt nicht immer an der Blase: viel Trinken am Abend, Flüssigkeit aus den Beinen, die nachts in den Kreislauf zurückkehrt, Schlafapnoe, Herzschwäche und bestimmte Medikamente verursachen es ebenfalls. Deshalb wird das nächtliche Aufwachen gesondert erfragt; eine nur auf die Blase gerichtete Behandlung genügt nicht immer.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-neurogenic Female LUTS — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
+        ]
+      },
+      fr: {
+        title: 'Vessie hyperactive et incontinence par urgenturie',
+        summary: 'Un besoin soudain et difficile à différer, des mictions fréquentes et parfois des fuites avant d’atteindre les toilettes. Le traitement est progressif et la plupart des femmes s’améliorent nettement sans médicament ni chirurgie.',
+        metaTitle: 'Vessie hyperactive : causes et étapes du traitement',
+        metaDescription: 'Causes de l’incontinence par urgenturie, ce qu’il faut écarter d’abord, rééducation vésicale, médicaments et effets indésirables, toxine botulique intravésicale et neuromodulation sacrée.',
+        quickFacts: { duration: 'Évaluation 30–45 minutes', anesthesia: 'Non nécessaire au diagnostic', hospitalStay: 'Aucune (toxine et neuromodulation à part)', stayInTurkey: '3–5 jours (évaluation et toxine)', returnToWork: 'Le jour même (1–2 jours après la toxine)', flightClearance: 'Aucune restriction' },
+        definition: [
+          'La vessie hyperactive se manifeste par un besoin d’uriner soudain et difficile à différer. S’y ajoutent des mictions fréquentes et des réveils nocturnes ; chez certaines femmes, la fuite survient avant d’atteindre les toilettes (incontinence par urgenturie). Le problème sous-jacent est une contraction involontaire du muscle vésical pendant le remplissage.',
+          'C’EST UNE AFFECTION DIFFÉRENTE DE L’INCONTINENCE D’EFFORT. Dans celle-ci, la fuite survient à la toux ou à l’effort, sans besoin préalable ; ici, un besoin irrépressible précède. La distinction compte car les traitements diffèrent : une bandelette n’apporte rien dans la vessie hyperactive. Lorsque les deux coexistent (forme mixte), on détermine laquelle prédomine.',
+          'ON ÉCARTE D’ABORD LES AUTRES CAUSES. La vessie hyperactive est un diagnostic d’élimination. Infection urinaire, calcul vésical, diabète mal équilibré, certains médicaments et un apport excessif de liquides ou de caféine donnent les mêmes symptômes. Commencer un traitement avant de les corriger est inutile et inefficace.',
+          'AVERTISSEMENT IMPORTANT : SI L’URGENTURIE S’ACCOMPAGNE DE SANG DANS LES URINES, CE N’EST PAS UNE SIMPLE VESSIE HYPERACTIVE. Le sang dans les urines doit être exploré au niveau de la vessie et impose une cystoscopie. Chez les fumeurs en particulier, cela ne doit pas être négligé. Qualifier le symptôme de « vessie sensible » retarde le diagnostic.',
+          'LE TRAITEMENT EST PROGRESSIF ET LA PREMIÈRE ÉTAPE N’EST PAS MÉDICAMENTEUSE. Rééducation vésicale, gestion des liquides et de la caféine et rééducation périnéale apportent ensemble une nette amélioration chez beaucoup de femmes. La rééducation vésicale consiste à allonger progressivement les intervalles entre les mictions ; l’essentiel est d’apprendre à patienter brièvement au lieu de courir dès l’apparition du besoin.',
+          'UNE ATTENTE RÉALISTE : la vessie hyperactive est le plus souvent une affection que l’on MAÎTRISE plutôt qu’on ne supprime. L’objectif est de ramener les symptômes à un niveau qui ne limite plus la vie quotidienne, et cet objectif est atteignable chez la plupart des femmes. Promettre une guérison définitive n’est pas réaliste.'
+        ],
+        eligibility: {
+          suitable: ['Femmes présentant urgenturie, pollakiurie et réveils nocturnes', 'Femmes qui ont des fuites avant d’atteindre les toilettes', 'Femmes chez qui infection et autres causes ont été écartées', 'Femmes insuffisamment améliorées par la rééducation vésicale et les mesures hygiéno-diététiques — on passe à l’étape médicamenteuse', 'Femmes ne répondant pas aux médicaments ou ne pouvant les poursuivre du fait des effets indésirables — toxine ou neuromodulation s’envisagent'],
+          notSuitable: ['Femmes présentant du sang dans les urines — exploration par cystoscopie d’abord ; ce n’est pas une simple vessie hyperactive', 'Femmes présentant une infection urinaire non traitée — elle est traitée d’abord', 'Femmes ne vidant pas complètement la vessie — les médicaments peuvent aggraver ; bilan urodynamique préalable', 'Femmes chez qui l’incontinence d’effort prédomine — le traitement diffère', 'Pour la toxine : femmes non disposées ou physiquement incapables de pratiquer des autosondages si nécessaire']
+        },
+        technology: ['Calendrier mictionnel — fréquence, volumes, intensité du besoin ; outil central du diagnostic', 'Analyse et culture d’urine — écarter une infection', 'Mesure du résidu post-mictionnel', 'Cystoscopie — en cas de sang dans les urines ou de tableau atypique', 'Bilan urodynamique — chez des patientes sélectionnées', 'Toxine botulique intravésicale', 'Neuromodulation sacrée — phase de test d’abord, puis dispositif définitif'],
+        surgeonExperience: { caseVolume: '', note: 'L’urologie féminine et fonctionnelle fait partie des domaines d’activité du Dr Müslüm Ergün, maître de conférences. Dans la vessie hyperactive, la démarche est progressive : écarter d’abord les autres causes, puis traitement comportemental, ensuite médicaments et si besoin options interventionnelles.' },
+        timeline: [
+          { when: 'Étape 1', title: 'Écarter les autres causes', body: 'Analyse et culture d’urine, évaluation de la glycémie, revue des médicaments. En présence de sang dans les urines, une cystoscopie est programmée — cette étape ne peut être omise.' },
+          { when: 'Étape 2', title: 'Le calendrier mictionnel', body: 'Pendant quelques jours, vous notez quand et combien vous urinez et l’intensité du besoin. Ce relevé simple apporte plus que des examens coûteux et sert aussi à mesurer l’effet du traitement.' },
+          { when: 'Étape 3', title: 'Rééducation vésicale et mode de vie', body: 'Les intervalles entre les mictions sont allongés progressivement. Caféine et boissons gazeuses sont réduites, les apports du soir ajustés, la constipation traitée. La rééducation périnéale aide aussi à inhiber le besoin.' },
+          { when: 'Étape 4', title: 'Traitement médicamenteux', body: 'Des médicaments relaxant le muscle vésical sont instaurés. L’effet peut mettre des semaines à apparaître ; il importe donc de ne pas abandonner tôt. En cas d’effet indésirable, on peut changer de molécule.' },
+          { when: 'Étape 5', title: 'Toxine botulique intravésicale', body: 'Si les médicaments échouent, elle est injectée dans le muscle vésical sous contrôle cystoscopique. Son effet est transitoire et doit être renouvelé.' },
+          { when: 'Étape 6', title: 'Neuromodulation sacrée', body: 'Régulation des nerfs contrôlant la vessie par une faible stimulation électrique. Une phase de test temporaire précède ; le dispositif définitif n’est posé qu’en cas de bénéfice.' }
+        ],
+        risks: ['PASSER À CÔTÉ DU DIAGNOSTIC : si l’urgenturie s’accompagne de sang dans les urines et que cela n’est pas exploré, une affection vésicale peut être méconnue. C’est l’avertissement majeur de cette page', 'Effets indésirables des médicaments : sécheresse buccale, constipation, vision floue — première cause d’arrêt', 'EFFETS COGNITIFS CHEZ LA PERSONNE ÂGÉE : des inquiétudes ont été rapportées quant à l’effet des anticholinergiques sur l’attention et la mémoire à un âge avancé. Le choix du médicament et la charge anticholinergique totale doivent donc être pesés avec soin', 'IMPOSSIBILITÉ D’URINER APRÈS LA TOXINE : si le muscle se relâche trop, la vessie peut ne pas se vider complètement et des autosondages temporaires peuvent être nécessaires. Cette éventualité doit être exposée avant et la patiente doit y consentir ; sinon la toxine n’est pas une option adaptée', 'Infection urinaire après la toxine', 'Caractère transitoire de l’effet de la toxine — renouvellement nécessaire', 'Pour la neuromodulation : douleur au site du dispositif, déplacement de l’électrode, remplacement de la pile, infection', 'Disparition incomplète des symptômes — l’objectif est la maîtrise, non la guérison'],
+        alternatives: ['Rééducation vésicale et gestion liquides/caféine — première étape, sans médicament', 'Rééducation périnéale — aide à inhiber le besoin', 'Perte de poids et traitement de la constipation', 'Médicaments par voie orale — classes relaxant le muscle vésical', 'Œstrogènes par voie vaginale — chez certaines femmes après la ménopause, peuvent réduire les symptômes', 'Toxine botulique intravésicale — en cas d’échec des médicaments ; effet transitoire', 'Stimulation du nerf tibial — moins invasive, par séances', 'Neuromodulation sacrée — dispositif définitif après phase de test'],
+        comparison: {
+          title: 'Quand les médicaments échouent : toxine, stimulation tibiale et neuromodulation',
+          columns: ['Critère', 'Toxine intravésicale', 'Stimulation du nerf tibial', 'Neuromodulation sacrée'],
+          rows: [
+            { label: 'Niveau d’intervention', values: ['Injection sous cystoscopie', 'Aiguille fine à la cheville', 'Pose chirurgicale d’un dispositif'] },
+            { label: 'Durée de l’effet', values: ['Transitoire — à renouveler', 'Les séances doivent être poursuivies', 'Continue avec dispositif permanent'] },
+            { label: 'Essai possible avant ?', values: ['Non — on administre et on attend', 'Essai possible par séances', 'OUI — décision après phase de test'] },
+            { label: 'Risque principal', values: ['Impossibilité d’uriner, besoin de sondage', 'Faible', 'Problèmes de dispositif, remplacement de pile'] },
+            { label: 'À qui cela convient', values: ['Femmes acceptant l’autosondage si besoin', 'Femmes pouvant venir régulièrement', 'Quand les autres ne suffisent pas'] }
+          ],
+          note: 'La phase de test de la neuromodulation sacrée est un avantage réel : vous n’êtes pas tenue de vous engager d’emblée sur un dispositif définitif, vous vérifiez d’abord si cela vous aide.'
+        },
+        recovery: [
+          { period: 'Période de rééducation vésicale', body: 'Trouver cela difficile les premières semaines est normal. Allongez les intervalles progressivement, pas d’un coup ; tenir un calendrier permet de voir les progrès.' },
+          { period: 'Début du médicament — 4 à 8 premières semaines', body: 'L’effet met du temps à apparaître. Sécheresse buccale et constipation sont possibles ; boire et une alimentation riche en fibres aident. Si un effet est intolérable, prévenez votre médecin plutôt que d’arrêter seule.' },
+          { period: 'Première semaine après la toxine', body: 'Brûlures mictionnelles et léger saignement possibles. On vérifie que la vessie se vide complètement. En cas de difficulté à uriner, consultez immédiatement.' },
+          { period: 'Semaines 2 à 12 après la toxine', body: 'L’effet est maximal durant cette période. Lorsqu’il s’atténue, un renouvellement est programmé.' },
+          { period: 'Phase de test de la neuromodulation', body: 'Sur quelques jours à semaines, le bénéfice est évalué au moyen d’un calendrier. En cas d’amélioration significative, le dispositif définitif est programmé.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Le prix varie nettement selon l’étape appliquée (évaluation, toxine ou neuromodulation). Un devis ferme est remis une fois l’étape déterminée.' },
+        packageIncludes: ['Évaluation en urologie féminine et interprétation du calendrier mictionnel', 'Analyse et culture d’urine', 'Mesure du résidu post-mictionnel', 'Cystoscopie ou bilan urodynamique si nécessaire', 'Apprentissage de la rééducation vésicale et périnéale', 'Injection intravésicale de toxine si elle est réalisée', 'Transferts aéroport–hôpital–hôtel', 'Hébergement (patiente + 1 accompagnant)', 'Interprète médical et suivi à distance après votre retour'],
+        faqs: [
+          { q: 'Je vais sans cesse aux toilettes mais mes examens sont normaux. N’ai-je rien ?', a: 'Des examens normaux ne signifient pas que vos symptômes ne sont pas réels. Dans la vessie hyperactive, l’analyse d’urine et l’imagerie sont le plus souvent normales ; le diagnostic repose sur les symptômes et le calendrier mictionnel. Vos symptômes sont réels et se traitent.' },
+          { q: 'Je vois aussi parfois du sang dans mes urines, est-ce normal ?', a: 'Non, et c’est important. Si l’urgenturie s’accompagne de sang dans les urines, ce n’est pas une simple vessie hyperactive. Il peut s’agir d’une affection vésicale à explorer, et une cystoscopie est nécessaire. Si vous avez fumé, cette exploration ne doit pas être différée.' },
+          { q: 'La rééducation vésicale marche-t-elle vraiment ?', a: 'Oui, et la plupart la sous-estiment. Courir aux toilettes dès le premier besoin habitue la vessie à se contracter pour des volumes de plus en plus faibles ; c’est un cercle vicieux. La rééducation vise à le rompre. Les premières semaines sont difficiles, mais pratiquée régulièrement elle réduit ou supprime le besoin de médicaments chez beaucoup de femmes.' },
+          { q: 'Combien de temps vais-je prendre le médicament ? Les effets me gênent.', a: 'Sécheresse buccale et constipation sont les plus fréquents et la première cause d’abandon. N’arrêtez pas seule — changer de classe ou ajuster la dose résout souvent le problème. L’effet peut aussi mettre des semaines : abandonner tôt conduit à croire à tort que « cela n’a pas marché ».' },
+          { q: 'Ma mère est âgée — ces médicaments affectent-ils la mémoire ?', a: 'La question est légitime. Des inquiétudes ont été rapportées quant à l’effet des anticholinergiques sur l’attention et la mémoire à un âge avancé. Le choix doit donc être fait avec soin chez les patientes âgées, en évaluant la charge totale avec leurs autres traitements. Abordez-le ouvertement ; d’autres classes et des options non médicamenteuses existent.' },
+          { q: 'Devrai-je me sonder après la toxine intravésicale ?', a: 'Chez certaines femmes la vessie se relâche trop et ne se vide pas complètement ; des autosondages temporaires peuvent alors être nécessaires. La probabilité est faible mais réelle, et cela doit être exposé avant. Si vous n’y êtes pas disposée ou en êtes physiquement incapable, la toxine n’est peut-être pas la bonne option.' },
+          { q: 'L’effet de la toxine est-il durable ?', a: 'Non, il est transitoire. Il s’atténue avec le temps et doit être renouvelé à intervalles. Ce n’est pas un échec mais une caractéristique connue, à connaître d’emblée.' },
+          { q: 'Dans la neuromodulation sacrée, pose-t-on directement le dispositif ?', a: 'Non — et c’est un avantage réel. Une phase de test temporaire précède. Pendant celle-ci, un calendrier permet d’évaluer si vous en tirez un bénéfice réel. Le dispositif définitif n’est posé qu’en cas d’amélioration significative. Vous n’avez donc pas à vous engager d’emblée.' },
+          { q: 'Cette affection disparaît-elle totalement ?', a: 'La vessie hyperactive est le plus souvent maîtrisée plutôt que supprimée. L’objectif est de ramener les symptômes à un niveau qui ne limite plus votre quotidien, et c’est atteignable chez la plupart des femmes. Méfiez-vous de qui promet une guérison définitive.' },
+          { q: 'Je me lève aussi la nuit — cela peut-il avoir une autre cause ?', a: 'Oui. Se lever la nuit ne vient pas toujours de la vessie : boire beaucoup le soir, le retour nocturne dans la circulation des liquides accumulés dans les jambes, l’apnée du sommeil, l’insuffisance cardiaque et certains médicaments le provoquent aussi. Les réveils nocturnes sont donc explorés séparément ; un traitement visant la seule vessie ne suffit pas toujours.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-neurogenic Female LUTS — Association européenne d’urologie', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
+        ]
+      },
+      ru: {
+        title: 'Гиперактивный мочевой пузырь и ургентное недержание',
+        summary: 'Внезапный, трудно сдерживаемый позыв, частое мочеиспускание, иногда подтекание до того, как удаётся дойти до туалета. Лечение ступенчатое, и у большинства женщин заметное улучшение наступает без лекарств и операции.',
+        metaTitle: 'Гиперактивный мочевой пузырь: причины и ступени лечения',
+        metaDescription: 'Причины ургентного недержания, что нужно исключить в первую очередь, тренировка мочевого пузыря, лекарства и их побочные действия, ботулотоксин и сакральная нейромодуляция.',
+        quickFacts: { duration: 'Обследование 30–45 минут', anesthesia: 'Для диагностики не требуется', hospitalStay: 'Нет (ботулотоксин и нейромодуляция отдельно)', stayInTurkey: '3–5 дней (обследование и ботулотоксин)', returnToWork: 'В тот же день (после ботулотоксина 1–2 дня)', flightClearance: 'Без ограничений' },
+        definition: [
+          'Гиперактивный мочевой пузырь — состояние с внезапным позывом, который трудно отложить. К нему присоединяются частое мочеиспускание и ночные пробуждения; у части женщин моча теряется до того, как удаётся дойти до туалета (ургентное недержание). В основе лежит непроизвольное сокращение мышцы пузыря во время наполнения.',
+          'ЭТО ДРУГОЕ ЗАБОЛЕВАНИЕ, ЧЕМ СТРЕССОВОЕ НЕДЕРЖАНИЕ. Там потеря происходит при кашле или натуживании без предшествующего позыва; здесь сначала возникает непреодолимая потребность. Различие важно, потому что лечение разное: слинговая операция при гиперактивном пузыре пользы не приносит. Когда оба типа сочетаются, определяют преобладающий.',
+          'СНАЧАЛА ИСКЛЮЧАЮТ ДРУГИЕ ПРИЧИНЫ. Гиперактивный мочевой пузырь — диагноз исключения. Инфекция мочевых путей, камень пузыря, плохо контролируемый диабет, некоторые лекарства, избыток жидкости или кофеина дают те же жалобы. Начинать лекарства до их устранения и не нужно, и бесполезно.',
+          'ВАЖНОЕ ПРЕДУПРЕЖДЕНИЕ О БЕЗОПАСНОСТИ: ЕСЛИ ПОЗЫВЫ СОПРОВОЖДАЮТСЯ КРОВЬЮ В МОЧЕ, ЭТО НЕ ПРОСТО ГИПЕРАКТИВНЫЙ ПУЗЫРЬ. Кровь в моче — признак, который нужно исследовать внутри пузыря, и требуется цистоскопия. Особенно у куривших это нельзя пропускать. Отмахиваться от жалобы словами «чувствительный пузырь» значит откладывать диагноз.',
+          'ЛЕЧЕНИЕ СТУПЕНЧАТОЕ, И ПЕРВАЯ СТУПЕНЬ — НЕ ЛЕКАРСТВО. Тренировка мочевого пузыря, регулирование жидкости и кофеина вместе с упражнениями для мышц тазового дна дают заметное улучшение у многих женщин. Тренировка означает постепенное удлинение промежутков между посещениями туалета; суть в том, чтобы при позыве недолго подождать, а не бежать сразу.',
+          'РЕАЛИСТИЧНОЕ ОЖИДАНИЕ: гиперактивный мочевой пузырь чаще не устраняют полностью, а УПРАВЛЯЮТ им. Цель — снизить жалобы до уровня, который не ограничивает повседневную жизнь, и это достижимо у большинства женщин. Обещание окончательного и стойкого излечения нереалистично.'
+        ],
+        eligibility: {
+          suitable: ['Женщины с внезапными позывами, частым мочеиспусканием и ночными пробуждениями', 'Женщины, у которых подтекание происходит до туалета', 'Женщины, у которых исключены инфекция и другие причины', 'Женщины, которым недостаточно помогли тренировка и изменение образа жизни — следует ступень лекарств', 'Женщины, не отвечающие на лекарства или не переносящие их — рассматриваются ботулотоксин или нейромодуляция'],
+          notSuitable: ['Женщины с кровью в моче — сначала обследование цистоскопией; это не простой гиперактивный пузырь', 'Женщины с нелеченой инфекцией мочевых путей — её лечат в первую очередь', 'Женщины, не опорожняющие пузырь полностью — лекарства могут ухудшить; нужно уродинамическое обследование', 'Женщины с преобладанием стрессового типа — лечение другое', 'Для ботулотоксина: женщины, не готовые или физически не способные при необходимости выполнять самокатетеризацию']
+        },
+        technology: ['Дневник мочеиспускания — как часто, в каком объёме, с каким позывом; основной инструмент диагноза', 'Анализ и посев мочи — исключение инфекции', 'Измерение остаточной мочи после мочеиспускания', 'Цистоскопия — при крови в моче или нетипичной картине', 'Уродинамическое исследование — у отобранных женщин', 'Введение ботулинического токсина в мочевой пузырь', 'Сакральная нейромодуляция — сначала тестовый период, затем постоянное устройство'],
+        surgeonExperience: { caseVolume: '', note: 'Женская и функциональная урология входят в сферу работы доц. д-ра Мюслюма Эргюна. При гиперактивном мочевом пузыре подход ступенчатый: сначала исключение других причин, затем поведенческое лечение, далее лекарства и при необходимости вмешательства.' },
+        timeline: [
+          { when: 'Шаг 1', title: 'Исключение других причин', body: 'Выполняют анализ и посев мочи, оценивают уровень сахара, пересматривают принимаемые лекарства. При крови в моче планируют цистоскопию — этот шаг пропускать нельзя.' },
+          { when: 'Шаг 2', title: 'Дневник мочеиспускания', body: 'В течение нескольких дней вы записываете, когда и сколько мочитесь и насколько сильным был позыв. Эта простая запись даёт больше, чем дорогие исследования, и служит для оценки эффекта лечения.' },
+          { when: 'Шаг 3', title: 'Тренировка пузыря и образ жизни', body: 'Промежутки между посещениями туалета постепенно удлиняют. Сокращают кофеин и газированные напитки, регулируют приём жидкости вечером, устраняют запоры. Упражнения для мышц тазового дна помогают подавлять позыв.' },
+          { when: 'Шаг 4', title: 'Лекарственная терапия', body: 'Начинают препараты, расслабляющие мышцу пузыря. Эффект может проявиться через недели, поэтому важно не бросать рано. При побочных действиях препарат можно заменить.' },
+          { when: 'Шаг 5', title: 'Ботулинический токсин в мочевой пузырь', body: 'Если лекарства не помогают, его вводят в мышцу пузыря под контролем цистоскопии. Эффект временный, процедуру нужно повторять.' },
+          { when: 'Шаг 6', title: 'Сакральная нейромодуляция', body: 'Регулирование нервов, управляющих пузырём, слабым электрическим сигналом. Сначала проводят временный тест; постоянное устройство устанавливают только при пользе.' }
+        ],
+        risks: ['ПРОПУЩЕННЫЙ ДИАГНОЗ: если позывы сопровождаются кровью в моче и это не обследовано, можно пропустить проблему внутри пузыря. Это главное предупреждение страницы', 'Побочные действия лекарств: сухость во рту, запоры, нечёткость зрения — самая частая причина отказа от препарата', 'ВЛИЯНИЕ НА ПОЗНАВАТЕЛЬНЫЕ ФУНКЦИИ У ПОЖИЛЫХ: сообщалось об опасениях относительно действия антихолинергических препаратов на внимание и память в пожилом возрасте. Поэтому у пожилых женщин выбор препарата и суммарную антихолинергическую нагрузку следует оценивать внимательно', 'НЕВОЗМОЖНОСТЬ ПОМОЧИТЬСЯ ПОСЛЕ БОТУЛОТОКСИНА: если мышца расслабится слишком сильно, пузырь может опорожняться не полностью и временно понадобится самокатетеризация. Эту возможность нужно обсудить заранее, и пациентка должна быть к ней готова; иначе ботулотоксин не подходит', 'Инфекция мочевых путей после ботулотоксина', 'Временный характер действия ботулотоксина — нужны повторные введения', 'При нейромодуляции: боль в области устройства, смещение электрода, необходимость замены батареи, инфекция', 'Жалобы не исчезают полностью — цель управление, а не излечение'],
+        alternatives: ['Тренировка пузыря и регулирование жидкости и кофеина — первая ступень, без лекарств', 'Упражнения для мышц тазового дна — помогают подавлять позыв', 'Снижение веса и устранение запоров', 'Лекарства внутрь — группы, расслабляющие мышцу пузыря', 'Вагинальные эстрогены — у отобранных женщин после менопаузы могут уменьшить жалобы', 'Ботулинический токсин в пузырь — при отсутствии ответа на лекарства; эффект временный', 'Стимуляция большеберцового нерва — менее травматично, курсом сеансов', 'Сакральная нейромодуляция — постоянное устройство после тестового периода'],
+        comparison: {
+          title: 'Когда лекарства не помогают: ботулотоксин, стимуляция нерва и нейромодуляция',
+          columns: ['Критерий', 'Ботулотоксин в пузырь', 'Стимуляция большеберцового нерва', 'Сакральная нейромодуляция'],
+          rows: [
+            { label: 'Степень вмешательства', values: ['Инъекция под контролем цистоскопии', 'Тонкая игла в области лодыжки', 'Хирургическая установка устройства'] },
+            { label: 'Длительность эффекта', values: ['Временный — нужны повторы', 'Сеансы нужно продолжать', 'Постоянно, с имплантированным устройством'] },
+            { label: 'Можно ли попробовать заранее?', values: ['Нет — вводят и ждут', 'Можно пробовать по сеансам', 'ДА — решение после тестового периода'] },
+            { label: 'Главный риск', values: ['Невозможность помочиться, нужда в катетере', 'Низкий', 'Проблемы с устройством, замена батареи'] },
+            { label: 'Кому подходит', values: ['Женщинам, готовым при необходимости к самокатетеризации', 'Тем, кто может регулярно приходить', 'Когда остальное недостаточно'] }
+          ],
+          note: 'Тестовый период сакральной нейромодуляции — реальное преимущество: вам не нужно сразу соглашаться на постоянное устройство, сначала вы проверяете, помогает ли оно именно вам.'
+        },
+        recovery: [
+          { period: 'Период тренировки пузыря', body: 'Трудности в первые недели нормальны. Удлиняйте промежутки постепенно, а не сразу; дневник позволяет видеть прогресс.' },
+          { period: 'Начало лекарств — первые 4–8 недель', body: 'Эффекту нужно время. Возможны сухость во рту и запоры; помогают питьё и пища с клетчаткой. Если побочное действие невыносимо, скажите врачу, а не отменяйте препарат сами.' },
+          { period: 'Первая неделя после ботулотоксина', body: 'Возможны жжение при мочеиспускании и небольшое кровотечение. Проверяют, полностью ли опорожняется пузырь. При затруднении мочеиспускания обращайтесь немедленно.' },
+          { period: '2–12-я неделя после ботулотоксина', body: 'В этот период эффект наиболее выражен. Когда он ослабевает, планируют повторное введение.' },
+          { period: 'Тестовый период нейромодуляции', body: 'За несколько дней или недель пользу оценивают по дневнику. При значимом улучшении планируют постоянное устройство.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Стоимость заметно зависит от применяемой ступени (обследование, ботулотоксин или нейромодуляция). Точное предложение даётся после определения ступени.' },
+        packageIncludes: ['Обследование по женской урологии и разбор дневника мочеиспускания', 'Анализ и посев мочи', 'Измерение остаточной мочи', 'Цистоскопия или уродинамическое исследование при необходимости', 'Обучение тренировке пузыря и упражнениям для мышц тазового дна', 'Введение ботулотоксина, если оно выполняется', 'Трансферы аэропорт–больница–отель', 'Проживание (пациентка + 1 сопровождающий)', 'Медицинский переводчик и дистанционное наблюдение после возвращения домой'],
+        faqs: [
+          { q: 'Я постоянно хожу в туалет, но анализы в норме. Значит, ничего нет?', a: 'Нормальные анализы не означают, что ваши жалобы ненастоящие. При гиперактивном пузыре анализ мочи и визуализация чаще всего нормальны; диагноз основан на жалобах и дневнике мочеиспускания. Ваши жалобы реальны и поддаются лечению.' },
+          { q: 'Иногда я вижу и кровь в моче, это нормально?', a: 'Нет, и это важно. Если позывы сопровождаются кровью в моче, это не простой гиперактивный пузырь. Возможна проблема внутри пузыря, которую нужно исследовать, и требуется цистоскопия. Особенно если вы курили, откладывать это обследование нельзя.' },
+          { q: 'Действительно ли помогает тренировка пузыря?', a: 'Да, и большинство её недооценивает. Если бежать в туалет при первом позыве, пузырь привыкает сокращаться при всё меньших объёмах — это порочный круг. Задача тренировки — разорвать его. Первые недели трудны, но при регулярном выполнении она у многих женщин уменьшает или устраняет потребность в лекарствах.' },
+          { q: 'Сколько мне принимать лекарство? Побочные действия мешают.', a: 'Сухость во рту и запоры — самые частые побочные действия и главная причина отказа. Не отменяйте препарат сами: переход на другую группу или изменение дозы чаще всего решает проблему. К тому же эффекту нужны недели; раннее прекращение приводит к ложному выводу «не помогло».' },
+          { q: 'Моя мама пожилая — повлияют ли эти лекарства на её память?', a: 'Вопрос справедливый. Сообщалось об опасениях относительно действия антихолинергических препаратов на внимание и память в пожилом возрасте. Поэтому у пожилых пациенток выбор препарата нужно делать внимательно, оценивая суммарную нагрузку вместе с остальными лекарствами. Обсудите это прямо: существуют другие группы препаратов и варианты без лекарств.' },
+          { q: 'Придётся ли мне катетеризировать себя после ботулотоксина?', a: 'У части женщин пузырь расслабляется слишком сильно и не опорожняется полностью; тогда может понадобиться временная самокатетеризация. Вероятность невелика, но реальна, и это нужно обсудить заранее. Если вы к этому не готовы или физически не способны, ботулотоксин может вам не подойти.' },
+          { q: 'Эффект ботулотоксина постоянный?', a: 'Нет, он временный. Со временем он ослабевает, и введение нужно повторять. Это не неудача, а известная особенность метода, о которой следует знать с самого начала.' },
+          { q: 'При сакральной нейромодуляции устройство ставят сразу?', a: 'Нет — и это настоящее преимущество. Сначала проводят временный тест. В это время по дневнику оценивают, действительно ли вам становится лучше. Постоянное устройство устанавливают только при значимом улучшении. То есть соглашаться на него заранее не нужно.' },
+          { q: 'Это состояние пройдёт полностью?', a: 'Гиперактивным мочевым пузырём чаще управляют, чем устраняют его. Цель — снизить жалобы до уровня, не ограничивающего повседневную жизнь, и это достижимо у большинства женщин. С осторожностью относитесь к обещаниям окончательного и стойкого излечения.' },
+          { q: 'Я встаю и ночью — может ли у этого быть отдельная причина?', a: 'Да. Ночные подъёмы не всегда связаны с пузырём: обильное питьё вечером, возврат в кровоток жидкости, скопившейся в ногах, апноэ во сне, сердечная недостаточность и некоторые лекарства тоже вызывают это. Поэтому ночные пробуждения расспрашивают отдельно; лечение, направленное только на пузырь, не всегда достаточно.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-neurogenic Female LUTS — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
+        ]
+      },
+      ar: {
+        title: 'فرط نشاط المثانة وسلس الإلحاح',
+        summary: 'إلحاح مفاجئ يصعب تأجيله وتبول متكرر، وأحيانًا تسرّب قبل بلوغ الحمّام. والعلاج متدرج، وتتحسن معظم النساء تحسنًا واضحًا من دون أدوية أو جراحة.',
+        metaTitle: 'فرط نشاط المثانة: الأسباب ومراحل العلاج',
+        metaDescription: 'أسباب سلس الإلحاح، وما ينبغي استبعاده أولًا، وتدريب المثانة، والأدوية وآثارها الجانبية، وتوكسين البوتولينوم في المثانة، والتنظيم العصبي العجزي.',
+        quickFacts: { duration: 'التقييم 30–45 دقيقة', anesthesia: 'غير لازم للتشخيص', hospitalStay: 'لا يوجد (البوتوكس والتنظيم العصبي على حدة)', stayInTurkey: '3–5 أيام (للتقييم والبوتوكس)', returnToWork: 'في اليوم نفسه (بعد البوتوكس 1–2 يوم)', flightClearance: 'من دون قيود' },
+        definition: [
+          'فرط نشاط المثانة حالة يصحبها إلحاح مفاجئ يصعب تأجيله. ويرافقه تبول متكرر واستيقاظ ليلي؛ وعند بعض النساء يحدث التسرّب قبل بلوغ الحمّام (سلس الإلحاح). والمشكلة الكامنة انقباض عضلة المثانة من دون إرادة أثناء الامتلاء.',
+          'هذا مرض مختلف عن السلس الجهدي. ففي ذاك يحدث التسرّب عند السعال أو الحزق من دون إلحاح سابق؛ أما هنا فيسبقه شعور لا يُقاوَم. والتمييز مهم لأن العلاجين مختلفان: فعملية الشريط لا تنفع في فرط النشاط. وعند اجتماعهما يُحدَّد أيهما أغلب.',
+          'تُستبعَد الأسباب الأخرى أولًا. فتشخيص فرط نشاط المثانة تشخيص استبعاد. فالتهاب المسالك البولية وحصاة المثانة والسكري غير المضبوط وبعض الأدوية والإفراط في السوائل أو الكافيين تُحدث الشكوى نفسها. والبدء بالدواء قبل تصحيحها غير لازم وغير مُجدٍ.',
+          'تنبيه مهم للسلامة: إذا صحب الإلحاحَ دمٌ في البول فهذه ليست حالة فرط نشاط بسيطة. فالدم في البول علامة يجب البحث فيها داخل المثانة ويستلزم تنظيرًا. ولا يجوز إغفال ذلك خصوصًا عند من لديهم قصة تدخين. وتمرير الشكوى بوصف «مثانة حساسة» يؤخّر التشخيص.',
+          'العلاج متدرج، والخطوة الأولى ليست دواءً. فتدريب المثانة وضبط السوائل والكافيين وتمارين قاع الحوض معًا تحقق تحسنًا واضحًا عند كثير من النساء. وتدريب المثانة هو إطالة الفواصل بين مرات التبول تدريجيًا؛ وجوهره تعلّم الانتظار قليلًا عند الإلحاح بدل الإسراع فورًا.',
+          'توقّع واقعي: فرط نشاط المثانة حالة تُدار في الغالب لا تُستأصل. والهدف خفض الشكوى إلى حد لا يقيّد حياتك اليومية، وهذا الهدف قابل للتحقيق عند معظم النساء. أما الوعد بشفاء قاطع ودائم فغير واقعي.'
+        ],
+        eligibility: {
+          suitable: ['النساء اللواتي لديهن إلحاح مفاجئ وتبول متكرر واستيقاظ ليلي', 'من يحدث لديهن التسرّب قبل بلوغ الحمّام', 'من استُبعدت لديهن العدوى والأسباب الأخرى', 'من لم تكفِهن فائدة تدريب المثانة وتعديل نمط الحياة — فتأتي مرحلة الدواء', 'من لا يستجبن للدواء أو لا يحتملن آثاره — يُطرح البوتوكس أو التنظيم العصبي'],
+          notSuitable: ['من لديهن دم في البول — يلزم أولًا البحث بالتنظير؛ فهذه ليست حالة بسيطة', 'من لديهن التهاب غير معالَج في المسالك البولية — يُعالَج أولًا', 'من لا تُفرِغ مثانتهن تمامًا — فقد تزيد الأدوية الأمر سوءًا؛ ويلزم تقييم ديناميكي أولًا', 'من يغلب لديهن النوع الجهدي — فالعلاج مختلف', 'للبوتوكس: من لسن مستعدات أو قادرات بدنيًا على وضع قسطرة ذاتيًا عند اللزوم']
+        },
+        technology: ['مفكرة التبول — كم مرة وبأي كمية وبأي إلحاح؛ وهي الأداة الأساسية للتشخيص', 'تحليل البول وزراعته — لاستبعاد العدوى', 'قياس البول المتبقي بعد التبول', 'تنظير المثانة — عند وجود دم في البول أو صورة غير نمطية', 'الدراسة الديناميكية البولية — عند مريضات مختارات', 'حقن توكسين البوتولينوم في المثانة', 'التنظيم العصبي العجزي — مرحلة اختبار أولًا ثم جهاز دائم'],
+        surgeonExperience: { caseVolume: '', note: 'المسالك البولية النسائية والوظيفية من مجالات عمل الأستاذ المشارك الدكتور مسلم إرغون. والنهج في فرط نشاط المثانة متدرج: استبعاد الأسباب الأخرى أولًا، ثم العلاج السلوكي، ثم الأدوية، وعند اللزوم الخيارات التدخلية.' },
+        timeline: [
+          { when: 'الخطوة 1', title: 'استبعاد الأسباب الأخرى', body: 'يُجرى تحليل البول وزراعته، ويُقيَّم سكر الدم، وتُراجَع الأدوية المستعملة. وعند وجود دم في البول يُخطَّط تنظير المثانة — وهذه خطوة لا يجوز تخطّيها.' },
+          { when: 'الخطوة 2', title: 'مفكرة التبول', body: 'تُسجّلين خلال أيام قليلة متى وكم تتبولين ومدى شدة الإلحاح. وهذا التسجيل البسيط يعطي أكثر مما تعطيه فحوص مكلفة، ويُستعمل أيضًا لقياس أثر العلاج.' },
+          { when: 'الخطوة 3', title: 'تدريب المثانة ونمط الحياة', body: 'تُطال الفواصل بين مرات التبول تدريجيًا. ويُقلَّل الكافيين والمشروبات الغازية، وتُضبَط السوائل مساءً، ويُعالَج الإمساك. وتساعد تمارين قاع الحوض على كبت الإلحاح أيضًا.' },
+          { when: 'الخطوة 4', title: 'العلاج الدوائي', body: 'تُبدأ أدوية ترخي عضلة المثانة. وقد يستغرق ظهور الأثر أسابيع؛ ولذلك يهم عدم التوقف مبكرًا. وعند ظهور أثر جانبي يمكن تغيير الدواء.' },
+          { when: 'الخطوة 5', title: 'توكسين البوتولينوم في المثانة', body: 'إن لم تستجب الأدوية يُحقَن في عضلة المثانة تحت رؤية التنظير. وأثره مؤقت ويلزم تكراره على فترات.' },
+          { when: 'الخطوة 6', title: 'التنظيم العصبي العجزي', body: 'ضبط الأعصاب المتحكمة في المثانة بتنبيه كهربائي خفيف. وتسبقه مرحلة اختبار مؤقتة؛ ولا يُزرَع الجهاز الدائم إلا عند ثبوت الفائدة.' }
+        ],
+        risks: ['إغفال التشخيص: إن صحب الإلحاحَ دمٌ في البول ولم يُبحَث فقد تُغفَل مشكلة داخل المثانة. وهذا أهم تنبيه في هذه الصفحة', 'الآثار الجانبية للأدوية: جفاف الفم والإمساك وتشوش الرؤية — وهي أشيع أسباب ترك الدواء', 'الأثر الإدراكي عند كبار السن: وردت مخاوف بشأن أثر أدوية مضادات الكولين في الانتباه والذاكرة في السن المتقدمة. ولذلك ينبغي اختيار الدواء وتقدير الحمل الكلي المضاد للكولين بعناية عند المسنّات', 'العجز عن التبول بعد البوتوكس: إن ارتخت العضلة أكثر من اللازم فقد لا تُفرَغ المثانة تمامًا وقد يلزم وضع قسطرة ذاتيًا مؤقتًا. ويجب بحث هذا الاحتمال مسبقًا وأن تكون المريضة مستعدة له؛ وإلا فالبوتوكس ليس خيارًا مناسبًا', 'التهاب المسالك البولية بعد البوتوكس', 'كون أثر البوتوكس مؤقتًا — ويلزم تكراره', 'في التنظيم العصبي: ألم في موضع الجهاز، وانزياح القطب، والحاجة إلى تبديل البطارية، والعدوى', 'عدم زوال الشكوى تمامًا — فالهدف الإدارة لا الشفاء التام'],
+        alternatives: ['تدريب المثانة وضبط السوائل والكافيين — الخطوة الأولى ومن دون دواء', 'تمارين قاع الحوض — تساعد على كبت الإلحاح', 'إنقاص الوزن ومعالجة الإمساك', 'الأدوية الفموية — مجموعات ترخي عضلة المثانة', 'الإستروجين المهبلي — عند مختارات بعد سنّ اليأس، وقد يقلّل الشكوى', 'توكسين البوتولينوم في المثانة — عند عدم الاستجابة للأدوية؛ وأثره مؤقت', 'تنبيه العصب الظنبوبي — أقل تدخلًا ويُطبَّق على هيئة جلسات', 'التنظيم العصبي العجزي — جهاز دائم بعد مرحلة اختبار'],
+        comparison: {
+          title: 'عند عدم استجابة الأدوية: البوتوكس وتنبيه العصب الظنبوبي والتنظيم العصبي',
+          columns: ['المعيار', 'بوتوكس المثانة', 'تنبيه العصب الظنبوبي', 'التنظيم العصبي العجزي'],
+          rows: [
+            { label: 'درجة التدخل', values: ['حقن تحت رؤية التنظير', 'إبرة رفيعة عند الكاحل', 'زرع جهاز جراحيًا'] },
+            { label: 'مدة الأثر', values: ['مؤقت — يلزم التكرار', 'يجب مواصلة الجلسات', 'مستمر بجهاز دائم'] },
+            { label: 'إمكان التجربة أولًا', values: ['لا — يُعطى ثم يُنتظر', 'يمكن تجربته بالجلسات', 'نعم — القرار بعد مرحلة الاختبار'] },
+            { label: 'الخطر الرئيس', values: ['العجز عن التبول والحاجة إلى قسطرة', 'منخفض', 'مشكلات الجهاز وتبديل البطارية'] },
+            { label: 'لمن يصلح', values: ['لمن تقبل وضع القسطرة ذاتيًا عند اللزوم', 'لمن تستطيع المواظبة على الجلسات', 'عند عدم كفاية الباقي'] }
+          ],
+          note: 'مرحلة الاختبار في التنظيم العصبي العجزي ميزة حقيقية: فلست ملزمة بالموافقة على جهاز دائم من البداية، بل تجرّبين أولًا ما إذا كان ينفعك.'
+        },
+        recovery: [
+          { period: 'مرحلة تدريب المثانة', body: 'الصعوبة في الأسابيع الأولى أمر معتاد. أطيلي الفواصل تدريجيًا لا دفعة واحدة؛ ومسك المفكرة يُظهر لك التقدم.' },
+          { period: 'بدء الدواء — أول 4–8 أسابيع', body: 'يحتاج الأثر إلى وقت. وقد يظهر جفاف فم وإمساك؛ ويساعد شرب الماء والغذاء الغني بالألياف. وإن كان الأثر لا يُحتمَل فأخبري طبيبك بدل إيقاف الدواء بنفسك.' },
+          { period: 'الأسبوع الأول بعد البوتوكس', body: 'قد تظهر حرقة عند التبول ونزف خفيف. ويُتحقق من إفراغ المثانة تمامًا. وإن واجهتِ صعوبة في التبول فراجعي فورًا.' },
+          { period: 'الأسبوع 2–12 بعد البوتوكس', body: 'يكون الأثر أوضح ما يكون في هذه المرحلة. وعندما يخفّ يُخطَّط لتكرار الحقن.' },
+          { period: 'مرحلة اختبار التنظيم العصبي', body: 'خلال أيام إلى أسابيع تُقيَّم الفائدة بمسك مفكرة. وعند وجود تحسن ذي معنى يُخطَّط للجهاز الدائم.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'يتغير السعر بوضوح بحسب المرحلة المطبَّقة (تقييم أو بوتوكس أو تنظيم عصبي). ويُقدَّم العرض النهائي بعد تحديد المرحلة.' },
+        packageIncludes: ['تقييم المسالك البولية النسائية وقراءة مفكرة التبول', 'تحليل البول وزراعته', 'قياس البول المتبقي بعد التبول', 'تنظير المثانة أو الدراسة الديناميكية عند الحاجة', 'تعليم تدريب المثانة وتمارين قاع الحوض', 'إجراء حقن البوتوكس في المثانة إن طُبِّق', 'التنقلات بين المطار والمستشفى والفندق', 'الإقامة (المريضة + مرافق واحد)', 'مترجم طبي ومتابعة عن بُعد بعد عودتك إلى بلدك'],
+        faqs: [
+          { q: 'أذهب إلى الحمّام باستمرار لكن تحاليلي طبيعية. أليس عندي شيء؟', a: 'كون التحاليل طبيعية لا يعني أن شكواك غير حقيقية. ففي فرط نشاط المثانة يكون تحليل البول والتصوير طبيعيين في الغالب؛ والتشخيص يقوم على الشكوى ومفكرة التبول. فشكواك حقيقية وقابلة للعلاج.' },
+          { q: 'أرى أحيانًا دمًا في البول أيضًا، هل هذا طبيعي؟', a: 'لا، وهذا مهم. فإن صحب الإلحاحَ دمٌ في البول فهذه ليست حالة فرط نشاط بسيطة. فقد تكون حالة داخل المثانة تحتاج إلى بحث، ويلزم تنظير. وإن كانت لديك قصة تدخين فلا يجوز تأجيل هذا البحث.' },
+          { q: 'هل ينفع تدريب المثانة فعلًا؟', a: 'نعم، ومعظم الناس يستهين به. فالإسراع إلى الحمّام مع أول إلحاح يُعوّد المثانة على الانقباض عند أحجام أصغر فأصغر؛ وهذه حلقة مفرغة. وغاية التدريب كسرها. والأسابيع الأولى صعبة، لكنه بالمواظبة يقلّل الحاجة إلى الدواء أو يُلغيها عند كثير من النساء.' },
+          { q: 'كم سأستعمل الدواء؟ آثاره تزعجني.', a: 'جفاف الفم والإمساك أشيع الآثار وأهم أسباب ترك الدواء. لا توقفيه بنفسك — فالانتقال إلى مجموعة أخرى أو تعديل الجرعة يحلّ المشكلة غالبًا. كما أن ظهور الأثر قد يستغرق أسابيع؛ والتوقف المبكر يُوقِع في وهم أن «الدواء لم ينفع».' },
+          { q: 'والدتي مسنّة — هل تؤثر هذه الأدوية في ذاكرتها؟', a: 'سؤال في محله. فقد وردت مخاوف بشأن أثر أدوية مضادات الكولين في الانتباه والذاكرة في السن المتقدمة. ولذلك ينبغي اختيار الدواء بعناية عند المسنّات وتقدير الحمل الكلي مع بقية أدويتهن. ناقشي ذلك بصراحة؛ فهناك مجموعات دوائية بديلة وخيارات من دون دواء.' },
+          { q: 'هل سأضطر إلى وضع قسطرة بنفسي بعد بوتوكس المثانة؟', a: 'عند بعض النساء ترتخي المثانة أكثر من اللازم ولا تُفرَغ تمامًا؛ وعندها قد يلزم وضع قسطرة ذاتيًا مؤقتًا. والاحتمال ضعيف لكنه حقيقي، ويجب بحثه مسبقًا. فإن لم تكوني مستعدة أو قادرة بدنيًا فقد لا يكون البوتوكس الخيار المناسب لك.' },
+          { q: 'هل أثر البوتوكس دائم؟', a: 'لا، بل مؤقت. فالأثر يخفّ مع الوقت ويلزم تكراره على فترات. وهذا ليس فشلًا بل خاصية معروفة ينبغي معرفتها من البداية.' },
+          { q: 'في التنظيم العصبي العجزي، هل يُزرَع الجهاز مباشرةً؟', a: 'لا — وهذه ميزة حقيقية. فتسبقه مرحلة اختبار مؤقتة. وخلالها يُقيَّم بمسك مفكرة ما إذا كنت تستفيدين فعلًا. ولا يُزرَع الجهاز الدائم إلا عند وجود تحسن ذي معنى. أي أنك لست ملزمة بالقرار من البداية.' },
+          { q: 'هل يزول هذا المرض تمامًا؟', a: 'فرط نشاط المثانة حالة تُدار في الغالب لا تُستأصل. والهدف خفض الشكوى إلى حد لا يقيّد حياتك اليومية، وهو قابل للتحقيق عند معظم النساء. فاحذري من يَعِدك بشفاء قاطع ودائم.' },
+          { q: 'أستيقظ ليلًا أيضًا، فهل لذلك سبب مستقل؟', a: 'نعم. فالاستيقاظ الليلي للتبول لا يعود دائمًا إلى المثانة: فالإكثار من الشرب مساءً، وعودة السوائل المتجمعة في الساقين إلى الدورة ليلًا، وانقطاع النفس النومي، وقصور القلب، وبعض الأدوية تُحدثه أيضًا. ولذلك يُسأل عن الاستيقاظ الليلي على حدة؛ والعلاج الموجَّه إلى المثانة وحدها لا يكفي دائمًا.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-neurogenic Female LUTS — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
+        ]
+      }
+    }
+  },
+  {
+    /**
      * Üroonkoloji hub'ının altında (prompt m.4.1).
      * DÖRT ZORUNLU MESAJ:
      * 1. AĞRISIZ SERTLİK ACİLDİR. Genç erkekler utanma yüzünden geciktiriyor;

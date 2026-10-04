@@ -40,6 +40,14 @@ export const treatmentSlugMap = {
     ru: 'rak-yaichka',
     ar: 'testicular-cancer'
   },
+  'asiri-aktif-mesane': {
+    tr: 'asiri-aktif-mesane',
+    en: 'overactive-bladder',
+    de: 'ueberaktive-blase',
+    fr: 'vessie-hyperactive',
+    ru: 'giperaktivnyy-mochevoy-puzyr',
+    ar: 'overactive-bladder'
+  },
   'stres-inkontinans': {
     tr: 'stres-inkontinans-idrar-kacirma',
     en: 'stress-urinary-incontinence',
