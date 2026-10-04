@@ -121,7 +121,7 @@ export interface TreatmentContent {
   sources?: ContentSource[];
   /** Bu prosedürde cerrah deneyimi — PLACEHOLDER sayılar. */
   surgeonExperience: {
-    caseVolume: string; // ör. "1.500+ vaka" (PLACEHOLDER)
+    caseVolume: string; // ör. "1.500+ vaka" — doğrulanana kadar boş bırakılır
     note: string;
   };
   /** Rekonstrüktif vakalarda ek uzmanlık göstergeleri (opsiyonel). */

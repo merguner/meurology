@@ -21114,10 +21114,10 @@ export const treatments: Treatment[] = [
       tr: {
         title: 'Robotik / Laparoskopik Radikal Prostatektomi',
         summary:
-          'Prostat kanserinde prostat bezinin robot destekli, minimal invaziv yöntemle alınması.',
-        metaTitle: 'Robotik Prostatektomi | Prostat Kanseri Cerrahisi',
+          'Prostat kanserinde prostat bezinin tamamının robot yardımıyla alınması. Amaç kanseri kontrol altına almak; mümkün olduğunda idrar tutma ve cinsel işlevi koruyan teknikleri uygulamaktır — ama bu sıra hiçbir zaman tersine çevrilmez.',
+        metaTitle: 'Robotik Prostatektomi: Süreç, Riskler ve Gerçekçi Beklentiler',
         metaDescription:
-          'Robot destekli radikal prostatektomi ile prostat kanseri tedavisi: süreç, riskler, alternatifler, fiyat aralığı ve sık sorulan sorular.',
+          'Robot destekli radikal prostatektomide ameliyatın nasıl yapıldığı, sinir koruyucu tekniğin kimlere uygulanabildiği, idrar kaçırmanın gerçek seyri, patoloji sonucu ve PSA takibi.',
         quickFacts: {
           duration: '2–4 saat',
           anesthesia: 'Genel anestezi',
@@ -21128,238 +21128,382 @@ export const treatments: Treatment[] = [
           flightClearance: '10. günden sonra'
         },
         definition: [
-          'Radikal prostatektomi, prostat kanserinin bez içinde sınırlı olduğu durumlarda prostat bezinin ve çevresindeki bir miktar dokunun tamamen alınması işlemidir.',
-          'Robot destekli yöntemde cerrah, konsol başından yönettiği robotik kollar aracılığıyla milimetrik hassasiyetle çalışır. Küçük kesiler sayesinde kan kaybı, ağrı ve iyileşme süresi genellikle açık cerrahiye göre daha azdır.',
-          'Amaç kanserin kontrol altına alınmasının yanında, mümkün olduğunda idrar tutma ve cinsel işlevi koruyan sinir koruyucu tekniğin uygulanmasıdır.'
+          'Radikal prostatektomi, prostat bezinin ve ona bitişik meni keseciklerinin tamamen çıkarılması, ardından mesanenin idrar kanalına yeniden birleştirilmesi işlemidir. Prostat kanserinin bez içinde sınırlı olduğu düşünülen hastalarda uygulanır.',
+          'Robot destekli yöntemde ameliyatı robot yapmaz. Her hareketi cerrah yapar; robot, cerrahın el hareketlerini karın duvarındaki küçük deliklerden geçen ince aletlere aktarır ve büyütülmüş, üç boyutlu bir görüntü sağlar. Dar bir alanda hassas çalışmaya imkân verdiği için tercih edilir.',
+          'Bu ayrımı bilmek önemlidir, çünkü sonucu belirleyen konsolun başındaki kişidir, cihazın markası değil. "Robotunuz var mı" sorusu, "beni kim ameliyat edecek ve bu ameliyatı ne sıklıkta yapıyor" sorusundan çok daha az bilgi verir.',
+          'Prostat çıkarıldığı için ameliyattan sonra meni gelmez. Bu, doğal yolla çocuk sahibi olmanın sona ermesi demektir ve ameliyattan ÖNCE açıkça konuşulmalıdır. Orgazm duygusu pek çok erkekte korunur, ancak his farklılaşır.',
+          'Lenf bezlerinin de alınıp alınmayacağı riske göre belirlenir. Düşük riskli hastalarda gereksizdir; orta ve yüksek riskte evrelemeye katkı sağladığı için planlanabilir.'
         ],
         eligibility: {
           suitable: [
             'Kanserin prostat bezi içinde sınırlı olduğu (lokalize) hastalar',
-            'Genel sağlık durumu ameliyat ve genel anesteziye uygun olanlar',
-            'Beklenen yaşam süresi uzun, aktif tedavi tercih eden hastalar'
+            'Seçilmiş lokal ileri hastalarda, çok yönlü tedavi planının bir parçası olarak',
+            'Genel sağlık durumu ameliyata ve genel anesteziye uygun olanlar',
+            'Beklenen yaşam süresi, ameliyatın sağlayacağı faydayı görmeye yetecek olan hastalar',
+            'Radyoterapi yerine cerrahiyi bilinçli olarak tercih eden, iki seçeneğin de yan etkilerini anlamış hastalar'
           ],
           notSuitable: [
-            'Yaygın metastaz varlığında (öncelik sistemik tedavi)',
-            'Ağır kalp/akciğer hastalığı nedeniyle anestezi riski yüksek olanlar',
-            'Çok düşük riskli, aktif izlem için uygun seçilmiş hastalar'
+            'Yaygın metastaz varlığında — bu durumda öncelik sistemik tedavidir',
+            'Ağır kalp veya akciğer hastalığı nedeniyle anestezi riski yüksek olanlar',
+            'Çok düşük riskli, aktif izleme uygun hastalar: tedavinin yan etkileri hastalığın kendisinden daha fazla rahatsızlık verebilir',
+            'İleri yaş ve ciddi ek hastalıkları nedeniyle beklenen yaşam süresi kısa olan hastalar',
+            'Karın içi yoğun yapışıklık yaratmış geniş ameliyat geçmişi olanlarda yöntem yeniden değerlendirilir'
           ]
         },
         technology: [
-          'da Vinci robotik cerrahi sistemi',
-          'Sinir koruyucu (nerve-sparing) teknik',
-          'Yüksek çözünürlüklü 3B görüntüleme ile milimetrik diseksiyon'
-        ],
-        recovery: [
-          { period: '1. hafta', body: 'Sonda ile taburculuk; kısa yürüyüşler önerilir, ağır kaldırmaktan kaçınılır.' },
-          { period: '2. hafta', body: 'Sonda alınır. İdrar kaçırma bu dönemde beklenebilir; pelvik taban egzersizlerine başlanır.' },
-          { period: '3–4. hafta', body: 'Günlük yaşama ve masa başı işe dönüş. Kontinans kademeli olarak düzelir.' },
-          { period: '2–3. ay', body: 'İdrar kontrolü hastaların çoğunda belirgin düzelir; ilk PSA kontrolü yapılır.' },
-          { period: '6–12. ay', body: 'Cinsel işlevin toparlanması bu döneme yayılır; sinir koruyucu cerrahide şans daha yüksektir.' }
-        ],
-        sources: [
-          { label: 'EAU Guidelines on Prostate Cancer — Avrupa Üroloji Derneği', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+          'Robot destekli laparoskopik sistem — üç boyutlu, büyütülmüş görüntü ve bilek hareketi yapabilen aletler',
+          'Sinir koruyucu (nerve-sparing) teknik — uygun hastada tek veya çift taraflı',
+          'Mesane–üretra birleşiminde destekleyici dikiş teknikleri',
+          'Riske göre genişletilmiş pelvik lenf nodu diseksiyonu',
+          'Ameliyat öncesi multiparametrik MR ile tümör yerleşiminin planlanması',
+          'Çıkarılan dokunun tam patolojik incelemesi — cerrahi sınır ve gerçek evre bu incelemeyle belirlenir'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
+          note: 'Üroonkolojik cerrahi, Doç. Dr. Müslüm Ergün’ün çalışma alanlarındandır. Ameliyat planı; biyopsi sonucu, MR bulgusu, PSA seyri ve hastanın ameliyat öncesi idrar ve cinsel işlev durumu birlikte değerlendirilerek yapılır.'
         },
         timeline: [
           {
             when: 'Uzaktan',
             title: 'Ön değerlendirme',
-            body: 'PSA, biyopsi ve görüntüleme sonuçlarınızı çevrimiçi paylaşırsınız; ekip uygunluğu değerlendirir.'
+            body: 'PSA geçmişinizi, biyopsi patoloji raporunuzu ve MR görüntülerinizi paylaşırsınız. MR’ın rapor olarak değil, görüntü dosyası (DICOM) olarak gönderilmesi önemlidir; yalnızca raporla değerlendirme sınırlı kalır.'
           },
           {
             when: '1–2. Gün',
-            title: 'Varış ve muayene',
-            body: 'İstanbul’a varış, yüz yüze muayene, anestezi ve gerekli ameliyat öncesi tetkikler.'
+            title: 'Varış ve hazırlık',
+            body: 'Yüz yüze muayene, kan tetkikleri, anestezi değerlendirmesi. Kullandığınız ilaçlar, özellikle kan sulandırıcılar gözden geçirilir. İdrar kültürü temiz olmalıdır.'
           },
           {
             when: '3. Gün',
             title: 'Ameliyat',
-            body: 'Robot destekli prostatektomi; işlem genellikle 2–4 saat sürer, aynı gün yoğun bakım gerektirmez.'
+            body: 'İşlem genellikle 2–4 saat sürer. Sinir koruma kararı ameliyat sırasındaki görüntüye göre güncellenebilir; onkolojik güvenlik her zaman önceliklidir.'
           },
           {
             when: '4–5. Gün',
             title: 'Taburculuk',
-            body: 'Sonda ile taburculuk; yürüyüş ve hafif aktiviteye başlanır.'
+            body: 'Sonda ile taburculuk. Yürümeye erken başlamak hem bağırsak hareketinin dönmesi hem de pıhtı riskinin azalması açısından önemlidir.'
           },
           {
             when: '7–10. Gün',
-            title: 'Kontrol ve sonda alımı',
-            body: 'Kontrol muayenesi, sonda alımı ve patoloji sonucunun değerlendirilmesi; ardından dönüş uçuşu onayı.'
+            title: 'Sonda alımı ve kontrol',
+            body: 'Sonda burada alınır; sonrasında idrar yapmakta zorluk olursa hastane yakınında çözülür. Bu nedenle sonda alımının ertesi günü uçuş planlamayın.'
+          },
+          {
+            when: 'Dönüşten sonra',
+            title: 'Patoloji ve PSA takibi',
+            body: 'Patoloji sonucu genellikle siz ülkenize döndükten sonra çıkar. Sonucun size nasıl ulaşacağı, kimin açıklayacağı ve PSA takviminin ne olacağı ayrılmadan önce netleştirilir.'
           }
         ],
         risks: [
-          'Geçici veya kalıcı idrar kaçırma (inkontinans)',
-          'Ereksiyon işlevinde değişiklik (sinir koruyucu teknikle risk azalır)',
-          'Kanama, enfeksiyon ve anesteziye bağlı genel cerrahi riskler',
-          'Nadiren komşu organ yaralanması'
+          'İDRAR KAÇIRMA: Prostatla birlikte iç büzücü mekanizma da gider ve dış büzücü kas işi tek başına üstlenir. Sonda alındıktan sonra kaçırma bir komplikasyon değil, beklenen geçiş dönemidir. Çoğu hastada haftalar–aylar içinde düzelir, iyileşme bir yıla kadar sürebilir; az sayıda hastada kalıcı olabilir',
+          'CİNSEL İŞLEVDE DEĞİŞİKLİK: Sinirler korunsa bile işlev hemen dönmez, aylar alır ve her hastada aynı ölçüde olmaz. Yaş, şeker hastalığı, damar hastalığı, sigara ve ameliyat öncesi işlev düzeyi sonucu belirler',
+          'PATOLOJİ SONUCUNUN BEKLENENDEN KÖTÜ ÇIKMASI: Çıkarılan dokuda cerrahi sınırda tümör bulunması veya hastalığın düşünülenden ileri evrede çıkması mümkündür. Bu durumda ek tedavi (radyoterapi veya hormon tedavisi) gündeme gelir. Ameliyat öncesinde bu ihtimalin konuşulmamış olması, hasta açısından en zorlayıcı sürprizdir',
+          'Kanama, enfeksiyon ve genel anesteziye bağlı riskler',
+          'Lenf bezi alınan hastalarda lenf sıvısı birikmesi (lenfosel) ve bacakta şişme',
+          'Mesane ile idrar kanalı birleşim yerinde zamanla darlık gelişmesi',
+          'Nadiren bağırsak, üreter veya damar yaralanması',
+          'Pelvis cerrahisi ve hareketsizlik sonrası bacak damarlarında pıhtı; uzun uçuş bu riski artırır',
+          'Ameliyat sonrası dönemde kasık fıtığı gelişimi bildirilmiştir',
+          'Meni gelmemesi — kalıcıdır ve doğal yolla çocuk sahibi olmayı sonlandırır'
         ],
         alternatives: [
-          'Aktif izlem (düşük riskli, seçili hastalarda)',
-          'Radyoterapi (dış ışın veya brakiterapi)',
-          'Fokal tedaviler (seçili vakalarda)',
-          'Hormon tedavisi (ileri evrede tamamlayıcı)'
+          'Aktif izlem — düşük riskli, seçilmiş hastalarda. Tedaviyi ertelemek değil, düzenli PSA, muayene, MR ve gerektiğinde tekrar biyopsi ile yakın takip etmektir',
+          'Dış ışın radyoterapisi — cerrahiye alternatif, pek çok hastada karşılaştırılabilir onkolojik sonuç; yan etki profili farklıdır (bağırsak ve idrar yakınmaları öne çıkar, idrar kaçırma daha az görülür)',
+          'Brakiterapi — seçilmiş hastalarda prostat içine yerleştirilen radyoaktif kaynaklarla',
+          'Hormon tedavisi — tek başına küratif değildir; radyoterapiye eşlik edebilir veya ileri evrede kullanılır',
+          'Fokal tedaviler — yalnızca seçilmiş hastalarda ve uzun dönem sonuçları cerrahi ve radyoterapi kadar yerleşik değildir',
+          'Hiçbir tedavi yapmamak — ileri yaşta, kısa yaşam beklentisi ve düşük riskli hastalıkta makul bir seçenek olabilir'
+        ],
+        comparison: {
+          title: 'Cerrahi, radyoterapi ve aktif izlem: hangi denge size uyuyor',
+          columns: ['Ölçüt', 'Radikal prostatektomi', 'Radyoterapi', 'Aktif izlem'],
+          rows: [
+            { label: 'Hastalık nasıl ele alınır', values: ['Bez tamamen çıkarılır', 'Işınla tedavi edilir, bez yerinde kalır', 'Tedavi edilmez, yakından izlenir'] },
+            { label: 'Gerçek evre öğrenilir mi', values: ['Evet — patoloji ile', 'Hayır, klinik evreyle kalınır', 'Hayır'] },
+            { label: 'Öne çıkan yan etki', values: ['İdrar kaçırma, cinsel işlev', 'Bağırsak ve idrar yakınmaları, cinsel işlev (daha geç)', 'Yan etki yok; kaygı ve takip yükü var'] },
+            { label: 'Tedavi süresi', values: ['Tek ameliyat', 'Haftalara yayılan seanslar', 'Süresiz takip'] },
+            { label: 'Takip ölçütü', values: ['PSA’nın ölçülemez düzeye inmesi', 'PSA’nın düşüp dip yapması', 'PSA, MR, tekrar biyopsi'] },
+            { label: 'Sonrasında diğer seçenek', values: ['Gerekirse radyoterapi eklenebilir', 'Işınlanmış dokuda cerrahi zordur', 'Her iki seçenek de açık kalır'] }
+          ],
+          note: 'Aktif izlemin "hiçbir şey yapmamak" olmadığını vurgulamak gerekir: düzenli takip gerektirir ve takipten çıkıldığında anlamını yitirir. Buna karşılık uygun hastada gereksiz yan etkiden korur ve iki tedavi seçeneğini de açık bırakır.'
+        },
+        recovery: [
+          { period: '1. hafta', body: 'Sonda ile evde geçer. Kısa ve sık yürüyüşler önerilir; ağır kaldırmak ve ıkınmak yasaktır. Kabızlıktan kaçınmak için lifli beslenme ve bol su önemlidir.' },
+          { period: '2. hafta', body: 'Sonda alınır. İlk günlerde idrarı hiç tutamamak olağandır ve iyileşmenin kötü gideceği anlamına gelmez. Pelvik taban egzersizlerine bu dönemde düzenli başlanır.' },
+          { period: '3–4. hafta', body: 'Masa başı işe dönüş çoğu hastada mümkündür. Önce gece kuruluğu, ardından dinlenirken kontrol gelir; en son düzelen, öksürme ve ağır kaldırma gibi zorlanma anlarıdır.' },
+          { period: '2–3. ay', body: 'İdrar kontrolü pek çok hastada günlük yaşamı kısıtlamayan düzeye gelir. İlk PSA ölçümü yapılır; ameliyattan sonra PSA’nın ölçülemeyecek düzeye inmesi beklenir.' },
+          { period: '6–12. ay', body: 'Cinsel işlevin toparlanması bu döneme yayılır. Sinir koruyucu cerrahi uygulanmış hastalarda şans daha yüksektir, ancak bu bir güvence değildir. İdrar kontrolündeki düzelme de bu süre boyunca sürebilir.' },
+          { period: '1. yıldan sonra', body: 'Bir yılın sonunda hâlâ günlük yaşamı kısıtlayan kaçırma varsa durum ayrıca değerlendirilir. Bu aşamada uygulanan seçenekler vardır; erken dönemde bu kaygıyla karar almaya gerek yoktur.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'Fiyat aralığı evre, ek işlem ve konaklama süresine göre değişir. Kesin teklif ön değerlendirme sonrası verilir.'
+            'Tutar; evreye, lenf nodu diseksiyonu yapılıp yapılmayacağına, hastanede kalış süresine ve konaklamaya göre değişir. Kesin ve kalem kalem ayrılmış teklif, raporlarınız incelendikten sonra yazılı olarak verilir.'
         },
         packageIncludes: [
-          'Cerrahi ve hastane yatışı',
-          'Anestezi ve ameliyathane',
-          'Ameliyat öncesi tetkikler',
+          'Ameliyat öncesi muayene, kan tetkikleri ve anestezi değerlendirmesi',
+          'Cerrahi, anestezi ve ameliyathane',
+          'Robotik sistem aletleri ve sarf malzemeleri',
+          'Hastane yatışı',
+          'Çıkarılan dokunun patolojik incelemesi',
+          'Sonda alımı ve dönüş öncesi kontrol muayenesi',
           'Havalimanı–hastane–otel transferleri',
           'Konaklama (hasta + 1 refakatçi)',
           'Tıbbi tercüman ve hasta koordinatörü',
-          'Taburculuk sonrası online kontroller'
+          'Ülkenize döndükten sonra PSA sonuçlarının uzaktan değerlendirilmesi'
         ],
         faqs: [
           {
-            q: 'Türkiye’de ne kadar kalmam gerekir?',
-            a: 'Genellikle 7–10 gün önerilir; kesin süre iyileşme hızınıza ve sonda alım zamanına göre belirlenir.'
+            q: 'Ameliyatı robot mu yapıyor?',
+            a: 'Hayır. Her hareketi cerrah yapar; robot, cerrahın el hareketlerini ince aletlere aktarır ve büyütülmüş üç boyutlu görüntü sağlar. Cihaz kendi başına karar vermez veya hareket etmez. Bu nedenle sonucu belirleyen, konsolun başındaki cerrahtır.'
           },
           {
-            q: 'Sinir koruyucu cerrahi bana uygun mu?',
-            a: 'Kanserin yerleşimi ve evresine bağlıdır; ameliyat öncesi görüntüleme ve muayene sonrası netleşir.'
+            q: 'Ameliyattan sonra kesin idrar kaçırır mıyım?',
+            a: 'Sonda alındıktan sonraki ilk dönemde kaçırma beklenen bir durumdur, çünkü idrar tutma görevi tek bir kasa kalmıştır. Çoğu hastada haftalar ve aylar içinde düzelir; iyileşme bir yıla kadar sürebilir. Az sayıda hastada kalıcı olabilir ve bu ihtimalin önceden konuşulması gerekir.'
+          },
+          {
+            q: 'Sinir koruyucu cerrahi bana uygulanabilir mi?',
+            a: 'Bu karar biyopsi sonucunuza, MR bulgunuza ve muayeneye göre verilir. Değişmeyen kural şudur: önce kanserin tamamen çıkarılması, sonra mümkünse sinirin korunması. Kanser sinir demetine uzanıyorsa koruma yapılmaz. Tek taraflı koruma da mümkündür; karar ameliyat sırasında güncellenebilir.'
+          },
+          {
+            q: 'Sinirler korunursa cinsel işlev kesin geri gelir mi?',
+            a: 'Hayır. Sinirler korunsa bile toparlanma aylar alır ve her hastada aynı olmaz. Yaş, şeker hastalığı, damar hastalığı, sigara ve en önemlisi ameliyat öncesi işlev düzeyi sonucu etkiler. Ameliyattan önce belirgin sertleşme sorunu olan bir hastada sinir korunması beklenen faydayı vermeyebilir.'
+          },
+          {
+            q: 'Ameliyattan sonra çocuk sahibi olabilir miyim?',
+            a: 'Doğal yolla hayır. Prostat ve meni kesecikleri çıkarıldığı için meni gelmez. Çocuk isteğiniz varsa bu konu ameliyattan önce konuşulmalı ve sperm dondurma seçeneği gündeme alınmalıdır. Ameliyattan sonra bu fırsat kalmaz.'
+          },
+          {
+            q: 'Patoloji sonucu kötü çıkarsa ne olur?',
+            a: 'Çıkarılan dokuda cerrahi sınırda tümör bulunması veya hastalığın beklenenden ileri evrede çıkması mümkündür. Bu, ameliyatın başarısız olduğu anlamına gelmez; ek tedavi gerekebileceği anlamına gelir. Genellikle radyoterapi, bazen hormon tedavisi gündeme gelir. Bu ihtimali baştan bilmek, sonucu öğrendiğinizde yaşayacağınız sarsıntıyı azaltır.'
+          },
+          {
+            q: 'Ameliyattan sonra PSA ne olmalı?',
+            a: 'Prostat tamamen çıkarıldığı için PSA’nın ölçülemeyecek kadar düşük bir düzeye inmesi beklenir. Takipte PSA belirli aralıklarla ölçülür; yükselme eğilimi görülürse ek değerlendirme yapılır. PSA takibinin kim tarafından ve hangi takvimle yapılacağını ayrılmadan önce netleştirin.'
+          },
+          {
+            q: 'Radyoterapi yerine neden ameliyat olayım?',
+            a: 'İkisi de uygun hastada geçerli seçeneklerdir ve biri diğerinden kesin üstün değildir. Cerrahinin bir üstünlüğü, çıkarılan dokunun incelenerek gerçek evrenin öğrenilmesi ve gerekirse radyoterapinin sonradan eklenebilmesidir. Radyoterapinin üstünlüğü ise ameliyat ve anestezi yükü olmaması ve idrar kaçırmanın daha az görülmesidir. Doğru karar, hangi yan etkiyle yaşamayı tercih ettiğinize bağlıdır.'
+          },
+          {
+            q: 'Türkiye’de ne kadar kalmam gerekir?',
+            a: 'Genellikle 7–10 gün planlanır ve bu süreyi belirleyen sondadır. Sonda burada alınır ki idrar yapmakta zorluk olursa hastane yakınında çözülsün. Değiştirilebilir bilet almanızı ve kalış sürenizi birkaç gün marjla planlamanızı öneririz.'
           },
           {
             q: 'Ameliyat sonrası ne zaman uçabilirim?',
-            a: 'Çoğu hasta kontrol ve sonda alımından sonra, genellikle 10. günden itibaren uçuş için onay alır.'
+            a: 'Uçuş onayı kişiye göre verilir; genellikle kontrol ve sonda alımından sonrasına planlanır. Pelvis cerrahisi ve uzun süre hareketsiz kalmak bacak damarlarında pıhtı riskini artırdığı için uçuşta koridorda yürüme, bol su ve varis çorabı önerileri ciddiye alınmalıdır. Baldırda ağrı veya şişlik, göğüs ağrısı ya da nefes darlığında hemen tıbbi yardım alın.'
+          },
+          {
+            q: 'Ameliyattan önce hangi belgeleri göndermeliyim?',
+            a: 'PSA değerlerinizin zaman içindeki seyri, biyopsi patoloji raporunuzun tamamı (kaç kor alındığı, kaçında tümör olduğu, Gleason/ISUP derecesi), MR raporu ve MR görüntülerinin kendisi, varsa evreleme tetkikleri, kullandığınız ilaçların listesi ve diğer hastalıklarınız. Bunlarla, yola çıkmadan önce ameliyatın size uygun olup olmadığı değerlendirilebilir.'
           }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Prostate Cancer — Avrupa Üroloji Derneği', url: 'https://uroweb.org/guidelines/prostate-cancer' }
         ]
       },
       en: {
         title: 'Robotic / Laparoscopic Radical Prostatectomy',
         summary:
-          'Robot-assisted, minimally invasive removal of the prostate gland for prostate cancer.',
-        metaTitle: 'Robotic Prostatectomy | Prostate Cancer Surgery',
+          'Complete removal of the prostate with robotic assistance. The aim is to control the cancer and, where it can be done safely, to preserve continence and sexual function — but that order is never reversed.',
+        metaTitle: 'Robotic Prostatectomy: Procedure, Risks and Realistic Expectations',
         metaDescription:
-          'Robot-assisted radical prostatectomy for prostate cancer: process, risks, alternatives, price range and frequently asked questions.',
+          'How robot-assisted radical prostatectomy is performed, who can have nerve-sparing surgery, the real course of urinary leakage, what the pathology report can change, and PSA follow-up.',
         quickFacts: {
           duration: '2–4 hours',
-          anesthesia: 'General anesthesia',
+          anesthesia: 'General anaesthesia',
           hospitalStay: '2–3 nights',
           stayInTurkey: '7–10 days',
           catheter: '7–10 days',
           returnToWork: '3–4 weeks',
-          flightClearance: 'From day 10'
+          flightClearance: 'From around day 10'
         },
         definition: [
-          'Radical prostatectomy is the complete removal of the prostate gland and some surrounding tissue when cancer is confined to the gland.',
-          'In the robot-assisted approach the surgeon operates robotic arms from a console with millimetric precision. Small incisions typically mean less blood loss, less pain and faster recovery than open surgery.',
-          'The goal is cancer control while, where feasible, preserving urinary continence and sexual function through nerve-sparing technique.'
+          'Radical prostatectomy is the complete removal of the prostate together with the seminal vesicles, after which the bladder is reconnected to the urethra. It is performed when the cancer is thought to be confined to the gland.',
+          'In the robot-assisted approach the robot does not operate. Every movement is made by the surgeon; the system transmits the movements of their hands to fine instruments passed through small openings in the abdominal wall, with a magnified three-dimensional view. It is chosen because it allows precise work in a confined space.',
+          'This distinction matters, because the outcome is determined by the person at the console rather than by the make of the equipment. "Do you have a robot?" tells you far less than "who will operate on me, and how often do they do this procedure?"',
+          'Because the prostate is removed, there is no ejaculation after surgery. This ends natural fertility and must be discussed BEFORE the operation. The sensation of orgasm is retained by many men, though it feels different.',
+          'Whether lymph nodes are also removed depends on risk. It is unnecessary in low-risk disease; in intermediate and high-risk disease it may be planned because it contributes to staging.'
         ],
         eligibility: {
           suitable: [
-            'Patients whose cancer is confined to the prostate gland (localized)',
-            'Those whose general health is suitable for surgery and general anesthesia',
-            'Patients with a long life expectancy who prefer active treatment'
+            'Men whose cancer is confined to the prostate',
+            'Selected men with locally advanced disease, as part of a multimodal plan',
+            'Men whose general health is suitable for surgery and general anaesthesia',
+            'Men whose life expectancy is long enough to benefit from treating the cancer',
+            'Men who have understood the side effects of both surgery and radiotherapy and deliberately choose surgery'
           ],
           notSuitable: [
-            'Presence of widespread metastasis (systemic therapy takes priority)',
-            'High anesthetic risk due to severe heart or lung disease',
-            'Selected very-low-risk patients suitable for active surveillance'
+            'Men with widespread metastatic disease — systemic treatment takes priority',
+            'Men at high anaesthetic risk from severe cardiac or pulmonary disease',
+            'Men with very low-risk disease suitable for active surveillance, in whom treatment side effects may trouble them more than the disease',
+            'Older men whose life expectancy is limited by other conditions',
+            'Men with extensive previous abdominal surgery and dense adhesions, in whom the approach is reconsidered'
           ]
         },
         technology: [
-          'da Vinci robotic surgery system',
-          'Nerve-sparing technique',
-          'Millimetric dissection with high-definition 3D vision'
-        ],
-        recovery: [
-          { period: 'Week 1', body: 'Discharge with catheter; short walks are encouraged, heavy lifting is avoided.' },
-          { period: 'Week 2', body: 'The catheter is removed. Some urinary leakage is expected; pelvic floor exercises begin.' },
-          { period: 'Weeks 3–4', body: 'Return to daily life and desk work. Continence improves gradually.' },
-          { period: 'Months 2–3', body: 'Urinary control improves markedly in most patients; the first PSA check is done.' },
-          { period: 'Months 6–12', body: 'Recovery of sexual function occurs over this period; chances are higher after nerve-sparing surgery.' }
-        ],
-        sources: [
-          { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+          'Robot-assisted laparoscopic system — magnified three-dimensional vision and wristed instruments',
+          'Nerve-sparing technique — unilateral or bilateral, where oncologically safe',
+          'Reconstructive sutures supporting the bladder–urethra join',
+          'Extended pelvic lymph node dissection according to risk',
+          'Pre-operative multiparametric MRI to plan around the tumour\'s position',
+          'Full pathological examination of the specimen — the true stage and the surgical margins are established here'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
+          note: 'Uro-oncological surgery is among Assoc. Prof. Müslüm Ergün\'s areas of practice. The surgical plan is based on the biopsy result, the MRI findings, the PSA trend and the patient\'s urinary and sexual function before surgery, considered together.'
         },
         timeline: [
           {
-            when: 'Remote',
-            title: 'Pre-assessment',
-            body: 'You share PSA, biopsy and imaging results online; the team assesses suitability.'
+            when: 'Remotely',
+            title: 'Initial assessment',
+            body: 'You send your PSA history, your biopsy pathology report and your MRI. Send the MRI as image files (DICOM), not only as a written report — a review based on someone else\'s report is a paraphrase, not an independent assessment.'
           },
           {
-            when: 'Day 1–2',
-            title: 'Arrival & exam',
-            body: 'Arrival in Istanbul, in-person exam, anesthesia and required pre-operative tests.'
+            when: 'Days 1–2',
+            title: 'Arrival and preparation',
+            body: 'Examination, blood tests and anaesthetic assessment. Your medication is reviewed, particularly anticoagulants. The urine culture must be clear.'
           },
           {
             when: 'Day 3',
             title: 'Surgery',
-            body: 'Robot-assisted prostatectomy; usually 2–4 hours, no routine ICU stay.'
+            body: 'The procedure usually takes 2–4 hours. The nerve-sparing plan may be revised during the operation according to what is found; oncological safety always comes first.'
           },
           {
-            when: 'Day 4–5',
+            when: 'Days 4–5',
             title: 'Discharge',
-            body: 'Discharge with catheter; walking and light activity begin.'
+            body: 'You are discharged with the catheter in place. Walking early matters, both for bowel recovery and to reduce the risk of clots.'
           },
           {
-            when: 'Day 7–10',
-            title: 'Review & catheter removal',
-            body: 'Follow-up exam, catheter removal and pathology review; then clearance to fly home.'
+            when: 'Days 7–10',
+            title: 'Catheter removal and review',
+            body: 'The catheter is removed here, so that any difficulty passing urine is dealt with close to the hospital. For this reason, do not book a flight for the day after removal.'
+          },
+          {
+            when: 'After you return',
+            title: 'Pathology and PSA follow-up',
+            body: 'The pathology report usually becomes available after you are home. Agree before you leave how it will reach you, who will explain it, and what the PSA follow-up schedule will be.'
           }
         ],
         risks: [
-          'Temporary or permanent urinary incontinence',
-          'Changes in erectile function (reduced with nerve-sparing technique)',
-          'Bleeding, infection and general surgical/anesthetic risks',
-          'Rarely, injury to adjacent organs'
+          'URINARY LEAKAGE: with the prostate goes part of the continence mechanism, leaving the external sphincter to work alone. Leakage after catheter removal is an expected transition, not a complication. Most men improve over weeks to months and recovery can continue for up to a year; in a small number it is permanent',
+          'CHANGE IN SEXUAL FUNCTION: even when the nerves are preserved, function does not return immediately — it takes months and differs between men. Age, diabetes, vascular disease, smoking and the level of function before surgery all affect the result',
+          'A PATHOLOGY RESULT WORSE THAN EXPECTED: tumour may be found at the surgical margin, or the disease may prove more advanced than thought. Additional treatment — radiotherapy, sometimes hormone therapy — may then be advised. Not having discussed this possibility beforehand is the hardest surprise for a patient',
+          'Bleeding, infection and the general risks of anaesthesia',
+          'Collection of lymph fluid (lymphocele) and leg swelling where lymph nodes have been removed',
+          'Narrowing at the bladder–urethra join developing over time',
+          'Injury to bowel, ureter or blood vessels, uncommonly',
+          'Clots in the leg veins after pelvic surgery and immobility; a long flight adds to this risk',
+          'Inguinal hernia developing in the period after surgery has been reported',
+          'Absence of ejaculation — permanent, and it ends natural fertility'
         ],
         alternatives: [
-          'Active surveillance (in selected low-risk patients)',
-          'Radiotherapy (external beam or brachytherapy)',
-          'Focal therapies (in selected cases)',
-          'Hormone therapy (adjunct in advanced disease)'
+          'Active surveillance — for selected low-risk disease. It is not postponing treatment but following it closely with PSA, examination, MRI and repeat biopsy when indicated',
+          'External beam radiotherapy — an alternative to surgery with comparable oncological results in many men; the side-effect profile differs, with more bowel and urinary irritation but less incontinence',
+          'Brachytherapy — radioactive sources placed within the prostate, in selected men',
+          'Hormone therapy — not curative alone; it may accompany radiotherapy or be used in advanced disease',
+          'Focal therapies — only in selected cases, and with long-term results less established than surgery or radiotherapy',
+          'No treatment at all — a reasonable choice in older men with limited life expectancy and low-risk disease'
+        ],
+        comparison: {
+          title: 'Surgery, radiotherapy and surveillance: which trade-off suits you',
+          columns: ['Criterion', 'Radical prostatectomy', 'Radiotherapy', 'Active surveillance'],
+          rows: [
+            { label: 'How the disease is addressed', values: ['The gland is removed', 'The gland is treated in place', 'Not treated; closely monitored'] },
+            { label: 'Is the true stage learned?', values: ['Yes — from the pathology', 'No; clinical staging only', 'No'] },
+            { label: 'Main side effect', values: ['Incontinence, sexual function', 'Bowel and urinary symptoms, sexual function (later)', 'None; the burden is monitoring and anxiety'] },
+            { label: 'Treatment duration', values: ['One operation', 'Sessions over several weeks', 'Open-ended follow-up'] },
+            { label: 'Follow-up measure', values: ['PSA falling to undetectable', 'PSA falling to a nadir', 'PSA, MRI, repeat biopsy'] },
+            { label: 'Options afterwards', values: ['Radiotherapy can be added if needed', 'Surgery after radiation is difficult', 'Both options remain open'] }
+          ],
+          note: 'Active surveillance is not "doing nothing". It requires disciplined follow-up and loses its meaning if the follow-up lapses. In the right patient, however, it avoids unnecessary side effects and keeps both treatment options available.'
+        },
+        recovery: [
+          { period: 'Week 1', body: 'Spent at home with the catheter. Short, frequent walks are encouraged; lifting and straining are not. Avoid constipation with fibre and fluids.' },
+          { period: 'Week 2', body: 'The catheter is removed. Little or no control in the first days is usual and does not predict a poor outcome. Pelvic floor exercises begin in earnest.' },
+          { period: 'Weeks 3–4', body: 'Most men can return to desk work. Dry nights usually return first, then control at rest; the last thing to improve is control under effort — coughing, lifting, stairs.' },
+          { period: 'Months 2–3', body: 'Urinary control reaches a level that does not restrict daily life for many men. The first PSA is measured; after surgery it is expected to fall to an undetectable level.' },
+          { period: 'Months 6–12', body: 'Recovery of sexual function occurs over this period. The chance is higher where nerve-sparing was performed, but that is not a guarantee. Continence can also continue to improve throughout this time.' },
+          { period: 'Beyond one year', body: 'If leakage still restricts daily life at one year, the situation is assessed separately and further options exist. There is no need to make decisions driven by that concern in the early months.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'The price range varies with stage, additional procedures and length of stay. A firm quote follows pre-assessment.'
+            'The figure depends on the stage, on whether lymph node dissection is performed, on the length of hospital stay and on accommodation. An itemised written quote is provided after your reports have been reviewed.'
         },
         packageIncludes: [
-          'Surgery and hospital stay',
-          'Anesthesia and operating room',
-          'Pre-operative tests',
+          'Pre-operative examination, blood tests and anaesthetic assessment',
+          'Surgery, anaesthesia and theatre',
+          'Robotic instruments and consumables',
+          'Hospital stay',
+          'Pathological examination of the specimen',
+          'Catheter removal and the review appointment before you fly',
           'Airport–hospital–hotel transfers',
           'Accommodation (patient + 1 companion)',
           'Medical interpreter and patient coordinator',
-          'Post-discharge online follow-ups'
+          'Remote review of your PSA results after you return home'
         ],
         faqs: [
           {
-            q: 'How long do I need to stay in Türkiye?',
-            a: 'Usually 7–10 days; the exact duration depends on your recovery and catheter removal timing.'
+            q: 'Does the robot perform the operation?',
+            a: 'No. Every movement is made by the surgeon; the system transmits the movements of their hands to fine instruments and provides a magnified three-dimensional view. The device does not decide or move on its own. The outcome is therefore determined by the surgeon at the console.'
           },
           {
-            q: 'Am I a candidate for nerve-sparing surgery?',
-            a: 'It depends on tumor location and stage, confirmed after pre-operative imaging and examination.'
+            q: 'Will I definitely leak urine afterwards?',
+            a: 'Leakage in the first period after catheter removal is expected, because continence now depends on a single muscle. Most men improve over weeks and months, and recovery can continue for up to a year. In a small number it is permanent, and that possibility should be stated before surgery rather than after.'
+          },
+          {
+            q: 'Can I have nerve-sparing surgery?',
+            a: 'That is decided from your biopsy result, your MRI and the examination. The rule does not change: complete removal of the cancer first, preservation of the nerves second where possible. If the cancer extends towards the nerve bundle, it is not preserved. One-sided preservation is also possible, and the plan may be revised during the operation.'
+          },
+          {
+            q: 'If the nerves are preserved, will sexual function definitely return?',
+            a: 'No. Even with the nerves preserved, recovery takes months and is not the same for everyone. Age, diabetes, vascular disease, smoking and — most importantly — your function before surgery all affect it. In a man with significant erectile difficulty beforehand, nerve preservation may not deliver the expected benefit.'
+          },
+          {
+            q: 'Can I father children after this operation?',
+            a: 'Not naturally. With the prostate and seminal vesicles removed, there is no ejaculate. If you wish to father children, this must be discussed before surgery and sperm banking considered. The opportunity does not exist afterwards.'
+          },
+          {
+            q: 'What happens if the pathology result is worse than expected?',
+            a: 'Tumour may be found at the surgical margin, or the disease may be more advanced than anticipated. This does not mean the operation failed; it means additional treatment may be needed, usually radiotherapy and sometimes hormone therapy. Knowing this possibility in advance softens the shock of hearing it.'
+          },
+          {
+            q: 'What should my PSA be after surgery?',
+            a: 'With the prostate removed, PSA is expected to fall to an undetectable level. It is then measured at intervals, and a rising trend prompts further assessment. Establish before you leave who reviews these results and on what schedule.'
+          },
+          {
+            q: 'Why would I choose surgery over radiotherapy?',
+            a: 'Both are valid in the right patient, and neither is definitively superior. One advantage of surgery is that examining the removed gland reveals the true stage, and radiotherapy can still be added afterwards if needed. The advantages of radiotherapy are that it avoids surgery and anaesthesia and causes less incontinence. The right choice depends on which side effects you would rather live with.'
+          },
+          {
+            q: 'How long should I stay in Turkey?',
+            a: 'Usually 7–10 days, and it is the catheter that sets the timetable. It is removed here so that any difficulty passing urine is managed close to the hospital. Book a changeable ticket and allow a few days\' margin.'
           },
           {
             q: 'When can I fly after surgery?',
-            a: 'Most patients are cleared to fly after review and catheter removal, typically from day 10.'
+            a: 'Flying clearance is given individually and is normally planned for after the review and catheter removal. Pelvic surgery and immobility raise the risk of clots in the legs, so take seriously the advice about walking in the aisle, hydration and compression stockings. Seek medical help immediately for calf pain or swelling, chest pain or breathlessness.'
+          },
+          {
+            q: 'What should I send before travelling?',
+            a: 'Your PSA values over time, the complete biopsy pathology report (how many cores were taken, how many were positive, the Gleason score or ISUP grade), the MRI report and the MRI images themselves, any staging investigations, your medication list and your other medical conditions. With these, it can be assessed before you travel whether this operation is right for you.'
           }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
         ]
       },
       ar: {
-        title: 'استئصال البروستاتا الجذري بالروبوت / بالمنظار',
-        summary: 'إزالة غدة البروستاتا بأسلوب دقيق قليل التوغل بمساعدة الروبوت لعلاج سرطان البروستاتا.',
-        metaTitle: 'استئصال البروستاتا بالروبوت | جراحة سرطان البروستاتا',
-        metaDescription: 'علاج سرطان البروستاتا باستئصال جذري بمساعدة الروبوت: مسار العلاج، المخاطر، البدائل، نطاق السعر والأسئلة الشائعة.',
+        title: 'استئصال البروستاتا الجذري بالروبوت أو بالمنظار',
+        summary:
+          'إزالة البروستاتا كاملةً بمساعدة الروبوت. والهدف ضبط الورم، ثم — حين يكون ذلك آمنًا — الحفاظ على التحكم بالبول والوظيفة الجنسية؛ وهذا الترتيب لا يُعكَس أبدًا.',
+        metaTitle: 'استئصال البروستاتا بالروبوت: الإجراء والمخاطر والتوقعات',
+        metaDescription:
+          'كيف تُجرى عملية استئصال البروستاتا الجذري بالروبوت، ومن يمكن الحفاظ على أعصابه، والمسار الحقيقي لتسرّب البول، وما يغيّره تقرير علم الأنسجة، ومتابعة PSA.',
         quickFacts: {
           duration: '2–4 ساعات',
           anesthesia: 'تخدير عام',
@@ -21367,89 +21511,192 @@ export const treatments: Treatment[] = [
           stayInTurkey: '7–10 أيام',
           catheter: '7–10 أيام',
           returnToWork: '3–4 أسابيع',
-          flightClearance: 'بدءًا من اليوم العاشر'
+          flightClearance: 'من اليوم العاشر تقريبًا'
         },
         definition: [
-          'استئصال البروستاتا الجذري هو إزالة غدة البروستاتا بالكامل مع جزء من الأنسجة المحيطة عندما يكون السرطان محصورًا داخل الغدة.',
-          'في الأسلوب المعتمد على الروبوت يتحكم الجرّاح بأذرع روبوتية من وحدة تحكم بدقة تصل إلى المليمتر. وبفضل الشقوق الصغيرة يكون فقدان الدم والألم ومدة التعافي عادةً أقل مقارنةً بالجراحة المفتوحة.',
-          'الهدف هو السيطرة على السرطان مع الحفاظ قدر الإمكان على التحكم في التبول والوظيفة الجنسية من خلال تقنية الحفاظ على الأعصاب.'
+          'استئصال البروستاتا الجذري هو إزالة الغدة كاملةً مع الحويصلتين المنويتين، ثم إعادة وصل المثانة بالإحليل. ويُجرى حين يُرجَّح أن الورم محصور داخل الغدة.',
+          'وفي الطريقة الروبوتية لا يُجري الروبوت العملية. فكل حركة يصنعها الجرّاح، والنظام ينقل حركة يديه إلى أدوات رفيعة تمر عبر فتحات صغيرة في جدار البطن، مع رؤية مكبَّرة ومجسَّمة. ويُختار هذا الأسلوب لأنه يتيح عملًا دقيقًا في حيّز ضيّق.',
+          'وهذا التمييز مهم، لأن الذي يحدد النتيجة هو الجالس خلف الجهاز لا ماركة الجهاز. فسؤال «هل عندكم روبوت؟» أقل دلالةً بكثير من سؤال «من سيُجري عمليتي، وكم عملية من هذا النوع يُجري؟».',
+          'ولأن البروستاتا تُزال، لا يحدث قذف بعد العملية. وهذا يعني انتهاء الإنجاب بالطريقة الطبيعية، ويجب قوله قبل العملية لا بعدها. أما الإحساس بالنشوة فيبقى عند كثير من الرجال، لكنه يختلف.',
+          'وأما إزالة العقد اللمفية فتتحدد بحسب درجة الخطورة. ففي الخطورة المنخفضة لا لزوم لها؛ وفي المتوسطة والعالية قد تُخطَّط لأنها تُسهم في تحديد المرحلة.'
         ],
         eligibility: {
           suitable: [
-            'المرضى الذين ينحصر لديهم السرطان داخل غدة البروستاتا (موضعي)',
-            'من تسمح حالتهم الصحية العامة بالجراحة والتخدير العام',
-            'المرضى ذوو العمر المتوقع الطويل الذين يفضّلون العلاج الفعّال'
+            'الرجال الذين ينحصر الورم لديهم داخل البروستاتا',
+            'رجال مختارون لديهم مرض موضعي متقدم، ضمن خطة علاجية متعددة الوسائل',
+            'الرجال الذين تسمح حالتهم العامة بالجراحة والتخدير العام',
+            'الرجال الذين يكفي العمر المتوقع لديهم لجني فائدة من علاج الورم',
+            'الرجال الذين فهموا الآثار الجانبية للجراحة وللعلاج الإشعاعي واختاروا الجراحة عن بيّنة'
           ],
           notSuitable: [
-            'وجود نقائل منتشرة (الأولوية للعلاج الجهازي)',
-            'ارتفاع خطر التخدير بسبب أمراض قلبية أو رئوية شديدة',
-            'مرضى مختارون منخفضو الخطورة جدًا ومناسبون للمراقبة النشطة'
+            'الرجال الذين لديهم انتشار واسع — فالأولوية للعلاج الجهازي',
+            'الرجال ذوو خطورة تخديرية عالية بسبب مرض قلبي أو رئوي شديد',
+            'الرجال ذوو الخطورة المنخفضة جدًا المرشّحون للمراقبة النشطة، إذ قد تُزعجهم آثار العلاج أكثر من المرض نفسه',
+            'كبار السن الذين يحدّ من عمرهم المتوقع أمراض أخرى',
+            'من لديهم جراحات بطنية واسعة سابقة والتصاقات كثيفة — فيُعاد النظر في الأسلوب'
           ]
         },
         technology: [
-          'نظام الجراحة الروبوتية da Vinci',
-          'تقنية الحفاظ على الأعصاب',
-          'تشريح بدقة ميليمترية مع رؤية ثلاثية الأبعاد عالية الوضوح'
-        ],
-        recovery: [
-          { period: 'الأسبوع الأول', body: 'الخروج مع القسطرة؛ يُنصح بالمشي القصير وتجنّب رفع الأثقال.' },
-          { period: 'الأسبوع الثاني', body: 'تُزال القسطرة. قد يحدث تسرّب بولي؛ تبدأ تمارين قاع الحوض.' },
-          { period: 'الأسبوع 3–4', body: 'العودة إلى الحياة اليومية والعمل المكتبي. يتحسّن التحكّم بالبول تدريجيًا.' },
-          { period: 'الشهر 2–3', body: 'يتحسّن التحكّم بالبول بوضوح لدى معظم المرضى؛ ويُجرى أول فحص PSA.' },
-          { period: 'الشهر 6–12', body: 'يمتد تعافي الوظيفة الجنسية على هذه الفترة؛ وتكون الفرص أعلى بعد جراحة الحفاظ على الأعصاب.' }
-        ],
-        sources: [
-          { label: 'إرشادات EAU حول سرطان البروستاتا — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+          'نظام منظاري بمساعدة الروبوت — رؤية مجسَّمة مكبَّرة وأدوات ذات مفصل معصمي',
+          'تقنية الحفاظ على الأعصاب — من جانب أو من الجانبين حين يكون ذلك آمنًا ورميًا',
+          'غُرَز ترميمية تدعم موضع الوصل بين المثانة والإحليل',
+          'استئصال موسَّع للعقد اللمفية في الحوض بحسب درجة الخطورة',
+          'رنين مغناطيسي متعدد المعاملات قبل العملية لتخطيط العمل حول موضع الورم',
+          'فحص نسيجي كامل للعيّنة المُزالة — وفيه تتحدد المرحلة الحقيقية وحالة حواف الاستئصال'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'يعكس عدد الحالات إجمالي الخبرة الجراحية للأستاذ المشارك د. مسلم إرغن في هذا المجال.'
+          note: 'جراحة أورام المسالك البولية من مجالات عمل الأستاذ المشارك الدكتور مسلم إرغون. وتُبنى خطة العملية على نتيجة الخزعة وصورة الرنين وسير قيم PSA وحالة التبول والوظيفة الجنسية قبل الجراحة، مجتمعةً.'
         },
         timeline: [
-          { when: 'عن بُعد', title: 'التقييم الأولي', body: 'تشاركون نتائج PSA والخزعة والتصوير عبر الإنترنت، ويقيّم الفريق مدى الملاءمة.' },
-          { when: 'اليوم 1–2', title: 'الوصول والفحص', body: 'الوصول إلى إسطنبول، فحص شخصي، وتقييم التخدير والفحوصات اللازمة قبل العملية.' },
-          { when: 'اليوم 3', title: 'العملية', body: 'استئصال البروستاتا بمساعدة الروبوت؛ يستغرق عادةً 2–4 ساعات دون حاجة روتينية للعناية المركزة.' },
-          { when: 'اليوم 4–5', title: 'الخروج', body: 'الخروج مع قسطرة؛ والبدء بالمشي والنشاط الخفيف.' },
-          { when: 'اليوم 7–10', title: 'المراجعة وإزالة القسطرة', body: 'فحص المتابعة، إزالة القسطرة ومراجعة نتيجة علم الأمراض، ثم الإذن بالسفر للعودة.' }
+          {
+            when: 'عن بُعد',
+            title: 'التقييم المبدئي',
+            body: 'ترسل سجل قيم PSA وتقرير الخزعة وصور الرنين. وأرسل الرنين كملفات صور (DICOM) لا كتقرير مكتوب فقط؛ فالتقييم المبني على تقرير غيرك إعادة صياغة له لا رأي مستقل.'
+          },
+          {
+            when: 'اليوم 1–2',
+            title: 'الوصول والتحضير',
+            body: 'فحص سريري وتحاليل دم وتقييم التخدير. وتُراجَع أدويتك وخصوصًا مميعات الدم. ويجب أن تكون زراعة البول سلبية.'
+          },
+          {
+            when: 'اليوم 3',
+            title: 'العملية',
+            body: 'تستغرق عادةً 2–4 ساعات. وقد تُعدَّل خطة الحفاظ على الأعصاب أثناء العملية بحسب ما يُرى؛ والسلامة الورمية مقدَّمة دائمًا.'
+          },
+          {
+            when: 'اليوم 4–5',
+            title: 'الخروج من المستشفى',
+            body: 'يكون الخروج والقسطرة موضوعة. والمشي المبكر مهم لعودة حركة الأمعاء ولخفض خطر الجلطات.'
+          },
+          {
+            when: 'اليوم 7–10',
+            title: 'نزع القسطرة والمراجعة',
+            body: 'تُنزَع القسطرة هنا ليُعالَج أيّ تعذّر في التبول قرب المستشفى. ولذلك لا تحجز رحلتك في اليوم التالي للنزع.'
+          },
+          {
+            when: 'بعد العودة',
+            title: 'تقرير الأنسجة ومتابعة PSA',
+            body: 'يصدر تقرير الأنسجة غالبًا بعد عودتك إلى بلدك. فاتفق قبل المغادرة على كيفية وصوله ومن يشرحه وما جدول متابعة PSA.'
+          }
         ],
         risks: [
-          'سلس بولي مؤقت أو دائم',
-          'تغيّرات في الوظيفة الانتصابية (تقل مع تقنية الحفاظ على الأعصاب)',
-          'نزيف وعدوى ومخاطر جراحية وتخديرية عامة',
-          'نادرًا، إصابة الأعضاء المجاورة'
+          'تسرّب البول: بزوال البروستاتا يزول جزء من آلية التحكم، فتعمل العضلة العاصرة الخارجية وحدها. والتسرّب بعد نزع القسطرة مرحلة انتقالية متوقعة لا مضاعفة. ويتحسن عند معظم الرجال خلال أسابيع إلى أشهر، وقد يمتد التحسن إلى سنة؛ ويبقى عند قلة منهم',
+          'تغيّر الوظيفة الجنسية: حتى مع الحفاظ على الأعصاب لا تعود الوظيفة فورًا — بل تحتاج أشهرًا وتختلف من رجل لآخر. ويؤثر في ذلك العمر والسكري وأمراض الشرايين والتدخين ومستوى الوظيفة قبل العملية',
+          'تقرير أنسجة أسوأ من المتوقع: قد يُوجَد ورم عند حافة الاستئصال، أو يتبيّن أن المرض أكثر تقدّمًا مما ظُنّ. وعندها قد يلزم علاج إضافي — إشعاعي، وأحيانًا هرموني. وعدم بحث هذا الاحتمال مسبقًا أقسى مفاجأة على المريض',
+          'النزف والعدوى والمخاطر العامة للتخدير',
+          'تجمّع سائل لمفي (قيلة لمفية) وتورّم في الساق عند من أُزيلت عقدهم اللمفية',
+          'تضيّق لاحق في موضع الوصل بين المثانة والإحليل',
+          'نادرًا إصابة الأمعاء أو الحالب أو الأوعية',
+          'جلطات في أوردة الساق بعد جراحة الحوض وقلة الحركة؛ والرحلة الطويلة تزيد هذا الخطر',
+          'وردت تقارير عن حدوث فتق أربي في الفترة التالية للعملية',
+          'انقطاع القذف — وهو دائم ويُنهي الإنجاب بالطريقة الطبيعية'
         ],
         alternatives: [
-          'المراقبة النشطة (لدى مرضى مختارين منخفضي الخطورة)',
-          'العلاج الإشعاعي (إشعاع خارجي أو معالجة كثبية)',
-          'العلاجات الموضعية (في حالات مختارة)',
-          'العلاج الهرموني (مكمّل في المراحل المتقدمة)'
+          'المراقبة النشطة — في حالات مختارة منخفضة الخطورة. وهي ليست تأجيلًا للعلاج بل متابعة لصيقة بـ PSA والفحص والرنين وإعادة الخزعة عند اللزوم',
+          'العلاج الإشعاعي الخارجي — بديل نتائجه الورمية مقاربة عند كثير من الرجال؛ لكن آثاره الجانبية مختلفة: شكاوى معوية وبولية أكثر، وسلس أقل',
+          'المعالجة الكثبية — مصادر إشعاعية تُزرع داخل البروستاتا، عند مرضى مختارين',
+          'العلاج الهرموني — لا يَشفي وحده؛ وقد يرافق العلاج الإشعاعي أو يُستعمل في المراحل المتقدمة',
+          'العلاجات البؤرية — لحالات مختارة فقط، ونتائجها بعيدة المدى أقل رسوخًا من الجراحة والإشعاع',
+          'عدم العلاج — خيار معقول عند كبار السن محدودي العمر المتوقع ومع مرض منخفض الخطورة'
+        ],
+        comparison: {
+          title: 'الجراحة والإشعاع والمراقبة: أيّ موازنة تناسبك',
+          columns: ['المعيار', 'الاستئصال الجذري', 'العلاج الإشعاعي', 'المراقبة النشطة'],
+          rows: [
+            { label: 'كيف يُعالَج المرض', values: ['تُزال الغدة', 'تبقى الغدة وتُشعَّع', 'لا يُعالَج بل يُراقَب عن كثب'] },
+            { label: 'هل تُعرَف المرحلة الحقيقية', values: ['نعم — بفحص الأنسجة', 'لا، تبقى المرحلة السريرية', 'لا'] },
+            { label: 'الأثر الجانبي الأبرز', values: ['السلس والوظيفة الجنسية', 'شكاوى معوية وبولية، والوظيفة الجنسية لاحقًا', 'لا شيء؛ والعبء هو المتابعة والقلق'] },
+            { label: 'مدة العلاج', values: ['عملية واحدة', 'جلسات على مدى أسابيع', 'متابعة مفتوحة'] },
+            { label: 'مؤشر المتابعة', values: ['هبوط PSA إلى مستوى غير قابل للقياس', 'هبوط PSA إلى أدنى قيمة', 'PSA والرنين وإعادة الخزعة'] },
+            { label: 'الخيارات لاحقًا', values: ['يمكن إضافة الإشعاع عند الحاجة', 'الجراحة بعد الإشعاع صعبة', 'يبقى الخياران مفتوحين'] }
+          ],
+          note: 'المراقبة النشطة ليست «عدم فعل شيء». فهي تتطلب التزامًا بالمتابعة وتفقد معناها إذا انقطعت. لكنها عند المريض المناسب تجنّبه آثارًا جانبية لا لزوم لها وتُبقي طريقي العلاج مفتوحين.'
+        },
+        recovery: [
+          { period: 'الأسبوع الأول', body: 'يمضي في البيت مع القسطرة. ويُنصَح بمشي قصير متكرر؛ ويُمنع حمل الثقيل والحزق. وتجنّب الإمساك بالألياف وشرب الماء.' },
+          { period: 'الأسبوع الثاني', body: 'تُنزَع القسطرة. وضعف التحكم أو غيابه في الأيام الأولى أمر معتاد ولا يدل على نتيجة سيئة. وتبدأ هنا تمارين قاع الحوض بجدية.' },
+          { period: 'الأسبوع 3–4', body: 'العودة إلى عمل مكتبي ممكنة عند معظم الرجال. ويعود الجفاف ليلًا أولًا، ثم التحكم في السكون؛ وآخر ما يتحسن هو التحكم عند الجهد — السعال وحمل الثقيل والدرج.' },
+          { period: 'الشهر 2–3', body: 'يبلغ التحكم بالبول عند كثيرين مستوى لا يقيّد الحياة اليومية. ويُقاس أول PSA؛ والمتوقع بعد العملية هبوطه إلى مستوى غير قابل للقياس.' },
+          { period: 'الشهر 6–12', body: 'يقع تعافي الوظيفة الجنسية في هذه المدة. والفرصة أعلى عند من حُفظت أعصابه، لكنها ليست ضمانة. وقد يستمر تحسن التحكم بالبول في هذه المدة أيضًا.' },
+          { period: 'بعد السنة', body: 'إن بقي التسرّب بعد سنة مقيّدًا للحياة اليومية فتُقيَّم الحالة على حدة، وثمة حلول لذلك. ولا داعي لاتخاذ قرار بدافع هذا القلق في الأشهر الأولى.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'يختلف نطاق السعر حسب المرحلة والإجراءات الإضافية ومدة الإقامة. يُقدَّم عرض سعر نهائي بعد التقييم الأولي.'
+          disclaimer:
+            'يتغير المبلغ بحسب المرحلة، وبحسب إجراء استئصال العقد اللمفية من عدمه، ومدة الإقامة في المستشفى والسكن. ويُقدَّم عرض مكتوب ومفصَّل بعد مراجعة تقاريرك.'
         },
         packageIncludes: [
-          'العملية والإقامة في المستشفى',
-          'التخدير وغرفة العمليات',
-          'الفحوصات قبل العملية',
+          'الفحص قبل العملية وتحاليل الدم وتقييم التخدير',
+          'العملية والتخدير وغرفة العمليات',
+          'أدوات النظام الروبوتي والمستهلكات',
+          'الإقامة في المستشفى',
+          'الفحص النسيجي للعيّنة المُزالة',
+          'نزع القسطرة والمراجعة قبل السفر',
           'التنقلات بين المطار والمستشفى والفندق',
           'الإقامة (المريض + مرافق واحد)',
-          'مترجم طبي ومنسّق مرضى',
-          'متابعات إلكترونية بعد الخروج'
+          'مترجم طبي ومنسّق للمرضى',
+          'تقييم نتائج PSA عن بُعد بعد عودتك إلى بلدك'
         ],
         faqs: [
-          { q: 'كم يجب أن أبقى في تركيا؟', a: 'يُوصى عادةً بـ 7–10 أيام؛ وتُحدَّد المدة الدقيقة حسب سرعة تعافيك وموعد إزالة القسطرة.' },
-          { q: 'هل أنا مرشّح لجراحة الحفاظ على الأعصاب؟', a: 'يعتمد ذلك على موقع الورم ومرحلته، ويتأكد بعد التصوير والفحص قبل العملية.' },
-          { q: 'متى يمكنني السفر جوًّا بعد العملية؟', a: 'يُسمح لمعظم المرضى بالسفر بعد المراجعة وإزالة القسطرة، عادةً اعتبارًا من اليوم العاشر.' }
+          {
+            q: 'هل الروبوت هو من يُجري العملية؟',
+            a: 'لا. كل حركة يصنعها الجرّاح، والنظام ينقل حركة يديه إلى أدوات رفيعة ويعطي رؤية مكبَّرة مجسَّمة. والجهاز لا يقرر ولا يتحرك من تلقاء نفسه. ولذلك فالذي يحدد النتيجة هو الجرّاح خلف الجهاز.'
+          },
+          {
+            q: 'هل سأتسرّب بولًا حتمًا بعد العملية؟',
+            a: 'التسرّب في الفترة الأولى بعد نزع القسطرة متوقع، لأن التحكم صار يعتمد على عضلة واحدة. ويتحسن عند معظم الرجال خلال أسابيع وأشهر، وقد يمتد التحسن إلى سنة. ويبقى عند قلة منهم، وهذا الاحتمال يُقال قبل العملية لا بعدها.'
+          },
+          {
+            q: 'هل يمكن الحفاظ على أعصابي؟',
+            a: 'يُقرَّر ذلك من نتيجة الخزعة وصورة الرنين والفحص. والقاعدة ثابتة: استئصال الورم كاملًا أولًا، ثم الحفاظ على العصب إن أمكن. فإن امتد الورم نحو الحزمة العصبية فلا يُحافَظ عليها. والحفاظ من جانب واحد ممكن أيضًا، وقد تتغير الخطة أثناء العملية.'
+          },
+          {
+            q: 'إن حُفظت الأعصاب، هل تعود الوظيفة الجنسية حتمًا؟',
+            a: 'لا. فحتى مع حفظها يحتاج التعافي أشهرًا ويختلف من شخص لآخر. ويؤثر العمر والسكري وأمراض الشرايين والتدخين، والأهم حالتك قبل العملية. فمن كان لديه ضعف انتصاب واضح قبلها قد لا يجد في حفظ الأعصاب الفائدة المرجوّة.'
+          },
+          {
+            q: 'هل أستطيع الإنجاب بعد هذه العملية؟',
+            a: 'لا بالطريقة الطبيعية. فبإزالة البروستاتا والحويصلتين المنويتين ينقطع القذف. فإن كنت ترغب في الإنجاب فابحث ذلك قبل العملية واطرح خيار حفظ الحيوانات المنوية. فهذه الفرصة لا تبقى بعدها.'
+          },
+          {
+            q: 'ماذا لو جاء تقرير الأنسجة أسوأ من المتوقع؟',
+            a: 'قد يُوجَد ورم عند حافة الاستئصال أو يتبيّن أن المرض أكثر تقدّمًا مما ظُنّ. وهذا لا يعني فشل العملية، بل يعني أن علاجًا إضافيًا قد يلزم، غالبًا إشعاعيًا وأحيانًا هرمونيًا. ومعرفة هذا الاحتمال مسبقًا تخفف وقع الخبر.'
+          },
+          {
+            q: 'كم ينبغي أن يكون PSA بعد العملية؟',
+            a: 'بما أن الغدة أُزيلت، فالمتوقع هبوط PSA إلى مستوى غير قابل للقياس. ثم يُقاس على فترات، وأيّ اتجاه للارتفاع يستدعي تقييمًا إضافيًا. وحدِّد قبل مغادرتك من يقرأ هذه النتائج وبأيّ جدول.'
+          },
+          {
+            q: 'لماذا أختار الجراحة بدل العلاج الإشعاعي؟',
+            a: 'كلاهما صحيح عند المريض المناسب، ولا يتفوق أحدهما تفوقًا قاطعًا. وميزة الجراحة أن فحص النسيج المُزال يكشف المرحلة الحقيقية، وأن الإشعاع يمكن إضافته لاحقًا عند الحاجة. وميزة الإشعاع تجنّب الجراحة والتخدير وقلّة السلس. والاختيار الصحيح يتوقف على الآثار التي تفضّل التعايش معها.'
+          },
+          {
+            q: 'كم يلزمني البقاء في تركيا؟',
+            a: 'عادةً 7–10 أيام، والذي يحدد المدة هو القسطرة. وتُنزَع هنا ليُعالَج تعذّر التبول قرب المستشفى. واحجز تذكرة قابلة للتغيير واترك هامش بضعة أيام.'
+          },
+          {
+            q: 'متى يمكنني السفر جوًّا بعد العملية؟',
+            a: 'يُعطى إذن السفر بصورة فردية، ويكون عادةً بعد المراجعة ونزع القسطرة. وجراحة الحوض وقلة الحركة ترفعان خطر الجلطات، فالتزم بتعليمات المشي في الممر وشرب الماء والجوارب الضاغطة. وعند ألم أو تورم في الساق أو ألم في الصدر أو ضيق نفس اطلب المساعدة فورًا.'
+          },
+          {
+            q: 'ما الوثائق التي أرسلها قبل السفر؟',
+            a: 'سير قيم PSA عبر الزمن، وتقرير الخزعة كاملًا (عدد العيّنات المأخوذة، وعدد الإيجابية منها، ودرجة غليسون أو مجموعة ISUP)، وتقرير الرنين وصوره نفسها، وفحوص تحديد المرحلة إن وُجدت، وقائمة أدويتك وأمراضك الأخرى. وبهذه يمكن تقدير ملاءمة العملية لك قبل أن تسافر.'
+          }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Prostate Cancer — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/prostate-cancer' }
         ]
       },
       de: {
-        title: 'Robotische / laparoskopische radikale Prostatektomie',
-        summary: 'Robotergestützte, minimalinvasive Entfernung der Prostata bei Prostatakrebs.',
-        metaTitle: 'Robotische Prostatektomie | Prostatakrebs-Chirurgie',
-        metaDescription: 'Robotergestützte radikale Prostatektomie bei Prostatakrebs: Ablauf, Risiken, Alternativen, Preisspanne und häufige Fragen.',
+        title: 'Robotergestützte / laparoskopische radikale Prostatektomie',
+        summary:
+          'Vollständige Entfernung der Prostata mit robotergestützter Technik. Ziel ist die Kontrolle des Tumors und, soweit sicher möglich, der Erhalt von Kontinenz und Sexualfunktion — diese Reihenfolge wird nie umgekehrt.',
+        metaTitle: 'Roboterprostatektomie: Ablauf, Risiken und realistische Erwartungen',
+        metaDescription:
+          'Wie die robotergestützte radikale Prostatektomie abläuft, wer nervenschonend operiert werden kann, der tatsächliche Verlauf der Harninkontinenz, der Histologiebefund und die PSA-Nachsorge.',
         quickFacts: {
           duration: '2–4 Stunden',
           anesthesia: 'Vollnarkose',
@@ -21457,89 +21704,192 @@ export const treatments: Treatment[] = [
           stayInTurkey: '7–10 Tage',
           catheter: '7–10 Tage',
           returnToWork: '3–4 Wochen',
-          flightClearance: 'Ab Tag 10'
+          flightClearance: 'Etwa ab Tag 10'
         },
         definition: [
-          'Die radikale Prostatektomie ist die vollständige Entfernung der Prostata samt etwas umliegendem Gewebe, wenn der Krebs auf die Drüse begrenzt ist.',
-          'Beim robotergestützten Verfahren steuert der Chirurg von einer Konsole aus Roboterarme mit millimetergenauer Präzision. Durch kleine Schnitte sind Blutverlust, Schmerzen und Erholungszeit in der Regel geringer als bei offener Chirurgie.',
-          'Ziel ist die Tumorkontrolle bei möglichst weitgehendem Erhalt von Harnkontinenz und Sexualfunktion durch die nervenschonende Technik.'
+          'Die radikale Prostatektomie ist die vollständige Entfernung der Prostata samt Samenblasen; anschließend wird die Blase wieder mit der Harnröhre verbunden. Sie kommt infrage, wenn der Tumor auf die Drüse begrenzt erscheint.',
+          'Beim robotergestützten Vorgehen operiert nicht der Roboter. Jede Bewegung führt die Chirurgin oder der Chirurg aus; das System überträgt die Handbewegungen auf feine Instrumente, die durch kleine Zugänge in der Bauchwand eingebracht werden, bei vergrößerter dreidimensionaler Sicht. Gewählt wird es, weil es präzises Arbeiten auf engem Raum erlaubt.',
+          'Diese Unterscheidung ist wichtig: Über das Ergebnis entscheidet die Person an der Konsole, nicht das Fabrikat des Geräts. Die Frage "Haben Sie einen Roboter?" sagt deutlich weniger aus als "Wer operiert mich, und wie oft führt diese Person den Eingriff durch?".',
+          'Da die Prostata entfernt wird, kommt es nach der Operation zu keinem Samenerguss mehr. Die natürliche Zeugungsfähigkeit endet damit, und das muss VOR der Operation besprochen werden. Das Orgasmusgefühl bleibt bei vielen Männern erhalten, fühlt sich jedoch anders an.',
+          'Ob auch Lymphknoten entfernt werden, richtet sich nach dem Risiko. Bei niedrigem Risiko ist das entbehrlich; bei mittlerem und hohem Risiko kann es geplant werden, weil es zur Stadieneinteilung beiträgt.'
         ],
         eligibility: {
           suitable: [
-            'Patienten, deren Krebs auf die Prostata begrenzt ist (lokalisiert)',
-            'Patienten, deren Allgemeinzustand Operation und Vollnarkose zulässt',
-            'Patienten mit langer Lebenserwartung, die eine aktive Therapie bevorzugen'
+            'Männer, deren Tumor auf die Prostata begrenzt ist',
+            'Ausgewählte Männer mit lokal fortgeschrittener Erkrankung im Rahmen eines mehrteiligen Behandlungsplans',
+            'Männer, deren Allgemeinzustand Operation und Vollnarkose zulässt',
+            'Männer, deren Lebenserwartung lang genug ist, um von der Behandlung zu profitieren',
+            'Männer, die die Nebenwirkungen von Operation und Bestrahlung verstanden haben und sich bewusst für die Operation entscheiden'
           ],
           notSuitable: [
-            'Bei ausgedehnter Metastasierung (systemische Therapie hat Vorrang)',
-            'Hohes Narkoserisiko bei schwerer Herz- oder Lungenerkrankung',
-            'Ausgewählte Patienten mit sehr niedrigem Risiko, geeignet für aktive Überwachung'
+            'Männer mit ausgedehnter Metastasierung — hier hat die systemische Therapie Vorrang',
+            'Männer mit hohem Narkoserisiko bei schwerer Herz- oder Lungenerkrankung',
+            'Männer mit sehr niedrigem Risiko, die für eine aktive Überwachung geeignet sind und von den Nebenwirkungen stärker beeinträchtigt würden als von der Erkrankung',
+            'Ältere Männer, deren Lebenserwartung durch andere Erkrankungen begrenzt ist',
+            'Männer mit ausgedehnten Voroperationen und starken Verwachsungen im Bauchraum — hier wird das Vorgehen neu bewertet'
           ]
         },
         technology: [
-          'da Vinci Robotik-Chirurgiesystem',
-          'Nervenschonende Technik',
-          'Millimetergenaue Präparation mit hochauflösender 3D-Sicht'
-        ],
-        recovery: [
-          { period: 'Woche 1', body: 'Entlassung mit Katheter; kurze Spaziergänge werden empfohlen, schweres Heben vermieden.' },
-          { period: 'Woche 2', body: 'Der Katheter wird entfernt. Etwas Harnverlust ist zu erwarten; Beckenbodenübungen beginnen.' },
-          { period: 'Woche 3–4', body: 'Rückkehr in den Alltag und zur Bürotätigkeit. Die Kontinenz bessert sich schrittweise.' },
-          { period: 'Monat 2–3', body: 'Die Harnkontrolle bessert sich bei den meisten Patienten deutlich; die erste PSA-Kontrolle erfolgt.' },
-          { period: 'Monat 6–12', body: 'Die Erholung der Sexualfunktion erstreckt sich über diesen Zeitraum; nach nervenschonender Operation sind die Chancen höher.' }
-        ],
-        sources: [
-          { label: 'EAU-Leitlinie Prostatakarzinom — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+          'Robotergestütztes laparoskopisches System — vergrößerte dreidimensionale Sicht und abwinkelbare Instrumente',
+          'Nervenschonende Technik — ein- oder beidseitig, soweit onkologisch vertretbar',
+          'Rekonstruktive Nähte zur Unterstützung der Verbindung von Blase und Harnröhre',
+          'Risikoadaptierte erweiterte pelvine Lymphknotenentfernung',
+          'Präoperative multiparametrische MRT zur Planung anhand der Tumorlage',
+          'Vollständige feingewebliche Untersuchung des Präparats — hier werden das tatsächliche Stadium und die Schnittränder bestimmt'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
+          note: 'Die uroonkologische Chirurgie gehört zu den Arbeitsschwerpunkten von Assoc. Prof. Dr. Müslüm Ergün. Der Operationsplan ergibt sich aus Biopsiebefund, MRT, PSA-Verlauf sowie der Harn- und Sexualfunktion vor dem Eingriff — gemeinsam betrachtet.'
         },
         timeline: [
-          { when: 'Aus der Ferne', title: 'Vorabbewertung', body: 'Sie teilen PSA-, Biopsie- und Bildgebungsbefunde online; das Team prüft die Eignung.' },
-          { when: 'Tag 1–2', title: 'Ankunft & Untersuchung', body: 'Ankunft in Istanbul, persönliche Untersuchung, Anästhesie und erforderliche präoperative Tests.' },
-          { when: 'Tag 3', title: 'Operation', body: 'Robotergestützte Prostatektomie; meist 2–4 Stunden, kein routinemäßiger Intensivaufenthalt.' },
-          { when: 'Tag 4–5', title: 'Entlassung', body: 'Entlassung mit Katheter; Gehen und leichte Aktivität beginnen.' },
-          { when: 'Tag 7–10', title: 'Kontrolle & Katheterentfernung', body: 'Nachuntersuchung, Katheterentfernung und Befundung der Pathologie; danach Reisefreigabe.' }
+          {
+            when: 'Aus der Ferne',
+            title: 'Erstbeurteilung',
+            body: 'Sie senden PSA-Verlauf, Biopsiebefund und MRT. Senden Sie die MRT als Bilddaten (DICOM), nicht nur als Befundtext — eine Beurteilung allein nach fremdem Befund ist eine Wiedergabe, keine eigene Einschätzung.'
+          },
+          {
+            when: 'Tag 1–2',
+            title: 'Ankunft und Vorbereitung',
+            body: 'Untersuchung, Blutwerte und Narkoseaufklärung. Ihre Medikation wird geprüft, insbesondere Gerinnungshemmer. Der Urinbefund muss unauffällig sein.'
+          },
+          {
+            when: 'Tag 3',
+            title: 'Operation',
+            body: 'Der Eingriff dauert in der Regel 2–4 Stunden. Der Plan zur Nervenschonung kann intraoperativ dem Befund angepasst werden; die onkologische Sicherheit hat stets Vorrang.'
+          },
+          {
+            when: 'Tag 4–5',
+            title: 'Entlassung',
+            body: 'Die Entlassung erfolgt mit liegendem Katheter. Frühes Gehen ist wichtig — für die Darmtätigkeit und zur Senkung des Thromboserisikos.'
+          },
+          {
+            when: 'Tag 7–10',
+            title: 'Katheterentfernung und Kontrolle',
+            body: 'Der Katheter wird hier entfernt, damit eine etwaige Schwierigkeit beim Wasserlassen in Kliniknähe behandelt werden kann. Buchen Sie deshalb keinen Flug für den Tag nach der Entfernung.'
+          },
+          {
+            when: 'Nach der Rückkehr',
+            title: 'Histologie und PSA-Nachsorge',
+            body: 'Der Histologiebefund liegt meist erst vor, wenn Sie bereits zu Hause sind. Vereinbaren Sie vorher, wie er Sie erreicht, wer ihn erläutert und wie der PSA-Kontrollplan aussieht.'
+          }
         ],
         risks: [
-          'Vorübergehende oder dauerhafte Harninkontinenz',
-          'Veränderungen der Erektionsfunktion (durch nervenschonende Technik reduziert)',
-          'Blutung, Infektion sowie allgemeine chirurgische/anästhesiologische Risiken',
-          'Selten Verletzung benachbarter Organe'
+          'HARNINKONTINENZ: Mit der Prostata entfällt ein Teil des Kontinenzmechanismus; der äußere Schließmuskel arbeitet allein weiter. Harnverlust nach Katheterentfernung ist ein erwarteter Übergang, keine Komplikation. Bei den meisten Männern bessert sich das über Wochen bis Monate, die Erholung kann bis zu einem Jahr andauern; bei wenigen bleibt sie bestehen',
+          'VERÄNDERTE SEXUALFUNKTION: Auch bei erhaltenen Nerven kehrt die Funktion nicht sofort zurück — es dauert Monate und verläuft individuell. Alter, Diabetes, Gefäßerkrankungen, Rauchen und die Funktion vor der Operation beeinflussen das Ergebnis',
+          'EIN SCHLECHTERER HISTOLOGIEBEFUND ALS ERWARTET: Am Schnittrand kann Tumorgewebe gefunden werden, oder die Erkrankung erweist sich als weiter fortgeschritten. Dann kann eine zusätzliche Behandlung erforderlich werden — Bestrahlung, mitunter eine Hormontherapie. Diese Möglichkeit nicht vorher besprochen zu haben, ist für Patienten die härteste Überraschung',
+          'Blutung, Infektion und allgemeine Narkoserisiken',
+          'Ansammlung von Lymphflüssigkeit (Lymphozele) und Beinschwellung nach Lymphknotenentfernung',
+          'Spätere Enge an der Verbindung zwischen Blase und Harnröhre',
+          'Selten Verletzung von Darm, Harnleiter oder Blutgefäßen',
+          'Thrombosen in den Beinvenen nach Beckenchirurgie und Immobilität; ein Langstreckenflug erhöht dieses Risiko',
+          'Das Auftreten eines Leistenbruchs im Verlauf nach der Operation ist beschrieben',
+          'Ausbleibender Samenerguss — dauerhaft; die natürliche Zeugungsfähigkeit endet damit'
         ],
         alternatives: [
-          'Aktive Überwachung (bei ausgewählten Niedrigrisikopatienten)',
-          'Strahlentherapie (perkutan oder Brachytherapie)',
-          'Fokale Therapien (in ausgewählten Fällen)',
-          'Hormontherapie (ergänzend bei fortgeschrittener Erkrankung)'
+          'Aktive Überwachung — bei ausgewählter Niedrigrisiko-Erkrankung. Das ist kein Aufschieben, sondern engmaschige Kontrolle mit PSA, Untersuchung, MRT und bei Bedarf erneuter Biopsie',
+          'Perkutane Strahlentherapie — eine Alternative mit bei vielen Männern vergleichbaren onkologischen Ergebnissen; das Nebenwirkungsprofil unterscheidet sich, mit mehr Darm- und Harnbeschwerden, aber weniger Inkontinenz',
+          'Brachytherapie — in die Prostata eingebrachte Strahlenquellen, bei ausgewählten Männern',
+          'Hormontherapie — allein nicht heilend; sie kann die Bestrahlung begleiten oder im fortgeschrittenen Stadium eingesetzt werden',
+          'Fokale Verfahren — nur in ausgewählten Fällen, mit weniger gesicherten Langzeitergebnissen als Operation oder Bestrahlung',
+          'Keine Behandlung — bei älteren Männern mit begrenzter Lebenserwartung und Niedrigrisiko-Erkrankung eine vertretbare Entscheidung'
+        ],
+        comparison: {
+          title: 'Operation, Bestrahlung und Überwachung: welche Abwägung passt zu Ihnen',
+          columns: ['Kriterium', 'Radikale Prostatektomie', 'Strahlentherapie', 'Aktive Überwachung'],
+          rows: [
+            { label: 'Wie wird behandelt', values: ['Die Drüse wird entfernt', 'Die Drüse bleibt und wird bestrahlt', 'Keine Behandlung, engmaschige Kontrolle'] },
+            { label: 'Wird das wahre Stadium bekannt?', values: ['Ja — über die Histologie', 'Nein, es bleibt beim klinischen Stadium', 'Nein'] },
+            { label: 'Wesentliche Nebenwirkung', values: ['Inkontinenz, Sexualfunktion', 'Darm- und Harnbeschwerden, Sexualfunktion (später)', 'Keine; Belastung sind Kontrollen und Unsicherheit'] },
+            { label: 'Behandlungsdauer', values: ['Eine Operation', 'Sitzungen über mehrere Wochen', 'Fortlaufende Kontrolle'] },
+            { label: 'Verlaufsparameter', values: ['PSA im nicht mehr messbaren Bereich', 'Abfall des PSA auf einen Tiefstwert', 'PSA, MRT, erneute Biopsie'] },
+            { label: 'Spätere Optionen', values: ['Bestrahlung kann ergänzt werden', 'Operation nach Bestrahlung ist schwierig', 'Beide Optionen bleiben offen'] }
+          ],
+          note: 'Aktive Überwachung bedeutet nicht "nichts tun". Sie erfordert konsequente Kontrollen und verliert ihren Sinn, sobald diese ausbleiben. Beim geeigneten Patienten vermeidet sie jedoch unnötige Nebenwirkungen und hält beide Behandlungswege offen.'
+        },
+        recovery: [
+          { period: '1. Woche', body: 'Zu Hause mit liegendem Katheter. Kurze, häufige Spaziergänge sind erwünscht; Heben und Pressen nicht. Verstopfung durch ballaststoffreiche Kost und ausreichend Flüssigkeit vermeiden.' },
+          { period: '2. Woche', body: 'Der Katheter wird entfernt. Wenig oder keine Kontrolle in den ersten Tagen ist üblich und sagt nichts über das spätere Ergebnis aus. Das Beckenbodentraining beginnt nun konsequent.' },
+          { period: '3.–4. Woche', body: 'Rückkehr zur Bürotätigkeit ist meist möglich. Zuerst kehrt in der Regel die nächtliche Trockenheit zurück, dann die Kontrolle in Ruhe; zuletzt bessert sich die Kontrolle bei Belastung — Husten, Heben, Treppen.' },
+          { period: '2.–3. Monat', body: 'Die Harnkontrolle erreicht bei vielen Männern ein Niveau, das den Alltag nicht mehr einschränkt. Der erste PSA-Wert wird bestimmt; nach der Operation wird ein nicht mehr messbarer Wert erwartet.' },
+          { period: '6.–12. Monat', body: 'In diesem Zeitraum erholt sich die Sexualfunktion. Bei nervenschonender Operation ist die Aussicht besser, eine Zusicherung ist das jedoch nicht. Auch die Kontinenz kann sich in dieser Zeit weiter bessern.' },
+          { period: 'Nach einem Jahr', body: 'Schränkt der Harnverlust nach einem Jahr den Alltag weiterhin ein, wird die Situation gesondert beurteilt; dafür gibt es Möglichkeiten. In den ersten Monaten muss diese Sorge keine Entscheidung erzwingen.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Die Preisspanne hängt von Stadium, Zusatzeingriffen und Aufenthaltsdauer ab. Ein verbindliches Angebot folgt nach der Vorabbewertung.'
+          disclaimer:
+            'Der Betrag hängt vom Stadium, von einer etwaigen Lymphknotenentfernung, von der Dauer des Klinikaufenthalts und von der Unterkunft ab. Ein schriftlicher, aufgeschlüsselter Kostenvoranschlag folgt nach Durchsicht Ihrer Befunde.'
         },
         packageIncludes: [
-          'Operation und Krankenhausaufenthalt',
-          'Anästhesie und Operationssaal',
-          'Präoperative Untersuchungen',
+          'Voruntersuchung, Blutwerte und Narkoseaufklärung',
+          'Operation, Anästhesie und Operationssaal',
+          'Robotische Instrumente und Verbrauchsmaterial',
+          'Klinikaufenthalt',
+          'Feingewebliche Untersuchung des Präparats',
+          'Katheterentfernung und Kontrolle vor dem Rückflug',
           'Transfers Flughafen–Klinik–Hotel',
           'Unterkunft (Patient + 1 Begleitperson)',
-          'Medizinischer Dolmetscher und Patientenkoordinator',
-          'Online-Nachsorge nach der Entlassung'
+          'Medizinischer Dolmetscher und Patientenkoordination',
+          'Beurteilung Ihrer PSA-Werte aus der Ferne nach der Rückkehr'
         ],
         faqs: [
-          { q: 'Wie lange muss ich in der Türkei bleiben?', a: 'Meist werden 7–10 Tage empfohlen; die genaue Dauer richtet sich nach Ihrer Genesung und dem Zeitpunkt der Katheterentfernung.' },
-          { q: 'Bin ich für eine nervenschonende Operation geeignet?', a: 'Das hängt von Lage und Stadium des Tumors ab und wird nach präoperativer Bildgebung und Untersuchung bestätigt.' },
-          { q: 'Wann darf ich nach der Operation fliegen?', a: 'Die meisten Patienten erhalten nach Kontrolle und Katheterentfernung die Reisefreigabe, in der Regel ab Tag 10.' }
+          {
+            q: 'Operiert der Roboter?',
+            a: 'Nein. Jede Bewegung führt die Chirurgin oder der Chirurg aus; das System überträgt die Handbewegungen auf feine Instrumente und liefert eine vergrößerte dreidimensionale Sicht. Das Gerät entscheidet und bewegt sich nicht selbst. Über das Ergebnis entscheidet daher die Person an der Konsole.'
+          },
+          {
+            q: 'Werde ich nach der Operation sicher Urin verlieren?',
+            a: 'Harnverlust in der ersten Zeit nach Katheterentfernung ist zu erwarten, weil die Kontinenz nun von einem einzigen Muskel abhängt. Bei den meisten Männern bessert sich das über Wochen und Monate, die Erholung kann bis zu einem Jahr dauern. Bei wenigen bleibt sie bestehen — diese Möglichkeit gehört vor die Operation, nicht danach.'
+          },
+          {
+            q: 'Kann bei mir nervenschonend operiert werden?',
+            a: 'Das ergibt sich aus Biopsiebefund, MRT und Untersuchung. Die Reihenfolge ist unverrückbar: zuerst die vollständige Tumorentfernung, dann, wenn möglich, der Nervenerhalt. Reicht der Tumor an das Nervenbündel heran, wird nicht geschont. Auch einseitige Schonung ist möglich, und der Plan kann intraoperativ angepasst werden.'
+          },
+          {
+            q: 'Kehrt die Sexualfunktion bei erhaltenen Nerven sicher zurück?',
+            a: 'Nein. Auch bei erhaltenen Nerven dauert die Erholung Monate und verläuft unterschiedlich. Alter, Diabetes, Gefäßerkrankungen, Rauchen und vor allem Ihre Funktion vor der Operation beeinflussen das Ergebnis. Bei bereits deutlich eingeschränkter Erektionsfähigkeit bringt der Nervenerhalt möglicherweise nicht den erhofften Nutzen.'
+          },
+          {
+            q: 'Kann ich nach dieser Operation noch Kinder zeugen?',
+            a: 'Auf natürlichem Weg nicht. Mit Prostata und Samenblasen entfällt der Samenerguss. Besteht Kinderwunsch, muss das vor der Operation besprochen und das Einfrieren von Samenzellen erwogen werden. Danach besteht diese Möglichkeit nicht mehr.'
+          },
+          {
+            q: 'Was passiert, wenn der Histologiebefund schlechter ausfällt als erwartet?',
+            a: 'Am Schnittrand kann Tumorgewebe gefunden werden, oder die Erkrankung ist weiter fortgeschritten als angenommen. Das bedeutet nicht, dass die Operation misslungen ist, sondern dass eine zusätzliche Behandlung nötig sein kann — meist eine Bestrahlung, mitunter eine Hormontherapie. Diese Möglichkeit vorher zu kennen, mildert den Schreck.'
+          },
+          {
+            q: 'Wie hoch sollte der PSA-Wert nach der Operation sein?',
+            a: 'Da die Prostata entfernt wurde, wird ein nicht mehr messbarer Wert erwartet. Anschließend wird in Abständen kontrolliert; ein ansteigender Verlauf führt zu weiterer Abklärung. Klären Sie vor der Abreise, wer diese Werte beurteilt und in welchem Rhythmus.'
+          },
+          {
+            q: 'Warum Operation statt Bestrahlung?',
+            a: 'Beides ist beim geeigneten Patienten vertretbar, und keines ist dem anderen eindeutig überlegen. Ein Vorteil der Operation: Die Untersuchung des entfernten Gewebes zeigt das wahre Stadium, und eine Bestrahlung kann später noch ergänzt werden. Vorteile der Bestrahlung: keine Operation und Narkose, weniger Inkontinenz. Die richtige Wahl hängt davon ab, mit welchen Nebenwirkungen Sie eher leben möchten.'
+          },
+          {
+            q: 'Wie lange muss ich in der Türkei bleiben?',
+            a: 'In der Regel 7–10 Tage; den Zeitplan bestimmt der Katheter. Er wird hier entfernt, damit Schwierigkeiten beim Wasserlassen in Kliniknähe behandelt werden können. Buchen Sie ein umbuchbares Ticket und planen Sie einige Tage Puffer ein.'
+          },
+          {
+            q: 'Wann darf ich nach der Operation fliegen?',
+            a: 'Die Flugfreigabe erfolgt individuell und wird üblicherweise nach Kontrolle und Katheterentfernung erteilt. Beckenchirurgie und Immobilität erhöhen das Thromboserisiko; nehmen Sie die Hinweise zu Gehen im Gang, Trinken und Kompressionsstrümpfen ernst. Bei Wadenschmerz oder -schwellung, Brustschmerz oder Atemnot sofort ärztliche Hilfe suchen.'
+          },
+          {
+            q: 'Welche Unterlagen soll ich vorab senden?',
+            a: 'Ihre PSA-Werte im Verlauf, den vollständigen Biopsiebefund (Zahl der Stanzen, Zahl der befallenen Stanzen, Gleason-Score beziehungsweise ISUP-Gruppe), den MRT-Befund und die MRT-Bilddaten selbst, vorhandene Staging-Untersuchungen, Ihre Medikamentenliste und Ihre Begleiterkrankungen. Damit lässt sich vor der Reise beurteilen, ob dieser Eingriff für Sie der richtige ist.'
+          }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Prostate Cancer — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/prostate-cancer' }
         ]
       },
       ru: {
         title: 'Роботическая / лапароскопическая радикальная простатэктомия',
-        summary: 'Роботизированное малоинвазивное удаление предстательной железы при раке простаты.',
-        metaTitle: 'Роботическая простатэктомия | Хирургия рака простаты',
-        metaDescription: 'Радикальная простатэктомия с помощью робота при раке простаты: процесс, риски, альтернативы, диапазон цен и часто задаваемые вопросы.',
+        summary:
+          'Полное удаление предстательной железы с помощью роботической системы. Цель — контроль над опухолью и, когда это возможно безопасно, сохранение удержания мочи и половой функции; этот порядок никогда не меняется местами.',
+        metaTitle: 'Роботическая простатэктомия: ход операции, риски и ожидания',
+        metaDescription:
+          'Как выполняется роботическая радикальная простатэктомия, кому возможно сохранение нервов, как на самом деле протекает подтекание мочи, что меняет гистологическое заключение и как ведётся наблюдение по ПСА.',
         quickFacts: {
           duration: '2–4 часа',
           anesthesia: 'Общая анестезия',
@@ -21547,91 +21897,192 @@ export const treatments: Treatment[] = [
           stayInTurkey: '7–10 дней',
           catheter: '7–10 дней',
           returnToWork: '3–4 недели',
-          flightClearance: 'С 10-го дня'
+          flightClearance: 'Примерно с 10-го дня'
         },
         definition: [
-          'Радикальная простатэктомия — это полное удаление предстательной железы и части окружающих тканей, когда рак ограничен пределами железы.',
-          'При роботизированном подходе хирург управляет роботическими манипуляторами с консоли с точностью до миллиметра. Благодаря небольшим разрезам кровопотеря, боль и время восстановления обычно меньше, чем при открытой операции.',
-          'Цель — контроль над опухолью при максимально возможном сохранении удержания мочи и половой функции с помощью нервосберегающей техники.'
+          'Радикальная простатэктомия — это полное удаление предстательной железы вместе с семенными пузырьками с последующим соединением мочевого пузыря с мочеиспускательным каналом. Её выполняют, когда опухоль считается ограниченной пределами железы.',
+          'При роботическом доступе робот не оперирует. Каждое движение совершает хирург; система передаёт движения его рук тонким инструментам, введённым через небольшие проколы брюшной стенки, и даёт увеличенное объёмное изображение. Такой доступ выбирают потому, что он позволяет точно работать в узком пространстве.',
+          'Это различие важно: результат определяет человек за консолью, а не марка оборудования. Вопрос «есть ли у вас робот» говорит гораздо меньше, чем вопрос «кто будет меня оперировать и как часто он выполняет эту операцию».',
+          'Поскольку железу удаляют, после операции семяизвержения не будет. Это означает конец естественной способности к зачатию, и об этом нужно говорить ДО операции. Ощущение оргазма у многих мужчин сохраняется, но становится иным.',
+          'Будут ли удалены лимфатические узлы, зависит от риска. При низком риске в этом нет необходимости; при промежуточном и высоком это может быть запланировано, поскольку помогает уточнить стадию.'
         ],
         eligibility: {
           suitable: [
-            'Пациенты, у которых опухоль ограничена предстательной железой (локализованная)',
-            'Пациенты, чьё общее состояние допускает операцию и общую анестезию',
-            'Пациенты с длительной ожидаемой продолжительностью жизни, выбирающие активное лечение'
+            'Мужчины, у которых опухоль ограничена предстательной железой',
+            'Отдельные мужчины с местно-распространённым процессом — как часть комбинированного плана лечения',
+            'Мужчины, общее состояние которых позволяет перенести операцию и общую анестезию',
+            'Мужчины, продолжительность жизни которых достаточна, чтобы лечение принесло пользу',
+            'Мужчины, которые поняли побочные эффекты и операции, и лучевой терапии и осознанно выбирают операцию'
           ],
           notSuitable: [
-            'Наличие распространённых метастазов (приоритет — системная терапия)',
-            'Высокий анестезиологический риск при тяжёлых заболеваниях сердца или лёгких',
-            'Отдельные пациенты очень низкого риска, подходящие для активного наблюдения'
+            'Мужчины с распространёнными метастазами — приоритет за системным лечением',
+            'Мужчины с высоким анестезиологическим риском из-за тяжёлых болезней сердца или лёгких',
+            'Мужчины с очень низким риском, которым показано активное наблюдение: побочные эффекты лечения могут беспокоить сильнее самой болезни',
+            'Пожилые мужчины, продолжительность жизни которых ограничена другими заболеваниями',
+            'Мужчины с обширными операциями на животе в прошлом и выраженным спаечным процессом — доступ пересматривается'
           ]
         },
         technology: [
-          'Роботическая хирургическая система da Vinci',
-          'Нервосберегающая техника',
-          'Миллиметровая диссекция с 3D-визуализацией высокого разрешения'
-        ],
-        recovery: [
-          { period: '1-я неделя', body: 'Выписка с катетером; рекомендуются короткие прогулки, подъём тяжестей исключён.' },
-          { period: '2-я неделя', body: 'Катетер удаляют. Возможно подтекание мочи; начинают упражнения для мышц тазового дна.' },
-          { period: '3–4-я неделя', body: 'Возвращение к повседневной жизни и офисной работе. Удержание мочи постепенно улучшается.' },
-          { period: '2–3-й месяц', body: 'У большинства пациентов контроль мочеиспускания заметно улучшается; выполняется первый контроль PSA.' },
-          { period: '6–12-й месяц', body: 'Восстановление половой функции занимает этот период; после нервосберегающей операции шансы выше.' }
-        ],
-        sources: [
-          { label: 'Рекомендации EAU по раку предстательной железы — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+          'Роботическая лапароскопическая система — увеличенное объёмное изображение и инструменты с подвижным запястьем',
+          'Нервосберегающая техника — с одной или с обеих сторон, когда это онкологически безопасно',
+          'Реконструктивные швы, поддерживающие соединение пузыря и мочеиспускательного канала',
+          'Расширенное удаление тазовых лимфатических узлов по показаниям риска',
+          'Дооперационная мультипараметрическая МРТ для планирования с учётом расположения опухоли',
+          'Полное гистологическое исследование удалённой железы — именно здесь устанавливают истинную стадию и состояние краёв'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Число операций отражает общий хирургический опыт доцента д-ра Мюслюма Эргюна в этой области.'
+          note: 'Онкоурологическая хирургия входит в сферу работы доц. д-ра Мюслюма Эргюна. План операции строится на результате биопсии, данных МРТ, динамике ПСА и состоянии мочеиспускания и половой функции до операции, рассматриваемых вместе.'
         },
         timeline: [
-          { when: 'Удалённо', title: 'Предварительная оценка', body: 'Вы делитесь результатами PSA, биопсии и снимков онлайн; команда оценивает пригодность.' },
-          { when: 'День 1–2', title: 'Прибытие и осмотр', body: 'Прибытие в Стамбул, очный осмотр, анестезиологическая оценка и необходимые предоперационные анализы.' },
-          { when: 'День 3', title: 'Операция', body: 'Роботизированная простатэктомия; обычно 2–4 часа, без рутинного пребывания в реанимации.' },
-          { when: 'День 4–5', title: 'Выписка', body: 'Выписка с катетером; начинаются ходьба и лёгкая активность.' },
-          { when: 'День 7–10', title: 'Контроль и удаление катетера', body: 'Контрольный осмотр, удаление катетера и оценка результатов гистологии; затем разрешение на перелёт.' }
+          {
+            when: 'Дистанционно',
+            title: 'Предварительная оценка',
+            body: 'Вы присылаете динамику ПСА, заключение биопсии и МРТ. Присылайте МРТ в виде файлов изображений (DICOM), а не только текстовое заключение: оценка по чужому заключению — это его пересказ, а не самостоятельное мнение.'
+          },
+          {
+            when: '1–2-й день',
+            title: 'Приезд и подготовка',
+            body: 'Осмотр, анализы крови и осмотр анестезиолога. Пересматривают принимаемые препараты, прежде всего препараты, разжижающие кровь. Посев мочи должен быть отрицательным.'
+          },
+          {
+            when: '3-й день',
+            title: 'Операция',
+            body: 'Операция обычно занимает 2–4 часа. План сохранения нервов может быть изменён по ходу вмешательства в зависимости от находок; онкологическая безопасность всегда важнее.'
+          },
+          {
+            when: '4–5-й день',
+            title: 'Выписка',
+            body: 'Выписка происходит с установленным катетером. Раннее начало ходьбы важно и для восстановления работы кишечника, и для снижения риска тромбоза.'
+          },
+          {
+            when: '7–10-й день',
+            title: 'Удаление катетера и осмотр',
+            body: 'Катетер удаляют здесь, чтобы возможное затруднение мочеиспускания решалось рядом с больницей. Поэтому не планируйте вылет на следующий день после удаления.'
+          },
+          {
+            when: 'После возвращения',
+            title: 'Гистология и наблюдение по ПСА',
+            body: 'Гистологическое заключение обычно готово уже после вашего возвращения домой. Договоритесь заранее, как оно до вас дойдёт, кто его объяснит и каким будет график контроля ПСА.'
+          }
         ],
         risks: [
-          'Временное или стойкое недержание мочи',
-          'Изменения эректильной функции (снижаются при нервосберегающей технике)',
-          'Кровотечение, инфекция и общие хирургические/анестезиологические риски',
-          'Редко — повреждение соседних органов'
+          'ПОДТЕКАНИЕ МОЧИ: вместе с железой утрачивается часть механизма удержания, и наружный сфинктер работает один. Подтекание после удаления катетера — ожидаемый переходный период, а не осложнение. У большинства мужчин оно проходит за недели и месяцы, восстановление может продолжаться до года; у небольшой части остаётся',
+          'ИЗМЕНЕНИЕ ПОЛОВОЙ ФУНКЦИИ: даже при сохранённых нервах функция возвращается не сразу — на это уходят месяцы, и у всех по-разному. Возраст, диабет, болезни сосудов, курение и уровень функции до операции влияют на результат',
+          'ГИСТОЛОГИЧЕСКОЕ ЗАКЛЮЧЕНИЕ ХУЖЕ ОЖИДАЕМОГО: опухоль может быть обнаружена по краю удаления, либо стадия окажется выше предполагавшейся. Тогда может потребоваться дополнительное лечение — лучевая терапия, иногда гормональная. Не обсудить эту возможность заранее — самое тяжёлое для пациента',
+          'Кровотечение, инфекция и общие риски анестезии',
+          'Скопление лимфы (лимфоцеле) и отёк ног после удаления лимфатических узлов',
+          'Сужение в месте соединения мочевого пузыря и мочеиспускательного канала со временем',
+          'Редко — повреждение кишки, мочеточника или сосудов',
+          'Тромбоз вен нижних конечностей после операции на органах таза и малоподвижности; длительный перелёт повышает этот риск',
+          'Описано развитие паховой грыжи в период после операции',
+          'Отсутствие семяизвержения — стойкое; естественная способность к зачатию утрачивается'
         ],
         alternatives: [
-          'Активное наблюдение (у отдельных пациентов низкого риска)',
-          'Лучевая терапия (дистанционная или брахитерапия)',
-          'Очаговые методы лечения (в отдельных случаях)',
-          'Гормональная терапия (дополнительно при распространённой болезни)'
+          'Активное наблюдение — при отобранном заболевании низкого риска. Это не откладывание лечения, а тщательное наблюдение с ПСА, осмотром, МРТ и при показаниях повторной биопсией',
+          'Дистанционная лучевая терапия — альтернатива со сопоставимыми у многих мужчин онкологическими результатами; профиль побочных эффектов иной: больше кишечных и мочевых жалоб, но меньше недержания',
+          'Брахитерапия — источники излучения, размещаемые внутри железы, у отобранных мужчин',
+          'Гормональная терапия — сама по себе не излечивает; может сопровождать лучевую терапию или применяться на поздних стадиях',
+          'Очаговые методы — только у отобранных пациентов, их отдалённые результаты изучены хуже, чем у операции и лучевой терапии',
+          'Отказ от лечения — разумный выбор у пожилых мужчин с ограниченной продолжительностью жизни и заболеванием низкого риска'
+        ],
+        comparison: {
+          title: 'Операция, лучевая терапия и наблюдение: какой выбор вам подходит',
+          columns: ['Критерий', 'Радикальная простатэктомия', 'Лучевая терапия', 'Активное наблюдение'],
+          rows: [
+            { label: 'Как воздействуют на болезнь', values: ['Железу удаляют', 'Железа остаётся, её облучают', 'Не лечат, тщательно наблюдают'] },
+            { label: 'Станет ли известна истинная стадия', values: ['Да — по гистологии', 'Нет, остаётся клиническая стадия', 'Нет'] },
+            { label: 'Основной побочный эффект', values: ['Недержание, половая функция', 'Кишечные и мочевые жалобы, половая функция (позднее)', 'Нет; нагрузка — это наблюдение и тревога'] },
+            { label: 'Длительность лечения', values: ['Одна операция', 'Сеансы в течение нескольких недель', 'Наблюдение без заданного срока'] },
+            { label: 'Показатель наблюдения', values: ['Снижение ПСА до неопределяемого уровня', 'Снижение ПСА до минимума', 'ПСА, МРТ, повторная биопсия'] },
+            { label: 'Возможности в дальнейшем', values: ['При необходимости можно добавить лучевую терапию', 'Операция после облучения технически трудна', 'Оба варианта остаются открытыми'] }
+          ],
+          note: 'Активное наблюдение — это не «ничего не делать». Оно требует дисциплинированного контроля и теряет смысл, если контроль прекращается. Но у подходящего пациента оно избавляет от ненужных побочных эффектов и сохраняет оба варианта лечения.'
+        },
+        recovery: [
+          { period: '1-я неделя', body: 'Проходит дома с катетером. Рекомендуются короткие и частые прогулки; поднимать тяжести и тужиться нельзя. Избегайте запоров с помощью клетчатки и достаточного питья.' },
+          { period: '2-я неделя', body: 'Катетер удаляют. Слабый контроль или его отсутствие в первые дни — обычное дело и не говорит о плохом исходе. В это время всерьёз начинают упражнения для мышц тазового дна.' },
+          { period: '3–4-я неделя', body: 'Возвращение к работе за столом возможно у большинства. Сначала обычно возвращаются сухие ночи, затем контроль в покое; последним восстанавливается контроль при нагрузке — кашле, подъёме тяжестей, лестнице.' },
+          { period: '2–3-й месяц', body: 'У многих мужчин удержание мочи достигает уровня, не ограничивающего повседневную жизнь. Определяют первый ПСА; после операции ожидается его снижение до неопределяемого уровня.' },
+          { period: '6–12-й месяц', body: 'Восстановление половой функции приходится на этот период. При нервосберегающей операции шансы выше, но это не гарантия. Удержание мочи в это время также может продолжать улучшаться.' },
+          { period: 'После года', body: 'Если через год подтекание по-прежнему ограничивает повседневную жизнь, ситуацию оценивают отдельно, и возможности для этого есть. Принимать решения из-за этого опасения в первые месяцы не нужно.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Диапазон цен зависит от стадии, дополнительных процедур и длительности пребывания. Точное предложение предоставляется после предварительной оценки.'
+          disclaimer:
+            'Сумма зависит от стадии, от того, выполняется ли удаление лимфатических узлов, от длительности пребывания в стационаре и от проживания. Письменная детализированная смета предоставляется после изучения ваших документов.'
         },
         packageIncludes: [
-          'Операция и пребывание в стационаре',
-          'Анестезия и операционная',
-          'Предоперационные анализы',
-          'Трансферы аэропорт–клиника–отель',
+          'Дооперационный осмотр, анализы крови и осмотр анестезиолога',
+          'Операция, анестезия и операционная',
+          'Роботические инструменты и расходные материалы',
+          'Пребывание в стационаре',
+          'Гистологическое исследование удалённой железы',
+          'Удаление катетера и контрольный осмотр перед вылетом',
+          'Трансферы аэропорт — больница — отель',
           'Проживание (пациент + 1 сопровождающий)',
           'Медицинский переводчик и координатор пациента',
-          'Онлайн-наблюдение после выписки'
+          'Дистанционная оценка результатов ПСА после возвращения домой'
         ],
         faqs: [
-          { q: 'Сколько нужно оставаться в Турции?', a: 'Обычно рекомендуется 7–10 дней; точный срок зависит от скорости восстановления и времени удаления катетера.' },
-          { q: 'Подхожу ли я для нервосберегающей операции?', a: 'Это зависит от расположения и стадии опухоли и уточняется после предоперационного обследования.' },
-          { q: 'Когда можно лететь после операции?', a: 'Большинству пациентов разрешают перелёт после контроля и удаления катетера, обычно с 10-го дня.' }
+          {
+            q: 'Операцию выполняет робот?',
+            a: 'Нет. Каждое движение совершает хирург; система передаёт движения его рук тонким инструментам и даёт увеличенное объёмное изображение. Аппарат не принимает решений и не двигается сам. Поэтому результат определяет хирург за консолью.'
+          },
+          {
+            q: 'Я обязательно буду подтекать после операции?',
+            a: 'Подтекание в первое время после удаления катетера ожидаемо, потому что удержание теперь зависит от одной мышцы. У большинства мужчин оно проходит за недели и месяцы, восстановление может длиться до года. У небольшой части оно остаётся, и об этой возможности нужно говорить до операции, а не после.'
+          },
+          {
+            q: 'Возможно ли у меня сохранение нервов?',
+            a: 'Это решают по результату биопсии, данным МРТ и осмотру. Правило неизменно: сначала полное удаление опухоли, затем, если возможно, сохранение нервов. Если опухоль подходит к нервному пучку, его не сохраняют. Возможно и одностороннее сохранение, а план может измениться по ходу операции.'
+          },
+          {
+            q: 'Если нервы сохранены, половая функция точно вернётся?',
+            a: 'Нет. Даже при сохранённых нервах восстановление занимает месяцы и у всех идёт по-разному. Влияют возраст, диабет, болезни сосудов, курение и, самое главное, ваша функция до операции. Если выраженные нарушения эрекции были и раньше, сохранение нервов может не дать ожидаемой пользы.'
+          },
+          {
+            q: 'Смогу ли я иметь детей после этой операции?',
+            a: 'Естественным путём — нет. Поскольку удаляют железу и семенные пузырьки, эякулята не будет. Если вы планируете детей, это нужно обсудить до операции и рассмотреть криоконсервацию спермы. После операции такой возможности уже не будет.'
+          },
+          {
+            q: 'Что будет, если гистология окажется хуже ожидаемого?',
+            a: 'Опухоль может быть найдена по краю удаления, либо стадия окажется выше предполагавшейся. Это не значит, что операция не удалась; это значит, что может потребоваться дополнительное лечение, чаще лучевая терапия, иногда гормональная. Знание об этой возможности заранее смягчает потрясение.'
+          },
+          {
+            q: 'Каким должен быть ПСА после операции?',
+            a: 'Поскольку железа удалена, ожидается снижение ПСА до неопределяемого уровня. Затем его измеряют через определённые промежутки, и тенденция к росту становится поводом для дополнительного обследования. До отъезда выясните, кто оценивает эти результаты и с какой периодичностью.'
+          },
+          {
+            q: 'Почему операция, а не лучевая терапия?',
+            a: 'Оба метода оправданны у подходящего пациента, и ни один из них не имеет безусловного преимущества. Плюс операции в том, что исследование удалённой железы показывает истинную стадию, а лучевую терапию при необходимости можно добавить позже. Плюс лучевой терапии — отсутствие операции и наркоза и меньшая частота недержания. Правильный выбор зависит от того, с какими побочными эффектами вы скорее согласитесь жить.'
+          },
+          {
+            q: 'Сколько нужно пробыть в Турции?',
+            a: 'Обычно 7–10 дней, и срок определяет катетер. Его удаляют здесь, чтобы затруднение мочеиспускания решалось рядом с больницей. Берите билет с возможностью обмена и закладывайте несколько запасных дней.'
+          },
+          {
+            q: 'Когда можно лететь после операции?',
+            a: 'Разрешение на полёт дают индивидуально и обычно планируют на время после осмотра и удаления катетера. Операция на органах таза и малоподвижность повышают риск тромбоза, поэтому всерьёз отнеситесь к рекомендациям о ходьбе по салону, питье и компрессионном трикотаже. При боли или отёке голени, боли в груди или одышке немедленно обратитесь за помощью.'
+          },
+          {
+            q: 'Какие документы прислать до поездки?',
+            a: 'Значения ПСА в динамике, полное заключение биопсии (сколько столбиков взято, в скольких найдена опухоль, степень по Глисону или группа ISUP), заключение МРТ и сами изображения МРТ, данные обследования на стадирование, список принимаемых препаратов и сведения о других заболеваниях. С ними можно оценить ещё до поездки, подходит ли вам эта операция.'
+          }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Prostate Cancer — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/prostate-cancer' }
         ]
       },
       fr: {
         title: 'Prostatectomie radicale robotique / laparoscopique',
         summary:
-          'Ablation de la prostate assistée par robot, par voie mini-invasive, dans le cancer de la prostate.',
-        metaTitle: 'Prostatectomie robotique | Chirurgie du cancer de la prostate',
+          'Ablation complète de la prostate assistée par robot. L\'objectif est de contrôler le cancer et, lorsque cela peut se faire sans risque, de préserver la continence et la fonction sexuelle — cet ordre n\'est jamais inversé.',
+        metaTitle: 'Prostatectomie robotique : déroulement, risques et attentes réalistes',
         metaDescription:
-          'Prostatectomie radicale assistée par robot pour le cancer de la prostate : déroulement, risques, alternatives, fourchette de prix et questions fréquentes.',
+          'Comment se déroule la prostatectomie radicale robotique, qui peut bénéficier de la préservation nerveuse, l\'évolution réelle des fuites urinaires, le compte rendu anatomopathologique et le suivi du PSA.',
         quickFacts: {
           duration: '2 à 4 heures',
           anesthesia: 'Anesthésie générale',
@@ -21639,112 +22090,183 @@ export const treatments: Treatment[] = [
           stayInTurkey: '7 à 10 jours',
           catheter: '7 à 10 jours',
           returnToWork: '3 à 4 semaines',
-          flightClearance: 'À partir du 10e jour'
+          flightClearance: 'À partir du 10e jour environ'
         },
         definition: [
-          'La prostatectomie radicale consiste à retirer complètement la glande prostatique et une partie des tissus environnants lorsque le cancer est limité à la glande.',
-          'Dans l’approche assistée par robot, le chirurgien pilote des bras robotisés depuis une console avec une précision millimétrique. De petites incisions entraînent généralement moins de saignement, moins de douleur et une récupération plus rapide qu’en chirurgie ouverte.',
-          'L’objectif est le contrôle du cancer tout en préservant, lorsque c’est possible, la continence urinaire et la fonction sexuelle grâce à la technique de préservation nerveuse.'
+          'La prostatectomie radicale consiste à retirer entièrement la prostate et les vésicules séminales, puis à raccorder la vessie à l\'urètre. Elle s\'adresse aux patients chez qui le cancer paraît limité à la glande.',
+          'Dans l\'approche robotique, ce n\'est pas le robot qui opère. Chaque geste est effectué par le chirurgien ; le système transmet les mouvements de ses mains à des instruments fins introduits par de petites incisions, avec une vision agrandie en trois dimensions. On y recourt parce qu\'elle permet de travailler avec précision dans un espace étroit.',
+          'Cette distinction compte : le résultat dépend de la personne à la console, non de la marque de l\'appareil. « Avez-vous un robot ? » renseigne bien moins que « qui va m\'opérer, et à quelle fréquence réalise-t-il cette intervention ? ».',
+          'La prostate étant retirée, il n\'y a plus d\'éjaculation après l\'intervention. La procréation naturelle n\'est donc plus possible, et ce point doit être abordé AVANT l\'opération. La sensation d\'orgasme est conservée chez beaucoup d\'hommes, mais elle est différente.',
+          'Le retrait éventuel des ganglions dépend du risque. Il est inutile dans les formes à faible risque ; dans les risques intermédiaire et élevé, il peut être prévu car il contribue à la stadification.'
         ],
         eligibility: {
           suitable: [
-            'Patients dont le cancer est limité à la prostate (localisé)',
-            'Patients dont l’état général permet la chirurgie et l’anesthésie générale',
-            'Patients avec une longue espérance de vie qui privilégient un traitement actif'
+            'Hommes dont le cancer est limité à la prostate',
+            'Hommes sélectionnés atteints d\'une maladie localement avancée, dans le cadre d\'une stratégie combinée',
+            'Hommes dont l\'état général permet la chirurgie et l\'anesthésie générale',
+            'Hommes dont l\'espérance de vie est suffisante pour tirer bénéfice du traitement',
+            'Hommes qui ont compris les effets indésirables de la chirurgie et de la radiothérapie et choisissent la chirurgie en connaissance de cause'
           ],
           notSuitable: [
-            'Présence de métastases étendues (priorité au traitement systémique)',
-            'Risque anesthésique élevé en cas de cardiopathie ou pneumopathie sévère',
-            'Patients sélectionnés à très faible risque, éligibles à la surveillance active'
+            'Hommes présentant des métastases étendues — le traitement systémique prime',
+            'Hommes à risque anesthésique élevé en raison d\'une cardiopathie ou d\'une maladie pulmonaire sévère',
+            'Hommes à très faible risque relevant d\'une surveillance active, chez qui les effets du traitement gêneraient plus que la maladie',
+            'Hommes âgés dont l\'espérance de vie est limitée par d\'autres affections',
+            'Hommes ayant de lourds antécédents chirurgicaux abdominaux avec adhérences importantes — l\'approche est alors réévaluée'
           ]
         },
         technology: [
-          'Système de chirurgie robotique da Vinci',
-          'Technique de préservation nerveuse',
-          'Dissection millimétrique avec vision 3D haute définition'
-        ],
-        recovery: [
-          { period: 'Semaine 1', body: 'Sortie avec sonde ; de courtes marches sont recommandées, le port de charges est évité.' },
-          { period: 'Semaine 2', body: 'La sonde est retirée. Des fuites urinaires sont attendues ; la rééducation périnéale débute.' },
-          { period: 'Semaines 3–4', body: 'Reprise de la vie quotidienne et du travail de bureau. La continence s’améliore progressivement.' },
-          { period: 'Mois 2–3', body: 'Le contrôle urinaire s’améliore nettement chez la plupart des patients ; le premier PSA de contrôle est réalisé.' },
-          { period: 'Mois 6–12', body: 'La récupération de la fonction sexuelle s’étale sur cette période ; les chances sont meilleures après une chirurgie avec préservation nerveuse.' }
-        ],
-        sources: [
-          { label: 'Recommandations EAU sur le cancer de la prostate — Association européenne d’urologie', url: 'https://uroweb.org/guidelines/prostate-cancer' }
+          'Système laparoscopique assisté par robot — vision tridimensionnelle agrandie et instruments articulés',
+          'Technique de préservation nerveuse — unilatérale ou bilatérale lorsque la sécurité carcinologique le permet',
+          'Sutures de reconstruction soutenant l\'anastomose vésico-urétrale',
+          'Curage ganglionnaire pelvien étendu selon le risque',
+          'IRM multiparamétrique préopératoire pour planifier en fonction de la localisation tumorale',
+          'Examen anatomopathologique complet de la pièce — le stade réel et les marges y sont établis'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+          note: 'La chirurgie uro-oncologique fait partie des domaines d\'exercice du Pr associé Müslüm Ergün. Le plan opératoire repose sur le résultat de la biopsie, les données de l\'IRM, l\'évolution du PSA et la fonction urinaire et sexuelle avant l\'intervention, considérés ensemble.'
         },
         timeline: [
           {
             when: 'À distance',
-            title: 'Pré-évaluation',
-            body: 'Vous transmettez en ligne vos résultats de PSA, de biopsie et d’imagerie ; l’équipe évalue l’indication.'
+            title: 'Évaluation initiale',
+            body: 'Vous transmettez l\'historique du PSA, le compte rendu de la biopsie et l\'IRM. Envoyez l\'IRM sous forme d\'images (DICOM) et non seulement du compte rendu : un avis fondé sur le compte rendu d\'autrui en est une reformulation, pas une évaluation indépendante.'
           },
           {
             when: 'Jours 1–2',
-            title: 'Arrivée et examen',
-            body: 'Arrivée à Istanbul, examen clinique, consultation d’anesthésie et bilan préopératoire.'
+            title: 'Arrivée et préparation',
+            body: 'Examen clinique, bilan sanguin et consultation d\'anesthésie. Vos traitements sont revus, en particulier les anticoagulants. L\'ECBU doit être stérile.'
           },
           {
             when: 'Jour 3',
             title: 'Intervention',
-            body: 'Prostatectomie assistée par robot ; généralement 2 à 4 heures, sans séjour systématique en soins intensifs.'
+            body: 'L\'intervention dure généralement 2 à 4 heures. Le plan de préservation nerveuse peut être ajusté en peropératoire selon les constatations ; la sécurité carcinologique prime toujours.'
           },
           {
             when: 'Jours 4–5',
             title: 'Sortie',
-            body: 'Sortie avec sonde ; reprise de la marche et d’une activité légère.'
+            body: 'La sortie se fait avec la sonde en place. La marche précoce est importante, pour la reprise du transit et pour réduire le risque de thrombose.'
           },
           {
             when: 'Jours 7–10',
-            title: 'Contrôle et retrait de la sonde',
-            body: 'Consultation de contrôle, retrait de la sonde et analyse anatomopathologique ; puis autorisation de prendre l’avion.'
+            title: 'Retrait de la sonde et contrôle',
+            body: 'La sonde est retirée sur place, afin qu\'une éventuelle difficulté à uriner soit prise en charge près de l\'hôpital. Ne réservez donc pas de vol pour le lendemain du retrait.'
+          },
+          {
+            when: 'Après le retour',
+            title: 'Anatomopathologie et suivi du PSA',
+            body: 'Le compte rendu anatomopathologique est généralement disponible après votre retour. Convenez avant le départ de la manière dont il vous parviendra, de qui l\'expliquera et du calendrier de suivi du PSA.'
           }
         ],
         risks: [
-          'Incontinence urinaire transitoire ou définitive',
-          'Modification de la fonction érectile (risque réduit par la technique de préservation nerveuse)',
-          'Saignement, infection et risques généraux liés à la chirurgie et à l’anesthésie',
-          'Rarement, lésion d’un organe voisin'
+          'FUITES URINAIRES : avec la prostate disparaît une partie du mécanisme de continence, le sphincter externe assurant seul cette fonction. Les fuites après le retrait de la sonde sont une phase de transition attendue, non une complication. La plupart des hommes s\'améliorent en quelques semaines à quelques mois, la récupération pouvant se poursuivre jusqu\'à un an ; chez un petit nombre elles persistent',
+          'MODIFICATION DE LA FONCTION SEXUELLE : même avec préservation nerveuse, la fonction ne revient pas immédiatement — il faut des mois et l\'évolution varie. L\'âge, le diabète, les maladies vasculaires, le tabac et la fonction antérieure pèsent sur le résultat',
+          'UN RÉSULTAT ANATOMOPATHOLOGIQUE MOINS BON QUE PRÉVU : du tissu tumoral peut être retrouvé sur la marge, ou la maladie se révéler plus avancée qu\'estimé. Un traitement complémentaire — radiothérapie, parfois hormonothérapie — peut alors être proposé. Ne pas avoir évoqué cette éventualité au préalable est la surprise la plus difficile pour un patient',
+          'Saignement, infection et risques généraux de l\'anesthésie',
+          'Collection de lymphe (lymphocèle) et œdème des membres inférieurs après curage ganglionnaire',
+          'Sténose tardive de l\'anastomose entre vessie et urètre',
+          'Rarement, lésion intestinale, urétérale ou vasculaire',
+          'Thrombose veineuse des membres inférieurs après chirurgie pelvienne et immobilité ; un vol long-courrier majore ce risque',
+          'La survenue d\'une hernie inguinale dans les suites a été rapportée',
+          'Absence d\'éjaculation — définitive, mettant fin à la fertilité naturelle'
         ],
         alternatives: [
-          'Surveillance active (chez des patients sélectionnés à faible risque)',
-          'Radiothérapie (externe ou curiethérapie)',
-          'Traitements focaux (dans des cas sélectionnés)',
-          'Hormonothérapie (en complément aux stades avancés)'
+          'Surveillance active — pour des formes à faible risque sélectionnées. Il ne s\'agit pas de différer le traitement mais de suivre de près avec PSA, examen, IRM et biopsie de contrôle si nécessaire',
+          'Radiothérapie externe — alternative dont les résultats carcinologiques sont comparables chez beaucoup d\'hommes ; le profil d\'effets indésirables diffère, avec davantage de troubles digestifs et urinaires mais moins d\'incontinence',
+          'Curiethérapie — sources radioactives placées dans la prostate, chez des patients sélectionnés',
+          'Hormonothérapie — non curative seule ; elle peut accompagner la radiothérapie ou être utilisée aux stades avancés',
+          'Traitements focaux — réservés à des cas sélectionnés, avec un recul moindre que la chirurgie ou la radiothérapie',
+          'Abstention thérapeutique — choix raisonnable chez l\'homme âgé à espérance de vie limitée et maladie à faible risque'
+        ],
+        comparison: {
+          title: 'Chirurgie, radiothérapie et surveillance : quel compromis vous convient',
+          columns: ['Critère', 'Prostatectomie radicale', 'Radiothérapie', 'Surveillance active'],
+          rows: [
+            { label: 'Comment la maladie est traitée', values: ['La glande est retirée', 'La glande reste en place et est irradiée', 'Pas de traitement ; suivi rapproché'] },
+            { label: 'Le stade réel est-il connu ?', values: ['Oui — par l\'analyse de la pièce', 'Non ; stade clinique seulement', 'Non'] },
+            { label: 'Effet indésirable principal', values: ['Incontinence, fonction sexuelle', 'Troubles digestifs et urinaires, fonction sexuelle (plus tardive)', 'Aucun ; la charge est celle du suivi et de l\'incertitude'] },
+            { label: 'Durée du traitement', values: ['Une intervention', 'Séances sur plusieurs semaines', 'Suivi sans terme fixé'] },
+            { label: 'Paramètre de suivi', values: ['PSA devenu indétectable', 'Décroissance du PSA jusqu\'à un nadir', 'PSA, IRM, biopsie de contrôle'] },
+            { label: 'Options ultérieures', values: ['La radiothérapie peut être ajoutée', 'La chirurgie après irradiation est difficile', 'Les deux options restent ouvertes'] }
+          ],
+          note: 'La surveillance active n\'est pas « ne rien faire ». Elle exige un suivi rigoureux et perd son sens dès que celui-ci est interrompu. Chez le patient qui s\'y prête, elle évite des effets indésirables inutiles et préserve les deux voies thérapeutiques.'
+        },
+        recovery: [
+          { period: 'Semaine 1', body: 'À domicile avec la sonde. Marches courtes et fréquentes recommandées ; port de charges et efforts de poussée proscrits. Éviter la constipation par les fibres et une bonne hydratation.' },
+          { period: 'Semaine 2', body: 'La sonde est retirée. Un contrôle faible ou nul les premiers jours est habituel et ne préjuge pas du résultat. La rééducation périnéale débute véritablement.' },
+          { period: 'Semaines 3–4', body: 'La reprise d\'un travail de bureau est possible chez la plupart. Les nuits sèches reviennent en premier, puis le contrôle au repos ; l\'effort — toux, port de charges, escaliers — s\'améliore en dernier.' },
+          { period: 'Mois 2–3', body: 'Le contrôle urinaire atteint chez beaucoup un niveau qui ne limite plus la vie quotidienne. Le premier PSA est dosé ; après l\'intervention, il doit devenir indétectable.' },
+          { period: 'Mois 6–12', body: 'La récupération sexuelle se joue sur cette période. Les chances sont meilleures en cas de préservation nerveuse, sans que ce soit une garantie. La continence peut également continuer de s\'améliorer.' },
+          { period: 'Au-delà d\'un an', body: 'Si les fuites limitent encore la vie quotidienne à un an, la situation est réévaluée et des solutions existent. Il n\'est pas nécessaire de décider sous l\'effet de cette crainte dans les premiers mois.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
           disclaimer:
-            'La fourchette de prix varie selon le stade, les gestes associés et la durée du séjour. Un devis ferme est établi après la pré-évaluation.'
+            'Le montant dépend du stade, de la réalisation ou non d\'un curage ganglionnaire, de la durée d\'hospitalisation et de l\'hébergement. Un devis écrit et détaillé est remis après examen de vos documents.'
         },
         packageIncludes: [
-          'Intervention et séjour hospitalier',
-          'Anesthésie et bloc opératoire',
-          'Bilan préopératoire',
+          'Consultation préopératoire, bilan sanguin et consultation d\'anesthésie',
+          'Intervention, anesthésie et bloc opératoire',
+          'Instruments robotiques et consommables',
+          'Hospitalisation',
+          'Examen anatomopathologique de la pièce opératoire',
+          'Retrait de la sonde et consultation de contrôle avant le retour',
           'Transferts aéroport–hôpital–hôtel',
           'Hébergement (patient + 1 accompagnant)',
-          'Interprète médical et coordinateur patient',
-          'Contrôles en ligne après la sortie'
+          'Interprète médical et coordination des patients',
+          'Interprétation à distance de vos dosages de PSA après le retour'
         ],
         faqs: [
           {
-            q: 'Combien de temps dois-je rester en Türkiye ?',
-            a: 'Généralement 7 à 10 jours ; la durée exacte dépend de votre récupération et du moment du retrait de la sonde.'
+            q: 'Est-ce le robot qui opère ?',
+            a: 'Non. Chaque geste est réalisé par le chirurgien ; le système transmet les mouvements de ses mains à des instruments fins et fournit une vision agrandie en trois dimensions. L\'appareil ne décide ni ne bouge seul. Le résultat dépend donc du chirurgien à la console.'
           },
           {
-            q: 'Suis-je candidat à une chirurgie avec préservation nerveuse ?',
-            a: 'Cela dépend de la localisation et du stade de la tumeur ; la décision est confirmée après l’imagerie et l’examen préopératoires.'
+            q: 'Vais-je forcément avoir des fuites après l\'intervention ?',
+            a: 'Des fuites dans la période qui suit le retrait de la sonde sont attendues, la continence reposant désormais sur un seul muscle. La plupart des hommes s\'améliorent en quelques semaines ou mois, et la récupération peut se poursuivre jusqu\'à un an. Chez un petit nombre, elles persistent, et cette éventualité doit être dite avant l\'intervention.'
           },
           {
-            q: 'Quand puis-je prendre l’avion après l’intervention ?',
-            a: 'La plupart des patients sont autorisés à voyager après le contrôle et le retrait de la sonde, généralement à partir du 10e jour.'
+            q: 'La préservation nerveuse est-elle possible pour moi ?',
+            a: 'Cela se décide à partir de la biopsie, de l\'IRM et de l\'examen clinique. La règle ne change pas : exérèse complète de la tumeur d\'abord, préservation ensuite si elle est possible. Si la tumeur s\'étend vers la bandelette, elle n\'est pas préservée. Une préservation unilatérale est possible, et le plan peut être ajusté en peropératoire.'
+          },
+          {
+            q: 'Si les nerfs sont préservés, la fonction sexuelle reviendra-t-elle à coup sûr ?',
+            a: 'Non. Même préservés, la récupération demande des mois et varie d\'un homme à l\'autre. L\'âge, le diabète, les maladies vasculaires, le tabac et surtout votre fonction antérieure interviennent. Chez un homme déjà nettement gêné avant l\'intervention, la préservation peut ne pas apporter le bénéfice espéré.'
+          },
+          {
+            q: 'Pourrai-je avoir des enfants après cette intervention ?',
+            a: 'Pas naturellement. La prostate et les vésicules séminales étant retirées, il n\'y a plus d\'éjaculat. Si vous souhaitez des enfants, il faut en parler avant l\'intervention et envisager une conservation de sperme. Cette possibilité n\'existe plus ensuite.'
+          },
+          {
+            q: 'Que se passe-t-il si le résultat anatomopathologique est moins bon que prévu ?',
+            a: 'Du tissu tumoral peut être retrouvé sur la marge, ou la maladie être plus avancée qu\'estimé. Cela ne signifie pas que l\'intervention a échoué, mais qu\'un traitement complémentaire peut être nécessaire, le plus souvent une radiothérapie, parfois une hormonothérapie. Connaître cette éventualité à l\'avance atténue le choc.'
+          },
+          {
+            q: 'Quel doit être le PSA après l\'intervention ?',
+            a: 'La prostate étant retirée, le PSA doit devenir indétectable. Il est ensuite dosé à intervalles réguliers, et une tendance à la hausse conduit à des examens complémentaires. Déterminez avant votre départ qui interprète ces résultats et selon quel calendrier.'
+          },
+          {
+            q: 'Pourquoi choisir la chirurgie plutôt que la radiothérapie ?',
+            a: 'Les deux sont valables chez le patient adéquat et aucune n\'est formellement supérieure. Un avantage de la chirurgie est que l\'analyse de la pièce révèle le stade réel, et qu\'une radiothérapie peut encore être ajoutée ensuite. Les avantages de la radiothérapie sont d\'éviter l\'intervention et l\'anesthésie et d\'entraîner moins d\'incontinence. Le bon choix dépend des effets avec lesquels vous préférez vivre.'
+          },
+          {
+            q: 'Combien de temps dois-je rester en Turquie ?',
+            a: 'En général 7 à 10 jours, et c\'est la sonde qui fixe le calendrier. Elle est retirée sur place afin qu\'une difficulté à uriner soit prise en charge près de l\'hôpital. Prenez un billet modifiable et prévoyez quelques jours de marge.'
+          },
+          {
+            q: 'Quand pourrai-je prendre l\'avion ?',
+            a: 'L\'autorisation est donnée au cas par cas et se situe normalement après la consultation de contrôle et le retrait de la sonde. La chirurgie pelvienne et l\'immobilité majorent le risque de thrombose : respectez les consignes de marche dans l\'allée, d\'hydratation et de contention. Consultez immédiatement en cas de douleur ou gonflement du mollet, de douleur thoracique ou d\'essoufflement.'
+          },
+          {
+            q: 'Quels documents dois-je envoyer avant de venir ?',
+            a: 'L\'évolution de vos PSA, le compte rendu complet de la biopsie (nombre de carottes prélevées, nombre de carottes positives, score de Gleason ou groupe ISUP), le compte rendu d\'IRM et les images elles-mêmes, les examens de stadification éventuels, la liste de vos traitements et vos autres pathologies. Cela permet d\'évaluer, avant tout déplacement, si cette intervention vous convient.'
           }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Prostate Cancer — Association européenne d\'urologie', url: 'https://uroweb.org/guidelines/prostate-cancer' }
         ]
       }
     }

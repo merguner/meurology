@@ -4,7 +4,7 @@ import { siteConfig } from '@/config/site';
 export const runtime = 'nodejs';
 
 /**
- * KARTLI ÖDEME — İSKELET (placeholder).
+ * KARTLI ÖDEME — İSKELET (sağlayıcı seçilmedi, uç nokta pasif).
  * ------------------------------------------------------------------
  * Gerçek entegrasyon (iyzico / Stripe) bu dosyada yapılacak. Şu an yalnızca
  * yapılandırma bayrağına bakar; kapalıysa "not_configured" döner ve UI

@@ -5,6 +5,7 @@ import { getTranslations, getMessages, setRequestLocale } from 'next-intl/server
 import { routing, rtlLocales, type Locale } from '@/i18n/routing';
 import { fontVariables } from '@/app/fonts';
 import { siteConfig } from '@/config/site';
+import { robotsMeta } from '@/config/seo';
 import { ThemeScript } from '@/components/ThemeScript';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
@@ -41,7 +42,8 @@ export async function generateMetadata({
       locale,
       images: [{ url: '/brand/og.svg', width: 1200, height: 630, alt: t('siteName') }]
     },
-    robots: { index: true, follow: true }
+    // Geçici dağıtım adresinde (*.vercel.app) noindex — bkz. config/seo.ts
+    robots: robotsMeta()
   };
 }
 

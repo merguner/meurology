@@ -15,7 +15,7 @@
  * TODO-DOGRULA: Turnstile anahtarları kullanıcıdan bekleniyor.
  *
  * Anahtar yoksa widget render edilmez ve sunucu doğrulaması atlanır —
- * yayında "yakında" türü bir yer tutucu GÖRÜNMEZ (prompt m.2.3).
+ * yayında bekleme metni veya boş kutu GÖRÜNMEZ (prompt m.2.3).
  */
 export const turnstileConfig = {
   siteKey: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim() ?? '',
