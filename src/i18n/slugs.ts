@@ -24,6 +24,14 @@ export const treatmentSlugMap = {
     ru: 'roboticheskaya-prostatektomiya',
     ar: 'robotic-prostatectomy'
   },
+  'psa-yuksekligi-ve-biyopsi': {
+    tr: 'psa-yuksekligi-ve-biyopsi',
+    en: 'raised-psa-and-biopsy',
+    de: 'erhoehter-psa-und-biopsie',
+    fr: 'psa-eleve-et-biopsie',
+    ru: 'povyshennyy-psa-i-biopsiya',
+    ar: 'raised-psa-and-biopsy'
+  },
   'prostat-kanseri': {
     tr: 'prostat-kanseri',
     en: 'prostate-cancer',

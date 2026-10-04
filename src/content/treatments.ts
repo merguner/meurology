@@ -15,6 +15,1120 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
+     * Prostat kanseri hub'ının tanı adımını derinleştiren sayfa (prompt m.4.1).
+     * Hedef okuyucu: "PSA'm yüksek çıktı, ne yapmalıyım?" diye arayan hasta.
+     * Duruş: PSA yüksekliği KANSER DEMEK DEĞİLDİR; panik ve gereksiz biyopsi
+     * aynı ölçüde zararlıdır. Kaynak: EAU Prostate Cancer kılavuzu.
+     * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     */
+    slug: 'psa-yuksekligi-ve-biyopsi',
+    parent: 'prostat-kanseri',
+    lastReviewed: '2026-10-04',
+    icon: 'prostate',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'PSA Yüksekliği ve Prostat Biyopsisi',
+        summary:
+          'PSA’nız yüksek çıktıysa ne anlama gelir, hemen biyopsi gerekir mi ve doğru sıra nedir? Paniğe de gereksiz işleme de gerek olmadığını anlatan rehber.',
+        metaTitle: 'PSA Yüksekliği Ne Anlama Gelir? Prostat Biyopsisi',
+        metaDescription:
+          'PSA yüksekliğinin nedenleri, MR’ın biyopsiden önce neden çekildiği, biyopsi türleri, riskleri ve sonucun nasıl okunacağı üzerine kapsamlı bilgilendirme.',
+        quickFacts: {
+          duration: 'Biyopsi 10–20 dakika',
+          anesthesia: 'Lokal anestezi veya sedasyon',
+          hospitalStay: 'Günübirlik',
+          stayInTurkey: '2–3 gün (yalnızca tanı amaçlı gelinirse)',
+          returnToWork: '1–2 gün',
+          flightClearance: 'Ertesi gün'
+        },
+        definition: [
+          'PSA (Prostat Spesifik Antijen), prostat dokusunun ürettiği ve kanda ölçülebilen bir proteindir. Adındaki "spesifik" kelimesi sık yanlış anlaşılır: PSA PROSTATA özgüdür, KANSERE değil. Yani yüksek bir PSA değeri prostatta bir şeyler olduğunu gösterir; bunun kanser olduğunu göstermez.',
+          'PSA’yı yükselten kanser dışı nedenler oldukça yaygındır: iyi huylu prostat büyümesi, prostat iltihabı (prostatit), idrar yolu enfeksiyonu, idrar sondası takılması, yakın zamanda geçirilmiş prostat işlemleri ve son 48 saatteki boşalma. Uzun bisiklet sürüşü de bazı kişilerde değeri geçici olarak artırabilir.',
+          'Tek bir ölçümle karar verilmez. Enfeksiyon düşünülüyorsa önce tedavi edilir ve PSA birkaç hafta sonra tekrarlanır. Ayrıca mutlak değere ek olarak başka ölçütler de değerlendirilir: PSA yoğunluğu (PSA değerinin prostat hacmine oranı), serbest/total PSA oranı ve PSA’nın zaman içindeki artış hızı. Bu ek ölçütler, büyük bir prostatın doğal olarak daha yüksek PSA üretebileceğini hesaba katmayı sağlar.',
+          'Yaş da önemlidir: genç bir erkekte normal kabul edilen bir değer, ileri yaşta farklı yorumlanır. Bu nedenle "PSA 4’ün altındaysa sorun yok" gibi tek bir eşik kullanmak doğru değildir; değerlendirme kişiye göre yapılır.',
+          'MR BİYOPSİDEN ÖNCE GELİR. Günümüzde, PSA yüksekliği olan hastada doğrudan biyopsiye geçilmesi önerilmez. Önce multiparametrik prostat MR çekilir ve bulunan lezyonlar PI-RADS adı verilen 1–5 arası bir ölçekle puanlanır: düşük puan şüphenin düşük, yüksek puan şüphenin belirgin olduğunu gösterir. Bu yaklaşım hem gereksiz biyopsileri azaltır hem de önemli kanserlerin atlanma olasılığını düşürür.',
+          'Biyopsi kararı verilirse, MR’da işaretlenen alandan hedefli örnek alınır (füzyon biyopsi); genellikle buna prostatın farklı bölgelerinden alınan sistematik örnekler eşlik eder. Biyopsi iki yoldan yapılabilir: makattan (transrektal) veya perineden, yani testislerle makat arasındaki cilt bölgesinden (transperineal). Transperineal yolda bağırsak florasıyla temas olmadığı için enfeksiyon riski daha düşüktür.'
+        ],
+        eligibility: {
+          suitable: [
+            'PSA değeri tekrarlanan ölçümde de yüksek kalan hastalar',
+            'Multiparametrik MR’da şüpheli lezyon (yüksek PI-RADS) saptanan hastalar',
+            'Parmakla muayenede sertlik veya düzensizlik saptanan hastalar',
+            'Daha önce biyopsisi negatif çıkmış ancak PSA’sı yükselmeye devam eden hastalar',
+            'Ailesinde prostat kanseri öyküsü olan ve PSA’sı beklenenin üzerinde seyreden erkekler'
+          ],
+          notSuitable: [
+            'Aktif idrar yolu enfeksiyonu veya prostatit olan hastalar — önce tedavi, sonra PSA tekrarı',
+            'Tek bir yüksek PSA ölçümü olan ve tekrar ölçüm yapılmamış kişiler',
+            'MR çekilmemiş hastalar — doğrudan biyopsi artık ilk tercih değildir',
+            'Beklenen yaşam süresi kısa olan ve tanının tedavi kararını değiştirmeyeceği ileri yaştaki hastalar',
+            'Kanama bozukluğu kontrol altına alınmamış hastalar — önce bu durum düzenlenir'
+          ]
+        },
+        technology: [
+          'Multiparametrik prostat MR ve PI-RADS değerlendirmesi',
+          'MR–ultrason füzyon biyopsi sistemi (hedefli örnekleme)',
+          'Transperineal biyopsi yolu — enfeksiyon riskini azaltmaya yönelik',
+          'Patolojik inceleme ve ISUP derecelendirmesi'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Prostat kanseri tanı süreci ve üroonkolojik cerrahi, Doç. Dr. Müslüm Ergün’ün çalışma alanları arasındadır. Biyopsi kararı, PSA seyri, MR bulgusu ve hastanın genel durumu birlikte değerlendirilerek verilir.'
+        },
+        timeline: [
+          {
+            when: '1. adım',
+            title: 'Değerin doğrulanması',
+            body: 'Enfeksiyon bulgusu varsa önce tedavi edilir. PSA birkaç hafta sonra, boşalma ve bisiklet gibi etkenlerden uzak bir dönemde tekrarlanır.'
+          },
+          {
+            when: '2. adım',
+            title: 'Ek ölçütlerin değerlendirilmesi',
+            body: 'PSA yoğunluğu, serbest/total PSA oranı ve artış hızı hesaplanır. Prostat hacmi ultrasonla ölçülür.'
+          },
+          {
+            when: '3. adım',
+            title: 'Multiparametrik MR',
+            body: 'Şüpheli alan aranır ve PI-RADS puanı verilir. Düşük puanlı bazı hastalarda biyopsiden kaçınılıp izlem tercih edilebilir.'
+          },
+          {
+            when: '4. adım',
+            title: 'Hedefli biyopsi',
+            body: 'Gerekliyse MR’da işaretlenen alandan füzyon tekniğiyle örnek alınır; genellikle sistematik örnekler de eklenir. İşlem 10–20 dakika sürer.'
+          },
+          {
+            when: '5. adım',
+            title: 'Sonucun değerlendirilmesi',
+            body: 'Patoloji raporu birkaç gün içinde çıkar. Kanser saptanırsa ISUP derecesi ve tutulum oranı risk grubunu belirler; saptanmazsa izlem planı yapılır.'
+          }
+        ],
+        risks: [
+          'İdrarda, menide veya makattan kanama — en sık görülen ve genellikle kendiliğinden geçen durumdur; menideki kan haftalarca sürebilir ve zararsızdır',
+          'Enfeksiyon — transrektal yolda daha yüksektir; ateş ve titreme olursa vakit kaybetmeden başvurulmalıdır',
+          'İdrar yapamama (geçici retansiyon) — özellikle prostatı büyük olanlarda',
+          'İşlem sırasında ve sonrasında geçici rahatsızlık hissi',
+          'YANLIŞ NEGATİF SONUÇ: Biyopsinin temiz çıkması kanser olmadığını kesin olarak göstermez; PSA yükselmeye devam ederse takip ve gerekirse tekrar değerlendirme gerekir'
+        ],
+        alternatives: [
+          'PSA’yı tekrarlamak ve izlemek — sınırda değerlerde makul bir yaklaşım',
+          'PSA yoğunluğu ve serbest/total oranla riski yeniden hesaplamak',
+          'MR’da şüpheli lezyon yoksa biyopsiyi erteleyip izleme almak (seçilmiş hastalarda)',
+          'Enfeksiyon tedavisi sonrası PSA’yı yeniden ölçmek',
+          'İleri yaşta ve beklenen yaşam süresi kısa olan hastalarda tanısal işlemden kaçınmak'
+        ],
+        comparison: {
+          title: 'Transrektal ve transperineal biyopsi karşılaştırması',
+          columns: ['Ölçüt', 'Transrektal (makattan)', 'Transperineal (perineden)'],
+          rows: [
+            { label: 'Giriş yolu', values: ['Makat yoluyla', 'Testis ile makat arasındaki ciltten'] },
+            { label: 'Enfeksiyon riski', values: ['Daha yüksek (bağırsak florası teması)', 'Daha düşük'] },
+            { label: 'Anestezi', values: ['Genellikle lokal', 'Lokal veya sedasyon'] },
+            { label: 'Ön bölgeye ulaşım', values: ['Sınırlı olabilir', 'Daha kolay'] },
+            { label: 'Hazırlık', values: ['Antibiyotik profilaksisi önemli', 'Antibiyotik ihtiyacı daha az'] }
+          ],
+          note:
+            'Her iki yöntem de yaygın olarak uygulanmaktadır. Seçim; prostat anatomisi, lezyonun yeri, enfeksiyon riski ve merkezin donanımı birlikte değerlendirilerek yapılır.'
+        },
+        recovery: [
+          {
+            period: 'İlk 24 saat',
+            body: 'Hafif rahatsızlık ve idrarda pembe renk beklenen bulgulardır. Bol sıvı alınması önerilir, ağır aktiviteden kaçınılır.'
+          },
+          {
+            period: '2–7. gün',
+            body: 'İdrardaki kan genellikle geçer. Ateş, titreme veya idrar yapamama olursa bekletmeden başvurulmalıdır.'
+          },
+          {
+            period: '1–6. hafta',
+            body: 'Menide kan görülmesi bu dönemde sürebilir; zararsızdır ve kendiliğinden geçer.'
+          },
+          {
+            period: 'Sonuç sonrası',
+            body: 'Kanser saptanmazsa PSA takibi planlanır. Saptanırsa risk grubuna göre tedavi seçenekleri konuşulur.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat, MR ve biyopsinin birlikte mi yoksa ayrı mı planlandığına göre değişir. Kesin teklif, hangi tetkiklerin gerektiği netleştikten sonra verilir.'
+        },
+        packageIncludes: [
+          'Multiparametrik prostat MR değerlendirmesi',
+          'Füzyon biyopsi işlemi ve anestezi',
+          'Patolojik inceleme ve ISUP derecelendirmesi',
+          'Gerekli antibiyotik ve işlem sonrası bakım',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve sonucun ayrıntılı anlatıldığı görüşme'
+        ],
+        faqs: [
+          {
+            q: 'PSA’m yüksek çıktı, kanser miyim?',
+            a: 'Hayır, bu sonuç tek başına kanser anlamına gelmez. PSA prostata özgüdür, kansere değil. İyi huylu büyüme, iltihap, enfeksiyon, sonda takılması ve son 48 saatteki boşalma da değeri yükseltir. Doğru yaklaşım, varsa enfeksiyonu tedavi edip ölçümü tekrarlamak ve ek ölçütlerle birlikte değerlendirmektir.'
+          },
+          {
+            q: 'PSA kaçın üzeri yüksek sayılır?',
+            a: 'Tek bir eşik yoktur. Değer yaşa, prostat hacmine ve PSA’nın zaman içindeki seyrine göre yorumlanır. Büyük bir prostat doğal olarak daha fazla PSA üretir; bu nedenle PSA yoğunluğu hesaplanır. "4’ün altı güvenli" gibi genellemeler yanıltıcı olabilir.'
+          },
+          {
+            q: 'Hemen biyopsi olmam gerekir mi?',
+            a: 'Çoğu durumda hayır. Önce değerin doğrulanması, ardından multiparametrik MR çekilmesi önerilir. MR şüpheli bir alan göstermezse ve diğer ölçütler düşük riske işaret ediyorsa, biyopsi ertelenip izlem tercih edilebilir.'
+          },
+          {
+            q: 'MR neden biyopsiden önce çekiliyor?',
+            a: 'Çünkü MR, şüpheli alanı önceden gösterir. Böylece biyopsi rastgele değil hedefli yapılır; önemli kanserlerin atlanma olasılığı azalır ve bir kısım hastada gereksiz biyopsiden kaçınılabilir.'
+          },
+          {
+            q: 'Biyopsi ağrılı mı?',
+            a: 'İşlem lokal anestezi veya sedasyon altında yapılır ve 10–20 dakika sürer. Baskı hissi olabilir ancak genellikle iyi tolere edilir. İşlem sonrası birkaç gün hafif rahatsızlık beklenebilir.'
+          },
+          {
+            q: 'Biyopsiden sonra kanama normal mi?',
+            a: 'Evet. İdrarda ve makattan hafif kanama ilk günlerde beklenir. Menide kan görülmesi ise haftalarca sürebilir; rahatsız edici olsa da zararsızdır. Ateş, titreme veya idrar yapamama ise acil değerlendirme gerektirir.'
+          },
+          {
+            q: 'Biyopsim temiz çıktı, rahatlayabilir miyim?',
+            a: 'Büyük ölçüde evet, ancak biyopsi prostatın tamamını örneklemez. Bu nedenle temiz sonuç kanseri kesin olarak dışlamaz. PSA’nız yükselmeye devam ederse veya MR bulgusu şüpheliyse takip sürdürülür ve gerekirse yeniden değerlendirme yapılır.'
+          },
+          {
+            q: 'Transrektal mi transperineal mi tercih edilmeli?',
+            a: 'Her ikisi de yaygın olarak uygulanır. Transperineal yolda bağırsak florasıyla temas olmadığı için enfeksiyon riski daha düşüktür ve prostatın ön bölgesine ulaşmak daha kolaydır. Seçim, lezyonun yeri ve sizin risk durumunuzla birlikte yapılır.'
+          },
+          {
+            q: 'Sonuç ne kadar sürede çıkar ve nasıl okunur?',
+            a: 'Patoloji sonucu genellikle birkaç gün içinde hazır olur. Kanser saptanırsa rapor ISUP derecesini (1–5) ve kaç örnekte tümör bulunduğunu belirtir. Bu bilgiler PSA ve evreyle birleştirilerek risk grubunuz belirlenir ve tedavi seçenekleri buna göre konuşulur.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Prostate Cancer — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      en: {
+        title: 'Raised PSA and Prostate Biopsy',
+        summary:
+          'What does a raised PSA actually mean, is a biopsy needed straight away and what is the correct order of steps? A guide explaining why neither panic nor an unnecessary procedure is called for.',
+        metaTitle: 'What Does a Raised PSA Mean? Prostate Biopsy',
+        metaDescription:
+          'Comprehensive information on the causes of a raised PSA, why MRI is performed before biopsy, the types of biopsy, their risks and how the result is read.',
+        quickFacts: {
+          duration: 'Biopsy 10–20 minutes',
+          anesthesia: 'Local anaesthesia or sedation',
+          hospitalStay: 'Day case',
+          stayInTurkey: '2–3 days (if travelling for diagnosis only)',
+          returnToWork: '1–2 days',
+          flightClearance: 'Next day'
+        },
+        definition: [
+          'PSA (Prostate Specific Antigen) is a protein produced by prostate tissue and measurable in the blood. The word "specific" in its name is often misread: PSA is specific to the PROSTATE, not to CANCER. A raised PSA therefore tells you something is going on in the prostate; it does not tell you that it is cancer.',
+          'Non-cancerous causes of a raised PSA are common: benign prostate enlargement, inflammation of the prostate (prostatitis), urinary tract infection, catheter insertion, recent prostate procedures and ejaculation within the past 48 hours. A long bicycle ride can also raise the value temporarily in some men.',
+          'No decision is made on a single measurement. If infection is suspected it is treated first and the PSA is repeated some weeks later. Alongside the absolute value, further measures are assessed: PSA density (the PSA value relative to prostate volume), the free-to-total PSA ratio and how quickly the PSA is rising over time. These take account of the fact that a large prostate naturally produces more PSA.',
+          'Age matters too: a value regarded as normal in a younger man is interpreted differently later in life. For this reason a single cut-off such as "under 4 means you are fine" is not correct; the assessment is made individually.',
+          'MRI COMES BEFORE BIOPSY. Going straight to biopsy in a man with a raised PSA is no longer recommended. Multiparametric prostate MRI is performed first and any lesions found are scored on a 1–5 scale called PI-RADS: a low score indicates low suspicion, a high score clear suspicion. This approach both reduces unnecessary biopsies and lowers the chance of missing a significant cancer.',
+          'If a biopsy is decided on, a targeted sample is taken from the area marked on the MRI (fusion biopsy); this is usually accompanied by systematic samples from different parts of the prostate. The biopsy can be carried out by two routes: through the back passage (transrectal) or through the perineum, the skin between the testicles and the anus (transperineal). The transperineal route carries a lower infection risk because there is no contact with bowel flora.'
+        ],
+        eligibility: {
+          suitable: [
+            'Men whose PSA remains raised on a repeat measurement',
+            'Men with a suspicious lesion (high PI-RADS) on multiparametric MRI',
+            'Men with firmness or irregularity on digital rectal examination',
+            'Men with a previous negative biopsy whose PSA continues to rise',
+            'Men with a family history of prostate cancer whose PSA runs above what is expected'
+          ],
+          notSuitable: [
+            'Men with an active urinary tract infection or prostatitis — treatment first, then a repeat PSA',
+            'Men with a single raised PSA reading that has not yet been repeated',
+            'Men who have not had an MRI — going straight to biopsy is no longer the first choice',
+            'Older men with a limited life expectancy in whom the diagnosis would not change the treatment decision',
+            'Men with an uncontrolled bleeding disorder — this is corrected first'
+          ]
+        },
+        technology: [
+          'Multiparametric prostate MRI with PI-RADS reporting',
+          'MRI–ultrasound fusion biopsy system (targeted sampling)',
+          'Transperineal biopsy route — intended to reduce infection risk',
+          'Pathological examination and ISUP grading'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'The diagnostic pathway for prostate cancer and uro-oncological surgery are among Assoc. Prof. Müslüm Ergün’s areas of work. The decision to biopsy is made by weighing the PSA trend, the MRI findings and the patient’s general condition together.'
+        },
+        timeline: [
+          {
+            when: 'Step 1',
+            title: 'Confirming the value',
+            body: 'If there are signs of infection these are treated first. The PSA is repeated some weeks later, at a time away from factors such as ejaculation and cycling.'
+          },
+          {
+            when: 'Step 2',
+            title: 'Assessing the additional measures',
+            body: 'PSA density, the free-to-total PSA ratio and the rate of rise are calculated. Prostate volume is measured by ultrasound.'
+          },
+          {
+            when: 'Step 3',
+            title: 'Multiparametric MRI',
+            body: 'Suspicious areas are looked for and given a PI-RADS score. In some men with a low score, biopsy may be avoided in favour of surveillance.'
+          },
+          {
+            when: 'Step 4',
+            title: 'Targeted biopsy',
+            body: 'If needed, samples are taken from the area marked on the MRI using the fusion technique; systematic samples are usually added. The procedure takes 10–20 minutes.'
+          },
+          {
+            when: 'Step 5',
+            title: 'Reviewing the result',
+            body: 'The pathology report is ready within a few days. If cancer is found, the ISUP grade and the extent of involvement determine the risk group; if not, a surveillance plan is made.'
+          }
+        ],
+        risks: [
+          'Bleeding in the urine, in the semen or from the back passage — the most common finding and usually self-limiting; blood in the semen can last for weeks and is harmless',
+          'Infection — higher by the transrectal route; fever and shivering require immediate medical attention',
+          'Inability to pass urine (temporary retention) — particularly in men with a large prostate',
+          'Temporary discomfort during and after the procedure',
+          'A FALSE NEGATIVE RESULT: a clear biopsy does not definitively prove the absence of cancer; if the PSA keeps rising, follow-up and, where needed, repeat assessment are required'
+        ],
+        alternatives: [
+          'Repeating and monitoring the PSA — a reasonable approach with borderline values',
+          'Recalculating the risk using PSA density and the free-to-total ratio',
+          'Deferring biopsy and moving to surveillance when the MRI shows no suspicious lesion (in selected men)',
+          'Re-measuring the PSA after treatment of an infection',
+          'Avoiding the diagnostic procedure in older men with a limited life expectancy'
+        ],
+        comparison: {
+          title: 'Transrectal versus transperineal biopsy',
+          columns: ['Criterion', 'Transrectal (through the rectum)', 'Transperineal (through the perineum)'],
+          rows: [
+            { label: 'Route of entry', values: ['Through the back passage', 'Through the skin between testicles and anus'] },
+            { label: 'Infection risk', values: ['Higher (contact with bowel flora)', 'Lower'] },
+            { label: 'Anaesthesia', values: ['Usually local', 'Local or sedation'] },
+            { label: 'Access to the anterior prostate', values: ['Can be limited', 'Easier'] },
+            { label: 'Preparation', values: ['Antibiotic prophylaxis important', 'Less need for antibiotics'] }
+          ],
+          note:
+            'Both methods are in widespread use. The choice is made by weighing prostate anatomy, the location of the lesion, infection risk and the equipment available at the centre.'
+        },
+        recovery: [
+          {
+            period: 'First 24 hours',
+            body: 'Mild discomfort and a pink tinge to the urine are expected. Plenty of fluids are advised and strenuous activity is avoided.'
+          },
+          {
+            period: 'Days 2–7',
+            body: 'Blood in the urine usually settles. Fever, shivering or inability to pass urine require prompt medical attention.'
+          },
+          {
+            period: 'Weeks 1–6',
+            body: 'Blood in the semen may continue during this period; it is harmless and resolves on its own.'
+          },
+          {
+            period: 'After the result',
+            body: 'If no cancer is found, PSA follow-up is planned. If cancer is found, treatment options are discussed according to the risk group.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies according to whether the MRI and the biopsy are planned together or separately. A firm quotation is given once it is clear which investigations are required.'
+        },
+        packageIncludes: [
+          'Multiparametric prostate MRI assessment',
+          'Fusion biopsy procedure and anaesthesia',
+          'Pathological examination and ISUP grading',
+          'Necessary antibiotics and post-procedure care',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and a consultation in which the result is explained in detail'
+        ],
+        faqs: [
+          {
+            q: 'My PSA came back raised — do I have cancer?',
+            a: 'No, this result on its own does not mean cancer. PSA is specific to the prostate, not to cancer. Benign enlargement, inflammation, infection, catheter insertion and ejaculation within the past 48 hours all raise the value. The right approach is to treat any infection, repeat the measurement and assess it together with the additional measures.'
+          },
+          {
+            q: 'Above what level is a PSA considered raised?',
+            a: 'There is no single cut-off. The value is interpreted according to age, prostate volume and how the PSA has behaved over time. A large prostate naturally produces more PSA, which is why PSA density is calculated. Generalisations such as "under 4 is safe" can be misleading.'
+          },
+          {
+            q: 'Do I need a biopsy straight away?',
+            a: 'In most cases no. The value should first be confirmed and multiparametric MRI performed. If the MRI shows no suspicious area and the other measures point to low risk, biopsy can be deferred in favour of surveillance.'
+          },
+          {
+            q: 'Why is MRI done before the biopsy?',
+            a: 'Because the MRI shows the suspicious area in advance. The biopsy is then targeted rather than random; the chance of missing a significant cancer falls and some men can avoid an unnecessary biopsy altogether.'
+          },
+          {
+            q: 'Is the biopsy painful?',
+            a: 'The procedure is done under local anaesthesia or sedation and takes 10–20 minutes. There may be a sensation of pressure but it is generally well tolerated. Mild discomfort for a few days afterwards can be expected.'
+          },
+          {
+            q: 'Is bleeding after the biopsy normal?',
+            a: 'Yes. Light bleeding in the urine and from the back passage is expected in the first few days. Blood in the semen can last for weeks; although it is unsettling, it is harmless. Fever, shivering or inability to pass urine, however, require urgent assessment.'
+          },
+          {
+            q: 'My biopsy was clear — can I relax?',
+            a: 'Largely yes, but a biopsy does not sample the whole prostate. A clear result therefore does not definitively rule out cancer. If your PSA keeps rising or the MRI finding is suspicious, follow-up continues and a repeat assessment is made where needed.'
+          },
+          {
+            q: 'Should I choose transrectal or transperineal?',
+            a: 'Both are in widespread use. The transperineal route carries a lower infection risk because there is no contact with bowel flora, and the front part of the prostate is easier to reach. The choice is made together with you, based on the location of the lesion and your own risk profile.'
+          },
+          {
+            q: 'How long does the result take and how is it read?',
+            a: 'The pathology result is usually ready within a few days. If cancer is found, the report states the ISUP grade (1–5) and in how many samples tumour was found. Combined with your PSA and stage, this determines your risk group, and treatment options are discussed accordingly.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Prostate Cancer — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      de: {
+        title: 'Erhöhter PSA-Wert und Prostatabiopsie',
+        summary:
+          'Was bedeutet ein erhöhter PSA-Wert, ist sofort eine Biopsie nötig und welche Reihenfolge ist richtig? Ein Leitfaden, der erklärt, warum weder Panik noch ein unnötiger Eingriff angebracht sind.',
+        metaTitle: 'Was bedeutet ein erhöhter PSA-Wert? Prostatabiopsie',
+        metaDescription:
+          'Umfassende Information zu den Ursachen eines erhöhten PSA-Werts, warum das MRT vor der Biopsie erfolgt, zu Biopsiearten, Risiken und zur Deutung des Befundes.',
+        quickFacts: {
+          duration: 'Biopsie 10–20 Minuten',
+          anesthesia: 'Örtliche Betäubung oder Sedierung',
+          hospitalStay: 'Ambulant',
+          stayInTurkey: '2–3 Tage (bei alleiniger Anreise zur Diagnostik)',
+          returnToWork: '1–2 Tage',
+          flightClearance: 'Am Folgetag'
+        },
+        definition: [
+          'PSA (prostataspezifisches Antigen) ist ein Eiweiß, das vom Prostatagewebe gebildet wird und im Blut messbar ist. Das Wort "spezifisch" wird häufig missverstanden: PSA ist spezifisch für die PROSTATA, nicht für KREBS. Ein erhöhter PSA-Wert zeigt also, dass in der Prostata etwas vorliegt; er zeigt nicht, dass es sich um Krebs handelt.',
+          'Nicht bösartige Ursachen eines erhöhten PSA-Werts sind häufig: gutartige Prostatavergrößerung, Prostataentzündung (Prostatitis), Harnwegsinfekt, das Legen eines Blasenkatheters, kürzlich erfolgte Eingriffe an der Prostata sowie ein Samenerguss in den letzten 48 Stunden. Auch längeres Radfahren kann den Wert bei manchen Männern vorübergehend erhöhen.',
+          'Eine einzelne Messung reicht für eine Entscheidung nicht aus. Besteht der Verdacht auf einen Infekt, wird dieser zuerst behandelt und der PSA-Wert einige Wochen später wiederholt. Neben dem absoluten Wert werden weitere Größen beurteilt: die PSA-Dichte (PSA-Wert im Verhältnis zum Prostatavolumen), das Verhältnis von freiem zu Gesamt-PSA und die Geschwindigkeit des Anstiegs über die Zeit. Damit wird berücksichtigt, dass eine große Prostata naturgemäß mehr PSA bildet.',
+          'Auch das Alter spielt eine Rolle: Ein Wert, der bei einem jüngeren Mann als normal gilt, wird im höheren Alter anders bewertet. Ein einzelner Grenzwert nach dem Motto "unter 4 ist alles in Ordnung" ist deshalb nicht richtig; die Beurteilung erfolgt individuell.',
+          'DAS MRT KOMMT VOR DER BIOPSIE. Bei erhöhtem PSA-Wert wird heute nicht mehr empfohlen, unmittelbar zu biopsieren. Zunächst wird ein multiparametrisches Prostata-MRT durchgeführt und gefundene Herde werden auf einer Skala von 1 bis 5 bewertet, die PI-RADS heißt: ein niedriger Wert steht für geringen, ein hoher Wert für deutlichen Verdacht. Dieses Vorgehen verringert unnötige Biopsien und senkt zugleich die Wahrscheinlichkeit, einen bedeutsamen Tumor zu übersehen.',
+          'Fällt die Entscheidung für eine Biopsie, wird gezielt aus dem im MRT markierten Areal eine Probe entnommen (Fusionsbiopsie); meist werden zusätzlich systematische Proben aus verschiedenen Bereichen der Prostata gewonnen. Die Biopsie kann auf zwei Wegen erfolgen: über den Enddarm (transrektal) oder über den Damm, also die Haut zwischen Hodensack und After (transperineal). Beim transperinealen Weg ist das Infektionsrisiko geringer, weil kein Kontakt zur Darmflora besteht.'
+        ],
+        eligibility: {
+          suitable: [
+            'Männer, deren PSA-Wert auch in der Kontrollmessung erhöht bleibt',
+            'Männer mit verdächtigem Herd (hoher PI-RADS-Wert) im multiparametrischen MRT',
+            'Männer mit Verhärtung oder Unregelmäßigkeit bei der Tastuntersuchung',
+            'Männer mit zuvor negativer Biopsie, deren PSA-Wert weiter ansteigt',
+            'Männer mit Prostatakrebs in der Familie, deren PSA-Wert über dem Erwarteten liegt'
+          ],
+          notSuitable: [
+            'Männer mit akutem Harnwegsinfekt oder Prostatitis — zuerst Behandlung, dann PSA-Kontrolle',
+            'Männer mit einem einzelnen erhöhten PSA-Wert ohne Kontrollmessung',
+            'Männer ohne MRT — die direkte Biopsie ist nicht mehr die erste Wahl',
+            'Ältere Männer mit begrenzter Lebenserwartung, bei denen die Diagnose die Behandlungsentscheidung nicht ändern würde',
+            'Männer mit nicht eingestellter Gerinnungsstörung — diese wird zuerst korrigiert'
+          ]
+        },
+        technology: [
+          'Multiparametrisches Prostata-MRT mit PI-RADS-Befundung',
+          'MRT-Ultraschall-Fusionsbiopsie (gezielte Probenentnahme)',
+          'Transperinealer Biopsieweg — zur Senkung des Infektionsrisikos',
+          'Pathologische Untersuchung und ISUP-Graduierung'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Die Diagnostik des Prostatakarzinoms und die uroonkologische Chirurgie gehören zu den Arbeitsgebieten von Doz. Dr. Müslüm Ergün. Die Entscheidung zur Biopsie wird getroffen, indem PSA-Verlauf, MRT-Befund und Allgemeinzustand gemeinsam bewertet werden.'
+        },
+        timeline: [
+          {
+            when: 'Schritt 1',
+            title: 'Bestätigung des Werts',
+            body: 'Bei Hinweisen auf einen Infekt wird dieser zuerst behandelt. Der PSA-Wert wird einige Wochen später bestimmt, in zeitlichem Abstand zu Einflüssen wie Samenerguss oder Radfahren.'
+          },
+          {
+            when: 'Schritt 2',
+            title: 'Beurteilung der Zusatzgrößen',
+            body: 'PSA-Dichte, Verhältnis von freiem zu Gesamt-PSA und Anstiegsgeschwindigkeit werden berechnet. Das Prostatavolumen wird per Ultraschall bestimmt.'
+          },
+          {
+            when: 'Schritt 3',
+            title: 'Multiparametrisches MRT',
+            body: 'Es wird nach verdächtigen Arealen gesucht und ein PI-RADS-Wert vergeben. Bei manchen Männern mit niedrigem Wert kann auf die Biopsie zugunsten einer Verlaufskontrolle verzichtet werden.'
+          },
+          {
+            when: 'Schritt 4',
+            title: 'Gezielte Biopsie',
+            body: 'Falls erforderlich, wird mit der Fusionstechnik aus dem im MRT markierten Areal eine Probe entnommen; meist kommen systematische Proben hinzu. Der Eingriff dauert 10–20 Minuten.'
+          },
+          {
+            when: 'Schritt 5',
+            title: 'Bewertung des Befundes',
+            body: 'Der pathologische Befund liegt innerhalb weniger Tage vor. Wird Krebs festgestellt, bestimmen der ISUP-Grad und das Ausmaß des Befalls die Risikogruppe; andernfalls wird ein Kontrollplan erstellt.'
+          }
+        ],
+        risks: [
+          'Blut im Urin, im Samen oder aus dem Enddarm — der häufigste Befund, der meist von selbst aufhört; Blut im Samen kann Wochen anhalten und ist harmlos',
+          'Infektion — beim transrektalen Weg höher; bei Fieber und Schüttelfrost ist unverzüglich ärztliche Hilfe erforderlich',
+          'Unvermögen, Wasser zu lassen (vorübergehender Harnverhalt) — besonders bei großer Prostata',
+          'Vorübergehendes Unbehagen während und nach dem Eingriff',
+          'FALSCH NEGATIVER BEFUND: Eine unauffällige Biopsie beweist nicht sicher, dass kein Krebs vorliegt; steigt der PSA-Wert weiter, sind Verlaufskontrolle und bei Bedarf eine erneute Abklärung nötig'
+        ],
+        alternatives: [
+          'Den PSA-Wert wiederholen und beobachten — bei Grenzwerten ein sinnvolles Vorgehen',
+          'Das Risiko mit PSA-Dichte und Quotient aus freiem und Gesamt-PSA neu berechnen',
+          'Bei unauffälligem MRT die Biopsie aufschieben und beobachten (bei ausgewählten Männern)',
+          'Den PSA-Wert nach Behandlung eines Infekts erneut bestimmen',
+          'Im höheren Alter und bei begrenzter Lebenserwartung auf die Diagnostik verzichten'
+        ],
+        comparison: {
+          title: 'Transrektale und transperineale Biopsie im Vergleich',
+          columns: ['Kriterium', 'Transrektal (über den Enddarm)', 'Transperineal (über den Damm)'],
+          rows: [
+            { label: 'Zugangsweg', values: ['Über den Enddarm', 'Über die Haut zwischen Hodensack und After'] },
+            { label: 'Infektionsrisiko', values: ['Höher (Kontakt zur Darmflora)', 'Geringer'] },
+            { label: 'Betäubung', values: ['Meist örtlich', 'Örtlich oder Sedierung'] },
+            { label: 'Erreichbarkeit des vorderen Anteils', values: ['Kann eingeschränkt sein', 'Einfacher'] },
+            { label: 'Vorbereitung', values: ['Antibiotikaprophylaxe wichtig', 'Geringerer Antibiotikabedarf'] }
+          ],
+          note:
+            'Beide Verfahren sind weit verbreitet. Die Wahl richtet sich nach der Anatomie der Prostata, der Lage des Herdes, dem Infektionsrisiko und der Ausstattung des Zentrums.'
+        },
+        recovery: [
+          {
+            period: 'Erste 24 Stunden',
+            body: 'Leichte Beschwerden und eine rosa Verfärbung des Urins sind zu erwarten. Reichlich trinken ist ratsam, auf anstrengende Tätigkeiten wird verzichtet.'
+          },
+          {
+            period: 'Tag 2–7',
+            body: 'Das Blut im Urin verschwindet meist. Bei Fieber, Schüttelfrost oder Unvermögen, Wasser zu lassen, ist unverzüglich ärztliche Hilfe erforderlich.'
+          },
+          {
+            period: 'Woche 1–6',
+            body: 'Blut im Samen kann in dieser Zeit weiter auftreten; es ist harmlos und verschwindet von selbst.'
+          },
+          {
+            period: 'Nach dem Befund',
+            body: 'Wird kein Krebs festgestellt, wird eine PSA-Kontrolle geplant. Andernfalls werden die Behandlungsmöglichkeiten entsprechend der Risikogruppe besprochen.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Der Preis hängt davon ab, ob MRT und Biopsie gemeinsam oder getrennt geplant werden. Ein verbindliches Angebot erfolgt, sobald feststeht, welche Untersuchungen erforderlich sind.'
+        },
+        packageIncludes: [
+          'Beurteilung mittels multiparametrischem Prostata-MRT',
+          'Fusionsbiopsie und Betäubung',
+          'Pathologische Untersuchung und ISUP-Graduierung',
+          'Erforderliche Antibiotika und Nachsorge',
+          'Transfers Flughafen–Krankenhaus–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und ausführliches Befundgespräch'
+        ],
+        faqs: [
+          {
+            q: 'Mein PSA-Wert ist erhöht — habe ich Krebs?',
+            a: 'Nein, dieser Befund allein bedeutet keinen Krebs. PSA ist spezifisch für die Prostata, nicht für Krebs. Auch gutartige Vergrößerung, Entzündung, Infekt, ein Blasenkatheter und ein Samenerguss in den letzten 48 Stunden erhöhen den Wert. Richtig ist, einen etwaigen Infekt zu behandeln, die Messung zu wiederholen und sie zusammen mit den Zusatzgrößen zu bewerten.'
+          },
+          {
+            q: 'Ab welchem Wert gilt der PSA als erhöht?',
+            a: 'Es gibt keinen einzelnen Grenzwert. Der Wert wird nach Alter, Prostatavolumen und zeitlichem Verlauf beurteilt. Eine große Prostata bildet naturgemäß mehr PSA, deshalb wird die PSA-Dichte berechnet. Pauschalaussagen wie "unter 4 ist sicher" können irreführend sein.'
+          },
+          {
+            q: 'Muss ich sofort biopsiert werden?',
+            a: 'Meist nicht. Zuerst sollte der Wert bestätigt und ein multiparametrisches MRT durchgeführt werden. Zeigt das MRT kein verdächtiges Areal und sprechen die übrigen Größen für ein geringes Risiko, kann die Biopsie zugunsten einer Verlaufskontrolle aufgeschoben werden.'
+          },
+          {
+            q: 'Warum wird das MRT vor der Biopsie gemacht?',
+            a: 'Weil das MRT das verdächtige Areal vorab zeigt. Die Biopsie erfolgt dadurch gezielt statt zufällig; die Wahrscheinlichkeit, einen bedeutsamen Tumor zu übersehen, sinkt, und einem Teil der Männer bleibt eine unnötige Biopsie erspart.'
+          },
+          {
+            q: 'Ist die Biopsie schmerzhaft?',
+            a: 'Der Eingriff erfolgt in örtlicher Betäubung oder Sedierung und dauert 10–20 Minuten. Ein Druckgefühl ist möglich, wird aber in der Regel gut vertragen. Danach sind für einige Tage leichte Beschwerden zu erwarten.'
+          },
+          {
+            q: 'Ist eine Blutung nach der Biopsie normal?',
+            a: 'Ja. Leichte Blutungen im Urin und aus dem Enddarm sind in den ersten Tagen zu erwarten. Blut im Samen kann Wochen anhalten; das ist zwar beunruhigend, aber harmlos. Fieber, Schüttelfrost oder Unvermögen, Wasser zu lassen, erfordern dagegen eine sofortige Abklärung.'
+          },
+          {
+            q: 'Meine Biopsie war unauffällig — kann ich beruhigt sein?',
+            a: 'Weitgehend ja, allerdings erfasst eine Biopsie nicht die gesamte Prostata. Ein unauffälliger Befund schließt Krebs daher nicht sicher aus. Steigt Ihr PSA-Wert weiter oder ist der MRT-Befund verdächtig, wird die Kontrolle fortgesetzt und bei Bedarf erneut abgeklärt.'
+          },
+          {
+            q: 'Transrektal oder transperineal — was ist vorzuziehen?',
+            a: 'Beides ist weit verbreitet. Beim transperinealen Weg ist das Infektionsrisiko geringer, weil kein Kontakt zur Darmflora besteht, und der vordere Anteil der Prostata ist leichter zu erreichen. Die Wahl erfolgt gemeinsam mit Ihnen, abhängig von der Lage des Herdes und Ihrem Risikoprofil.'
+          },
+          {
+            q: 'Wie lange dauert der Befund und wie wird er gelesen?',
+            a: 'Der pathologische Befund liegt meist innerhalb weniger Tage vor. Wird Krebs festgestellt, nennt der Bericht den ISUP-Grad (1–5) und in wie vielen Proben Tumor gefunden wurde. Zusammen mit PSA-Wert und Stadium ergibt sich daraus Ihre Risikogruppe, und die Behandlungsmöglichkeiten werden entsprechend besprochen.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Prostate Cancer — Europäische Gesellschaft für Urologie',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      fr: {
+        title: 'PSA élevé et biopsie de la prostate',
+        summary:
+          'Que signifie un PSA élevé, faut-il biopsier immédiatement et quel est le bon ordre des examens ? Un guide qui explique pourquoi ni la panique ni un geste inutile ne sont justifiés.',
+        metaTitle: 'Que signifie un PSA élevé ? Biopsie de la prostate',
+        metaDescription:
+          'Information complète sur les causes d’un PSA élevé, sur la raison pour laquelle l’IRM précède la biopsie, sur les types de biopsie, leurs risques et la lecture du résultat.',
+        quickFacts: {
+          duration: 'Biopsie 10–20 minutes',
+          anesthesia: 'Anesthésie locale ou sédation',
+          hospitalStay: 'Ambulatoire',
+          stayInTurkey: '2–3 jours (si le voyage ne concerne que le diagnostic)',
+          returnToWork: '1–2 jours',
+          flightClearance: 'Le lendemain'
+        },
+        definition: [
+          'Le PSA (antigène prostatique spécifique) est une protéine produite par le tissu prostatique et mesurable dans le sang. Le mot « spécifique » est souvent mal compris : le PSA est spécifique de la PROSTATE, non du CANCER. Un PSA élevé indique donc qu’il se passe quelque chose dans la prostate ; il n’indique pas qu’il s’agit d’un cancer.',
+          'Les causes non cancéreuses d’un PSA élevé sont fréquentes : hypertrophie bénigne de la prostate, inflammation de la prostate (prostatite), infection urinaire, pose d’une sonde, gestes récents sur la prostate et éjaculation dans les 48 dernières heures. Un long trajet à vélo peut également élever le chiffre de façon transitoire chez certains hommes.',
+          'On ne décide jamais sur une seule mesure. Si une infection est suspectée, elle est traitée d’abord et le PSA est recontrôlé quelques semaines plus tard. Au-delà de la valeur absolue, d’autres paramètres sont évalués : la densité du PSA (valeur rapportée au volume de la prostate), le rapport PSA libre sur PSA total et la vitesse d’augmentation dans le temps. Ces paramètres tiennent compte du fait qu’une grosse prostate produit naturellement plus de PSA.',
+          'L’âge compte également : une valeur considérée comme normale chez un homme jeune s’interprète différemment plus tard. Un seuil unique du type « en dessous de 4, tout va bien » n’est donc pas exact ; l’évaluation est individuelle.',
+          'L’IRM PRÉCÈDE LA BIOPSIE. Aujourd’hui, passer directement à la biopsie chez un homme au PSA élevé n’est plus recommandé. Une IRM prostatique multiparamétrique est d’abord réalisée et les lésions trouvées sont cotées sur une échelle de 1 à 5 appelée PI-RADS : un score bas traduit une suspicion faible, un score élevé une suspicion nette. Cette démarche réduit les biopsies inutiles et diminue le risque de passer à côté d’un cancer significatif.',
+          'Si la biopsie est retenue, un prélèvement ciblé est réalisé dans la zone marquée sur l’IRM (biopsie de fusion) ; il s’y ajoute généralement des prélèvements systématiques dans différentes régions de la prostate. La biopsie peut emprunter deux voies : par le rectum (transrectale) ou par le périnée, c’est-à-dire la peau située entre les bourses et l’anus (transpérinéale). La voie transpérinéale comporte un risque infectieux moindre, car il n’y a pas de contact avec la flore intestinale.'
+        ],
+        eligibility: {
+          suitable: [
+            'Hommes dont le PSA reste élevé lors d’un contrôle',
+            'Hommes présentant une lésion suspecte (PI-RADS élevé) à l’IRM multiparamétrique',
+            'Hommes présentant une induration ou une irrégularité au toucher rectal',
+            'Hommes dont la biopsie antérieure était négative mais dont le PSA continue de monter',
+            'Hommes ayant des antécédents familiaux de cancer de la prostate et un PSA supérieur à l’attendu'
+          ],
+          notSuitable: [
+            'Hommes présentant une infection urinaire active ou une prostatite — traitement d’abord, puis contrôle du PSA',
+            'Hommes n’ayant qu’une seule mesure élevée, sans contrôle',
+            'Hommes n’ayant pas eu d’IRM — la biopsie d’emblée n’est plus le premier choix',
+            'Hommes âgés dont l’espérance de vie est limitée et chez qui le diagnostic ne modifierait pas la décision thérapeutique',
+            'Hommes présentant un trouble de la coagulation non équilibré — celui-ci est corrigé au préalable'
+          ]
+        },
+        technology: [
+          'IRM prostatique multiparamétrique avec cotation PI-RADS',
+          'Système de biopsie de fusion IRM–échographie (prélèvement ciblé)',
+          'Voie transpérinéale — destinée à réduire le risque infectieux',
+          'Examen anatomopathologique et grade ISUP'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Le parcours diagnostique du cancer de la prostate et la chirurgie uro-oncologique font partie des domaines d’activité du Dr Müslüm Ergün, maître de conférences. La décision de biopsie est prise en évaluant ensemble l’évolution du PSA, les données de l’IRM et l’état général du patient.'
+        },
+        timeline: [
+          {
+            when: 'Étape 1',
+            title: 'Confirmation de la valeur',
+            body: 'En cas de signes d’infection, celle-ci est traitée en premier. Le PSA est recontrôlé quelques semaines plus tard, à distance de facteurs tels que l’éjaculation ou le vélo.'
+          },
+          {
+            when: 'Étape 2',
+            title: 'Évaluation des paramètres complémentaires',
+            body: 'La densité du PSA, le rapport PSA libre/total et la vitesse d’augmentation sont calculés. Le volume prostatique est mesuré par échographie.'
+          },
+          {
+            when: 'Étape 3',
+            title: 'IRM multiparamétrique',
+            body: 'On recherche une zone suspecte et on lui attribue un score PI-RADS. Chez certains hommes au score bas, la biopsie peut être évitée au profit d’une surveillance.'
+          },
+          {
+            when: 'Étape 4',
+            title: 'Biopsie ciblée',
+            body: 'Si nécessaire, un prélèvement est réalisé par technique de fusion dans la zone marquée sur l’IRM ; des prélèvements systématiques y sont généralement ajoutés. Le geste dure 10–20 minutes.'
+          },
+          {
+            when: 'Étape 5',
+            title: 'Interprétation du résultat',
+            body: 'Le compte rendu anatomopathologique est disponible en quelques jours. En cas de cancer, le grade ISUP et l’étendue de l’atteinte déterminent le groupe de risque ; sinon, un plan de surveillance est établi.'
+          }
+        ],
+        risks: [
+          'Saignement dans les urines, dans le sperme ou par le rectum — le plus fréquent, il cède généralement seul ; le sang dans le sperme peut durer des semaines et reste sans gravité',
+          'Infection — plus fréquente par voie transrectale ; fièvre et frissons imposent une consultation immédiate',
+          'Impossibilité d’uriner (rétention transitoire) — surtout en cas de grosse prostate',
+          'Gêne transitoire pendant et après le geste',
+          'RÉSULTAT FAUSSEMENT NÉGATIF : une biopsie négative ne prouve pas de façon certaine l’absence de cancer ; si le PSA continue de monter, une surveillance et, si besoin, une nouvelle évaluation s’imposent'
+        ],
+        alternatives: [
+          'Recontrôler et surveiller le PSA — approche raisonnable pour les valeurs limites',
+          'Recalculer le risque à l’aide de la densité du PSA et du rapport libre/total',
+          'Différer la biopsie et surveiller lorsque l’IRM ne montre pas de lésion suspecte (chez des patients sélectionnés)',
+          'Remesurer le PSA après traitement d’une infection',
+          'Renoncer au geste diagnostique chez les hommes âgés à espérance de vie limitée'
+        ],
+        comparison: {
+          title: 'Biopsie transrectale et transpérinéale : comparaison',
+          columns: ['Critère', 'Transrectale (par le rectum)', 'Transpérinéale (par le périnée)'],
+          rows: [
+            { label: 'Voie d’abord', values: ['Par le rectum', 'Par la peau entre les bourses et l’anus'] },
+            { label: 'Risque infectieux', values: ['Plus élevé (contact avec la flore intestinale)', 'Plus faible'] },
+            { label: 'Anesthésie', values: ['Le plus souvent locale', 'Locale ou sédation'] },
+            { label: 'Accès à la partie antérieure', values: ['Peut être limité', 'Plus facile'] },
+            { label: 'Préparation', values: ['Antibioprophylaxie importante', 'Moindre besoin d’antibiotiques'] }
+          ],
+          note:
+            'Les deux méthodes sont largement pratiquées. Le choix tient compte de l’anatomie de la prostate, de la localisation de la lésion, du risque infectieux et de l’équipement du centre.'
+        },
+        recovery: [
+          {
+            period: 'Premières 24 heures',
+            body: 'Une gêne légère et des urines rosées sont attendues. Il est conseillé de boire abondamment et d’éviter les efforts.'
+          },
+          {
+            period: 'Jours 2 à 7',
+            body: 'Le sang dans les urines disparaît généralement. Fièvre, frissons ou impossibilité d’uriner imposent une consultation sans attendre.'
+          },
+          {
+            period: 'Semaines 1 à 6',
+            body: 'Du sang dans le sperme peut persister durant cette période ; c’est sans gravité et cela disparaît seul.'
+          },
+          {
+            period: 'Après le résultat',
+            body: 'En l’absence de cancer, une surveillance du PSA est programmée. Dans le cas contraire, les options thérapeutiques sont discutées selon le groupe de risque.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Le prix varie selon que l’IRM et la biopsie sont programmées ensemble ou séparément. Un devis ferme est remis une fois précisés les examens nécessaires.'
+        },
+        packageIncludes: [
+          'Évaluation par IRM prostatique multiparamétrique',
+          'Biopsie de fusion et anesthésie',
+          'Examen anatomopathologique et grade ISUP',
+          'Antibiotiques nécessaires et soins après le geste',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et consultation d’explication détaillée du résultat'
+        ],
+        faqs: [
+          {
+            q: 'Mon PSA est élevé : ai-je un cancer ?',
+            a: 'Non, ce résultat seul ne signifie pas un cancer. Le PSA est spécifique de la prostate, non du cancer. L’hypertrophie bénigne, l’inflammation, l’infection, la pose d’une sonde et une éjaculation dans les 48 dernières heures élèvent aussi la valeur. La bonne démarche consiste à traiter une éventuelle infection, à recontrôler la mesure et à l’évaluer avec les paramètres complémentaires.'
+          },
+          {
+            q: 'À partir de quel chiffre le PSA est-il considéré comme élevé ?',
+            a: 'Il n’existe pas de seuil unique. La valeur s’interprète selon l’âge, le volume prostatique et l’évolution du PSA dans le temps. Une grosse prostate produit naturellement plus de PSA, d’où le calcul de la densité du PSA. Des généralisations telles que « en dessous de 4, c’est sûr » peuvent induire en erreur.'
+          },
+          {
+            q: 'Dois-je être biopsié immédiatement ?',
+            a: 'Dans la plupart des cas, non. Il convient d’abord de confirmer la valeur, puis de réaliser une IRM multiparamétrique. Si l’IRM ne montre pas de zone suspecte et que les autres paramètres indiquent un risque faible, la biopsie peut être différée au profit d’une surveillance.'
+          },
+          {
+            q: 'Pourquoi l’IRM est-elle faite avant la biopsie ?',
+            a: 'Parce que l’IRM montre la zone suspecte à l’avance. La biopsie devient ainsi ciblée et non aléatoire ; le risque de méconnaître un cancer significatif diminue et une partie des hommes peut éviter une biopsie inutile.'
+          },
+          {
+            q: 'La biopsie est-elle douloureuse ?',
+            a: 'Le geste est réalisé sous anesthésie locale ou sédation et dure 10–20 minutes. Une sensation de pression est possible, mais il est en général bien toléré. Une gêne légère de quelques jours est attendue ensuite.'
+          },
+          {
+            q: 'Un saignement après la biopsie est-il normal ?',
+            a: 'Oui. De légers saignements dans les urines et par le rectum sont attendus les premiers jours. Du sang dans le sperme peut durer des semaines ; c’est gênant mais sans gravité. En revanche, fièvre, frissons ou impossibilité d’uriner nécessitent une évaluation urgente.'
+          },
+          {
+            q: 'Ma biopsie est négative : puis-je être rassuré ?',
+            a: 'En grande partie oui, mais la biopsie n’échantillonne pas toute la prostate. Un résultat négatif n’exclut donc pas formellement un cancer. Si votre PSA continue de monter ou si l’IRM reste suspecte, la surveillance se poursuit et une nouvelle évaluation est réalisée si nécessaire.'
+          },
+          {
+            q: 'Faut-il préférer la voie transrectale ou transpérinéale ?',
+            a: 'Les deux sont largement pratiquées. La voie transpérinéale comporte un risque infectieux moindre, car il n’y a pas de contact avec la flore intestinale, et la partie antérieure de la prostate y est plus accessible. Le choix se fait avec vous, selon la localisation de la lésion et votre profil de risque.'
+          },
+          {
+            q: 'En combien de temps le résultat arrive-t-il et comment se lit-il ?',
+            a: 'Le résultat anatomopathologique est généralement prêt en quelques jours. En cas de cancer, le compte rendu précise le grade ISUP (1–5) et le nombre de prélèvements contenant de la tumeur. Associé au PSA et au stade, cela détermine votre groupe de risque, et les options thérapeutiques sont discutées en conséquence.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Prostate Cancer — Association européenne d’urologie',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      ru: {
+        title: 'Повышенный ПСА и биопсия простаты',
+        summary:
+          'Что означает повышенный ПСА, нужна ли биопсия сразу и каков правильный порядок обследования? Руководство о том, почему не нужны ни паника, ни лишние процедуры.',
+        metaTitle: 'Что означает повышенный ПСА? Биопсия простаты',
+        metaDescription:
+          'Подробная информация о причинах повышения ПСА, о том, почему МРТ выполняется до биопсии, о видах биопсии, её рисках и о том, как читать результат.',
+        quickFacts: {
+          duration: 'Биопсия 10–20 минут',
+          anesthesia: 'Местная анестезия или седация',
+          hospitalStay: 'Амбулаторно',
+          stayInTurkey: '2–3 дня (если приезд только ради диагностики)',
+          returnToWork: '1–2 дня',
+          flightClearance: 'На следующий день'
+        },
+        definition: [
+          'ПСА (простатспецифический антиген) — это белок, который вырабатывается тканью предстательной железы и определяется в крови. Слово «специфический» часто понимают неверно: ПСА специфичен для ПРОСТАТЫ, а не для РАКА. Повышенный ПСА говорит о том, что в простате что-то происходит; он не говорит о том, что это рак.',
+          'Нераковые причины повышения ПСА встречаются часто: доброкачественное увеличение простаты, воспаление простаты (простатит), инфекция мочевых путей, установка катетера, недавние вмешательства на простате и семяизвержение в последние 48 часов. У некоторых мужчин значение временно повышает и длительная езда на велосипеде.',
+          'Решение не принимается по одному измерению. Если подозревается инфекция, её сначала лечат, а ПСА повторяют через несколько недель. Помимо абсолютного значения оцениваются и другие показатели: плотность ПСА (отношение значения к объёму простаты), соотношение свободного и общего ПСА и скорость роста ПСА во времени. Эти показатели учитывают, что крупная простата естественным образом вырабатывает больше ПСА.',
+          'Возраст тоже имеет значение: значение, считающееся нормальным у молодого мужчины, в пожилом возрасте трактуется иначе. Поэтому единый порог вроде «ниже 4 — всё в порядке» неверен; оценка проводится индивидуально.',
+          'МРТ ВЫПОЛНЯЕТСЯ ДО БИОПСИИ. Сегодня при повышенном ПСА не рекомендуется сразу переходить к биопсии. Сначала выполняется мультипараметрическая МРТ простаты, а найденные очаги оцениваются по шкале от 1 до 5 под названием PI-RADS: низкий балл означает низкую степень подозрения, высокий — выраженную. Такой подход сокращает число ненужных биопсий и снижает вероятность пропустить значимый рак.',
+          'Если решение о биопсии принято, прицельный материал берут из участка, отмеченного на МРТ (фьюжн-биопсия); обычно к этому добавляют систематические пробы из разных отделов простаты. Биопсию можно выполнить двумя путями: через прямую кишку (трансректально) или через промежность, то есть кожу между мошонкой и задним проходом (трансперинеально). При трансперинеальном доступе риск инфекции ниже, поскольку нет контакта с кишечной флорой.'
+        ],
+        eligibility: {
+          suitable: [
+            'Мужчины, у которых ПСА остаётся повышенным и при повторном измерении',
+            'Мужчины с подозрительным очагом (высокий балл PI-RADS) на мультипараметрической МРТ',
+            'Мужчины с уплотнением или неровностью при пальцевом исследовании',
+            'Мужчины с ранее отрицательной биопсией, у которых ПСА продолжает расти',
+            'Мужчины с раком простаты в семейном анамнезе, у которых ПСА выше ожидаемого'
+          ],
+          notSuitable: [
+            'Мужчины с активной инфекцией мочевых путей или простатитом — сначала лечение, затем повторный ПСА',
+            'Мужчины с единственным повышенным значением ПСА без повторного измерения',
+            'Мужчины без выполненной МРТ — биопсия сразу больше не является первым выбором',
+            'Пожилые мужчины с ограниченной ожидаемой продолжительностью жизни, у которых диагноз не изменит лечебного решения',
+            'Мужчины с некомпенсированным нарушением свёртывания крови — его корректируют заранее'
+          ]
+        },
+        technology: [
+          'Мультипараметрическая МРТ простаты с оценкой по PI-RADS',
+          'Система фьюжн-биопсии МРТ–УЗИ (прицельный забор материала)',
+          'Трансперинеальный доступ — для снижения риска инфекции',
+          'Патоморфологическое исследование и градация по ISUP'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Диагностика рака простаты и уроонкологическая хирургия входят в сферу работы доц. д-ра Мюслюма Эргюна. Решение о биопсии принимается при совместной оценке динамики ПСА, данных МРТ и общего состояния пациента.'
+        },
+        timeline: [
+          {
+            when: 'Шаг 1',
+            title: 'Подтверждение значения',
+            body: 'При признаках инфекции её сначала лечат. ПСА повторяют через несколько недель, вне влияния таких факторов, как семяизвержение и езда на велосипеде.'
+          },
+          {
+            when: 'Шаг 2',
+            title: 'Оценка дополнительных показателей',
+            body: 'Рассчитываются плотность ПСА, соотношение свободного и общего ПСА и скорость роста. Объём простаты измеряется с помощью УЗИ.'
+          },
+          {
+            when: 'Шаг 3',
+            title: 'Мультипараметрическая МРТ',
+            body: 'Ищут подозрительный участок и присваивают балл PI-RADS. У части мужчин с низким баллом вместо биопсии можно выбрать наблюдение.'
+          },
+          {
+            when: 'Шаг 4',
+            title: 'Прицельная биопсия',
+            body: 'При необходимости материал берут методом фьюжн из участка, отмеченного на МРТ; обычно добавляют систематические пробы. Процедура занимает 10–20 минут.'
+          },
+          {
+            when: 'Шаг 5',
+            title: 'Оценка результата',
+            body: 'Заключение патоморфолога готово в течение нескольких дней. При выявлении рака группу риска определяют степень ISUP и объём поражения; если рака нет, составляют план наблюдения.'
+          }
+        ],
+        risks: [
+          'Кровь в моче, в сперме или из прямой кишки — самое частое явление, которое обычно проходит само; кровь в сперме может сохраняться неделями и безвредна',
+          'Инфекция — выше при трансректальном доступе; при лихорадке и ознобе нужно обратиться к врачу немедленно',
+          'Невозможность помочиться (временная задержка мочи) — особенно при крупной простате',
+          'Временный дискомфорт во время и после процедуры',
+          'ЛОЖНООТРИЦАТЕЛЬНЫЙ РЕЗУЛЬТАТ: отрицательная биопсия не доказывает окончательно отсутствие рака; если ПСА продолжает расти, требуются наблюдение и при необходимости повторная оценка'
+        ],
+        alternatives: [
+          'Повторить ПСА и наблюдать — разумный подход при пограничных значениях',
+          'Пересчитать риск с учётом плотности ПСА и соотношения свободного и общего ПСА',
+          'Отложить биопсию и наблюдать, если на МРТ нет подозрительного очага (у отобранных пациентов)',
+          'Повторно измерить ПСА после лечения инфекции',
+          'Отказаться от диагностической процедуры у пожилых мужчин с ограниченной ожидаемой продолжительностью жизни'
+        ],
+        comparison: {
+          title: 'Сравнение трансректальной и трансперинеальной биопсии',
+          columns: ['Критерий', 'Трансректальная (через прямую кишку)', 'Трансперинеальная (через промежность)'],
+          rows: [
+            { label: 'Путь доступа', values: ['Через прямую кишку', 'Через кожу между мошонкой и задним проходом'] },
+            { label: 'Риск инфекции', values: ['Выше (контакт с кишечной флорой)', 'Ниже'] },
+            { label: 'Анестезия', values: ['Чаще местная', 'Местная или седация'] },
+            { label: 'Доступ к передним отделам', values: ['Может быть ограничен', 'Проще'] },
+            { label: 'Подготовка', values: ['Важна антибиотикопрофилактика', 'Меньше потребность в антибиотиках'] }
+          ],
+          note:
+            'Оба метода широко применяются. Выбор делается с учётом анатомии простаты, расположения очага, риска инфекции и оснащения центра.'
+        },
+        recovery: [
+          {
+            period: 'Первые 24 часа',
+            body: 'Лёгкий дискомфорт и розоватая моча ожидаемы. Рекомендуется обильное питьё, тяжёлых нагрузок следует избегать.'
+          },
+          {
+            period: '2–7-й день',
+            body: 'Кровь в моче обычно проходит. При лихорадке, ознобе или невозможности помочиться нужно обратиться к врачу без промедления.'
+          },
+          {
+            period: '1–6-я неделя',
+            body: 'Кровь в сперме может сохраняться в этот период; это безвредно и проходит самостоятельно.'
+          },
+          {
+            period: 'После получения результата',
+            body: 'Если рак не выявлен, планируется наблюдение за ПСА. Если выявлен, варианты лечения обсуждаются в соответствии с группой риска.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Стоимость зависит от того, планируются ли МРТ и биопсия вместе или раздельно. Точное предложение даётся после того, как станет ясно, какие исследования необходимы.'
+        },
+        packageIncludes: [
+          'Оценка по данным мультипараметрической МРТ простаты',
+          'Фьюжн-биопсия и анестезия',
+          'Патоморфологическое исследование и градация по ISUP',
+          'Необходимые антибиотики и уход после процедуры',
+          'Трансферы аэропорт–больница–отель',
+          'Проживание (пациент + 1 сопровождающий)',
+          'Медицинский переводчик и подробная беседа с разбором результата'
+        ],
+        faqs: [
+          {
+            q: 'У меня повышен ПСА — это рак?',
+            a: 'Нет, сам по себе этот результат не означает рак. ПСА специфичен для простаты, а не для рака. Значение повышают также доброкачественное увеличение, воспаление, инфекция, установка катетера и семяизвержение в последние 48 часов. Правильный подход — пролечить инфекцию, если она есть, повторить измерение и оценить его вместе с дополнительными показателями.'
+          },
+          {
+            q: 'Выше какого значения ПСА считается повышенным?',
+            a: 'Единого порога нет. Значение трактуют с учётом возраста, объёма простаты и динамики ПСА во времени. Крупная простата естественным образом вырабатывает больше ПСА, поэтому рассчитывают плотность ПСА. Обобщения вроде «ниже 4 — безопасно» могут вводить в заблуждение.'
+          },
+          {
+            q: 'Нужно ли делать биопсию немедленно?',
+            a: 'В большинстве случаев нет. Сначала рекомендуется подтвердить значение, а затем выполнить мультипараметрическую МРТ. Если МРТ не показывает подозрительного участка, а остальные показатели указывают на низкий риск, биопсию можно отложить в пользу наблюдения.'
+          },
+          {
+            q: 'Почему МРТ делают до биопсии?',
+            a: 'Потому что МРТ заранее показывает подозрительный участок. Благодаря этому биопсия становится прицельной, а не случайной; вероятность пропустить значимый рак снижается, а части мужчин удаётся избежать ненужной биопсии.'
+          },
+          {
+            q: 'Биопсия болезненна?',
+            a: 'Процедура выполняется под местной анестезией или седацией и занимает 10–20 минут. Возможно чувство давления, но обычно она переносится хорошо. После процедуры несколько дней можно ожидать лёгкого дискомфорта.'
+          },
+          {
+            q: 'Кровотечение после биопсии — это нормально?',
+            a: 'Да. Небольшая кровь в моче и из прямой кишки ожидаема в первые дни. Кровь в сперме может сохраняться неделями; это неприятно, но безвредно. А вот лихорадка, озноб или невозможность помочиться требуют срочной оценки.'
+          },
+          {
+            q: 'Биопсия отрицательная — можно успокоиться?',
+            a: 'В значительной степени да, однако биопсия не охватывает всю простату. Поэтому отрицательный результат не исключает рак окончательно. Если ПСА продолжает расти или данные МРТ подозрительны, наблюдение продолжается и при необходимости проводится повторная оценка.'
+          },
+          {
+            q: 'Что предпочесть — трансректальный или трансперинеальный доступ?',
+            a: 'Оба применяются широко. При трансперинеальном доступе риск инфекции ниже, поскольку нет контакта с кишечной флорой, и передние отделы простаты доступнее. Выбор делается вместе с вами, с учётом расположения очага и вашего профиля риска.'
+          },
+          {
+            q: 'Через сколько готов результат и как его читать?',
+            a: 'Заключение патоморфолога обычно готово в течение нескольких дней. При выявлении рака в нём указывают степень ISUP (1–5) и в скольких пробах найдена опухоль. Вместе с ПСА и стадией это определяет вашу группу риска, и варианты лечения обсуждаются соответственно.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Prostate Cancer — Европейская ассоциация урологии',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      },
+      ar: {
+        title: 'ارتفاع مستضد البروستاتا النوعي (PSA) وخزعة البروستاتا',
+        summary:
+          'ماذا يعني ارتفاع الـ PSA، وهل تلزم الخزعة فورًا، وما الترتيب الصحيح للخطوات؟ دليل يوضّح أنه لا داعي للذعر ولا لإجراء غير ضروري.',
+        metaTitle: 'ماذا يعني ارتفاع الـ PSA؟ خزعة البروستاتا',
+        metaDescription:
+          'معلومات شاملة عن أسباب ارتفاع الـ PSA، ولماذا يُجرى التصوير بالرنين المغناطيسي قبل الخزعة، وأنواع الخزعة ومخاطرها وكيفية قراءة النتيجة.',
+        quickFacts: {
+          duration: 'الخزعة 10–20 دقيقة',
+          anesthesia: 'تخدير موضعي أو تركين',
+          hospitalStay: 'في اليوم نفسه',
+          stayInTurkey: '2–3 أيام (إذا كان القدوم للتشخيص فقط)',
+          returnToWork: '1–2 يوم',
+          flightClearance: 'في اليوم التالي'
+        },
+        definition: [
+          'الـ PSA (مستضد البروستاتا النوعي) بروتين تنتجه أنسجة البروستاتا ويمكن قياسه في الدم. كلمة "نوعي" في اسمه كثيرًا ما يُساء فهمها: فهو نوعي للبروستاتا، لا للسرطان. أي أن ارتفاع القيمة يدل على وجود شيء ما في البروستاتا؛ ولا يدل على أنه سرطان.',
+          'الأسباب غير السرطانية لارتفاع الـ PSA شائعة: تضخم البروستاتا الحميد، والتهاب البروستاتا، والتهاب المسالك البولية، ووضع القسطرة البولية، والإجراءات الحديثة على البروستاتا، والقذف خلال الساعات الثماني والأربعين الماضية. كما قد ترفع القيمة مؤقتًا عند بعض الرجال ركوبُ الدراجة لمسافات طويلة.',
+          'لا يُتخذ القرار بناءً على قياس واحد. فإذا اشتُبه في وجود التهاب يُعالَج أولًا ثم يُعاد قياس الـ PSA بعد بضعة أسابيع. وإلى جانب القيمة المطلقة تُقيَّم مؤشرات أخرى: كثافة الـ PSA (نسبة القيمة إلى حجم البروستاتا)، ونسبة الـ PSA الحر إلى الكلي، وسرعة ارتفاعه مع الوقت. وتراعي هذه المؤشرات أن البروستاتا الكبيرة تنتج بطبيعتها كمية أكبر من الـ PSA.',
+          'للعمر أهمية أيضًا: فالقيمة التي تُعدّ طبيعية عند رجل شاب تُفسَّر على نحو مختلف في سن متقدمة. لذلك فإن اعتماد عتبة واحدة من نوع "أقل من 4 يعني أن كل شيء على ما يرام" غير صحيح؛ والتقييم يكون فرديًا.',
+          'الرنين المغناطيسي يسبق الخزعة. لم يعد يُنصح اليوم بالانتقال مباشرة إلى الخزعة عند ارتفاع الـ PSA. يُجرى أولًا تصوير البروستاتا بالرنين المغناطيسي متعدد المعاملات، وتُصنَّف الآفات المكتشفة على مقياس من 1 إلى 5 يُسمى PI-RADS: الدرجة المنخفضة تعني شبهة ضعيفة، والمرتفعة تعني شبهة واضحة. وهذا النهج يقلل الخزعات غير الضرورية ويخفض في الوقت نفسه احتمال تفويت سرطان مهم.',
+          'إذا اتُّخذ قرار الخزعة تُؤخذ عينة موجَّهة من المنطقة المحددة على الرنين (الخزعة الاندماجية)، ويرافقها عادةً أخذ عينات منهجية من مناطق مختلفة في البروستاتا. ويمكن إجراء الخزعة بطريقين: عبر المستقيم، أو عبر العجان أي الجلد الواقع بين كيس الصفن والشرج. وخطر العدوى أقل في الطريق العجاني لعدم وجود تماس مع الجراثيم المعوية.'
+        ],
+        eligibility: {
+          suitable: [
+            'الرجال الذين يبقى الـ PSA لديهم مرتفعًا في القياس المُعاد',
+            'الرجال الذين تُكتشف لديهم آفة مشبوهة (درجة PI-RADS مرتفعة) في الرنين متعدد المعاملات',
+            'الرجال الذين يُلاحظ لديهم تصلّب أو عدم انتظام في الفحص بالإصبع',
+            'الرجال الذين كانت خزعتهم السابقة سلبية ويستمر الـ PSA لديهم في الارتفاع',
+            'الرجال الذين لديهم تاريخ عائلي لسرطان البروستاتا وقيمة PSA أعلى من المتوقع'
+          ],
+          notSuitable: [
+            'المصابون بالتهاب نشط في المسالك البولية أو بالتهاب البروستاتا — العلاج أولًا ثم إعادة قياس الـ PSA',
+            'من لديهم قياس مرتفع واحد فقط من دون إعادة القياس',
+            'من لم يُجرِ تصويرًا بالرنين المغناطيسي — الخزعة المباشرة لم تعد الخيار الأول',
+            'كبار السن ذوو العمر المتوقع المحدود ممن لن يغيّر التشخيص لديهم قرار العلاج',
+            'المصابون باضطراب تخثّر غير مضبوط — تُصحَّح الحالة أولًا'
+          ]
+        },
+        technology: [
+          'تصوير البروستاتا بالرنين المغناطيسي متعدد المعاملات مع تقييم PI-RADS',
+          'نظام الخزعة الاندماجية بين الرنين والموجات فوق الصوتية (أخذ عينات موجَّه)',
+          'الطريق العجاني للخزعة — بهدف تقليل خطر العدوى',
+          'الفحص النسيجي المرضي والتدريج وفق ISUP'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'تشخيص سرطان البروستاتا وجراحة الأورام البولية من مجالات عمل الأستاذ المشارك الدكتور مسلم إرغون. ويُتخذ قرار الخزعة بتقييم مسار الـ PSA ونتائج الرنين والحالة العامة للمريض معًا.'
+        },
+        timeline: [
+          {
+            when: 'الخطوة 1',
+            title: 'التحقق من القيمة',
+            body: 'إذا وُجدت علامات التهاب يُعالَج أولًا. ويُعاد قياس الـ PSA بعد بضعة أسابيع، بعيدًا عن عوامل مثل القذف وركوب الدراجة.'
+          },
+          {
+            when: 'الخطوة 2',
+            title: 'تقييم المؤشرات الإضافية',
+            body: 'تُحسب كثافة الـ PSA ونسبة الحر إلى الكلي وسرعة الارتفاع. ويُقاس حجم البروستاتا بالموجات فوق الصوتية.'
+          },
+          {
+            when: 'الخطوة 3',
+            title: 'الرنين المغناطيسي متعدد المعاملات',
+            body: 'يُبحث عن منطقة مشبوهة وتُعطى درجة PI-RADS. وعند بعض المرضى ذوي الدرجة المنخفضة قد يُستغنى عن الخزعة لصالح المتابعة.'
+          },
+          {
+            when: 'الخطوة 4',
+            title: 'الخزعة الموجَّهة',
+            body: 'عند اللزوم تُؤخذ عينة بتقنية الدمج من المنطقة المحددة على الرنين، وتُضاف إليها عادةً عينات منهجية. ويستغرق الإجراء 10–20 دقيقة.'
+          },
+          {
+            when: 'الخطوة 5',
+            title: 'تقييم النتيجة',
+            body: 'يصدر تقرير علم الأمراض خلال أيام قليلة. فإذا كُشف سرطان حدّدت درجة ISUP ومدى الإصابة مجموعةَ الخطورة؛ وإن لم يُكشف وُضعت خطة متابعة.'
+          }
+        ],
+        risks: [
+          'نزف في البول أو في السائل المنوي أو من المستقيم — وهو الأكثر شيوعًا ويزول عادةً من تلقاء نفسه؛ وقد يستمر الدم في السائل المنوي أسابيع وهو غير ضار',
+          'العدوى — أعلى في الطريق عبر المستقيم؛ وعند الحمى والقشعريرة تجب مراجعة الطبيب فورًا',
+          'العجز عن التبول (احتباس مؤقت) — خصوصًا عند كبر حجم البروستاتا',
+          'انزعاج مؤقت أثناء الإجراء وبعده',
+          'النتيجة السلبية الكاذبة: سلامة الخزعة لا تثبت قطعًا عدم وجود سرطان؛ وإذا استمر الـ PSA في الارتفاع لزمت المتابعة وإعادة التقييم عند الحاجة'
+        ],
+        alternatives: [
+          'إعادة قياس الـ PSA ومتابعته — نهج معقول في القيم الحدّية',
+          'إعادة حساب الخطورة بكثافة الـ PSA ونسبة الحر إلى الكلي',
+          'تأجيل الخزعة والاكتفاء بالمتابعة عند غياب آفة مشبوهة في الرنين (لدى مرضى مختارين)',
+          'إعادة قياس الـ PSA بعد علاج العدوى',
+          'تجنّب الإجراء التشخيصي عند كبار السن ذوي العمر المتوقع المحدود'
+        ],
+        comparison: {
+          title: 'مقارنة بين الخزعة عبر المستقيم والخزعة عبر العجان',
+          columns: ['المعيار', 'عبر المستقيم', 'عبر العجان'],
+          rows: [
+            { label: 'طريق الدخول', values: ['عبر المستقيم', 'عبر الجلد بين كيس الصفن والشرج'] },
+            { label: 'خطر العدوى', values: ['أعلى (تماس مع الجراثيم المعوية)', 'أقل'] },
+            { label: 'التخدير', values: ['موضعي غالبًا', 'موضعي أو تركين'] },
+            { label: 'الوصول إلى الجزء الأمامي', values: ['قد يكون محدودًا', 'أسهل'] },
+            { label: 'التحضير', values: ['الوقاية بالمضادات الحيوية مهمة', 'الحاجة إلى المضادات أقل'] }
+          ],
+          note:
+            'كلتا الطريقتين مطبّقتان على نطاق واسع. ويُتخذ الاختيار بتقييم تشريح البروستاتا وموضع الآفة وخطر العدوى وتجهيزات المركز معًا.'
+        },
+        recovery: [
+          {
+            period: 'أول 24 ساعة',
+            body: 'الانزعاج الخفيف واللون الوردي في البول من الأمور المتوقعة. ويُنصح بشرب السوائل بكثرة وتجنّب النشاط الشاق.'
+          },
+          {
+            period: 'اليوم 2–7',
+            body: 'يزول الدم في البول عادةً. وعند الحمى أو القشعريرة أو العجز عن التبول تجب المراجعة من دون تأخير.'
+          },
+          {
+            period: 'الأسبوع 1–6',
+            body: 'قد يستمر ظهور الدم في السائل المنوي خلال هذه الفترة؛ وهو غير ضار ويزول تلقائيًا.'
+          },
+          {
+            period: 'بعد ظهور النتيجة',
+            body: 'إذا لم يُكشف سرطان تُخطَّط متابعة الـ PSA. وإذا كُشف تُناقَش خيارات العلاج بحسب مجموعة الخطورة.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'يتغير السعر بحسب ما إذا كان الرنين والخزعة مخططين معًا أم منفصلين. ويُقدَّم العرض النهائي بعد أن يتضح أي الفحوص مطلوبة.'
+        },
+        packageIncludes: [
+          'التقييم بتصوير البروستاتا بالرنين المغناطيسي متعدد المعاملات',
+          'إجراء الخزعة الاندماجية والتخدير',
+          'الفحص النسيجي المرضي والتدريج وفق ISUP',
+          'المضادات الحيوية اللازمة والعناية بعد الإجراء',
+          'التنقلات بين المطار والمستشفى والفندق',
+          'الإقامة (المريض + مرافق واحد)',
+          'مترجم طبي ولقاء يُشرح فيه نتيجة الفحص بالتفصيل'
+        ],
+        faqs: [
+          {
+            q: 'ارتفع الـ PSA لديّ، فهل أنا مصاب بالسرطان؟',
+            a: 'لا، هذه النتيجة وحدها لا تعني السرطان. فالـ PSA نوعي للبروستاتا لا للسرطان. كما يرفع القيمة التضخم الحميد والالتهاب والعدوى ووضع القسطرة والقذف خلال الساعات الثماني والأربعين الماضية. والنهج الصحيح هو علاج العدوى إن وُجدت وإعادة القياس وتقييمه مع المؤشرات الإضافية.'
+          },
+          {
+            q: 'فوق أي قيمة يُعدّ الـ PSA مرتفعًا؟',
+            a: 'لا توجد عتبة واحدة. فالقيمة تُفسَّر بحسب العمر وحجم البروستاتا ومسار الـ PSA مع الوقت. والبروستاتا الكبيرة تنتج بطبيعتها كمية أكبر من الـ PSA، ولذلك تُحسب كثافة الـ PSA. والتعميمات من نوع "أقل من 4 آمن" قد تكون مضلِّلة.'
+          },
+          {
+            q: 'هل يجب أن أُجري الخزعة فورًا؟',
+            a: 'في معظم الحالات لا. يُنصح أولًا بالتحقق من القيمة ثم إجراء الرنين المغناطيسي متعدد المعاملات. فإذا لم يُظهر الرنين منطقة مشبوهة وأشارت المؤشرات الأخرى إلى خطورة منخفضة، أمكن تأجيل الخزعة واختيار المتابعة.'
+          },
+          {
+            q: 'لماذا يُجرى الرنين قبل الخزعة؟',
+            a: 'لأن الرنين يُظهر المنطقة المشبوهة مسبقًا. وبذلك تصبح الخزعة موجَّهة لا عشوائية؛ فيقل احتمال تفويت سرطان مهم، ويمكن لجزء من المرضى تجنّب خزعة غير ضرورية.'
+          },
+          {
+            q: 'هل الخزعة مؤلمة؟',
+            a: 'يُجرى الإجراء تحت تخدير موضعي أو تركين ويستغرق 10–20 دقيقة. وقد يُشعر بضغط لكنه يُحتمل جيدًا عادةً. ويمكن توقع انزعاج خفيف لبضعة أيام بعده.'
+          },
+          {
+            q: 'هل النزف بعد الخزعة طبيعي؟',
+            a: 'نعم. النزف الخفيف في البول ومن المستقيم متوقع في الأيام الأولى. أما الدم في السائل المنوي فقد يستمر أسابيع؛ وهو مزعج لكنه غير ضار. في المقابل تستدعي الحمى أو القشعريرة أو العجز عن التبول تقييمًا عاجلًا.'
+          },
+          {
+            q: 'جاءت خزعتي سليمة، فهل أطمئن؟',
+            a: 'إلى حد كبير نعم، غير أن الخزعة لا تأخذ عينات من البروستاتا كلها. ولذلك فإن النتيجة السليمة لا تنفي السرطان نفيًا قاطعًا. وإذا استمر الـ PSA لديك في الارتفاع أو كانت نتيجة الرنين مشبوهة تستمر المتابعة ويُعاد التقييم عند الحاجة.'
+          },
+          {
+            q: 'أيّهما يُفضَّل: عبر المستقيم أم عبر العجان؟',
+            a: 'كلاهما مطبَّق على نطاق واسع. وخطر العدوى أقل في الطريق العجاني لعدم وجود تماس مع الجراثيم المعوية، كما أن الوصول إلى الجزء الأمامي من البروستاتا أسهل. ويُتخذ الاختيار معك، بحسب موضع الآفة وحالتك من حيث الخطورة.'
+          },
+          {
+            q: 'كم تستغرق النتيجة وكيف تُقرأ؟',
+            a: 'تكون نتيجة علم الأمراض جاهزة عادةً خلال أيام قليلة. فإذا كُشف سرطان ذكر التقرير درجة ISUP (1–5) وعدد العينات التي وُجد فيها ورم. وبدمج ذلك مع قيمة الـ PSA والمرحلة تُحدَّد مجموعة الخطورة لديك، وتُناقَش خيارات العلاج وفقًا لها.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Prostate Cancer — الجمعية الأوروبية للمسالك البولية',
+            url: 'https://uroweb.org/guidelines/prostate-cancer'
+          }
+        ]
+      }
+    }
+  },
+  {
+    /**
      * Prostat kanseri HUB sayfası (prompt m.4.1). Tanıdan tedavi kararına
      * giden süreci anlatır; alt sayfalara yönlendirir.
      * Cerrahi ile radyoterapi arasında ÜSTÜNLÜK İDDİA EDİLMEZ.
@@ -1167,8 +2281,7 @@ export const treatments: Treatment[] = [
      * KARAR SAYFASI: ayrı ameliyat değil, radikal prostatektomi içindeki teknik.
      * Onkolojik güvenliğin cinsel işlevin önünde geldiği açıkça yazılıdır;
      * garanti verilmez. Kaynak: EAU Prostate Cancer kılavuzu.
-     * NOT: prompt m.4.1 bu sayfayı prostat-kanseri hub\u2019ının altına koyar;
-     * hub yazıldığında parent güncellenecek.
+     * prompt m.4.1 uyarınca prostat-kanseri hub'ının altındadır.
      */
     slug: 'sinir-koruyucu-cerrahi',
     parent: 'prostat-kanseri',
