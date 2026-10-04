@@ -24112,53 +24112,136 @@ export const treatments: Treatment[] = [
       },
       en: {
         title: 'Andrology (Penile Implant, Varicocele, Erectile Dysfunction)',
-        summary: 'Male sexual health and reproductive surgery: penile implant, varicocele, erectile dysfunction and aesthetic procedures.',
-        metaTitle: 'Andrology | Penile Implant, Varicocele, ED Surgery',
-        metaDescription: 'Andrology surgery: penile implant, penile lengthening and girth enhancement, varicocele and erectile dysfunction treatment; process, risks and price range.',
+        summary:
+          'Male sexual and reproductive health. Most complaints in this field are delayed because they go unspoken — yet some are the first sign of another illness, and for others time is limited.',
+        metaTitle: 'Andrology: Which Complaint Leads to Which Assessment',
+        metaDescription:
+          'Erectile dysfunction, varicocele, male infertility, Peyronie\'s disease and penile implants: what each complaint requires, the stepwise logic of treatment, and privacy.',
+        quickFacts: {
+          duration: 'Initial assessment 30–45 minutes',
+          anesthesia: 'Not required for assessment',
+          hospitalStay: 'Depends on diagnosis and procedure',
+          stayInTurkey: '3–7 days depending on the planned procedure',
+          returnToWork: 'Depends on the procedure',
+          flightClearance: 'Determined by the procedure'
+        },
         definition: [
-          'Andrology is the urological subspecialty dealing with male sexual and reproductive health. It offers surgical options for medication-resistant erectile dysfunction, varicocele-related infertility or sexual function problems.',
-          'Procedures include the inflatable penile implant, microsurgical varicocelectomy, penile lengthening/girth enhancement and selected erectile dysfunction surgeries. The right procedure is determined after a detailed assessment.'
+          'Andrology is the urological subspecialty concerned with male sexual and reproductive health. Erection problems, difficulty fathering children, problems with semen and ejaculation, curvature of the penis and conditions of the testicles all fall within it.',
+          'THE CENTRAL PROBLEM IN THIS FIELD IS DELAY. Many men say nothing about these complaints for years. Delay has a cost: an erection problem can be the first sign of cardiovascular disease or diabetes, and where fertility is concerned, time is a variable that does not wait.',
+          'THE SINGLE MOST IMPORTANT POINT: AN ERECTION PROBLEM IS NOT ONLY A SEXUAL PROBLEM. Erections depend on small blood vessels working properly. Those vessels are narrower than the ones supplying the heart, which is why narrowing can show itself here first. A newly developed and progressively worsening erection problem should prompt assessment for cardiovascular disease and diabetes. Writing a prescription is not a substitute for that assessment.',
+          'THE SECOND POINT: SUDDEN AND PAINFUL CONDITIONS ARE EMERGENCIES. Sudden severe testicular pain, particularly in a younger man, may be testicular torsion and requires intervention within hours. An erection lasting more than four hours that will not subside and is painful (priapism) is also an emergency; waiting can cause permanent damage. Neither is a situation to be managed by booking an appointment.',
+          'Treatment here is almost always STEPWISE: first establish the cause and address what can be corrected, then medication, then more invasive options. An approach that skips these steps leads to irreversible decisions being taken too early.'
+        ],
+        eligibility: {
+          suitable: [
+            'Men with erection problems who want the cause investigated',
+            'Assessment of the male partner where a couple has not conceived after a year of unprotected intercourse',
+            'Men with an abnormal semen analysis',
+            'Men who notice curvature, a firm area or pain in the penis (Peyronie\'s disease)',
+            'Men with problems of ejaculation',
+            'Men who notice swelling, a firm lump or pain in a testicle — this should be assessed without delay',
+            'Men who have not benefited from medical treatment and wish to discuss an implant'
+          ],
+          notSuitable: [
+            'Men requesting surgery before any first-line assessment: the cause is investigated first',
+            'Men whose expectations are not realistic — assessed in detail, particularly for requests to enlarge the penis',
+            'Men whose diabetes is poorly controlled: implant surgery is postponed until control improves',
+            'Men with active infection: implant surgery is not performed'
+          ]
+        },
+        technology: [
+          'Hormone profile (testosterone and related hormones) and metabolic assessment',
+          'Penile colour Doppler ultrasound — to investigate a vascular cause',
+          'Semen analysis and, where indicated, repeat testing',
+          'Scrotal Doppler ultrasound — for varicocele and testicular assessment',
+          'Operating microscope — for microsurgical varicocelectomy and micro-TESE',
+          'Inflatable and malleable penile implant systems',
+          'Objective assessment of curvature in Peyronie\'s disease'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
+          note: 'Andrology is among Assoc. Prof. Müslüm Ergün\'s areas of practice. The approach is stepwise: first investigate the cause, then reversible treatments, and only last the interventions that cannot be undone.'
         },
         timeline: [
-          { when: 'Remote', title: 'Confidential pre-consultation', body: 'Your hormonal and vascular assessment results are reviewed with confidentiality.' },
-          { when: 'Day 1', title: 'Arrival & exam', body: 'Examination, required tests and procedure planning.' },
-          { when: 'Day 2', title: 'Surgery', body: 'The chosen procedure; most cases with a 1-night stay.' },
-          { when: 'Day 3–5', title: 'Review', body: 'Dressing, information and clearance to return; usage training for implants.' }
+          { when: 'Remotely', title: 'Confidential first contact', body: 'Your complaint, your medication, your other conditions and any previous investigations are reviewed. You are told plainly who you are speaking to and where your records are kept.' },
+          { when: 'Day 1', title: 'Assessment', body: 'Examination, hormonal and metabolic tests, and where indicated Doppler ultrasound or semen analysis. The purpose here is to find the cause, not to proceed straight to a procedure.' },
+          { when: 'Decision stage', title: 'Discussing the options', body: 'Which step you are at, which options are reversible and which are not, realistic expectations and risks. This conversation is not rushed.' },
+          { when: 'Day of procedure', title: 'The planned intervention', body: 'Varicocelectomy, micro-TESE, Peyronie\'s repair or a penile implant as planned. One night in hospital is sufficient for most.' },
+          { when: 'Before you fly', title: 'Review and training', body: 'Wound check, review and, where relevant, device training. If an implant has been placed, you are taught to operate it in person here — not left to learn it later by video call.' }
         ],
         risks: [
-          'Infection (especially in implant surgery)',
-          'Swelling, bruising and temporary sensory change',
-          'Possibility of a mechanical implant issue (long term)',
-          'The need to keep expectations realistic'
+          'INFECTION: the most serious complication in penile implant surgery, because an infected device may have to be removed. Good diabetic control is decisive in reducing this risk',
+          'Swelling, bruising and temporary altered sensation',
+          'Mechanical failure of an implant over the long term, requiring revision',
+          'The penis feeling shorter after implant surgery than before — the most commonly reported source of dissatisfaction',
+          'Fluid collection in the scrotum (hydrocele) and recurrence after varicocelectomy',
+          'Incomplete correction of curvature or shortening after Peyronie\'s surgery',
+          'IRREVERSIBILITY: natural erections do not return after an implant is placed. This decision should not be rushed',
+          'Unrealistic expectations: in this field the commonest cause of dissatisfaction is not a technical problem but an expectation that was never discussed'
         ],
         alternatives: [
-          'Oral medication (PDE5 inhibitors)',
-          'Penile injection or vacuum device',
-          'Shockwave therapy (in selected cases)',
-          'Lifestyle and hormonal adjustment'
+          'Correcting lifestyle and risk factors — stopping smoking, losing weight, controlling blood sugar and blood pressure. It sounds dull, but it is fundamental where the cause is vascular',
+          'Reviewing current medication — some blood pressure and psychiatric drugs affect sexual function; do not stop them on your own, discuss them with your doctor',
+          'Treating hormone deficiency where present — but note that testosterone treatment can suppress sperm production, so it needs separate consideration in men who want children',
+          'Oral medication (PDE5 inhibitors) — the first-line drug treatment',
+          'Penile injection therapy or a vacuum device — when oral medication is insufficient',
+          'Varicocelectomy — can improve semen parameters in appropriately selected men',
+          'Micro-TESE — retrieval of sperm from the testicle in men with none in the ejaculate',
+          'Penile implant — when the other options have not helped; permanent and irreversible'
+        ],
+        comparison: {
+          title: 'The steps in erectile dysfunction: where each one stops',
+          columns: ['Step', 'What it does', 'Reversible?', 'When it applies'],
+          rows: [
+            { label: 'Correcting risk factors', values: ['Addresses the underlying vascular cause', 'Yes', 'The first step for everyone'] },
+            { label: 'Oral medication', values: ['Supports the existing mechanism', 'Yes', 'The first drug step for most men'] },
+            { label: 'Injection / vacuum', values: ['Produces an erection externally', 'Yes', 'When medication is not enough'] },
+            { label: 'Penile implant', values: ['Produces rigidity with a device', 'NO — natural erections do not return', 'When the others have not helped'] }
+          ],
+          note: 'It matters that these steps are not skipped. An implant is a good solution, but it is the last step; recommending it before the earlier ones have been tried means an irreversible decision taken too early. If an implant is proposed to you, notice whether anyone first asked what you have already tried.'
+        },
+        recovery: [
+          { period: 'After the assessment', body: 'The results are reviewed with you. If cardiovascular risk is identified alongside an erection problem, you are referred for that to be followed up — it may matter more than the complaint you came with.' },
+          { period: 'During medical treatment', body: 'Using the medication correctly matters; some apparent failures are failures of use. Assessment follows after several attempts, not one.' },
+          { period: 'First week after surgery', body: 'Swelling and bruising are expected. Strenuous activity is avoided. Report fever, increasing pain or discharge without delay.' },
+          { period: 'Healing period after an implant', body: 'The device is not used immediately; healing must be complete and your surgeon decides when. Early use can cause damage.' },
+          { period: 'Three months after varicocelectomy', body: 'Sperm production follows a cycle of roughly three months, so a repeat semen analysis is only meaningful from that point onwards.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Varies by implant brand and procedure.'
+          disclaimer: 'The figure depends on the planned procedure and, where an implant is used, on the device model. An itemised written quote follows the assessment.'
         },
         packageIncludes: [
-          'Surgery and hospital stay',
-          'Anesthesia and tests',
-          '(If applicable) implant device',
-          'Transfers and accommodation',
+          'Confidential initial consultation',
+          'Examination, hormonal and metabolic tests',
+          'Doppler ultrasound and semen analysis where indicated',
+          'Anaesthesia and theatre',
+          'The planned procedure',
+          'The implant device where one is used',
+          'Hospital stay',
+          'In-person device training where an implant is placed',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
           'Medical interpreter and confidential coordination',
-          'Follow-up and online monitoring'
+          'Remote follow-up after you return home'
         ],
         faqs: [
-          { q: 'Is the process kept confidential?', a: 'Yes; all consultations and coordination are conducted with the principle of confidentiality.' },
-          { q: 'What is sexual function like after a penile implant?', a: 'The implant offers a permanent solution for erection problems that do not respond to medication; usage training is provided.' },
-          { q: 'Does varicocele surgery correct infertility?', a: 'Microsurgical varicocelectomy can improve sperm parameters in selected patients.' }
+          { q: 'I have an erection problem — can I just be given a prescription?', a: 'This is the commonest mistake. A newly developed and progressively worsening erection problem can be the first sign of cardiovascular disease or diabetes, because the vessels in the penis are narrower than those supplying the heart and can show narrowing first. Assessment should therefore come before a prescription. That assessment is not there to delay you; it is there so that something more important is not missed.' },
+          { q: 'When should I seek help immediately?', a: 'Sudden severe testicular pain, particularly in a younger man, may be testicular torsion and requires intervention within hours. An erection lasting more than four hours that will not subside and is painful is also an emergency, and waiting can cause permanent damage. A painless firm lump in a testicle should also be assessed without delay.' },
+          { q: 'Will this be kept confidential?', a: 'Yes, and that is your right rather than a favour. You may ask who has access to your file, where records are kept, what name accommodation is booked under and what appears on the invoice. If you are asked for photographs or a testimonial you may refuse, and that will not affect your treatment.' },
+          { q: 'We cannot conceive — who should be assessed first?', a: 'Both partners. This is a couple\'s issue, and stopping the investigation as soon as something is found in the man is a common error. Ovulation, tubal status and female age bear directly on the outcome, and the expected benefit of treating the man cannot be judged properly without that information.' },
+          { q: 'My semen analysis was abnormal — is that definite?', a: 'One test is not enough. Semen results are affected by febrile illness, significant stress, some medications and the conditions in which the sample was produced. The test is usually repeated after an interval. Do not make decisions on a single abnormal result.' },
+          { q: 'Will varicocele surgery definitely let me father a child?', a: 'No. In appropriately selected men it can improve semen parameters, but not every man improves, and not every couple in whom it improves goes on to conceive. Be cautious of anyone who promises a definite outcome.' },
+          { q: 'Is a penile implant a last resort?', a: 'Yes, and it should be treated as one. It should not be proposed before reversible options — tablets, injections, a vacuum device — have been tried. Natural erections do not return after an implant. An approach that proposes an implant without first asking what you have tried is not assessing you.' },
+          { q: 'What should I expect from penile enlargement procedures?', a: 'Here, managing expectations matters more than the technique. The claims you find online are frequently unrealistic. In some men the issue is not the measurement but the perception of it, and in that case surgery does not produce satisfaction. This is discussed openly at assessment.' },
+          { q: 'Should I start testosterone?', a: 'Testosterone should not be given without a demonstrated deficiency. There is also an important point: testosterone treatment can suppress sperm production. If you plan to father children, this needs separate consideration — otherwise you may worsen a different problem while treating one.' },
+          { q: 'Will my partner or family learn the details?', a: 'No. Your medical information is not shared with anyone, including those closest to you, without your consent. You decide who is informed. If you travel with a companion, you also decide which parts of the consultation they attend. Saying so at the start is easier than explaining it at an awkward moment.' },
+          { q: 'What should I send beforehand?', a: 'Any semen analyses, hormone results, blood sugar and cholesterol values, a complete list of your medication, your other medical conditions and records of any previous procedures. With these, which step you are at can be assessed before you travel.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
         ]
       },
       ar: {
@@ -24506,54 +24589,137 @@ export const treatments: Treatment[] = [
         ]
       },
       en: {
-        title: 'Uro-Oncology (Bladder, Kidney, Testicular Tumor Surgery)',
-        summary: 'Minimally invasive and organ-preserving surgery for cancers of the urinary system and male reproductive organs.',
-        metaTitle: 'Uro-Oncology | Bladder, Kidney, Testicular Cancer Surgery',
-        metaDescription: 'Uro-oncological surgery: robotic/laparoscopic and organ-preserving methods for bladder, kidney and testicular tumors; process, risks and price range.',
+        title: 'Uro-oncology (Prostate, Bladder, Kidney and Testicular Cancer)',
+        summary:
+          'Surgical treatment of cancers of the urinary tract and male reproductive organs. Two things matter most here: not missing a single warning sign, and not making the treatment decision in a hurry.',
+        metaTitle: 'Uro-oncology: What the Warning Signs Mean and How Treatment Is Chosen',
+        metaDescription:
+          'Warning signs in prostate, bladder, kidney and testicular cancer, why blood in the urine must always be investigated, organ-sparing surgery and how the treatment decision is made.',
+        quickFacts: {
+          duration: 'Initial assessment 30–45 minutes',
+          anesthesia: 'Not required for assessment',
+          hospitalStay: 'Depends on diagnosis and extent of surgery',
+          stayInTurkey: '7–14 days depending on the operation',
+          returnToWork: 'Depends on the operation',
+          flightClearance: 'According to review and recovery'
+        },
         definition: [
-          'Uro-oncology deals with the surgical treatment of urinary and male reproductive system cancers such as kidney, bladder, prostate and testicular cancer.',
-          'In suitable cases, organ-preserving (e.g., partial nephrectomy) and minimally invasive robotic/laparoscopic techniques are preferred. Treatment is planned by a multidisciplinary tumor board.'
+          'Uro-oncology covers the diagnosis and surgical treatment of cancers of the kidney, bladder, urinary tract, prostate and testicle. What these cancers have in common is that they often produce few symptoms early, and that when symptoms do appear they are easily attributed to something else.',
+          'THE MOST IMPORTANT SENTENCE ON THIS PAGE: BLOOD IN THE URINE MUST BE INVESTIGATED, EVEN WHEN IT IS PAINLESS. Painless blood in the urine is the classic first sign of bladder cancer. Seeing it once and having it settle does not mean it has resolved; on the contrary, being intermittent is a known feature of this picture. In anyone who smokes or has smoked, it must be investigated. Being told "it is a urinary infection" and treated with antibiotics is the commonest reason for delayed diagnosis.',
+          'THE SECOND WARNING: A PAINLESS FIRM LUMP IN A TESTICLE. Testicular cancer occurs in younger men and is frequently noticed late precisely because it does not hurt. Painlessness is not reassuring; it is typical. It should be assessed without delay.',
+          'THIRD: a substantial proportion of kidney tumours are now found incidentally on imaging performed for another reason. That sounds like bad news but is in fact good news, because tumours found early and small can often be treated with organ-sparing surgery.',
+          'DO NOT RUSH THE TREATMENT DECISION. For most cancers in this field a few weeks of deliberation causes no medical harm. If you are being pressed to decide immediately, that pressure may be commercial rather than medical. A second opinion is your right, and seeking one does not oblige you to change where you are treated.'
+        ],
+        eligibility: {
+          suitable: [
+            'Anyone with blood in the urine — even if painless and even if it happened only once',
+            'Men who notice a painless firm lump or enlargement of a testicle',
+            'Men with a raised PSA or a suspicious finding on examination',
+            'People found to have a renal mass on imaging',
+            'Patients previously treated for a bladder tumour who require surveillance',
+            'Patients wanting a second opinion before deciding on treatment',
+            'People with a smoking history who develop urinary symptoms'
+          ],
+          notSuitable: [
+            'Patients wanting surgery planned before diagnosis and staging are complete: accurate staging comes first',
+            'Patients expecting surgery alone to address widespread disease: systemic treatment takes priority there',
+            'Patients whose general health and comorbidities make major surgery inadvisable, in whom less invasive options are considered',
+            'Some very small, slow-growing tumours for which surveillance is more appropriate than surgery'
+          ]
+        },
+        technology: [
+          'Contrast-enhanced CT and MRI for staging',
+          'Multiparametric prostate MRI and fusion biopsy',
+          'Cystoscopy — direct inspection of the bladder',
+          'Urine cytology',
+          'Robot-assisted and laparoscopic surgery',
+          'Organ-sparing (partial) nephrectomy',
+          'Pathological examination — establishing the true stage and the surgical margins',
+          'Multidisciplinary tumour board review'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
+          note: 'Uro-oncological surgery is among Assoc. Prof. Müslüm Ergün\'s areas of practice. The treatment plan is based on pathology, imaging, the patient\'s general condition and their preferences, and in appropriate cases on a tumour board decision.'
         },
         timeline: [
-          { when: 'Remote', title: 'Board review', body: 'Your pathology and imaging results are reviewed by the tumor board.' },
-          { when: 'Day 1–2', title: 'Arrival & tests', body: 'Examination, staging tests and anesthesia assessment.' },
-          { when: 'Day 3', title: 'Surgery', body: 'Robotic/laparoscopic or open surgery; the length of stay varies with the scope.' },
-          { when: 'Day 5–7', title: 'Review & pathology', body: 'Pathology result, plan for next steps and clearance to return.' }
+          { when: 'Remotely', title: 'Review of your file', body: 'Your pathology reports and imaging are reviewed. Send the imaging as image files (DICOM), not only as reports: reading someone else\'s report is not an independent assessment.' },
+          { when: 'Days 1–2', title: 'Arrival and staging', body: 'Examination, completion of any missing staging investigations, blood tests and anaesthetic assessment.' },
+          { when: 'Decision stage', title: 'Discussing the options', body: 'Surgery, other treatments and, in suitable patients, active surveillance; the side effects and follow-up requirements of each are stated plainly.' },
+          { when: 'Day of surgery', title: 'The operation', body: 'Robotic or laparoscopic where appropriate, and organ-sparing wherever that is possible.' },
+          { when: 'After discharge', title: 'Pathology and plan', body: 'Examination of the removed tissue establishes the true stage and whether further treatment is needed. The result usually arrives after you are home; how it reaches you and who explains it is agreed in advance.' },
+          { when: 'Long term', title: 'Surveillance', body: 'In these cancers, follow-up is part of the treatment. The schedule, which tests are done and how often, and who reviews the results are all planned in writing.' }
         ],
         risks: [
-          'Bleeding, infection and general surgical risks',
-          'Changes in organ function (depending on scope)',
-          'Possible need for additional treatment (chemotherapy/immunotherapy)',
-          'The need for recurrence follow-up'
+          'DELAYED DIAGNOSIS: the greatest risk in this field is not a surgical complication but a missed warning sign. Blood in the urine attributed to infection and left uninvestigated is the commonest example',
+          'Bleeding, infection and the general risks of surgery and anaesthesia',
+          'Change in organ function, depending on the extent of surgery',
+          'Incontinence and changes in sexual function after prostate surgery',
+          'The period of adjustment after urinary tract reconstruction in bladder surgery',
+          'Reduction in kidney function after renal surgery; organ-sparing surgery aims to limit this',
+          'Collection of lymph fluid where lymph nodes have been removed',
+          'A PATHOLOGY RESULT WORSE THAN EXPECTED, requiring further treatment',
+          'The possibility of recurrence, and therefore the need for continuous follow-up — lapsing from surveillance can undo the value of the treatment itself'
         ],
         alternatives: [
-          'Active surveillance (in selected small tumors)',
-          'Ablation techniques (in selected kidney tumors)',
-          'Radiotherapy/systemic therapy (depending on stage)',
-          'Bladder-preserving protocols (in selected cases)'
+          'Active surveillance — in selected low-risk prostate cancer and some small renal masses. Not postponing treatment but following it in a disciplined way',
+          'Radiotherapy — an alternative to surgery in prostate cancer, with a different side-effect profile',
+          'Intravesical therapy — for superficial bladder tumours',
+          'Ablative techniques — in selected small renal tumours',
+          'Chemotherapy, immunotherapy and targeted treatments — according to stage, before or after surgery',
+          'Organ-sparing surgery — removing only the tumour rather than the whole organ where that is possible',
+          'Supportive care — prioritising quality of life in older patients with significant comorbidity'
+        ],
+        comparison: {
+          title: 'Warning signs: how urgently each needs attention',
+          columns: ['Finding', 'What it may be', 'Urgency', 'First step'],
+          rows: [
+            { label: 'Painless blood in the urine', values: ['Bladder or urinary tract tumour', 'Investigate without delay', 'Cystoscopy and imaging'] },
+            { label: 'Painless firm lump in a testicle', values: ['Testicular tumour', 'Without delay', 'Examination and scrotal ultrasound'] },
+            { label: 'Raised PSA', values: ['Benign enlargement, inflammation or cancer', 'Not urgent, but must be followed up', 'Repeat test, examination, MRI'] },
+            { label: 'Renal mass on imaging', values: ['Benign or malignant mass', 'Planned assessment', 'Contrast-enhanced CT'] },
+            { label: 'Flank pain + fever + shivering', values: ['Infection behind an obstruction', 'EMERGENCY', 'Attend an emergency department'] }
+          ],
+          note: 'The purpose of this table is not to alarm but to show how much time each finding can safely be given. Painless blood in the urine that appears once and settles does not make investigation unnecessary — being intermittent is a known feature of it.'
+        },
+        recovery: [
+          { period: 'First week', body: 'Varies with the extent of surgery. Early mobilisation matters, both to reduce the risk of clots and for bowel recovery.' },
+          { period: 'Weeks 2–4', body: 'A graded return to daily life. Lifting is avoided. When to resume each activity is explained specifically for the operation performed.' },
+          { period: 'After pathology', body: 'The result determines whether further treatment is advised. If it is, when and where is planned; this is not bad news but an updated plan.' },
+          { period: 'First year', body: 'Follow-up is more frequent in this period, with blood tests and imaging at set intervals.' },
+          { period: 'Long term', body: 'Intervals lengthen according to the course but follow-up does not end. Dropping out of surveillance risks a recurrence being found late that could have been found early.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Varies by tumor type, stage and surgical scope.'
+          disclaimer: 'The figure depends on the tumour type, the stage, the extent of surgery and the length of hospital stay. An itemised written quote follows review of your file.'
         },
         packageIncludes: [
+          'Remote review of your file',
+          'Examination and completion of any missing staging investigations',
+          'Anaesthesia and theatre',
           'Surgery and hospital stay',
-          'Anesthesia and staging tests',
-          'Pathology examination',
-          'Transfers and accommodation',
-          'Medical interpreter and coordinator',
-          'Follow-up and online monitoring'
+          'Pathological examination of the specimen',
+          'Review after discharge and assessment before you fly',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and patient coordinator',
+          'Remote review of your follow-up results'
         ],
         faqs: [
-          { q: 'Will my entire kidney be removed?', a: 'In suitable cases only the tumor portion is removed (partial nephrectomy); the decision is made after imaging.' },
-          { q: 'Will I need additional treatment after surgery?', a: 'It depends on pathology and stage; it is planned by the tumor board.' },
-          { q: 'How is follow-up done?', a: 'With regular imaging and blood tests; remote follow-up support is provided.' }
+          { q: 'I saw blood in my urine once and then it stopped. Should I have it investigated?', a: 'Yes, without question. Painless blood in the urine is the classic first sign of bladder cancer, and being intermittent is a known feature of it. Its stopping does not mean it has resolved. If you have a smoking history, it must be investigated. Being told it is an infection and treated with antibiotics is the commonest reason for delayed diagnosis.' },
+          { q: 'There is a painless lump in my testicle — surely painless means harmless?', a: 'The opposite. Testicular cancer characteristically does not hurt; the absence of pain is not a reassuring finding. Any firm lump should therefore be assessed without delay by examination and scrotal ultrasound.' },
+          { q: 'Do I have to decide immediately?', a: 'For most cancers in this field a few weeks of deliberation causes no medical harm. Pressure to "decide now" is more often a sign of a commercial approach than a clinical necessity. Ask questions, get a second opinion, and make your decision understanding it.' },
+          { q: 'Is seeking a second opinion disrespectful to my doctor?', a: 'No. There is usually more than one reasonable path here, and comparing them is how you find out which suits you. Biopsy grading also involves interpretation, and a second pathology review can change the grade — which can change the recommendation. Seeking a second opinion does not commit you to being treated here.' },
+          { q: 'Will my whole kidney be removed?', a: 'Not always. For tumours of suitable size and position only the tumour itself can be removed (organ-sparing surgery). This matters for preserving kidney function, particularly in patients with a single kidney, diabetes or already reduced function. The decision is made from the imaging and the position of the tumour.' },
+          { q: 'Will I need further treatment after surgery?', a: 'That is determined by the pathology. Tumour may be found at the surgical margin, or the disease may be more advanced than thought; this does not mean the operation failed, it means the plan is updated. It matters that this possibility was discussed before surgery.' },
+          { q: 'How long does follow-up last, and why does it matter so much?', a: 'Follow-up is part of the treatment, not an optional extra afterwards. A recurrence found early is far more easily dealt with. In bladder tumours in particular, regular cystoscopic surveillance is decisive. Ask for your schedule in writing: which test, how often, and who reviews the results.' },
+          { q: 'I am travelling from abroad — how will follow-up work?', a: 'This should be settled before you fix your travel dates. Which tests can be done in your own country, how results will be sent and who will review them are agreed in advance. Ask too for your operation note, pathology report and discharge summary in a language you understand; your own doctor will need them.' },
+          { q: 'Does stopping smoking help at this stage?', a: 'Yes, and the question matters more than people assume. Smoking is the best-established modifiable risk factor for bladder cancer, and its relevance does not end at diagnosis. It also affects wound healing and the risk of pulmonary complications after surgery. The period before an operation is not too late to stop — it is when most people are most motivated.' },
+          { q: 'What should I send?', a: 'All of your pathology reports, the imaging itself as DICOM files, your blood results, any previous operation notes, your medication list and your other medical conditions. Sending report text alone limits what can be assessed.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines — European Association of Urology (uro-oncology guidelines)', url: 'https://uroweb.org/guidelines' }
         ]
       },
       ar: {
@@ -24904,53 +25070,140 @@ export const treatments: Treatment[] = [
         ]
       },
       en: {
-        title: 'Female Urology (Incontinence, Pelvic Floor Surgery)',
-        summary: 'Modern solutions for urinary incontinence and pelvic floor problems that enable a quick return to daily life.',
-        metaTitle: 'Female Urology | Incontinence and Pelvic Floor Surgery',
-        metaDescription: 'Female urology: sling and pelvic floor surgery for urinary incontinence and pelvic organ prolapse; process, risks and price range.',
+        title: 'Female Urology (Incontinence, Overactive Bladder, Pelvic Floor)',
+        summary:
+          'Urinary leakage is common but it is not normal, and it is treatable. The first requirement of the right treatment is establishing which type of leakage it is — because the right treatment applied to the wrong type does not work.',
+        metaTitle: 'Female Urology: Types of Incontinence and Choosing Treatment',
+        metaDescription:
+          'The difference between stress, urgency and mixed incontinence, why treatment depends on the type, pelvic floor exercises, sling surgery and privacy.',
+        quickFacts: {
+          duration: 'Initial assessment 30–45 minutes',
+          anesthesia: 'Not required for assessment',
+          hospitalStay: 'Day case – 1 night depending on procedure',
+          stayInTurkey: '4–7 days',
+          returnToWork: 'A few days (strenuous activity deferred for weeks)',
+          flightClearance: 'After the review appointment'
+        },
         definition: [
-          'Female urology deals with the diagnosis and treatment of conditions such as stress urinary incontinence, overactive bladder and pelvic organ prolapse.',
-          'Treatment ranges from pelvic floor exercises to minimally invasive sling operations and pelvic floor repair. The method is chosen according to the type and severity of the complaint.'
+          'Female urology covers the diagnosis and treatment of urinary leakage, overactive bladder, pelvic organ prolapse, recurrent urinary infections and difficulty emptying the bladder.',
+          'FIRST, PLAINLY: URINARY LEAKAGE IS NOT A NATURAL CONSEQUENCE OF AGEING. That it is common does not make it normal. Many women live with it for years without telling anyone, using pads, avoiding drinking and restricting their social lives. Yet most can achieve marked improvement without surgery.',
+          'THE FIRST REQUIREMENT OF TREATMENT IS ESTABLISHING THE TYPE. In stress incontinence, leakage occurs when abdominal pressure rises — coughing, laughing, lifting — with no preceding urge. In urgency incontinence, a sudden and irresistible need comes first and you cannot reach the toilet in time. This distinction is critical: drugs that relax the bladder do nothing for the stress type, and a sling operation does nothing for the urgency type.',
+          'A WARNING: BLOOD IN THE URINE IS NOT A SIMPLE LEAKAGE COMPLAINT. Blood in the urine must be investigated separately, even when it occurs alongside leakage. Equally, burning and frequency that persist despite treatment should not be dismissed as a "sensitive bladder".',
+          'A SECOND WARNING: IF THE BLADDER IS NOT EMPTYING, MEDICATION MAKES IT WORSE. Residual urine after voiding should therefore be measured before treatment is started. When this simple measurement is skipped, a well-intentioned prescription can do harm.'
+        ],
+        eligibility: {
+          suitable: [
+            'Women who leak when coughing, laughing, sneezing or lifting',
+            'Women who cannot reach the toilet because of sudden urgency',
+            'Women who experience both types together',
+            'Women waking repeatedly at night to pass urine',
+            'Women describing pressure or heaviness from pelvic organ prolapse',
+            'Women with recurrent urinary tract infections',
+            'Women treated previously without benefit — often the problem is not the treatment but the type having been misidentified'
+          ],
+          notSuitable: [
+            'Women with untreated urinary infection: this is treated first, as it can mimic all of these symptoms',
+            'Women whose bladder does not empty completely: drugs that relax the bladder are not appropriate, and this is assessed first',
+            'Women requesting surgery without assessment: an operation is not planned before the type is established',
+            'Women planning further pregnancies, in whom the timing of prolapse and sling surgery is discussed separately'
+          ]
+        },
+        technology: [
+          'Bladder diary — a record of how often, how much and with what urgency; it yields more than expensive investigations',
+          'Urinalysis and culture — to exclude infection',
+          'Post-void residual measurement — a mandatory step before any decision about medication',
+          'Urodynamics — in selected women, where the type is unclear',
+          'Cystoscopy — where there is blood in the urine or an atypical picture',
+          'Pelvic floor assessment and teaching of the correct muscle',
+          'Minimally invasive sling surgery and pelvic floor repair',
+          'Intravesical botulinum toxin and sacral neuromodulation'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
+          note: 'Female and functional urology is among Assoc. Prof. Müslüm Ergün\'s areas of practice. The approach is stepwise: first exclude other causes and establish the type, then behavioural treatment, then medication, and surgery where needed.'
         },
         timeline: [
-          { when: 'Remote', title: 'Pre-assessment', body: 'Your symptom history and, if available, urodynamics results are evaluated.' },
-          { when: 'Day 1', title: 'Arrival & exam', body: 'Examination, required tests and planning.' },
-          { when: 'Day 2', title: 'Procedure', body: 'Minimally invasive sling or repair; most cases day-case–1 night.' },
-          { when: 'Day 3–4', title: 'Review', body: 'Review, information and clearance to return.' }
+          { when: 'Remotely', title: 'Initial assessment', body: 'The type of your symptoms, your obstetric history, your medication and any previous investigations are reviewed. On request, the consultation is arranged with a female member of staff present.' },
+          { when: 'Preparation', title: 'Bladder diary', body: 'Over a few days you record when and how much you pass urine and how strong the urge was. This simple record is the most valuable tool for establishing the type, and it is also used to measure the effect of treatment.' },
+          { when: 'Day 1', title: 'Examination and tests', body: 'Examination, urinalysis and culture, post-void residual measurement. Urodynamics is arranged where needed.' },
+          { when: 'Decision stage', title: 'Establishing the type and the plan', body: 'The type of leakage is clarified and the appropriate step chosen. For most women the first step is not surgery.' },
+          { when: 'Day of procedure', title: 'Intervention, if required', body: 'Sling surgery, pelvic floor repair or intravesical botulinum toxin. Most are performed as a day case or with one night in hospital.' },
+          { when: 'Before you fly', title: 'Review', body: 'Whether the bladder empties properly after voiding is checked and flying clearance given.' }
         ],
         risks: [
-          'Temporary difficulty urinating',
+          'THE RIGHT TREATMENT FOR THE WRONG TYPE: the greatest risk in this field is not a surgical complication but misidentification of the type. A sling performed for urgency incontinence does not help and leaves the patient believing her problem cannot be solved',
+          'Temporary difficulty passing urine after sling surgery',
           'Urinary tract infection',
-          'Pain or swelling (temporary)',
-          'Rarely, need for a repeat procedure'
+          'Pain, swelling and temporary discomfort',
+          'Symptoms not resolving completely after surgery — particularly in mixed incontinence when only one component is treated',
+          'After intravesical botulinum toxin, incomplete bladder emptying and a temporary need for self-catheterisation; this possibility must be discussed beforehand and the patient must be prepared for it',
+          'Recurrence of symptoms over time, requiring further treatment',
+          'Recurrence after prolapse repair'
         ],
         alternatives: [
-          'Pelvic floor (Kegel) exercises',
-          'Bladder training and lifestyle changes',
-          'Medication (for overactive bladder)',
-          'Pessary (in prolapse cases)'
+          'Pelvic floor muscle exercises — effective provided the right muscle is used. The commonest error is tightening the abdomen, buttocks or thighs',
+          'Bladder training — gradually lengthening the interval between visits to the toilet; the fundamental step in the urgency type',
+          'Adjusting fluids and caffeine — severely restricting fluids is WRONG; it concentrates the urine and worsens symptoms',
+          'Weight loss and treating constipation — measurable benefit by reducing abdominal pressure',
+          'Drugs that relax the bladder — for the urgency type; in older women the choice of drug is made carefully with cognitive effects in mind',
+          'Vaginal oestrogen — may reduce symptoms in selected postmenopausal women',
+          'Pessary — a non-surgical option for prolapse',
+          'Sling surgery — for the stress type when behavioural treatment is insufficient',
+          'Intravesical botulinum toxin and sacral neuromodulation — for urgency incontinence unresponsive to medication'
+        ],
+        comparison: {
+          title: 'Which type leads to which treatment',
+          columns: ['Criterion', 'Stress type', 'Urgency type', 'Overflow type'],
+          rows: [
+            { label: 'When leakage occurs', values: ['Coughing, laughing, lifting', 'After a sudden urge', 'Dribbling, more or less constant'] },
+            { label: 'Is there urge beforehand?', values: ['No', 'Yes, and it cannot be deferred', 'Unclear; a sense of incomplete emptying'] },
+            { label: 'First step', values: ['Pelvic floor exercises', 'Bladder training and fluid management', 'Finding what prevents emptying'] },
+            { label: 'Does medication help?', values: ['Bladder relaxants DO NOT help', 'Yes, as a second step', 'Bladder relaxants CAN BE HARMFUL'] },
+            { label: 'Surgical option', values: ['Sling', 'Botulinum toxin, neuromodulation', 'Relieving the obstruction'] }
+          ],
+          note: 'The single purpose of this table is to show that the same sentence — "I leak urine" — leads to entirely different treatments. A treatment given without assessment may therefore achieve nothing, however well intended.'
+        },
+        recovery: [
+          { period: 'During the exercise period', body: 'The first weeks of pelvic floor exercises are difficult and the difference is not immediate. Done correctly and consistently, the effect appears over weeks. Ask to be taught once, to be sure you are using the right muscle.' },
+          { period: 'During bladder training', body: 'Intervals are lengthened gradually, not at once. The bladder diary lets you see progress, which sustains motivation.' },
+          { period: 'First week after a sling', body: 'Mild discomfort and swelling are usual. Avoid lifting and straining; prevent constipation. Report any difficulty passing urine.' },
+          { period: 'Weeks 2–6 after a sling', body: 'Light daily activity resumes within a few days; for strenuous activity and intercourse, follow the interval your surgeon gives you.' },
+          { period: 'After botulinum toxin', body: 'The effect lasts some months and then wanes, so it needs repeating. Bladder emptying is checked in the early period.' },
+          { period: 'Long term', body: 'If symptoms return, the cause is reassessed. Weight control, avoiding constipation and continuing the exercises all contribute to the durability of the result.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Varies by procedure type.'
+          disclaimer: 'The figure varies considerably with what is done — assessment, a sling, botulinum toxin or repair surgery. An itemised written quote follows once the type is established.'
         },
         packageIncludes: [
-          'Procedure and hospital stay',
-          'Anesthesia and tests',
-          'Transfers and accommodation',
-          'Female medical interpreter (on request)',
-          'Follow-up and online monitoring'
+          'Female urology assessment and interpretation of the bladder diary',
+          'Urinalysis and culture',
+          'Post-void residual measurement',
+          'Urodynamics or cystoscopy where needed',
+          'Teaching of the correct pelvic floor technique',
+          'The planned procedure and anaesthesia',
+          'Hospital stay where required',
+          'Female medical interpreter on request',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Remote follow-up after you return home'
         ],
         faqs: [
-          { q: 'Is sling surgery permanent?', a: 'It provides long-lasting improvement in most patients; the outcome varies by complaint type.' },
-          { q: 'How long does recovery take?', a: 'You return to light daily activity within a few days; heavy activity is postponed for a few weeks.' },
-          { q: 'Can I request female medical staff?', a: 'Yes; on request, a female interpreter and coordination support are provided.' }
+          { q: 'Is urinary leakage a normal part of getting older?', a: 'No. That it is common does not make it normal. It is treatable, and most women achieve marked improvement without surgery. There is no need to spend years using pads and restricting your social life.' },
+          { q: 'I was treated before and it did not help — is my problem unsolvable?', a: 'Before concluding that, ask whether the type was correctly identified. Giving a bladder relaxant for stress incontinence, or performing a sling for urgency incontinence, does not work. In that situation the problem lies not in your condition but in the treatment having been aimed at the wrong type.' },
+          { q: 'What does the assessment involve — is it embarrassing?', a: 'It consists of listening to your symptoms, going through the bladder diary, a urine test and an examination. The examination is brief and every step is explained first. On request a female member of staff is present and a female medical interpreter provided; asking for this is a right, not a favour.' },
+          { q: 'Do pelvic floor exercises really work?', a: 'Yes, provided the right muscle is used. The commonest error is tightening the abdomen, buttocks or thighs, which does not count as the exercise. Once the technique is taught correctly, the effect appears over weeks. Even where surgery is being considered, this step should not be skipped.' },
+          { q: 'If I drink less, will I leak less?', a: 'No — the opposite. Drinking little concentrates the urine, irritates the bladder and increases urgency. The right approach is to spread fluids through the day and reduce them in the evening. Cutting down caffeine and fizzy drinks can help.' },
+          { q: 'Is sling surgery permanent?', a: 'In appropriately selected women with stress incontinence it can give lasting improvement. In mixed incontinence, however, treating only the stress component may leave the urgency symptoms behind, and it matters that this was discussed beforehand. Be cautious of anyone promising a definitive and permanent result.' },
+          { q: 'There is blood in my urine but my main problem is leakage — does it matter?', a: 'Yes, separately so. Blood in the urine must be investigated in its own right even when it occurs alongside leakage. Dismissing it as a "sensitive bladder" can delay a diagnosis.' },
+          { q: 'Will I have to catheterise myself after bladder botulinum toxin?', a: 'In some women the bladder relaxes too much and does not empty fully, in which case temporary self-catheterisation may be needed. The likelihood is low but real, and it must be discussed beforehand. If you are not prepared or physically able to do it, this option may not suit you.' },
+          { q: 'I am planning to have children — should I have surgery now?', a: 'If you are planning a pregnancy, say so. The timing of prolapse and sling surgery depends on it, and these are generally preferred after childbearing is complete. In the meantime, behavioural treatment and pelvic floor exercises come to the fore.' },
+          { q: 'What should I send beforehand?', a: 'Any urodynamic study, your urinalysis and culture, your post-void residual measurement, your obstetric history, previous operations, a list of your medication, and a bladder diary covering a few days. The diary looks trivial but contributes more to the assessment than anything else.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-neurogenic Female LUTS — European Association of Urology', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
         ]
       },
       ar: {
