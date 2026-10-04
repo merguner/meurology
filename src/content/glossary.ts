@@ -12,8 +12,9 @@ import type { Locale } from '@/i18n/routing';
  *  - Her terim TEK CÜMLE ile açıklanır; ayrıntı ilgili tedavi sayfasındadır.
  *  - `related` ile ilgili tedavi slug'ına iç link verilir (SEO + gezinme).
  *
- * TODO-DOGRULA: Hedef 100+ terim. Mevcut set çekirdek terimleri kapsar;
- * yeni terim eklerken 6 dilin HEPSİNİ doldurun (eksik dil İngilizce'ye düşer).
+ * Hedef 100+ terim KARŞILANDI (4 Eki 2026). Yeni terim eklerken 6 dilin
+ * HEPSİNİ doldurun (eksik dil İngilizce'ye düşer) ve Rusça metinde
+ * CJK/Kiril-Latin taramasını çalıştırın.
  */
 
 export type GlossaryCategory =
@@ -628,6 +629,737 @@ export const glossary: GlossaryTerm[] = [
       ru: { term: 'Мочевой катетер', definition: 'Тонкая гибкая трубка, временно устанавливаемая для отведения мочи из мочевого пузыря.' },
       ar: { term: 'القسطرة البولية', definition: 'أنبوب رفيع مرن يُوضع مؤقتًا لتصريف البول من المثانة.' },
       fr: { term: 'Sonde urinaire', definition: 'Tube fin et souple placé temporairement pour drainer l’urine de la vessie.' }
+    }
+  },
+  {
+    id: 'pi-rads',
+    category: 'prostate',
+    related: 'psa-yuksekligi-ve-biyopsi',
+    i18n: {
+      tr: { term: 'PI-RADS', definition: 'Prostat MR’ında bulunan şüpheli alanın 1–5 arası puanlanması; yüksek puan şüphenin belirgin olduğunu gösterir.' },
+      en: { term: 'PI-RADS', definition: 'A 1–5 score given to a suspicious area on prostate MRI; a higher score means clearer suspicion.' },
+      de: { term: 'PI-RADS', definition: 'Bewertung eines verdächtigen Areals im Prostata-MRT auf einer Skala von 1 bis 5; ein höherer Wert bedeutet deutlicheren Verdacht.' },
+      fr: { term: 'PI-RADS', definition: 'Cotation de 1 à 5 d’une zone suspecte à l’IRM prostatique ; un score élevé traduit une suspicion nette.' },
+      ru: { term: 'PI-RADS', definition: 'Оценка подозрительного участка на МРТ простаты по шкале от 1 до 5; более высокий балл означает более явное подозрение.' },
+      ar: { term: 'PI-RADS', definition: 'تصنيف المنطقة المشبوهة في رنين البروستاتا على مقياس من 1 إلى 5؛ والدرجة الأعلى تعني شبهة أوضح.' }
+    }
+  },
+  {
+    id: 'multiparametrik-mr',
+    category: 'prostate',
+    related: 'psa-yuksekligi-ve-biyopsi',
+    i18n: {
+      tr: { term: 'Multiparametrik MR', definition: 'Prostatı birden çok görüntü dizisiyle inceleyen, biyopsi öncesi şüpheli alanı gösteren MR incelemesi.' },
+      en: { term: 'Multiparametric MRI', definition: 'An MRI examination that studies the prostate with several image sequences and shows the suspicious area before biopsy.' },
+      de: { term: 'Multiparametrisches MRT', definition: 'Eine MRT-Untersuchung, die die Prostata mit mehreren Bildfolgen darstellt und das verdächtige Areal vor der Biopsie zeigt.' },
+      fr: { term: 'IRM multiparamétrique', definition: 'Examen IRM qui étudie la prostate avec plusieurs séquences et montre la zone suspecte avant la biopsie.' },
+      ru: { term: 'Мультипараметрическая МРТ', definition: 'Исследование МРТ, изучающее простату несколькими последовательностями и показывающее подозрительный участок до биопсии.' },
+      ar: { term: 'الرنين متعدد المعاملات', definition: 'فحص بالرنين المغناطيسي يدرس البروستاتا بعدة تسلسلات صورية ويُظهر المنطقة المشبوهة قبل الخزعة.' }
+    }
+  },
+  {
+    id: 'transperineal-biyopsi',
+    category: 'prostate',
+    related: 'psa-yuksekligi-ve-biyopsi',
+    i18n: {
+      tr: { term: 'Transperineal biyopsi', definition: 'Prostat biyopsisinin makat yerine testislerle makat arasındaki ciltten alınması; bağırsak florasıyla temas olmadığı için enfeksiyon riski daha düşüktür.' },
+      en: { term: 'Transperineal biopsy', definition: 'Taking the prostate biopsy through the skin between the testicles and the anus rather than the rectum; infection risk is lower as there is no contact with bowel flora.' },
+      de: { term: 'Transperineale Biopsie', definition: 'Entnahme der Prostatabiopsie über die Haut zwischen Hodensack und After statt über den Enddarm; das Infektionsrisiko ist geringer, da kein Kontakt zur Darmflora besteht.' },
+      fr: { term: 'Biopsie transpérinéale', definition: 'Prélèvement de la biopsie prostatique par la peau entre les bourses et l’anus plutôt que par le rectum ; le risque infectieux est moindre, faute de contact avec la flore intestinale.' },
+      ru: { term: 'Трансперинеальная биопсия', definition: 'Взятие биопсии простаты через кожу между мошонкой и задним проходом, а не через прямую кишку; риск инфекции ниже, так как нет контакта с кишечной флорой.' },
+      ar: { term: 'الخزعة عبر العجان', definition: 'أخذ خزعة البروستاتا عبر الجلد بين كيس الصفن والشرج بدل المستقيم؛ وخطر العدوى أقل لعدم التماس مع الجراثيم المعوية.' }
+    }
+  },
+  {
+    id: 'psa-yogunlugu',
+    category: 'prostate',
+    related: 'psa-yuksekligi-ve-biyopsi',
+    i18n: {
+      tr: { term: 'PSA yoğunluğu', definition: 'PSA değerinin prostat hacmine oranı; büyük bir prostatın doğal olarak daha fazla PSA üretmesini hesaba katar.' },
+      en: { term: 'PSA density', definition: 'The PSA value relative to prostate volume; it takes account of the fact that a large prostate naturally produces more PSA.' },
+      de: { term: 'PSA-Dichte', definition: 'Der PSA-Wert im Verhältnis zum Prostatavolumen; er berücksichtigt, dass eine große Prostata naturgemäß mehr PSA bildet.' },
+      fr: { term: 'Densité du PSA', definition: 'Rapport entre la valeur du PSA et le volume de la prostate ; il tient compte du fait qu’une grosse prostate produit naturellement plus de PSA.' },
+      ru: { term: 'Плотность ПСА', definition: 'Отношение значения ПСА к объёму простаты; учитывает, что крупная простата естественным образом вырабатывает больше ПСА.' },
+      ar: { term: 'كثافة الـ PSA', definition: 'نسبة قيمة الـ PSA إلى حجم البروستاتا؛ وتراعي أن البروستاتا الكبيرة تنتج بطبيعتها كمية أكبر من الـ PSA.' }
+    }
+  },
+  {
+    id: 'serbest-total-psa',
+    category: 'prostate',
+    related: 'psa-yuksekligi-ve-biyopsi',
+    i18n: {
+      tr: { term: 'Serbest/total PSA oranı', definition: 'Kandaki serbest PSA’nın toplam PSA’ya oranı; biyopsi kararında yardımcı ölçütlerden biridir.' },
+      en: { term: 'Free-to-total PSA ratio', definition: 'The ratio of free PSA to total PSA in the blood; one of the measures that helps in deciding about biopsy.' },
+      de: { term: 'Quotient aus freiem und Gesamt-PSA', definition: 'Das Verhältnis von freiem zu Gesamt-PSA im Blut; eine der Größen, die bei der Biopsieentscheidung helfen.' },
+      fr: { term: 'Rapport PSA libre/total', definition: 'Rapport du PSA libre au PSA total dans le sang ; l’un des paramètres aidant à décider d’une biopsie.' },
+      ru: { term: 'Соотношение свободного и общего ПСА', definition: 'Отношение свободного ПСА к общему ПСА в крови; один из показателей, помогающих решить вопрос о биопсии.' },
+      ar: { term: 'نسبة الـ PSA الحر إلى الكلي', definition: 'نسبة الـ PSA الحر إلى الـ PSA الكلي في الدم؛ وهي من المؤشرات التي تساعد في قرار الخزعة.' }
+    }
+  },
+  {
+    id: 'radikal-prostatektomi',
+    category: 'prostate',
+    related: 'robotik-prostatektomi',
+    i18n: {
+      tr: { term: 'Radikal prostatektomi', definition: 'Prostat kanserinde prostatın tamamının ve seminal veziküllerin çıkarılması ameliyatı.' },
+      en: { term: 'Radical prostatectomy', definition: 'The operation to remove the whole prostate and the seminal vesicles in prostate cancer.' },
+      de: { term: 'Radikale Prostatektomie', definition: 'Die Operation, bei der bei Prostatakrebs die gesamte Prostata und die Samenblasen entfernt werden.' },
+      fr: { term: 'Prostatectomie radicale', definition: 'Intervention consistant à retirer la totalité de la prostate et les vésicules séminales en cas de cancer de la prostate.' },
+      ru: { term: 'Радикальная простатэктомия', definition: 'Операция удаления всей простаты и семенных пузырьков при раке простаты.' },
+      ar: { term: 'استئصال البروستاتا الجذري', definition: 'عملية إزالة البروستاتا كاملة والحويصلتين المنويتين في سرطان البروستاتا.' }
+    }
+  },
+  {
+    id: 'cerrahi-sinir',
+    category: 'prostate',
+    related: 'robotik-prostatektomi',
+    i18n: {
+      tr: { term: 'Cerrahi sınır (pozitif/negatif)', definition: 'Çıkarılan dokunun kenarında tümör hücresi bulunup bulunmadığı; pozitifse ek tedavi gündeme gelebilir.' },
+      en: { term: 'Surgical margin (positive/negative)', definition: 'Whether tumour cells are present at the edge of the removed tissue; if positive, further treatment may come into consideration.' },
+      de: { term: 'Resektionsrand (positiv/negativ)', definition: 'Ob am Rand des entfernten Gewebes Tumorzellen vorhanden sind; bei positivem Rand kann eine weitere Behandlung infrage kommen.' },
+      fr: { term: 'Marge chirurgicale (positive/négative)', definition: 'Présence ou non de cellules tumorales au bord du tissu retiré ; si elle est positive, un traitement complémentaire peut se discuter.' },
+      ru: { term: 'Хирургический край (положительный/отрицательный)', definition: 'Есть ли опухолевые клетки по краю удалённой ткани; при положительном крае может обсуждаться дополнительное лечение.' },
+      ar: { term: 'الحافة الجراحية (إيجابية/سلبية)', definition: 'وجود خلايا ورمية عند حافة النسيج المستأصل من عدمه؛ وعند إيجابيتها قد يُطرح علاج إضافي.' }
+    }
+  },
+  {
+    id: 'adt-hormon-tedavisi',
+    category: 'prostate',
+    related: 'prostat-kanseri',
+    i18n: {
+      tr: { term: 'Androjen baskılama (hormon tedavisi)', definition: 'Prostat kanserinin beslendiği erkeklik hormonunun etkisini azaltan tedavi yaklaşımı.' },
+      en: { term: 'Androgen deprivation (hormone therapy)', definition: 'A treatment approach that reduces the effect of the male hormone on which prostate cancer feeds.' },
+      de: { term: 'Androgenentzug (Hormontherapie)', definition: 'Ein Behandlungsansatz, der die Wirkung des männlichen Hormons verringert, von dem der Prostatakrebs zehrt.' },
+      fr: { term: 'Suppression androgénique (hormonothérapie)', definition: 'Approche thérapeutique qui réduit l’effet de l’hormone masculine dont se nourrit le cancer de la prostate.' },
+      ru: { term: 'Андрогенная депривация (гормональная терапия)', definition: 'Подход к лечению, снижающий действие мужского гормона, которым питается рак простаты.' },
+      ar: { term: 'الحرمان الأندروجيني (العلاج الهرموني)', definition: 'نهج علاجي يقلل أثر الهرمون الذكري الذي يتغذى عليه سرطان البروستاتا.' }
+    }
+  },
+  {
+    id: 'tnm-evreleme',
+    category: 'prostate',
+    related: 'prostat-kanseri',
+    i18n: {
+      tr: { term: 'TNM evrelemesi', definition: 'Tümörün yaygınlığını (T), lenf bezi tutulumunu (N) ve uzak yayılımı (M) tanımlayan uluslararası sistem.' },
+      en: { term: 'TNM staging', definition: 'The international system describing the extent of the tumour (T), lymph node involvement (N) and distant spread (M).' },
+      de: { term: 'TNM-Stadieneinteilung', definition: 'Das internationale System, das Ausdehnung des Tumors (T), Lymphknotenbefall (N) und Fernabsiedlungen (M) beschreibt.' },
+      fr: { term: 'Classification TNM', definition: 'Système international décrivant l’étendue de la tumeur (T), l’atteinte ganglionnaire (N) et la dissémination à distance (M).' },
+      ru: { term: 'Стадирование по TNM', definition: 'Международная система, описывающая распространённость опухоли (T), поражение лимфоузлов (N) и отдалённое распространение (M).' },
+      ar: { term: 'تصنيف TNM', definition: 'النظام الدولي الذي يصف امتداد الورم (T) وإصابة العقد اللمفية (N) والانتشار البعيد (M).' }
+    }
+  },
+  {
+    id: 'prostatit',
+    category: 'prostate',
+    i18n: {
+      tr: { term: 'Prostatit', definition: 'Prostat bezinin iltihaplanması; ağrı, idrar yakınmaları ve PSA yüksekliğine yol açabilir.' },
+      en: { term: 'Prostatitis', definition: 'Inflammation of the prostate gland; it can cause pain, urinary symptoms and a raised PSA.' },
+      de: { term: 'Prostatitis', definition: 'Entzündung der Prostata; sie kann Schmerzen, Harnbeschwerden und einen erhöhten PSA-Wert verursachen.' },
+      fr: { term: 'Prostatite', definition: 'Inflammation de la prostate ; elle peut provoquer douleurs, troubles urinaires et élévation du PSA.' },
+      ru: { term: 'Простатит', definition: 'Воспаление предстательной железы; может вызывать боль, мочевые жалобы и повышение ПСА.' },
+      ar: { term: 'التهاب البروستاتا', definition: 'التهاب في غدة البروستاتا؛ وقد يسبب ألمًا وشكاوى بولية وارتفاعًا في الـ PSA.' }
+    }
+  },
+  {
+    id: 'prostat-hacmi',
+    category: 'bph',
+    related: 'bph-prostat-buyumesi',
+    i18n: {
+      tr: { term: 'Prostat hacmi', definition: 'Prostatın ultrasonla ölçülen büyüklüğü; hangi cerrahi yöntemin uygun olduğunu belirleyen başlıca ölçütlerden biridir.' },
+      en: { term: 'Prostate volume', definition: 'The size of the prostate measured by ultrasound; one of the main criteria determining which surgical method is suitable.' },
+      de: { term: 'Prostatavolumen', definition: 'Die per Ultraschall gemessene Größe der Prostata; eines der Hauptkriterien dafür, welches Operationsverfahren geeignet ist.' },
+      fr: { term: 'Volume prostatique', definition: 'Taille de la prostate mesurée par échographie ; l’un des principaux critères déterminant la technique chirurgicale adaptée.' },
+      ru: { term: 'Объём простаты', definition: 'Размер простаты, измеренный с помощью УЗИ; один из основных критериев выбора подходящего хирургического метода.' },
+      ar: { term: 'حجم البروستاتا', definition: 'حجم البروستاتا المقاس بالموجات فوق الصوتية؛ وهو من أهم المعايير في تحديد الأسلوب الجراحي المناسب.' }
+    }
+  },
+  {
+    id: 'orta-lob',
+    category: 'bph',
+    related: 'bph-prostat-buyumesi',
+    i18n: {
+      tr: { term: 'Orta lob', definition: 'Prostatın mesane içine doğru büyüyen bölümü; varlığı yöntem seçimini etkiler.' },
+      en: { term: 'Middle lobe', definition: 'The part of the prostate that grows into the bladder; its presence affects the choice of method.' },
+      de: { term: 'Mittellappen', definition: 'Der Anteil der Prostata, der in die Blase hineinwächst; sein Vorhandensein beeinflusst die Verfahrenswahl.' },
+      fr: { term: 'Lobe médian', definition: 'Partie de la prostate qui se développe dans la vessie ; sa présence influence le choix de la technique.' },
+      ru: { term: 'Средняя доля', definition: 'Часть простаты, растущая внутрь мочевого пузыря; её наличие влияет на выбор метода.' },
+      ar: { term: 'الفص الأوسط', definition: 'جزء البروستاتا الذي ينمو داخل المثانة؛ ووجوده يؤثر في اختيار الأسلوب.' }
+    }
+  },
+  {
+    id: 'alfa-bloker',
+    category: 'bph',
+    related: 'bph-prostat-buyumesi',
+    i18n: {
+      tr: { term: 'Alfa bloker', definition: 'Prostat ve mesane boynundaki kasları gevşeterek idrar akımını kolaylaştıran ilaç grubu.' },
+      en: { term: 'Alpha blocker', definition: 'A group of medicines that relaxes the muscle in the prostate and bladder neck to ease urine flow.' },
+      de: { term: 'Alphablocker', definition: 'Eine Gruppe von Medikamenten, die die Muskulatur in Prostata und Blasenhals entspannt und so den Harnfluss erleichtert.' },
+      fr: { term: 'Alphabloquant', definition: 'Groupe de médicaments qui relâche le muscle de la prostate et du col vésical afin de faciliter l’écoulement des urines.' },
+      ru: { term: 'Альфа-блокатор', definition: 'Группа препаратов, расслабляющих мышцы простаты и шейки мочевого пузыря и облегчающих отток мочи.' },
+      ar: { term: 'حاصر ألفا', definition: 'مجموعة أدوية ترخي العضلات في البروستاتا وعنق المثانة فتُسهّل تدفق البول.' }
+    }
+  },
+  {
+    id: '5-alfa-reduktaz',
+    category: 'bph',
+    related: 'bph-prostat-buyumesi',
+    i18n: {
+      tr: { term: '5-alfa redüktaz inhibitörü', definition: 'Zamanla prostatı küçülten, PSA değerini de düşüren ilaç grubu.' },
+      en: { term: '5-alpha reductase inhibitor', definition: 'A group of medicines that shrinks the prostate over time and also lowers the PSA value.' },
+      de: { term: '5-Alpha-Reduktase-Hemmer', definition: 'Eine Gruppe von Medikamenten, die die Prostata mit der Zeit verkleinert und auch den PSA-Wert senkt.' },
+      fr: { term: 'Inhibiteur de la 5-alpha-réductase', definition: 'Groupe de médicaments qui réduit la prostate avec le temps et abaisse aussi la valeur du PSA.' },
+      ru: { term: 'Ингибитор 5-альфа-редуктазы', definition: 'Группа препаратов, со временем уменьшающих простату и одновременно снижающих значение ПСА.' },
+      ar: { term: 'مثبط اختزال ألفا-5', definition: 'مجموعة أدوية تُصغّر البروستاتا مع الوقت وتخفض قيمة الـ PSA أيضًا.' }
+    }
+  },
+  {
+    id: 'akut-retansiyon',
+    category: 'bph',
+    related: 'bph-prostat-buyumesi',
+    i18n: {
+      tr: { term: 'Akut idrar retansiyonu', definition: 'Mesane dolu olmasına rağmen hiç idrar yapılamaması; acil sonda takılmasını gerektirir.' },
+      en: { term: 'Acute urinary retention', definition: 'Being completely unable to pass urine although the bladder is full; it requires urgent catheterisation.' },
+      de: { term: 'Akuter Harnverhalt', definition: 'Trotz voller Blase überhaupt kein Wasser lassen zu können; erfordert eine dringliche Katheteranlage.' },
+      fr: { term: 'Rétention aiguë d’urine', definition: 'Impossibilité totale d’uriner alors que la vessie est pleine ; impose un sondage en urgence.' },
+      ru: { term: 'Острая задержка мочи', definition: 'Полная невозможность помочиться при наполненном мочевом пузыре; требует срочной катетеризации.' },
+      ar: { term: 'احتباس البول الحاد', definition: 'العجز التام عن التبول رغم امتلاء المثانة؛ ويستلزم وضع قسطرة عاجلة.' }
+    }
+  },
+  {
+    id: 'tur-sendromu',
+    category: 'bph',
+    related: 'turp',
+    i18n: {
+      tr: { term: 'TUR sendromu', definition: 'Monopolar TURP’ta yıkama sıvısının dolaşıma geçmesiyle kandaki sodyumun düşmesi; bipolar sistemde bu risk yoktur.' },
+      en: { term: 'TUR syndrome', definition: 'A fall in blood sodium caused by irrigation fluid entering the circulation during monopolar TURP; this risk does not exist with the bipolar system.' },
+      de: { term: 'TUR-Syndrom', definition: 'Abfall des Natriumspiegels im Blut, weil bei monopolarer TURP Spülflüssigkeit in den Kreislauf gelangt; beim bipolaren System besteht dieses Risiko nicht.' },
+      fr: { term: 'Syndrome de résection', definition: 'Baisse du sodium sanguin due au passage du liquide de lavage dans la circulation lors d’une RTUP monopolaire ; ce risque n’existe pas en bipolaire.' },
+      ru: { term: 'ТУР-синдром', definition: 'Снижение уровня натрия в крови из-за попадания промывной жидкости в кровоток при монополярной ТУРП; при биполярной системе такого риска нет.' },
+      ar: { term: 'متلازمة TUR', definition: 'انخفاض الصوديوم في الدم بسبب انتقال سائل الغسيل إلى الدورة الدموية في TURP أحادي القطب؛ ولا وجود لهذا الخطر في النظام ثنائي القطب.' }
+    }
+  },
+  {
+    id: 'adenomektomi',
+    category: 'bph',
+    related: 'bph-prostat-buyumesi',
+    i18n: {
+      tr: { term: 'Açık adenomektomi', definition: 'Çok büyük prostatlarda, büyümüş iç dokunun açık cerrahiyle çıkarılması.' },
+      en: { term: 'Open adenomectomy', definition: 'Removal of the enlarged inner prostate tissue by open surgery in very large glands.' },
+      de: { term: 'Offene Adenomektomie', definition: 'Entfernung des vergrößerten inneren Prostatagewebes durch offene Operation bei sehr großen Drüsen.' },
+      fr: { term: 'Adénomectomie par voie ouverte', definition: 'Ablation par chirurgie ouverte du tissu prostatique interne hypertrophié dans les très grosses prostates.' },
+      ru: { term: 'Открытая аденомэктомия', definition: 'Удаление увеличенной внутренней ткани простаты открытой операцией при очень крупной железе.' },
+      ar: { term: 'استئصال الورم الغدي المفتوح', definition: 'إزالة نسيج البروستاتا الداخلي المتضخم بالجراحة المفتوحة في الغدد الكبيرة جدًا.' }
+    }
+  },
+  {
+    id: 'nokturi',
+    category: 'bph',
+    related: 'bph-prostat-buyumesi',
+    i18n: {
+      tr: { term: 'Noktüri', definition: 'Gece idrara çıkmak için uykudan uyanma; prostat büyümesinin sık görülen yakınmalarından biridir.' },
+      en: { term: 'Nocturia', definition: 'Waking from sleep at night to pass urine; one of the common complaints of prostate enlargement.' },
+      de: { term: 'Nykturie', definition: 'Nächtliches Aufwachen zum Wasserlassen; eine der häufigen Beschwerden bei Prostatavergrößerung.' },
+      fr: { term: 'Nycturie', definition: 'Se réveiller la nuit pour uriner ; l’une des plaintes fréquentes de l’hypertrophie prostatique.' },
+      ru: { term: 'Никтурия', definition: 'Пробуждение ночью для мочеиспускания; одна из частых жалоб при увеличении простаты.' },
+      ar: { term: 'التبول الليلي', definition: 'الاستيقاظ ليلًا للتبول؛ وهو من الشكاوى الشائعة في تضخم البروستاتا.' }
+    }
+  },
+  {
+    id: 'enukleasyon',
+    category: 'bph',
+    related: 'holep',
+    i18n: {
+      tr: { term: 'Enükleasyon', definition: 'Büyümüş prostat dokusunun parça parça tıraşlanmak yerine bütün hâlinde kapsülden ayrılması.' },
+      en: { term: 'Enucleation', definition: 'Separating the enlarged prostate tissue from the capsule as a whole rather than shaving it away piece by piece.' },
+      de: { term: 'Enukleation', definition: 'Ablösen des vergrößerten Prostatagewebes im Ganzen von der Kapsel, statt es stückweise abzutragen.' },
+      fr: { term: 'Énucléation', definition: 'Détachement en un bloc du tissu prostatique hypertrophié de la capsule, au lieu de le raboter fragment par fragment.' },
+      ru: { term: 'Энуклеация', definition: 'Отделение увеличенной ткани простаты от капсулы целиком, а не срезание по частям.' },
+      ar: { term: 'الاستئصال الكامل', definition: 'فصل نسيج البروستاتا المتضخم عن المحفظة كاملًا بدل حلقه قطعة قطعة.' }
+    }
+  },
+  {
+    id: 'tas-analizi',
+    category: 'stones',
+    related: 'bobrek-tasi',
+    i18n: {
+      tr: { term: 'Taş analizi', definition: 'Çıkarılan taşın kimyasal yapısının incelenmesi; tekrarı önleyici planın temelini oluşturur.' },
+      en: { term: 'Stone analysis', definition: 'Examining the chemical make-up of the retrieved stone; it forms the basis of the plan to prevent recurrence.' },
+      de: { term: 'Steinanalyse', definition: 'Untersuchung der chemischen Zusammensetzung des geborgenen Steins; sie bildet die Grundlage des Vorbeugeplans.' },
+      fr: { term: 'Analyse du calcul', definition: 'Étude de la composition chimique du calcul retiré ; elle fonde le plan de prévention des récidives.' },
+      ru: { term: 'Анализ камня', definition: 'Исследование химического состава извлечённого камня; на нём строится план профилактики рецидива.' },
+      ar: { term: 'تحليل الحصاة', definition: 'فحص التركيب الكيميائي للحصاة المستخرجة؛ وهو أساس خطة الوقاية من التكرار.' }
+    }
+  },
+  {
+    id: 'geyik-boynuzu-tas',
+    category: 'stones',
+    related: 'pcnl',
+    i18n: {
+      tr: { term: 'Geyik boynuzu taşı', definition: 'Böbreğin toplayıcı sistemini dolduran, dallanmış büyük taş; bırakıldığında böbrek işlevini kalıcı olarak bozabilir.' },
+      en: { term: 'Staghorn stone', definition: 'A large branched stone filling the collecting system of the kidney; left in place it can permanently impair kidney function.' },
+      de: { term: 'Ausgussstein', definition: 'Ein großer verzweigter Stein, der das Hohlsystem der Niere ausfüllt; belässt man ihn, kann er die Nierenfunktion dauerhaft schädigen.' },
+      fr: { term: 'Calcul coralliforme', definition: 'Gros calcul ramifié remplissant les cavités du rein ; laissé en place, il peut altérer définitivement la fonction rénale.' },
+      ru: { term: 'Коралловидный камень', definition: 'Крупный разветвлённый камень, заполняющий чашечно-лоханочную систему почки; оставленный, он может стойко нарушить функцию почки.' },
+      ar: { term: 'الحصاة المرجانية', definition: 'حصاة كبيرة متفرعة تملأ الجهاز المجمِّع في الكلية؛ وتركها قد يُفسد وظيفة الكلية بشكل دائم.' }
+    }
+  },
+  {
+    id: 'nefrostomi',
+    category: 'stones',
+    related: 'pcnl',
+    i18n: {
+      tr: { term: 'Nefrostomi', definition: 'Böbrekle cilt arasına yerleştirilen, idrarı dışarı alan dren; perkütan taş cerrahisi sonrası geçici olarak konabilir.' },
+      en: { term: 'Nephrostomy', definition: 'A drain placed between the kidney and the skin to carry urine out; it may be left temporarily after percutaneous stone surgery.' },
+      de: { term: 'Nephrostomie', definition: 'Eine zwischen Niere und Haut eingelegte Drainage zur Harnableitung; sie kann nach perkutaner Steinchirurgie vorübergehend verbleiben.' },
+      fr: { term: 'Néphrostomie', definition: 'Drain placé entre le rein et la peau pour évacuer les urines ; il peut être laissé temporairement après une chirurgie percutanée du calcul.' },
+      ru: { term: 'Нефростома', definition: 'Дренаж между почкой и кожей для отведения мочи; может временно оставаться после чрескожной операции по поводу камня.' },
+      ar: { term: 'فغر الكلية', definition: 'نزح يُوضَع بين الكلية والجلد لتصريف البول؛ وقد يُترك مؤقتًا بعد جراحة الحصى عبر الجلد.' }
+    }
+  },
+  {
+    id: 'erisim-kilifi',
+    category: 'stones',
+    related: 'rirs',
+    i18n: {
+      tr: { term: 'Üreteral erişim kılıfı', definition: 'RIRS sırasında üretere yerleştirilen ince kılıf; üreteri korur ve böbrek içi basıncı düşürmeye yardımcı olur.' },
+      en: { term: 'Ureteral access sheath', definition: 'A thin sheath placed in the ureter during RIRS; it protects the ureter and helps keep pressure inside the kidney down.' },
+      de: { term: 'Harnleiter-Zugangsschleuse', definition: 'Eine dünne Schleuse, die bei der RIRS in den Harnleiter eingelegt wird; sie schützt ihn und hilft, den Druck in der Niere niedrig zu halten.' },
+      fr: { term: 'Gaine d’accès urétérale', definition: 'Gaine fine placée dans l’uretère pendant une RIRS ; elle le protège et aide à maintenir une pression basse dans le rein.' },
+      ru: { term: 'Мочеточниковый кожух доступа', definition: 'Тонкий кожух, устанавливаемый в мочеточник при RIRS; защищает его и помогает удерживать низкое давление в почке.' },
+      ar: { term: 'غلافة الدخول الحالبية', definition: 'غلافة رفيعة تُوضَع في الحالب أثناء RIRS؛ تحمي الحالب وتساعد على خفض الضغط داخل الكلية.' }
+    }
+  },
+  {
+    id: 'medikal-ekspulsif',
+    category: 'stones',
+    related: 'bobrek-tasi',
+    i18n: {
+      tr: { term: 'Medikal ekspulsif tedavi', definition: 'Aşağı inmiş küçük taşın ilaçla düşürülmesini kolaylaştırmaya yönelik yaklaşım.' },
+      en: { term: 'Medical expulsive therapy', definition: 'An approach that uses medication to help a small stone that has moved down to pass on its own.' },
+      de: { term: 'Medikamentöse Steinaustreibung', definition: 'Ein Vorgehen, bei dem der Abgang eines kleinen, bereits abgewanderten Steins medikamentös erleichtert wird.' },
+      fr: { term: 'Traitement médical expulsif', definition: 'Approche visant à faciliter, par un médicament, l’expulsion d’un petit calcul déjà descendu.' },
+      ru: { term: 'Медикаментозная изгоняющая терапия', definition: 'Подход, при котором лекарство помогает самостоятельному отхождению небольшого спустившегося камня.' },
+      ar: { term: 'العلاج الدوائي الطارد', definition: 'نهج يُسهّل بالأدوية نزول حصاة صغيرة هبطت بالفعل.' }
+    }
+  },
+  {
+    id: 'urosepsis',
+    category: 'stones',
+    related: 'rirs',
+    i18n: {
+      tr: { term: 'Ürosepsis', definition: 'İdrar yolu enfeksiyonunun kana karışması; ateş ve titreme ile seyreder ve acil tedavi gerektirir.' },
+      en: { term: 'Urosepsis', definition: 'A urinary tract infection passing into the blood; it runs with fever and shivering and needs urgent treatment.' },
+      de: { term: 'Urosepsis', definition: 'Übertritt eines Harnwegsinfekts ins Blut; verläuft mit Fieber und Schüttelfrost und erfordert dringliche Behandlung.' },
+      fr: { term: 'Urosepsis', definition: 'Passage d’une infection urinaire dans le sang ; elle évolue avec fièvre et frissons et impose un traitement urgent.' },
+      ru: { term: 'Уросепсис', definition: 'Переход инфекции мочевых путей в кровь; протекает с лихорадкой и ознобом и требует срочного лечения.' },
+      ar: { term: 'الإنتان البولي', definition: 'انتقال التهاب المسالك البولية إلى الدم؛ يسير مع حمى وقشعريرة ويستلزم علاجًا عاجلًا.' }
+    }
+  },
+  {
+    id: 'kalsiyum-oksalat',
+    category: 'stones',
+    related: 'bobrek-tasi',
+    i18n: {
+      tr: { term: 'Kalsiyum oksalat taşı', definition: 'En sık görülen böbrek taşı türü; sıvı alımı ve beslenme düzeni ile tekrarı azaltılabilir.' },
+      en: { term: 'Calcium oxalate stone', definition: 'The most common type of kidney stone; recurrence can be reduced through fluid intake and diet.' },
+      de: { term: 'Kalziumoxalatstein', definition: 'Die häufigste Nierensteinart; das Wiederauftreten lässt sich über Trinkmenge und Ernährung verringern.' },
+      fr: { term: 'Calcul d’oxalate de calcium', definition: 'Type de calcul rénal le plus fréquent ; la récidive peut être réduite par l’hydratation et l’alimentation.' },
+      ru: { term: 'Оксалатно-кальциевый камень', definition: 'Самый частый вид камней почки; рецидив можно снизить питьевым режимом и питанием.' },
+      ar: { term: 'حصاة أكسالات الكالسيوم', definition: 'أكثر أنواع حصى الكلى شيوعًا؛ ويمكن تقليل تكرارها بشرب السوائل وتنظيم التغذية.' }
+    }
+  },
+  {
+    id: 'urik-asit-tasi',
+    category: 'stones',
+    related: 'bobrek-tasi',
+    i18n: {
+      tr: { term: 'Ürik asit taşı', definition: 'İdrarın fazla asitli olmasıyla ilişkili taş türü; bir kısmı ilaçla eritilebilir.' },
+      en: { term: 'Uric acid stone', definition: 'A stone type linked to urine that is too acidic; some can be dissolved with medication.' },
+      de: { term: 'Harnsäurestein', definition: 'Eine Steinart, die mit zu saurem Urin zusammenhängt; manche lassen sich medikamentös auflösen.' },
+      fr: { term: 'Calcul d’acide urique', definition: 'Type de calcul lié à des urines trop acides ; certains peuvent être dissous par un traitement.' },
+      ru: { term: 'Мочекислый камень', definition: 'Вид камней, связанный со слишком кислой мочой; часть из них можно растворить лекарствами.' },
+      ar: { term: 'حصاة حمض البول', definition: 'نوع من الحصى يرتبط بزيادة حموضة البول؛ وبعضها يمكن إذابته بالأدوية.' }
+    }
+  },
+  {
+    id: 'testosteron',
+    category: 'andrology',
+    related: 'erektil-disfonksiyon',
+    i18n: {
+      tr: { term: 'Testosteron', definition: 'Başlıca erkeklik hormonu; sabah ölçülür ve düşüklüğü belirti varsa anlam taşır.' },
+      en: { term: 'Testosterone', definition: 'The main male hormone; it is measured in the morning and a low level is meaningful only if there are symptoms.' },
+      de: { term: 'Testosteron', definition: 'Das wichtigste männliche Hormon; es wird morgens bestimmt, und ein niedriger Wert ist nur bei Beschwerden bedeutsam.' },
+      fr: { term: 'Testostérone', definition: 'Principale hormone masculine ; elle se dose le matin et un taux bas n’a de sens qu’en présence de symptômes.' },
+      ru: { term: 'Тестостерон', definition: 'Основной мужской гормон; измеряется утром, и низкий уровень значим только при наличии симптомов.' },
+      ar: { term: 'التستوستيرون', definition: 'الهرمون الذكري الرئيس؛ يُقاس صباحًا ولا يكون انخفاضه ذا دلالة إلا مع وجود أعراض.' }
+    }
+  },
+  {
+    id: 'hipogonadizm',
+    category: 'andrology',
+    related: 'erektil-disfonksiyon',
+    i18n: {
+      tr: { term: 'Hipogonadizm', definition: 'Testislerin yeterli testosteron üretememesi; halsizlik, istek azalması ve kas kaybı ile seyredebilir.' },
+      en: { term: 'Hypogonadism', definition: 'The testicles not producing enough testosterone; it can run with tiredness, reduced desire and loss of muscle.' },
+      de: { term: 'Hypogonadismus', definition: 'Die Hoden bilden nicht genug Testosteron; es kann mit Müdigkeit, nachlassendem Verlangen und Muskelabbau einhergehen.' },
+      fr: { term: 'Hypogonadisme', definition: 'Production insuffisante de testostérone par les testicules ; peut s’accompagner de fatigue, de baisse du désir et de fonte musculaire.' },
+      ru: { term: 'Гипогонадизм', definition: 'Недостаточная выработка тестостерона яичками; может сопровождаться утомляемостью, снижением влечения и потерей мышечной массы.' },
+      ar: { term: 'قصور الغدد التناسلية', definition: 'عدم إنتاج الخصيتين تستوستيرون كافيًا؛ وقد يصحبه تعب وقلة رغبة وفقدان كتلة عضلية.' }
+    }
+  },
+  {
+    id: 'pde5-inhibitoru',
+    category: 'andrology',
+    related: 'erektil-disfonksiyon',
+    i18n: {
+      tr: { term: 'PDE5 inhibitörü', definition: 'Sertleşme sorununda ilk basamak ilaç grubu; cinsel uyarı olmadan etki etmez ve nitrat kullananlarda kullanılamaz.' },
+      en: { term: 'PDE5 inhibitor', definition: 'The first-line group of medicines for erectile difficulty; it does not work without sexual stimulation and cannot be used by men taking nitrates.' },
+      de: { term: 'PDE5-Hemmer', definition: 'Die Medikamentengruppe der ersten Wahl bei Erektionsstörungen; sie wirkt nicht ohne sexuelle Stimulation und darf bei Nitrateinnahme nicht angewendet werden.' },
+      fr: { term: 'Inhibiteur de la PDE5', definition: 'Groupe de médicaments de première intention dans les troubles de l’érection ; sans stimulation sexuelle il est inefficace et il est contre-indiqué sous dérivés nitrés.' },
+      ru: { term: 'Ингибитор ФДЭ-5', definition: 'Группа препаратов первой линии при нарушении эрекции; без полового возбуждения не действует и противопоказана при приёме нитратов.' },
+      ar: { term: 'مثبط الفوسفوديستراز-5', definition: 'مجموعة أدوية الخط الأول في ضعف الانتصاب؛ لا تعمل من دون إثارة جنسية ولا تُستعمل عند متناولي النترات.' }
+    }
+  },
+  {
+    id: 'priapizm',
+    category: 'andrology',
+    related: 'erektil-disfonksiyon',
+    i18n: {
+      tr: { term: 'Priapizm', definition: 'Uzun süren ve ağrılı ereksiyon; acil değerlendirme gerektirir, geciktirilirse kalıcı hasar bırakabilir.' },
+      en: { term: 'Priapism', definition: 'A prolonged and painful erection; it needs urgent assessment and can cause lasting damage if delayed.' },
+      de: { term: 'Priapismus', definition: 'Eine anhaltende, schmerzhafte Erektion; sie erfordert eine dringliche Abklärung und kann bei Verzögerung bleibende Schäden hinterlassen.' },
+      fr: { term: 'Priapisme', definition: 'Érection prolongée et douloureuse ; elle impose une évaluation urgente et peut laisser des séquelles définitives en cas de retard.' },
+      ru: { term: 'Приапизм', definition: 'Длительная болезненная эрекция; требует срочной оценки и при промедлении может оставить стойкие повреждения.' },
+      ar: { term: 'القساح', definition: 'انتصاب مطوّل ومؤلم؛ يستدعي تقييمًا عاجلًا وقد يترك ضررًا دائمًا إن تأخر.' }
+    }
+  },
+  {
+    id: 'intrakavernozal-enjeksiyon',
+    category: 'andrology',
+    related: 'erektil-disfonksiyon',
+    i18n: {
+      tr: { term: 'İntrakavernozal enjeksiyon', definition: 'Hap tedavisine yanıt alınamadığında penis içine ince iğneyle ilaç uygulanması.' },
+      en: { term: 'Intracavernosal injection', definition: 'Giving medication into the penis with a fine needle when tablets do not work.' },
+      de: { term: 'Schwellkörperinjektion', definition: 'Gabe eines Medikaments mit einer feinen Nadel in den Penis, wenn Tabletten nicht wirken.' },
+      fr: { term: 'Injection intracaverneuse', definition: 'Administration d’un médicament dans la verge au moyen d’une aiguille fine lorsque les comprimés sont inefficaces.' },
+      ru: { term: 'Интракавернозная инъекция', definition: 'Введение препарата в половой член тонкой иглой, когда таблетки не помогают.' },
+      ar: { term: 'الحقن داخل الجسم الكهفي', definition: 'إعطاء الدواء داخل القضيب بإبرة رفيعة عند عدم استجابة الحبوب.' }
+    }
+  },
+  {
+    id: 'hidrosel',
+    category: 'andrology',
+    related: 'varikosel',
+    i18n: {
+      tr: { term: 'Hidrosel', definition: 'Testis çevresinde sıvı birikmesi; varikosel ameliyatının bilinen komplikasyonlarından biridir.' },
+      en: { term: 'Hydrocele', definition: 'A collection of fluid around the testicle; one of the known complications of varicocele surgery.' },
+      de: { term: 'Hydrozele', definition: 'Flüssigkeitsansammlung um den Hoden; eine der bekannten Komplikationen der Varikozelenoperation.' },
+      fr: { term: 'Hydrocèle', definition: 'Accumulation de liquide autour du testicule ; l’une des complications connues de la chirurgie de la varicocèle.' },
+      ru: { term: 'Гидроцеле', definition: 'Скопление жидкости вокруг яичка; одно из известных осложнений операции по поводу варикоцеле.' },
+      ar: { term: 'القيلة المائية', definition: 'تجمّع سائل حول الخصية؛ وهي من المضاعفات المعروفة لعملية دوالي الخصية.' }
+    }
+  },
+  {
+    id: 'testis-torsiyonu',
+    category: 'andrology',
+    i18n: {
+      tr: { term: 'Testis torsiyonu', definition: 'Testisin kendi etrafında dönerek kan akımının kesilmesi; saatler içinde müdahale gerektiren acil durumdur.' },
+      en: { term: 'Testicular torsion', definition: 'The testicle twisting on itself and cutting off its blood supply; an emergency requiring intervention within hours.' },
+      de: { term: 'Hodentorsion', definition: 'Der Hoden dreht sich um sich selbst und die Blutzufuhr wird unterbrochen; ein Notfall, der binnen Stunden behandelt werden muss.' },
+      fr: { term: 'Torsion testiculaire', definition: 'Le testicule tourne sur lui-même et son apport sanguin est interrompu ; urgence nécessitant une intervention en quelques heures.' },
+      ru: { term: 'Перекрут яичка', definition: 'Яичко перекручивается вокруг своей оси, и кровоснабжение прекращается; неотложное состояние, требующее вмешательства в течение часов.' },
+      ar: { term: 'التواء الخصية', definition: 'دوران الخصية حول نفسها وانقطاع تروية الدم عنها؛ حالة طارئة تستلزم تدخلًا خلال ساعات.' }
+    }
+  },
+  {
+    id: 'prematur-ejakulasyon',
+    category: 'andrology',
+    related: 'androloji',
+    i18n: {
+      tr: { term: 'Erken boşalma', definition: 'Boşalmanın istenenden çok daha kısa sürede gerçekleşmesi; davranışsal ve ilaç tedavileri vardır.' },
+      en: { term: 'Premature ejaculation', definition: 'Ejaculation occurring much sooner than wished; behavioural and medical treatments exist.' },
+      de: { term: 'Vorzeitiger Samenerguss', definition: 'Der Samenerguss tritt deutlich früher ein als gewünscht; es gibt verhaltensbezogene und medikamentöse Behandlungen.' },
+      fr: { term: 'Éjaculation précoce', definition: 'Éjaculation survenant bien plus tôt que souhaité ; des traitements comportementaux et médicamenteux existent.' },
+      ru: { term: 'Преждевременная эякуляция', definition: 'Семяизвержение наступает значительно раньше желаемого; существуют поведенческие и лекарственные методы лечения.' },
+      ar: { term: 'سرعة القذف', definition: 'حدوث القذف قبل الوقت المرغوب بكثير؛ وله علاجات سلوكية ودوائية.' }
+    }
+  },
+  {
+    id: 'vazektomi',
+    category: 'andrology',
+    related: 'androloji',
+    i18n: {
+      tr: { term: 'Vazektomi', definition: 'Sperm kanallarının bağlanmasıyla yapılan kalıcı erkek doğum kontrolü yöntemi.' },
+      en: { term: 'Vasectomy', definition: 'A permanent method of male contraception in which the sperm ducts are tied.' },
+      de: { term: 'Vasektomie', definition: 'Eine dauerhafte Methode der männlichen Empfängnisverhütung, bei der die Samenleiter unterbunden werden.' },
+      fr: { term: 'Vasectomie', definition: 'Méthode définitive de contraception masculine consistant à lier les canaux déférents.' },
+      ru: { term: 'Вазэктомия', definition: 'Постоянный метод мужской контрацепции, при котором перевязывают семявыносящие протоки.' },
+      ar: { term: 'قطع القناة المنوية', definition: 'وسيلة دائمة لمنع الحمل عند الرجل بربط القنوات المنوية.' }
+    }
+  },
+  {
+    id: 'aquadisseksiyon',
+    category: 'andrology',
+    related: 'penil-protez',
+    i18n: {
+      tr: { term: 'Aquadisseksiyon', definition: 'Penil protez cerrahisinde dokuların sıvı basıncıyla nazikçe ayrılması; seçilmiş olgularda uygulanan bir tekniktir.' },
+      en: { term: 'Aquadissection', definition: 'Gently separating the tissues with fluid pressure during penile prosthesis surgery; a technique used in selected cases.' },
+      de: { term: 'Aquadissektion', definition: 'Schonendes Trennen der Gewebe mit Flüssigkeitsdruck bei der Penisprothesenoperation; eine in ausgewählten Fällen eingesetzte Technik.' },
+      fr: { term: 'Aquadissection', definition: 'Séparation douce des tissus par pression de liquide lors de la pose d’une prothèse pénienne ; technique employée dans des cas sélectionnés.' },
+      ru: { term: 'Аквадиссекция', definition: 'Бережное разделение тканей давлением жидкости при операции фаллопротезирования; методика, применяемая в отобранных случаях.' },
+      ar: { term: 'التسليخ المائي', definition: 'فصل الأنسجة برفق بضغط السائل أثناء جراحة دعامة القضيب؛ تقنية تُطبَّق في حالات مختارة.' }
+    }
+  },
+  {
+    id: 'tese',
+    category: 'andrology',
+    related: 'androloji',
+    i18n: {
+      tr: { term: 'TESE', definition: 'Menide sperm bulunmadığında testis dokusundan sperm aranması işlemi.' },
+      en: { term: 'TESE', definition: 'A procedure to look for sperm in testicular tissue when none is found in the semen.' },
+      de: { term: 'TESE', definition: 'Ein Eingriff, bei dem im Hodengewebe nach Spermien gesucht wird, wenn im Ejakulat keine gefunden werden.' },
+      fr: { term: 'TESE', definition: 'Geste consistant à rechercher des spermatozoïdes dans le tissu testiculaire lorsqu’il n’y en a pas dans le sperme.' },
+      ru: { term: 'TESE', definition: 'Процедура поиска сперматозоидов в ткани яичка, когда в сперме их нет.' },
+      ar: { term: 'TESE', definition: 'إجراء للبحث عن الحيوانات المنوية في نسيج الخصية عند عدم وجودها في السائل المنوي.' }
+    }
+  },
+  {
+    id: 'sakral-noromodulasyon',
+    category: 'femaleUrology',
+    related: 'kadin-urolojisi',
+    i18n: {
+      tr: { term: 'Sakral nöromodülasyon', definition: 'Mesaneyi kontrol eden sinirlerin hafif elektrik uyarısıyla düzenlenmesi; ilaçla geçmeyen aşırı aktif mesanede gündeme gelir.' },
+      en: { term: 'Sacral neuromodulation', definition: 'Regulating the nerves that control the bladder with a mild electrical signal; it comes into consideration in overactive bladder that does not settle with medication.' },
+      de: { term: 'Sakrale Neuromodulation', definition: 'Regulierung der blasensteuernden Nerven durch einen schwachen elektrischen Reiz; kommt bei überaktiver Blase infrage, die auf Medikamente nicht anspricht.' },
+      fr: { term: 'Neuromodulation sacrée', definition: 'Régulation des nerfs qui contrôlent la vessie par une faible stimulation électrique ; envisagée dans la vessie hyperactive résistante aux médicaments.' },
+      ru: { term: 'Сакральная нейромодуляция', definition: 'Регулирование нервов, управляющих мочевым пузырём, слабым электрическим сигналом; рассматривается при гиперактивном мочевом пузыре, не поддающемся лекарствам.' },
+      ar: { term: 'التنظيم العصبي العجزي', definition: 'ضبط الأعصاب المتحكمة في المثانة بتنبيه كهربائي خفيف؛ ويُطرح في فرط نشاط المثانة الذي لا يستجيب للأدوية.' }
+    }
+  },
+  {
+    id: 'pelvik-taban-egzersizi',
+    category: 'femaleUrology',
+    related: 'kadin-urolojisi',
+    i18n: {
+      tr: { term: 'Pelvik taban egzersizi', definition: 'İdrar tutmaya yardımcı kasların düzenli çalıştırılması; stres tipi kaçırmada ilk basamak yaklaşımdır.' },
+      en: { term: 'Pelvic floor exercise', definition: 'Working the muscles that help hold urine on a regular basis; the first-step approach in stress leakage.' },
+      de: { term: 'Beckenbodentraining', definition: 'Regelmäßiges Training der Muskeln, die das Halten des Urins unterstützen; der erste Schritt bei Belastungsinkontinenz.' },
+      fr: { term: 'Rééducation périnéale', definition: 'Travail régulier des muscles qui aident à retenir les urines ; première étape dans les fuites d’effort.' },
+      ru: { term: 'Упражнения для мышц тазового дна', definition: 'Регулярная тренировка мышц, помогающих удерживать мочу; первый шаг при стрессовом недержании.' },
+      ar: { term: 'تمارين قاع الحوض', definition: 'تمرين العضلات التي تساعد على حبس البول بانتظام؛ وهي الخطوة الأولى في سلس الجهد.' }
+    }
+  },
+  {
+    id: 'mesane-egitimi',
+    category: 'femaleUrology',
+    related: 'kadin-urolojisi',
+    i18n: {
+      tr: { term: 'Mesane eğitimi', definition: 'İdrara çıkma aralıklarının kademeli olarak uzatılması; aşırı aktif mesanede davranışsal tedavinin parçasıdır.' },
+      en: { term: 'Bladder training', definition: 'Gradually lengthening the intervals between visits to the toilet; part of behavioural treatment in overactive bladder.' },
+      de: { term: 'Blasentraining', definition: 'Schrittweises Verlängern der Abstände zwischen den Toilettengängen; Teil der Verhaltenstherapie bei überaktiver Blase.' },
+      fr: { term: 'Rééducation vésicale', definition: 'Allongement progressif des intervalles entre les mictions ; élément du traitement comportemental de la vessie hyperactive.' },
+      ru: { term: 'Тренировка мочевого пузыря', definition: 'Постепенное увеличение промежутков между мочеиспусканиями; часть поведенческого лечения гиперактивного мочевого пузыря.' },
+      ar: { term: 'تدريب المثانة', definition: 'إطالة الفواصل بين مرات التبول تدريجيًا؛ وهو جزء من العلاج السلوكي في فرط نشاط المثانة.' }
+    }
+  },
+  {
+    id: 'mesane-botoks',
+    category: 'femaleUrology',
+    related: 'kadin-urolojisi',
+    i18n: {
+      tr: { term: 'Mesaneye botulinum toksini', definition: 'İlaca yanıt vermeyen aşırı aktif mesanede mesane kasına uygulanan, etkisi geçici olan tedavi.' },
+      en: { term: 'Botulinum toxin into the bladder', definition: 'A treatment applied to the bladder muscle in overactive bladder that does not respond to medication; its effect is temporary.' },
+      de: { term: 'Botulinumtoxin in die Blase', definition: 'Eine Behandlung des Blasenmuskels bei überaktiver Blase ohne Ansprechen auf Medikamente; die Wirkung ist vorübergehend.' },
+      fr: { term: 'Toxine botulique intravésicale', definition: 'Traitement appliqué au muscle vésical dans la vessie hyperactive résistante aux médicaments ; son effet est temporaire.' },
+      ru: { term: 'Ботулинический токсин в мочевой пузырь', definition: 'Лечение, вводимое в мышцу мочевого пузыря при гиперактивном пузыре без ответа на лекарства; эффект временный.' },
+      ar: { term: 'توكسين البوتولينوم في المثانة', definition: 'علاج يُطبَّق على عضلة المثانة في فرط النشاط غير المستجيب للأدوية؛ وأثره مؤقت.' }
+    }
+  },
+  {
+    id: 'interstisyel-sistit',
+    category: 'femaleUrology',
+    i18n: {
+      tr: { term: 'İnterstisyel sistit', definition: 'Enfeksiyon olmadan mesanede ağrı ve sık idrara çıkma ile seyreden kronik durum.' },
+      en: { term: 'Interstitial cystitis', definition: 'A chronic condition with bladder pain and frequency in the absence of infection.' },
+      de: { term: 'Interstitielle Zystitis', definition: 'Ein chronischer Zustand mit Blasenschmerz und häufigem Harndrang ohne Infektion.' },
+      fr: { term: 'Cystite interstitielle', definition: 'Affection chronique associant douleur vésicale et pollakiurie en l’absence d’infection.' },
+      ru: { term: 'Интерстициальный цистит', definition: 'Хроническое состояние с болью в мочевом пузыре и учащённым мочеиспусканием при отсутствии инфекции.' },
+      ar: { term: 'التهاب المثانة الخلالي', definition: 'حالة مزمنة فيها ألم في المثانة وتبول متكرر من دون عدوى.' }
+    }
+  },
+  {
+    id: 'idrar-yolu-enfeksiyonu',
+    category: 'general',
+    i18n: {
+      tr: { term: 'İdrar yolu enfeksiyonu', definition: 'İdrar yollarında bakteri üremesi; yanma, sık idrara çıkma ve bazen ateşle seyreder.' },
+      en: { term: 'Urinary tract infection', definition: 'Bacterial growth in the urinary tract; it runs with burning, frequency and sometimes fever.' },
+      de: { term: 'Harnwegsinfekt', definition: 'Bakterienwachstum in den Harnwegen; verläuft mit Brennen, häufigem Harndrang und mitunter Fieber.' },
+      fr: { term: 'Infection urinaire', definition: 'Prolifération bactérienne dans les voies urinaires ; elle évolue avec brûlures, pollakiurie et parfois fièvre.' },
+      ru: { term: 'Инфекция мочевых путей', definition: 'Рост бактерий в мочевых путях; сопровождается жжением, учащённым мочеиспусканием и иногда лихорадкой.' },
+      ar: { term: 'التهاب المسالك البولية', definition: 'نمو جراثيم في المسالك البولية؛ يسير مع حرقة وتبول متكرر وأحيانًا حمى.' }
+    }
+  },
+  {
+    id: 'idrar-kulturu',
+    category: 'general',
+    i18n: {
+      tr: { term: 'İdrar kültürü', definition: 'İdrarda bakteri olup olmadığını ve hangi antibiyotiğe duyarlı olduğunu gösteren test; taş cerrahisi öncesi zorunludur.' },
+      en: { term: 'Urine culture', definition: 'A test showing whether bacteria are present in the urine and which antibiotic they respond to; it is compulsory before stone surgery.' },
+      de: { term: 'Urinkultur', definition: 'Ein Test, der zeigt, ob Bakterien im Urin sind und auf welches Antibiotikum sie ansprechen; vor Steinchirurgie zwingend.' },
+      fr: { term: 'ECBU (culture d’urine)', definition: 'Examen montrant la présence de bactéries dans les urines et l’antibiotique auquel elles répondent ; obligatoire avant une chirurgie du calcul.' },
+      ru: { term: 'Посев мочи', definition: 'Анализ, показывающий наличие бактерий в моче и их чувствительность к антибиотикам; обязателен перед операцией по поводу камня.' },
+      ar: { term: 'زراعة البول', definition: 'فحص يبيّن وجود جراثيم في البول وأي مضاد حيوي تستجيب له؛ وهو إلزامي قبل جراحة الحصى.' }
+    }
+  },
+  {
+    id: 'piyeloplasti-terim',
+    category: 'reconstructive',
+    related: 'piyeloplasti',
+    i18n: {
+      tr: { term: 'Piyeloplasti', definition: 'Böbrek ile idrar borusu birleşim yerindeki darlığın cerrahi olarak genişletilmesi.' },
+      en: { term: 'Pyeloplasty', definition: 'Surgical widening of the narrowing where the kidney joins the ureter.' },
+      de: { term: 'Nierenbeckenplastik', definition: 'Operative Erweiterung der Enge am Übergang von Niere zu Harnleiter.' },
+      fr: { term: 'Pyéloplastie', definition: 'Élargissement chirurgical du rétrécissement à la jonction entre le rein et l’uretère.' },
+      ru: { term: 'Пиелопластика', definition: 'Хирургическое расширение сужения в месте перехода почки в мочеточник.' },
+      ar: { term: 'رأب الحويضة', definition: 'توسيع جراحي للتضيّق في موضع اتصال الكلية بالحالب.' }
+    }
+  },
+  {
+    id: 'ureteroneosistostomi',
+    category: 'reconstructive',
+    related: 'ureter-rekonstruksiyonu',
+    i18n: {
+      tr: { term: 'Üreteroneosistostomi', definition: 'İdrar borusunun mesaneye yeniden ağızlaştırılması; alt uç darlık ve yaralanmalarında uygulanır.' },
+      en: { term: 'Ureteroneocystostomy', definition: 'Reimplanting the ureter into the bladder; used for narrowing and injury at the lower end.' },
+      de: { term: 'Ureterneozystostomie', definition: 'Neueinpflanzung des Harnleiters in die Blase; bei Engen und Verletzungen am unteren Ende.' },
+      fr: { term: 'Urétéro-néocystostomie', definition: 'Réimplantation de l’uretère dans la vessie ; utilisée en cas de sténose ou de lésion de l’extrémité inférieure.' },
+      ru: { term: 'Уретеронеоцистостомия', definition: 'Повторная имплантация мочеточника в мочевой пузырь; применяется при сужении и повреждении нижнего отдела.' },
+      ar: { term: 'مفاغرة الحالب بالمثانة', definition: 'إعادة زرع الحالب في المثانة؛ وتُطبَّق في تضيّق الطرف السفلي وإصاباته.' }
+    }
+  },
+  {
+    id: 'psoas-hitch',
+    category: 'reconstructive',
+    related: 'ureter-rekonstruksiyonu',
+    i18n: {
+      tr: { term: 'Psoas hitch', definition: 'Mesanenin yukarı doğru askıya alınarak kısalan üretere ulaştırılması tekniği.' },
+      en: { term: 'Psoas hitch', definition: 'A technique in which the bladder is hitched upwards to reach a shortened ureter.' },
+      de: { term: 'Psoas-Hitch', definition: 'Eine Technik, bei der die Blase nach oben fixiert wird, um einen verkürzten Harnleiter zu erreichen.' },
+      fr: { term: 'Psoas hitch', definition: 'Technique consistant à amarrer la vessie vers le haut pour rejoindre un uretère raccourci.' },
+      ru: { term: 'Psoas hitch', definition: 'Методика подшивания мочевого пузыря кверху, чтобы достичь укороченного мочеточника.' },
+      ar: { term: 'تثبيت المثانة إلى العضلة القطنية', definition: 'تقنية تُرفَع فيها المثانة إلى الأعلى للوصول إلى حالب قصير.' }
+    }
+  },
+  {
+    id: 'ileal-interpozisyon',
+    category: 'reconstructive',
+    related: 'ureter-rekonstruksiyonu',
+    i18n: {
+      tr: { term: 'İleal interpozisyon', definition: 'Uzun üreter kayıplarında ince bağırsaktan bir segmentin idrar yolu olarak araya yerleştirilmesi.' },
+      en: { term: 'Ileal interposition', definition: 'Placing a segment of small bowel into the urinary tract to bridge a long loss of ureter.' },
+      de: { term: 'Ileuminterposition', definition: 'Einsetzen eines Dünndarmsegments als Harnweg zur Überbrückung eines langen Harnleiterverlusts.' },
+      fr: { term: 'Interposition iléale', definition: 'Interposition d’un segment d’intestin grêle comme voie urinaire pour combler une perte urétérale étendue.' },
+      ru: { term: 'Илеальная интерпозиция', definition: 'Вставка сегмента тонкой кишки в мочевые пути для замещения протяжённого дефекта мочеточника.' },
+      ar: { term: 'الإقحام اللفائفي', definition: 'وضع قطعة من الأمعاء الدقيقة كمجرى بولي لسدّ فقد طويل في الحالب.' }
+    }
+  },
+  {
+    id: 'anastomoz',
+    category: 'reconstructive',
+    i18n: {
+      tr: { term: 'Anastomoz', definition: 'İki boru şeklindeki yapının cerrahi olarak birbirine ağızlaştırılması.' },
+      en: { term: 'Anastomosis', definition: 'Surgically joining two tube-shaped structures to each other.' },
+      de: { term: 'Anastomose', definition: 'Operatives Verbinden zweier röhrenförmiger Strukturen miteinander.' },
+      fr: { term: 'Anastomose', definition: 'Raccordement chirurgical de deux structures tubulaires.' },
+      ru: { term: 'Анастомоз', definition: 'Хирургическое соединение двух трубчатых структур между собой.' },
+      ar: { term: 'المفاغرة', definition: 'وصل بنيتين أنبوبيتين جراحيًا إحداهما بالأخرى.' }
+    }
+  },
+  {
+    id: 'radikal-nefrektomi',
+    category: 'general',
+    related: 'uroonkoloji',
+    i18n: {
+      tr: { term: 'Radikal nefrektomi', definition: 'Böbrek tümörlerinde böbreğin tamamının çıkarılması; tümör büyükse veya yerleşimi uygun değilse tercih edilir.' },
+      en: { term: 'Radical nephrectomy', definition: 'Removal of the whole kidney in kidney tumours; preferred when the tumour is large or unsuitably placed.' },
+      de: { term: 'Radikale Nephrektomie', definition: 'Entfernung der ganzen Niere bei Nierentumoren; bevorzugt, wenn der Tumor groß oder ungünstig gelegen ist.' },
+      fr: { term: 'Néphrectomie radicale', definition: 'Ablation du rein entier en cas de tumeur rénale ; préférée lorsque la tumeur est volumineuse ou mal située.' },
+      ru: { term: 'Радикальная нефрэктомия', definition: 'Удаление всей почки при опухолях почки; предпочтительна при крупной или неудобно расположенной опухоли.' },
+      ar: { term: 'استئصال الكلية الجذري', definition: 'إزالة الكلية كاملة في أورام الكلية؛ ويُفضَّل عندما يكون الورم كبيرًا أو موضعه غير مناسب.' }
+    }
+  },
+  {
+    id: 'tur-mesane',
+    category: 'general',
+    related: 'uroonkoloji',
+    i18n: {
+      tr: { term: 'TUR-M (mesane tümörü rezeksiyonu)', definition: 'Mesane tümörünün idrar yolundan girilerek alınması; hem tedavi hem evreleme amacı taşır.' },
+      en: { term: 'TURBT (bladder tumour resection)', definition: 'Removing a bladder tumour through the urinary passage; it serves both treatment and staging.' },
+      de: { term: 'TUR-B (Blasentumorresektion)', definition: 'Entfernung eines Blasentumors über die Harnröhre; dient sowohl der Behandlung als auch der Stadienbestimmung.' },
+      fr: { term: 'RTUV (résection de tumeur de vessie)', definition: 'Ablation d’une tumeur de vessie par les voies naturelles ; elle sert à la fois au traitement et à la stadification.' },
+      ru: { term: 'ТУР мочевого пузыря', definition: 'Удаление опухоли мочевого пузыря через мочеиспускательный канал; служит и лечению, и стадированию.' },
+      ar: { term: 'استئصال ورم المثانة عبر الإحليل', definition: 'إزالة ورم المثانة بالدخول عبر المجرى البولي؛ ويخدم العلاج وتحديد المرحلة معًا.' }
+    }
+  },
+  {
+    id: 'bcg-tedavisi',
+    category: 'general',
+    related: 'uroonkoloji',
+    i18n: {
+      tr: { term: 'Mesane içi BCG', definition: 'Yüzeyel mesane tümörlerinde tekrarı azaltmak için mesane içine uygulanan bağışıklık tedavisi.' },
+      en: { term: 'Intravesical BCG', definition: 'An immune treatment instilled into the bladder to reduce recurrence in superficial bladder tumours.' },
+      de: { term: 'Intravesikales BCG', definition: 'Eine in die Blase eingebrachte Immuntherapie zur Verringerung von Rückfällen bei oberflächlichen Blasentumoren.' },
+      fr: { term: 'BCG intravésical', definition: 'Immunothérapie instillée dans la vessie pour réduire les récidives des tumeurs superficielles.' },
+      ru: { term: 'Внутрипузырная БЦЖ', definition: 'Иммунотерапия, вводимая в мочевой пузырь для снижения рецидивов поверхностных опухолей.' },
+      ar: { term: 'BCG داخل المثانة', definition: 'علاج مناعي يُقطَّر داخل المثانة لتقليل تكرار الأورام السطحية.' }
+    }
+  },
+  {
+    id: 'kreatinin',
+    category: 'general',
+    i18n: {
+      tr: { term: 'Kreatinin', definition: 'Böbrek işlevi hakkında fikir veren kan değeri; yükselmesi böbrek işlevinin azaldığına işaret edebilir.' },
+      en: { term: 'Creatinine', definition: 'A blood value giving an idea of kidney function; a rise can indicate reduced kidney function.' },
+      de: { term: 'Kreatinin', definition: 'Ein Blutwert, der Aufschluss über die Nierenfunktion gibt; ein Anstieg kann auf eine verminderte Nierenfunktion hinweisen.' },
+      fr: { term: 'Créatinine', definition: 'Valeur sanguine renseignant sur la fonction rénale ; son élévation peut indiquer une baisse de cette fonction.' },
+      ru: { term: 'Креатинин', definition: 'Показатель крови, дающий представление о функции почек; его повышение может указывать на её снижение.' },
+      ar: { term: 'الكرياتينين', definition: 'قيمة دموية تعطي فكرة عن وظيفة الكلى؛ وارتفاعها قد يدل على تراجعها.' }
+    }
+  },
+  {
+    id: 'spinal-anestezi',
+    category: 'general',
+    i18n: {
+      tr: { term: 'Spinal anestezi', definition: 'Belden yapılan iğneyle vücudun alt yarısının uyuşturulması; hasta uyanıktır.' },
+      en: { term: 'Spinal anaesthesia', definition: 'Numbing the lower half of the body with an injection in the back; the patient stays awake.' },
+      de: { term: 'Spinalanästhesie', definition: 'Betäubung der unteren Körperhälfte durch eine Injektion im Rücken; der Patient bleibt wach.' },
+      fr: { term: 'Rachianesthésie', definition: 'Anesthésie de la moitié inférieure du corps par une injection dans le dos ; le patient reste éveillé.' },
+      ru: { term: 'Спинальная анестезия', definition: 'Обезболивание нижней половины тела инъекцией в поясницу; пациент остаётся в сознании.' },
+      ar: { term: 'التخدير النصفي', definition: 'تخدير النصف السفلي من الجسم بحقنة في الظهر؛ ويبقى المريض مستيقظًا.' }
+    }
+  },
+  {
+    id: 'antibiyotik-profilaksisi',
+    category: 'general',
+    i18n: {
+      tr: { term: 'Antibiyotik profilaksisi', definition: 'İşlem öncesi enfeksiyonu önlemek amacıyla tek doz veya kısa süreli antibiyotik verilmesi.' },
+      en: { term: 'Antibiotic prophylaxis', definition: 'Giving a single dose or short course of antibiotic before a procedure to prevent infection.' },
+      de: { term: 'Antibiotikaprophylaxe', definition: 'Gabe einer Einzeldosis oder kurzen Antibiotikagabe vor einem Eingriff zur Infektionsvermeidung.' },
+      fr: { term: 'Antibioprophylaxie', definition: 'Administration d’une dose unique ou d’une courte cure d’antibiotique avant un geste afin de prévenir l’infection.' },
+      ru: { term: 'Антибиотикопрофилактика', definition: 'Назначение однократной дозы или короткого курса антибиотика перед вмешательством для предотвращения инфекции.' },
+      ar: { term: 'الوقاية بالمضادات الحيوية', definition: 'إعطاء جرعة واحدة أو دورة قصيرة من المضاد الحيوي قبل الإجراء لمنع العدوى.' }
+    }
+  },
+  {
+    id: 'komplikasyon',
+    category: 'general',
+    i18n: {
+      tr: { term: 'Komplikasyon', definition: 'Bir işlemin planlanan seyri dışında gelişen istenmeyen durum; her girişimde belirli bir olasılıkla vardır.' },
+      en: { term: 'Complication', definition: 'An unwanted event outside the planned course of a procedure; every intervention carries a certain probability of one.' },
+      de: { term: 'Komplikation', definition: 'Ein unerwünschtes Ereignis außerhalb des geplanten Verlaufs eines Eingriffs; bei jedem Eingriff mit einer gewissen Wahrscheinlichkeit möglich.' },
+      fr: { term: 'Complication', definition: 'Événement indésirable survenant en dehors du déroulement prévu d’un geste ; toute intervention en comporte une certaine probabilité.' },
+      ru: { term: 'Осложнение', definition: 'Нежелательное событие вне запланированного течения вмешательства; оно возможно с определённой вероятностью при любом вмешательстве.' },
+      ar: { term: 'المضاعفة', definition: 'حدث غير مرغوب خارج المسار المخطط للإجراء؛ وهو وارد باحتمال معيّن في كل تدخل.' }
     }
   }
 ];

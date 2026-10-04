@@ -5,6 +5,7 @@ import { siteConfig } from '@/config/site';
 import { features } from '@/config/features';
 import { treatmentSlugs } from '@/content/treatments';
 import { publishedPosts } from '@/content/blog';
+import { countries } from '@/content/countries';
 
 /** Tüm diller ve içerik yolları için otomatik sitemap (lokalize slug'larla). */
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -90,5 +91,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticEntries, ...treatmentEntries];
+  /**
+   * ÜLKE SAYFALARI — yalnızca yayımlandıkları dillerde (prompt m.4.5).
+   * /tr'de hiç yer almaz; hreflang de yalnızca o ülkenin gerçekten
+   * yayımlandığı dilleri listeler (var olmayan dile hreflang verilmez).
+   */
+  const countryEntries = countries.flatMap((c) =>
+    c.locales
+      .filter((l) => c.i18n[l])
+      .map((locale) => {
+        const href = {
+          pathname: '/uluslararasi-hasta/ulke/[slug]' as const,
+          params: { slug: c.slug }
+        };
+        return {
+          url: `${base}${getPathname({ locale, href })}`,
+          lastModified: now,
+          changeFrequency: 'monthly' as const,
+          priority: 0.6,
+          alternates: {
+            languages: {
+              ...Object.fromEntries(
+                c.locales
+                  .filter((l) => c.i18n[l])
+                  .map((l) => [l, `${base}${getPathname({ locale: l, href })}`])
+              ),
+              ...(c.locales.includes('en')
+                ? { 'x-default': `${base}${getPathname({ locale: 'en', href })}` }
+                : {})
+            }
+          }
+        };
+      })
+  );
+
+  return [...staticEntries, ...treatmentEntries, ...countryEntries];
 }

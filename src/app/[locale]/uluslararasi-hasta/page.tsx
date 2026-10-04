@@ -7,6 +7,7 @@ import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { Icon } from '@/components/Icon';
 import { Link } from '@/i18n/navigation';
 import { resolveInternationalFaq } from '@/content/internationalFaq';
+import { countriesForLocale } from '@/content/countries';
 import { JsonLd } from '@/components/JsonLd';
 
 export async function generateMetadata({
@@ -32,6 +33,18 @@ export default async function ProcessPage({
   setRequestLocale(locale);
   const t = await getTranslations('Process');
   const tc = await getTranslations('Common');
+  const tCountry = await getTranslations('Country');
+
+  // /tr'de boş döner — ülke sayfaları yalnızca yabancı dillerde yayımlanır.
+  const countryList = countriesForLocale(locale);
+  // Ülke adını okuyucunun dilinde göster (ISO kodundan).
+  const regionName = (iso: string, loc: string) => {
+    try {
+      return new Intl.DisplayNames([loc], { type: 'region' }).of(iso) ?? iso;
+    } catch {
+      return iso;
+    }
+  };
 
   const steps = ['s1', 's2', 's3', 's4', 's5'] as const;
   const faqs = resolveInternationalFaq(locale);
@@ -103,6 +116,30 @@ export default async function ProcessPage({
           <p className="mt-3 max-w-3xl text-muted">{t('visaBody')}</p>
           <p className="mt-3 text-xs text-muted">{t('visaDisclaimer')}</p>
         </section>
+
+        {/* ÜLKE SAYFALARI — /tr'de boş döner, bölüm hiç render edilmez. */}
+        {countryList.length > 0 && (
+          <section className="mt-14">
+            <h2 className="mb-2 text-xl font-bold md:text-2xl">{tCountry('listTitle')}</h2>
+            <p className="mb-6 text-sm text-muted">{tCountry('listBody')}</p>
+            <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {countryList.map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    href={{
+                      pathname: '/uluslararasi-hasta/ulke/[slug]',
+                      params: { slug: c.slug }
+                    }}
+                    className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface px-4 py-3 text-sm font-medium transition-colors hover:border-primary/40 hover:bg-surface-2"
+                  >
+                    {regionName(c.iso, locale)}
+                    <Icon name="arrow" size={15} className="shrink-0 text-muted rtl:rotate-180" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {/* SSS — süreç, ödeme, seyahat, komplikasyon ve takip (prompt m.4.5) */}
         {faqs.length > 0 && (

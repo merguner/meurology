@@ -67,6 +67,17 @@ export const pathnames = {
     ar: '/international-patients',
     fr: '/patients-internationaux'
   },
+  // Ülke sayfaları yalnızca yabancı dillerde yayımlanır (prompt m.4.5).
+  // tr yolu yine de tanımlıdır çünkü next-intl her anahtar için tüm dilleri
+  // bekler; /tr altında sayfa ÜRETİLMEZ (generateStaticParams tr'yi atlar).
+  '/uluslararasi-hasta/ulke/[slug]': {
+    tr: '/uluslararasi-hasta/ulke/[slug]',
+    en: '/international-patients/country/[slug]',
+    de: '/internationale-patienten/land/[slug]',
+    ru: '/international-patients/country/[slug]',
+    ar: '/international-patients/country/[slug]',
+    fr: '/patients-internationaux/pays/[slug]'
+  },
   '/deneyimler': {
     tr: '/deneyimler',
     en: '/experiences',
@@ -146,7 +157,10 @@ export const pathnames = {
 /** Tüm route anahtarları. */
 export type AppPathname = keyof typeof pathnames;
 /** Parametresiz (static) route anahtarları — doğrudan <Link href> için güvenli. */
-export type StaticPathname = Exclude<AppPathname, '/tedaviler/[slug]' | '/blog/[slug]'>;
+export type StaticPathname = Exclude<
+  AppPathname,
+  '/tedaviler/[slug]' | '/blog/[slug]' | '/uluslararasi-hasta/ulke/[slug]'
+>;
 
 export const routing = defineRouting({
   locales,

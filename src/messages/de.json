@@ -311,5 +311,22 @@
     "policyLink": "Cookie-Richtlinie",
     "accept": "Akzeptieren",
     "reject": "Ablehnen"
+  },
+  "Country": {
+    "quickFacts": "Kurzinformationen",
+    "flightTime": "Flugdauer",
+    "routes": "Flugmöglichkeiten",
+    "language": "Sprache des Gesprächs",
+    "payment": "Zahlung",
+    "visaTitle": "Visum",
+    "visaBody": "Visumregeln richten sich nach der Art des Reisepasses und werden von Zeit zu Zeit aktualisiert. Da falsche Angaben Sie am Flughafen stranden lassen könnten, nennen wir die Regel hier nicht; prüfen Sie Ihre Lage bei der offiziellen Quelle.",
+    "visaOfficial": "Türkisches Außenministerium — Visuminformationen",
+    "visaEvisa": "e-Visum beantragen",
+    "faqTitle": "Häufige Fragen",
+    "ctaTitle": "Lassen Sie uns Ihre Unterlagen prüfen",
+    "ctaBody": "Wenn Sie Laborwerte, Bildgebung oder einen Pathologiebefund haben, senden Sie diese vorab — so vermeiden Sie unnötige Wiederholungsuntersuchungen.",
+    "backTo": "Zurück zur Seite für internationale Patienten:",
+    "listTitle": "Informationen für Ihr Land",
+    "listBody": "Flüge, Sprache, Zahlung und die übliche Aufenthaltsdauer unterscheiden sich von Land zu Land. Sehen Sie die Seite für Ihr Land an."
   }
 }

@@ -311,5 +311,22 @@
     "policyLink": "Cookie Policy",
     "accept": "Accept",
     "reject": "Decline"
+  },
+  "Country": {
+    "quickFacts": "Quick facts",
+    "flightTime": "Flight time",
+    "routes": "Flight options",
+    "language": "Language of the consultation",
+    "payment": "Payment",
+    "visaTitle": "Visa",
+    "visaBody": "Visa rules vary with the type of passport and are updated from time to time. Because wrong information could leave you stranded at the airport, we do not state the rule here; check your own position with the official source.",
+    "visaOfficial": "Turkish Ministry of Foreign Affairs — visa information",
+    "visaEvisa": "e-Visa application",
+    "faqTitle": "Frequently asked questions",
+    "ctaTitle": "Let us review your file",
+    "ctaBody": "If you have test results, imaging or a pathology report, share them in advance and avoid having investigations repeated unnecessarily.",
+    "backTo": "Back to the international patients page:",
+    "listTitle": "Information for your country",
+    "listBody": "Flights, language, payment and the typical length of stay differ from country to country. See the page for your own country."
   }
 }

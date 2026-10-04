@@ -311,5 +311,22 @@
     "policyLink": "Politique cookies",
     "accept": "Accepter",
     "reject": "Refuser"
+  },
+  "Country": {
+    "quickFacts": "Informations clés",
+    "flightTime": "Durée du vol",
+    "routes": "Options de vol",
+    "language": "Langue de la consultation",
+    "payment": "Paiement",
+    "visaTitle": "Visa",
+    "visaBody": "Les règles de visa varient selon le type de passeport et sont mises à jour de temps à autre. Une information erronée pouvant vous bloquer à l’aéroport, nous n’indiquons pas la règle ici ; vérifiez votre situation auprès de la source officielle.",
+    "visaOfficial": "Ministère turc des Affaires étrangères — informations visa",
+    "visaEvisa": "Demande d’e-Visa",
+    "faqTitle": "Questions fréquentes",
+    "ctaTitle": "Faisons le point sur votre dossier",
+    "ctaBody": "Si vous avez des résultats d’analyses, de l’imagerie ou un compte rendu d’anatomopathologie, transmettez-les à l’avance : vous éviterez des examens refaits inutilement.",
+    "backTo": "Retour à la page patients internationaux :",
+    "listTitle": "Informations selon votre pays",
+    "listBody": "Vols, langue, paiement et durée de séjour habituelle varient d’un pays à l’autre. Consultez la page de votre pays."
   }
 }

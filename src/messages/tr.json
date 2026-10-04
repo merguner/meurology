@@ -311,5 +311,22 @@
     "policyLink": "Çerez Politikası",
     "accept": "Kabul et",
     "reject": "Reddet"
+  },
+  "Country": {
+    "quickFacts": "Hızlı bilgiler",
+    "flightTime": "Uçuş süresi",
+    "routes": "Uçuş seçenekleri",
+    "language": "Görüşme dili",
+    "payment": "Ödeme",
+    "visaTitle": "Vize",
+    "visaBody": "Vize kuralları pasaport türüne göre değişir ve zaman zaman güncellenir. Yanlış bilgi sizi havalimanında mağdur edebileceği için kuralı burada yazmıyoruz; kendi durumunuzu resmî kaynaktan doğrulayın.",
+    "visaOfficial": "T.C. Dışişleri Bakanlığı — vize bilgileri",
+    "visaEvisa": "e-Vize başvurusu",
+    "faqTitle": "Sık sorulan sorular",
+    "ctaTitle": "Dosyanızı değerlendirelim",
+    "ctaBody": "Tahlil, görüntüleme veya patoloji raporunuz varsa önceden paylaşın; gereksiz tekrar tetkikten kaçınırsınız.",
+    "backTo": "Uluslararası hasta sayfasına dönün:",
+    "listTitle": "Ülkenize göre bilgi",
+    "listBody": "Uçuş, dil, ödeme ve tipik kalış planı ülkeden ülkeye değişir. Kendi ülkenizin sayfasına bakın."
   }
 }
