@@ -20,7 +20,10 @@ export const mono = IBM_Plex_Mono({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-mono',
-  weight: ['400', '500', '600']
+  // 500 KALDIRILDI: arayuzde mono yalnizca 400 (label-mono) ve 600
+  // (dogrulanmis bilgi degerleri) agirliklariyla kullaniliyor. Kullanilmayan
+  // her agirlik mobilde ek bir font dosyasi indirmesi demektir.
+  weight: ['400', '600']
 });
 
 /**
@@ -37,4 +40,23 @@ export const sansArabic = IBM_Plex_Sans_Arabic({
   weight: ['400', '500', '600', '700']
 });
 
+/**
+ * DİLE GÖRE FONT DEĞİŞKENLERİ.
+ *
+ * Daha önce üç ailenin değişkeni de her sayfada <html>'e basılıyordu. Tarayıcı
+ * bir fontu ancak kullanıldığında indirir; ama Arapça sayfada da Latin metin
+ * (marka adı, "WhatsApp", tarihler, sayılar) bulunduğu için ÜÇ aile birden
+ * indiriliyordu. Ölçümde /ar mobilde 20 font dosyası / 283 KB görüldü ve
+ * LCP'yi (h1 metni) geciktiren asıl yük buydu.
+ *
+ * Latin dillerinde Arapça ailesine hiç ihtiyaç yoktur; bu yüzden yalnızca
+ * Arapça sayfalarda eklenir. Arapça sayfada Latin ailesi kalır, çünkü marka
+ * adı ve rakamlar hâlâ Latin harflidir.
+ */
+export function fontVariablesFor(locale: string): string {
+  const base = `${sans.variable} ${mono.variable}`;
+  return locale === 'ar' ? `${base} ${sansArabic.variable}` : base;
+}
+
+/** Geriye dönük uyumluluk için: tüm aileler. */
 export const fontVariables = `${sans.variable} ${mono.variable} ${sansArabic.variable}`;

@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations, getMessages, setRequestLocale } from 'next-intl/server';
 import { routing, rtlLocales, type Locale } from '@/i18n/routing';
-import { fontVariables } from '@/app/fonts';
+import { fontVariablesFor } from '@/app/fonts';
 import { siteConfig } from '@/config/site';
 import { robotsMeta } from '@/config/seo';
 import { ThemeScript } from '@/components/ThemeScript';
@@ -102,7 +102,7 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale} dir={dir} className={fontVariables} suppressHydrationWarning>
+    <html lang={locale} dir={dir} className={fontVariablesFor(locale)} suppressHydrationWarning>
       <head>
         <ThemeScript />
       </head>
