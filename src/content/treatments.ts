@@ -23979,54 +23979,135 @@ export const treatments: Treatment[] = [
       tr: {
         title: 'Androloji (Penil Protez, Varikosel, Erektil Disfonksiyon)',
         summary:
-          'Erkek cinsel sağlığı ve üreme cerrahisi: penil protez, varikosel, erektil disfonksiyon ve estetik prosedürler.',
-        metaTitle: 'Androloji | Penil Protez, Varikosel, ED Cerrahisi',
+          'Erkek cinsel ve üreme sağlığı. Bu alandaki şikâyetlerin çoğu konuşulmadığı için gecikir — oysa bazıları başka bir hastalığın ilk işaretidir ve bazılarının zamanı sınırlıdır.',
+        metaTitle: 'Androloji: Hangi Şikâyet Hangi Tedaviye Gider',
         metaDescription:
-          'Androloji cerrahisi: penil protez, penil uzatma ve kalınlaştırma, varikosel ve erektil disfonksiyon tedavisi; süreç, riskler ve fiyat aralığı.',
+          'Erektil disfonksiyon, varikosel, erkek infertilitesi, Peyronie ve penil protez. Hangi şikâyetin hangi değerlendirmeyi gerektirdiği, basamaklı tedavi mantığı ve mahremiyet.',
+        quickFacts: {
+          duration: 'İlk değerlendirme 30–45 dakika',
+          anesthesia: 'Değerlendirme için gerekmez',
+          hospitalStay: 'Tanıya ve işleme göre değişir',
+          stayInTurkey: '3–7 gün (planlanan işleme göre)',
+          returnToWork: 'İşleme göre değişir',
+          flightClearance: 'İşleme göre belirlenir'
+        },
         definition: [
-          'Androloji, erkek cinsel ve üreme sağlığıyla ilgilenen ürolojik alt daldır. İlaçla düzelmeyen erektil disfonksiyon, varikosele bağlı kısırlık veya cinsel işlev sorunlarında cerrahi seçenekler sunar.',
-          'Uygulamalar arasında şişirilebilir penil protez, mikrocerrahi varikoselektomi, penil uzatma/kalınlaştırma ve seçili erektil disfonksiyon cerrahileri yer alır. Doğru prosedür ayrıntılı değerlendirme sonrası belirlenir.'
+          'Androloji, erkek cinsel sağlığı ve üremesiyle ilgilenen ürolojik alt daldır. Sertleşme sorunları, çocuk sahibi olamama, meni ve boşalma sorunları, penis eğriliği ve testisle ilgili durumlar bu alana girer.',
+          'BU ALANIN EN BÜYÜK SORUNU GECİKMEDİR. Pek çok erkek bu şikâyetleri yıllarca kimseye söylemez. Oysa gecikmenin bedeli vardır: sertleşme sorunu kalp damar hastalığının veya şeker hastalığının ilk işareti olabilir, çocuk sahibi olma konusunda ise zaman sınırlı bir değişkendir.',
+          'EN ÖNEMLİ TEK BİLGİ: SERTLEŞME SORUNU SADECE CİNSEL BİR SORUN DEĞİLDİR. Sertleşme, küçük damarların sağlıklı çalışmasına bağlıdır. Bu damarlar kalbi besleyen damarlardan daha incedir ve bu nedenle tıkanma süreci belirtisini önce burada verebilir. Yeni başlayan ve giderek kötüleşen bir sertleşme sorunu, kalp damar hastalığı ve şeker hastalığı açısından değerlendirilmelidir. Doğrudan hap yazılması bu değerlendirmenin yerine geçmez.',
+          'İKİNCİ ÖNEMLİ BİLGİ: ANİ VE AĞRILI BAŞLAYAN DURUMLAR ACİLDİR. Testiste ani başlayan şiddetli ağrı (özellikle genç yaşta) testis dönmesi olabilir ve saatler içinde girişim gerektirir. Dört saati aşan, geçmeyen ve ağrılı ereksiyon (priapizm) de acil bir durumdur; beklemek kalıcı hasara yol açabilir. Bunlar randevu beklenecek durumlar değildir.',
+          'Tedavi bu alanda neredeyse her zaman BASAMAKLIDIR: önce nedenin araştırılması ve düzeltilebilir etkenlerin ele alınması, sonra ilaç, sonra daha girişimsel seçenekler. Bu basamakları atlayan bir yaklaşım, geri dönüşü olmayan kararların erken alınmasına yol açar.'
+        ],
+        eligibility: {
+          suitable: [
+            'Sertleşme sorunu yaşayan ve nedeninin araştırılmasını isteyen erkekler',
+            'Bir yıldır korunmasız ilişkiye rağmen çocuk sahibi olamayan çiftlerde erkek değerlendirmesi',
+            'Sperm testi bozuk çıkan erkekler',
+            'Penisinde eğrilik, sertlik veya ağrı fark eden erkekler (Peyronie hastalığı)',
+            'Boşalmayla ilgili sorun yaşayan erkekler',
+            'Testiste şişlik, ele gelen sertlik veya ağrı fark eden erkekler — bu durum vakit kaybetmeden değerlendirilmelidir',
+            'İlaç tedavilerinden fayda görmemiş, protez seçeneğini konuşmak isteyen erkekler'
+          ],
+          notSuitable: [
+            'İlk basamak değerlendirme yapılmadan doğrudan cerrahi isteyen hastalar: önce neden araştırılır',
+            'Beklentisi gerçekçi olmayan hastalar — özellikle penis büyütme taleplerinde bu değerlendirme ayrıntılı yapılır',
+            'Şeker hastalığı kontrolsüz olan hastalarda protez cerrahisi, kontrol sağlanana kadar ertelenir',
+            'Aktif enfeksiyonu olan hastalarda protez ve implant cerrahisi yapılmaz'
+          ]
+        },
+        technology: [
+          'Hormon profili (testosteron ve ilgili hormonlar) ve metabolik değerlendirme',
+          'Penis renkli Doppler ultrasonografisi — damarsal nedenin araştırılması',
+          'Sperm analizi (spermiyogram) ve gerekirse tekrarı',
+          'Skrotal Doppler ultrason — varikosel ve testis değerlendirmesi',
+          'Mikrocerrahi mikroskobu — varikoselektomi ve mikro-TESE için',
+          'Şişirilebilir ve bükülebilir penil protez sistemleri',
+          'Peyronie hastalığında eğriliğin ölçülü değerlendirilmesi'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
+          note: 'Androloji, Doç. Dr. Müslüm Ergün’ün çalışma alanlarındandır. Bu alanda yaklaşım basamaklıdır: önce nedenin araştırılması, sonra geri dönüşü olan tedaviler, en son geri dönüşü olmayan girişimler.'
         },
         timeline: [
-          { when: 'Uzaktan', title: 'Gizli ön görüşme', body: 'Hormonal ve damarsal değerlendirme sonuçlarınız gizlilikle incelenir.' },
-          { when: '1. Gün', title: 'Varış ve muayene', body: 'Muayene, gerekli testler ve prosedür planlaması.' },
-          { when: '2. Gün', title: 'Ameliyat', body: 'Seçilen prosedür; çoğu vakada 1 gece yatış.' },
-          { when: '3–5. Gün', title: 'Kontrol', body: 'Pansuman, bilgilendirme ve dönüş onayı; protezde kullanım eğitimi.' }
+          { when: 'Uzaktan', title: 'Mahremiyetli ön görüşme', body: 'Şikâyetiniz, kullandığınız ilaçlar, ek hastalıklarınız ve varsa önceki tetkikleriniz değerlendirilir. Görüşmede kiminle konuştuğunuz ve kayıtlarınızın nerede tutulduğu açıkça söylenir.' },
+          { when: '1. Gün', title: 'Değerlendirme', body: 'Muayene, hormon ve metabolik testler, gerekirse Doppler ultrason veya sperm analizi. Burada amaç şikâyetin nedenini bulmaktır; doğrudan işleme geçilmez.' },
+          { when: 'Karar aşaması', title: 'Seçeneklerin konuşulması', body: 'Hangi basamakta olduğunuz, geri dönüşü olan ve olmayan seçenekler, gerçekçi beklentiler ve riskler ayrıntılı konuşulur. Bu konuşma aceleye getirilmez.' },
+          { when: 'İşlem günü', title: 'Planlanan girişim', body: 'Varikoselektomi, mikro-TESE, Peyronie onarımı veya penil protez gibi planlanan işlem uygulanır. Çoğunda 1 gece yatış yeterlidir.' },
+          { when: 'Dönüş öncesi', title: 'Kontrol ve eğitim', body: 'Pansuman, kontrol ve gerekiyorsa cihaz kullanım eğitimi. Penil protez takıldıysa cihazın kullanımı burada yüz yüze öğretilir; video görüşmeyle sonradan öğretilmeye bırakılmaz.' }
         ],
         risks: [
-          'Enfeksiyon (özellikle protez cerrahisinde)',
+          'ENFEKSİYON: Özellikle penil protez cerrahisinde en ciddiye alınan komplikasyondur, çünkü enfekte cihazın çıkarılması gerekebilir. Şeker hastalığının kontrol altında olması bu riski azaltmak açısından belirleyicidir',
           'Şişlik, morarma ve geçici his değişikliği',
-          'Protezde mekanik sorun ihtimali (uzun vadede)',
-          'Beklentilerin gerçekçi tutulması gerekliliği'
+          'Penil protezde uzun vadede mekanik arıza ve değişim ihtiyacı',
+          'Penil protez sonrası penisin ameliyat öncesine göre kısa hissedilmesi — en sık bildirilen memnuniyetsizlik nedenidir',
+          'Varikoselektomi sonrası testiste su toplanması ve varikoselin tekrarlaması',
+          'Peyronie cerrahisinde eğriliğin tamamen düzelmemesi veya boyda kısalma',
+          'GERİ DÖNÜŞÜ OLMAMA: Penil protez takıldıktan sonra doğal sertleşme geri gelmez. Bu karar acele verilmemelidir',
+          'Beklentinin gerçekçi olmaması: bu alanda memnuniyetsizliğin en sık nedeni teknik bir sorun değil, baştan konuşulmamış beklentidir'
         ],
         alternatives: [
-          'Oral ilaçlar (PDE5 inhibitörleri)',
-          'Penil enjeksiyon veya vakum cihazı',
-          'Şok dalga tedavisi (seçili vakalarda)',
-          'Yaşam tarzı ve hormonal düzenleme'
+          'Yaşam tarzı ve risk faktörlerinin düzeltilmesi — sigaranın bırakılması, kilo verme, şeker ve tansiyon kontrolü. Bu adım sıkıcı görünür ama damarsal nedenli sertleşme sorununda temeldir',
+          'Kullanılan ilaçların gözden geçirilmesi — bazı tansiyon ve ruh sağlığı ilaçları cinsel işlevi etkileyebilir; bu ilaçları kendi kararınızla kesmeyin, hekiminizle konuşun',
+          'Hormon eksikliği varsa tedavisi — ancak testosteron tedavisi sperm üretimini baskılayabilir; çocuk isteği olan erkekte bu ayrıca değerlendirilir',
+          'Ağızdan alınan ilaçlar (PDE5 inhibitörleri) — ilk basamak ilaç tedavisi',
+          'Penise enjeksiyon tedavisi veya vakum cihazı — ilaç yetersiz kaldığında',
+          'Varikoselektomi — uygun seçilmiş hastalarda sperm parametrelerini iyileştirebilir',
+          'Mikro-TESE — menide sperm bulunmayan erkeklerde testisten sperm elde edilmesi',
+          'Penil protez — diğer seçeneklerden fayda görülmediğinde; kalıcı ve geri dönüşsüzdür'
+        ],
+        comparison: {
+          title: 'Sertleşme sorununda basamaklar: hangisi nerede durur',
+          columns: ['Basamak', 'Ne yapar', 'Geri dönüşü var mı', 'Kimde öne çıkar'],
+          rows: [
+            { label: 'Risk faktörü düzeltme', values: ['Altta yatan damarsal nedeni ele alır', 'Evet', 'Herkeste ilk adım'] },
+            { label: 'Ağızdan ilaç', values: ['Mevcut mekanizmayı destekler', 'Evet', 'Çoğu hastada ilk ilaç basamağı'] },
+            { label: 'Enjeksiyon / vakum', values: ['Sertleşmeyi dışarıdan sağlar', 'Evet', 'İlaç yetersiz kalınca'] },
+            { label: 'Penil protez', values: ['Sertleşmeyi cihazla sağlar', 'HAYIR — doğal sertleşme geri gelmez', 'Diğerleri fayda vermediğinde'] }
+          ],
+          note: 'Bu basamakların atlanmaması önemlidir. Protez iyi bir çözümdür ama son basamaktır; önceki basamaklar denenmeden önerilmesi, geri alınamayacak bir kararın erken verilmesi anlamına gelir. Size doğrudan protez öneren bir yaklaşımda, önce nelerin denendiğinin sorulup sorulmadığına dikkat edin.'
+        },
+        recovery: [
+          { period: 'Değerlendirme sonrası', body: 'Sonuçlar birlikte gözden geçirilir. Sertleşme sorununda kalp damar riski saptanmışsa bu ayrıca takip edilmek üzere yönlendirilir — bu, cinsel şikâyetten daha öncelikli olabilir.' },
+          { period: 'İlaç tedavisi döneminde', body: 'İlaçların doğru kullanımı önemlidir; etkisizlik sanılan durumların bir bölümü yanlış kullanımdan kaynaklanır. Birkaç denemeden sonra değerlendirme yapılır.' },
+          { period: 'Cerrahi sonrası ilk hafta', body: 'Şişlik ve morarma beklenen bulgulardır. Ağır aktiviteden kaçınılır. Ateş, artan ağrı veya akıntı durumunda gecikmeden başvurulmalıdır.' },
+          { period: 'Protez sonrası iyileşme dönemi', body: 'Cihaz hemen kullanılmaz; iyileşmenin tamamlanması beklenir ve zamanı hekiminiz belirler. Erken kullanım zarar verebilir.' },
+          { period: 'Varikoselektomi sonrası 3. ay', body: 'Sperm üretimi yaklaşık üç aylık bir döngüdür; bu nedenle kontrol sperm analizi en erken bu dönemde anlamlıdır.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Protez markası ve prosedüre göre değişir.'
+          disclaimer: 'Tutar; planlanan işleme ve protez kullanılacaksa cihazın modeline göre değişir. Kalem kalem ayrılmış yazılı teklif, değerlendirme sonrası verilir.'
         },
         packageIncludes: [
-          'Ameliyat ve hastane yatışı',
-          'Anestezi ve tetkikler',
-          '(Varsa) protez cihazı',
-          'Transferler ve konaklama',
-          'Tıbbi tercüman ve gizli koordinasyon',
-          'Kontrol ve online takip'
+          'Mahremiyet esaslı ön görüşme',
+          'Muayene, hormon ve metabolik testler',
+          'Gerekirse Doppler ultrason ve sperm analizi',
+          'Anestezi ve ameliyathane',
+          'Planlanan işlem',
+          'Kullanılacaksa protez cihazı',
+          'Hastane yatışı',
+          'Cihaz kullanım eğitimi (protez uygulandıysa)',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve mahremiyet esaslı koordinasyon',
+          'Dönüşten sonra uzaktan takip'
         ],
         faqs: [
-          { q: 'Süreç gizli tutulur mu?', a: 'Evet; tüm görüşmeler ve koordinasyon gizlilik ilkesiyle yürütülür.' },
-          { q: 'Penil protez sonrası cinsel işlev nasıl olur?', a: 'Protez, ilaçla düzelmeyen sertleşme sorununda kalıcı çözüm sunar; kullanım eğitimi verilir.' },
-          { q: 'Varikosel kısırlığı düzeltir mi?', a: 'Mikrocerrahi varikoselektomi seçili hastalarda sperm parametrelerini iyileştirebilir.' }
+          { q: 'Sertleşme sorunum var, doğrudan hap yazdırabilir miyim?', a: 'Bu en sık yapılan hatadır. Yeni başlayan ve giderek kötüleşen bir sertleşme sorunu, kalp damar hastalığının veya şeker hastalığının ilk işareti olabilir; çünkü penisteki damarlar kalbi besleyen damarlardan daha incedir ve tıkanma belirtisini önce burada verebilir. Bu nedenle ilaç yazılmadan önce değerlendirme yapılmalıdır. Bu değerlendirme sizi oyalamak için değil, daha önemli bir sorunu atlamamak içindir.' },
+          { q: 'Hangi durumda beklemeden başvurmalıyım?', a: 'Testiste ani başlayan şiddetli ağrı, özellikle genç yaşta, testis dönmesi olabilir ve saatler içinde girişim gerektirir. Dört saati aşan, geçmeyen ve ağrılı ereksiyon da acildir ve beklemek kalıcı hasara yol açabilir. Ayrıca testiste ele gelen ağrısız bir sertlik vakit kaybetmeden değerlendirilmelidir.' },
+          { q: 'Süreç gizli tutulur mu?', a: 'Evet ve bu sizin hakkınızdır, verilen bir ayrıcalık değil. Dosyanıza kimin eriştiğini, kayıtların nerede tutulduğunu, konaklamanın hangi isimle yapılacağını ve faturada ne yazacağını sorabilirsiniz. Sizden fotoğraf veya yorum istenmesi hâlinde reddetme hakkınız vardır ve bu tedavinizi etkilemez.' },
+          { q: 'Çocuk sahibi olamıyoruz, önce kim değerlendirilmeli?', a: 'Her iki eş de. Bu bir çift sorunudur ve erkekte bir bulgu saptandığında incelemenin orada durması sık yapılan bir hatadır. Kadının yumurtlama düzeni, tüplerinin durumu ve yaşı sonucu doğrudan etkiler; erkek tedavisinin beklenen faydası bu bilgi olmadan sağlıklı değerlendirilemez.' },
+          { q: 'Sperm testim bozuk çıktı, bu kesin mi?', a: 'Tek bir test yeterli değildir. Sperm değerleri ateşli hastalık, yoğun stres, bazı ilaçlar ve örnek verme koşullarından etkilenir. Genellikle belirli bir aralıkla tekrarlanır. Tek bir bozuk sonuca dayanarak karar vermeyin.' },
+          { q: 'Varikosel ameliyatı kesin çocuk sahibi olmamı sağlar mı?', a: 'Hayır. Uygun seçilmiş hastalarda sperm parametrelerinde düzelme sağlayabilir, ancak her hastada düzelme olmaz ve düzelme olan her çiftte gebelik gerçekleşmez. Kesin sonuç vaat eden bir anlatıma temkinli yaklaşın.' },
+          { q: 'Penil protez son çare mi?', a: 'Evet, öyle ele alınmalıdır. İlaç, enjeksiyon ve vakum cihazı gibi geri dönüşü olan seçenekler denenmeden önerilmemelidir. Protez takıldıktan sonra doğal sertleşme geri gelmez. Size önce nelerin denendiğini sormadan protez öneren bir yaklaşım, değerlendirme yapmıyor demektir.' },
+          { q: 'Penis büyütme işlemlerinden ne beklemeliyim?', a: 'Bu konuda beklenti yönetimi, tekniğin kendisinden daha önemlidir. İnternette gördüğünüz iddialar çoğu zaman gerçekçi değildir. Ayrıca bazı erkeklerde asıl sorun ölçü değil, ölçüye ilişkin algıdır; bu durumda cerrahi memnuniyet sağlamaz. Değerlendirmede bu konu açıkça konuşulur.' },
+          { q: 'Testosteron tedavisi başlasam olur mu?', a: 'Eksiklik saptanmadan testosteron verilmesi doğru değildir. Ayrıca önemli bir nokta vardır: testosteron tedavisi sperm üretimini baskılayabilir. Çocuk sahibi olmayı planlıyorsanız bu tedavi ayrıca değerlendirilmelidir; aksi hâlde çözmek istediğiniz başka bir sorunu büyütebilirsiniz.' },
+          { q: 'Hangi belgeleri göndermeliyim?', a: 'Varsa sperm analizi sonuçlarınız, hormon testleriniz, şeker ve kolesterol değerleriniz, kullandığınız tüm ilaçların listesi, ek hastalıklarınız ve daha önce yapılmış işlemlerin kayıtları. Bunlarla hangi basamakta olduğunuz siz yola çıkmadan değerlendirilebilir.' },
+          { q: 'Eşim veya ailem sürecin ayrıntılarını öğrenir mi?', a: 'Hayır; tıbbi bilgileriniz sizin izniniz olmadan hiç kimseyle paylaşılmaz, en yakınınız dâhil. Kimin bilgilendirileceğini siz belirlersiniz. Refakatçiyle geliyorsanız, muayene ve görüşmelerin hangi bölümünde yanınızda bulunacağını da siz seçersiniz. Bunu baştan söylemeniz, sonradan kırılgan bir anda açıklamaya çalışmaktan kolaydır.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Sexual and Reproductive Health — Avrupa Üroloji Derneği', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
         ]
       },
       en: {
@@ -24291,56 +24372,137 @@ export const treatments: Treatment[] = [
     icon: 'oncology',
     i18n: {
       tr: {
-        title: 'Üroonkoloji (Mesane, Böbrek, Testis Tümörü Cerrahisi)',
+        title: 'Üroonkoloji (Prostat, Mesane, Böbrek, Testis Kanseri)',
         summary:
-          'Üriner sistem ve erkek üreme organları kanserlerinde minimal invaziv ve organ koruyucu cerrahi.',
-        metaTitle: 'Üroonkoloji | Mesane, Böbrek, Testis Kanseri Cerrahisi',
+          'Üriner sistem ve erkek üreme organları kanserlerinin cerrahi tedavisi. Bu alanda en önemli iki şey şudur: tek bir uyarı belirtisini atlamamak ve tedavi kararını aceleyle vermemek.',
+        metaTitle: 'Üroonkoloji: Hangi Belirti Neyi Gösterir, Tedavi Nasıl Seçilir',
         metaDescription:
-          'Üroonkolojik cerrahi: mesane, böbrek ve testis tümörlerinde robotik/laparoskopik ve organ koruyucu yöntemler; süreç, riskler ve fiyat aralığı.',
+          'Prostat, mesane, böbrek ve testis kanserlerinde uyarı belirtileri, idrarda kanın neden mutlaka araştırılması gerektiği, organ koruyucu cerrahi ve tedavi kararının nasıl verildiği.',
+        quickFacts: {
+          duration: 'İlk değerlendirme 30–45 dakika',
+          anesthesia: 'Değerlendirme için gerekmez',
+          hospitalStay: 'Tanıya ve cerrahinin kapsamına göre değişir',
+          stayInTurkey: '7–14 gün (cerrahiye göre)',
+          returnToWork: 'Cerrahiye göre değişir',
+          flightClearance: 'Kontrol ve iyileşme durumuna göre'
+        },
         definition: [
-          'Üroonkoloji; böbrek, mesane, prostat ve testis gibi üriner ve erkek üreme sistemi kanserlerinin cerrahi tedavisiyle ilgilenir.',
-          'Uygun vakalarda organ koruyucu (ör. kısmi nefrektomi) ve minimal invaziv robotik/laparoskopik teknikler tercih edilir. Tedavi, multidisipliner tümör konseyi kararıyla planlanır.'
+          'Üroonkoloji; böbrek, mesane, idrar yolları, prostat ve testis kanserlerinin tanı ve cerrahi tedavisiyle ilgilenir. Bu kanserlerin ortak özelliği, erken evrede genellikle az belirti vermeleri ve belirti verdiklerinde bu belirtinin kolayca başka bir şeye yorulabilmesidir.',
+          'BU SAYFANIN EN ÖNEMLİ CÜMLESİ: İDRARDA KAN GÖRÜLMESİ, AĞRISIZ OLSA BİLE ARAŞTIRILMALIDIR. Ağrısız idrarda kan, mesane kanserinin en tipik ilk belirtisidir. Bir kez görülüp kendiliğinden geçmesi "düzeldi" anlamına gelmez; tersine, aralıklı olması bu tablonun bilinen bir özelliğidir. Özellikle sigara içmiş veya içen kişilerde bu bulgu kesinlikle araştırılmalıdır. "İdrar yolu enfeksiyonudur" denip antibiyotikle geçiştirilmesi, en sık görülen tanı gecikmesi nedenidir.',
+          'İKİNCİ UYARI: TESTİSTE ELE GELEN AĞRISIZ SERTLİK. Testis kanseri genç erkeklerde görülebilen bir kanserdir ve ağrı yapmadığı için sıklıkla geç fark edilir. Ağrısız olması güven verici değildir; tersine tipiktir. Vakit kaybetmeden değerlendirilmelidir.',
+          'ÜÇÜNCÜ NOKTA: Böbrek tümörlerinin önemli bir bölümü bugün başka bir nedenle çekilen görüntülemede rastlantısal olarak bulunur. Bu, kötü bir haber gibi görünse de aslında iyi bir haberdir, çünkü erken ve küçük yakalanan tümörlerde organ koruyucu cerrahi mümkün olabilir.',
+          'TEDAVİ KARARINDA ACELE ETMEYİN. Bu alandaki kanserlerin çoğunda birkaç haftalık bir karar süresi tıbbi olarak sorun yaratmaz. Size hemen karar vermeniz için baskı yapılıyorsa, bu baskı tıbbi değil ticari olabilir. İkinci görüş almak hakkınızdır ve tedaviyi nerede olacağınızı değiştirmek zorunda bırakmaz.'
+        ],
+        eligibility: {
+          suitable: [
+            'İdrarda kan görülen kişiler — ağrısız olsa ve bir kez olsa bile',
+            'Testiste ağrısız sertlik veya büyüme fark eden erkekler',
+            'PSA yüksekliği veya muayenede şüpheli bulgu saptanan erkekler',
+            'Görüntülemede böbrekte kitle saptanan kişiler',
+            'Daha önce mesane tümörü nedeniyle tedavi görmüş ve takibi gereken hastalar',
+            'Tedavi kararı öncesi ikinci görüş isteyen hastalar',
+            'Sigara öyküsü olan ve idrar şikâyeti başlayan kişiler'
+          ],
+          notSuitable: [
+            'Tanısı ve evrelemesi tamamlanmadan cerrahi planlamak isteyen hastalar: önce doğru evreleme yapılır',
+            'Yaygın hastalıkta tek başına cerrahi beklentisi: bu durumda öncelik sistemik tedavidir',
+            'Genel durumu ve ek hastalıkları büyük cerrahiye uygun olmayan hastalarda daha az girişimsel seçenekler değerlendirilir',
+            'Çok küçük ve yavaş seyirli bazı tümörlerde aktif izlem, cerrahiden daha uygun olabilir'
+          ]
+        },
+        technology: [
+          'Kontrastlı bilgisayarlı tomografi ve manyetik rezonans — evreleme için',
+          'Multiparametrik prostat MR ve füzyon biyopsi',
+          'Sistoskopi — mesane içinin doğrudan görüntülenmesi',
+          'İdrar sitolojisi',
+          'Robot destekli ve laparoskopik cerrahi',
+          'Organ koruyucu (parsiyel) nefrektomi',
+          'Patolojik inceleme — gerçek evrenin ve cerrahi sınırın belirlenmesi',
+          'Multidisipliner tümör konseyi değerlendirmesi'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
+          note: 'Üroonkolojik cerrahi, Doç. Dr. Müslüm Ergün’ün çalışma alanlarındandır. Tedavi planı; patoloji, görüntüleme, hastanın genel durumu ve tercihleri birlikte değerlendirilerek ve uygun vakalarda tümör konseyi kararıyla belirlenir.'
         },
         timeline: [
-          { when: 'Uzaktan', title: 'Konsey değerlendirmesi', body: 'Patoloji ve görüntüleme sonuçlarınız tümör konseyinde değerlendirilir.' },
-          { when: '1–2. Gün', title: 'Varış ve tetkik', body: 'Muayene, evreleme tetkikleri ve anestezi değerlendirmesi.' },
-          { when: '3. Gün', title: 'Ameliyat', body: 'Robotik/laparoskopik veya açık cerrahi; kapsama göre yatış süresi değişir.' },
-          { when: '5–7. Gün', title: 'Kontrol ve patoloji', body: 'Patoloji sonucu, sonraki adımların planı ve dönüş onayı.' }
+          { when: 'Uzaktan', title: 'Dosya değerlendirmesi', body: 'Patoloji raporlarınız ve görüntülemeleriniz incelenir. Görüntülemelerin rapor olarak değil, görüntü dosyası (DICOM) olarak gönderilmesi önemlidir; yalnızca başkasının raporunu okumak bağımsız bir değerlendirme sayılmaz.' },
+          { when: '1–2. Gün', title: 'Varış ve evreleme', body: 'Muayene, eksik evreleme tetkiklerinin tamamlanması, kan testleri ve anestezi değerlendirmesi.' },
+          { when: 'Karar aşaması', title: 'Seçeneklerin konuşulması', body: 'Cerrahi, diğer tedavi seçenekleri ve uygun hastalarda aktif izlem; her birinin yan etkileri ve takip gereklilikleri açıkça konuşulur.' },
+          { when: 'Ameliyat günü', title: 'Cerrahi', body: 'Uygun vakalarda robotik veya laparoskopik, mümkün olduğunda organ koruyucu yöntem uygulanır.' },
+          { when: 'Taburculuk sonrası', title: 'Patoloji ve plan', body: 'Çıkarılan dokunun patolojik incelemesi gerçek evreyi gösterir ve ek tedavi gerekip gerekmediğini belirler. Sonuç çoğu zaman siz döndükten sonra çıkar; nasıl ulaşacağı ve kimin açıklayacağı önceden netleştirilir.' },
+          { when: 'Uzun dönem', title: 'Nüks takibi', body: 'Bu kanserlerde takip tedavinin bir parçasıdır. Takip takvimi, hangi tetkiklerin ne sıklıkta yapılacağı ve sonuçları kimin değerlendireceği yazılı olarak planlanır.' }
         ],
         risks: [
-          'Kanama, enfeksiyon ve genel cerrahi riskler',
-          'Organ işlevinde değişiklik (kapsama göre)',
-          'Ek tedavi (kemoterapi/immünoterapi) gerekebilmesi',
-          'Nüks takibi gerekliliği'
+          'TANI GECİKMESİ: Bu alandaki en büyük risk cerrahi bir komplikasyon değil, uyarı belirtisinin atlanmasıdır. İdrarda kanın enfeksiyona yorulup araştırılmaması buna en sık örnektir',
+          'Kanama, enfeksiyon ve genel cerrahi ile anesteziye bağlı riskler',
+          'Organ işlevinde değişiklik — cerrahinin kapsamına göre',
+          'Prostat cerrahisinde idrar kaçırma ve cinsel işlev değişikliği',
+          'Mesane cerrahisinde idrar yolunun yeniden yapılandırılmasına bağlı uyum süreci',
+          'Böbrek cerrahisinde böbrek işlevinde azalma; organ koruyucu cerrahi bu riski sınırlamayı hedefler',
+          'Lenf bezi alınan hastalarda lenf sıvısı birikmesi',
+          'PATOLOJİNİN BEKLENENDEN KÖTÜ ÇIKMASI ve ek tedavi gerekmesi',
+          'Nüks ihtimali ve bu nedenle takibin sürekliliği — takipten çıkmak, tedavinin kendisini geçersiz kılabilir'
         ],
         alternatives: [
-          'Aktif izlem (seçili küçük tümörlerde)',
-          'Ablasyon teknikleri (seçili böbrek tümörlerinde)',
-          'Radyoterapi/sistemik tedavi (evreye göre)',
-          'Mesane koruyucu protokoller (seçili vakalarda)'
+          'Aktif izlem — seçilmiş düşük riskli prostat kanserinde ve bazı küçük böbrek kitlelerinde. Tedaviyi ertelemek değil, düzenli ve disiplinli takip etmektir',
+          'Radyoterapi — prostat kanserinde cerrahiye alternatif; yan etki profili farklıdır',
+          'Mesane içine ilaç uygulamaları — yüzeyel mesane tümörlerinde',
+          'Ablasyon teknikleri — seçilmiş küçük böbrek tümörlerinde',
+          'Kemoterapi, immünoterapi ve hedefe yönelik tedaviler — evreye göre, cerrahiden önce veya sonra',
+          'Organ koruyucu cerrahi — mümkün olduğunda organın tamamını almak yerine yalnızca tümörlü kısmın alınması',
+          'Destekleyici bakım — ileri yaş ve ciddi ek hastalıklarda, yaşam kalitesini önceleyen yaklaşım'
+        ],
+        comparison: {
+          title: 'Uyarı belirtileri: hangisi ne kadar acele gerektirir',
+          columns: ['Bulgu', 'Ne olabilir', 'Aciliyet', 'İlk adım'],
+          rows: [
+            { label: 'Ağrısız idrarda kan', values: ['Mesane veya idrar yolu tümörü', 'Gecikmeden araştırılmalı', 'Sistoskopi ve görüntüleme'] },
+            { label: 'Testiste ağrısız sertlik', values: ['Testis tümörü', 'Vakit kaybetmeden', 'Muayene ve skrotal ultrason'] },
+            { label: 'PSA yüksekliği', values: ['İyi huylu büyüme, iltihap veya kanser', 'Acil değil, ama takip edilmeli', 'Tekrar ölçüm, muayene, MR'] },
+            { label: 'Görüntülemede böbrek kitlesi', values: ['İyi veya kötü huylu kitle', 'Planlı değerlendirme', 'Kontrastlı tomografi'] },
+            { label: 'Yan ağrısı + ateş + titreme', values: ['Tıkalı yolda enfeksiyon', 'ACİL', 'Acil servise başvuru'] }
+          ],
+          note: 'Bu tablonun amacı korkutmak değil, hangi bulgunun ne kadar beklemeye tahammülü olduğunu göstermektir. Ağrısız idrarda kanın bir kez görülüp geçmesi, araştırmayı gereksiz kılmaz — bu bulgunun aralıklı olması bilinen bir özelliğidir.'
+        },
+        recovery: [
+          { period: 'İlk hafta', body: 'Cerrahinin kapsamına göre değişir. Erken hareket, pıhtı riskini azaltması ve bağırsak hareketinin dönmesi açısından önemlidir.' },
+          { period: '2–4. hafta', body: 'Günlük yaşama kademeli dönüş. Ağır kaldırmaktan kaçınılır. Hangi aktiviteye ne zaman dönüleceği uygulanan cerrahiye göre ayrı ayrı anlatılır.' },
+          { period: 'Patoloji sonrası', body: 'Sonuç, ek tedavi gerekip gerekmediğini belirler. Gerekiyorsa bunun ne zaman ve nerede yapılacağı planlanır; bu, kötü haber değil planın güncellenmesidir.' },
+          { period: 'İlk yıl', body: 'Takip bu dönemde daha sıktır. Kan testleri ve görüntüleme belirli aralıklarla yapılır.' },
+          { period: 'Uzun dönem', body: 'Takip aralıkları seyre göre açılır ancak sona ermez. Takip takviminden çıkmak, erken yakalanabilecek bir nüksün geç fark edilmesine yol açabilir.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Tümör tipi, evre ve cerrahi kapsama göre değişir.'
+          disclaimer: 'Tutar; tümörün tipine, evresine, cerrahinin kapsamına ve hastanede kalış süresine göre değişir. Kalem kalem ayrılmış yazılı teklif, dosyanız incelendikten sonra verilir.'
         },
         packageIncludes: [
+          'Dosyanızın uzaktan değerlendirilmesi',
+          'Muayene ve eksik evreleme tetkiklerinin tamamlanması',
+          'Anestezi ve ameliyathane',
           'Cerrahi ve hastane yatışı',
-          'Anestezi ve evreleme tetkikleri',
-          'Patoloji incelemesi',
-          'Transferler ve konaklama',
-          'Tıbbi tercüman ve koordinatör',
-          'Kontrol ve online takip'
+          'Çıkarılan dokunun patolojik incelemesi',
+          'Taburculuk sonrası kontrol ve dönüş öncesi değerlendirme',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve hasta koordinatörü',
+          'Takip sonuçlarının uzaktan değerlendirilmesi'
         ],
         faqs: [
-          { q: 'Böbreğimin tamamı alınacak mı?', a: 'Uygun vakalarda sadece tümörlü kısım alınır (kısmi nefrektomi); karar görüntüleme sonrası verilir.' },
-          { q: 'Ameliyat sonrası ek tedavi gerekir mi?', a: 'Patoloji ve evreye göre değişir; konsey kararıyla planlanır.' },
-          { q: 'Takip nasıl yapılır?', a: 'Düzenli görüntüleme ve kan testleriyle; uzaktan takip desteği sağlanır.' }
+          { q: 'İdrarımda bir kez kan gördüm, sonra geçti. Araştırmalı mıyım?', a: 'Evet, mutlaka. Ağrısız idrarda kan mesane kanserinin en tipik ilk belirtisidir ve aralıklı olması bu tablonun bilinen bir özelliğidir. Geçmiş olması "düzeldi" anlamına gelmez. Özellikle sigara öykünüz varsa bu bulgu kesinlikle araştırılmalıdır. "Enfeksiyondur" denip antibiyotikle geçiştirilmesi en sık görülen tanı gecikmesi nedenidir.' },
+          { q: 'Testisimde ağrısız bir sertlik var, ağrı olmadığına göre önemli değildir?', a: 'Tam tersine. Testis kanserinin tipik özelliği ağrısız olmasıdır; ağrı olmaması güven verici bir bulgu değildir. Bu nedenle ele gelen her sertlik vakit kaybetmeden muayene ve ultrasonla değerlendirilmelidir.' },
+          { q: 'Hemen karar vermem gerekiyor mu?', a: 'Bu alandaki kanserlerin çoğunda birkaç haftalık bir karar süresi tıbbi olarak sorun yaratmaz. "Hemen karar verin" baskısı tıbbi bir gereklilikten çok ticari bir yaklaşımın işareti olabilir. Soru sorun, ikinci görüş alın ve kararınızı anlayarak verin.' },
+          { q: 'İkinci görüş almak doktoruma saygısızlık olur mu?', a: 'Hayır. Bu alanda genellikle birden fazla makul tedavi yolu vardır ve hangisinin size uyduğunu anlamanın yolu bunları karşılaştırmaktır. Ayrıca biyopsi derecelendirmesi yorum içerir ve ikinci bir patoloji değerlendirmesi dereceyi değiştirebilir — bu da öneriyi değiştirebilir. İkinci görüş almanız, tedaviyi burada olmak zorunda bırakmaz.' },
+          { q: 'Böbreğimin tamamı alınacak mı?', a: 'Her zaman değil. Uygun yerleşim ve boyuttaki tümörlerde yalnızca tümörlü kısım alınabilir (organ koruyucu cerrahi). Bu, böbrek işlevinin korunması açısından önemlidir, özellikle tek böbrekli, şeker hastası veya böbrek işlevi sınırlı hastalarda. Karar görüntüleme ve tümörün yerleşimine göre verilir.' },
+          { q: 'Ameliyat sonrası ek tedavi gerekir mi?', a: 'Bu, çıkarılan dokunun patolojik incelemesine göre belirlenir. Cerrahi sınırda tümör bulunması veya hastalığın düşünülenden ileri evrede çıkması mümkündür; bu, ameliyatın başarısız olduğu anlamına gelmez, planın güncellendiği anlamına gelir. Bu ihtimalin ameliyat öncesinde konuşulmuş olması önemlidir.' },
+          { q: 'Takip ne kadar sürer ve neden bu kadar önemli?', a: 'Takip, tedavinin bir parçasıdır — tedaviden sonra gelen isteğe bağlı bir ek değil. Erken yakalanan bir nüks çok daha kolay ele alınır. Özellikle mesane tümörlerinde düzenli sistoskopi takibi belirleyicidir. Takip takviminizi, hangi tetkikin ne sıklıkta yapılacağını ve sonuçları kimin değerlendireceğini yazılı olarak isteyin.' },
+          { q: 'Yurt dışından geliyorum, takibi nasıl yaptıracağım?', a: 'Bu, seyahat tarihinizi kesinleştirmeden önce planlanması gereken konudur. Hangi tetkiklerin kendi ülkenizde yapılabileceği, sonuçların nasıl iletileceği ve kimin değerlendireceği önceden belirlenir. Ayrıca ameliyat raporu, patoloji sonucu ve taburculuk özetinizin anlayacağınız bir dilde verilmesini isteyin; kendi hekiminiz bunlara ihtiyaç duyacaktır.' },
+          { q: 'Hangi belgeleri göndermeliyim?', a: 'Patoloji raporlarınızın tamamı, görüntülemelerin kendisi (DICOM dosyası olarak), kan test sonuçlarınız, varsa önceki ameliyat raporları, kullandığınız ilaçların listesi ve diğer hastalıklarınız. Yalnızca rapor metni gönderilmesi değerlendirmeyi sınırlar.' },
+          { q: 'Sigarayı bırakmamın bu noktada bir faydası var mı?', a: 'Evet, ve bu soru sanıldığından daha önemlidir. Sigara, mesane kanseri için en iyi bilinen değiştirilebilir risk etkenidir ve etkisi yalnızca hastalığın ortaya çıkışıyla sınırlı değildir: tanı konduktan sonra da bırakmanın anlamı vardır. Ayrıca sigara, yara iyileşmesini ve ameliyat sonrası akciğer komplikasyonlarını doğrudan etkiler. Ameliyattan önceki dönem, bırakmak için geç değil; aksine çoğu kişinin en motive olduğu dönemdir.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines — Avrupa Üroloji Derneği (üroonkoloji kılavuzları)', url: 'https://uroweb.org/guidelines' }
         ]
       },
       en: {
@@ -24605,55 +24767,140 @@ export const treatments: Treatment[] = [
     icon: 'female',
     i18n: {
       tr: {
-        title: 'Kadın Ürolojisi (İnkontinans, Pelvik Taban Cerrahisi)',
+        title: 'Kadın Ürolojisi (İdrar Kaçırma, Aşırı Aktif Mesane, Pelvik Taban)',
         summary:
-          'İdrar kaçırma ve pelvik taban sorunlarında modern, günlük yaşama hızlı dönüş sağlayan çözümler.',
-        metaTitle: 'Kadın Ürolojisi | İnkontinans ve Pelvik Taban Cerrahisi',
+          'İdrar kaçırma yaygındır ama normal değildir ve tedavi edilebilir. Doğru tedavinin ilk şartı, kaçırmanın hangi tipte olduğunun belirlenmesidir — çünkü yanlış tipe uygulanan doğru tedavi işe yaramaz.',
+        metaTitle: 'Kadın Ürolojisi: İdrar Kaçırma Tipleri ve Tedavi Seçimi',
         metaDescription:
-          'Kadın ürolojisi: idrar kaçırma (inkontinans) ve pelvik organ sarkması tedavisinde sling ve pelvik taban cerrahisi; süreç, riskler ve fiyat aralığı.',
+          'Stres, sıkışma ve karışık tip idrar kaçırma arasındaki fark, tedavinin neden tipe göre değiştiği, pelvik taban egzersizleri, sling cerrahisi ve mahremiyet.',
+        quickFacts: {
+          duration: 'İlk değerlendirme 30–45 dakika',
+          anesthesia: 'Değerlendirme için gerekmez',
+          hospitalStay: 'Günübirlik – 1 gece (işleme göre)',
+          stayInTurkey: '4–7 gün',
+          returnToWork: 'Birkaç gün (ağır aktivite birkaç hafta ertelenir)',
+          flightClearance: 'Kontrol sonrası'
+        },
         definition: [
-          'Kadın ürolojisi; stres tipi idrar kaçırma, aşırı aktif mesane ve pelvik organ sarkması gibi durumların tanı ve tedavisiyle ilgilenir.',
-          'Tedavi; pelvik taban egzersizlerinden minimal invaziv sling ameliyatlarına ve pelvik taban onarımına kadar uzanır. Yöntem, şikâyetin tipine ve şiddetine göre seçilir.'
+          'Kadın ürolojisi; idrar kaçırma, aşırı aktif mesane, pelvik organ sarkması, tekrarlayan idrar yolu enfeksiyonları ve işeme güçlüğü gibi durumların tanı ve tedavisiyle ilgilenir.',
+          'ÖNCE ŞUNU SÖYLEYELİM: İDRAR KAÇIRMA YAŞLILIĞIN DOĞAL SONUCU DEĞİLDİR. Yaygın olması normal olduğu anlamına gelmez. Pek çok kadın bu durumu yıllarca kimseye söylemeden, ped kullanarak, su içmekten kaçınarak ve sosyal yaşamını kısıtlayarak sürdürür. Oysa çoğu hastada ameliyat gerekmeden belirgin iyileşme sağlanabilir.',
+          'TEDAVİNİN İLK ŞARTI TİPİN BELİRLENMESİDİR. Stres tipinde kaçırma öksürme, gülme ve ağır kaldırma gibi karın içi basıncın arttığı anlarda, önceden bir sıkışma hissi olmadan olur. Sıkışma tipinde ise önce ani ve ertelenemeyen bir hissiyat gelir ve kişi tuvalete yetişemez. Bu ayrım kritiktir: mesaneyi gevşeten ilaçlar stres tipinde işe yaramaz, sarkma veya sling ameliyatı da sıkışma tipinde fayda sağlamaz.',
+          'BİR UYARI: İDRARDA KAN VARSA BU BASİT BİR KAÇIRMA ŞİKÂYETİ DEĞİLDİR. İdrarda kan görülmesi, kaçırma şikâyetinin yanında olsa bile ayrıca araştırılmalıdır. Aynı şekilde tedaviye rağmen geçmeyen yanma ve sık idrara çıkma da yalnızca "hassas mesane" diye geçiştirilmemelidir.',
+          'İKİNCİ UYARI: MESANE BOŞALAMIYORSA İLAÇ DURUMU KÖTÜLEŞTİRİR. Bu nedenle tedaviye başlamadan önce işedikten sonra mesanede kalan idrar miktarının ölçülmesi gerekir. Bu basit ölçüm atlandığında, doğru niyetle verilen bir ilaç zarar verebilir.'
+        ],
+        eligibility: {
+          suitable: [
+            'Öksürme, gülme, hapşırma veya ağır kaldırma sırasında idrar kaçıran kadınlar',
+            'Ani sıkışma hissi nedeniyle tuvalete yetişemeyen kadınlar',
+            'Her iki tipi birlikte yaşayan kadınlar',
+            'Gece idrar için sık uyanan kadınlar',
+            'Pelvik organ sarkması nedeniyle baskı veya dolgunluk hissi tarifleyen kadınlar',
+            'Tekrarlayan idrar yolu enfeksiyonu geçiren kadınlar',
+            'Daha önce tedavi görmüş ancak fayda görmemiş kadınlar — çoğu zaman sorun tedavide değil, tipin yanlış belirlenmesindedir'
+          ],
+          notSuitable: [
+            'Tedavi edilmemiş idrar yolu enfeksiyonu olan kadınlar: önce enfeksiyon tedavi edilir, çünkü tüm şikâyetleri taklit edebilir',
+            'Mesanesi tam boşalmayan kadınlarda mesaneyi gevşeten ilaçlar uygun değildir; önce bu durum değerlendirilir',
+            'Değerlendirme yapılmadan doğrudan cerrahi isteyen hastalar: tip belirlenmeden ameliyat planlanmaz',
+            'Doğum planı olan kadınlarda sarkma ve sling cerrahisinin zamanlaması ayrıca konuşulur'
+          ]
+        },
+        technology: [
+          'İşeme günlüğü — ne sıklıkta, ne miktarda ve nasıl bir sıkışmayla idrara çıkıldığının kaydı; pahalı tetkiklerden daha çok bilgi verir',
+          'İdrar tahlili ve kültürü — enfeksiyonun dışlanması',
+          'İşeme sonrası kalan idrar ölçümü — ilaç kararından önce zorunlu adım',
+          'Ürodinami — seçilmiş hastalarda, tipin ayrımı belirsizse',
+          'Sistoskopi — idrarda kan veya atipik bulgu varsa',
+          'Pelvik taban kas değerlendirmesi ve doğru kasın öğretilmesi',
+          'Minimal invaziv sling cerrahisi ve pelvik taban onarımı',
+          'Mesane içine botulinum toksini uygulaması ve sakral nöromodülasyon'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
+          note: 'Kadın ve fonksiyonel üroloji, Doç. Dr. Müslüm Ergün’ün çalışma alanlarındandır. Yaklaşım basamaklıdır: önce diğer nedenlerin dışlanması ve tipin belirlenmesi, sonra davranışsal tedavi, ardından ilaç ve gerektiğinde cerrahi.'
         },
         timeline: [
-          { when: 'Uzaktan', title: 'Ön değerlendirme', body: 'Şikâyet öykünüz ve varsa ürodinami sonuçları değerlendirilir.' },
-          { when: '1. Gün', title: 'Varış ve muayene', body: 'Muayene, gerekli testler ve planlama.' },
-          { when: '2. Gün', title: 'İşlem', body: 'Minimal invaziv sling veya onarım; çoğu vaka günübirlik–1 gece.' },
-          { when: '3–4. Gün', title: 'Kontrol', body: 'Kontrol, bilgilendirme ve dönüş onayı.' }
+          { when: 'Uzaktan', title: 'Ön değerlendirme', body: 'Şikâyetinizin tipi, doğum öykünüz, kullandığınız ilaçlar ve varsa önceki tetkikleriniz değerlendirilir. Talep ederseniz görüşmenin kadın bir sağlık çalışanı eşliğinde yapılması sağlanır.' },
+          { when: 'Hazırlık', title: 'İşeme günlüğü', body: 'Birkaç gün boyunca ne zaman, ne kadar idrar yaptığınızı ve sıkışmanın şiddetini kaydedersiniz. Bu basit kayıt, tipin belirlenmesinde en değerli araçtır ve tedavinin etkisini ölçmek için de kullanılır.' },
+          { when: '1. Gün', title: 'Muayene ve tetkikler', body: 'Muayene, idrar tahlili ve kültürü, işeme sonrası kalan idrar ölçümü. Gerekirse ürodinami planlanır.' },
+          { when: 'Karar aşaması', title: 'Tipin belirlenmesi ve plan', body: 'Kaçırmanın tipi netleştirilir ve buna uygun basamak seçilir. Çoğu hastada ilk basamak cerrahi değildir.' },
+          { when: 'İşlem günü', title: 'Girişim (gerekiyorsa)', body: 'Sling cerrahisi, pelvik taban onarımı veya mesane içi botulinum toksini uygulaması. Çoğu işlem günübirlik veya 1 gece yatışla yapılır.' },
+          { when: 'Dönüş öncesi', title: 'Kontrol', body: 'İşedikten sonra mesanenin boşalıp boşalmadığı kontrol edilir ve dönüş onayı verilir.' }
         ],
         risks: [
-          'Geçici idrar yapma zorluğu',
+          'YANLIŞ TİPE YANLIŞ TEDAVİ: Bu alandaki en büyük risk cerrahi bir komplikasyon değil, tipin yanlış belirlenmesidir. Sıkışma tipine yapılan sling ameliyatı fayda vermez ve hastada "benim sorunum çözülmez" inancı oluşturur',
+          'Sling cerrahisi sonrası geçici idrar yapma zorluğu',
           'İdrar yolu enfeksiyonu',
-          'Ağrı veya şişlik (geçici)',
-          'Nadiren tekrar işlem ihtiyacı'
+          'Ağrı, şişlik ve geçici rahatsızlık',
+          'Cerrahi sonrası şikâyetin tamamen geçmemesi — özellikle karışık tipte, yalnızca bir bileşen tedavi edildiğinde',
+          'Mesane içi botulinum toksini sonrası mesanenin tam boşalmaması ve geçici olarak kendi kendine sonda takma gereksinimi; bu ihtimal önceden konuşulmalı ve hasta buna hazır olmalıdır',
+          'Zamanla şikâyetin yeniden başlaması ve ek tedavi gerekmesi',
+          'Sarkma onarımı sonrası nüks ihtimali'
         ],
         alternatives: [
-          'Pelvik taban (Kegel) egzersizleri',
-          'Mesane eğitimi ve yaşam tarzı değişiklikleri',
-          'İlaç tedavisi (aşırı aktif mesanede)',
-          'Pesari (sarkma vakalarında)'
+          'Pelvik taban kas egzersizleri — doğru kası çalıştırmak şartıyla etkilidir. En sık yapılan hata karın, kalça veya bacak kaslarının sıkılmasıdır',
+          'Mesane eğitimi — tuvalete gitme aralıklarının kademeli uzatılması; sıkışma tipinde temel basamaktır',
+          'Sıvı ve kafein düzeninin ayarlanması — sıvıyı aşırı kısmak YANLIŞTIR; idrarı yoğunlaştırır ve şikâyeti artırır',
+          'Kilo verme ve kabızlığın giderilmesi — karın içi basıncı azaltarak ölçülebilir fayda sağlar',
+          'Mesaneyi gevşeten ilaçlar — sıkışma tipinde; yaşlı hastalarda bilişsel etki açısından ilaç seçimi dikkatle yapılır',
+          'Vajinal östrojen — menopoz sonrası seçilmiş kadınlarda şikâyeti azaltabilir',
+          'Pesari — sarkma vakalarında cerrahi dışı seçenek',
+          'Sling cerrahisi — stres tipinde, davranışsal tedavi yetersiz kaldığında',
+          'Mesane içine botulinum toksini ve sakral nöromodülasyon — ilaca yanıt vermeyen sıkışma tipinde'
+        ],
+        comparison: {
+          title: 'Hangi tip hangi tedaviye gider',
+          columns: ['Ölçüt', 'Stres tipi', 'Sıkışma tipi', 'Taşma tipi'],
+          rows: [
+            { label: 'Kaçırma ne zaman olur', values: ['Öksürme, gülme, ağır kaldırma', 'Ani sıkışmanın ardından', 'Damla damla, sürekli'] },
+            { label: 'Öncesinde sıkışma var mı', values: ['Hayır', 'Evet, ertelenemez', 'Belirsiz; tam boşaltamama hissi'] },
+            { label: 'İlk basamak', values: ['Pelvik taban egzersizi', 'Mesane eğitimi ve sıvı düzeni', 'Boşalmayı engelleyen nedenin bulunması'] },
+            { label: 'İlaç işe yarar mı', values: ['Mesane gevşeticiler FAYDA ETMEZ', 'Evet, ikinci basamak', 'Mesane gevşeticiler ZARARLI OLABİLİR'] },
+            { label: 'Cerrahi seçenek', values: ['Sling', 'Botulinum toksini, nöromodülasyon', 'Tıkanıklığın giderilmesi'] }
+          ],
+          note: 'Bu tablonun tek amacı şunu göstermektir: aynı şikâyet cümlesi ("idrar kaçırıyorum") birbirinden tamamen farklı tedavilere gider. Bu nedenle değerlendirme yapılmadan verilen bir tedavi, iyi niyetli olsa bile sonuçsuz kalabilir.'
+        },
+        recovery: [
+          { period: 'Egzersiz döneminde', body: 'Pelvik taban egzersizlerinde ilk haftalar zordur ve fark hemen görülmez. Düzenli ve doğru yapıldığında etkisi haftalar içinde ortaya çıkar. Doğru kası çalıştırdığınızdan emin olmak için bir kez öğretilmesini isteyin.' },
+          { period: 'Mesane eğitimi döneminde', body: 'Tuvalet aralıkları kademeli uzatılır; birden değil. İşeme günlüğü ilerlemeyi görmenizi sağlar ve motivasyonu korur.' },
+          { period: 'Sling sonrası ilk hafta', body: 'Hafif rahatsızlık ve şişlik olağandır. Ağır kaldırmaktan ve ıkınmaktan kaçınılır; kabızlık önlenir. İdrar yapmakta zorluk olursa bildirilmelidir.' },
+          { period: 'Sling sonrası 2–6. hafta', body: 'Günlük hafif aktiviteye birkaç gün içinde dönülür; ağır aktivite ve cinsel ilişki için hekiminizin verdiği süre beklenir.' },
+          { period: 'Botulinum toksini sonrası', body: 'Etki birkaç ay sürer ve zamanla azalır; tekrarlanması gerekir. İlk dönemde mesanenin tam boşalıp boşalmadığı kontrol edilir.' },
+          { period: 'Uzun dönem', body: 'Şikâyet tekrarlarsa neden yeniden değerlendirilir. Kilo kontrolü, kabızlığın önlenmesi ve egzersizin sürdürülmesi sonucun kalıcılığına katkı sağlar.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'İşlem tipine göre değişir.'
+          disclaimer: 'Tutar; uygulanan işleme (değerlendirme, sling, botulinum toksini veya onarım cerrahisi) göre belirgin biçimde değişir. Kalem kalem ayrılmış yazılı teklif, tip belirlendikten sonra verilir.'
         },
         packageIncludes: [
-          'İşlem ve hastane yatışı',
-          'Anestezi ve tetkikler',
-          'Transferler ve konaklama',
-          'Kadın tıbbi tercüman (talebe göre)',
-          'Kontrol ve online takip'
+          'Kadın ürolojisi değerlendirmesi ve işeme günlüğünün yorumlanması',
+          'İdrar tahlili ve kültürü',
+          'İşeme sonrası kalan idrar ölçümü',
+          'Gerekirse ürodinami veya sistoskopi',
+          'Pelvik taban egzersizlerinin doğru tekniğinin öğretilmesi',
+          'Planlanan işlem ve anestezi',
+          'Hastane yatışı (gerekiyorsa)',
+          'Talep hâlinde kadın tıbbi tercüman',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Dönüşten sonra uzaktan takip'
         ],
         faqs: [
-          { q: 'Sling ameliyatı kalıcı mı?', a: 'Çoğu hastada uzun süreli iyileşme sağlar; sonuç şikâyet tipine göre değişir.' },
-          { q: 'İyileşme ne kadar sürer?', a: 'Günlük hafif aktiviteye birkaç gün içinde dönülür; ağır aktivite birkaç hafta ertelenir.' },
-          { q: 'Kadın sağlık personeli talep edebilir miyim?', a: 'Evet; talebe göre kadın tercüman ve koordinasyon desteği sağlanır.' }
+          { q: 'İdrar kaçırma yaşlılığın normal bir parçası mı?', a: 'Hayır. Yaygın olması normal olduğu anlamına gelmez. Tedavi edilebilir bir durumdur ve çoğu hastada ameliyat gerekmeden belirgin iyileşme sağlanabilir. Yıllarca ped kullanarak ve sosyal yaşamı kısıtlayarak yaşamak gerekmez.' },
+          { q: 'Daha önce tedavi oldum ama fayda görmedim, benim sorunum çözülmez mi?', a: 'Bu sonuca varmadan önce tipin doğru belirlenip belirlenmediğini sorgulayın. Stres tipine mesane gevşetici ilaç verilmesi veya sıkışma tipine sling ameliyatı yapılması işe yaramaz. Böyle bir durumda sorun sizin durumunuzda değil, tedavinin yanlış tipe yönelmiş olmasındadır.' },
+          { q: 'Değerlendirmede neler yapılır, utandırıcı mı?', a: 'Değerlendirme; şikâyetin dinlenmesi, işeme günlüğünün gözden geçirilmesi, idrar tahlili ve muayeneden oluşur. Muayene kısa sürer ve her aşaması önceden anlatılır. Talep ederseniz kadın bir sağlık çalışanının bulunması ve kadın tıbbi tercüman sağlanır; bunu istemek bir ayrıcalık talebi değil, hakkınızdır.' },
+          { q: 'Pelvik taban egzersizleri gerçekten işe yarıyor mu?', a: 'Evet, ancak doğru kası çalıştırmak şartıyla. En sık yapılan hata karın, kalça veya bacak kaslarını sıkmaktır; bu egzersiz sayılmaz. Doğru teknik bir kez öğretildiğinde etkisi haftalar içinde görülür. Ameliyat düşünülüyorsa bile bu basamak atlanmamalıdır.' },
+          { q: 'Su içmeyi azaltsam kaçırmam azalır mı?', a: 'Hayır, tam tersi olur. Az su içmek idrarı yoğunlaştırır, mesaneyi tahriş eder ve sıkışmayı artırır. Doğru yaklaşım sıvıyı gün içine yaymak ve akşam saatlerinde azaltmaktır. Kafein ve gazlı içecekleri azaltmak ise yardımcı olabilir.' },
+          { q: 'Sling ameliyatı kalıcı mı?', a: 'Uygun seçilmiş stres tipi hastalarda uzun süreli iyileşme sağlayabilir. Ancak karışık tipte, yalnızca stres bileşeni tedavi edildiğinde sıkışma şikâyeti devam edebilir; bu durumun önceden konuşulmuş olması önemlidir. Kesin ve kalıcı sonuç vaat eden anlatıma temkinli yaklaşın.' },
+          { q: 'İdrarımda kan var ama asıl sorunum kaçırma; bu önemli mi?', a: 'Evet, ayrıca önemlidir. İdrarda kan, kaçırma şikâyetinin yanında bulunsa bile ayrı olarak araştırılmalıdır. Bu bulgunun "hassas mesane" diye geçiştirilmesi tanı gecikmesine yol açabilir.' },
+          { q: 'Mesane botoksu sonrası kendi kendime sonda takmam gerekir mi?', a: 'Bazı kadınlarda mesane fazla gevşer ve tam boşalmaz; bu durumda geçici olarak kendi kendine sonda takmak gerekebilir. İhtimal düşüktür ama gerçektir ve önceden konuşulmalıdır. Buna hazır veya fiziksel olarak uygun değilseniz, bu seçenek size uymayabilir.' },
+          { q: 'Doğum yapmayı planlıyorum, şimdi ameliyat olmalı mıyım?', a: 'Doğum planınız varsa bunu mutlaka söyleyin. Sarkma ve sling cerrahisinin zamanlaması bu bilgiye göre değişir; genellikle doğum planı tamamlandıktan sonra yapılması tercih edilir. Bu dönemde davranışsal tedavi ve pelvik taban egzersizleri öne çıkar.' },
+          { q: 'Hangi belgeleri göndermeliyim?', a: 'Varsa ürodinami sonucunuz, idrar tahlili ve kültürünüz, işeme sonrası kalan idrar ölçümünüz, doğum öykünüz, geçirdiğiniz ameliyatlar, kullandığınız ilaçların listesi ve birkaç günlük işeme günlüğü. İşeme günlüğü basit görünür ama değerlendirmeye en çok katkı veren belgedir.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Non-neurogenic Female LUTS — Avrupa Üroloji Derneği', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
         ]
       },
       en: {
