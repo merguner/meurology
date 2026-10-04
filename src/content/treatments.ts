@@ -15,6 +15,1390 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
+     * Androloji hub'ının altında (prompt m.4.1).
+     * ÜÇ KRİTİK DÜRÜSTLÜK NOKTASI:
+     * 1. Mikro-TESE'de SPERM BULUNACAĞI GARANTİ EDİLEMEZ. Bu sayfanın en
+     *    önemli cümlesidir; aksini vaat eden pazarlamaya karşı yazılmıştır.
+     * 2. Y kromozomu mikrodelesyonu AZFa/AZFb'de bulma şansının çok düşük
+     *    olduğu yazılıdır — genetik test gereksiz ameliyatı önleyebilir.
+     * 3. DIŞARIDAN TESTOSTERON SPERM ÜRETİMİNİ BASKILAR. Spor salonlarında
+     *    yaygın; hastaların çoğu bunu bilmiyor. Açıkça uyarılmıştır.
+     * Çiftin birlikte değerlendirilmesi ve kadın yaşının önemi belirtilmiştir.
+     * Kaynak: EAU Sexual and Reproductive Health kılavuzu.
+     * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     */
+    slug: 'erkek-infertilitesi',
+    parent: 'androloji',
+    lastReviewed: '2026-10-04',
+    icon: 'andrology',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'Erkek İnfertilitesi ve Mikro-TESE',
+        summary:
+          'Menide hiç sperm bulunmaması yolun sonu değildir; ancak sperm bulunacağı da garanti edilemez. Bu sayfa hangi testlerin neden yapıldığını ve kararın nasıl verildiğini anlatır.',
+        metaTitle: 'Erkek İnfertilitesi ve Mikro-TESE: Tanı ve Tedavi',
+        metaDescription:
+          'Sperm analizinin doğru yorumlanması, tıkanıklığa bağlı ve bağlı olmayan azospermi ayrımı, genetik testler, mikro-TESE ve gerçekçi beklentiler.',
+        quickFacts: {
+          duration: 'Mikro-TESE 60–150 dakika',
+          anesthesia: 'Genel anestezi',
+          hospitalStay: 'Günübirlik',
+          stayInTurkey: '5–7 gün',
+          returnToWork: '3–7 gün',
+          flightClearance: '3–5 gün'
+        },
+        definition: [
+          'Erkek infertilitesi, erkeğe bağlı etkenler nedeniyle gebelik elde edilememesidir. Değerlendirme her zaman ÇİFT OLARAK yapılır; çünkü tedavi kararını yalnızca erkekteki bulgu değil, kadın tarafındaki durum ve özellikle kadın yaşı da belirler. Erkekteki sorunu çözmek, kadın tarafında çözülmemiş bir engel varsa gebelik getirmez.',
+          'DEĞERLENDİRMENİN TEMELİ SPERM ANALİZİDİR, AMA TEK BİR ANALİZ YETERLİ DEĞİLDİR. Sperm değerleri aynı kişide haftadan haftaya belirgin biçimde değişir; ateşli bir hastalık, yoğun stres veya kısa bir perhiz süresi sonucu bozabilir. Bu nedenle en az iki ayrı analiz istenir ve her ikisi de 2–7 günlük cinsel perhizden sonra verilmelidir.',
+          'AZOSPERMİ İKİYE AYRILIR VE BU AYRIM HER ŞEYİ BELİRLER. Menide hiç sperm bulunmamasının iki nedeni olabilir: ya sperm üretiliyor ama yolu tıkalıdır (tıkanıklığa bağlı azospermi), ya da üretim yeterli değildir (tıkanıklığa bağlı olmayan azospermi). Birincisinde sperm elde etme şansı yüksektir; ikincisinde durum daha karmaşıktır ve mikro-TESE gündeme gelir.',
+          'Bu ayrım muayene ve kan tetkikleriyle yapılır. Testis hacmi normal, FSH değeri normal ve meni hacmi düşükse tıkanıklık düşünülür. Testisler küçülmüş ve FSH yüksekse üretim sorunu ön plandadır. Genetik testler (karyotip ve Y kromozomu mikrodelesyonu) üretim sorunu olan hastalarda istenir.',
+          'GENETİK TEST BAZEN GEREKSİZ AMELİYATI ÖNLER. Y kromozomunda AZFa veya AZFb bölgesinde tam delesyon saptanan hastalarda, mikro-TESE ile sperm bulunma olasılığı çok düşüktür. Bu bilgi ameliyat öncesinde bilinirse, hasta ve eşi gereksiz bir girişimden ve bunun getireceği hayal kırıklığından korunur. AZFc bölgesindeki delesyonda ise sperm bulunması mümkündür.',
+          'MİKRO-TESE, testis dokusunun ameliyat mikroskobu altında incelenerek sperm üretiminin sürdüğü kanalcıkların seçilmesidir. Mikroskop kullanılmasının amacı, hem bulma olasılığını artırmak hem de alınan doku miktarını azaltarak testise verilen zararı sınırlamaktır. Bulunan spermler ya taze olarak mikroenjeksiyon (ICSI) işleminde kullanılır ya da dondurularak saklanır.',
+          'EN ÖNEMLİ NOKTA: SPERM BULUNACAĞI GARANTİ EDİLEMEZ. Tıkanıklığa bağlı olmayan azospermide mikro-TESE sonucunda sperm bulunamayabilir. Bu, cerrahinin başarısızlığı değil, altta yatan durumun gerçeğidir. Size "kesinlikle buluruz" diyen bir yaklaşıma karşı dikkatli olun; dürüst olan, olasılığı sizin bulgularınıza göre açıklamaktır.'
+        ],
+        eligibility: {
+          suitable: [
+            'Menisinde hiç sperm bulunmayan (azospermi) ve çocuk sahibi olmak isteyen erkekler',
+            'Tıkanıklığa bağlı azospermi düşünülen hastalar — sperm elde etme şansı yüksektir',
+            'Tıkanıklığa bağlı olmayan azospermide, genetik değerlendirme sonrası uygun bulunan hastalar',
+            'Daha önce TESE yapılmış ancak mikroskop kullanılmamış hastalar — yeniden değerlendirme anlamlı olabilir',
+            'Kanser tedavisi öncesi doğurganlığını korumak isteyen erkekler — sperm dondurma öncelikle konuşulur',
+            'Sperm değerleri bozuk olup varikoseli bulunan erkekler — önce varikosel değerlendirilir'
+          ],
+          notSuitable: [
+            'Tek bir sperm analizine dayanarak karar bekleyen hastalar — en az iki analiz gerekir',
+            'Y kromozomunda AZFa veya AZFb tam delesyonu saptanan hastalar — sperm bulma olasılığı çok düşüktür ve bu baştan konuşulmalıdır',
+            'Kadın tarafında tedavi edilmemiş ve gebeliği engelleyen bir sorun bulunan çiftler',
+            'Dışarıdan testosteron veya anabolik madde kullanmaya devam eden erkekler — önce bu kesilmeli ve belirli bir süre beklenmelidir',
+            'Mikroenjeksiyon (ICSI) merkeziyle eşzamanlı planlama yapılmamış hastalar — taze sperm kullanılacaksa zamanlama şarttır'
+          ]
+        },
+        technology: [
+          'Sperm analizi (en az iki ayrı ölçüm, 2–7 gün perhiz sonrası)',
+          'Hormon profili — FSH, LH, total testosteron',
+          'Skrotal ultrason — testis hacmi ve varikosel değerlendirmesi',
+          'Genetik testler — karyotip ve Y kromozomu mikrodelesyonu',
+          'Ameliyat mikroskobu ile mikro-TESE',
+          'Sperm dondurma ve embriyoloji laboratuvarıyla eşzamanlı çalışma'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Androloji ve erkek infertilitesi, Doç. Dr. Müslüm Ergün’ün çalışma alanları arasındadır. Mikro-TESE kararı; hormon profili, testis hacmi, genetik sonuçlar ve çiftin tedavi planı birlikte değerlendirilerek verilir ve embriyoloji ekibiyle eşgüdüm içinde planlanır.'
+        },
+        timeline: [
+          {
+            when: '1. adım',
+            title: 'Çiftin birlikte değerlendirilmesi',
+            body: 'Kadın tarafının da değerlendirilmiş olması gerekir. Kadın yaşı tedavi planını ve aciliyetini doğrudan etkiler.'
+          },
+          {
+            when: '2. adım',
+            title: 'Sperm analizi ve muayene',
+            body: 'En az iki ayrı sperm analizi istenir. Muayenede testis hacmi, varikosel varlığı ve sperm kanallarının ele gelip gelmediği değerlendirilir.'
+          },
+          {
+            when: '3. adım',
+            title: 'Hormon ve genetik testler',
+            body: 'FSH, LH ve testosteron bakılır. Üretim sorunu düşünülüyorsa karyotip ve Y kromozomu mikrodelesyonu istenir. Bu sonuçlar ameliyat kararını değiştirebilir.'
+          },
+          {
+            when: '4. adım',
+            title: 'Düzeltilebilir nedenlerin tedavisi',
+            body: 'Varikosel, hormonal bozukluk veya ilaç/madde kullanımı gibi düzeltilebilir bir neden varsa önce o ele alınır. Dışarıdan testosteron kullanılıyorsa kesilir ve toparlanma beklenir.'
+          },
+          {
+            when: '5. adım',
+            title: 'Mikro-TESE',
+            body: 'Genel anestezi altında, ameliyat mikroskobu ile testis dokusu incelenir ve sperm üretimi olan kanalcıklar seçilir. İşlem 60–150 dakika sürebilir; hasta aynı gün taburcu olur.'
+          },
+          {
+            when: '6. adım',
+            title: 'Sonuç ve sonraki basamak',
+            body: 'Sperm bulunursa taze kullanılır veya dondurulur. Bulunamazsa donör sperm veya evlat edinme gibi seçenekler, çiftle birlikte açıkça konuşulur.'
+          }
+        ],
+        risks: [
+          'SPERM BULUNAMAMASI: Tıkanıklığa bağlı olmayan azospermide en önemli ve en gerçek risktir. Bu bir komplikasyon değil, olası bir sonuçtur ve ameliyat öncesinde açıkça konuşulur',
+          'Testis dokusunun bir kısmının alınmasına bağlı testosteron düzeyinde düşme — mikroskop kullanımı alınan doku miktarını azaltarak bu riski sınırlamayı amaçlar',
+          'Skrotumda şişlik, morarma ve kan birikmesi (hematom)',
+          'Enfeksiyon',
+          'Testiste ağrı — genellikle geçicidir',
+          'Testis hacminde küçülme',
+          'Gereksiz işlem: genetik test yapılmadan ameliyata alınan AZFa/AZFb delesyonlu hastada hem beklenti hem doku boşa harcanır — bu yüzden test önce istenir'
+        ],
+        alternatives: [
+          'Düzeltilebilir nedenin tedavisi — varikosel onarımı, hormonal düzenleme, ilaç veya madde kullanımının kesilmesi',
+          'Tıkanıklığa bağlı azospermide epididimden veya testisten daha basit yöntemlerle sperm elde edilmesi',
+          'Yaşam tarzı düzenlemesi — sigaranın bırakılması, kilo kontrolü, aşırı sıcaktan kaçınma',
+          'Mikroenjeksiyon (ICSI) için mevcut sperm varsa doğrudan yardımcı üreme',
+          'Sperm dondurma — tedavi öncesi güvence olarak',
+          'Donör sperm veya evlat edinme — sperm bulunamadığında konuşulan seçenekler'
+        ],
+        comparison: {
+          title: 'Tıkanıklığa bağlı ve bağlı olmayan azospermi',
+          columns: ['Ölçüt', 'Tıkanıklığa bağlı', 'Tıkanıklığa bağlı olmayan'],
+          rows: [
+            { label: 'Sorun nerede', values: ['Üretim var, yol tıkalı', 'Üretim yetersiz'] },
+            { label: 'Testis hacmi', values: ['Genellikle normal', 'Sıklıkla küçülmüş'] },
+            { label: 'FSH düzeyi', values: ['Genellikle normal', 'Sıklıkla yüksek'] },
+            { label: 'Genetik test', values: ['Kistik fibroz taşıyıcılığı araştırılabilir', 'Karyotip ve Y mikrodelesyonu gerekir'] },
+            { label: 'Sperm elde etme şansı', values: ['Yüksek', 'Değişken — garanti edilemez'] },
+            { label: 'Yöntem', values: ['Daha basit teknikler yeterli olabilir', 'Mikro-TESE'] }
+          ],
+          note:
+            'Bu ayrım hem yöntemi hem beklentiyi belirler. Ayrımı muayene, hormon profili ve testis hacmi birlikte yapar; tek bir test yeterli değildir.'
+        },
+        recovery: [
+          {
+            period: 'İlk 48 saat',
+            body: 'Skrotumda şişlik ve hassasiyet beklenir. Buz uygulaması ve destekleyici iç çamaşırı rahatlatır. Ağrı kesici kullanılır.'
+          },
+          {
+            period: '3–7. gün',
+            body: 'Masa başı işe dönülebilir. Hafif yürüyüş serbesttir; ağır kaldırma ve spor yasaktır.'
+          },
+          {
+            period: '2–4. hafta',
+            body: 'Normal aktiviteye kademeli dönüş yapılır. Cinsel yaşama dönüş bu dönemde planlanır.'
+          },
+          {
+            period: '3–6. ay',
+            body: 'Testosteron düzeyi kontrol edilir. Doku alınmasına bağlı düşme olup olmadığı değerlendirilir.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat; yalnızca mikro-TESE mi yoksa sperm dondurma ve embriyoloji laboratuvarı hizmetleriyle birlikte mi planlandığına göre değişir. Kesin teklif, tetkikler tamamlandıktan sonra verilir.'
+        },
+        packageIncludes: [
+          'Androloji değerlendirmesi ve fizik muayene',
+          'Sperm analizi, hormon profili ve skrotal ultrason',
+          'Gerekli genetik testlerin planlanması',
+          'Mikro-TESE işlemi ve anestezi',
+          'Günübirlik işlem ve gözlem',
+          'Bulunan spermin dondurularak saklanması',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve ülkenize döndükten sonra uzaktan takip'
+        ],
+        faqs: [
+          {
+            q: 'Menimde hiç sperm yok. Çocuk sahibi olma şansım bitti mi?',
+            a: 'Hayır, bitmedi — ama garanti de verilemez. Önce menide sperm bulunmamasının nedeninin tıkanıklık mı yoksa üretim sorunu mu olduğu anlaşılmalıdır. Tıkanıklıkta sperm elde etme şansı yüksektir. Üretim sorununda mikro-TESE ile sperm bulunabilir, ancak bulunamayabilir de. Dürüst yanıt, olasılığı sizin bulgularınıza göre konuşmaktır.'
+          },
+          {
+            q: 'Tek sperm analizi yeterli değil mi?',
+            a: 'Hayır. Sperm değerleri aynı kişide haftadan haftaya belirgin biçimde değişir; ateşli bir hastalık veya kısa bir perhiz süresi sonucu bozabilir. Tek bir kötü analizle karar vermek yanlış sonuca götürür. En az iki ayrı analiz, 2–7 günlük perhiz sonrası istenir.'
+          },
+          {
+            q: 'Testosteron iğnesi kullanıyorum, sperm değerlerimi düzeltir mi?',
+            a: 'Hayır — tam tersini yapar. Dışarıdan alınan testosteron, beynin testislere gönderdiği uyarıyı baskılar ve sperm üretimini azaltır, hatta durdurabilir. Spor salonlarında yaygın olan bu kullanım, infertilitenin sık ve gözden kaçan bir nedenidir. Çocuk istiyorsanız bunu hekiminizle konuşarak kesmeniz ve toparlanma için belirli bir süre beklemeniz gerekir.'
+          },
+          {
+            q: 'Genetik test neden isteniyor?',
+            a: 'Çünkü bazen sonucu ameliyat kararını değiştirir. Y kromozomunda AZFa veya AZFb bölgesinde tam delesyon saptanırsa, mikro-TESE ile sperm bulunma olasılığı çok düşüktür. Bunu önceden bilmek sizi gereksiz bir ameliyattan ve büyük bir hayal kırıklığından korur. AZFc delesyonunda ise sperm bulunması mümkündür.'
+          },
+          {
+            q: 'Mikro-TESE ile normal TESE arasındaki fark nedir?',
+            a: 'Mikro-TESE’de ameliyat mikroskobu kullanılır. Böylece sperm üretiminin sürdüğü, daha dolgun görünen kanalcıklar seçilerek alınır. Bu hem bulma olasılığını artırmayı hem de alınan doku miktarını azaltarak testise verilen zararı sınırlamayı amaçlar. Daha önce mikroskopsuz TESE olup sonuç alamadıysanız yeniden değerlendirme anlamlı olabilir.'
+          },
+          {
+            q: 'Sperm bulunursa ne oluyor?',
+            a: 'Bulunan spermler ya aynı gün mikroenjeksiyon (ICSI) işleminde kullanılır ya da dondurularak saklanır. Taze kullanım planlanıyorsa eşinizin tedavi takvimiyle eşzamanlı planlama gerekir; bu nedenle işlem embriyoloji ekibiyle birlikte ayarlanır.'
+          },
+          {
+            q: 'Sperm bulunamazsa ne olacak?',
+            a: 'Bu olasılık baştan konuşulur. Bulunamadığında seçenekler donör sperm veya evlat edinmedir. Bazı hastalarda, ilk işlemden belirli bir süre sonra ikinci bir deneme gündeme gelebilir; ancak bu her hasta için uygun değildir ve bulgulara göre değerlendirilir.'
+          },
+          {
+            q: 'Varikoselim var, önce onu mu ameliyat olmalıyım?',
+            a: 'Muayenede ele gelen bir varikoseliniz varsa ve sperm değerleriniz bozuksa, önce varikosel onarımı gündeme gelebilir; bu bir kısım hastada sperm değerlerinde düzelme sağlar. Ancak bu da gebelik garantisi vermez ve kadın yaşı sınırlıysa doğrudan yardımcı üremeye geçmek daha doğru olabilir.'
+          },
+          {
+            q: 'İşlem testosteronumu düşürür mü?',
+            a: 'Testis dokusunun bir kısmı alındığı için testosteron düzeyinde düşme olabilir. Mikroskop kullanılmasının bir amacı da alınan doku miktarını en aza indirmektir. Ameliyat sonrası 3–6. ayda testosteron kontrol edilir ve gerekirse izlem sürdürülür.'
+          },
+          {
+            q: 'Ne zaman işe dönebilir ve uçabilirim?',
+            a: 'Masa başı işe genellikle 3–7 gün içinde dönülebilir; uçuşa 3–5 gün sonra izin verilir. Yurt dışından gelen hastalar için 5–7 günlük kalış planlanır. Ağır kaldırma ve spor için 2–4 hafta beklenmesi önerilir.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      en: {
+        title: 'Male Infertility and Micro-TESE',
+        summary:
+          'No sperm in the semen is not the end of the road — but finding sperm cannot be guaranteed either. This page explains which tests are done, why, and how the decision is made.',
+        metaTitle: 'Male Infertility and Micro-TESE: Diagnosis and Treatment',
+        metaDescription:
+          'Interpreting semen analysis correctly, the distinction between obstructive and non-obstructive azoospermia, genetic tests, micro-TESE and realistic expectations.',
+        quickFacts: {
+          duration: 'Micro-TESE 60–150 minutes',
+          anesthesia: 'General anaesthesia',
+          hospitalStay: 'Day case',
+          stayInTurkey: '5–7 days',
+          returnToWork: '3–7 days',
+          flightClearance: '3–5 days'
+        },
+        definition: [
+          'Male infertility means that pregnancy is not achieved because of factors on the man’s side. The assessment is always made AS A COUPLE, because the treatment decision is determined not only by the findings in the man but by the situation on the woman’s side and in particular by her age. Solving the problem in the man will not bring a pregnancy if there is an unresolved obstacle on the woman’s side.',
+          'SEMEN ANALYSIS IS THE BASIS OF ASSESSMENT, BUT ONE ANALYSIS IS NOT ENOUGH. Sperm values vary markedly from week to week in the same man; a feverish illness, heavy stress or a short abstinence period can spoil the result. At least two separate analyses are therefore requested, and both should be produced after 2–7 days of sexual abstinence.',
+          'AZOOSPERMIA DIVIDES IN TWO, AND THAT DISTINCTION DETERMINES EVERYTHING. There are two possible reasons for no sperm in the semen: either sperm is being produced but the passage is blocked (obstructive azoospermia), or production is inadequate (non-obstructive azoospermia). In the first, the chance of retrieving sperm is high; in the second the picture is more complex and micro-TESE comes into consideration.',
+          'The distinction is made by examination and blood tests. If testicular volume is normal, FSH is normal and the semen volume is low, obstruction is suspected. If the testicles are small and FSH is raised, a problem of production is to the fore. Genetic tests (karyotype and Y chromosome microdeletion) are requested in men with a production problem.',
+          'GENETIC TESTING SOMETIMES PREVENTS AN UNNECESSARY OPERATION. In men found to have a complete deletion in the AZFa or AZFb region of the Y chromosome, the chance of finding sperm at micro-TESE is very low. Knowing this before surgery spares the man and his partner an unnecessary procedure and the disappointment it would bring. With a deletion in the AZFc region, finding sperm is possible.',
+          'MICRO-TESE means examining the testicular tissue under an operating microscope and selecting the tubules in which sperm production is continuing. The purpose of using the microscope is both to improve the chance of finding sperm and to limit damage to the testicle by reducing the amount of tissue taken. Sperm that is found is either used fresh for intracytoplasmic sperm injection (ICSI) or frozen and stored.',
+          'THE MOST IMPORTANT POINT: FINDING SPERM CANNOT BE GUARANTEED. In non-obstructive azoospermia, micro-TESE may end without sperm being found. That is not a failure of the surgery but the reality of the underlying condition. Be wary of anyone who says "we will definitely find some"; the honest approach is to explain the likelihood in the light of your own findings.'
+        ],
+        eligibility: {
+          suitable: [
+            'Men with no sperm in the semen (azoospermia) who wish to father a child',
+            'Men in whom obstructive azoospermia is suspected — the chance of retrieving sperm is high',
+            'Men with non-obstructive azoospermia found suitable after genetic assessment',
+            'Men who have had a TESE before but without a microscope — reassessment may be worthwhile',
+            'Men who wish to preserve fertility before cancer treatment — sperm freezing is discussed first',
+            'Men with impaired sperm values who also have a varicocele — the varicocele is assessed first'
+          ],
+          notSuitable: [
+            'Men expecting a decision on the basis of a single semen analysis — at least two are needed',
+            'Men found to have a complete AZFa or AZFb deletion on the Y chromosome — the chance of finding sperm is very low and this must be discussed from the outset',
+            'Couples with an untreated problem on the woman’s side that is preventing pregnancy',
+            'Men who continue to take testosterone or anabolic substances — these must be stopped first and a period allowed for recovery',
+            'Men for whom no simultaneous planning with an ICSI centre has been made — timing is essential if fresh sperm is to be used'
+          ]
+        },
+        technology: [
+          'Semen analysis (at least two separate samples, after 2–7 days of abstinence)',
+          'Hormone profile — FSH, LH, total testosterone',
+          'Scrotal ultrasound — testicular volume and assessment for varicocele',
+          'Genetic tests — karyotype and Y chromosome microdeletion',
+          'Micro-TESE with the operating microscope',
+          'Sperm freezing and simultaneous working with the embryology laboratory'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Andrology and male infertility are among Assoc. Prof. Müslüm Ergün’s areas of work. The decision to perform micro-TESE is made by weighing the hormone profile, testicular volume, genetic results and the couple’s treatment plan together, and it is arranged in coordination with the embryology team.'
+        },
+        timeline: [
+          {
+            when: 'Step 1',
+            title: 'Assessing the couple together',
+            body: 'The woman must also have been assessed. Her age directly affects both the treatment plan and how urgent it is.'
+          },
+          {
+            when: 'Step 2',
+            title: 'Semen analysis and examination',
+            body: 'At least two separate semen analyses are requested. Examination assesses testicular volume, the presence of a varicocele and whether the sperm ducts can be felt.'
+          },
+          {
+            when: 'Step 3',
+            title: 'Hormone and genetic tests',
+            body: 'FSH, LH and testosterone are checked. If a production problem is suspected, karyotype and Y chromosome microdeletion are requested. These results can change the decision to operate.'
+          },
+          {
+            when: 'Step 4',
+            title: 'Treating correctable causes',
+            body: 'If there is a correctable cause such as a varicocele, a hormonal disorder or the use of a drug or substance, that is dealt with first. If testosterone is being taken, it is stopped and recovery awaited.'
+          },
+          {
+            when: 'Step 5',
+            title: 'Micro-TESE',
+            body: 'Under general anaesthesia the testicular tissue is examined with the operating microscope and tubules showing sperm production are selected. The procedure can take 60–150 minutes; the patient is discharged the same day.'
+          },
+          {
+            when: 'Step 6',
+            title: 'The result and the next step',
+            body: 'If sperm is found it is used fresh or frozen. If none is found, options such as donor sperm or adoption are discussed openly with the couple.'
+          }
+        ],
+        risks: [
+          'NO SPERM BEING FOUND: in non-obstructive azoospermia this is the most important and most real risk. It is not a complication but a possible outcome, and it is discussed plainly before surgery',
+          'A fall in testosterone level because part of the testicular tissue is removed — using the microscope aims to limit this by reducing the amount of tissue taken',
+          'Swelling, bruising and a collection of blood (haematoma) in the scrotum',
+          'Infection',
+          'Pain in the testicle — usually temporary',
+          'A reduction in testicular volume',
+          'An unnecessary procedure: in a man with an AZFa/AZFb deletion taken to surgery without genetic testing, both expectation and tissue are wasted — which is why the test is requested first'
+        ],
+        alternatives: [
+          'Treating the correctable cause — varicocele repair, hormonal correction, stopping a drug or substance',
+          'Retrieving sperm by simpler methods from the epididymis or testicle in obstructive azoospermia',
+          'Lifestyle change — stopping smoking, weight control, avoiding excessive heat',
+          'Going directly to assisted reproduction with ICSI where sperm is available',
+          'Sperm freezing — as a safeguard before treatment',
+          'Donor sperm or adoption — options discussed when no sperm is found'
+        ],
+        comparison: {
+          title: 'Obstructive versus non-obstructive azoospermia',
+          columns: ['Criterion', 'Obstructive', 'Non-obstructive'],
+          rows: [
+            { label: 'Where the problem lies', values: ['Production occurs, the passage is blocked', 'Production is inadequate'] },
+            { label: 'Testicular volume', values: ['Usually normal', 'Often reduced'] },
+            { label: 'FSH level', values: ['Usually normal', 'Often raised'] },
+            { label: 'Genetic testing', values: ['Cystic fibrosis carrier status may be checked', 'Karyotype and Y microdeletion required'] },
+            { label: 'Chance of retrieving sperm', values: ['High', 'Variable — cannot be guaranteed'] },
+            { label: 'Method', values: ['Simpler techniques may suffice', 'Micro-TESE'] }
+          ],
+          note:
+            'This distinction determines both the method and the expectation. It is made by examination, hormone profile and testicular volume together; no single test is sufficient.'
+        },
+        recovery: [
+          {
+            period: 'First 48 hours',
+            body: 'Swelling and tenderness in the scrotum are expected. Ice and supportive underwear bring relief. Painkillers are used.'
+          },
+          {
+            period: 'Days 3–7',
+            body: 'A return to desk work is possible. Gentle walking is allowed; heavy lifting and sport are not.'
+          },
+          {
+            period: 'Weeks 2–4',
+            body: 'A gradual return to normal activity is made. A return to sexual activity is planned during this period.'
+          },
+          {
+            period: 'Months 3–6',
+            body: 'The testosterone level is checked to assess whether removing tissue has caused a fall.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies according to whether micro-TESE alone is planned or sperm freezing and embryology laboratory services as well. A firm quotation is given once the investigations are complete.'
+        },
+        packageIncludes: [
+          'Andrological assessment and physical examination',
+          'Semen analysis, hormone profile and scrotal ultrasound',
+          'Arranging the necessary genetic tests',
+          'The micro-TESE procedure and anaesthesia',
+          'Day-case procedure and observation',
+          'Freezing and storage of any sperm found',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and remote follow-up after you return home'
+        ],
+        faqs: [
+          {
+            q: 'There is no sperm at all in my semen. Is my chance of having a child over?',
+            a: 'No, it is not — but nor can it be guaranteed. First it must be established whether the absence of sperm is due to an obstruction or to a problem of production. With an obstruction the chance of retrieving sperm is high. With a production problem, micro-TESE may find sperm, but it may not. The honest answer is to discuss the likelihood in the light of your own findings.'
+          },
+          {
+            q: 'Is one semen analysis not enough?',
+            a: 'No. Sperm values vary markedly from week to week in the same man; a feverish illness or a short abstinence period can spoil the result. Deciding on a single poor analysis leads to the wrong conclusion. At least two separate analyses are requested, each after 2–7 days of abstinence.'
+          },
+          {
+            q: 'I am using testosterone injections — will they improve my sperm values?',
+            a: 'No — they do the opposite. Testosterone taken from outside suppresses the signal the brain sends to the testicles and reduces sperm production, and can stop it altogether. This use, common in gyms, is a frequent and often overlooked cause of infertility. If you want a child you need to stop it in discussion with your doctor and allow a period for recovery.'
+          },
+          {
+            q: 'Why is genetic testing requested?',
+            a: 'Because the result sometimes changes the decision to operate. If a complete deletion is found in the AZFa or AZFb region of the Y chromosome, the chance of finding sperm at micro-TESE is very low. Knowing this beforehand spares you an unnecessary operation and a considerable disappointment. With an AZFc deletion, finding sperm is possible.'
+          },
+          {
+            q: 'What is the difference between micro-TESE and ordinary TESE?',
+            a: 'Micro-TESE uses the operating microscope. Tubules that look fuller, where sperm production is continuing, can therefore be selected and taken. This aims both to improve the chance of finding sperm and to limit damage to the testicle by reducing the tissue removed. If you have had a TESE without a microscope and no sperm was found, reassessment may be worthwhile.'
+          },
+          {
+            q: 'What happens if sperm is found?',
+            a: 'Sperm that is found is either used the same day for ICSI or frozen and stored. If fresh use is planned, it has to be timed with your partner’s treatment schedule, which is why the procedure is arranged together with the embryology team.'
+          },
+          {
+            q: 'What if no sperm is found?',
+            a: 'This possibility is discussed from the outset. If none is found, the options are donor sperm or adoption. In some men a second attempt may come into consideration after a certain interval, but that is not appropriate for everyone and is judged on the findings.'
+          },
+          {
+            q: 'I have a varicocele — should that be operated on first?',
+            a: 'If you have a varicocele that can be felt on examination and your sperm values are impaired, repairing the varicocele may come first; in some men this improves the sperm values. But it carries no guarantee of pregnancy either, and if the woman’s age leaves little time, going straight to assisted reproduction may be the better course.'
+          },
+          {
+            q: 'Will the procedure lower my testosterone?',
+            a: 'Because part of the testicular tissue is removed, the testosterone level can fall. One purpose of using the microscope is to keep the amount of tissue taken to a minimum. Testosterone is checked at 3–6 months after surgery and monitoring continues if needed.'
+          },
+          {
+            q: 'When can I return to work and fly?',
+            a: 'A return to desk work is usually possible within 3–7 days; flying is permitted after 3–5 days. A stay of 5–7 days is planned for patients travelling from abroad. For heavy lifting and sport, waiting 2–4 weeks is advised.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      de: {
+        title: 'Männliche Unfruchtbarkeit und Micro-TESE',
+        summary: 'Keine Spermien im Ejakulat ist nicht das Ende des Weges — garantieren lässt sich ein Fund aber auch nicht. Diese Seite erklärt, welche Untersuchungen warum erfolgen und wie entschieden wird.',
+        metaTitle: 'Männliche Unfruchtbarkeit und Micro-TESE: Abklärung und Behandlung',
+        metaDescription: 'Das Spermiogramm richtig deuten, die Unterscheidung zwischen obstruktiver und nicht-obstruktiver Azoospermie, genetische Tests, Micro-TESE und realistische Erwartungen.',
+        quickFacts: { duration: 'Micro-TESE 60–150 Minuten', anesthesia: 'Vollnarkose', hospitalStay: 'Ambulant', stayInTurkey: '5–7 Tage', returnToWork: '3–7 Tage', flightClearance: '3–5 Tage' },
+        definition: [
+          'Männliche Unfruchtbarkeit bedeutet, dass eine Schwangerschaft aufgrund von Faktoren beim Mann ausbleibt. Die Abklärung erfolgt stets ALS PAAR, denn die Behandlungsentscheidung bestimmen nicht nur die Befunde beim Mann, sondern auch die Situation der Frau und besonders ihr Alter. Das Problem beim Mann zu lösen, bringt keine Schwangerschaft, wenn aufseiten der Frau ein ungelöstes Hindernis besteht.',
+          'DAS SPERMIOGRAMM IST DIE GRUNDLAGE, EINE EINZELNE UNTERSUCHUNG GENÜGT ABER NICHT. Die Werte schwanken beim selben Mann von Woche zu Woche deutlich; eine fieberhafte Erkrankung, starker Stress oder eine kurze Karenzzeit können das Ergebnis verfälschen. Deshalb werden mindestens zwei getrennte Spermiogramme verlangt, jeweils nach 2–7 Tagen sexueller Karenz.',
+          'DIE AZOOSPERMIE TEILT SICH IN ZWEI FORMEN, UND DIESE UNTERSCHEIDUNG BESTIMMT ALLES. Für das Fehlen von Spermien im Ejakulat gibt es zwei Gründe: Entweder werden Spermien gebildet, doch der Weg ist verschlossen (obstruktive Azoospermie), oder die Bildung ist unzureichend (nicht-obstruktive Azoospermie). Im ersten Fall ist die Chance auf Spermiengewinnung hoch; im zweiten ist das Bild komplexer und die Micro-TESE kommt infrage.',
+          'Die Unterscheidung erfolgt über Untersuchung und Blutwerte. Sind Hodenvolumen und FSH normal und das Ejakulatvolumen niedrig, liegt der Verdacht auf eine Obstruktion nahe. Sind die Hoden verkleinert und der FSH-Wert erhöht, steht eine Bildungsstörung im Vordergrund. Genetische Tests (Karyotyp und Y-Chromosom-Mikrodeletion) werden bei Bildungsstörung verlangt.',
+          'GENETISCHE TESTS VERHINDERN MANCHMAL EINE UNNÖTIGE OPERATION. Findet sich eine vollständige Deletion im AZFa- oder AZFb-Bereich des Y-Chromosoms, ist die Chance, bei der Micro-TESE Spermien zu finden, sehr gering. Dies vor der Operation zu wissen, erspart dem Mann und seiner Partnerin einen unnötigen Eingriff und die damit verbundene Enttäuschung. Bei einer Deletion im AZFc-Bereich ist ein Fund möglich.',
+          'MICRO-TESE bedeutet, das Hodengewebe unter dem Operationsmikroskop zu betrachten und die Kanälchen auszuwählen, in denen noch Spermien gebildet werden. Das Mikroskop dient dazu, die Fundchance zu erhöhen und zugleich durch weniger entnommenes Gewebe den Schaden am Hoden zu begrenzen. Gefundene Spermien werden entweder frisch für die intrazytoplasmatische Spermieninjektion (ICSI) verwendet oder eingefroren.',
+          'DER WICHTIGSTE PUNKT: EIN SPERMIENFUND LÄSST SICH NICHT GARANTIEREN. Bei nicht-obstruktiver Azoospermie kann die Micro-TESE ohne Spermienfund enden. Das ist kein Versagen der Operation, sondern die Realität des zugrunde liegenden Zustands. Seien Sie vorsichtig, wenn jemand sagt "wir finden mit Sicherheit welche"; ehrlich ist, die Wahrscheinlichkeit anhand Ihrer eigenen Befunde zu erläutern.'
+        ],
+        eligibility: {
+          suitable: ['Männer ohne Spermien im Ejakulat (Azoospermie) mit Kinderwunsch', 'Männer mit Verdacht auf obstruktive Azoospermie — die Chance auf Gewinnung ist hoch', 'Männer mit nicht-obstruktiver Azoospermie, die nach genetischer Abklärung geeignet erscheinen', 'Männer mit früherer TESE ohne Mikroskop — eine erneute Beurteilung kann sinnvoll sein', 'Männer, die vor einer Krebsbehandlung ihre Fruchtbarkeit erhalten möchten — zuerst wird das Einfrieren besprochen', 'Männer mit gestörten Spermienwerten und zugleich einer Varikozele — zuerst wird die Varikozele beurteilt'],
+          notSuitable: ['Männer, die eine Entscheidung auf Basis eines einzigen Spermiogramms erwarten — mindestens zwei sind nötig', 'Männer mit vollständiger AZFa- oder AZFb-Deletion — die Fundchance ist sehr gering und das muss von Anfang an besprochen werden', 'Paare mit einem unbehandelten, die Schwangerschaft verhindernden Problem aufseiten der Frau', 'Männer, die weiterhin Testosteron oder anabole Substanzen einnehmen — diese müssen zuerst abgesetzt und eine Erholungszeit abgewartet werden', 'Männer ohne abgestimmte Planung mit einem ICSI-Zentrum — bei Verwendung frischer Spermien ist das Timing entscheidend']
+        },
+        technology: ['Spermiogramm (mindestens zwei getrennte Proben, nach 2–7 Tagen Karenz)', 'Hormonprofil — FSH, LH, Gesamttestosteron', 'Skrotaler Ultraschall — Hodenvolumen und Beurteilung auf Varikozele', 'Genetische Tests — Karyotyp und Y-Chromosom-Mikrodeletion', 'Micro-TESE mit dem Operationsmikroskop', 'Einfrieren von Spermien und abgestimmtes Arbeiten mit dem embryologischen Labor'],
+        surgeonExperience: { caseVolume: '', note: 'Andrologie und männliche Unfruchtbarkeit gehören zu den Arbeitsgebieten von Doz. Dr. Müslüm Ergün. Die Entscheidung zur Micro-TESE fällt unter gemeinsamer Abwägung von Hormonprofil, Hodenvolumen, genetischen Ergebnissen und dem Behandlungsplan des Paares und wird mit dem embryologischen Team abgestimmt.' },
+        timeline: [
+          { when: 'Schritt 1', title: 'Gemeinsame Beurteilung des Paares', body: 'Auch die Frau muss abgeklärt sein. Ihr Alter beeinflusst Behandlungsplan und Dringlichkeit unmittelbar.' },
+          { when: 'Schritt 2', title: 'Spermiogramm und Untersuchung', body: 'Mindestens zwei getrennte Spermiogramme werden verlangt. Bei der Untersuchung werden Hodenvolumen, eine mögliche Varikozele und die Tastbarkeit der Samenleiter beurteilt.' },
+          { when: 'Schritt 3', title: 'Hormon- und genetische Tests', body: 'FSH, LH und Testosteron werden bestimmt. Bei Verdacht auf eine Bildungsstörung werden Karyotyp und Y-Chromosom-Mikrodeletion verlangt. Diese Ergebnisse können die Operationsentscheidung ändern.' },
+          { when: 'Schritt 4', title: 'Behandlung korrigierbarer Ursachen', body: 'Liegt eine korrigierbare Ursache wie eine Varikozele, eine Hormonstörung oder die Einnahme einer Substanz vor, wird diese zuerst angegangen. Wird Testosteron eingenommen, wird es abgesetzt und die Erholung abgewartet.' },
+          { when: 'Schritt 5', title: 'Micro-TESE', body: 'In Vollnarkose wird das Hodengewebe unter dem Operationsmikroskop betrachtet und Kanälchen mit Spermienbildung werden ausgewählt. Der Eingriff kann 60–150 Minuten dauern; die Entlassung erfolgt am selben Tag.' },
+          { when: 'Schritt 6', title: 'Ergebnis und nächster Schritt', body: 'Werden Spermien gefunden, werden sie frisch verwendet oder eingefroren. Werden keine gefunden, werden Optionen wie Spendersamen oder Adoption offen mit dem Paar besprochen.' }
+        ],
+        risks: ['KEIN SPERMIENFUND: bei nicht-obstruktiver Azoospermie das wichtigste und realste Risiko. Es ist keine Komplikation, sondern ein mögliches Ergebnis und wird vor der Operation offen besprochen', 'Abfall des Testosteronspiegels, weil ein Teil des Hodengewebes entnommen wird — das Mikroskop soll dies durch geringere Gewebemenge begrenzen', 'Schwellung, Blutergüsse und Blutansammlung (Hämatom) im Hodensack', 'Infektion', 'Schmerzen im Hoden — meist vorübergehend', 'Abnahme des Hodenvolumens', 'Unnötiger Eingriff: Wird ein Mann mit AZFa/AZFb-Deletion ohne genetischen Test operiert, sind Erwartung und Gewebe vergeudet — deshalb wird der Test vorher verlangt'],
+        alternatives: ['Behandlung der korrigierbaren Ursache — Varikozelenoperation, hormonelle Einstellung, Absetzen einer Substanz', 'Gewinnung von Spermien mit einfacheren Verfahren aus Nebenhoden oder Hoden bei obstruktiver Azoospermie', 'Lebensstiländerung — Rauchstopp, Gewichtskontrolle, Vermeidung übermäßiger Hitze', 'Direkter Weg zur assistierten Reproduktion mit ICSI, wenn Spermien vorhanden sind', 'Einfrieren von Spermien — als Absicherung vor einer Behandlung', 'Spendersamen oder Adoption — Optionen, wenn keine Spermien gefunden werden'],
+        comparison: {
+          title: 'Obstruktive und nicht-obstruktive Azoospermie',
+          columns: ['Kriterium', 'Obstruktiv', 'Nicht-obstruktiv'],
+          rows: [
+            { label: 'Wo das Problem liegt', values: ['Bildung vorhanden, Weg verschlossen', 'Bildung unzureichend'] },
+            { label: 'Hodenvolumen', values: ['Meist normal', 'Oft verkleinert'] },
+            { label: 'FSH-Wert', values: ['Meist normal', 'Oft erhöht'] },
+            { label: 'Genetische Tests', values: ['Mukoviszidose-Trägerstatus kann geprüft werden', 'Karyotyp und Y-Mikrodeletion erforderlich'] },
+            { label: 'Chance auf Spermiengewinnung', values: ['Hoch', 'Unterschiedlich — nicht garantierbar'] },
+            { label: 'Verfahren', values: ['Einfachere Techniken können genügen', 'Micro-TESE'] }
+          ],
+          note: 'Diese Unterscheidung bestimmt Verfahren und Erwartung. Sie ergibt sich aus Untersuchung, Hormonprofil und Hodenvolumen zusammen; ein einzelner Test genügt nicht.'
+        },
+        recovery: [
+          { period: 'Erste 48 Stunden', body: 'Schwellung und Empfindlichkeit im Hodensack sind zu erwarten. Kühlung und stützende Unterwäsche verschaffen Linderung. Schmerzmittel werden eingenommen.' },
+          { period: 'Tag 3–7', body: 'Die Rückkehr an den Schreibtisch ist möglich. Leichtes Gehen ist erlaubt; schweres Heben und Sport nicht.' },
+          { period: 'Woche 2–4', body: 'Schrittweise Rückkehr zur normalen Aktivität. Die Rückkehr zur Sexualität wird in dieser Zeit geplant.' },
+          { period: 'Monat 3–6', body: 'Der Testosteronspiegel wird kontrolliert, um einen Abfall durch die Gewebeentnahme zu beurteilen.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Der Preis richtet sich danach, ob nur die Micro-TESE geplant ist oder zusätzlich das Einfrieren und Leistungen des embryologischen Labors. Ein verbindliches Angebot erfolgt nach Abschluss der Untersuchungen.' },
+        packageIncludes: ['Andrologische Abklärung und körperliche Untersuchung', 'Spermiogramm, Hormonprofil und skrotaler Ultraschall', 'Organisation der erforderlichen genetischen Tests', 'Micro-TESE-Eingriff und Narkose', 'Ambulanter Eingriff und Überwachung', 'Einfrieren und Lagerung gefundener Spermien', 'Transfers Flughafen–Krankenhaus–Hotel', 'Unterkunft (Patient + 1 Begleitperson)', 'Medizinischer Dolmetscher und Fernbetreuung nach Ihrer Rückkehr'],
+        faqs: [
+          { q: 'In meinem Ejakulat sind überhaupt keine Spermien. Ist meine Chance auf ein Kind vorbei?', a: 'Nein, sie ist es nicht — garantieren lässt sie sich aber auch nicht. Zuerst muss geklärt werden, ob das Fehlen auf eine Verschlussstörung oder eine Bildungsstörung zurückgeht. Bei einem Verschluss ist die Chance auf Gewinnung hoch. Bei einer Bildungsstörung kann die Micro-TESE Spermien finden — oder eben nicht. Ehrlich ist, die Wahrscheinlichkeit anhand Ihrer Befunde zu besprechen.' },
+          { q: 'Reicht ein Spermiogramm nicht?', a: 'Nein. Die Werte schwanken beim selben Mann von Woche zu Woche deutlich; eine fieberhafte Erkrankung oder eine kurze Karenzzeit kann das Ergebnis verfälschen. Auf Basis eines einzigen schlechten Befunds zu entscheiden, führt in die Irre. Es werden mindestens zwei getrennte Proben nach 2–7 Tagen Karenz verlangt.' },
+          { q: 'Ich spritze Testosteron — verbessert das meine Spermienwerte?', a: 'Nein, im Gegenteil. Von außen zugeführtes Testosteron unterdrückt das Signal, das das Gehirn an die Hoden sendet, verringert die Spermienbildung und kann sie ganz zum Erliegen bringen. Diese im Fitnessbereich verbreitete Anwendung ist eine häufige und oft übersehene Ursache der Unfruchtbarkeit. Bei Kinderwunsch müssen Sie sie in Absprache mit Ihrem Arzt beenden und eine Erholungszeit abwarten.' },
+          { q: 'Warum werden genetische Tests verlangt?', a: 'Weil das Ergebnis manchmal die Operationsentscheidung ändert. Findet sich eine vollständige Deletion im AZFa- oder AZFb-Bereich, ist die Chance auf einen Spermienfund sehr gering. Das vorher zu wissen, erspart Ihnen einen unnötigen Eingriff und eine erhebliche Enttäuschung. Bei einer AZFc-Deletion ist ein Fund möglich.' },
+          { q: 'Worin unterscheidet sich Micro-TESE von einer gewöhnlichen TESE?', a: 'Bei der Micro-TESE wird das Operationsmikroskop verwendet. So lassen sich voller erscheinende Kanälchen mit fortbestehender Spermienbildung gezielt auswählen. Das soll die Fundchance erhöhen und zugleich durch weniger entnommenes Gewebe den Hoden schonen. Wurde bei Ihnen ohne Mikroskop operiert und nichts gefunden, kann eine erneute Beurteilung sinnvoll sein.' },
+          { q: 'Was passiert, wenn Spermien gefunden werden?', a: 'Gefundene Spermien werden entweder am selben Tag für die ICSI verwendet oder eingefroren. Ist die frische Verwendung geplant, muss der Zeitpunkt mit dem Behandlungsplan Ihrer Partnerin abgestimmt werden; deshalb wird der Eingriff gemeinsam mit dem embryologischen Team terminiert.' },
+          { q: 'Was, wenn keine Spermien gefunden werden?', a: 'Diese Möglichkeit wird von Anfang an besprochen. Werden keine gefunden, sind Spendersamen oder Adoption die Optionen. Bei manchen Männern kann nach einem gewissen Abstand ein zweiter Versuch infrage kommen; das ist jedoch nicht für jeden geeignet und wird nach den Befunden beurteilt.' },
+          { q: 'Ich habe eine Varikozele — soll die zuerst operiert werden?', a: 'Ist die Varikozele tastbar und sind Ihre Spermienwerte gestört, kann ihre Operation zuerst infrage kommen; bei einem Teil der Männer verbessern sich dadurch die Werte. Eine Schwangerschaftsgarantie gibt auch das nicht, und wenn das Alter der Partnerin wenig Zeit lässt, kann der direkte Weg zur assistierten Reproduktion richtiger sein.' },
+          { q: 'Senkt der Eingriff mein Testosteron?', a: 'Da ein Teil des Hodengewebes entnommen wird, kann der Testosteronspiegel sinken. Ein Zweck des Mikroskops ist, die entnommene Menge möglichst gering zu halten. Nach 3–6 Monaten wird das Testosteron kontrolliert und bei Bedarf weiter beobachtet.' },
+          { q: 'Wann darf ich wieder arbeiten und fliegen?', a: 'An den Schreibtisch meist innerhalb von 3–7 Tagen; Fliegen ist nach 3–5 Tagen erlaubt. Für Patienten aus dem Ausland wird ein Aufenthalt von 5–7 Tagen geplant. Für schweres Heben und Sport werden 2–4 Wochen empfohlen.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Sexual and Reproductive Health — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
+        ]
+      },
+      fr: {
+        title: 'Infertilité masculine et micro-TESE',
+        summary: 'L’absence totale de spermatozoïdes dans le sperme n’est pas la fin du parcours — mais trouver des spermatozoïdes ne peut pas non plus être garanti. Cette page explique quels examens sont réalisés, pourquoi, et comment la décision est prise.',
+        metaTitle: 'Infertilité masculine et micro-TESE : bilan et traitement',
+        metaDescription: 'Bien interpréter le spermogramme, distinguer l’azoospermie obstructive et non obstructive, les tests génétiques, la micro-TESE et les attentes réalistes.',
+        quickFacts: { duration: 'Micro-TESE 60–150 minutes', anesthesia: 'Anesthésie générale', hospitalStay: 'Ambulatoire', stayInTurkey: '5–7 jours', returnToWork: '3–7 jours', flightClearance: '3–5 jours' },
+        definition: [
+          'L’infertilité masculine signifie qu’une grossesse n’est pas obtenue en raison de facteurs liés à l’homme. L’évaluation se fait toujours EN COUPLE, car la décision thérapeutique dépend non seulement des constatations chez l’homme mais aussi de la situation de la femme, et en particulier de son âge. Résoudre le problème chez l’homme n’apportera pas de grossesse s’il subsiste un obstacle non traité chez la femme.',
+          'LE SPERMOGRAMME EST LA BASE DE L’ÉVALUATION, MAIS UN SEUL EXAMEN NE SUFFIT PAS. Les valeurs varient nettement d’une semaine à l’autre chez le même homme ; une maladie fébrile, un stress important ou une courte abstinence peuvent fausser le résultat. On demande donc au moins deux spermogrammes distincts, chacun après 2 à 7 jours d’abstinence sexuelle.',
+          'L’AZOOSPERMIE SE DIVISE EN DEUX ET CETTE DISTINCTION DÉTERMINE TOUT. L’absence de spermatozoïdes peut avoir deux causes : soit la production existe mais la voie est obstruée (azoospermie obstructive), soit la production est insuffisante (azoospermie non obstructive). Dans le premier cas, la chance de recueillir des spermatozoïdes est élevée ; dans le second, la situation est plus complexe et la micro-TESE s’envisage.',
+          'La distinction repose sur l’examen et le bilan sanguin. Si le volume testiculaire et la FSH sont normaux et le volume du sperme faible, on suspecte une obstruction. Si les testicules sont petits et la FSH élevée, un trouble de la production est au premier plan. Les tests génétiques (caryotype et microdélétion du chromosome Y) sont demandés en cas de trouble de la production.',
+          'LES TESTS GÉNÉTIQUES ÉVITENT PARFOIS UNE INTERVENTION INUTILE. En cas de délétion complète dans la région AZFa ou AZFb du chromosome Y, la probabilité de trouver des spermatozoïdes en micro-TESE est très faible. Le savoir avant l’intervention épargne à l’homme et à sa compagne un geste inutile et la déception qui l’accompagne. En cas de délétion de la région AZFc, un recueil reste possible.',
+          'LA MICRO-TESE consiste à examiner le tissu testiculaire au microscope opératoire et à sélectionner les tubules où la production se poursuit. Le microscope vise à la fois à augmenter les chances de recueil et à limiter les dégâts testiculaires en réduisant la quantité de tissu prélevée. Les spermatozoïdes trouvés sont utilisés frais pour une injection intracytoplasmique (ICSI) ou congelés.',
+          'LE POINT LE PLUS IMPORTANT : LE RECUEIL DE SPERMATOZOÏDES NE PEUT ÊTRE GARANTI. Dans l’azoospermie non obstructive, la micro-TESE peut se terminer sans aucun spermatozoïde. Ce n’est pas un échec chirurgical mais la réalité de l’affection sous-jacente. Méfiez-vous de qui affirme « nous en trouverons à coup sûr » ; l’honnêteté consiste à exposer la probabilité au vu de vos propres résultats.'
+        ],
+        eligibility: {
+          suitable: ['Hommes sans spermatozoïdes dans le sperme (azoospermie) souhaitant avoir un enfant', 'Hommes chez qui une azoospermie obstructive est suspectée — la chance de recueil est élevée', 'Hommes avec azoospermie non obstructive jugés éligibles après bilan génétique', 'Hommes ayant déjà eu une TESE sans microscope — une réévaluation peut être utile', 'Hommes souhaitant préserver leur fertilité avant un traitement anticancéreux — la congélation est discutée en priorité', 'Hommes dont le spermogramme est altéré et qui présentent une varicocèle — celle-ci est évaluée d’abord'],
+          notSuitable: ['Hommes attendant une décision à partir d’un seul spermogramme — au moins deux sont nécessaires', 'Hommes porteurs d’une délétion complète AZFa ou AZFb — la probabilité de recueil est très faible, ce qui doit être dit d’emblée', 'Couples présentant chez la femme un problème non traité empêchant la grossesse', 'Hommes poursuivant la prise de testostérone ou de substances anabolisantes — elles doivent être arrêtées et une période de récupération respectée', 'Hommes sans planification coordonnée avec un centre d’ICSI — le calendrier est essentiel si des spermatozoïdes frais doivent être utilisés']
+        },
+        technology: ['Spermogramme (au moins deux prélèvements distincts, après 2 à 7 jours d’abstinence)', 'Bilan hormonal — FSH, LH, testostérone totale', 'Échographie scrotale — volume testiculaire et recherche de varicocèle', 'Tests génétiques — caryotype et microdélétion du chromosome Y', 'Micro-TESE au microscope opératoire', 'Congélation des spermatozoïdes et travail coordonné avec le laboratoire d’embryologie'],
+        surgeonExperience: { caseVolume: '', note: 'L’andrologie et l’infertilité masculine font partie des domaines d’activité du Dr Müslüm Ergün, maître de conférences. La décision de micro-TESE repose sur le bilan hormonal, le volume testiculaire, les résultats génétiques et le projet du couple, et elle est organisée en coordination avec l’équipe d’embryologie.' },
+        timeline: [
+          { when: 'Étape 1', title: 'Évaluation conjointe du couple', body: 'La femme doit également avoir été évaluée. Son âge influe directement sur le plan de traitement et son degré d’urgence.' },
+          { when: 'Étape 2', title: 'Spermogramme et examen', body: 'Au moins deux spermogrammes distincts sont demandés. L’examen apprécie le volume testiculaire, la présence d’une varicocèle et la palpation des canaux déférents.' },
+          { when: 'Étape 3', title: 'Bilans hormonal et génétique', body: 'FSH, LH et testostérone sont dosées. En cas de suspicion de trouble de la production, caryotype et microdélétion du chromosome Y sont demandés. Ces résultats peuvent modifier la décision opératoire.' },
+          { when: 'Étape 4', title: 'Traitement des causes corrigibles', body: 'S’il existe une cause corrigible — varicocèle, trouble hormonal, prise d’un médicament ou d’une substance —, elle est traitée d’abord. Si de la testostérone est prise, elle est arrêtée et la récupération attendue.' },
+          { when: 'Étape 5', title: 'Micro-TESE', body: 'Sous anesthésie générale, le tissu testiculaire est examiné au microscope opératoire et les tubules produisant des spermatozoïdes sont sélectionnés. L’intervention peut durer 60 à 150 minutes ; la sortie se fait le jour même.' },
+          { when: 'Étape 6', title: 'Résultat et étape suivante', body: 'Si des spermatozoïdes sont trouvés, ils sont utilisés frais ou congelés. En l’absence de recueil, les options telles que le don de sperme ou l’adoption sont discutées ouvertement avec le couple.' }
+        ],
+        risks: ['ABSENCE DE RECUEIL : dans l’azoospermie non obstructive, c’est le risque le plus important et le plus réel. Ce n’est pas une complication mais une issue possible, exposée clairement avant l’intervention', 'Baisse du taux de testostérone liée au prélèvement d’une partie du tissu testiculaire — le microscope vise à la limiter en réduisant la quantité prélevée', 'Œdème, ecchymoses et hématome du scrotum', 'Infection', 'Douleur testiculaire — généralement transitoire', 'Diminution du volume testiculaire', 'Geste inutile : opérer un homme porteur d’une délétion AZFa/AZFb sans test génétique gaspille à la fois l’espoir et le tissu — d’où la demande du test au préalable'],
+        alternatives: ['Traitement de la cause corrigible — cure de varicocèle, correction hormonale, arrêt d’un médicament ou d’une substance', 'Recueil par des techniques plus simples au niveau de l’épididyme ou du testicule en cas d’azoospermie obstructive', 'Adaptation du mode de vie — arrêt du tabac, contrôle du poids, éviter la chaleur excessive', 'Recours direct à l’assistance médicale à la procréation par ICSI lorsque des spermatozoïdes sont disponibles', 'Congélation de sperme — par sécurité avant un traitement', 'Don de sperme ou adoption — options discutées en l’absence de recueil'],
+        comparison: {
+          title: 'Azoospermie obstructive et non obstructive',
+          columns: ['Critère', 'Obstructive', 'Non obstructive'],
+          rows: [
+            { label: 'Où se situe le problème', values: ['Production présente, voie obstruée', 'Production insuffisante'] },
+            { label: 'Volume testiculaire', values: ['Habituellement normal', 'Souvent diminué'] },
+            { label: 'Taux de FSH', values: ['Habituellement normal', 'Souvent élevé'] },
+            { label: 'Tests génétiques', values: ['Recherche de portage de mucoviscidose possible', 'Caryotype et microdélétion Y nécessaires'] },
+            { label: 'Chance de recueil', values: ['Élevée', 'Variable — non garantie'] },
+            { label: 'Technique', values: ['Des techniques plus simples peuvent suffire', 'Micro-TESE'] }
+          ],
+          note: 'Cette distinction détermine la technique et l’attente. Elle repose sur l’examen, le bilan hormonal et le volume testiculaire réunis ; aucun test isolé ne suffit.'
+        },
+        recovery: [
+          { period: 'Premières 48 heures', body: 'Œdème et sensibilité du scrotum sont attendus. Le froid et un sous-vêtement de soutien soulagent. Des antalgiques sont prescrits.' },
+          { period: 'Jours 3–7', body: 'Le retour au travail de bureau est possible. La marche légère est permise ; le port de charges et le sport non.' },
+          { period: 'Semaines 2–4', body: 'Reprise progressive de l’activité normale. La reprise des rapports se planifie durant cette période.' },
+          { period: 'Mois 3–6', body: 'Le taux de testostérone est contrôlé afin d’évaluer une éventuelle baisse liée au prélèvement.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Le prix varie selon que seule la micro-TESE est prévue ou qu’y sont associées la congélation et les prestations du laboratoire d’embryologie. Un devis ferme est remis une fois le bilan terminé.' },
+        packageIncludes: ['Évaluation andrologique et examen clinique', 'Spermogramme, bilan hormonal et échographie scrotale', 'Organisation des tests génétiques nécessaires', 'Intervention de micro-TESE et anesthésie', 'Geste ambulatoire et surveillance', 'Congélation et conservation des spermatozoïdes recueillis', 'Transferts aéroport–hôpital–hôtel', 'Hébergement (patient + 1 accompagnant)', 'Interprète médical et suivi à distance après votre retour'],
+        faqs: [
+          { q: 'Il n’y a aucun spermatozoïde dans mon sperme. Mes chances d’avoir un enfant sont-elles nulles ?', a: 'Non — mais elles ne peuvent pas non plus être garanties. Il faut d’abord établir si cette absence relève d’une obstruction ou d’un trouble de la production. En cas d’obstruction, la chance de recueil est élevée. En cas de trouble de la production, la micro-TESE peut trouver des spermatozoïdes, ou non. La réponse honnête consiste à discuter de la probabilité au vu de vos résultats.' },
+          { q: 'Un seul spermogramme ne suffit-il pas ?', a: 'Non. Les valeurs varient nettement d’une semaine à l’autre chez le même homme ; une maladie fébrile ou une courte abstinence peuvent fausser le résultat. Décider sur un seul mauvais examen conduit à une conclusion erronée. Au moins deux prélèvements distincts sont demandés, après 2 à 7 jours d’abstinence.' },
+          { q: 'Je prends de la testostérone — cela améliorera-t-il mon spermogramme ?', a: 'Non, c’est l’inverse. La testostérone apportée de l’extérieur freine le signal envoyé par le cerveau aux testicules, réduit la production de spermatozoïdes et peut l’arrêter complètement. Cet usage, répandu en salle de sport, est une cause fréquente et souvent méconnue d’infertilité. Si vous souhaitez un enfant, il faut l’arrêter avec votre médecin et respecter un délai de récupération.' },
+          { q: 'Pourquoi demander des tests génétiques ?', a: 'Parce que le résultat change parfois la décision opératoire. En cas de délétion complète dans la région AZFa ou AZFb, la probabilité de trouver des spermatozoïdes est très faible. Le savoir à l’avance vous épargne une intervention inutile et une grande déception. En cas de délétion AZFc, un recueil reste possible.' },
+          { q: 'Quelle différence entre micro-TESE et TESE classique ?', a: 'La micro-TESE utilise le microscope opératoire. On peut ainsi sélectionner les tubules d’aspect plus plein, où la production se poursuit. Cela vise à la fois à augmenter les chances de recueil et à ménager le testicule en réduisant le tissu prélevé. Si vous avez eu une TESE sans microscope sans résultat, une réévaluation peut être utile.' },
+          { q: 'Que se passe-t-il si des spermatozoïdes sont trouvés ?', a: 'Ils sont soit utilisés le jour même pour une ICSI, soit congelés. Si l’utilisation à frais est prévue, elle doit être synchronisée avec le calendrier de traitement de votre compagne ; l’intervention est donc programmée avec l’équipe d’embryologie.' },
+          { q: 'Et si aucun spermatozoïde n’est trouvé ?', a: 'Cette éventualité est exposée dès le départ. Dans ce cas, les options sont le don de sperme ou l’adoption. Chez certains hommes, une seconde tentative peut s’envisager après un certain délai, mais cela ne convient pas à tous et se juge sur les constatations.' },
+          { q: 'J’ai une varicocèle — faut-il l’opérer d’abord ?', a: 'Si la varicocèle est palpable et que votre spermogramme est altéré, sa cure peut venir en premier ; chez une partie des hommes, les valeurs s’améliorent. Cela ne garantit pas davantage une grossesse, et si l’âge de votre compagne laisse peu de temps, aller directement à l’assistance médicale à la procréation peut être préférable.' },
+          { q: 'L’intervention va-t-elle baisser ma testostérone ?', a: 'Comme une partie du tissu testiculaire est prélevée, le taux peut baisser. L’un des buts du microscope est de réduire au minimum la quantité prélevée. La testostérone est contrôlée 3 à 6 mois après l’intervention et surveillée si nécessaire.' },
+          { q: 'Quand puis-je reprendre le travail et prendre l’avion ?', a: 'Le travail de bureau est généralement possible en 3 à 7 jours ; le vol est autorisé après 3 à 5 jours. Un séjour de 5 à 7 jours est prévu pour les patients venant de l’étranger. Pour le port de charges et le sport, il est conseillé d’attendre 2 à 4 semaines.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Sexual and Reproductive Health — Association européenne d’urologie', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
+        ]
+      },
+      ru: {
+        title: 'Мужское бесплодие и микро-ТЕСЕ',
+        summary: 'Полное отсутствие сперматозоидов в эякуляте — не конец пути, но и их обнаружение гарантировать нельзя. Здесь объясняется, какие исследования проводятся, зачем и как принимается решение.',
+        metaTitle: 'Мужское бесплодие и микро-ТЕСЕ: обследование и лечение',
+        metaDescription: 'Как правильно толковать спермограмму, различие обструктивной и необструктивной азооспермии, генетические тесты, микро-ТЕСЕ и реалистичные ожидания.',
+        quickFacts: { duration: 'Микро-ТЕСЕ 60–150 минут', anesthesia: 'Общая анестезия', hospitalStay: 'Амбулаторно', stayInTurkey: '5–7 дней', returnToWork: '3–7 дней', flightClearance: '3–5 дней' },
+        definition: [
+          'Мужское бесплодие означает, что беременность не наступает из-за факторов со стороны мужчины. Оценку всегда проводят ДЛЯ ПАРЫ, поскольку решение о лечении определяют не только находки у мужчины, но и положение у женщины, прежде всего её возраст. Решение проблемы у мужчины не принесёт беременности, если у женщины осталось нерешённое препятствие.',
+          'ОСНОВА ОЦЕНКИ — СПЕРМОГРАММА, НО ОДНОГО ИССЛЕДОВАНИЯ НЕДОСТАТОЧНО. Показатели у одного и того же мужчины заметно меняются от недели к неделе; лихорадочное заболевание, сильный стресс или короткий срок воздержания могут испортить результат. Поэтому запрашивают не менее двух отдельных спермограмм, каждую после 2–7 дней полового воздержания.',
+          'АЗООСПЕРМИЯ ДЕЛИТСЯ НА ДВА ВИДА, И ЭТО РАЗЛИЧИЕ ОПРЕДЕЛЯЕТ ВСЁ. У отсутствия сперматозоидов может быть две причины: либо выработка идёт, но путь перекрыт (обструктивная азооспермия), либо выработка недостаточна (необструктивная азооспермия). В первом случае шанс получить сперматозоиды высок; во втором картина сложнее и рассматривается микро-ТЕСЕ.',
+          'Различие устанавливают по осмотру и анализам крови. Если объём яичек в норме, ФСГ в норме, а объём эякулята низкий, подозревают обструкцию. Если яички уменьшены, а ФСГ повышен, на первый план выходит нарушение выработки. Генетические тесты (кариотип и микроделеция Y-хромосомы) назначают при нарушении выработки.',
+          'ГЕНЕТИЧЕСКИЙ ТЕСТ ИНОГДА ПРЕДОТВРАЩАЕТ НЕНУЖНУЮ ОПЕРАЦИЮ. При полной делеции в области AZFa или AZFb Y-хромосомы вероятность найти сперматозоиды при микро-ТЕСЕ очень низка. Знание об этом до операции избавляет мужчину и его партнёршу от ненужного вмешательства и связанного с ним разочарования. При делеции в области AZFc обнаружение возможно.',
+          'МИКРО-ТЕСЕ — это осмотр ткани яичка под операционным микроскопом и отбор канальцев, в которых выработка сперматозоидов продолжается. Микроскоп нужен и чтобы повысить шанс находки, и чтобы ограничить ущерб яичку за счёт меньшего объёма взятой ткани. Найденные сперматозоиды либо используют свежими для интрацитоплазматической инъекции (ИКСИ), либо замораживают.',
+          'САМОЕ ВАЖНОЕ: ОБНАРУЖЕНИЕ СПЕРМАТОЗОИДОВ ГАРАНТИРОВАТЬ НЕЛЬЗЯ. При необструктивной азооспермии микро-ТЕСЕ может закончиться без находки. Это не неудача операции, а реальность самого состояния. С осторожностью относитесь к тем, кто говорит «обязательно найдём»; честно — объяснить вероятность исходя из ваших собственных данных.'
+        ],
+        eligibility: {
+          suitable: ['Мужчины без сперматозоидов в эякуляте (азооспермия), желающие иметь ребёнка', 'Мужчины с подозрением на обструктивную азооспермию — шанс получения высок', 'Мужчины с необструктивной азооспермией, признанные подходящими после генетической оценки', 'Мужчины, у которых ранее выполняли ТЕСЕ без микроскопа — повторная оценка может быть оправдана', 'Мужчины, желающие сохранить способность к зачатию до лечения онкологического заболевания — сначала обсуждают заморозку', 'Мужчины с нарушенными показателями спермы и варикоцеле — сначала оценивают варикоцеле'],
+          notSuitable: ['Мужчины, ожидающие решения на основании одной спермограммы — нужны минимум две', 'Мужчины с полной делецией AZFa или AZFb на Y-хромосоме — вероятность находки очень низка, и об этом нужно говорить с самого начала', 'Пары, у которых со стороны женщины есть нелеченая проблема, препятствующая беременности', 'Мужчины, продолжающие принимать тестостерон или анаболические средства — их нужно отменить и выдержать срок восстановления', 'Мужчины, у которых нет согласованного плана с центром ИКСИ — при использовании свежих сперматозоидов сроки критичны']
+        },
+        technology: ['Спермограмма (не менее двух отдельных исследований, после 2–7 дней воздержания)', 'Гормональный профиль — ФСГ, ЛГ, общий тестостерон', 'УЗИ мошонки — объём яичек и оценка варикоцеле', 'Генетические тесты — кариотип и микроделеция Y-хромосомы', 'Микро-ТЕСЕ с операционным микроскопом', 'Заморозка сперматозоидов и согласованная работа с эмбриологической лабораторией'],
+        surgeonExperience: { caseVolume: '', note: 'Андрология и мужское бесплодие входят в сферу работы доц. д-ра Мюслюма Эргюна. Решение о микро-ТЕСЕ принимают при совместной оценке гормонального профиля, объёма яичек, генетических результатов и плана лечения пары, и его согласуют с эмбриологической командой.' },
+        timeline: [
+          { when: 'Шаг 1', title: 'Совместная оценка пары', body: 'Женщина также должна быть обследована. Её возраст напрямую влияет на план лечения и его срочность.' },
+          { when: 'Шаг 2', title: 'Спермограмма и осмотр', body: 'Запрашивают не менее двух отдельных спермограмм. При осмотре оценивают объём яичек, наличие варикоцеле и прощупываются ли семявыносящие протоки.' },
+          { when: 'Шаг 3', title: 'Гормональные и генетические тесты', body: 'Определяют ФСГ, ЛГ и тестостерон. При подозрении на нарушение выработки назначают кариотип и микроделецию Y-хромосомы. Эти результаты могут изменить решение об операции.' },
+          { when: 'Шаг 4', title: 'Лечение исправимых причин', body: 'Если есть исправимая причина — варикоцеле, гормональное нарушение, приём препарата или вещества, — сначала занимаются ею. Если принимается тестостерон, его отменяют и ждут восстановления.' },
+          { when: 'Шаг 5', title: 'Микро-ТЕСЕ', body: 'Под общей анестезией ткань яичка осматривают под операционным микроскопом и отбирают канальцы с признаками выработки. Вмешательство может занять 60–150 минут; выписка в тот же день.' },
+          { when: 'Шаг 6', title: 'Результат и следующий шаг', body: 'Если сперматозоиды найдены, их используют свежими или замораживают. Если нет, варианты вроде донорской спермы или усыновления обсуждают с парой открыто.' }
+        ],
+        risks: ['ОТСУТСТВИЕ НАХОДКИ: при необструктивной азооспермии это самый важный и самый реальный риск. Это не осложнение, а возможный исход, и о нём говорят прямо до операции', 'Снижение уровня тестостерона из-за удаления части ткани яичка — микроскоп применяют, чтобы ограничить это меньшим объёмом ткани', 'Отёк, синяки и скопление крови (гематома) в мошонке', 'Инфекция', 'Боль в яичке — обычно временная', 'Уменьшение объёма яичка', 'Ненужное вмешательство: если мужчину с делецией AZFa/AZFb оперируют без генетического теста, напрасно расходуются и надежда, и ткань — поэтому тест запрашивают заранее'],
+        alternatives: ['Лечение исправимой причины — операция при варикоцеле, коррекция гормонов, отмена препарата или вещества', 'Получение сперматозоидов более простыми методами из придатка или яичка при обструктивной азооспермии', 'Коррекция образа жизни — отказ от курения, контроль веса, избегание избыточного тепла', 'Прямой переход к вспомогательной репродукции с ИКСИ при наличии сперматозоидов', 'Заморозка спермы — как страховка перед лечением', 'Донорская сперма или усыновление — варианты при отсутствии находки'],
+        comparison: {
+          title: 'Обструктивная и необструктивная азооспермия',
+          columns: ['Критерий', 'Обструктивная', 'Необструктивная'],
+          rows: [
+            { label: 'Где проблема', values: ['Выработка есть, путь перекрыт', 'Выработка недостаточна'] },
+            { label: 'Объём яичек', values: ['Обычно в норме', 'Часто уменьшен'] },
+            { label: 'Уровень ФСГ', values: ['Обычно в норме', 'Часто повышен'] },
+            { label: 'Генетические тесты', values: ['Может проверяться носительство муковисцидоза', 'Нужны кариотип и микроделеция Y'] },
+            { label: 'Шанс получить сперматозоиды', values: ['Высокий', 'Переменный — гарантировать нельзя'] },
+            { label: 'Метод', values: ['Могут хватить более простые методики', 'Микро-ТЕСЕ'] }
+          ],
+          note: 'Это различие определяет и метод, и ожидания. Его устанавливают осмотр, гормональный профиль и объём яичек вместе; одного теста недостаточно.'
+        },
+        recovery: [
+          { period: 'Первые 48 часов', body: 'Ожидаемы отёк и чувствительность мошонки. Облегчение приносят холод и поддерживающее бельё. Применяют обезболивающие.' },
+          { period: '3–7-й день', body: 'Можно вернуться к работе за столом. Лёгкая ходьба разрешена; поднятие тяжестей и спорт — нет.' },
+          { period: '2–4-я неделя', body: 'Постепенное возвращение к обычной активности. Возвращение к половой жизни планируют в этот период.' },
+          { period: '3–6-й месяц', body: 'Проверяют уровень тестостерона, чтобы оценить возможное снижение из-за удаления ткани.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Стоимость зависит от того, планируется ли только микро-ТЕСЕ или также заморозка и услуги эмбриологической лаборатории. Точное предложение даётся после завершения обследования.' },
+        packageIncludes: ['Андрологическое обследование и осмотр', 'Спермограмма, гормональный профиль и УЗИ мошонки', 'Организация необходимых генетических тестов', 'Процедура микро-ТЕСЕ и анестезия', 'Амбулаторная процедура и наблюдение', 'Заморозка и хранение найденных сперматозоидов', 'Трансферы аэропорт–больница–отель', 'Проживание (пациент + 1 сопровождающий)', 'Медицинский переводчик и дистанционное наблюдение после возвращения домой'],
+        faqs: [
+          { q: 'В моём эякуляте вообще нет сперматозоидов. Шанс стать отцом исчерпан?', a: 'Нет, не исчерпан — но и гарантировать нельзя. Сначала нужно установить, связано ли отсутствие с обструкцией или с нарушением выработки. При обструкции шанс получения высок. При нарушении выработки микро-ТЕСЕ может найти сперматозоиды, а может и не найти. Честный ответ — обсудить вероятность исходя из ваших данных.' },
+          { q: 'Разве одной спермограммы недостаточно?', a: 'Нет. Показатели у одного и того же мужчины заметно меняются от недели к неделе; лихорадочное заболевание или короткий срок воздержания могут испортить результат. Решать по одному плохому анализу — путь к неверному выводу. Запрашивают минимум два отдельных исследования после 2–7 дней воздержания.' },
+          { q: 'Я колю тестостерон — улучшит ли это мою спермограмму?', a: 'Нет, наоборот. Тестостерон извне подавляет сигнал, который мозг посылает яичкам, снижает выработку сперматозоидов и может остановить её полностью. Такое применение, распространённое в тренажёрных залах, — частая и нередко упускаемая причина бесплодия. При желании иметь ребёнка его нужно отменить вместе с врачом и выдержать срок восстановления.' },
+          { q: 'Зачем нужны генетические тесты?', a: 'Потому что результат иногда меняет решение об операции. При полной делеции в области AZFa или AZFb вероятность найти сперматозоиды очень низка. Знание об этом заранее избавит вас от ненужной операции и серьёзного разочарования. При делеции AZFc находка возможна.' },
+          { q: 'Чем микро-ТЕСЕ отличается от обычной ТЕСЕ?', a: 'При микро-ТЕСЕ используют операционный микроскоп. Это позволяет отобрать более полные на вид канальцы, где выработка продолжается. Цель — и повысить шанс находки, и уберечь яичко за счёт меньшего объёма взятой ткани. Если вам делали ТЕСЕ без микроскопа и ничего не нашли, повторная оценка может быть оправдана.' },
+          { q: 'Что происходит, если сперматозоиды найдены?', a: 'Их либо используют в тот же день для ИКСИ, либо замораживают. Если планируется использование свежих, это нужно согласовать с планом лечения вашей партнёрши, поэтому вмешательство назначают вместе с эмбриологической командой.' },
+          { q: 'А если сперматозоидов не найдут?', a: 'Эту возможность обсуждают с самого начала. Если находки нет, варианты — донорская сперма или усыновление. У части мужчин спустя определённый срок может рассматриваться вторая попытка, но это подходит не всем и решается по данным обследования.' },
+          { q: 'У меня варикоцеле — нужно ли сначала оперировать его?', a: 'Если варикоцеле прощупывается, а показатели спермы нарушены, его коррекция может идти первой; у части мужчин это улучшает показатели. Но и это не гарантирует беременности, а если возраст партнёрши оставляет мало времени, разумнее сразу перейти к вспомогательной репродукции.' },
+          { q: 'Снизит ли вмешательство мой тестостерон?', a: 'Поскольку удаляют часть ткани яичка, уровень тестостерона может снизиться. Одна из задач микроскопа — свести объём взятой ткани к минимуму. Через 3–6 месяцев после операции тестостерон проверяют и при необходимости продолжают наблюдение.' },
+          { q: 'Когда можно вернуться к работе и лететь?', a: 'К работе за столом обычно через 3–7 дней; перелёт разрешают через 3–5 дней. Для пациентов из-за рубежа планируется пребывание 5–7 дней. Для поднятия тяжестей и спорта рекомендуется подождать 2–4 недели.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Sexual and Reproductive Health — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
+        ]
+      },
+      ar: {
+        title: 'العقم عند الرجل والاستخراج المجهري للحيوانات المنوية',
+        summary: 'خلوّ السائل المنوي من الحيوانات المنوية ليس نهاية الطريق، لكن العثور عليها لا يمكن ضمانه أيضًا. تشرح هذه الصفحة أي الفحوص تُجرى ولماذا وكيف يُتخذ القرار.',
+        metaTitle: 'العقم عند الرجل والاستخراج المجهري (Micro-TESE): التشخيص والعلاج',
+        metaDescription: 'قراءة تحليل السائل المنوي بشكل صحيح، والتمييز بين فقد النطاف الانسدادي وغير الانسدادي، والفحوص الجينية، والاستخراج المجهري، والتوقعات الواقعية.',
+        quickFacts: { duration: 'الاستخراج المجهري 60–150 دقيقة', anesthesia: 'تخدير عام', hospitalStay: 'في اليوم نفسه', stayInTurkey: '5–7 أيام', returnToWork: '3–7 أيام', flightClearance: '3–5 أيام' },
+        definition: [
+          'العقم عند الرجل يعني عدم حدوث الحمل بسبب عوامل تخصّه. ويُجرى التقييم دائمًا للزوجين معًا، لأن قرار العلاج لا تحدده نتائج الرجل وحدها بل وضع المرأة أيضًا وخصوصًا عمرها. وحلّ المشكلة عند الرجل لن يأتي بالحمل إذا بقي لدى المرأة عائق غير معالَج.',
+          'أساس التقييم تحليل السائل المنوي، لكن تحليلًا واحدًا لا يكفي. فالقيم تتغير عند الرجل نفسه من أسبوع إلى آخر تغيرًا واضحًا؛ وقد يُفسد النتيجةَ مرضٌ مصحوب بحمى أو توتر شديد أو قِصَر مدة الامتناع. ولذلك يُطلَب تحليلان منفصلان على الأقل، كلٌّ بعد امتناع جنسي من 2 إلى 7 أيام.',
+          'ينقسم فقد النطاف إلى نوعين، وهذا التمييز يحدد كل شيء. فلخلوّ السائل المنوي سببان محتملان: إما أن الإنتاج موجود لكن الطريق مسدود (فقد نطاف انسدادي)، وإما أن الإنتاج غير كافٍ (فقد نطاف غير انسدادي). ففي الأول تكون فرصة الحصول على الحيوانات المنوية عالية؛ أما في الثاني فالصورة أعقد ويُطرح الاستخراج المجهري.',
+          'يُحسم التمييز بالفحص وتحاليل الدم. فإن كان حجم الخصيتين طبيعيًا وهرمون FSH طبيعيًا وحجم السائل المنوي منخفضًا رُجّح الانسداد. وإن كانت الخصيتان صغيرتين وFSH مرتفعًا تقدّم اضطراب الإنتاج. وتُطلَب الفحوص الجينية (النمط النووي وحذف الصبغي Y) عند اضطراب الإنتاج.',
+          'الفحص الجيني يمنع أحيانًا عملية لا لزوم لها. فإن وُجد حذف كامل في منطقة AZFa أو AZFb من الصبغي Y كان احتمال العثور على حيوانات منوية بالاستخراج المجهري ضعيفًا جدًا. ومعرفة ذلك قبل العملية تجنّب الرجل وزوجته إجراءً بلا طائل وما يصحبه من خيبة. أما في حذف منطقة AZFc فالعثور ممكن.',
+          'الاستخراج المجهري هو فحص نسيج الخصية تحت المجهر الجراحي واختيار النبيبات التي ما زال فيها إنتاج. والغرض من المجهر رفع فرصة العثور وتقليل الضرر بالخصية عبر تقليل كمية النسيج المأخوذ. والحيوانات المنوية التي يُعثر عليها إما تُستعمل طازجة في الحقن المجهري أو تُجمَّد.',
+          'أهم نقطة: لا يمكن ضمان العثور على حيوانات منوية. ففي فقد النطاف غير الانسدادي قد ينتهي الاستخراج المجهري من دون عثور. وهذا ليس فشلًا للجراحة بل حقيقة الحالة نفسها. فاحذر من يقول «سنجد بالتأكيد»؛ فالصدق أن يُشرَح لك الاحتمال بحسب نتائجك أنت.'
+        ],
+        eligibility: {
+          suitable: ['الرجال الذين لا توجد حيوانات منوية في سائلهم المنوي ويرغبون في الإنجاب', 'من يُشتبه لديهم فقد نطاف انسدادي — ففرصة الحصول عالية', 'من لديهم فقد نطاف غير انسدادي ووُجدوا مناسبين بعد التقييم الجيني', 'من أُجري لهم استخراج سابق من دون مجهر — فإعادة التقييم قد تكون مجدية', 'من يرغبون في حفظ خصوبتهم قبل علاج السرطان — ويُناقَش التجميد أولًا', 'من لديهم قيم منوية مضطربة ودوالي خصية — فتُقيَّم الدوالي أولًا'],
+          notSuitable: ['من ينتظرون قرارًا بناءً على تحليل واحد — فاللازم تحليلان على الأقل', 'من لديهم حذف كامل في AZFa أو AZFb — فالاحتمال ضعيف جدًا ويجب قول ذلك من البداية', 'الأزواج الذين لدى المرأة فيهم مشكلة غير معالَجة تمنع الحمل', 'من يستمرون في تناول التستوستيرون أو المواد الابتنائية — فيجب إيقافها وانتظار مدة للتعافي', 'من لم يُنسَّق لهم مع مركز الحقن المجهري — فالتوقيت أساسي عند استعمال حيوانات منوية طازجة']
+        },
+        technology: ['تحليل السائل المنوي (عينتان منفصلتان على الأقل بعد امتناع 2–7 أيام)', 'المقطع الهرموني — FSH وLH والتستوستيرون الكلي', 'تصوير كيس الصفن بالموجات فوق الصوتية — حجم الخصيتين وتقييم الدوالي', 'الفحوص الجينية — النمط النووي وحذف الصبغي Y', 'الاستخراج المجهري بالمجهر الجراحي', 'تجميد الحيوانات المنوية والعمل المتزامن مع مختبر الأجنة'],
+        surgeonExperience: { caseVolume: '', note: 'الأندرولوجيا والعقم عند الرجل من مجالات عمل الأستاذ المشارك الدكتور مسلم إرغون. ويُتخذ قرار الاستخراج المجهري بتقييم المقطع الهرموني وحجم الخصيتين والنتائج الجينية وخطة علاج الزوجين معًا، ويُنسَّق مع فريق الأجنة.' },
+        timeline: [
+          { when: 'الخطوة 1', title: 'تقييم الزوجين معًا', body: 'يجب أن تكون المرأة قد قُيّمت أيضًا. فعمرها يؤثر مباشرةً في خطة العلاج ومدى استعجاله.' },
+          { when: 'الخطوة 2', title: 'تحليل السائل المنوي والفحص', body: 'يُطلَب تحليلان منفصلان على الأقل. ويُقيَّم في الفحص حجم الخصيتين ووجود دوالي وإمكان جسّ القنوات المنوية.' },
+          { when: 'الخطوة 3', title: 'الفحوص الهرمونية والجينية', body: 'تُفحَص FSH وLH والتستوستيرون. وعند الاشتباه باضطراب الإنتاج يُطلَب النمط النووي وحذف الصبغي Y. وقد تغيّر هذه النتائج قرار العملية.' },
+          { when: 'الخطوة 4', title: 'علاج الأسباب القابلة للتصحيح', body: 'إن وُجد سبب قابل للتصحيح كدوالي الخصية أو اضطراب هرموني أو تناول دواء أو مادة، عُولج أولًا. وإن كان التستوستيرون مستعملًا أُوقف وانتُظر التعافي.' },
+          { when: 'الخطوة 5', title: 'الاستخراج المجهري', body: 'تحت تخدير عام يُفحَص نسيج الخصية بالمجهر الجراحي وتُختار النبيبات التي فيها إنتاج. وقد يستغرق الإجراء 60–150 دقيقة؛ ويُخرَّج المريض في اليوم نفسه.' },
+          { when: 'الخطوة 6', title: 'النتيجة والخطوة التالية', body: 'إن وُجدت حيوانات منوية استُعملت طازجة أو جُمِّدت. وإن لم تُوجد نُوقشت خيارات مثل الحيوانات المنوية من متبرع أو التبنّي مع الزوجين بصراحة.' }
+        ],
+        risks: ['عدم العثور على حيوانات منوية: وهو في فقد النطاف غير الانسدادي أهم المخاطر وأكثرها واقعية. وهو ليس مضاعفة بل نتيجة محتملة، ويُقال بصراحة قبل العملية', 'انخفاض مستوى التستوستيرون بسبب أخذ جزء من نسيج الخصية — ويهدف استعمال المجهر إلى الحدّ من ذلك بتقليل الكمية المأخوذة', 'تورم وكدمات وتجمّع دموي في كيس الصفن', 'العدوى', 'ألم في الخصية — مؤقت عادةً', 'نقص في حجم الخصية', 'إجراء بلا لزوم: فإن أُجريت العملية لمن لديه حذف AZFa/AZFb من دون فحص جيني ضاع الأمل والنسيج معًا — ولهذا يُطلَب الفحص أولًا'],
+        alternatives: ['علاج السبب القابل للتصحيح — إصلاح دوالي الخصية أو ضبط الهرمونات أو إيقاف دواء أو مادة', 'الحصول على الحيوانات المنوية بطرق أبسط من البربخ أو الخصية في فقد النطاف الانسدادي', 'تعديل نمط الحياة — الإقلاع عن التدخين وضبط الوزن وتجنّب الحرارة الزائدة', 'الانتقال مباشرةً إلى الحقن المجهري عند توفر حيوانات منوية', 'تجميد الحيوانات المنوية — كضمان قبل العلاج', 'الحيوانات المنوية من متبرع أو التبنّي — خياران يُناقَشان عند عدم العثور'],
+        comparison: {
+          title: 'فقد النطاف الانسدادي وغير الانسدادي',
+          columns: ['المعيار', 'انسدادي', 'غير انسدادي'],
+          rows: [
+            { label: 'موضع المشكلة', values: ['الإنتاج موجود والطريق مسدود', 'الإنتاج غير كافٍ'] },
+            { label: 'حجم الخصيتين', values: ['طبيعي عادةً', 'صغير في الغالب'] },
+            { label: 'مستوى FSH', values: ['طبيعي عادةً', 'مرتفع في الغالب'] },
+            { label: 'الفحوص الجينية', values: ['قد يُبحَث حمل التليف الكيسي', 'يلزم النمط النووي وحذف الصبغي Y'] },
+            { label: 'فرصة الحصول', values: ['عالية', 'متغيرة — لا يمكن ضمانها'] },
+            { label: 'الأسلوب', values: ['قد تكفي تقنيات أبسط', 'الاستخراج المجهري'] }
+          ],
+          note: 'هذا التمييز يحدد الأسلوب والتوقع معًا. ويُحسَم بالفحص والمقطع الهرموني وحجم الخصيتين مجتمعة؛ ولا يكفي فحص واحد.'
+        },
+        recovery: [
+          { period: 'أول 48 ساعة', body: 'يُتوقع تورم وحساسية في كيس الصفن. ويخفف وضع الثلج وارتداء ملابس داخلية داعمة. وتُستعمل المسكنات.' },
+          { period: 'اليوم 3–7', body: 'يمكن العودة إلى العمل المكتبي. والمشي الخفيف مسموح؛ أما رفع الأثقال والرياضة فلا.' },
+          { period: 'الأسبوع 2–4', body: 'عودة تدريجية إلى النشاط المعتاد. وتُخطَّط العودة إلى الحياة الجنسية في هذه المرحلة.' },
+          { period: 'الشهر 3–6', body: 'يُفحَص مستوى التستوستيرون لتقييم انخفاض محتمل بسبب أخذ النسيج.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'يتغير السعر بحسب ما إذا كان المخطط له الاستخراج المجهري وحده أم معه التجميد وخدمات مختبر الأجنة. ويُقدَّم العرض النهائي بعد اكتمال الفحوص.' },
+        packageIncludes: ['التقييم الأندرولوجي والفحص السريري', 'تحليل السائل المنوي والمقطع الهرموني وتصوير كيس الصفن', 'ترتيب الفحوص الجينية اللازمة', 'إجراء الاستخراج المجهري والتخدير', 'إجراء في اليوم نفسه مع فترة مراقبة', 'تجميد وحفظ ما يُعثر عليه من حيوانات منوية', 'التنقلات بين المطار والمستشفى والفندق', 'الإقامة (المريض + مرافق واحد)', 'مترجم طبي ومتابعة عن بُعد بعد عودتك إلى بلدك'],
+        faqs: [
+          { q: 'لا توجد حيوانات منوية في سائلي المنوي إطلاقًا، فهل انتهت فرصتي في الإنجاب؟', a: 'لا، لم تنتهِ — لكنها غير مضمونة أيضًا. فينبغي أولًا تحديد ما إذا كان الغياب بسبب انسداد أم اضطراب في الإنتاج. ففي الانسداد تكون فرصة الحصول عالية. وفي اضطراب الإنتاج قد يعثر الاستخراج المجهري على حيوانات منوية وقد لا يعثر. والجواب الصادق أن يُناقَش الاحتمال بحسب نتائجك.' },
+          { q: 'أليس تحليل واحد كافيًا؟', a: 'لا. فالقيم تتغير عند الرجل نفسه من أسبوع إلى آخر تغيرًا واضحًا؛ وقد يُفسد النتيجةَ مرضٌ مصحوب بحمى أو قِصَر مدة الامتناع. والقرار بناءً على تحليل سيئ واحد يقود إلى استنتاج خاطئ. ويُطلَب تحليلان منفصلان على الأقل بعد امتناع 2–7 أيام.' },
+          { q: 'أستعمل حقن التستوستيرون، فهل تحسّن قيم السائل المنوي لديّ؟', a: 'لا، بل العكس. فالتستوستيرون المأخوذ من الخارج يكبح الإشارة التي يرسلها الدماغ إلى الخصيتين ويقلل إنتاج الحيوانات المنوية، وقد يوقفه تمامًا. وهذا الاستعمال الشائع في صالات الرياضة سبب متكرر ومُغفَل للعقم. فإن كنت ترغب في الإنجاب وجب إيقافه بالتشاور مع طبيبك وانتظار مدة للتعافي.' },
+          { q: 'لماذا تُطلَب الفحوص الجينية؟', a: 'لأن النتيجة تغيّر أحيانًا قرار العملية. فإن وُجد حذف كامل في منطقة AZFa أو AZFb كان احتمال العثور ضعيفًا جدًا. ومعرفة ذلك مسبقًا تجنّبك عملية بلا لزوم وخيبة كبيرة. أما في حذف AZFc فالعثور ممكن.' },
+          { q: 'ما الفرق بين الاستخراج المجهري والاستخراج المعتاد؟', a: 'في الاستخراج المجهري يُستعمل المجهر الجراحي. فيمكن اختيار النبيبات الأكثر امتلاءً التي ما زال فيها إنتاج. والهدف رفع فرصة العثور وصون الخصية بتقليل النسيج المأخوذ. فإن أُجري لك استخراج من دون مجهر ولم يُعثَر على شيء فقد تكون إعادة التقييم مجدية.' },
+          { q: 'ماذا يحدث إن عُثر على حيوانات منوية؟', a: 'إما تُستعمل في اليوم نفسه للحقن المجهري أو تُجمَّد. وإن كان المخطط استعمالها طازجة وجب التنسيق مع جدول علاج زوجتك؛ ولهذا يُحدَّد موعد الإجراء مع فريق الأجنة.' },
+          { q: 'وإن لم يُعثر على شيء؟', a: 'يُناقَش هذا الاحتمال من البداية. فعند عدم العثور تكون الخيارات حيوانات منوية من متبرع أو التبنّي. وعند بعض الرجال قد تُطرح محاولة ثانية بعد مدة، لكنها لا تناسب الجميع وتُقدَّر بحسب النتائج.' },
+          { q: 'لديّ دوالي خصية، فهل أُجري عمليتها أولًا؟', a: 'إن كانت الدوالي محسوسة وقيم السائل المنوي مضطربة فقد يسبق إصلاحها؛ وهو يحسّن القيم عند جزء من الرجال. لكنه لا يضمن الحمل أيضًا، وإن كان عمر الزوجة لا يترك وقتًا كافيًا فقد يكون الانتقال مباشرةً إلى العلاج المساعد على الإنجاب أصوب.' },
+          { q: 'هل يخفض الإجراء التستوستيرون لديّ؟', a: 'لأن جزءًا من نسيج الخصية يُؤخَذ فقد ينخفض المستوى. ومن أهداف استعمال المجهر تقليل الكمية المأخوذة إلى أدنى حد. ويُفحَص التستوستيرون بعد 3–6 أشهر من العملية وتستمر المتابعة عند الحاجة.' },
+          { q: 'متى أعود إلى العمل وأستطيع السفر جوًا؟', a: 'إلى العمل المكتبي خلال 3–7 أيام عادةً؛ ويُسمح بالسفر جوًا بعد 3–5 أيام. ويُخطَّط للمرضى القادمين من الخارج بإقامة 5–7 أيام. أما رفع الأثقال والرياضة فيُنصح بانتظار 2–4 أسابيع.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Sexual and Reproductive Health — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
+        ]
+      }
+    }
+  },
+  {
+    /**
+     * Üroonkoloji hub'ının altında (prompt m.4.1).
+     * İKİ KRİTİK DÜRÜSTLÜK NOKTASI:
+     * 1. Böbrek kanserlerinin çoğu RASTLANTISAL bulunur — belirti beklemek yanlıştır.
+     * 2. KÜÇÜK TÜMÖRLERDE AKTİF İZLEM MEŞRU BİR SEÇENEKTİR; her kitle hemen
+     *    ameliyat edilmez. Bu, cerrahi satmaya değil doğru karara hizmet eder.
+     * Parsiyel nefrektominin mümkün olduğunda tercih edildiği, çünkü böbrek
+     * dokusunun korunmasının uzun dönem böbrek işlevi için önemli olduğu yazılıdır.
+     * Kaynak: EAU Renal Cell Carcinoma kılavuzu.
+     * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     */
+    slug: 'bobrek-kanseri',
+    parent: 'uroonkoloji',
+    lastReviewed: '2026-10-04',
+    icon: 'kidney',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'Böbrek Kanseri: Parsiyel ve Radikal Nefrektomi',
+        summary:
+          'Böbrek tümörlerinin çoğu başka bir nedenle çekilen görüntülemede rastlantısal bulunur. Asıl soru tümörü almak değil, böbreğin ne kadarının korunabileceğidir.',
+        metaTitle: 'Böbrek Kanseri: Belirtileri ve Cerrahi Tedavisi',
+        metaDescription:
+          'Böbrek tümörlerinin nasıl bulunduğu, parsiyel ve radikal nefrektomi farkı, küçük kitlelerde aktif izlem seçeneği, riskler ve takip.',
+        quickFacts: {
+          duration: '2–4 saat',
+          anesthesia: 'Genel anestezi',
+          hospitalStay: '2–4 gece',
+          stayInTurkey: '10–14 gün',
+          returnToWork: '2–4 hafta',
+          flightClearance: '10–14 gün'
+        },
+        definition: [
+          'Böbrek kanseri, böbreğin idrarı süzen dokusundan kaynaklanan tümördür. Bu sayfada ağırlıklı olarak erişkinlerde en sık görülen tip olan renal hücreli karsinomdan söz edilmektedir.',
+          'ÇOĞU TÜMÖR RASTLANTISAL BULUNUR. Eskiden tarif edilen "yan ağrısı, idrarda kan ve elle hissedilen kitle" üçlüsü artık seyrek görülür; bu üçlü varsa hastalık genellikle ilerlemiştir. Bugün böbrek tümörlerinin büyük kısmı, başka bir yakınma için çekilen ultrason veya tomografide tesadüfen saptanır. Dolayısıyla belirti beklemek doğru bir strateji değildir.',
+          'Tanı görüntülemeyle konur. Kontrastlı bilgisayarlı tomografi veya MR, kitlenin kanlanma özelliğini göstererek iyi huylu bir yapıdan (örneğin basit kist veya anjiyomiyolipom) ayırt edilmesini sağlar. Böbrek tümörlerinde biyopsi her hastada yapılmaz; görüntüleme çoğu zaman yeterince yol göstericidir ve biyopsi yalnızca kararı değiştirecekse istenir.',
+          'ASIL SORU ŞUDUR: BÖBREĞİN NE KADARI KORUNABİLİR? Küçük ve uygun yerleşimli tümörlerde yalnızca tümör ve çevresindeki ince bir doku şeridi çıkarılır (parsiyel nefrektomi); böbreğin geri kalanı çalışmaya devam eder. Büyük, merkezi yerleşimli veya damar yapılarını saran tümörlerde böbreğin tamamı alınır (radikal nefrektomi).',
+          'BÖBREK DOKUSUNU KORUMAK NEDEN ÖNEMLİDİR? Çünkü ileride diğer böbrekte de sorun çıkabilir ve böbrek işlevindeki kayıp kalp-damar sağlığını da etkiler. Bu nedenle teknik olarak mümkün ve onkolojik olarak güvenli olduğunda parsiyel nefrektomi tercih edilir. Ancak "mümkünse" ifadesi önemlidir: tümörün tam olarak çıkarılması her zaman önceliklidir.',
+          'KÜÇÜK KİTLELERDE AKTİF İZLEM MEŞRU BİR SEÇENEKTİR. Çok küçük tümörlerin bir kısmı yavaş büyür ve bazıları iyi huyludur. İleri yaştaki veya ameliyat riski yüksek hastalarda, kitleyi belirli aralıklarla görüntüleyerek izlemek ve ancak büyüme gösterirse müdahale etmek kabul edilen bir yaklaşımdır. Her kitlenin hemen ameliyat edilmesi gerekmez.'
+        ],
+        eligibility: {
+          suitable: [
+            'Görüntülemede böbrekte solid (içi dolu) kitle saptanan hastalar',
+            'Küçük ve dış yerleşimli tümörü olan hastalar — parsiyel nefrektomi için uygun',
+            'Tek böbreği olan veya karşı böbreğinde sorun bulunan hastalar — böbrek dokusunu koruma önceliklidir',
+            'Böbrek işlevi sınırda olan hastalar — parsiyel yaklaşım daha da önem kazanır',
+            'Büyük veya merkezi yerleşimli tümörü olan hastalar — radikal nefrektomi gündeme gelir'
+          ],
+          notSuitable: [
+            'Basit böbrek kisti saptanan hastalar — bu bir tümör değildir, çoğu zaman izlem bile gerekmez',
+            'Görüntülemede yağ içeriğiyle iyi huylu olduğu anlaşılan kitleler (anjiyomiyolipom) — ayrı değerlendirilir',
+            'Çok küçük kitlesi olan ileri yaştaki veya ameliyat riski yüksek hastalar — aktif izlem önce konuşulur',
+            'Genel durumu büyük cerrahiye uygun olmayan hastalar — ablasyon teknikleri veya izlem değerlendirilir',
+            'Yaygın hastalığı olan hastalar — tedavi önceliği cerrahi değil sistemik tedavi olabilir'
+          ]
+        },
+        technology: [
+          'Kontrastlı bilgisayarlı tomografi veya MR ile kitlenin karakterizasyonu',
+          'Laparoskopik veya robotik yaklaşım',
+          'Parsiyel nefrektomi — tümörün böbrek korunarak çıkarılması',
+          'Radikal nefrektomi — gerektiğinde',
+          'Patolojik inceleme ve evreleme',
+          'Böbrek işlevinin ameliyat öncesi ve sonrası izlenmesi'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Laparoskopik ve robotik üroonkolojik cerrahi, Doç. Dr. Müslüm Ergün’ün çalışma alanları arasındadır. Böbrek tümörlerinde karar; tümörün boyutu ve yerleşimi, karşı böbreğin durumu, böbrek işlevi ve hastanın genel sağlığı birlikte değerlendirilerek verilir.'
+        },
+        timeline: [
+          {
+            when: '1. adım',
+            title: 'Kitlenin karakterize edilmesi',
+            body: 'Kontrastlı tomografi veya MR ile kitlenin solid mi kistik mi olduğu, boyutu ve böbrek içindeki yerleşimi belirlenir. Bu, parsiyel cerrahinin mümkün olup olmadığını gösterir.'
+          },
+          {
+            when: '2. adım',
+            title: 'Evreleme ve genel değerlendirme',
+            body: 'Akciğer görüntülemesi ve kan tetkikleri yapılır. Böbrek işlevi ölçülür; karşı böbreğin durumu özellikle önemlidir.'
+          },
+          {
+            when: '3. adım',
+            title: 'Karar: izlem mi, cerrahi mi?',
+            body: 'Küçük kitlelerde ve yüksek cerrahi riskte aktif izlem konuşulur. Cerrahi kararı verildiyse parsiyel mi radikal mi olacağı planlanır.'
+          },
+          {
+            when: 'Ameliyat günü',
+            title: 'Cerrahi',
+            body: 'Genel anestezi altında laparoskopik veya robotik yolla girilir. Parsiyel nefrektomide tümör, çevresinde ince bir doku şeridiyle çıkarılır ve böbrek onarılır. Süre 2–4 saattir.'
+          },
+          {
+            when: '2–4. gün',
+            title: 'Taburculuk',
+            body: 'Dren ve sonda uygun olduğunda çıkarılır, böbrek işlevi kontrol edilir ve hasta taburcu edilir.'
+          },
+          {
+            when: '4–6. hafta',
+            title: 'Patoloji ve takip planı',
+            body: 'Patoloji raporuna göre tümör tipi ve evresi belirlenir; buna göre takip aralıkları planlanır.'
+          }
+        ],
+        risks: [
+          'Kanama — böbrek kanlanması yoğun bir organdır; parsiyel nefrektomide bu risk özellikle gözetilir ve nadiren kan nakli gerekebilir',
+          'İdrar kaçağı — parsiyel nefrektomiye özgüdür; toplayıcı sisteme yakın tümörlerde görülebilir ve drenin uzun kalmasını gerektirebilir',
+          'Böbrek işlevinde azalma — radikal nefrektomide daha belirgindir; bu, parsiyel yaklaşımın tercih edilme nedenidir',
+          'Cerrahi sırasında parsiyelden radikale geçilmesi — tümörün yerleşimi ameliyat sırasında beklenenden farklı çıkarsa gündeme gelir ve önceden konuşulur',
+          'Komşu organ yaralanması — seyrek',
+          'Enfeksiyon, yara sorunları ve uzun ameliyata bağlı genel riskler',
+          'NÜKS: Tümör alınsa bile hastalık yıllar sonra tekrarlayabilir; bu nedenle takip planı yapılır ve sürdürülmelidir'
+        ],
+        alternatives: [
+          'Aktif izlem — küçük kitlelerde, ileri yaşta veya cerrahi riski yüksek hastalarda meşru bir seçenek',
+          'Parsiyel nefrektomi — mümkün ve güvenli olduğunda tercih edilir',
+          'Radikal nefrektomi — büyük, merkezi veya damar tutulumu olan tümörlerde',
+          'Ablasyon teknikleri (dondurma veya ısı ile yok etme) — küçük kitlelerde ve cerrahiye uygun olmayan hastalarda',
+          'Yaygın hastalıkta sistemik tedavi — tıbbi onkoloji ile birlikte planlanır'
+        ],
+        comparison: {
+          title: 'Parsiyel ve radikal nefrektomi karşılaştırması',
+          columns: ['Ölçüt', 'Parsiyel nefrektomi', 'Radikal nefrektomi'],
+          rows: [
+            { label: 'Ne çıkarılır', values: ['Yalnızca tümör ve çevresindeki ince doku', 'Böbreğin tamamı'] },
+            { label: 'Uygun tümör', values: ['Küçük, dış yerleşimli', 'Büyük, merkezi veya damar tutulumu olan'] },
+            { label: 'Böbrek işlevi', values: ['Daha fazla korunur', 'O böbreğin işlevi kaybedilir'] },
+            { label: 'Kanama ve idrar kaçağı riski', values: ['Daha yüksek', 'Daha düşük'] },
+            { label: 'Teknik zorluk', values: ['Daha yüksek', 'Daha düşük'] },
+            { label: 'Tek böbrekli hastada', values: ['Öncelikli hedef', 'Son çare'] }
+          ],
+          note:
+            'Parsiyel nefrektomi mümkün olduğunda tercih edilir çünkü korunan böbrek dokusu uzun dönemde önemlidir. Ancak tümörün tam olarak çıkarılması her zaman önceliklidir; onkolojik güvenlik böbrek dokusunu korumanın önünde gelir.'
+        },
+        recovery: [
+          {
+            period: 'İlk 48 saat',
+            body: 'Hastanede gözlem altında kalınır. Ağrı kontrol altına alınır, erken ayağa kalkış desteklenir. Dren ve sonda izlenir.'
+          },
+          {
+            period: '2–4. gün',
+            body: 'Dren ve sonda uygun olduğunda çıkarılır. Böbrek işlevi kontrol edilir ve taburculuk planlanır.'
+          },
+          {
+            period: '1–2. hafta',
+            body: 'Hafif yürüyüş serbesttir. Ağır kaldırma ve karın kaslarını zorlayan hareketler yasaktır.'
+          },
+          {
+            period: '2–4. hafta',
+            body: 'Masa başı işe dönülebilir. Ağır fiziksel iş için daha uzun süre beklenir.'
+          },
+          {
+            period: '3. ay ve sonrası',
+            body: 'Patoloji sonucuna göre belirlenen aralıklarla görüntüleme ve böbrek işlev takibi sürdürülür.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat; parsiyel mi radikal mi yapılacağına, laparoskopik mi robotik mi yaklaşıldığına ve hastanede kalış süresine göre değişir. Kesin teklif, görüntüleme değerlendirmesinden sonra verilir.'
+        },
+        packageIncludes: [
+          'Üroloji değerlendirmesi ve görüntülemelerin incelenmesi',
+          'Ameliyat öncesi tetkikler ve evreleme',
+          'Laparoskopik veya robotik nefrektomi ve anestezi',
+          'Hastanede 2–4 gece konaklama',
+          'Patolojik inceleme ve evreleme raporu',
+          'Yazılı takip planı',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve ülkenize döndükten sonra uzaktan takip'
+        ],
+        faqs: [
+          {
+            q: 'Hiçbir şikâyetim yoktu, tesadüfen bulundu. Bu kötü bir işaret mi?',
+            a: 'Aksine. Böbrek tümörlerinin çoğu bugün rastlantısal olarak bulunur ve bu genellikle hastalığın erken evrede yakalandığı anlamına gelir. Klasik olarak tarif edilen yan ağrısı, idrarda kan ve elle hissedilen kitle üçlüsü varsa hastalık çoğunlukla ilerlemiştir. Yani belirtisiz bulunmuş olmak iyi bir durumdur.'
+          },
+          {
+            q: 'Böbreğimin tamamı alınacak mı?',
+            a: 'Bu tümörün boyutuna ve yerleşimine bağlıdır. Küçük ve dış yerleşimli tümörlerde yalnızca tümör çıkarılır ve böbreğin geri kalanı korunur. Büyük, merkezi veya damar yapılarını saran tümörlerde böbreğin tamamının alınması gerekebilir. Görüntüleme bu kararı büyük ölçüde önceden gösterir.'
+          },
+          {
+            q: 'Biyopsi yapılacak mı?',
+            a: 'Böbrek tümörlerinde biyopsi her hastada yapılmaz. Kontrastlı görüntüleme çoğu zaman yeterince yol göstericidir. Biyopsi, yalnızca sonucu tedavi kararını değiştirecekse istenir — örneğin aktif izlem mi yoksa cerrahi mi tartışılıyorsa veya tümörün böbrek kaynaklı olup olmadığı belirsizse.'
+          },
+          {
+            q: 'Küçük bir kitlem var, hemen ameliyat olmalı mıyım?',
+            a: 'Mutlaka değil. Çok küçük kitlelerin bir kısmı yavaş büyür ve bir kısmı iyi huyludur. Özellikle ileri yaşta veya ameliyat riski yüksek hastalarda, kitleyi belirli aralıklarla görüntüleyerek izlemek ve ancak büyürse müdahale etmek kabul edilen bir yaklaşımdır. Bu bir ihmal değil, bilinçli bir karardır.'
+          },
+          {
+            q: 'Tek böbrekle yaşayabilir miyim?',
+            a: 'Evet, kalan böbrek sağlıklıysa genellikle yeterli işlev görür. Ancak bu, böbrek dokusunu korumanın önemsiz olduğu anlamına gelmez; ileride diğer böbrekte sorun çıkabilir ve böbrek işlevindeki kayıp kalp-damar sağlığını da etkiler. Bu yüzden mümkün olduğunda parsiyel cerrahi tercih edilir.'
+          },
+          {
+            q: 'Ameliyat sırasında plan değişebilir mi?',
+            a: 'Evet. Tümörün yerleşimi ameliyat sırasında beklenenden farklı çıkarsa, planlanan parsiyel nefrektomi radikale dönüştürülebilir. Bu bir başarısızlık değil, tümörün tam olarak çıkarılmasını güvence altına alan bir karardır ve ameliyat öncesinde sizinle konuşulur.'
+          },
+          {
+            q: 'Tümör alındıktan sonra takip gerekir mi?',
+            a: 'Evet. Tümör tamamen çıkarılmış olsa bile hastalık yıllar sonra tekrarlayabilir. Takip aralıkları patoloji sonucuna ve evreye göre belirlenir; düşük riskte daha seyrek, yüksek riskte daha sık görüntüleme yapılır.'
+          },
+          {
+            q: 'Böbrek kisti bulundu, bu kanser mi?',
+            a: 'Basit böbrek kistleri çok yaygındır ve kanser değildir; çoğu zaman izlem bile gerektirmez. Ancak kistin içinde bölme, kalınlaşmış duvar veya kontrast tutan bölüm varsa değerlendirme farklılaşır. Raporda "basit kist" yazıyorsa endişelenmeyi gerektiren bir durum yoktur.'
+          },
+          {
+            q: 'Ne zaman uçabilirim?',
+            a: 'Genellikle 10–14 gün sonra. Bu, karın içine girilen ve iyileşme süresi gerektiren bir ameliyattır; erken uçuş bacak damarlarında pıhtı riskini artırır. Yurt dışından gelen hastalar için 10–14 günlük kalış planlanır.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Renal Cell Carcinoma — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/renal-cell-carcinoma'
+          }
+        ]
+      },
+      en: {
+        title: 'Kidney Cancer: Partial and Radical Nephrectomy',
+        summary:
+          'Most kidney tumours are found incidentally on imaging done for another reason. The real question is not whether to remove the tumour but how much of the kidney can be preserved.',
+        metaTitle: 'Kidney Cancer: Symptoms and Surgical Treatment',
+        metaDescription:
+          'How kidney tumours are found, the difference between partial and radical nephrectomy, active surveillance for small masses, the risks and follow-up.',
+        quickFacts: {
+          duration: '2–4 hours',
+          anesthesia: 'General anaesthesia',
+          hospitalStay: '2–4 nights',
+          stayInTurkey: '10–14 days',
+          returnToWork: '2–4 weeks',
+          flightClearance: '10–14 days'
+        },
+        definition: [
+          'Kidney cancer is a tumour arising from the tissue of the kidney that filters urine. This page deals mainly with renal cell carcinoma, the commonest type in adults.',
+          'MOST TUMOURS ARE FOUND INCIDENTALLY. The triad once described — flank pain, blood in the urine and a palpable mass — is now uncommon, and when it is present the disease is usually advanced. Today the great majority of kidney tumours are picked up by chance on an ultrasound or CT scan done for some other complaint. Waiting for symptoms is therefore not a sound strategy.',
+          'The diagnosis is made on imaging. Contrast-enhanced CT or MRI shows how the mass takes up blood supply and distinguishes it from a benign structure such as a simple cyst or an angiomyolipoma. Biopsy is not performed in every patient with a kidney tumour; imaging is usually informative enough, and a biopsy is requested only when it would change the decision.',
+          'THE REAL QUESTION IS: HOW MUCH OF THE KIDNEY CAN BE PRESERVED? In small, favourably placed tumours only the tumour and a thin rim of surrounding tissue are removed (partial nephrectomy), and the rest of the kidney carries on working. In large, centrally placed tumours or those encasing the blood vessels, the whole kidney is removed (radical nephrectomy).',
+          'WHY DOES PRESERVING KIDNEY TISSUE MATTER? Because a problem may arise in the other kidney in the future, and a loss of kidney function also affects cardiovascular health. For that reason partial nephrectomy is preferred where it is technically possible and oncologically safe. But "where possible" matters: removing the tumour completely always comes first.',
+          'ACTIVE SURVEILLANCE IS A LEGITIMATE OPTION FOR SMALL MASSES. Some very small tumours grow slowly and some are benign. In older patients or those at high surgical risk, imaging the mass at set intervals and intervening only if it grows is an accepted approach. Not every mass needs to be operated on straight away.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients found on imaging to have a solid mass in the kidney',
+            'Patients with a small, peripherally placed tumour — suitable for partial nephrectomy',
+            'Patients with a single kidney or a problem in the other kidney — preserving kidney tissue takes priority',
+            'Patients with borderline kidney function — the partial approach becomes even more important',
+            'Patients with a large or centrally placed tumour — radical nephrectomy comes into consideration'
+          ],
+          notSuitable: [
+            'Patients found to have a simple kidney cyst — this is not a tumour and often needs no follow-up at all',
+            'Masses shown by their fat content on imaging to be benign (angiomyolipoma) — assessed separately',
+            'Older patients or those at high surgical risk with a very small mass — active surveillance is discussed first',
+            'Patients whose general condition is unsuited to major surgery — ablation techniques or surveillance are considered',
+            'Patients with widespread disease — the treatment priority may be systemic therapy rather than surgery'
+          ]
+        },
+        technology: [
+          'Characterising the mass with contrast-enhanced CT or MRI',
+          'Laparoscopic or robotic approach',
+          'Partial nephrectomy — removing the tumour while preserving the kidney',
+          'Radical nephrectomy — where required',
+          'Pathological examination and staging',
+          'Monitoring kidney function before and after surgery'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Laparoscopic and robotic uro-oncological surgery is among Assoc. Prof. Müslüm Ergün’s areas of work. In kidney tumours the decision is made by weighing the size and position of the tumour, the state of the other kidney, kidney function and the patient’s general health together.'
+        },
+        timeline: [
+          {
+            when: 'Step 1',
+            title: 'Characterising the mass',
+            body: 'Contrast-enhanced CT or MRI establishes whether the mass is solid or cystic, its size and its position within the kidney. This shows whether partial surgery is feasible.'
+          },
+          {
+            when: 'Step 2',
+            title: 'Staging and general assessment',
+            body: 'Chest imaging and blood tests are carried out. Kidney function is measured; the state of the other kidney is particularly important.'
+          },
+          {
+            when: 'Step 3',
+            title: 'The decision: surveillance or surgery?',
+            body: 'Active surveillance is discussed for small masses and where surgical risk is high. If surgery is decided on, whether it will be partial or radical is planned.'
+          },
+          {
+            when: 'Day of surgery',
+            title: 'The operation',
+            body: 'Access is gained laparoscopically or robotically under general anaesthesia. In partial nephrectomy the tumour is removed with a thin rim of tissue around it and the kidney is repaired. The operation takes 2–4 hours.'
+          },
+          {
+            when: 'Days 2–4',
+            title: 'Discharge',
+            body: 'The drain and catheter are removed when appropriate, kidney function is checked and the patient is discharged.'
+          },
+          {
+            when: 'Weeks 4–6',
+            title: 'Pathology and follow-up plan',
+            body: 'The type and stage of the tumour are established from the pathology report, and the follow-up intervals are planned accordingly.'
+          }
+        ],
+        risks: [
+          'Bleeding — the kidney has a rich blood supply; this risk is watched particularly closely in partial nephrectomy and a transfusion is rarely needed',
+          'Urine leak — specific to partial nephrectomy; it can occur with tumours close to the collecting system and may require the drain to stay in longer',
+          'A fall in kidney function — more marked after radical nephrectomy; this is the reason the partial approach is preferred',
+          'Converting from partial to radical during the operation — this arises if the position of the tumour proves different from expected and is discussed beforehand',
+          'Injury to a neighbouring organ — uncommon',
+          'Infection, wound problems and the general risks of a long operation',
+          'RECURRENCE: even after the tumour has been removed, the disease can return years later; a follow-up plan is therefore made and must be kept to'
+        ],
+        alternatives: [
+          'Active surveillance — a legitimate option for small masses, in older patients or where surgical risk is high',
+          'Partial nephrectomy — preferred where possible and safe',
+          'Radical nephrectomy — for large, central tumours or those involving the vessels',
+          'Ablation techniques (destroying the tumour by freezing or heat) — for small masses and patients unsuited to surgery',
+          'Systemic therapy in widespread disease — planned together with medical oncology'
+        ],
+        comparison: {
+          title: 'Partial versus radical nephrectomy',
+          columns: ['Criterion', 'Partial nephrectomy', 'Radical nephrectomy'],
+          rows: [
+            { label: 'What is removed', values: ['Only the tumour and a thin rim of tissue', 'The whole kidney'] },
+            { label: 'Suitable tumour', values: ['Small, peripherally placed', 'Large, central or involving the vessels'] },
+            { label: 'Kidney function', values: ['Better preserved', 'That kidney’s function is lost'] },
+            { label: 'Risk of bleeding and urine leak', values: ['Higher', 'Lower'] },
+            { label: 'Technical demand', values: ['Higher', 'Lower'] },
+            { label: 'In a patient with one kidney', values: ['The primary aim', 'A last resort'] }
+          ],
+          note:
+            'Partial nephrectomy is preferred where possible because preserved kidney tissue matters in the long run. But removing the tumour completely always comes first; oncological safety takes precedence over preserving kidney tissue.'
+        },
+        recovery: [
+          {
+            period: 'First 48 hours',
+            body: 'The patient stays in hospital under observation. Pain is controlled and getting up early is encouraged. The drain and catheter are monitored.'
+          },
+          {
+            period: 'Days 2–4',
+            body: 'The drain and catheter are removed when appropriate. Kidney function is checked and discharge is planned.'
+          },
+          {
+            period: 'Weeks 1–2',
+            body: 'Gentle walking is allowed. Heavy lifting and movements that strain the abdominal muscles are not.'
+          },
+          {
+            period: 'Weeks 2–4',
+            body: 'A return to desk work is possible. Longer is needed before heavy physical work.'
+          },
+          {
+            period: 'Month 3 onwards',
+            body: 'Imaging and monitoring of kidney function continue at intervals set by the pathology result.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies with whether a partial or radical operation is performed, whether the approach is laparoscopic or robotic, and the length of hospital stay. A firm quotation is given after the imaging has been assessed.'
+        },
+        packageIncludes: [
+          'Urological assessment and review of your imaging',
+          'Pre-operative investigations and staging',
+          'Laparoscopic or robotic nephrectomy and anaesthesia',
+          '2–4 nights in hospital',
+          'Pathological examination and staging report',
+          'A written follow-up plan',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and remote follow-up after you return home'
+        ],
+        faqs: [
+          {
+            q: 'I had no symptoms and it was found by chance. Is that a bad sign?',
+            a: 'On the contrary. Most kidney tumours today are found incidentally, and that usually means the disease has been caught at an early stage. When the classic triad of flank pain, blood in the urine and a palpable mass is present, the disease is usually advanced. Being found without symptoms is a good position to be in.'
+          },
+          {
+            q: 'Will my whole kidney be removed?',
+            a: 'That depends on the size and position of the tumour. In small, peripherally placed tumours only the tumour is removed and the rest of the kidney is preserved. In large or central tumours, or those encasing the vessels, the whole kidney may have to be removed. Imaging largely shows this in advance.'
+          },
+          {
+            q: 'Will a biopsy be done?',
+            a: 'A biopsy is not performed in every patient with a kidney tumour. Contrast-enhanced imaging is usually informative enough. A biopsy is requested only when the result would change the treatment decision — for instance when active surveillance versus surgery is being weighed, or when it is unclear whether the tumour arises from the kidney at all.'
+          },
+          {
+            q: 'I have a small mass — must I have surgery straight away?',
+            a: 'Not necessarily. Some very small masses grow slowly and some are benign. Particularly in older patients or those at high surgical risk, imaging the mass at intervals and intervening only if it grows is an accepted approach. That is not neglect but a deliberate decision.'
+          },
+          {
+            q: 'Can I live with one kidney?',
+            a: 'Yes — if the remaining kidney is healthy it generally provides enough function. But that does not mean preserving kidney tissue is unimportant; a problem may arise in the other kidney later, and a loss of kidney function also affects cardiovascular health. That is why partial surgery is preferred where possible.'
+          },
+          {
+            q: 'Can the plan change during the operation?',
+            a: 'Yes. If the position of the tumour proves different from expected, a planned partial nephrectomy may be converted to a radical one. That is not a failure but a decision that safeguards complete removal of the tumour, and it is discussed with you beforehand.'
+          },
+          {
+            q: 'Is follow-up needed after the tumour is removed?',
+            a: 'Yes. Even when the tumour has been removed completely, the disease can return years later. The intervals are set by the pathology result and the stage: less frequent imaging in low-risk disease, more frequent in high-risk.'
+          },
+          {
+            q: 'A kidney cyst was found — is that cancer?',
+            a: 'Simple kidney cysts are very common and are not cancer; most need no follow-up at all. If the cyst has septa, a thickened wall or a part that takes up contrast, the assessment differs. If the report says "simple cyst", there is nothing to be concerned about.'
+          },
+          {
+            q: 'When can I fly?',
+            a: 'Usually after 10–14 days. This is an operation inside the abdomen that needs time to heal, and flying early raises the risk of clots in the leg veins. A stay of 10–14 days is planned for patients travelling from abroad.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Renal Cell Carcinoma — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/renal-cell-carcinoma'
+          }
+        ]
+      },
+      de: {
+        title: 'Nierenkrebs: partielle und radikale Nephrektomie',
+        summary: 'Die meisten Nierentumoren werden zufällig bei einer Bildgebung aus anderem Anlass entdeckt. Die eigentliche Frage ist nicht, ob der Tumor entfernt wird, sondern wie viel Niere erhalten bleiben kann.',
+        metaTitle: 'Nierenkrebs: Symptome und operative Behandlung',
+        metaDescription: 'Wie Nierentumoren gefunden werden, der Unterschied zwischen partieller und radikaler Nephrektomie, aktive Überwachung kleiner Herde, Risiken und Nachsorge.',
+        quickFacts: { duration: '2–4 Stunden', anesthesia: 'Vollnarkose', hospitalStay: '2–4 Nächte', stayInTurkey: '10–14 Tage', returnToWork: '2–4 Wochen', flightClearance: '10–14 Tage' },
+        definition: [
+          'Nierenkrebs ist ein Tumor, der vom harnfiltrierenden Gewebe der Niere ausgeht. Diese Seite behandelt vor allem das Nierenzellkarzinom, die bei Erwachsenen häufigste Form.',
+          'DIE MEISTEN TUMOREN WERDEN ZUFÄLLIG ENTDECKT. Die früher beschriebene Trias aus Flankenschmerz, Blut im Urin und tastbarem Tumor ist heute selten, und wenn sie vorliegt, ist die Erkrankung meist fortgeschritten. Die große Mehrheit der Nierentumoren fällt heute zufällig bei einem Ultraschall oder CT auf, das aus anderem Anlass gemacht wurde. Auf Beschwerden zu warten ist daher keine sinnvolle Strategie.',
+          'Die Diagnose erfolgt bildgebend. Kontrastmittel-CT oder -MRT zeigen das Durchblutungsverhalten des Herdes und erlauben die Abgrenzung von gutartigen Strukturen wie einer einfachen Zyste oder einem Angiomyolipom. Eine Biopsie wird nicht bei jedem Patienten durchgeführt; die Bildgebung ist meist aussagekräftig genug, und eine Biopsie wird nur verlangt, wenn sie die Entscheidung ändern würde.',
+          'DIE EIGENTLICHE FRAGE LAUTET: WIE VIEL NIERE LÄSST SICH ERHALTEN? Bei kleinen, günstig gelegenen Tumoren werden nur der Tumor und ein schmaler Gewebesaum entfernt (partielle Nephrektomie); der Rest der Niere arbeitet weiter. Bei großen, zentral gelegenen oder gefäßumscheidenden Tumoren wird die gesamte Niere entfernt (radikale Nephrektomie).',
+          'WARUM IST DER ERHALT VON NIERENGEWEBE WICHTIG? Weil später auch an der anderen Niere ein Problem auftreten kann und ein Verlust an Nierenfunktion auch die Herz-Kreislauf-Gesundheit betrifft. Deshalb wird die partielle Nephrektomie bevorzugt, wo sie technisch möglich und onkologisch sicher ist. Das "wo möglich" zählt jedoch: Die vollständige Entfernung des Tumors hat stets Vorrang.',
+          'BEI KLEINEN HERDEN IST DIE AKTIVE ÜBERWACHUNG EINE LEGITIME OPTION. Manche sehr kleinen Tumoren wachsen langsam, manche sind gutartig. Bei älteren Patienten oder hohem Operationsrisiko ist es ein anerkanntes Vorgehen, den Herd in Abständen bildgebend zu kontrollieren und nur bei Wachstum einzugreifen. Nicht jeder Herd muss sofort operiert werden.'
+        ],
+        eligibility: {
+          suitable: ['Patienten mit bildgebend nachgewiesenem soliden Nierenherd', 'Patienten mit kleinem, randständigem Tumor — für die partielle Nephrektomie geeignet', 'Patienten mit Einzelniere oder Problemen der Gegenseite — der Erhalt von Nierengewebe hat Vorrang', 'Patienten mit grenzwertiger Nierenfunktion — das partielle Vorgehen wird noch wichtiger', 'Patienten mit großem oder zentral gelegenem Tumor — die radikale Nephrektomie kommt infrage'],
+          notSuitable: ['Patienten mit einfacher Nierenzyste — das ist kein Tumor und bedarf oft nicht einmal einer Kontrolle', 'Herde, die sich bildgebend am Fettgehalt als gutartig erweisen (Angiomyolipom) — gesonderte Beurteilung', 'Ältere Patienten oder solche mit hohem Operationsrisiko und sehr kleinem Herd — zuerst wird die aktive Überwachung besprochen', 'Patienten, deren Allgemeinzustand eine große Operation nicht zulässt — Ablationsverfahren oder Überwachung', 'Patienten mit ausgedehnter Erkrankung — Vorrang kann die systemische Therapie statt der Operation haben']
+        },
+        technology: ['Charakterisierung des Herdes mit Kontrastmittel-CT oder -MRT', 'Laparoskopischer oder robotischer Zugang', 'Partielle Nephrektomie — Entfernung des Tumors unter Erhalt der Niere', 'Radikale Nephrektomie — wenn erforderlich', 'Pathologische Untersuchung und Stadieneinteilung', 'Kontrolle der Nierenfunktion vor und nach der Operation'],
+        surgeonExperience: { caseVolume: '', note: 'Die laparoskopische und robotische uroonkologische Chirurgie gehört zu den Arbeitsgebieten von Doz. Dr. Müslüm Ergün. Bei Nierentumoren fällt die Entscheidung unter gemeinsamer Abwägung von Größe und Lage des Tumors, Zustand der Gegenseite, Nierenfunktion und Allgemeingesundheit.' },
+        timeline: [
+          { when: 'Schritt 1', title: 'Charakterisierung des Herdes', body: 'Kontrastmittel-CT oder -MRT klären, ob der Herd solide oder zystisch ist, wie groß er ist und wo er in der Niere liegt. Daraus ergibt sich, ob ein partielles Vorgehen möglich ist.' },
+          { when: 'Schritt 2', title: 'Stadieneinteilung und Gesamtbeurteilung', body: 'Lungenbildgebung und Blutuntersuchungen werden durchgeführt. Die Nierenfunktion wird gemessen; der Zustand der Gegenseite ist besonders wichtig.' },
+          { when: 'Schritt 3', title: 'Entscheidung: Überwachung oder Operation?', body: 'Bei kleinen Herden und hohem Operationsrisiko wird die aktive Überwachung besprochen. Fällt die Entscheidung für eine Operation, wird partiell oder radikal geplant.' },
+          { when: 'Operationstag', title: 'Der Eingriff', body: 'In Vollnarkose wird laparoskopisch oder robotisch eingegangen. Bei der partiellen Nephrektomie wird der Tumor mit einem schmalen Gewebesaum entfernt und die Niere rekonstruiert. Der Eingriff dauert 2–4 Stunden.' },
+          { when: 'Tag 2–4', title: 'Entlassung', body: 'Drainage und Katheter werden bei Eignung entfernt, die Nierenfunktion kontrolliert und der Patient entlassen.' },
+          { when: 'Woche 4–6', title: 'Pathologie und Nachsorgeplan', body: 'Aus dem pathologischen Befund ergeben sich Tumortyp und Stadium; danach werden die Nachsorgeabstände festgelegt.' }
+        ],
+        risks: ['Blutung — die Niere ist gut durchblutet; bei der partiellen Nephrektomie wird dieses Risiko besonders beachtet, selten ist eine Transfusion nötig', 'Urinleckage — spezifisch für die partielle Nephrektomie; bei Tumoren nahe dem Hohlsystem möglich und kann ein längeres Liegen der Drainage erfordern', 'Abnahme der Nierenfunktion — nach radikaler Nephrektomie ausgeprägter; dies begründet die Bevorzugung des partiellen Vorgehens', 'Umstieg von partiell auf radikal während der Operation — wenn die Lage des Tumors anders ausfällt als erwartet; wird vorher besprochen', 'Verletzung eines Nachbarorgans — selten', 'Infektion, Wundprobleme und allgemeine Risiken einer langen Operation', 'RÜCKFALL: Auch nach vollständiger Entfernung kann die Erkrankung Jahre später wiederkehren; deshalb wird ein Nachsorgeplan erstellt und muss eingehalten werden'],
+        alternatives: ['Aktive Überwachung — legitime Option bei kleinen Herden, höherem Alter oder hohem Operationsrisiko', 'Partielle Nephrektomie — bevorzugt, wo möglich und sicher', 'Radikale Nephrektomie — bei großen, zentralen oder gefäßbeteiligenden Tumoren', 'Ablationsverfahren (Vereisung oder Hitze) — bei kleinen Herden und nicht operationsfähigen Patienten', 'Systemische Therapie bei ausgedehnter Erkrankung — gemeinsam mit der internistischen Onkologie geplant'],
+        comparison: {
+          title: 'Partielle und radikale Nephrektomie im Vergleich',
+          columns: ['Kriterium', 'Partielle Nephrektomie', 'Radikale Nephrektomie'],
+          rows: [
+            { label: 'Was entfernt wird', values: ['Nur Tumor und schmaler Gewebesaum', 'Die gesamte Niere'] },
+            { label: 'Geeigneter Tumor', values: ['Klein, randständig', 'Groß, zentral oder mit Gefäßbeteiligung'] },
+            { label: 'Nierenfunktion', values: ['Besser erhalten', 'Funktion dieser Niere geht verloren'] },
+            { label: 'Risiko für Blutung und Urinleckage', values: ['Höher', 'Geringer'] },
+            { label: 'Technischer Anspruch', values: ['Höher', 'Geringer'] },
+            { label: 'Bei Einzelniere', values: ['Vorrangiges Ziel', 'Letztes Mittel'] }
+          ],
+          note: 'Die partielle Nephrektomie wird bevorzugt, wo möglich, weil erhaltenes Nierengewebe langfristig zählt. Die vollständige Entfernung des Tumors hat jedoch stets Vorrang; die onkologische Sicherheit geht dem Gewebeerhalt vor.'
+        },
+        recovery: [
+          { period: 'Erste 48 Stunden', body: 'Der Patient bleibt unter Überwachung in der Klinik. Der Schmerz wird kontrolliert, frühes Aufstehen gefördert. Drainage und Katheter werden überwacht.' },
+          { period: 'Tag 2–4', body: 'Drainage und Katheter werden bei Eignung entfernt. Die Nierenfunktion wird kontrolliert und die Entlassung geplant.' },
+          { period: 'Woche 1–2', body: 'Leichtes Gehen ist erlaubt. Schweres Heben und Bewegungen, die die Bauchmuskeln belasten, sind untersagt.' },
+          { period: 'Woche 2–4', body: 'Die Rückkehr an den Schreibtisch ist möglich. Für schwere körperliche Arbeit ist länger zu warten.' },
+          { period: 'Ab Monat 3', body: 'Bildgebung und Kontrolle der Nierenfunktion werden in den nach dem pathologischen Befund festgelegten Abständen fortgeführt.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Der Preis richtet sich danach, ob partiell oder radikal operiert wird, ob laparoskopisch oder robotisch vorgegangen wird, und nach der Dauer des Klinikaufenthalts. Ein verbindliches Angebot erfolgt nach Beurteilung der Bildgebung.' },
+        packageIncludes: ['Urologische Abklärung und Durchsicht Ihrer Bildgebung', 'Präoperative Untersuchungen und Stadieneinteilung', 'Laparoskopische oder robotische Nephrektomie und Narkose', '2–4 Nächte stationär', 'Pathologische Untersuchung und Staging-Bericht', 'Schriftlicher Nachsorgeplan', 'Transfers Flughafen–Krankenhaus–Hotel', 'Unterkunft (Patient + 1 Begleitperson)', 'Medizinischer Dolmetscher und Fernbetreuung nach Ihrer Rückkehr'],
+        faqs: [
+          { q: 'Ich hatte keine Beschwerden, es wurde zufällig gefunden. Ist das ein schlechtes Zeichen?', a: 'Im Gegenteil. Die meisten Nierentumoren werden heute zufällig entdeckt, und das bedeutet in der Regel, dass die Erkrankung früh erfasst wurde. Liegt die klassische Trias aus Flankenschmerz, Blut im Urin und tastbarem Tumor vor, ist sie meist fortgeschritten. Ohne Beschwerden gefunden zu werden, ist also eine gute Ausgangslage.' },
+          { q: 'Wird meine ganze Niere entfernt?', a: 'Das hängt von Größe und Lage des Tumors ab. Bei kleinen, randständigen Tumoren wird nur der Tumor entfernt und der Rest der Niere erhalten. Bei großen oder zentralen Tumoren oder solchen, die die Gefäße umscheiden, kann die ganze Niere entfernt werden müssen. Die Bildgebung zeigt das weitgehend vorab.' },
+          { q: 'Wird eine Biopsie gemacht?', a: 'Nicht bei jedem Patienten. Die Kontrastmittelbildgebung ist meist aussagekräftig genug. Eine Biopsie wird nur verlangt, wenn ihr Ergebnis die Behandlungsentscheidung ändern würde — etwa wenn aktive Überwachung gegen Operation abgewogen wird oder unklar ist, ob der Tumor überhaupt von der Niere ausgeht.' },
+          { q: 'Ich habe einen kleinen Herd — muss ich sofort operiert werden?', a: 'Nicht unbedingt. Manche sehr kleinen Herde wachsen langsam, manche sind gutartig. Besonders bei älteren Patienten oder hohem Operationsrisiko ist es anerkannt, den Herd in Abständen zu kontrollieren und nur bei Wachstum einzugreifen. Das ist keine Nachlässigkeit, sondern eine bewusste Entscheidung.' },
+          { q: 'Kann ich mit einer Niere leben?', a: 'Ja — ist die verbliebene Niere gesund, reicht ihre Funktion in der Regel aus. Das heißt aber nicht, dass der Erhalt von Nierengewebe unwichtig wäre; später kann an der anderen Niere ein Problem auftreten, und ein Funktionsverlust betrifft auch die Herz-Kreislauf-Gesundheit. Deshalb wird, wo möglich, partiell operiert.' },
+          { q: 'Kann sich der Plan während der Operation ändern?', a: 'Ja. Erweist sich die Lage des Tumors als anders als erwartet, kann eine geplante partielle Nephrektomie in eine radikale überführt werden. Das ist kein Misserfolg, sondern eine Entscheidung, die die vollständige Entfernung sichert, und wird vorher mit Ihnen besprochen.' },
+          { q: 'Ist nach der Entfernung eine Nachsorge nötig?', a: 'Ja. Auch nach vollständiger Entfernung kann die Erkrankung Jahre später wiederkehren. Die Abstände richten sich nach dem pathologischen Befund und dem Stadium: bei niedrigem Risiko seltener, bei hohem häufiger.' },
+          { q: 'Es wurde eine Nierenzyste gefunden — ist das Krebs?', a: 'Einfache Nierenzysten sind sehr häufig und kein Krebs; die meisten bedürfen nicht einmal einer Kontrolle. Hat die Zyste Septen, eine verdickte Wand oder einen kontrastaufnehmenden Anteil, ist die Beurteilung eine andere. Steht im Befund "einfache Zyste", besteht kein Anlass zur Sorge.' },
+          { q: 'Wann darf ich fliegen?', a: 'Meist nach 10–14 Tagen. Es handelt sich um einen Eingriff im Bauchraum, der Heilungszeit braucht; ein zu früher Flug erhöht das Risiko von Beinvenenthrombosen. Für Patienten aus dem Ausland wird ein Aufenthalt von 10–14 Tagen geplant.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Renal Cell Carcinoma — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/renal-cell-carcinoma' }
+        ]
+      },
+      fr: {
+        title: 'Cancer du rein : néphrectomie partielle et radicale',
+        summary: 'La plupart des tumeurs du rein sont découvertes fortuitement sur une imagerie réalisée pour une autre raison. La vraie question n’est pas de retirer la tumeur mais de savoir quelle part du rein peut être préservée.',
+        metaTitle: 'Cancer du rein : symptômes et traitement chirurgical',
+        metaDescription: 'Comment les tumeurs du rein sont découvertes, la différence entre néphrectomie partielle et radicale, la surveillance active des petites masses, les risques et le suivi.',
+        quickFacts: { duration: '2–4 heures', anesthesia: 'Anesthésie générale', hospitalStay: '2–4 nuits', stayInTurkey: '10–14 jours', returnToWork: '2–4 semaines', flightClearance: '10–14 jours' },
+        definition: [
+          'Le cancer du rein est une tumeur développée à partir du tissu rénal qui filtre l’urine. Cette page traite principalement du carcinome à cellules rénales, la forme la plus fréquente chez l’adulte.',
+          'LA PLUPART DES TUMEURS SONT DÉCOUVERTES FORTUITEMENT. La triade autrefois décrite — douleur du flanc, sang dans les urines et masse palpable — est devenue rare, et lorsqu’elle est présente la maladie est généralement avancée. Aujourd’hui, la grande majorité des tumeurs rénales est repérée par hasard sur une échographie ou un scanner fait pour un autre motif. Attendre des symptômes n’est donc pas une bonne stratégie.',
+          'Le diagnostic repose sur l’imagerie. Le scanner ou l’IRM avec injection montrent la prise de contraste de la masse et permettent de la distinguer d’une structure bénigne telle qu’un kyste simple ou un angiomyolipome. La biopsie n’est pas réalisée chez tous les patients ; l’imagerie suffit le plus souvent, et la biopsie n’est demandée que si elle doit changer la décision.',
+          'LA VRAIE QUESTION EST : QUELLE PART DU REIN PEUT ÊTRE PRÉSERVÉE ? Pour les tumeurs petites et favorablement situées, seuls la tumeur et une fine couronne de tissu sont retirés (néphrectomie partielle) ; le reste du rein continue de fonctionner. Pour les tumeurs volumineuses, centrales ou engainant les vaisseaux, le rein entier est retiré (néphrectomie radicale).',
+          'POURQUOI PRÉSERVER DU TISSU RÉNAL IMPORTE-T-IL ? Parce qu’un problème peut survenir plus tard sur l’autre rein, et parce qu’une perte de fonction rénale retentit aussi sur la santé cardiovasculaire. La néphrectomie partielle est donc préférée lorsqu’elle est techniquement possible et carcinologiquement sûre. Mais « lorsqu’elle est possible » compte : retirer complètement la tumeur prime toujours.',
+          'POUR LES PETITES MASSES, LA SURVEILLANCE ACTIVE EST UNE OPTION LÉGITIME. Certaines très petites tumeurs croissent lentement et certaines sont bénignes. Chez les patients âgés ou à risque opératoire élevé, surveiller la masse par imagerie à intervalles et n’intervenir qu’en cas de croissance est une démarche admise. Toute masse ne doit pas être opérée d’emblée.'
+        ],
+        eligibility: {
+          suitable: ['Patients chez qui l’imagerie montre une masse rénale solide', 'Patients porteurs d’une tumeur petite et périphérique — adaptés à la néphrectomie partielle', 'Patients avec un rein unique ou une anomalie controlatérale — préserver le tissu rénal prime', 'Patients à fonction rénale limite — l’approche partielle devient encore plus importante', 'Patients porteurs d’une tumeur volumineuse ou centrale — la néphrectomie radicale s’envisage'],
+          notSuitable: ['Patients porteurs d’un kyste rénal simple — ce n’est pas une tumeur et une surveillance n’est souvent même pas nécessaire', 'Masses dont la teneur en graisse à l’imagerie affirme la bénignité (angiomyolipome) — évaluation distincte', 'Patients âgés ou à risque opératoire élevé porteurs d’une très petite masse — la surveillance active est discutée d’abord', 'Patients dont l’état général ne permet pas une chirurgie lourde — ablation ou surveillance', 'Patients atteints d’une maladie étendue — la priorité peut être le traitement systémique plutôt que la chirurgie']
+        },
+        technology: ['Caractérisation de la masse par scanner ou IRM avec injection', 'Abord laparoscopique ou robotique', 'Néphrectomie partielle — retrait de la tumeur en préservant le rein', 'Néphrectomie radicale — si nécessaire', 'Examen anatomopathologique et stadification', 'Surveillance de la fonction rénale avant et après l’intervention'],
+        surgeonExperience: { caseVolume: '', note: 'La chirurgie uro-oncologique laparoscopique et robotique fait partie des domaines d’activité du Dr Müslüm Ergün, maître de conférences. Dans les tumeurs du rein, la décision repose sur la taille et la situation de la tumeur, l’état du rein controlatéral, la fonction rénale et l’état général du patient.' },
+        timeline: [
+          { when: 'Étape 1', title: 'Caractérisation de la masse', body: 'Le scanner ou l’IRM avec injection précisent si la masse est solide ou kystique, sa taille et sa situation dans le rein. Cela indique si une chirurgie partielle est envisageable.' },
+          { when: 'Étape 2', title: 'Stadification et évaluation générale', body: 'Une imagerie thoracique et un bilan sanguin sont réalisés. La fonction rénale est mesurée ; l’état du rein controlatéral est particulièrement important.' },
+          { when: 'Étape 3', title: 'Décision : surveillance ou chirurgie ?', body: 'La surveillance active est discutée pour les petites masses et en cas de risque opératoire élevé. Si la chirurgie est retenue, on planifie une intervention partielle ou radicale.' },
+          { when: 'Jour de l’intervention', title: 'La chirurgie', body: 'Sous anesthésie générale, l’abord est laparoscopique ou robotique. En néphrectomie partielle, la tumeur est retirée avec une fine couronne de tissu et le rein est réparé. L’intervention dure 2 à 4 heures.' },
+          { when: 'Jours 2–4', title: 'Sortie', body: 'Le drain et la sonde sont retirés lorsque c’est possible, la fonction rénale est contrôlée et la sortie est organisée.' },
+          { when: 'Semaines 4–6', title: 'Anatomopathologie et plan de suivi', body: 'Le compte rendu précise le type et le stade de la tumeur ; les intervalles de surveillance sont fixés en conséquence.' }
+        ],
+        risks: ['Hémorragie — le rein est richement vascularisé ; ce risque est particulièrement surveillé en néphrectomie partielle et une transfusion est rarement nécessaire', 'Fuite urinaire — propre à la néphrectomie partielle ; possible pour les tumeurs proches des cavités, elle peut imposer un drainage prolongé', 'Baisse de la fonction rénale — plus marquée après néphrectomie radicale ; c’est la raison de préférer l’approche partielle', 'Conversion de partielle en radicale pendant l’intervention — si la situation de la tumeur diffère de l’attendu ; cela se discute avant', 'Lésion d’un organe voisin — rare', 'Infection, problèmes de cicatrisation et risques généraux d’une intervention longue', 'RÉCIDIVE : même après exérèse complète, la maladie peut revenir des années plus tard ; un plan de suivi est établi et doit être respecté'],
+        alternatives: ['Surveillance active — option légitime pour les petites masses, chez les patients âgés ou à risque opératoire élevé', 'Néphrectomie partielle — préférée lorsqu’elle est possible et sûre', 'Néphrectomie radicale — pour les tumeurs volumineuses, centrales ou avec atteinte vasculaire', 'Techniques d’ablation (froid ou chaleur) — pour les petites masses et les patients non opérables', 'Traitement systémique en maladie étendue — planifié avec l’oncologie médicale'],
+        comparison: {
+          title: 'Néphrectomie partielle et radicale : comparaison',
+          columns: ['Critère', 'Néphrectomie partielle', 'Néphrectomie radicale'],
+          rows: [
+            { label: 'Ce qui est retiré', values: ['La tumeur et une fine couronne de tissu', 'Le rein entier'] },
+            { label: 'Tumeur adaptée', values: ['Petite, périphérique', 'Volumineuse, centrale ou avec atteinte vasculaire'] },
+            { label: 'Fonction rénale', values: ['Mieux préservée', 'La fonction de ce rein est perdue'] },
+            { label: 'Risque d’hémorragie et de fuite urinaire', values: ['Plus élevé', 'Plus faible'] },
+            { label: 'Exigence technique', values: ['Plus élevée', 'Moindre'] },
+            { label: 'Chez un patient à rein unique', values: ['Objectif prioritaire', 'Dernier recours'] }
+          ],
+          note: 'La néphrectomie partielle est préférée lorsqu’elle est possible, car le tissu rénal préservé compte à long terme. Mais l’exérèse complète de la tumeur prime toujours : la sécurité carcinologique passe avant la préservation du tissu.'
+        },
+        recovery: [
+          { period: 'Premières 48 heures', body: 'Le patient reste en surveillance à l’hôpital. La douleur est contrôlée et le lever précoce encouragé. Le drain et la sonde sont surveillés.' },
+          { period: 'Jours 2–4', body: 'Le drain et la sonde sont retirés lorsque c’est possible. La fonction rénale est contrôlée et la sortie planifiée.' },
+          { period: 'Semaines 1–2', body: 'La marche légère est permise. Le port de charges et les mouvements sollicitant les muscles abdominaux sont interdits.' },
+          { period: 'Semaines 2–4', body: 'Le retour au travail de bureau est possible. Un délai plus long est nécessaire avant un travail physique lourd.' },
+          { period: 'À partir du 3e mois', body: 'L’imagerie et la surveillance de la fonction rénale se poursuivent aux intervalles fixés d’après l’anatomopathologie.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Le prix varie selon qu’il s’agit d’une intervention partielle ou radicale, selon l’abord laparoscopique ou robotique et selon la durée d’hospitalisation. Un devis ferme est remis après analyse de l’imagerie.' },
+        packageIncludes: ['Évaluation urologique et relecture de votre imagerie', 'Examens préopératoires et stadification', 'Néphrectomie laparoscopique ou robotique et anesthésie', '2 à 4 nuits d’hospitalisation', 'Examen anatomopathologique et compte rendu de stadification', 'Plan de suivi remis par écrit', 'Transferts aéroport–hôpital–hôtel', 'Hébergement (patient + 1 accompagnant)', 'Interprète médical et suivi à distance après votre retour'],
+        faqs: [
+          { q: 'Je n’avais aucun symptôme, cela a été trouvé par hasard. Est-ce mauvais signe ?', a: 'Au contraire. La plupart des tumeurs du rein sont aujourd’hui découvertes fortuitement, ce qui signifie généralement que la maladie a été prise tôt. Lorsque la triade classique est présente, la maladie est le plus souvent avancée. Être découvert sans symptôme est donc une situation favorable.' },
+          { q: 'Va-t-on m’enlever tout le rein ?', a: 'Cela dépend de la taille et de la situation de la tumeur. Pour les tumeurs petites et périphériques, seule la tumeur est retirée et le reste du rein préservé. Pour les tumeurs volumineuses ou centrales, ou engainant les vaisseaux, le rein entier peut devoir être retiré. L’imagerie l’indique en grande partie à l’avance.' },
+          { q: 'Va-t-on faire une biopsie ?', a: 'Pas chez tous les patients. L’imagerie avec injection suffit le plus souvent. La biopsie n’est demandée que si son résultat doit changer la décision thérapeutique — par exemple si l’on hésite entre surveillance active et chirurgie, ou si l’origine rénale de la tumeur est incertaine.' },
+          { q: 'J’ai une petite masse — dois-je être opéré tout de suite ?', a: 'Pas nécessairement. Certaines très petites masses croissent lentement et certaines sont bénignes. Chez les patients âgés ou à risque opératoire élevé en particulier, surveiller la masse par imagerie et n’intervenir qu’en cas de croissance est une démarche admise. Ce n’est pas de la négligence mais une décision réfléchie.' },
+          { q: 'Peut-on vivre avec un seul rein ?', a: 'Oui : si le rein restant est sain, sa fonction suffit généralement. Cela ne signifie pas que préserver du tissu rénal soit sans importance ; un problème peut survenir plus tard sur l’autre rein, et une perte de fonction retentit aussi sur la santé cardiovasculaire. D’où la préférence pour la chirurgie partielle quand elle est possible.' },
+          { q: 'Le plan peut-il changer pendant l’intervention ?', a: 'Oui. Si la situation de la tumeur s’avère différente de l’attendu, une néphrectomie partielle prévue peut être convertie en radicale. Ce n’est pas un échec mais une décision qui garantit l’exérèse complète, et elle est discutée avec vous au préalable.' },
+          { q: 'Un suivi est-il nécessaire après le retrait ?', a: 'Oui. Même après une exérèse complète, la maladie peut revenir des années plus tard. Les intervalles sont fixés d’après l’anatomopathologie et le stade : imagerie plus espacée en cas de risque faible, plus rapprochée en cas de risque élevé.' },
+          { q: 'On m’a trouvé un kyste rénal — est-ce un cancer ?', a: 'Les kystes rénaux simples sont très fréquents et ne sont pas des cancers ; la plupart ne nécessitent même pas de surveillance. Si le kyste comporte des cloisons, une paroi épaissie ou une portion prenant le contraste, l’évaluation diffère. Si le compte rendu indique « kyste simple », il n’y a pas lieu de s’inquiéter.' },
+          { q: 'Quand puis-je prendre l’avion ?', a: 'Généralement après 10 à 14 jours. Il s’agit d’une intervention intra-abdominale qui demande du temps de cicatrisation ; un vol précoce augmente le risque de thrombose veineuse des jambes. Un séjour de 10 à 14 jours est prévu pour les patients venant de l’étranger.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Renal Cell Carcinoma — Association européenne d’urologie', url: 'https://uroweb.org/guidelines/renal-cell-carcinoma' }
+        ]
+      },
+      ru: {
+        title: 'Рак почки: резекция почки и радикальная нефрэктомия',
+        summary: 'Большинство опухолей почки находят случайно при визуализации, сделанной по другому поводу. Главный вопрос не в том, удалить ли опухоль, а в том, какую часть почки удастся сохранить.',
+        metaTitle: 'Рак почки: симптомы и хирургическое лечение',
+        metaDescription: 'Как находят опухоли почки, чем отличаются резекция почки и радикальная нефрэктомия, активное наблюдение при малых образованиях, риски и наблюдение.',
+        quickFacts: { duration: '2–4 часа', anesthesia: 'Общая анестезия', hospitalStay: '2–4 ночи', stayInTurkey: '10–14 дней', returnToWork: '2–4 недели', flightClearance: '10–14 дней' },
+        definition: [
+          'Рак почки — это опухоль, исходящая из ткани почки, которая фильтрует мочу. На этой странице речь идёт прежде всего о почечно-клеточном раке, самом частом типе у взрослых.',
+          'БОЛЬШИНСТВО ОПУХОЛЕЙ НАХОДЯТ СЛУЧАЙНО. Описанная прежде триада — боль в боку, кровь в моче и прощупываемое образование — сегодня встречается редко, а если она есть, болезнь обычно уже запущена. Сейчас подавляющее большинство опухолей почки выявляют случайно при ультразвуке или компьютерной томографии, сделанных по другому поводу. Поэтому ждать симптомов — неверная стратегия.',
+          'Диагноз ставят по визуализации. Компьютерная томография или МРТ с контрастированием показывают, как образование накапливает контраст, и позволяют отличить его от доброкачественной структуры, например простой кисты или ангиомиолипомы. Биопсию выполняют не каждому пациенту: визуализация чаще всего достаточно информативна, а биопсию назначают только тогда, когда она изменит решение.',
+          'ГЛАВНЫЙ ВОПРОС ТАКОВ: КАКУЮ ЧАСТЬ ПОЧКИ МОЖНО СОХРАНИТЬ? При небольших и удобно расположенных опухолях удаляют только опухоль и тонкий ободок окружающей ткани (резекция почки), а остальная почка продолжает работать. При крупных, центрально расположенных опухолях или охватывающих сосуды удаляют почку целиком (радикальная нефрэктомия).',
+          'ПОЧЕМУ ВАЖНО СОХРАНИТЬ ТКАНЬ ПОЧКИ? Потому что в будущем проблема может возникнуть и во второй почке, а потеря почечной функции влияет и на здоровье сердца и сосудов. Поэтому резекцию предпочитают там, где это технически возможно и онкологически безопасно. Но оговорка «где возможно» важна: полное удаление опухоли всегда в приоритете.',
+          'ПРИ МАЛЫХ ОБРАЗОВАНИЯХ АКТИВНОЕ НАБЛЮДЕНИЕ — ЗАКОННЫЙ ВАРИАНТ. Часть очень небольших опухолей растёт медленно, а часть доброкачественна. У пожилых пациентов или при высоком операционном риске признанным подходом является наблюдение с визуализацией через определённые промежутки и вмешательство только при росте. Не каждое образование нужно оперировать сразу.'
+        ],
+        eligibility: {
+          suitable: ['Пациенты, у которых при визуализации выявлено плотное образование в почке', 'Пациенты с небольшой опухолью, расположенной по периферии, — подходят для резекции', 'Пациенты с единственной почкой или проблемой во второй почке — сохранение ткани в приоритете', 'Пациенты с пограничной функцией почек — резекция становится ещё важнее', 'Пациенты с крупной или центрально расположенной опухолью — рассматривают радикальную нефрэктомию'],
+          notSuitable: ['Пациенты с простой кистой почки — это не опухоль и часто не требует даже наблюдения', 'Образования, доброкачественность которых доказана содержанием жира при визуализации (ангиомиолипома), — оцениваются отдельно', 'Пожилые пациенты или пациенты высокого операционного риска с очень малым образованием — сначала обсуждают активное наблюдение', 'Пациенты, чьё общее состояние не позволяет большую операцию, — рассматривают методы абляции или наблюдение', 'Пациенты с распространённой болезнью — приоритетом может быть системная терапия, а не операция']
+        },
+        technology: ['Характеристика образования с помощью КТ или МРТ с контрастированием', 'Лапароскопический или робот-ассистированный доступ', 'Резекция почки — удаление опухоли с сохранением почки', 'Радикальная нефрэктомия — при необходимости', 'Патоморфологическое исследование и стадирование', 'Контроль функции почек до и после операции'],
+        surgeonExperience: { caseVolume: '', note: 'Лапароскопическая и робот-ассистированная уроонкологическая хирургия входит в сферу работы доц. д-ра Мюслюма Эргюна. При опухолях почки решение принимают при совместной оценке размера и расположения опухоли, состояния второй почки, функции почек и общего состояния пациента.' },
+        timeline: [
+          { when: 'Шаг 1', title: 'Характеристика образования', body: 'КТ или МРТ с контрастированием определяют, плотное образование или кистозное, его размер и положение в почке. Это показывает, возможна ли резекция.' },
+          { when: 'Шаг 2', title: 'Стадирование и общая оценка', body: 'Выполняют визуализацию лёгких и анализы крови. Измеряют функцию почек; особенно важно состояние второй почки.' },
+          { when: 'Шаг 3', title: 'Решение: наблюдение или операция?', body: 'При малых образованиях и высоком операционном риске обсуждают активное наблюдение. Если принято решение оперировать, планируют резекцию или радикальную нефрэктомию.' },
+          { when: 'День операции', title: 'Вмешательство', body: 'Под общей анестезией доступ выполняют лапароскопически или с помощью робота. При резекции опухоль удаляют с тонким ободком ткани и почку ушивают. Операция занимает 2–4 часа.' },
+          { when: '2–4-й день', title: 'Выписка', body: 'Дренаж и катетер удаляют, когда это возможно, проверяют функцию почек и выписывают пациента.' },
+          { when: '4–6-я неделя', title: 'Патоморфология и план наблюдения', body: 'По заключению определяют тип и стадию опухоли; исходя из этого планируют промежутки наблюдения.' }
+        ],
+        risks: ['Кровотечение — почка хорошо кровоснабжается; при резекции за этим риском следят особенно внимательно, переливание требуется редко', 'Подтекание мочи — характерно для резекции; возможно при опухолях вблизи чашечно-лоханочной системы и может потребовать более долгого дренирования', 'Снижение функции почек — выраженнее после радикальной нефрэктомии; именно поэтому предпочитают резекцию', 'Переход от резекции к радикальной операции во время вмешательства — если расположение опухоли окажется иным, чем ожидалось; это обсуждают заранее', 'Повреждение соседнего органа — редко', 'Инфекция, проблемы с раной и общие риски длительной операции', 'РЕЦИДИВ: даже после полного удаления болезнь может вернуться спустя годы; поэтому составляют план наблюдения, которого нужно придерживаться'],
+        alternatives: ['Активное наблюдение — законный вариант при малых образованиях, в пожилом возрасте или при высоком операционном риске', 'Резекция почки — предпочтительна там, где возможна и безопасна', 'Радикальная нефрэктомия — при крупных, центральных опухолях или вовлечении сосудов', 'Методы абляции (разрушение холодом или теплом) — при малых образованиях и у неоперабельных пациентов', 'Системная терапия при распространённой болезни — планируется вместе с онкологами'],
+        comparison: {
+          title: 'Сравнение резекции почки и радикальной нефрэктомии',
+          columns: ['Критерий', 'Резекция почки', 'Радикальная нефрэктомия'],
+          rows: [
+            { label: 'Что удаляют', values: ['Только опухоль и тонкий ободок ткани', 'Всю почку'] },
+            { label: 'Подходящая опухоль', values: ['Небольшая, по периферии', 'Крупная, центральная или с вовлечением сосудов'] },
+            { label: 'Функция почек', values: ['Сохраняется лучше', 'Функция этой почки теряется'] },
+            { label: 'Риск кровотечения и подтекания мочи', values: ['Выше', 'Ниже'] },
+            { label: 'Техническая сложность', values: ['Выше', 'Ниже'] },
+            { label: 'При единственной почке', values: ['Первоочередная цель', 'Крайняя мера'] }
+          ],
+          note: 'Резекцию предпочитают там, где это возможно, потому что сохранённая ткань почки важна в долгосрочной перспективе. Но полное удаление опухоли всегда в приоритете: онкологическая безопасность важнее сохранения ткани.'
+        },
+        recovery: [
+          { period: 'Первые 48 часов', body: 'Пациент остаётся под наблюдением в стационаре. Боль контролируют, раннее вставание поощряют. Следят за дренажом и катетером.' },
+          { period: '2–4-й день', body: 'Дренаж и катетер удаляют, когда это возможно. Проверяют функцию почек и планируют выписку.' },
+          { period: '1–2-я неделя', body: 'Лёгкая ходьба разрешена. Поднятие тяжестей и движения, нагружающие мышцы живота, запрещены.' },
+          { period: '2–4-я неделя', body: 'Можно вернуться к работе за столом. Для тяжёлого физического труда нужно больше времени.' },
+          { period: 'С 3-го месяца', body: 'Визуализацию и контроль функции почек продолжают с промежутками, определёнными по патоморфологическому заключению.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Стоимость зависит от того, выполняется ли резекция или радикальная нефрэктомия, от лапароскопического или робот-ассистированного доступа и от длительности пребывания в стационаре. Точное предложение даётся после оценки визуализации.' },
+        packageIncludes: ['Урологическое обследование и разбор ваших снимков', 'Предоперационные исследования и стадирование', 'Лапароскопическая или робот-ассистированная нефрэктомия и анестезия', '2–4 ночи в стационаре', 'Патоморфологическое исследование и заключение по стадии', 'Письменный план наблюдения', 'Трансферы аэропорт–больница–отель', 'Проживание (пациент + 1 сопровождающий)', 'Медицинский переводчик и дистанционное наблюдение после возвращения домой'],
+        faqs: [
+          { q: 'У меня не было жалоб, нашли случайно. Это плохой знак?', a: 'Наоборот. Большинство опухолей почки сегодня находят случайно, и это обычно означает, что болезнь выявлена рано. Когда присутствует классическая триада — боль в боку, кровь в моче и прощупываемое образование, — болезнь чаще всего уже запущена. Так что обнаружение без симптомов — благоприятная ситуация.' },
+          { q: 'Удалят ли мне всю почку?', a: 'Это зависит от размера и расположения опухоли. При небольших периферических опухолях удаляют только опухоль, а остальную почку сохраняют. При крупных или центральных опухолях либо охватывающих сосуды может потребоваться удалить почку целиком. Визуализация во многом показывает это заранее.' },
+          { q: 'Будут ли делать биопсию?', a: 'Не каждому пациенту. Визуализация с контрастированием чаще всего достаточно информативна. Биопсию назначают только тогда, когда её результат изменит решение о лечении — например, когда взвешивают активное наблюдение против операции или когда неясно, исходит ли опухоль из почки вообще.' },
+          { q: 'У меня небольшое образование — обязательно ли оперироваться сразу?', a: 'Не обязательно. Часть очень небольших образований растёт медленно, часть доброкачественна. Особенно у пожилых пациентов и при высоком операционном риске признано наблюдать образование с помощью визуализации и вмешиваться только при росте. Это не халатность, а осознанное решение.' },
+          { q: 'Можно ли жить с одной почкой?', a: 'Да: если оставшаяся почка здорова, её функции обычно достаточно. Но это не значит, что сохранять ткань почки неважно; позже проблема может возникнуть и во второй почке, а потеря функции влияет и на сердечно-сосудистое здоровье. Поэтому там, где возможно, предпочитают резекцию.' },
+          { q: 'Может ли план измениться во время операции?', a: 'Да. Если расположение опухоли окажется иным, чем ожидалось, запланированную резекцию могут перевести в радикальную нефрэктомию. Это не неудача, а решение, обеспечивающее полное удаление опухоли, и оно обсуждается с вами заранее.' },
+          { q: 'Нужно ли наблюдение после удаления опухоли?', a: 'Да. Даже после полного удаления болезнь может вернуться спустя годы. Промежутки определяются патоморфологическим заключением и стадией: при низком риске визуализация реже, при высоком — чаще.' },
+          { q: 'Нашли кисту почки — это рак?', a: 'Простые кисты почек очень распространены и раком не являются; большинство не требует даже наблюдения. Если в кисте есть перегородки, утолщённая стенка или участок, накапливающий контраст, оценка иная. Если в заключении написано «простая киста», повода для тревоги нет.' },
+          { q: 'Когда можно лететь?', a: 'Обычно через 10–14 дней. Это вмешательство в брюшной полости, которому нужно время на заживление; ранний перелёт повышает риск тромбоза вен ног. Для пациентов из-за рубежа планируется пребывание 10–14 дней.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Renal Cell Carcinoma — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/renal-cell-carcinoma' }
+        ]
+      },
+      ar: {
+        title: 'سرطان الكلية: الاستئصال الجزئي والجذري',
+        summary: 'تُكتشف معظم أورام الكلية مصادفةً في تصوير أُجري لسبب آخر. والسؤال الحقيقي ليس إزالة الورم بل كم يمكن الحفاظ عليه من الكلية.',
+        metaTitle: 'سرطان الكلية: الأعراض والعلاج الجراحي',
+        metaDescription: 'كيف تُكتشف أورام الكلية، والفرق بين الاستئصال الجزئي والجذري، والمتابعة النشطة للكتل الصغيرة، والمخاطر والمتابعة.',
+        quickFacts: { duration: '2–4 ساعات', anesthesia: 'تخدير عام', hospitalStay: '2–4 ليالٍ', stayInTurkey: '10–14 يومًا', returnToWork: '2–4 أسابيع', flightClearance: '10–14 يومًا' },
+        definition: [
+          'سرطان الكلية ورم ينشأ من نسيج الكلية الذي يرشّح البول. وتتناول هذه الصفحة أساسًا سرطان الخلايا الكلوية، وهو أكثر الأنواع شيوعًا عند البالغين.',
+          'تُكتشف معظم الأورام مصادفةً. فالثلاثي الذي كان يُوصَف قديمًا — ألم الخاصرة والدم في البول وكتلة محسوسة — صار نادرًا، وإذا وُجد فالمرض متقدم في الغالب. واليوم تُلتقط الغالبية العظمى من أورام الكلية مصادفةً في موجات فوق صوتية أو تصوير مقطعي أُجري لشكوى أخرى. ولذلك فانتظار الأعراض ليس خطة سليمة.',
+          'يُوضَع التشخيص بالتصوير. فالتصوير المقطعي أو الرنين مع الصبغة يُظهر كيفية تروية الكتلة ويميّزها عن بنية حميدة مثل كيس بسيط أو ورم وعائي عضلي شحمي. ولا تُجرى الخزعة لكل مريض؛ فالتصوير كافٍ في الغالب، ولا تُطلَب الخزعة إلا إذا كانت ستغيّر القرار.',
+          'السؤال الحقيقي هو: كم يمكن الحفاظ عليه من الكلية؟ ففي الأورام الصغيرة ذات الموضع المناسب يُزال الورم وشريط رقيق من النسيج المحيط فقط (الاستئصال الجزئي)، ويواصل بقية الكلية عمله. أما في الأورام الكبيرة أو المركزية أو المحيطة بالأوعية فتُزال الكلية كاملة (الاستئصال الجذري).',
+          'لماذا يهم الحفاظ على نسيج الكلية؟ لأن مشكلة قد تظهر لاحقًا في الكلية الأخرى، ولأن فقدان وظيفة الكلى يمسّ صحة القلب والأوعية أيضًا. ولذلك يُفضَّل الاستئصال الجزئي حيث يكون ممكنًا تقنيًا وآمنًا من ناحية الأورام. غير أن عبارة «حيث يكون ممكنًا» مهمة: فإزالة الورم كاملًا لها الأولوية دائمًا.',
+          'في الكتل الصغيرة تُعدّ المتابعة النشطة خيارًا مشروعًا. فبعض الأورام الصغيرة جدًا تنمو ببطء وبعضها حميد. وعند كبار السن أو مرتفعي خطر الجراحة يُعدّ تصوير الكتلة على فترات والتدخل فقط عند النمو نهجًا مقبولًا. وليس كل كتلة يجب أن تُجرى لها عملية فورًا.'
+        ],
+        eligibility: {
+          suitable: ['من تُكتشف لديهم كتلة صلبة في الكلية بالتصوير', 'من لديهم ورم صغير في الطرف الخارجي — ملائمون للاستئصال الجزئي', 'من لديهم كلية واحدة أو مشكلة في الكلية المقابلة — للحفاظ على النسيج أولوية', 'من وظيفة الكلى لديهم حدّية — يزداد الأسلوب الجزئي أهمية', 'من لديهم ورم كبير أو مركزي — يُطرح الاستئصال الجذري'],
+          notSuitable: ['من يُكتشف لديهم كيس كلوي بسيط — فهو ليس ورمًا ولا يحتاج غالبًا حتى إلى متابعة', 'الكتل التي يثبت التصوير حميديتها بمحتواها الدهني (الورم الوعائي العضلي الشحمي) — تُقيَّم على حدة', 'كبار السن أو مرتفعو خطر الجراحة ممن لديهم كتلة صغيرة جدًا — تُناقَش المتابعة النشطة أولًا', 'من لا تسمح حالتهم العامة بجراحة كبيرة — تُقيَّم تقنيات الإتلاف أو المتابعة', 'من لديهم مرض منتشر — قد تكون أولوية العلاج جهازية لا جراحية']
+        },
+        technology: ['توصيف الكتلة بالتصوير المقطعي أو الرنين مع الصبغة', 'الدخول بالمنظار البطني أو بالروبوت', 'الاستئصال الجزئي — إزالة الورم مع الحفاظ على الكلية', 'الاستئصال الجذري — عند اللزوم', 'الفحص النسيجي المرضي وتحديد المرحلة', 'مراقبة وظيفة الكلى قبل العملية وبعدها'],
+        surgeonExperience: { caseVolume: '', note: 'جراحة الأورام البولية بالمنظار البطني والروبوت من مجالات عمل الأستاذ المشارك الدكتور مسلم إرغون. وفي أورام الكلية يُتخذ القرار بتقييم حجم الورم وموضعه وحال الكلية المقابلة ووظيفة الكلى وصحة المريض العامة معًا.' },
+        timeline: [
+          { when: 'الخطوة 1', title: 'توصيف الكتلة', body: 'يحدد التصوير المقطعي أو الرنين مع الصبغة ما إذا كانت الكتلة صلبة أم كيسية وحجمها وموضعها في الكلية. وهذا يبيّن إمكان الجراحة الجزئية.' },
+          { when: 'الخطوة 2', title: 'تحديد المرحلة والتقييم العام', body: 'يُجرى تصوير للرئتين وتحاليل دم. وتُقاس وظيفة الكلى؛ وحال الكلية المقابلة مهمة بوجه خاص.' },
+          { when: 'الخطوة 3', title: 'القرار: متابعة أم جراحة؟', body: 'تُناقَش المتابعة النشطة في الكتل الصغيرة وعند ارتفاع خطر الجراحة. فإن تقرّرت الجراحة خُطِّط للاستئصال الجزئي أو الجذري.' },
+          { when: 'يوم العملية', title: 'الجراحة', body: 'تحت تخدير عام يتم الدخول بالمنظار البطني أو بالروبوت. وفي الاستئصال الجزئي يُزال الورم مع شريط رقيق من النسيج وتُرمَّم الكلية. وتستغرق العملية 2–4 ساعات.' },
+          { when: 'اليوم 2–4', title: 'الخروج', body: 'يُنزَع النزح والقسطرة عند المناسبة، وتُفحَص وظيفة الكلى، ويُخرَّج المريض.' },
+          { when: 'الأسبوع 4–6', title: 'الفحص النسيجي وخطة المتابعة', body: 'يُحدَّد نوع الورم ومرحلته من التقرير النسيجي، وتُخطَّط فترات المتابعة بناءً عليه.' }
+        ],
+        risks: ['النزف — الكلية عضو غزير التروية؛ ويُراعى هذا الخطر خصوصًا في الاستئصال الجزئي، ونادرًا ما يلزم نقل دم', 'تسرّب البول — خاص بالاستئصال الجزئي؛ وارد في الأورام القريبة من الجهاز المجمِّع وقد يستلزم بقاء النزح مدة أطول', 'تراجع وظيفة الكلى — أوضح بعد الاستئصال الجذري؛ وهذا سبب تفضيل الأسلوب الجزئي', 'التحول من الجزئي إلى الجذري أثناء العملية — إن ظهر موضع الورم مغايرًا للمتوقع؛ ويُتحدث عن ذلك مسبقًا', 'إصابة عضو مجاور — نادرة', 'العدوى ومشكلات الجرح والمخاطر العامة لعملية طويلة', 'النكس: حتى بعد الإزالة الكاملة قد يعود المرض بعد سنوات؛ ولذلك تُوضَع خطة متابعة يجب الالتزام بها'],
+        alternatives: ['المتابعة النشطة — خيار مشروع في الكتل الصغيرة وعند كبار السن أو ارتفاع خطر الجراحة', 'الاستئصال الجزئي — يُفضَّل حيث يكون ممكنًا وآمنًا', 'الاستئصال الجذري — في الأورام الكبيرة أو المركزية أو ذات الإصابة الوعائية', 'تقنيات الإتلاف (بالتجميد أو الحرارة) — في الكتل الصغيرة وعند من لا تناسبهم الجراحة', 'العلاج الجهازي في المرض المنتشر — يُخطَّط مع أطباء الأورام'],
+        comparison: {
+          title: 'مقارنة بين الاستئصال الجزئي والجذري',
+          columns: ['المعيار', 'الاستئصال الجزئي', 'الاستئصال الجذري'],
+          rows: [
+            { label: 'ما الذي يُزال', values: ['الورم وشريط رقيق من النسيج فقط', 'الكلية كاملة'] },
+            { label: 'الورم المناسب', values: ['صغير وطرفي', 'كبير أو مركزي أو ذو إصابة وعائية'] },
+            { label: 'وظيفة الكلى', values: ['تُحفَظ أكثر', 'تُفقَد وظيفة تلك الكلية'] },
+            { label: 'خطر النزف وتسرّب البول', values: ['أعلى', 'أقل'] },
+            { label: 'الصعوبة التقنية', values: ['أعلى', 'أقل'] },
+            { label: 'عند صاحب الكلية الواحدة', values: ['الهدف الأول', 'الملاذ الأخير'] }
+          ],
+          note: 'يُفضَّل الاستئصال الجزئي حيث يكون ممكنًا لأن النسيج المحفوظ مهم على المدى الطويل. غير أن إزالة الورم كاملًا لها الأولوية دائمًا؛ فالأمان الورمي يسبق الحفاظ على النسيج.'
+        },
+        recovery: [
+          { period: 'أول 48 ساعة', body: 'يبقى المريض تحت المراقبة في المستشفى. ويُضبَط الألم ويُشجَّع النهوض المبكر. ويُراقَب النزح والقسطرة.' },
+          { period: 'اليوم 2–4', body: 'يُنزَع النزح والقسطرة عند المناسبة. وتُفحَص وظيفة الكلى ويُخطَّط للخروج.' },
+          { period: 'الأسبوع 1–2', body: 'المشي الخفيف مسموح. ورفع الأثقال والحركات التي تُجهد عضلات البطن ممنوعة.' },
+          { period: 'الأسبوع 2–4', body: 'يمكن العودة إلى العمل المكتبي. أما العمل البدني الشاق فيحتاج مدة أطول.' },
+          { period: 'من الشهر 3', body: 'يستمر التصوير ومتابعة وظيفة الكلى بالفترات المحددة وفق نتيجة الفحص النسيجي.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'يتغير السعر بحسب إجراء استئصال جزئي أم جذري، وبحسب الدخول بالمنظار البطني أم بالروبوت، ومدة الإقامة في المستشفى. ويُقدَّم العرض النهائي بعد تقييم التصوير.' },
+        packageIncludes: ['تقييم المسالك البولية ومراجعة صورك', 'الفحوص قبل العملية وتحديد المرحلة', 'استئصال الكلية بالمنظار البطني أو بالروبوت والتخدير', 'الإقامة في المستشفى 2–4 ليالٍ', 'الفحص النسيجي المرضي وتقرير المرحلة', 'خطة متابعة مكتوبة', 'التنقلات بين المطار والمستشفى والفندق', 'الإقامة (المريض + مرافق واحد)', 'مترجم طبي ومتابعة عن بُعد بعد عودتك إلى بلدك'],
+        faqs: [
+          { q: 'لم تكن لديّ شكوى ووُجد مصادفةً، فهل هذه علامة سيئة؟', a: 'بالعكس. فمعظم أورام الكلية تُكتشف اليوم مصادفةً، وهذا يعني عادةً أن المرض أُمسك مبكرًا. أما إذا وُجد الثلاثي الكلاسيكي — ألم الخاصرة والدم في البول وكتلة محسوسة — فالمرض متقدم في الغالب. فالاكتشاف من دون أعراض وضع مواتٍ.' },
+          { q: 'هل ستُستأصل كليتي كاملة؟', a: 'يعتمد ذلك على حجم الورم وموضعه. ففي الأورام الصغيرة الطرفية يُزال الورم فقط وتُحفَظ بقية الكلية. أما في الأورام الكبيرة أو المركزية أو المحيطة بالأوعية فقد يلزم استئصال الكلية كاملة. والتصوير يبيّن ذلك إلى حد كبير مسبقًا.' },
+          { q: 'هل ستُجرى خزعة؟', a: 'لا تُجرى لكل مريض. فالتصوير مع الصبغة كافٍ في الغالب. ولا تُطلَب الخزعة إلا إذا كانت نتيجتها ستغيّر قرار العلاج — مثلًا عند الموازنة بين المتابعة النشطة والجراحة، أو عند عدم وضوح ما إذا كان الورم من الكلية أصلًا.' },
+          { q: 'لديّ كتلة صغيرة، فهل يجب أن أُجري العملية فورًا؟', a: 'ليس بالضرورة. فبعض الكتل الصغيرة جدًا تنمو ببطء وبعضها حميد. وخصوصًا عند كبار السن أو مرتفعي خطر الجراحة، يُعدّ تصوير الكتلة على فترات والتدخل فقط عند النمو نهجًا مقبولًا. وهذا ليس إهمالًا بل قرار واعٍ.' },
+          { q: 'هل يمكنني العيش بكلية واحدة؟', a: 'نعم؛ فإن كانت الكلية المتبقية سليمة فوظيفتها كافية عادةً. لكن هذا لا يعني أن الحفاظ على نسيج الكلية غير مهم؛ فقد تظهر مشكلة لاحقًا في الكلية الأخرى، وفقدان الوظيفة يمسّ صحة القلب والأوعية أيضًا. ولهذا يُفضَّل الاستئصال الجزئي حيث أمكن.' },
+          { q: 'هل قد تتغير الخطة أثناء العملية؟', a: 'نعم. فإن ظهر موضع الورم مغايرًا للمتوقع فقد يُحوَّل الاستئصال الجزئي المخطط له إلى جذري. وهذا ليس فشلًا بل قرار يضمن إزالة الورم كاملًا، ويُتحدث عنه معك قبل العملية.' },
+          { q: 'هل تلزم متابعة بعد إزالة الورم؟', a: 'نعم. فحتى بعد الإزالة الكاملة قد يعود المرض بعد سنوات. وتتحدد الفترات بنتيجة الفحص النسيجي والمرحلة: تصوير أقل تكرارًا في الخطورة المنخفضة، وأكثر في العالية.' },
+          { q: 'وُجد لديّ كيس في الكلية، فهل هو سرطان؟', a: 'الأكياس الكلوية البسيطة شائعة جدًا وليست سرطانًا؛ ومعظمها لا يحتاج حتى إلى متابعة. أما إن كان في الكيس حواجز أو جدار سميك أو جزء يلتقط الصبغة فالتقييم مختلف. وإن ذُكر في التقرير «كيس بسيط» فلا داعي للقلق.' },
+          { q: 'متى يمكنني السفر جوًا؟', a: 'بعد 10–14 يومًا عادةً. فهذه عملية داخل البطن تحتاج وقتًا للالتئام؛ والسفر المبكر يزيد خطر الجلطات في أوردة الساقين. ويُخطَّط للمرضى القادمين من الخارج بإقامة 10–14 يومًا.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Renal Cell Carcinoma — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/renal-cell-carcinoma' }
+        ]
+      }
+    }
+  },
+  {
+    /**
      * Üroonkoloji hub'ının altında (prompt m.4.1).
      * EN ÖNEMLİ MESAJ: AĞRISIZ idrarda kan ciddiye alınmalıdır; kendiliğinden
      * geçmesi "iyileşti" demek değildir. Hastaların en sık yaptığı hata budur.
