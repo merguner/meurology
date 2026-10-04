@@ -16571,7 +16571,9 @@ export const treatments: Treatment[] = [
           'THE MOST IMPORTANT POINT FIRST: leading urological guidelines, including those of the European Association of Urology, do NOT routinely recommend cosmetic enlargement procedures in men whose penile size is WITHIN NORMAL LIMITS. The level of evidence for the effectiveness and long-term safety of these procedures is limited. This does not mean the procedures are never performed; it means they are confined to selected and properly assessed situations.',
           'In a significant proportion of the men who present, measurement falls within the normal range. If a man nevertheless perceives his size as inadequate, this is termed penile dysmorphophobia and calls for psychosexual assessment rather than surgery. An operation does not resolve a perception-based concern; more often it sustains the dissatisfaction.',
           'Genuine medical indications are a separate matter and do deserve surgical assessment: micropenis, buried penis, loss of length after trauma or previous surgery, and shortening and curvature due to Peyronie’s disease.',
-          'The main approaches are as follows. FOR LENGTH: release of the suspensory ligament — this aims to increase the visible flaccid length by bringing out the portion of the penis that lies within the body; it does not increase erect length. FOR GIRTH: fat injection, dermal graft or fillers — an increase in girth is intended, but resorption, asymmetry and nodule formation can occur.'
+          'The main approaches are as follows. FOR LENGTH: release of the suspensory ligament — this aims to increase the visible flaccid length by bringing out the portion of the penis that lies within the body; it does not increase erect length. FOR GIRTH: fat injection, dermal graft or fillers — an increase in girth is intended, but resorption, asymmetry and nodule formation can occur.',
+          'IN THIS FIELD, MANAGING EXPECTATIONS MATTERS MORE THAN THE TECHNIQUE. A considerable proportion of the claims circulating online are selected results reported without stating the measurement conditions. A realistic range is discussed with you individually at assessment; an approach that quotes a figure before examining you has nothing to base that figure on.',
+          'NOT EVERY ENQUIRY CALLS FOR SURGERY. In some men the measurements are within normal limits and the real difficulty arises from intense anxiety about them. Surgery does not produce satisfaction in that situation; the anxiety persists. Declining to offer a procedure to an unsuitable patient is the most important responsibility a doctor has in this field.'
         ],
         eligibility: {
           suitable: [
@@ -16727,7 +16729,10 @@ export const treatments: Treatment[] = [
           {
             q: 'Will my enquiry remain confidential?',
             a: 'Yes. For andrology enquiries all consultation and coordination are conducted on the principle of confidentiality. You can speak one to one through the paid online consultation before coming to the clinic.'
-          }
+          },
+          { q: 'How long must I abstain from sexual activity afterwards?', a: 'This depends on the technique and is set by your surgeon. Resuming early directly impairs healing and can permanently compromise tissue that is still repairing. Do not shorten this interval on your own judgement.' },
+          { q: 'I smoke — does it matter?', a: 'Yes, and markedly so in this field. Smoking reduces blood supply to the tissue, delays wound healing and increases the likelihood of complications. Stopping before surgery is the one variable affecting the outcome that is entirely in your hands.' },
+          { q: 'I had a procedure elsewhere and I am unhappy with it. Can it be corrected?', a: 'This is a separate situation to assess and it is harder than a first procedure. What was done, what material was used and your operation note are decisive; no serious plan can be made without them. Expectations also need discussing even more carefully in revision surgery, because the tissue will have been operated on once already.' }
         ],
         sources: [
           {
@@ -20198,7 +20203,9 @@ export const treatments: Treatment[] = [
           'Benign prostatic enlargement (BPH) is the age-related growth of prostate tissue that compresses the urinary channel from outside. The most common complaints are a weak stream, difficulty starting, waking several times at night and a feeling that the bladder does not empty fully. In advanced cases, inability to pass urine (retention), recurrent urinary tract infection or bladder stones may develop.',
           'ThuLEP is an endoscopic operation in which the obstructing prostate tissue is separated from its capsule with a thulium laser and removed AS A WHOLE. No incision is made in the body; the entire procedure is performed through the urinary channel. Whereas classic TURP shaves the tissue away in small chips, enucleation peels the obstructing tissue off in one piece — applying the logic of open prostate surgery through a closed approach.',
           'The thulium laser emits a continuous wave; it cuts tissue while sealing small vessels at the same time. Because this makes bleeding easier to control, the method can be preferred in large-volume prostates and in selected patients who require caution because of blood-thinning medication.',
-          'The enucleated tissue is reduced inside the bladder with a device called a morcellator, removed, and sent for PATHOLOGICAL EXAMINATION. This is an important difference from methods that vaporise the tissue: if an unexpected focus of cancer is present, the diagnosis is not missed.'
+          'The enucleated tissue is reduced inside the bladder with a device called a morcellator, removed, and sent for PATHOLOGICAL EXAMINATION. This is an important difference from methods that vaporise the tissue: if an unexpected focus of cancer is present, the diagnosis is not missed.',
+          'ThuLEP and HoLEP are not different operations; both perform the same task, separating the obstructing inner portion of the prostate from its capsule as a whole and removing it (enucleation). The difference lies in the type of laser used. Their results are comparable, and which system a surgeon works with most is more telling than the make of the laser.',
+          'The situation in which this method comes to the fore is a large prostate: in conventional techniques a practical ceiling appears as the gland grows, whereas enucleation has no such ceiling because the gland can be removed completely. The removed tissue can also be examined pathologically, which allows an unsuspected cancer to be identified.'
         ],
         eligibility: {
           suitable: [
@@ -20368,7 +20375,10 @@ export const treatments: Treatment[] = [
           {
             q: 'When can I fly after the operation?',
             a: 'Clearance to fly is usually given after the follow-up examination, generally 7 days after the procedure. On long flights, movement and fluid intake are advised to reduce the risk of clots.'
-          }
+          },
+          { q: 'How many nights will I spend in hospital?', a: 'Usually one is enough. What determines your total stay in Turkey, however, is not the hospital admission but catheter removal and the review that follows. Plan your stay around the catheter rather than the ward, and leave a few days of margin.' },
+          { q: 'Should I stop my blood thinner before surgery?', a: 'Never stop it on your own. When and how these medicines are managed is planned together with the doctor who prescribed them; in some patients stopping carries more risk than continuing. Send your complete medication list with your enquiry so that this plan is made before you travel.' },
+          { q: 'Is the removed tissue examined?', a: 'Yes, and this is an important detail. Where tissue is removed it is examined pathologically, which can reveal an unsuspected cancer. Methods that do not remove tissue offer no such examination.' }
         ],
         sources: [
           {
@@ -26868,59 +26878,147 @@ export const treatments: Treatment[] = [
         ]
       },
       de: {
-        title: 'Urethroplastik (Harnröhrenstriktur-Chirurgie)',
-        summary: 'Rekonstruktive Chirurgie mit dauerhafter Lösung bei Harnröhrenstriktur; bulbäre, penile, langstreckige und Redo-Fälle (Wiederholungseingriff) inbegriffen.',
-        metaTitle: 'Urethroplastik | Harnröhrenstriktur-Chirurgie (bulbär, penil, Redo)',
-        metaDescription: 'Urethroplastik bei Harnröhrenstriktur: bulbäre und penile Striktur, langstreckige/komplexe Striktur und Redo-Urethroplastik nach fehlgeschlagenen Versuchen. Erfahrung mit komplexen und seltenen Fällen.',
+        title: 'Urethroplastik (Operation bei Harnröhrenenge)',
+        summary:
+          'Die dauerhafte Rekonstruktion einer Harnröhrenenge. Das Einschneiden von innen bringt rasch Erleichterung, die Enge kehrt aber zurück — und jede Wiederholung erschwert die nächste Rekonstruktion. Diese Seite erklärt, wie dieser Kreislauf durchbrochen wird.',
+        metaTitle: 'Urethroplastik: dauerhafte Rekonstruktion der Harnröhrenenge',
+        metaDescription:
+          'Warum die Urethrotomie nicht genügt, welchen Schaden wiederholte endoskopische Eingriffe anrichten, Mundschleimhauttransplantat, ein- und zweizeitige Operation sowie realistische Erwartungen bei Zweiteingriffen.',
+        quickFacts: {
+          duration: '2–4 Stunden je nach Länge der Enge',
+          anesthesia: 'Vollnarkose',
+          hospitalStay: '1–3 Nächte',
+          stayInTurkey: '3–4 Wochen (der Katheter wird hier entfernt)',
+          catheter: '2–3 Wochen',
+          returnToWork: '2–4 Wochen (Bürotätigkeit früher)',
+          flightClearance: 'Nach Katheterentfernung und Kontrolle'
+        },
         definition: [
-          'Eine Harnröhrenstriktur ist eine narbige Verengung des Harnkanals (Harnröhre), die einen schwachen Strahl, Pressen und wiederkehrende Infektionen verursacht. Einfache Eingriffe (Bougierung, innere Urethrotomie) bringen kurzfristige Linderung, doch die Striktur kehrt meist zurück.',
-          'Die Urethroplastik ist die rekonstruktive Operation, die die Striktur dauerhaft repariert. Lage (bulbär/penil), Länge und frühere Versuche bestimmen den Eingriff. Langstreckige und wiederkehrende (Redo-)Fälle erfordern besondere Erfahrung und werden meist an die wenigen Zentren überwiesen, die sie sicher durchführen können.'
+          'Die Harnröhre leitet den Urin aus der Blase nach außen. Bildet sich in einem Abschnitt Narbengewebe und verengt ihn, spricht man von einer Harnröhrenenge. Die Beschwerden beginnen schleichend: abgeschwächter Strahl, Aufspreizen des Strahls, verzögerter Beginn, Gefühl der unvollständigen Entleerung, häufiger Harndrang und wiederkehrende Harnwegsinfekte.',
+          'DIE ENTSCHEIDENDE UNTERSCHEIDUNG: DIE URETHROTOMIE ÖFFNET, DIE URETHROPLASTIK REKONSTRUIERT. Das Einschneiden von innen öffnet die Enge, das ursächliche Narbengewebe bleibt jedoch bestehen. Der Körper heilt den Schnitt mit weiterem Narbengewebe, weshalb die Enge zur Wiederkehr neigt.',
+          'DARIN LIEGT DER EIGENTLICHE SCHADEN WIEDERHOLTER EINGRIFFE: Jeder Schnitt erzeugt neue Narben, die Enge wird länger statt kürzer und das umgebende Gewebe verhärtet. Wiederholte Urethrotomien helfen somit nicht nur nicht, sie erschweren auch die spätere dauerhafte Rekonstruktion. Eine erste Urethrotomie ist bei kurzer, günstig gelegener Enge vertretbar; das Problem ist die ständige Wiederholung.',
+          'Es gibt zwei Grundverfahren. Bei kurzen Engen wird der verengte Abschnitt entfernt und die gesunden Enden werden verbunden. Bei längeren Engen wird die Harnröhre mit einem Gewebestück erweitert; als Transplantat dient meist Schleimhaut aus der Wange, weil sie an feuchte Umgebung gewöhnt ist und die Entnahmestelle rasch heilt.',
+          'EINE ZWEIZEITIGE REKONSTRUKTION IST KEIN MISSERFOLG. Bei stark vernarbten, sehr langen oder mehrfach voroperierten Engen kann die Rekonstruktion in zwei Schritten im Abstand von Monaten geplant werden. Für Patienten aus dem Ausland bedeutet das konkret zwei Reisen — und das muss vor jeder Buchung besprochen werden.'
+        ],
+        eligibility: {
+          suitable: [
+            'Männer, bei denen die Enge nach Urethrotomie oder Bougierung wiedergekehrt ist',
+            'Männer mit langen Engen, bei denen ein Einschnitt kaum dauerhaft hilft',
+            'Männer mit Engen in mehreren Abschnitten',
+            'Männer, die sich seit Jahren mit Selbstkatheterisierung behelfen',
+            'Männer mit Enge nach einem Unfall',
+            'Männer, deren Rekonstruktion andernorts fehlgeschlagen ist',
+            'Männer mit Enge nach Hypospadie-Operation'
+          ],
+          notSuitable: [
+            'Männer mit akutem Harnwegsinfekt: Dieser wird zuerst behandelt',
+            'Männer mit örtlicher Hautinfektion oder Entzündung; die Operation wird verschoben',
+            'Männer, die die Katheterzeit und die Aufenthaltsdauer nicht einhalten können — die Katheterzeit lässt sich hier nicht verkürzen',
+            'Männer, bei denen ein Mundschleimhauttransplantat nötig ist, deren Mundgesundheit das aber nicht zulässt; Rauchen beeinträchtigt die Einheilung',
+            'Männer, deren Allgemeinzustand eine längere Vollnarkose nicht erlaubt'
+          ]
+        },
+        technology: [
+          'Retrograde Urethrographie und Miktionszystourethrographie — die Basisuntersuchungen zu Lage und Länge',
+          'Urethroskopie — direkte Betrachtung',
+          'Uroflowmetrie und Restharnmessung',
+          'Entnahme eines Wangenschleimhauttransplantats',
+          'Schleimhaut von der Zungenunterseite oder Lippeninnenseite, wenn die Wange bereits genutzt wurde',
+          'Hautlappen an ausgewählten Lokalisationen',
+          'Lupenvergrößerung und feines Nahtmaterial'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
+          note: 'Die rekonstruktive Urologie gehört zu den Arbeitsschwerpunkten von Assoc. Prof. Dr. Müslüm Ergün. Der Plan ergibt sich aus Lage und Länge der Enge, der Zahl der Voreingriffe und dem Zustand des für ein Transplantat verfügbaren Gewebes.'
         },
         expertise: {
-          redoRate: 'Ein erheblicher Teil der Fälle sind Redo-Zuweisungen nach einem fehlgeschlagenen Versuch oder einer iatrogenen Verletzung in einem anderen Zentrum.',
-          complexCase: 'Zu den komplexen Fällen zählen langstreckige Striktur, panurethrale Striktur, Lichen-sclerosus-bedingte Striktur und wiederholtes Versagen.',
-          advancedTechnique: 'Augmentations-Urethroplastik mit Mundschleimhaut-(buccal-)Transplantat; bei Bedarf mehrzeitige Rekonstruktion.'
+          redoRate: 'Ein erheblicher Teil der Fälle sind Zweiteingriffe nach fehlgeschlagener Operation oder iatrogener Schädigung andernorts.',
+          complexCase: 'Lange Engen, die gesamte Harnröhre betreffende Engen, Engen bei Lichen sclerosus und wiederholtes Versagen zählen zu den komplexen Fällen.',
+          advancedTechnique: 'Augmentations-Urethroplastik mit Wangenschleimhaut; bei Bedarf zweizeitige Rekonstruktion.'
         },
         timeline: [
-          { when: 'Aus der Ferne', title: 'Aktenprüfung', body: 'Der Chirurg prüft Urethrogramm (RUG/VCUG), Flussmessung und frühere OP-Berichte. Eine detaillierte Vorabbewertung ist in diesen Fällen unerlässlich.' },
-          { when: 'Tag 1–2', title: 'Ankunft & erweiterte Tests', body: 'Untersuchung, bei Bedarf Urethroskopie und Bildgebung; Länge und Lage der Striktur werden geklärt.' },
-          { when: 'Tag 2–3', title: 'Operation', body: 'Exzision-Anastomose oder Augmentations-Urethroplastik mit Transplantat, je nach Strikturtyp.' },
-          { when: 'Danach', title: 'Katheterphase', body: 'Ein Harnröhrenkatheter bleibt meist 2–3 Wochen; vor der Entfernung erfolgt eine Kontrollbildgebung.' },
-          { when: 'Nachsorge', title: 'Langfristige Nachsorge', body: 'Fluss- und Symptomkontrolle, im ersten Jahr häufiger; der Erfolg bemisst sich an der langfristigen Durchgängigkeit.' }
+          { when: 'Aus der Ferne', title: 'Durchsicht Ihrer Unterlagen', body: 'Urethrogramm-Bilder, Harnstrahlmessung und IHRE VORHERIGEN OPERATIONSBERICHTE werden durchgesehen. Letztere sind hier das entscheidende Dokument: welche Technik verwendet, welcher Abschnitt rekonstruiert und woher das Transplantat entnommen wurde, ändert den Plan unmittelbar. Ob bereits Wangenschleimhaut entnommen wurde, muss angegeben werden.' },
+          { when: 'Tag 1–2', title: 'Ankunft und weiterführende Abklärung', body: 'Untersuchung, bei Bedarf Urethroskopie und erneute Bildgebung; Lage und Länge werden bestätigt. Der Urinbefund muss steril sein. Ist ein Mundtransplantat geplant, wird die Mundgesundheit beurteilt.' },
+          { when: 'Operationstag', title: 'Rekonstruktion', body: 'Je nach Enge Resektion mit Anastomose oder Augmentation mit Transplantat. Der Plan kann nach dem intraoperativen Gewebebefund angepasst werden; das wird vorher besprochen.' },
+          { when: 'Katheterphase', title: '2–3 Wochen', body: 'Der Katheter bleibt, bis die Rekonstruktion verheilt ist. Diese Zeit ist nicht willkürlich und wird nicht an einen Flug angepasst. Sie wird überwiegend im Hotel verbracht; Sie sind mobil.' },
+          { when: 'Katheterentfernung', title: 'Kontrollbildgebung', body: 'Vor der Entfernung wird bildgebend geprüft, ob die Rekonstruktion dicht ist. Besteht ein Leck, bleibt der Katheter länger — buchen Sie Ihren Rückflug daher umbuchbar.' },
+          { when: 'Langfristig', title: 'Nachsorge', body: 'Harnstrahlmessung und Beschwerdekontrolle, im ersten Jahr häufiger, danach regelmäßig. Der Erfolg bemisst sich nicht am Operationstag, sondern an der Offenheit über Jahre.' }
         ],
         risks: [
-          'Wiederauftreten der Striktur (Rezidiv) — besonders in langen/komplexen Fällen',
-          'Vorübergehende Empfindungsänderung an der Entnahmestelle (Wangeninnenseite)',
-          'Infektion, Blutung und Urinleck',
-          'In Redo-Fällen beeinflusst die Gewebequalität das Ergebnis'
+          'WIEDERKEHR DER ENGE: wahrscheinlicher bei langen und komplexen Engen und bei vielen Voreingriffen. Ein Zweiteingriff hat eine geringere Erfolgsrate als die Erstrekonstruktion, und das gehört klar gesagt',
+          'Vorübergehend verändertes Gefühl an der Entnahmestelle in der Wange, eingeschränkte Mundöffnung und Beschwerden',
+          'Infektion, Blutung und Urinleck an der Rekonstruktion',
+          'Schwierigkeiten beim Wasserlassen nach Katheterentfernung mit vorübergehender erneuter Katheterisierung',
+          'VERÄNDERUNG DER EJAKULATION: je nach Lage der Rekonstruktion verminderte Kraft oder Zurückbleiben eines Teils des Ejakulats',
+          'Auswirkungen auf die Erektion je nach Lokalisation — selten, aber fallbezogen zu besprechen',
+          'Veränderte Strahlrichtung oder Aufspreizen des Strahls',
+          'Thromboserisiko durch lange Operation und Immobilität; der Rückflug wird entsprechend geplant'
         ],
         alternatives: [
-          'Bougierung oder innere Urethrotomie (kurzfristig; hohe Rezidivrate)',
-          'Intermittierender Selbstkatheterismus (vorübergehende Erhaltung)',
-          'Mehrzeitige Rekonstruktion (in sehr komplexen Fällen)'
+          'Urethrotomie oder Bougierung — bei kurzer, erstmaliger und günstig gelegener Enge vertretbar; bei wiederkehrender Enge keine dauerhafte Lösung',
+          'Intermittierende Selbstkatheterisierung — kann das Wiederverschließen verzögern, ist aber keine Lösung und sollte nicht als jahrelang fortzuführendes Verfahren dargestellt werden',
+          'Resektion und End-zu-End-Verbindung — bei kurzen Engen',
+          'Augmentation mit Wangenschleimhaut — bei längeren Engen',
+          'Zungen- oder Lippenschleimhaut, Hautlappen — wenn die Wange bereits genutzt wurde',
+          'Zweizeitige Rekonstruktion — bei stark vernarbten und sehr komplexen Engen',
+          'Dauerhafte Harnableitung — nur in Ausnahmefällen, wenn keine Rekonstruktion möglich ist'
+        ],
+        comparison: {
+          title: 'Urethrotomie und Urethroplastik: warum die Ergebnisse auseinandergehen',
+          columns: ['Kriterium', 'Urethrotomie / Bougierung', 'Urethroplastik'],
+          rows: [
+            { label: 'Was geschieht', values: ['Die Enge wird eingeschnitten', 'Sie wird entfernt oder mit einem Flicken erweitert'] },
+            { label: 'Das Narbengewebe', values: ['Bleibt bestehen', 'Wird entfernt oder umgangen'] },
+            { label: 'Dauer des Eingriffs', values: ['Kurz', 'Lang'] },
+            { label: 'Katheterzeit', values: ['Wenige Tage', '2–3 Wochen'] },
+            { label: 'Neigung zur Wiederkehr', values: ['Hoch, besonders bei langen Engen', 'Deutlich geringer'] },
+            { label: 'Bei Wiederholung', values: ['Die Enge wird länger, die Rekonstruktion schwieriger', 'Eine erneute Rekonstruktion ist planbar'] },
+            { label: 'Für wen geeignet', values: ['Kurze, erstmalige Enge', 'Lange, wiederkehrende oder komplexe Enge'] }
+          ],
+          note: 'Entscheidend ist die Zeitachse: Statt Jahre mit wiederholten Einschnitten zu verbringen, schont es beim geeigneten Patienten das Gewebe, die dauerhafte Rekonstruktion früher anzugehen. Fragen Sie ruhig: "Wie lang ist meine Enge, wo liegt sie, und was ist der nächste Schritt, wenn dieser Eingriff erneut scheitert?"'
+        },
+        recovery: [
+          { period: 'Erste 48 Stunden', body: 'Die Schmerzen werden medikamentös beherrscht. Nach Entnahme eines Mundtransplantats wird in den ersten Tagen weiche Kost empfohlen; Sprechen und Kauen können kurzzeitig unangenehm sein.' },
+          { period: '1. Woche', body: 'Entlassung mit Katheter. Gehen ist erlaubt; Heben, Radfahren und breitbeiniges Sitzen nicht. Verstopfung durch Ballaststoffe und Flüssigkeit vermeiden.' },
+          { period: '2.–3. Woche', body: 'Die Katheterphase dauert an, überwiegend im Hotel. Sie sind mobil, die Aktivität bleibt aber eingeschränkt. Bei Verstopfung oder Herausrutschen des Katheters sofort melden.' },
+          { period: 'Nach Katheterentfernung', body: 'Brennen und anfängliches Pressen sind üblich; der Strahl kann einige Tage brauchen. Können Sie gar nicht Wasser lassen, stellen Sie sich sofort vor.' },
+          { period: '4.–8. Woche', body: 'Schrittweise Rückkehr zur normalen Aktivität. Für Geschlechtsverkehr gilt die von Ihrer Ärztin oder Ihrem Arzt genannte Frist; zu frühe Aufnahme belastet die Rekonstruktion.' },
+          { period: 'Erstes Jahr und danach', body: 'Regelmäßige Kontrolle mit Harnstrahlmessung. Bemerken Sie eine Abschwächung des Strahls, warten Sie nicht: Eine früh erkannte Enge lässt sich behandeln, bevor sie obstruiert.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'In dieser Kategorie wird keine feste Preisspanne genannt; der Preis wird nach einer Aktenprüfung entsprechend Fallkomplexität und erforderlicher Technik mitgeteilt.'
+          disclaimer: 'In dieser Kategorie wird keine feste Spanne genannt. Der Betrag hängt von Länge der Enge, Notwendigkeit eines Transplantats, ein- oder zweizeitigem Vorgehen und Aufenthaltsdauer ab und wird nach Durchsicht Ihrer Unterlagen schriftlich mitgeteilt.'
         },
         packageIncludes: [
-          'Operation und Krankenhausaufenthalt',
-          'Anästhesie und erweiterte präoperative Untersuchungen',
-          'Transplantatentnahme bei Bedarf inbegriffen',
-          'Transfers und Unterkunft',
-          'Medizinischer Dolmetscher und Patientenkoordinator',
-          'Katheterentfernung und langfristige Online-Nachsorge'
+          'Durchsicht Ihrer Unterlagen und früheren Operationsberichte',
+          'Untersuchung, Urethroskopie und erforderliche Bildgebung',
+          'Urinkultur und präoperative Untersuchungen',
+          'Anästhesie und Operationssaal',
+          'Operation einschließlich Transplantatentnahme, soweit erforderlich',
+          'Klinikaufenthalt',
+          'Kontrollbildgebung vor der Katheterentfernung',
+          'Katheterentfernung und Beurteilung vor dem Rückflug',
+          'Transfers Flughafen–Klinik–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und Patientenkoordination',
+          'Langfristige Nachbetreuung aus der Ferne'
         ],
         faqs: [
-          { q: 'Ich wurde in einem anderen Zentrum operiert und es ist fehlgeschlagen; ist ein Redo möglich?', a: 'Ja. Die Redo-Urethroplastik ist ein Bereich, in dem dieses Zentrum besonders erfahren ist. Ihre früheren OP-Berichte und aktuelle Bildgebung werden geprüft; je nach Gewebezustand wird ein Transplantat oder ein mehrzeitiges Vorgehen geplant.' },
-          { q: 'Warum Urethroplastik statt innerer Urethrotomie/Bougierung?', a: 'Bougierung und innere Urethrotomie kehren bei den meisten Strikturen bald zurück. Die Urethroplastik ist in geeigneten Fällen die einzige Methode mit dauerhafter Lösung.' },
-          { q: 'Wie lange bleibt der Katheter und dauert die Genesung?', a: 'Meist 2–3 Wochen mit Katheter. Leichte Alltagsaktivität ist rasch möglich; schwere Aktivität und die Bewertung des langfristigen Erfolgs dauern einige Wochen.' }
+          { q: 'Ich hatte mehrere Urethrotomien und es verschließt sich wieder. Soll ich es noch einmal versuchen?', a: 'Die Frage ist berechtigt. Jeder Schnitt erzeugt neues Narbengewebe; die Enge wird mit der Zeit länger statt kürzer und das Gewebe verhärtet. Wiederholte Urethrotomien helfen also nicht nur nicht, sie erschweren auch die spätere dauerhafte Rekonstruktion. Ab einem gewissen Punkt ist "einmal noch öffnen" nicht in Ihrem Interesse.' },
+          { q: 'Meine Rekonstruktion andernorts ist fehlgeschlagen — ist ein erneuter Versuch möglich?', a: 'Meist ja, doch eine zweite Rekonstruktion ist eine andere Operation und muss anders geplant werden. Ihr vorheriger Operationsbericht, die verwendete Technik und die Entnahmestelle des Transplantats bestimmen diesen Plan unmittelbar. Zudem gehört klar gesagt, dass die Erfolgsrate niedriger ist als beim Ersteingriff und dieser Unterschied mit der Zahl der Voreingriffe wächst.' },
+          { q: 'Meine Wangenschleimhaut wurde bereits entnommen — gibt es Alternativen?', a: 'Ja. Wurde beidseits entnommen, kommen Schleimhaut von der Zungenunterseite oder der Lippeninnenseite infrage; an manchen Lokalisationen sind auch Hautlappen aus der Nachbarschaft möglich. Was passt, hängt von Lage und Länge ab. Bitte geben Sie das bei Ihrer Anfrage an.' },
+          { q: 'Hinterlässt die Entnahme im Mund dauerhafte Probleme?', a: 'Die Entnahmestelle in der Wange heilt in der Regel rasch. In den ersten Tagen können eingeschränkte Mundöffnung, Beschwerden und ein verändertes Gefühl auftreten; weiche Kost wird empfohlen. Rauchen beeinträchtigt die Heilung sowohl an der Entnahmestelle als auch an der Rekonstruktion.' },
+          { q: 'Warum bleibt der Katheter so lange, lässt sich das verkürzen?', a: 'Nein. Es ist die Zeit, die die Rekonstruktion braucht, um dicht zu verheilen, und sie wird nicht an einen Flug angepasst. Vor der Entfernung wird bildgebend auf ein Leck geprüft; besteht eines, bleibt der Katheter länger. Buchen Sie daher umbuchbar und planen Sie einige Tage Puffer ein.' },
+          { q: 'Kann es sein, dass es nicht in einer Operation gelingt?', a: 'Ja. Bei stark vernarbten und sehr langen Engen kann in zwei Schritten im Abstand von Monaten geplant werden: Zunächst wird die Harnröhre eröffnet und das Transplantat zum Einheilen eingelegt, im zweiten Schritt zum Rohr verschlossen. Das ist kein Zeichen des Scheiterns, sondern in schwierigem Gewebe der Weg mit der besseren Aussicht auf Dauerhaftigkeit. Es bedeutet jedoch zwei Reisen und gehört vor jede Buchung besprochen.' },
+          { q: 'Wird meine Sexualfunktion beeinträchtigt?', a: 'Das hängt davon ab, welcher Abschnitt rekonstruiert wird. Eine verminderte Kraft der Ejakulation oder das Zurückbleiben eines Teils des Ejakulats sind möglich. Auswirkungen auf die Erektion sind selten, variieren aber nach Lokalisation und gehören vor der Operation gesondert besprochen.' },
+          { q: 'Woran erkenne ich, ob die Operation erfolgreich war?', a: 'Der Erfolg bemisst sich nicht am Operationstag, sondern an der Offenheit über Jahre. Kontrolliert wird mit Harnstrahlmessung und Beschwerdeerhebung. Bemerken Sie eine Abschwächung des Strahls, warten Sie nicht: Eine früh erkannte Enge ist weit einfacher zu behandeln als ein vollständiger Verschluss.' },
+          { q: 'Führt jedes urologische Zentrum diese Operation durch?', a: 'Die Urethroplastik gehört nicht zum häufigen Alltag der Urologie, und gerade lange Engen und Zweiteingriffe erfordern besondere Erfahrung. Es ist daher angemessen zu fragen, welche Technik geplant ist, wie oft die Operateurin oder der Operateur sie durchführt und was geschieht, wenn der Plan intraoperativ geändert werden muss.' },
+          { q: 'Welche Unterlagen soll ich vorab senden?', a: 'Die Urethrogramm-Bilder selbst (nicht nur den Befund), eine etwaige Urethroskopie-Dokumentation, Uroflowmetrie und Restharn, ALLE FRÜHEREN OPERATIONSBERICHTE, wie oft und wann Urethrotomien oder Bougierungen erfolgten, ob bereits Wangenschleimhaut entnommen wurde, Ihre Medikamente und Begleiterkrankungen. Damit lässt sich vor der Reise beurteilen, ob ein- oder zweizeitig geplant wird.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urethral Strictures — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/urethral-strictures' }
         ]
       },
       ru: {
@@ -27393,71 +27491,144 @@ export const treatments: Treatment[] = [
         ]
       },
       de: {
-        title: 'Nierenbeckenplastik (UPJ-Obstruktions-Chirurgie)',
-        summary: 'Nierenerhaltende rekonstruktive Chirurgie bei Obstruktion des pyeloureteralen Übergangs (UPJ); offene, laparoskopische und robotische Optionen.',
-        metaTitle: 'Nierenbeckenplastik | UPJ- (pyeloureteraler Übergang) Obstruktions-Chirurgie',
-        metaDescription: 'Nierenbeckenplastik bei UPJ-Obstruktion: Vergleich offener, laparoskopischer und robotischer Methoden, Ablauf, Risiken und langfristiger Erfolg. Erfahrung mit Redo- und komplexen Fällen.',
+        title: 'Nierenbeckenplastik (Operation bei Nierenbeckenabgangsenge)',
+        summary:
+          'Rekonstruktion der Enge am Nierenabfluss. Das Gefährliche an dieser Erkrankung ist, dass sie ohne Schmerzen fortschreiten kann: Die Niere staut sich still und verliert Funktion. Ziel ist der Erhalt der Niere.',
+        metaTitle: 'Nierenbeckenplastik: nierenerhaltende Rekonstruktion bei Abgangsenge',
+        metaDescription:
+          'Wie die Operationsentscheidung bei Nierenbeckenabgangsenge zustande kommt, warum die Nierenszintigraphie ausschlaggebend ist, robotisch gegenüber offen, die Schienenphase und Zweiteingriffe.',
+        quickFacts: {
+          duration: '2–4 Stunden',
+          anesthesia: 'Vollnarkose',
+          hospitalStay: '2–3 Nächte',
+          stayInTurkey: '7–10 Tage',
+          returnToWork: '2–4 Wochen',
+          flightClearance: 'Nach der Kontrolle; Fliegen mit Schiene ist möglich'
+        },
         definition: [
-          'Die Obstruktion des pyeloureteralen Übergangs (UPJ) ist eine Blockade am Ausgang des Kanals, der Urin aus der Niere leitet; sie verursacht Schwellung (Hydronephrose), Schmerzen und mit der Zeit Verlust der Nierenfunktion.',
-          'Die Nierenbeckenplastik ist die nierenerhaltende rekonstruktive Operation, die die Verengung entfernt und den Übergang neu formt. Robotische und laparoskopische Zugänge sind minimalinvasiv; Fälle mit früheren fehlgeschlagenen Versuchen (Redo) oder einem kreuzenden Gefäß/Stein erfordern besondere Erfahrung.'
+          'Die Nierenbeckenabgangsenge ist eine Verengung dort, wo das Nierenbecken in den Harnleiter übergeht. Der Urin kann nicht ausreichend abfließen, das Nierenbecken weitet sich, und mit der Zeit kann die Nierenfunktion abnehmen.',
+          'DAS WICHTIGSTE MERKMAL DIESER ERKRANKUNG: SIE MUSS NICHT WEHTUN. Entsteht die Abflussstörung langsam, staut sich die Niere still und der Betroffene spürt unter Umständen nichts. Der Schluss "ich habe keine Schmerzen, also ist nichts" ist hier gefährlich. Bei manchen Patienten ist ein Flankenschmerz nach reichlichem Trinken oder nach Alkohol typisch.',
+          'DAS VORLIEGEN EINER ENGE IST FÜR SICH GENOMMEN KEIN OPERATIONSGRUND. Eine Weitstellung in der Bildgebung bedeutet nicht zwangsläufig eine Abflussstörung; manche Nieren wirken weit, entleeren sich aber ausreichend. Für die Entscheidung braucht es den Nachweis, dass die Enge die Niere tatsächlich beeinträchtigt. Diesen Nachweis liefert die Nierenszintigraphie: Sie zeigt sowohl den Funktionsanteil dieser Niere als auch, ob der Tracer abfließt.',
+          'AUSSCHLAGGEBEND FÜR DIE ENTSCHEIDUNG sind: eine verminderte Funktion dieser Niere in der Szintigraphie oder ein abnehmender Verlauf, eine deutlich gestörte Entleerung, wiederkehrende Schmerzattacken, eine begleitende Steinbildung und wiederkehrende Harnwegsinfekte.',
+          'Bei der Nierenbeckenplastik wird der enge Abschnitt entfernt und die Verbindung zwischen Nierenbecken und Harnleiter trichterförmig und weit neu angelegt. Bei manchen Patienten trägt ein vor dem Harnleiter kreuzendes Gefäß zur Enge bei; die Verbindung wird dann vor dieses Gefäß verlagert.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patienten mit verminderter Funktion dieser Niere in der Szintigraphie oder abnehmendem Verlauf',
+            'Patienten mit deutlich gestörter Entleerung',
+            'Patienten mit wiederkehrendem Flankenschmerz — typisch ist Schmerz nach reichlichem Trinken',
+            'Patienten mit begleitendem Nierenstein',
+            'Patienten mit wiederkehrenden Harnwegsinfekten',
+            'Patienten, bei denen eine Endopyelotomie oder Nierenbeckenplastik fehlgeschlagen ist',
+            'Patienten mit nachgewiesenem kreuzendem Gefäß'
+          ],
+          notSuitable: [
+            'Patienten mit Weitstellung in der Bildgebung, aber normaler Funktion und Entleerung in der Szintigraphie: Eine Operation ist nicht erforderlich, es wird kontrolliert',
+            'Patienten mit unbehandeltem Harnwegsinfekt: Dieser wird zuerst behandelt',
+            'Patienten mit weit fortgeschrittenem und irreversiblem Funktionsverlust, bei denen die Rekonstruktion den erwarteten Nutzen nicht bringt',
+            'Patienten, deren Allgemeinzustand ein laparoskopisches oder robotisches Vorgehen nicht zulässt'
+          ]
+        },
+        technology: [
+          'CT-Urographie — zeigt die Anatomie und ein etwaiges kreuzendes Gefäß',
+          'Nierenszintigraphie — Grundlage der Operationsentscheidung; misst Funktion und Entleerung zugleich',
+          'Ultraschall — zur Verlaufskontrolle der Harnstauung',
+          'Robotergestützte dismembered Nierenbeckenplastik',
+          'Laparoskopische und offene Technik',
+          'Entfernung eines begleitenden Nierensteins in derselben Sitzung',
+          'Einlage und Entfernung einer Harnleiterschiene'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
+          note: 'Die rekonstruktive Urologie gehört zu den Arbeitsschwerpunkten von Assoc. Prof. Dr. Müslüm Ergün. Die Entscheidung stützt sich auf den szintigraphischen Befund, die Anatomie in der Bildgebung und etwaige Voreingriffe.'
         },
         expertise: {
-          redoRate: 'Ein erheblicher Teil der Fälle sind Redo-Zuweisungen nach einem fehlgeschlagenen Versuch oder einer iatrogenen Verletzung in einem anderen Zentrum.',
-          complexCase: 'Zu den komplexen Fällen zählen Kompression durch ein kreuzendes Gefäß, begleitender Nierenstein, anatomische Varianten wie die Hufeisenniere und Redo-Fälle.',
-          advancedTechnique: 'Robotergestützte dismembered Nierenbeckenplastik; Rekonstruktion in dichtem Narbengewebe bei Redo-Fällen.'
+          redoRate: 'Ein erheblicher Teil der Fälle sind Zweiteingriffe nach fehlgeschlagener Operation oder iatrogener Schädigung andernorts.',
+          complexCase: 'Kreuzende Gefäße, begleitende Nierensteine, anatomische Varianten wie die Hufeisenniere und Zweiteingriffe zählen zu den komplexen Fällen.',
+          advancedTechnique: 'Robotergestützte dismembered Nierenbeckenplastik; Rekonstruktion in dichtem Narbengewebe bei Zweiteingriffen.'
         },
         timeline: [
-          { when: 'Aus der Ferne', title: 'Aktenprüfung', body: 'Ihre CT-Urographie und Nierenszintigraphie (MAG3) werden geprüft; Obstruktion und Nierenfunktion werden bewertet.' },
-          { when: 'Tag 1–2', title: 'Ankunft & Tests', body: 'Untersuchung und Vervollständigung der erforderlichen Bildgebung, Anästhesiebewertung.' },
-          { when: 'Tag 3', title: 'Operation', body: 'Robotische/laparoskopische oder offene dismembered Nierenbeckenplastik; meist 2–3 Nächte Aufenthalt.' },
-          { when: 'Danach', title: 'Stent-(JJ-)Phase', body: 'Ein JJ-Stent bleibt 4–6 Wochen im Körper und wird dann in einem kurzen Eingriff entfernt.' },
-          { when: 'Nachsorge', title: 'Funktionsnachsorge', body: 'Drainage und Nierenfunktion werden mit Kontrollszintigraphie/Ultraschall überwacht; der Erfolg bemisst sich an der langfristigen Drainage.' }
+          { when: 'Aus der Ferne', title: 'Durchsicht Ihrer Unterlagen', body: 'Ihre CT-Urographie-Bilder und IHRE NIERENSZINTIGRAPHIE werden durchgesehen. Ohne Szintigraphie lässt sich keine tragfähige Entscheidung treffen; eine im Ultraschall gesehene Weitstellung genügt nicht.' },
+          { when: 'Tag 1–2', title: 'Ankunft und Abklärung', body: 'Untersuchung, Nachholen fehlender Bildgebung, Blut- und Urinuntersuchung, Narkoseaufklärung. Wächst im Urin ein Keim, wird die Operation verschoben.' },
+          { when: 'Operationstag', title: 'Rekonstruktion', body: 'Der enge Abschnitt wird entfernt und die Verbindung weit neu angelegt. Bei kreuzendem Gefäß wird die Verbindung davor verlagert. Ein begleitender Stein kann in derselben Sitzung entfernt werden.' },
+          { when: 'Tag 2–3', title: 'Entlassung', body: 'Die meisten Patienten gehen nun nach Hause. Eine Harnleiterschiene verbleibt; die dadurch bedingten Beschwerden werden erklärt.' },
+          { when: 'Vor dem Rückflug', title: 'Kontrolle', body: 'Wundkontrolle und Flugfreigabe. Fliegen mit Schiene ist in der Regel unproblematisch; wer sie wo entfernt, muss jedoch schriftlich geplant sein.' },
+          { when: '4.–6. Woche', title: 'Entfernung der Schiene', body: 'Ein kurzer Eingriff. Er kann in Ihrem Land erfolgen, sofern Ihre Urologin oder Ihr Urologe dem vorab zugestimmt hat.' },
+          { when: '3.–6. Monat und danach', title: 'Funktionskontrolle', body: 'Entleerung und Nierenfunktion werden mit Kontrollszintigraphie und Ultraschall verfolgt. Der Erfolg bemisst sich an der langfristigen Entleerung, nicht an der Operation selbst.' }
         ],
         risks: [
-          'Vorübergehende stentbedingte Beschwerden',
-          'Urinleck',
-          'Rezidiv der Striktur (höher in Redo-Fällen)',
-          'Infektion und Blutung'
+          'SCHIENENBESCHWERDEN: häufiger Harndrang, Flankenschmerz und Blut im Urin sind üblich und verschwinden nach der Entfernung. Das überrascht Patienten am meisten; zu wissen, dass es erwartbar ist, erleichtert diese Phase erheblich',
+          'Urinleck an der Verbindung — meist mit Schiene und Drainage beherrschbar',
+          'WIEDERKEHR DER ENGE: wahrscheinlicher bei Zweiteingriffen und dichtem Narbengewebe',
+          'Blutung und Infektion',
+          'Fieberhafter Harnwegsinfekt — besonders wenn der präoperative Urinbefund nicht steril war',
+          'Verletzung benachbarter Organe — selten',
+          'Ausbleiben der erhofften Funktionsverbesserung: Die Operation stellt den Abfluss her, bereits verlorene Funktion kehrt nicht zurück. Das gehört vor der Operation klar gesagt',
+          'Thromboserisiko nach Beckenchirurgie in Verbindung mit einem Langstreckenflug'
         ],
         alternatives: [
-          'Endopyelotomie (in ausgewählten Fällen; geringerer Erfolg)',
-          'Überwachung (ausgewählte, funktionserhaltene, asymptomatische Fälle)',
-          'Nephrektomie (nur bei nicht funktionierender Niere, letztes Mittel)'
+          'Beobachtung — bei Weitstellung in der Bildgebung, aber erhaltener Funktion und Entleerung in der Szintigraphie. Beobachtung heißt Bildgebung; Beschwerdefreiheit allein genügt nicht',
+          'Endopyelotomie — Einschneiden von innen; bei ausgewählten kurzen Engen möglich, mit höherer Rückfallrate als die Nierenbeckenplastik',
+          'Robotergestützte Nierenbeckenplastik — bei einer Rekonstruktion, die Nahtpräzision verlangt, weithin bevorzugt',
+          'Laparoskopische Nierenbeckenplastik',
+          'Offene Nierenbeckenplastik — in ausgewählten, besonders komplexen Zweiteingriffen',
+          'Nierenentfernung — nur bei funktionsloser Niere, die Beschwerden oder Infektionen verursacht, als letzte Möglichkeit'
         ],
         comparison: {
-          title: 'Offen vs. laparoskopisch vs. robotisch – Nierenbeckenplastik',
+          title: 'Offene, laparoskopische und robotische Nierenbeckenplastik',
           columns: ['Kriterium', 'Offen', 'Laparoskopisch', 'Robotisch'],
           rows: [
-            { label: 'Invasivität', values: ['Großer Schnitt', 'Kleine Schnitte', 'Kleine Schnitte'] },
-            { label: 'Nahtpräzision', values: ['Gut', 'Technisch schwierig', 'Sehr hoch'] },
+            { label: 'Zugang', values: ['Ein größerer Schnitt', 'Kleine Schnitte', 'Kleine Schnitte'] },
+            { label: 'Nahtpräzision', values: ['Gut', 'Technisch anspruchsvoll', 'Hoch'] },
             { label: 'Erholung', values: ['Länger', 'Kurz', 'Kurz'] },
-            { label: 'Eignung für Redo/komplex', values: ['Ausgewählt', 'Begrenzt', 'Hoch'] },
-            { label: 'Aufenthalt', values: ['3–5 Nächte', '2–3 Nächte', '2–3 Nächte'] }
+            { label: 'Eignung für Zweiteingriffe und komplexe Fälle', values: ['In ausgewählten Fällen', 'Begrenzt', 'Bevorzugt'] },
+            { label: 'Klinikaufenthalt', values: ['3–5 Nächte', '2–3 Nächte', '2–3 Nächte'] },
+            { label: 'Bei kreuzendem Gefäß', values: ['Möglich', 'Möglich', 'Erleichterte Präparation'] }
           ],
-          note: 'Die Methode wird individuell nach Strikturtyp, Voroperation und Anatomie gewählt.'
+          note: 'Das Besondere dieser Rekonstruktion ist, dass sie eine feine, dichte Nahtreihe verlangt; deshalb fällt die Nahtpräzision bei der Wahl ins Gewicht. Dennoch richtet sich das Verfahren nach Art der Enge, Voroperationen und Anatomie. "Es muss robotisch sein" ersetzt diese Beurteilung nicht.'
         },
+        recovery: [
+          { period: 'Erste 48 Stunden', body: 'Die Schmerzen werden medikamentös beherrscht. Frühes Gehen ist wichtig für die Darmtätigkeit und zur Senkung des Thromboserisikos.' },
+          { period: '1. Woche', body: 'Empfindlichkeit an den Zugängen ist üblich. Heben vermeiden. Etwas Blut im Urin, besonders nach Bewegung, ist bei liegender Schiene zu erwarten.' },
+          { period: 'Zeit mit liegender Schiene (4–6 Wochen)', body: 'Häufiger Harndrang, Flankenschmerz und ein ziehendes Gefühl beim Wasserlassen sind üblich und verschwinden nach der Entfernung. Bei Fieber, Schüttelfrost oder Unvermögen, Wasser zu lassen, sofort vorstellen.' },
+          { period: 'Nach Entfernung der Schiene', body: 'Eine deutliche Abnahme der Beschwerden ist zu erwarten. Ein Brennen beim Wasserlassen kann einige Tage anhalten.' },
+          { period: '3.–6. Monat', body: 'Kontrollszintigraphie oder Ultraschall beurteilen, ob sich die Entleerung gebessert hat. Dass die Harnstauung nicht völlig verschwindet, bedeutet nicht zwingend ein Scheitern; entscheidend ist der wiederhergestellte Abfluss.' },
+          { period: 'Langfristig', body: 'Die Kontrollen werden fortgesetzt. Wiederkehrender Flankenschmerz oder ein fieberhafter Infekt sollten unverzüglich abgeklärt werden.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'In dieser Kategorie wird keine feste Preisspanne genannt; der Preis wird nach einer Aktenprüfung entsprechend Fallkomplexität und erforderlicher Technik mitgeteilt.'
+          disclaimer: 'In dieser Kategorie wird keine feste Spanne genannt. Der Betrag hängt vom Verfahren, davon, ob es ein Zweiteingriff ist, von einer etwaigen Steinentfernung und der Aufenthaltsdauer ab und wird nach Durchsicht Ihrer Unterlagen schriftlich mitgeteilt.'
         },
         packageIncludes: [
-          'Operation und Krankenhausaufenthalt',
-          'Anästhesie und Untersuchungen',
-          'JJ-Stent und dessen Entfernung',
-          'Transfers und Unterkunft',
-          'Medizinischer Dolmetscher und Koordinator',
-          'Langfristige Funktionsnachsorge'
+          'Durchsicht Ihrer Unterlagen und der Szintigraphie',
+          'Untersuchung und Nachholen fehlender Bildgebung',
+          'Blut- und Urinuntersuchung, Urinkultur',
+          'Anästhesie und Operationssaal',
+          'Operation und Einlage einer Harnleiterschiene',
+          'Entfernung eines begleitenden Steins in derselben Sitzung, soweit erforderlich',
+          'Klinikaufenthalt',
+          'Kontrolle vor dem Rückflug',
+          'Transfers Flughafen–Klinik–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und Patientenkoordination',
+          'Beurteilung der langfristigen Funktionskontrollen aus der Ferne'
         ],
         faqs: [
-          { q: 'Ich hatte eine Endopyelotomie/Nierenbeckenplastik, aber die Obstruktion kehrte zurück; was ist möglich?', a: 'Eine Redo-Nierenbeckenplastik ist möglich und ein Bereich, in dem dieses Zentrum erfahren ist. Trotz Narbengewebe wird eine nierenerhaltende Rekonstruktion geplant; selten ist ein mehrzeitiges Vorgehen nötig.' },
-          { q: 'Ist robotisch oder offen besser?', a: 'Die robotische Methode bietet in den meisten Fällen Nahtpräzision und schnelle Erholung; die Methode richtet sich jedoch nach Strikturtyp, Voroperation und Anatomie.' },
-          { q: 'Kann meine Niere gerettet werden?', a: 'Ziel ist der Nierenerhalt. Wie viel Funktion erhalten werden kann, wird per Szintigraphie beurteilt; die Nephrektomie ist nur bei einer nicht funktionierenden Niere das letzte Mittel.' }
+          { q: 'Mein Ultraschall zeigt eine Weitstellung der Niere — muss ich operiert werden?', a: 'Nein, eine Weitstellung allein ist kein Operationsgrund. Manche Nieren wirken weit, entleeren sich aber ausreichend. Für eine Entscheidung braucht es den Nachweis, dass die Enge die Niere tatsächlich beeinträchtigt, und diesen liefert die Nierenszintigraphie. Eine Entscheidung ohne sie bleibt unvollständig.' },
+          { q: 'Ich habe keine Schmerzen, also hat es Zeit?', a: 'Diese Annahme ist bei dieser Erkrankung gefährlich. Eine langsam entstehende Abflussstörung kann schmerzlos bleiben, während die Niere still staut und Funktion verliert. Bei bekannter Enge sollten Sie die Kontrolle mit Szintigraphie und Bildgebung auch ohne Beschwerden fortführen.' },
+          { q: 'Nach viel Trinken bekomme ich Flankenschmerzen — was bedeutet das?', a: 'Das ist ein typischer Befund. Steigt die Flüssigkeitslast, muss die Niere mehr abführen; die Enge verhindert das, der Druck steigt und Schmerz entsteht. Erwähnen Sie das unbedingt, denn es weist auf die Diagnose hin.' },
+          { q: 'Kann meine Niere gerettet werden?', a: 'Genau das ist das Ziel. Ehrlich gesagt stellt die Operation jedoch den Abfluss her; bereits verlorene Funktion kehrt nicht zurück. Deshalb ist eine frühe Entscheidung wichtig. Wie viel Funktion erhalten werden kann, zeigt die Szintigraphie.' },
+          { q: 'Ist robotisch besser als offen?', a: 'Diese Rekonstruktion verlangt eine feine, dichte Nahtreihe; deshalb zählt die Nahtpräzision und das robotische Vorgehen wird dafür bevorzugt. Dennoch richtet sich das Verfahren nach Art der Enge, Voroperationen und Ihrer Anatomie. Entscheidend ist nicht das Gerät, sondern dass die Verbindung weit und spannungsfrei ist.' },
+          { q: 'Ich hatte eine Endopyelotomie oder Nierenbeckenplastik und die Enge kam wieder. Was ist möglich?', a: 'Ein Zweiteingriff ist meist möglich, doch das Narbengewebe des Voreingriffs macht ihn schwieriger und die Erfolgsrate geringer. Das gehört klar gesagt. In der Planung ist Ihr vorheriger Operationsbericht entscheidend; ohne Kenntnis der verwendeten Technik bleibt der Plan unvollständig.' },
+          { q: 'Wie lange bleibt die Schiene und ist sie sehr unangenehm?', a: 'In der Regel 4–6 Wochen. Häufiger Harndrang, Flankenschmerz und ein ziehendes Gefühl beim Wasserlassen sind üblich und verschwinden nach der Entfernung. Das überrascht Patienten am meisten, deshalb sagen wir es vorher: Die Beschwerden sind erwartbar, keine Komplikation.' },
+          { q: 'Darf ich mit der Schiene fliegen, und wer entfernt sie?', a: 'Fliegen mit Schiene ist in der Regel unproblematisch. Zu planen ist, wer sie wo entfernt. Es ist ein kurzer Eingriff und kann in Ihrem Land erfolgen, sofern Ihre Urologin oder Ihr Urologe vorab zugestimmt hat. Klären Sie das, bevor Sie Reisedaten festlegen.' },
+          { q: 'Verschwindet die Harnstauung nach der Operation vollständig?', a: 'Nicht immer, und das bedeutet nicht zwingend ein Scheitern. Ein lange geweitetes Nierenbecken kehrt auch bei wiederhergestelltem Abfluss nicht unbedingt zur früheren Größe zurück. Beurteilt wird in der Kontrolle nicht die Schrumpfung, sondern der Abfluss — deshalb ist die Szintigraphie hier aussagekräftiger als der Ultraschall.' },
+          { q: 'Welche Unterlagen soll ich vorab senden?', a: 'Die CT-Urographie-Bilder selbst (nicht nur den Befund), IHR SZINTIGRAPHIE-ERGEBNIS, etwaige frühere Operationsberichte, Nierenwerte, Urinbefund und Kultur, Ihre Medikamente und Begleiterkrankungen. Fehlt die Szintigraphie, wird sie zuerst angefordert: Ohne sie lässt sich die Operationsindikation nicht tragfähig beurteilen.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines — Europäische Gesellschaft für Urologie (rekonstruktive Urologie)', url: 'https://uroweb.org/guidelines' }
         ]
       },
       ru: {
@@ -27936,59 +28107,141 @@ export const treatments: Treatment[] = [
         ]
       },
       de: {
-        title: 'Vesikovaginaler & ureterovaginaler Fistelverschluss',
-        summary: 'Verschluss von Fisteln, die Urinverlust verursachen — auch solche nach Geburt oder Becken-/gynäkologischer Operation. Ein respektvoller, vertraulicher Prozess.',
-        metaTitle: 'Fistelverschluss | Vesikovaginale & ureterovaginale Fistelchirurgie',
-        metaDescription: 'Verschluss vesikovaginaler und ureterovaginaler Fisteln: rekonstruktive Chirurgie bei Fisteln mit kontinuierlichem Urinverlust. Ein respektvoller, vertraulicher Ansatz für internationale Zuweisungspatientinnen.',
+        title: 'Verschluss vesikovaginaler und ureterovaginaler Fisteln',
+        summary:
+          'Verschluss von Fisteln, die zu ständigem Harnverlust führen. Das ist kein persönliches Versagen, sondern ein behebbarer medizinischer Zustand — und am wichtigsten sind der richtige Zeitpunkt und ein korrekt ausgeführter Erstverschluss.',
+        metaTitle: 'Fistelverschluss: vesikovaginale und ureterovaginale Fistelchirurgie',
+        metaDescription:
+          'Was eine Fistel ist, wie sie entsteht, warum der erste Verschluss die beste Chance ist, die Rolle des Zeitpunkts, gewebeunterstützte Techniken, Heilung und Diskretion.',
+        quickFacts: {
+          duration: '1,5–3 Stunden je nach Lage',
+          anesthesia: 'Vollnarkose oder Spinalanästhesie',
+          hospitalStay: '1–3 Nächte',
+          stayInTurkey: '3–4 Wochen (der Katheter wird hier entfernt)',
+          catheter: '2–3 Wochen',
+          returnToWork: '3–4 Wochen',
+          flightClearance: 'Nach Katheterentfernung und Kontrolle'
+        },
         definition: [
-          'Eine Fistel ist eine krankhafte Verbindung zwischen Blase oder Harnleiter und Scheide, die zu kontinuierlichem, unkontrollierbarem Urinverlust führt. Sie entsteht meist nach schwerer Geburt, Becken-/gynäkologischer Operation oder Strahlentherapie.',
-          'Dies ist ein medizinisch vollständig reparabler Zustand, und die damit verbundene Belastung ist kein Grund zur Scham. Die rekonstruktive Chirurgie zielt darauf ab, die Fistel zu verschließen und die normale Kontinenz wiederherzustellen. Zeitpunkt, Gewebequalität und Lage der Fistel bestimmen das Ergebnis; wiederkehrende Fälle (nach fehlgeschlagenem Verschluss) erfordern besondere Erfahrung. Ihre Behandlung erfolgt mit vollem Respekt und in Vertraulichkeit.'
+          'Eine Fistel ist eine krankhafte Verbindung zwischen zwei Strukturen, die getrennt sein sollten. Hier geht es um eine Verbindung zwischen Blase und Scheide (vesikovaginal) oder zwischen einem Harnleiter und der Scheide (ureterovaginal). Die Folge ist ein ständiger, nicht kontrollierbarer Harnverlust.',
+          'SAGEN WIR ES ZUERST KLAR: DAS IST NICHT IHRE SCHULD UND NICHTS, WOFÜR MAN SICH SCHÄMEN MÜSSTE. Eine Fistel ist eine medizinische Komplikation, die nach einer schweren oder protrahierten Geburt, nach gynäkologischen Operationen wie einer Gebärmutterentfernung, nach Beckenchirurgie oder nach Bestrahlung auftreten kann. In den meisten Fällen lässt sie sich vollständig verschließen.',
+          'WIE SICH DAS SYMPTOM UNTERSCHEIDET: Bei anderen Formen des Harnverlusts tritt dieser in bestimmten Situationen auf — beim Husten, Lachen oder nach plötzlichem Drang. Bei einer Fistel ist der Verlust ständig; auch wenn Sie normal Wasser lassen können, besteht dazwischen dauerhafte Nässe. Diese Unterscheidung ist wichtig, denn die Schilderung ständiger Nässe sollte unmittelbar an eine Fistel denken lassen.',
+          'DER WICHTIGSTE SATZ: DER ERSTE VERSCHLUSS IST DIE BESTE CHANCE. Jeder fehlgeschlagene Versuch verschlechtert die Gewebequalität, hinterlässt Narben und senkt die Erfolgsaussicht des nächsten. "Versuchen wir es, wenn es nicht klappt, schauen wir erneut" ist hier nicht der richtige Weg. Der erste Verschluss gehört in erfahrene Hände und zum richtigen Zeitpunkt.',
+          'DER ZEITPUNKT IST TEIL DER ENTSCHEIDUNG. Ist die Fistel frisch und das umgebende Gewebe entzündet, ödematös und noch in Heilung, ist ein sofortiger Verschluss anfällig für ein Scheitern. Es kann nötig sein, das Abklingen abzuwarten. Dieses Warten ist belastend, und die Frage "warum nicht jetzt" ist völlig berechtigt — doch ein überstürzter Verschluss, der aufgeht, kostet mehr als das Warten.'
+        ],
+        eligibility: {
+          suitable: [
+            'Frauen mit ständigem Harnverlust nach gynäkologischer oder Beckenoperation',
+            'Frauen mit ständigem Verlust nach schwerer oder protrahierter Geburt',
+            'Frauen mit Fistel nach Bestrahlung — diese Gruppe erfordert eine gesonderte Beurteilung',
+            'Frauen, bei denen ein früherer Verschluss den Harnverlust nicht beendet hat',
+            'Frauen mit mehreren Fistelöffnungen',
+            'Frauen mit Harnverlust infolge einer Harnleiterverletzung'
+          ],
+          notSuitable: [
+            'Die frühe Phase, solange das Gewebe entzündet und ödematös ist: Der Verschluss wird verschoben, und das ist Teil des Plans, keine Verzögerung',
+            'Frauen mit unbehandeltem Harnwegsinfekt: Dieser wird zuerst behandelt',
+            'Frauen, die die Katheterzeit und die Aufenthaltsdauer nicht einhalten können — die Katheterzeit lässt sich hier nicht verkürzen',
+            'Bei aktiver Krebserkrankung wird der Plan gesondert und gemeinsam mit der onkologischen Behandlung erstellt'
+          ]
+        },
+        technology: [
+          'Zystoskopie — zur Bestimmung von Lage und Zahl der Fistelöffnungen und ihres Abstands zu den Harnleitermündungen',
+          'CT-Urographie — zur Beurteilung der Harnleiter',
+          'Farbstofftest — zur Unterscheidung, ob der Verlust aus der Blase oder aus einem Harnleiter stammt',
+          'Nierenszintigraphie — zur Funktionsbeurteilung bei Harnleiterbeteiligung',
+          'Vaginaler oder abdomineller Zugang je nach Lage',
+          'Gewebeinterposition (zum Beispiel Martius-Lappen) — gut durchblutetes Gewebe zwischen die Nahtreihen',
+          'Neueinpflanzung des Harnleiters in die Blase'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
+          note: 'Die rekonstruktive Urologie gehört zu den Arbeitsschwerpunkten von Assoc. Prof. Dr. Müslüm Ergün. Der Plan ergibt sich aus Lage und Größe der Fistel, der Gewebequalität, einer etwaigen Bestrahlung und früheren Versuchen.'
         },
         expertise: {
-          redoRate: 'Ein erheblicher Teil der Fälle sind Redo-Zuweisungen nach einem fehlgeschlagenen Versuch oder einer iatrogenen Verletzung in einem anderen Zentrum.',
-          complexCase: 'Zu den komplexen Fällen zählen Fisteln nach Strahlentherapie, große/multifokale Fisteln und wiederholt fehlgeschlagene Verschlüsse.',
-          advancedTechnique: 'Transvaginaler/abdomineller Verschluss mit Gewebeinterposition (z. B. Martius-Lappen); Harnleiter-Reimplantation.'
+          redoRate: 'Ein erheblicher Teil der Fälle sind Zweiteingriffe nach fehlgeschlagenem Verschluss oder iatrogener Schädigung andernorts.',
+          complexCase: 'Fisteln nach Bestrahlung, große oder mehrfache Fisteln und wiederholt fehlgeschlagene Verschlüsse zählen zu den komplexen Fällen.',
+          advancedTechnique: 'Vaginaler oder abdomineller Verschluss mit Gewebeinterposition (zum Beispiel Martius-Lappen); Harnleiter-Neueinpflanzung.'
         },
         timeline: [
-          { when: 'Aus der Ferne', title: 'Vertrauliche Aktenprüfung', body: 'Ihre Vorgeschichte, frühere OP-Berichte und Bildgebung werden vertraulich geprüft; der richtige Zeitpunkt für den Verschluss wird bestimmt.' },
-          { when: 'Tag 1–2', title: 'Ankunft & Untersuchung', body: 'Untersuchung, Zystoskopie und Bildgebung klären Lage und Größe der Fistel.' },
-          { when: 'Tag 2–3', title: 'Operation', body: 'Transvaginaler oder abdomineller Verschluss je nach Lage; bei Bedarf Gewebestütze (Lappen).' },
-          { when: 'Danach', title: 'Katheterphase', body: 'Ein Katheter bleibt meist 2–3 Wochen, damit der Verschluss heilt; schwere Aktivität und Geschlechtsverkehr werden anfangs vermieden.' },
-          { when: 'Nachsorge', title: 'Kontrolle', body: 'Eine Kontrolle vor der Katheterentfernung bestätigt, dass der Urinverlust vollständig behoben ist, und die Nachsorge wird geplant.' }
+          { when: 'Aus der Ferne', title: 'Vertrauliche Durchsicht Ihrer Unterlagen', body: 'Ihre Vorgeschichte, IHRE FRÜHEREN OPERATIONSBERICHTE und Ihre Bildgebung werden vertraulich durchgesehen. Wann der Harnverlust begann und auf welche Operation er folgte, ist dabei die wichtigste Angabe.' },
+          { when: 'Tag 1–2', title: 'Ankunft und Beurteilung', body: 'Untersuchung, Zystoskopie und Bildgebung bestimmen Lage, Größe und Zahl der Fisteln und unterscheiden Blasen- von Harnleiterverlust. Auf Wunsch ist dabei durchgehend eine weibliche Mitarbeiterin anwesend.' },
+          { when: 'Operationstag', title: 'Verschluss', body: 'Vaginaler oder abdomineller Zugang je nach Lage. Ist die Gewebequalität schlecht, wird gut durchblutetes Gewebe zwischen die Nahtreihen gelegt, um den Verschluss haltbarer zu machen.' },
+          { when: 'Katheterphase', title: '2–3 Wochen', body: 'Der Katheter bleibt, bis der Verschluss verheilt ist. Die Dauer ist nicht willkürlich: Eine gefüllte Blase belastet die Naht und kann zum Leck führen. Diese Zeit wird überwiegend im Hotel verbracht.' },
+          { when: 'Katheterentfernung', title: 'Kontrolle', body: 'Vor der Entfernung wird die Dichtigkeit geprüft. Bestehen Zweifel, bleibt der Katheter länger — halten Sie Ihren Rückflug daher flexibel.' },
+          { when: 'Nachsorge', title: 'Langfristig', body: 'Bestätigung, dass der Harnverlust vollständig sistiert, und Beurteilung der Kontinenz. Bei manchen Frauen bleibt nach dem Verschluss eine andere Form des Harnverlusts; sie wird gesondert beurteilt und hat ihre eigene Behandlung.' }
         ],
         risks: [
-          'Wiederöffnung des Verschlusses (Rezidiv) — besonders bei Strahlentherapie/komplexen Fällen',
+          'WIEDERAUFGEHEN DES VERSCHLUSSES: wahrscheinlicher bei Fisteln nach Bestrahlung, bei großen Fisteln und nach fehlgeschlagenem Vorverschluss',
           'Infektion und Blutung',
-          'Vorübergehende Schwierigkeiten beim Wasserlassen',
-          'Selten Bedarf an einem zusätzlichen Verschluss'
+          'Vorübergehende Schwierigkeiten beim Wasserlassen nach Katheterentfernung',
+          'Gefühl verringerter Blasenkapazität und häufiger Harndrang — besonders nach Bestrahlung',
+          'AUCH BEI ERFOLGREICHEM VERSCHLUSS KANN EINE ANDERE FORM DES HARNVERLUSTS BLEIBEN: Die Fistel schließt sich, doch eine Schädigung des Halteapparats kann eine Belastungsinkontinenz hinterlassen. Das bedeutet kein Scheitern; es ist ein eigenständiger Zustand mit eigener Behandlung. Dies vorher zu wissen, erspart spätere Enttäuschung',
+          'Beschwerden beim Geschlechtsverkehr — besonders anfangs nach vaginalem Zugang oder bei Verwendung eines Lappens',
+          'Enge, wo ein Harnleiter rekonstruiert wurde',
+          'Notwendigkeit eines weiteren Verschlusses in sehr komplexen und wiederkehrenden Fällen'
         ],
         alternatives: [
-          'Versuch eines spontanen Verschlusses mit längerem Katheter bei kleinen, frischen Fisteln (ausgewählt)',
-          'Abwarten der Gewebeheilung vor dem Verschluss (richtiger Zeitpunkt)',
-          'Harnableitung in komplexen Fällen (letztes Mittel)'
+          'Abwarten eines spontanen Verschlusses mit Dauerkatheter — nur bei sehr kleinen und sehr frischen Fisteln ausgewählter Patientinnen',
+          'Geplantes Abwarten, bis das Gewebe abgeklungen ist — keine Verzögerung, sondern eine Entscheidung, die die Erfolgsaussicht erhöht',
+          'Vaginaler Verschluss — bei günstig gelegenen Fisteln; die Heilung verläuft rascher',
+          'Abdomineller Verschluss — bei hoch gelegenen, harnleiternahen oder komplexen Fisteln',
+          'Gewebeunterstützter Verschluss (Lappen) — bei schlechter Gewebequalität und in Wiederholungsfällen',
+          'Neueinpflanzung des Harnleiters in die Blase — bei ureterovaginaler Fistel',
+          'Dauerhafte Harnableitung — nur in sehr weit fortgeschrittenen Ausnahmefällen, in denen kein Verschluss möglich ist'
+        ],
+        comparison: {
+          title: 'Fistelverlust oder Inkontinenz: wie man unterscheidet',
+          columns: ['Kriterium', 'Fistelbedingter Verlust', 'Belastungsinkontinenz', 'Dranginkontinenz'],
+          rows: [
+            { label: 'Wann tritt der Verlust auf', values: ['Ständig, nicht situationsabhängig', 'Husten, Lachen, Heben', 'Nach plötzlichem Drang'] },
+            { label: 'Nachts', values: ['Hält an; das Bett wird nass', 'Meist nicht', 'Möglich'] },
+            { label: 'Normales Wasserlassen', values: ['Möglich, dazwischen aber ständige Nässe', 'Normal', 'Häufig und dringlich'] },
+            { label: 'Beginn', values: ['Meist nach einer Operation oder Geburt', 'Schleichend über Jahre', 'Schleichend über Jahre'] },
+            { label: 'Erster diagnostischer Schritt', values: ['Zystoskopie und Farbstofftest', 'Untersuchung und Miktionstagebuch', 'Miktionstagebuch'] }
+          ],
+          note: 'Die Unterscheidung ist wichtig, weil die Behandlungen völlig verschieden sind. Ständige, nicht situationsabhängige Nässe, die nach einer Operation oder Geburt begann, gilt bis zum Beweis des Gegenteils als Fistel.'
+        },
+        recovery: [
+          { period: 'Erste Tage', body: 'Entlassung mit Katheter. Dass der Katheter nicht verstopft, ist entscheidend: Füllt sich die Blase, wird der Verschluss belastet. Reichlich Trinken wird deshalb empfohlen.' },
+          { period: 'Katheterphase (2–3 Wochen)', body: 'Heben, Pressen und Verstopfung sind zu vermeiden. Ballaststoffe und Flüssigkeit sind wichtig. Bei Verstopfung oder Herausrutschen des Katheters oder erneuter vaginaler Nässe unverzüglich melden.' },
+          { period: 'Katheterentfernung', body: 'Zuvor wird die Dichtigkeit geprüft. In den ersten Tagen danach ist häufiger Harndrang üblich.' },
+          { period: '4.–6. Woche', body: 'Rückkehr in den Alltag. Für Geschlechtsverkehr gilt die genannte Frist; zu frühe Aufnahme belastet den Verschluss. Nach vaginalem Zugang können die ersten Male unangenehm sein.' },
+          { period: 'Ab dem 3. Monat', body: 'Bestätigung, dass der Harnverlust vollständig sistiert. Bleibt eine andere Form der Inkontinenz, wird sie gesondert beurteilt und behandelt.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'In dieser Kategorie wird keine feste Preisspanne genannt; der Preis wird nach einer Aktenprüfung entsprechend Fallkomplexität und erforderlicher Technik mitgeteilt.'
+          disclaimer: 'In dieser Kategorie wird keine feste Spanne genannt. Der Betrag hängt von Lage und Größe der Fistel, einer etwaigen Gewebeinterposition, einer Harnleiterrekonstruktion und der Aufenthaltsdauer ab und wird nach Durchsicht Ihrer Unterlagen schriftlich mitgeteilt.'
         },
         packageIncludes: [
-          'Operation und Krankenhausaufenthalt',
-          'Anästhesie und Untersuchungen',
-          'Gewebestütze (Lappen) bei Bedarf inbegriffen',
-          'Weibliche medizinische Dolmetscherin und vertrauliche Koordination (auf Wunsch)',
-          'Transfers und Unterkunft',
-          'Katheterentfernung und Online-Nachsorge'
+          'Vertrauliche Durchsicht Ihrer Unterlagen',
+          'Untersuchung, Zystoskopie und erforderliche Bildgebung',
+          'Urinuntersuchung und Kultur',
+          'Anästhesie und Operationssaal',
+          'Der Verschluss einschließlich Gewebeinterposition, soweit erforderlich',
+          'Klinikaufenthalt',
+          'Kontrolle vor der Katheterentfernung',
+          'Weibliche medizinische Dolmetscherin und diskrete Koordination auf Wunsch',
+          'Transfers Flughafen–Klinik–Hotel',
+          'Unterkunft (Patientin + 1 Begleitperson)',
+          'Nachbetreuung aus der Ferne nach der Rückkehr'
         ],
         faqs: [
-          { q: 'In einem anderen Land/Zentrum wurde ein Verschluss versucht, der fehlschlug; kann er erneut verschlossen werden?', a: 'Ja. Wiederkehrende Fälle nach einem fehlgeschlagenen Verschluss sind ein Bereich, in dem dieses Zentrum erfahren ist. Je nach Gewebezustand werden der richtige Zeitpunkt und bei Bedarf eine gewebegestützte (Lappen-)Technik geplant.' },
-          { q: 'Ist das dauerhaft, etwas, wofür ich mich schämen müsste?', a: 'Nein. Eine Fistel ist eine medizinische Komplikation, kein persönliches Versagen, und in den meisten Fällen vollständig reparabel. Der gesamte Prozess erfolgt mit Respekt vor Ihrer Privatsphäre, in Vertraulichkeit.' },
-          { q: 'Wird der Prozess vertraulich behandelt und kann ich weibliches Personal anfragen?', a: 'Ja. Beratungen und Koordination folgen dem Grundsatz der Vertraulichkeit; auf Wunsch werden eine Dolmetscherin und Unterstützung bereitgestellt.' }
+          { q: 'Ist das dauerhaft, und muss ich mich dafür schämen?', a: 'Nein, in keiner Weise. Eine Fistel ist eine medizinische Komplikation, kein persönliches Versagen und keine Folge von Nachlässigkeit Ihrerseits; in den meisten Fällen lässt sie sich vollständig verschließen. Viele Frauen tragen das jahrelang mit sich, ohne es jemandem zu sagen — dabei ist es behandelbar.' },
+          { q: 'Ich bin ständig nass, kann aber normal Wasser lassen. Kann das eine Fistel sein?', a: 'Ja, und das ist ein häufiges Bild. Bei einer Fistel geht ein Teil des Urins den normalen Weg, ein Teil sickert ständig. Ständige, nicht situationsabhängige Nässe, die nach einer Operation oder Geburt begann, sollte an eine Fistel denken lassen.' },
+          { q: 'Warum werde ich nicht sofort operiert?', a: 'Diese Frage ist berechtigt und wird am häufigsten gestellt. Ist die Fistel frisch, ist das umliegende Gewebe entzündet und ödematös, und ein Verschluss darin neigt zum Aufgehen. Das Abklingen abzuwarten ist Teil des Plans, keine Verzögerung. Wir wissen, dass das Warten belastend ist, doch ein überstürzter Verschluss, der scheitert, kostet mehr.' },
+          { q: 'Ich wurde bereits einmal operiert und verliere weiter Urin — ist ein erneuter Verschluss möglich?', a: 'Meist ja. Ehrlich gesagt verschlechtert jedoch jeder fehlgeschlagene Versuch die Gewebequalität und senkt die Erfolgsaussicht des nächsten. Der zweite Verschluss wird daher sorgfältiger geplant und erfordert meist eine gewebeunterstützte Technik. Ihr früherer Operationsbericht ist dabei das wichtigste Dokument.' },
+          { q: 'Was ist ein Lappen und warum wird er gebraucht?', a: 'Beim Verschluss werden zwei Gewebeschichten vernäht. Ist die Gewebequalität schlecht — etwa in bestrahltem oder voroperiertem Gebiet — wird ein gut durchblutetes Gewebestück dazwischengelegt. Es soll die Nahtreihen trennen und die Heilung stützen. Das ist kein "zusätzlicher Eingriff", sondern ein Schritt, der den Verschluss haltbarer macht.' },
+          { q: 'Ich hatte eine Bestrahlung — beeinflusst das den Verschluss?', a: 'Ja, und das gehört klar gesagt. Bestrahltes Gewebe ist schlechter durchblutet und heilt schlechter; die Wahrscheinlichkeit eines erneuten Aufgehens ist höher und eine gewebeunterstützte Technik fast immer erforderlich. Die Erwartung muss auf dieser Realität aufbauen.' },
+          { q: 'Warum bleibt der Katheter so lange?', a: 'Eine sich füllende und dehnende Blase belastet die Nahtreihe und kann zum Leck führen. Der Katheter hält die Blase leer, damit der Verschluss heilen kann. Diese Zeit wird nicht an einen Flug angepasst, und dass der Katheter nicht verstopft, ist ebenso entscheidend.' },
+          { q: 'Hört der Harnverlust nach dem Verschluss vollständig auf?', a: 'Der durch die Fistel bedingte ständige Verlust sollte aufhören. Bei manchen Frauen bleibt jedoch wegen einer Schädigung des Halteapparats eine andere Form — etwa beim Husten. Das bedeutet kein Scheitern; es ist ein eigenständiger Zustand mit eigener Behandlung. Dies vorher zu wissen, erspart spätere Enttäuschung.' },
+          { q: 'Bleibt das vertraulich, und kann ich weibliches Personal verlangen?', a: 'Ja, beides. Sie können verlangen, dass bei Untersuchungen und Gesprächen eine weibliche Mitarbeiterin anwesend ist und eine Dolmetscherin bereitsteht; es genügt, das bei der Terminvereinbarung zu sagen. Ihre medizinischen Informationen werden ohne Ihre Zustimmung mit niemandem geteilt, auch nicht mit Ihrer Begleitperson. Werden Sie um Fotos oder ein Patientenzitat gebeten, dürfen Sie ablehnen, ohne dass das Ihre Behandlung beeinflusst.' },
+          { q: 'Was soll ich senden?', a: 'Wann der Harnverlust begann und nach welcher Operation oder Geburt, alle früheren Operationsberichte, Unterlagen zu einem etwaigen Vorverschluss, Zystoskopie- und Bildgebungsbefunde, ob Sie bestrahlt wurden, Nierenwerte und Ihre Medikamente. Eine Bestrahlung in der Vorgeschichte und die Zahl der Vorverschlüsse sind die beiden Angaben, die den Plan am stärksten verändern.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urinary Incontinence and Reconstructive Surgery — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines' }
         ]
       },
       ru: {
@@ -28455,61 +28708,146 @@ export const treatments: Treatment[] = [
         ]
       },
       de: {
-        title: 'Harnleiter-Rekonstruktion (langstreckige Striktur/Verletzung)',
-        summary: 'Fortgeschrittene Rekonstruktion bei langstreckiger Harnleiterstriktur oder -verletzung: Techniken wie Mundschleimhaut-Transplantat und Ileuminterposition.',
-        metaTitle: 'Harnleiter-Rekonstruktion | Chirurgie langstreckiger Harnleiterstriktur',
-        metaDescription: 'Fortgeschrittene Rekonstruktion bei langstreckiger Harnleiterstriktur/-verletzung: Mundschleimhaut-Transplantat, Ileuminterposition, Harnleiter-Reimplantation. Erfahrung mit komplexen und Redo-Fällen.',
+        title: 'Harnleiterrekonstruktion (lange Engen und Schädigungen)',
+        summary:
+          'Fortgeschrittene Rekonstruktion zum Erhalt der Niere bei langen Harnleiterengen. Den meisten dieser Patienten wurde gesagt, es sei nichts zu machen — dabei bedeutet die Länge der Enge allein nicht, dass eine Rekonstruktion unmöglich ist.',
+        metaTitle: 'Harnleiterrekonstruktion: nierenerhaltende Chirurgie bei langen Engen',
+        metaDescription:
+          'Optionen bei langen Harnleiterengen, Mundschleimhauttransplantat und Dünndarminterposition, die Grenzen von Nephrostomie und Dauerschiene, Zweiteingriffe und realistische Erwartungen.',
+        quickFacts: {
+          duration: '3–6 Stunden je nach Technik',
+          anesthesia: 'Vollnarkose',
+          hospitalStay: '4–7 Nächte',
+          stayInTurkey: '3–4 Wochen',
+          returnToWork: '4–6 Wochen',
+          flightClearance: 'Nach der Kontrollbildgebung'
+        },
         definition: [
-          'Der Harnleiter ist der Kanal, der Niere und Blase verbindet. Eine langstreckige Striktur oder Verletzung kann nach Steinchirurgie, Becken-/gynäkologischer Operation, Strahlentherapie oder Trauma entstehen und die Niere gefährden.',
-          'Während kurze Strikturen mit einfachen Techniken repariert werden, erfordern langstreckige Strikturen eine fortgeschrittene Rekonstruktion. Techniken wie Mundschleimhaut-Transplantat, Ileuminterposition (Überbrückung mit einem Darmsegment) oder das Herabholen der Niere werden in erfahrenen Zentren durchgeführt, um die Niere zu erhalten.'
+          'Der Harnleiter ist der feine Kanal, der die Niere mit der Blase verbindet. Verengt oder schädigt sich ein langer Abschnitt, kann der Urin nicht mehr aus der Niere abfließen; die Niere staut sich und beginnt, Funktion zu verlieren.',
+          'DIE HÄUFIGSTE URSACHE IST NICHT DIE ERWARTETE: Ein erheblicher Teil langer Harnleiterengen entsteht durch eine unbemerkte Verletzung des Harnleiters während einer anderen Operation. Gynäkologische Eingriffe, kolorektale Chirurgie und Steinchirurgie gehören dazu; auch Bestrahlung und Unfälle können lange Schäden verursachen. Wir sagen das ohne Schuldzuweisung: Der Harnleiter ist fein und liegt dicht an Nachbarorganen, und diese Verletzung ist ein bekanntes chirurgisches Risiko. Entscheidend ist, dass nun der richtige Plan gemacht wird.',
+          'DIE KERNBOTSCHAFT DIESER SEITE: "ES GEHT NICHT" HEISST NICHT, DASS ES WIRKLICH NICHT GEHT. Kurze Engen werden mit einfachen, in den meisten Zentren verfügbaren Techniken rekonstruiert. Lange Engen erfordern andere — ein Mundschleimhauttransplantat, eine Überbrückung mit einem Darmsegment, das Tiefersetzen der Niere oder das Hochziehen der Blase. Da diese Verfahren im Alltag selten durchgeführt werden, hören Patienten mitunter, es gebe keine Option mehr.',
+          'ZIEL IST STETS DER ERHALT DER NIERE. Ehrlich gesagt stellt die Rekonstruktion jedoch den Abfluss her; bereits verlorene Funktion kehrt nicht zurück. Deshalb ist die Messung der verbliebenen Funktion mittels Szintigraphie der grundlegende Schritt, um zu entscheiden, ob sich eine Rekonstruktion lohnt.',
+          'MIT NEPHROSTOMIE ODER DAUERSCHIENE ZU LEBEN IST EINE BRÜCKE, KEINE LÖSUNG. Sie schützen die Niere und verschaffen Zeit, bringen aber ständige Pflege, regelmäßige Wechsel und ein Infektionsrisiko mit sich. Jahrelang so zu verfahren, ist beim geeigneten Patienten nicht hinzunehmen, solange eine Rekonstruktion möglich ist.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patienten mit Harnleiterverletzung bei einer anderen Operation und nachfolgender Enge',
+            'Patienten mit langer Enge nach Steinchirurgie',
+            'Patienten, die mit Nephrostomie oder Dauerschiene zurechtkommen und davon frei werden möchten',
+            'Patienten, deren frühere Rekonstruktion fehlgeschlagen ist',
+            'Patienten mit Enge nach Bestrahlung — gesonderte Beurteilung erforderlich',
+            'Patienten mit Einzelniere und Harnleiterenge, bei denen die Rekonstruktion besonders wichtig ist',
+            'Patienten, deren Szintigraphie erhaltenswerte Funktion zeigt'
+          ],
+          notSuitable: [
+            'Patienten, deren Niere laut Szintigraphie nahezu die gesamte Funktion verloren hat und keine Beschwerden verursacht: Die Rekonstruktion bringt nicht den erwarteten Nutzen',
+            'Patienten mit unbehandeltem Harnwegsinfekt: Dieser wird zuerst behandelt',
+            'Patienten, bei denen ein Darmsegment geplant ist, deren Nierenfunktion aber unter einem bestimmten Niveau liegt; das wird gesondert beurteilt',
+            'Patienten, deren Allgemeinzustand eine lange große Operation nicht zulässt; dann werden weniger eingreifende Erhaltungsoptionen geprüft',
+            'Bei aktiver, ausgedehnter Krebserkrankung wird der Plan gemeinsam mit der onkologischen Behandlung erstellt'
+          ]
+        },
+        technology: [
+          'CT-Urographie — zur Bestimmung von Lage und Länge der Enge',
+          'Nierenszintigraphie — die Schlüsseluntersuchung dazu, ob erhaltenswerte Funktion besteht',
+          'Antegrade und retrograde Ureterographie — zur Darstellung beider Enden der Enge',
+          'Ureteroskopie — direkte Betrachtung',
+          'Ureteroplastik mit Mundschleimhauttransplantat',
+          'Überbrückung mit einem Darmsegment (ileale Interposition)',
+          'Tiefersetzen der Niere und Hochziehen der Blase',
+          'Neueinpflanzung des Harnleiters in die Blase',
+          'Robotergestützte Rekonstruktion'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
+          note: 'Die rekonstruktive Urologie gehört zu den Arbeitsschwerpunkten von Assoc. Prof. Dr. Müslüm Ergün. Der Plan ergibt sich aus Länge und Lage der Enge, der Nierenfunktion, den Voreingriffen und einer etwaigen Bestrahlung.'
         },
         expertise: {
-          redoRate: 'Ein erheblicher Teil der Fälle sind Redo-Zuweisungen nach einem fehlgeschlagenen Versuch oder einer iatrogenen Verletzung in einem anderen Zentrum.',
-          complexCase: 'Zu den komplexen Fällen zählen langstreckige/panureterale Striktur, Zustand nach Strahlentherapie und Patienten mit Einzelniere.',
-          advancedTechnique: 'Ureteroplastik mit Mundschleimhaut-Transplantat, Ileuminterposition und robotergestützte Rekonstruktion.'
+          redoRate: 'Ein erheblicher Teil der Fälle sind Zweiteingriffe nach fehlgeschlagener Operation oder iatrogener Schädigung andernorts.',
+          complexCase: 'Lange und den gesamten Harnleiter betreffende Engen, Engen nach Bestrahlung und Patienten mit Einzelniere zählen zu den komplexen Fällen.',
+          advancedTechnique: 'Ureteroplastik mit Mundschleimhaut, Darminterposition und robotergestützte Rekonstruktion.'
         },
         timeline: [
-          { when: 'Aus der Ferne', title: 'Aktenprüfung', body: 'Ihre CT-Urographie, Szintigraphie und früheren OP-Berichte werden detailliert geprüft; Strikturlänge und Nierenfunktion werden bestimmt.' },
-          { when: 'Tag 1–2', title: 'Ankunft & erweiterte Tests', body: 'Untersuchung, bei Bedarf Ureteroskopie/Bildgebung; der Rekonstruktionsplan wird finalisiert.' },
-          { when: 'Tag 3', title: 'Operation', body: 'Transplantat, Interposition oder Reimplantation je nach Segmentlänge; meist mehrtägiger Aufenthalt.' },
-          { when: 'Danach', title: 'Stent-/Katheterphase', body: 'Ein JJ-Stent und/oder Katheter bleibt eine Weile; die Drainage wird per Kontrollbildgebung bestätigt.' },
-          { when: 'Nachsorge', title: 'Langfristige Nachsorge', body: 'Funktion und Drainage werden mit Szintigraphie/Ultraschall überwacht; die Nachsorge ist in diesen Fällen besonders entscheidend.' }
+          { when: 'Aus der Ferne', title: 'Durchsicht Ihrer Unterlagen', body: 'Ihre CT-Urographie-Bilder, IHRE NIERENSZINTIGRAPHIE und IHRE FRÜHEREN OPERATIONSBERICHTE werden eingehend durchgesehen. Ohne diese drei lässt sich kein Plan erstellen: Die Szintigraphie zeigt, ob sich die Rekonstruktion lohnt, der Operationsbericht, was bereits geschehen ist.' },
+          { when: 'Tag 1–2', title: 'Ankunft und weiterführende Abklärung', body: 'Untersuchung, bei Bedarf Ureteroskopie und Vervollständigung der Bildgebung. Beide Enden der Enge werden dargestellt, um ihre wahre Länge zu bestimmen — die Angabe, die über die erforderliche Technik entscheidet.' },
+          { when: 'Operationstag', title: 'Rekonstruktion', body: 'Je nach Länge des Abschnitts Transplantat, Überbrückung oder Neueinpflanzung. Der Plan kann nach dem intraoperativen Befund angepasst werden; die möglichen Szenarien werden vorher besprochen.' },
+          { when: 'In der Klinik', title: 'Frühphase', body: 'Wurde ein Darmsegment verwendet, muss die Darmtätigkeit zurückkehren und der Aufenthalt dauert länger. Eine Schiene verbleibt, zeitweise auch eine Drainage.' },
+          { when: '4.–8. Woche', title: 'Entfernung der Schiene', body: 'Die Schiene wird entfernt, sobald die Kontrollbildgebung die Dichtigkeit bestätigt hat. Wo das geschieht, muss vorher geplant sein.' },
+          { when: 'Langfristig', title: 'Funktionskontrolle', body: 'Abfluss und Nierenfunktion werden mit Szintigraphie und Ultraschall verfolgt. Die Nachsorge ist hier besonders wichtig: Eine stumme erneute Enge kann die Niere schädigen, ohne Beschwerden zu verursachen.' }
         ],
         risks: [
-          'Rezidiv der Striktur und Bedarf an zusätzlichem Eingriff',
-          'Darmbedingte metabolische/Schleim-Effekte bei der Ileuminterposition',
+          'WIEDERKEHR DER ENGE mit Bedarf eines weiteren Eingriffs — wahrscheinlicher bei langen Abschnitten und Zweiteingriffen',
           'Urinleck, Infektion und Blutung',
-          'Veränderung der Nierenfunktion'
+          'BESONDERHEITEN BEI VERWENDUNG EINES DARMSEGMENTS: Schleim im Urin ist ein erwartbarer Befund, der nicht verschwindet, und es kann ein Ungleichgewicht der Blutwerte entstehen, sodass eine langfristige Kontrolle nötig ist. Diese bleibenden Veränderungen gehören vor der Wahl des Verfahrens klar besprochen',
+          'Vorübergehende oder bleibende Veränderung der Darmfunktion durch die Entnahme des Segments',
+          'Vorübergehend verändertes Gefühl und Beschwerden nach Entnahme eines Mundtransplantats',
+          'Ausbleiben der erhofften Funktionsverbesserung: Die Rekonstruktion stellt den Abfluss her, verlorene Funktion kehrt nicht zurück',
+          'Thromboserisiko durch lange Operation und Immobilität; der Rückflug wird gesondert geplant',
+          'Wiederkehrende Harnwegsinfekte'
         ],
         alternatives: [
-          'Erhaltung mit langfristigem JJ-Stent oder Nephrostomie (für nicht operationsfähige Patienten)',
-          'End-zu-End-Reparatur/Reimplantation bei kurzen Strikturen',
-          'Autotransplantation (in ausgewählten komplexen Fällen)',
-          'Nephrektomie (nur bei nicht funktionierender Niere, letztes Mittel)'
+          'Erhaltung mit Nephrostomie oder Dauerschiene — schützt die Niere und verschafft Zeit, bringt aber ständige Pflege, regelmäßige Wechsel und Infektionsrisiko. Eine Brücke, keine Lösung',
+          'End-zu-End-Rekonstruktion oder Neueinpflanzung bei kurzen Engen',
+          'Hochziehen der Blase — bei Engen des unteren Harnleiters',
+          'Ureteroplastik mit Mundschleimhaut — bei ausgewählten langen Engen',
+          'Überbrückung mit einem Darmsegment — bei sehr langen Engen; mit bleibenden Veränderungen',
+          'Verlagerung der Niere mit ihren eigenen Gefäßen ins Becken (Autotransplantation) — in ausgewählten komplexen Fällen',
+          'Entfernung der Niere — nur bei funktionsloser Niere, die Infektionen oder Schmerzen verursacht, als letzte Möglichkeit'
+        ],
+        comparison: {
+          title: 'Optionen nach Länge der Enge',
+          columns: ['Situation', 'Bevorzugte Technik', 'Belastung', 'Worauf zu achten ist'],
+          rows: [
+            { label: 'Kurze Enge', values: ['End-zu-End oder Neueinpflanzung', 'Gering', 'In den meisten Zentren möglich'] },
+            { label: 'Unterer Harnleiter, mittlere Länge', values: ['Hochziehen der Blase', 'Mittel', 'Die Blasenkapazität wird beurteilt'] },
+            { label: 'Mittlere bis lange Enge', values: ['Mundschleimhaut-Flicken', 'Mittel', 'Mundgesundheit und Rauchen beeinflussen die Heilung'] },
+            { label: 'Sehr lange Enge', values: ['Überbrückung mit Darmsegment', 'Hoch', 'Bleibende metabolische und Schleim-Effekte'] },
+            { label: 'Nicht operationsfähiger Patient', values: ['Nephrostomie oder Dauerschiene', 'Ständige Pflege', 'Brücke, keine Lösung'] }
+          ],
+          note: 'Diese Tabelle soll zeigen: "lange Enge" ist nicht eine einzige Sache, jede Länge hat ihre eigene Technik. Wird Ihnen nur eine Option genannt, dürfen Sie fragen, warum die anderen für Sie nicht infrage kommen.'
+        },
+        recovery: [
+          { period: 'In der Klinik', body: 'Wurde ein Darmsegment verwendet, wird die Rückkehr der Darmtätigkeit abgewartet und die Kost schrittweise aufgebaut. Frühes Gehen senkt das Thromboserisiko.' },
+          { period: 'Erste 2 Wochen', body: 'Heben ist untersagt. Häufiger Harndrang und Flankenschmerz durch die Schiene sind üblich. Bei Fieber, Schüttelfrost oder Unvermögen, Wasser zu lassen, sofort vorstellen.' },
+          { period: 'Zeit mit liegender Schiene', body: 'Diese Phase ist länger als nach anderen urologischen Operationen. Vor der Entfernung wird die Dichtigkeit bildgebend bestätigt.' },
+          { period: 'Bei Verwendung eines Darmsegments', body: 'Schleim im Urin ist ein erwartbarer und bleibender Befund; reichlich Trinken wird empfohlen. Langfristig sind regelmäßige Blutkontrollen nötig.' },
+          { period: '3.–6. Monat', body: 'Die Szintigraphie beurteilt, ob der Abfluss wiederhergestellt ist. Das ist der eigentliche Erfolgsmaßstab dieser Rekonstruktion.' },
+          { period: 'Langfristig', body: 'Die Nachsorge dauert lebenslang. Da eine stumme erneute Enge die Niere ohne Beschwerden schädigen kann, ist der Bildgebungsplan auch bei Wohlbefinden einzuhalten.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'In dieser Kategorie wird keine feste Preisspanne genannt; der Preis wird nach einer Aktenprüfung entsprechend Fallkomplexität und erforderlicher Technik mitgeteilt.'
+          disclaimer: 'In dieser Kategorie wird keine feste Spanne genannt. Der Betrag hängt von Länge der Enge, verwendeter Technik, einer etwaigen Darminterposition und der Aufenthaltsdauer ab und wird nach Durchsicht Ihrer Unterlagen schriftlich mitgeteilt.'
         },
         packageIncludes: [
-          'Operation und Krankenhausaufenthalt',
-          'Anästhesie und erweiterte Untersuchungen',
-          'Inbegriffen, wenn Transplantat/Interposition erforderlich ist',
-          'Stent und dessen Entfernung',
-          'Transfers und Unterkunft',
-          'Medizinischer Dolmetscher und Koordinator',
-          'Langfristige Funktionsnachsorge'
+          'Durchsicht Ihrer Unterlagen, der Szintigraphie und früheren Operationsberichte',
+          'Untersuchung und Vervollständigung der weiterführenden Bildgebung',
+          'Blut- und Urinuntersuchung, Urinkultur',
+          'Anästhesie und Operationssaal',
+          'Rekonstruktion einschließlich Vorbereitung von Transplantat oder Segment, soweit erforderlich',
+          'Einlage einer Schiene',
+          'Klinikaufenthalt',
+          'Kontrollbildgebung vor der Entfernung der Schiene',
+          'Transfers Flughafen–Klinik–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und Patientenkoordination',
+          'Beurteilung der langfristigen Funktionskontrollen aus der Ferne'
         ],
         faqs: [
-          { q: 'Ich habe eine lange Harnleiterstriktur und mir wurde gesagt, es „geht nicht“; gibt es Optionen?', a: 'Langstreckige Strikturen lassen sich in den meisten Fällen mit fortgeschrittenen Techniken wie Mundschleimhaut-Transplantat oder Ileuminterposition reparieren. Ihre Akte wird bewertet und ein nierenerhaltender Plan erstellt.' },
-          { q: 'Kann es nach einem fehlgeschlagenen Eingriff erneut versucht werden?', a: 'Ja; eine Redo-Rekonstruktion nach iatrogener Verletzung oder fehlgeschlagenem Verschluss ist ein Erfahrungsbereich dieses Zentrums. Trotz Narbengewebe werden nierenerhaltende Techniken geplant.' },
-          { q: 'Wie lange dauern Genesung und Nachsorge?', a: 'Aufenthalt und Stentphase sind länger als bei anderen Behandlungen; der langfristige Erfolg wird mit regelmäßiger Funktionsnachsorge beurteilt. Die Nachsorge ist in diesen Fällen entscheidend.' }
+          { q: 'Mir wurde gesagt, ein sehr langer Abschnitt meines Harnleiters sei verengt und es sei nichts zu machen. Stimmt das?', a: 'Die Länge der Enge allein bedeutet nicht, dass eine Rekonstruktion unmöglich ist. Für lange Engen gibt es Techniken: ein Mundschleimhaut-Flicken, eine Überbrückung mit einem Darmsegment, das Tiefersetzen der Niere oder das Hochziehen der Blase. Da diese im Alltag selten durchgeführt werden, begegnet man dieser Antwort mitunter. Sie dürfen verlangen, dass Ihre Unterlagen geprüft werden.' },
+          { q: 'Ist die Enge bei einer früheren Operation entstanden?', a: 'Ein erheblicher Teil langer Harnleiterengen folgt einer Verletzung des Harnleiters bei einer anderen Operation. Wir sagen das ohne Schuldzuweisung: Der Harnleiter ist fein und liegt sehr nah an Nachbarorganen, und diese Verletzung ist ein bekanntes chirurgisches Risiko. Entscheidend ist jetzt der richtige Plan.' },
+          { q: 'Kann ich mit Nephrostomie oder Dauerschiene weiterleben?', a: 'Sie können, und bei manchen Patienten ist das die richtige Entscheidung. Wissen Sie aber, dass dies eine Brücke und keine Lösung ist: ständige Pflege, regelmäßige Wechsel und ein Infektionsrisiko. Jahrelang so zu verfahren, ist nicht hinzunehmen, solange beim geeigneten Patienten eine Rekonstruktion möglich ist.' },
+          { q: 'Kann meine Niere gerettet werden?', a: 'Das ist das Ziel, die Antwort gibt jedoch die Szintigraphie. Sie misst, wie viel Funktion die Niere noch hat. Ist ein Teil erhalten, ist die Rekonstruktion sinnvoll. Ehrlich gesagt stellt sie den Abfluss her; bereits verlorene Funktion kehrt nicht zurück. Deshalb zählt eine frühe Entscheidung.' },
+          { q: 'Was bedeutet die Verwendung von Darm?', a: 'Bei sehr langen Engen wird ein Dünndarmsegment als Brücke zwischen Niere und Blase eingesetzt. Das ist ein wirksames Verfahren, bringt aber bleibende Veränderungen: Schleim im Urin ist ein erwartbarer Befund, der nicht verschwindet, und es kann ein Ungleichgewicht der Blutwerte entstehen, sodass eine langfristige Kontrolle nötig ist. Das gehört vor der Wahl klar besprochen.' },
+          { q: 'Es wurde bereits rekonstruiert und die Enge kam wieder — ist ein erneuter Versuch möglich?', a: 'Meist ja, doch das Narbengewebe des Voreingriffs macht die zweite Rekonstruktion schwieriger und die Erfolgsaussicht geringer. Das gehört klar gesagt. In der Planung ist Ihr früherer Operationsbericht das wichtigste Dokument; ohne Kenntnis der Technik und des rekonstruierten Abschnitts bleibt der Plan unvollständig.' },
+          { q: 'Ich habe nur eine Niere — ist das Risiko höher?', a: 'Bei Einzelniere steigen sowohl die Bedeutung der Rekonstruktion als auch die gebotene Sorgfalt, weil es keine Reserve gibt. Das ist kein Grund, auf eine Operation zu verzichten; im Gegenteil sollte die nierenerhaltende Rekonstruktion früher angegangen werden. Planung und Nachsorge sind bei diesen Patienten enger.' },
+          { q: 'Wie lange dauert die Heilung?', a: 'Dies ist einer der längeren Heilungsverläufe in der Urologie. Klinikaufenthalt und Schienenphase sind länger als nach anderen Operationen, besonders wenn ein Darmsegment verwendet wurde und die Darmtätigkeit zurückkehren muss. Planen Sie den Aufenthalt großzügig und buchen Sie umbuchbar.' },
+          { q: 'Warum ist die Nachsorge so wichtig?', a: 'Weil eine erneute Enge stumm entstehen kann. Eine ohne Beschwerden fortschreitende Enge kann die Niere schädigen. Halten Sie den Bildgebungsplan daher auch bei Wohlbefinden ein. Lassen Sie sich Ihren Plan schriftlich geben: welche Untersuchung, in welchem Abstand und wer sie beurteilt.' },
+          { q: 'Was soll ich senden?', a: 'Die CT-Urographie-Bilder selbst (nicht nur den Befund), IHR SZINTIGRAPHIE-ERGEBNIS, ALLE FRÜHEREN OPERATIONSBERICHTE, etwaige Ureterographie-Bilder, Nierenwerte, Urinkultur, ob Sie bestrahlt wurden, und Ihre Medikamente. Ohne Szintigraphie und Operationsbericht lässt sich in diesen Fällen kein ernsthafter Plan erstellen.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines — Europäische Gesellschaft für Urologie (rekonstruktive Urologie)', url: 'https://uroweb.org/guidelines' }
         ]
       },
       ru: {
