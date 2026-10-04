@@ -23108,369 +23108,865 @@ export const treatments: Treatment[] = [
       tr: {
         title: 'BPH / İyi Huylu Prostat Büyümesi (HoLEP, Rezūm, TURP)',
         summary:
-          'İdrar şikâyetlerine yol açan iyi huylu prostat büyümesinde modern, dokuyu koruyan yöntemler.',
-        metaTitle: 'BPH Tedavisi | HoLEP, Rezūm ve TURP Karşılaştırması',
+          'Prostatın büyümüş olması tek başına tedavi gerekçesi değildir. Asıl soru şikâyetlerin günlük yaşamı ne kadar kısıttığı ve mesaneye zarar verip vermediğidir — yöntem bundan sonra seçilir.',
+        metaTitle: 'BPH Tedavisi: HoLEP, Rezūm ve TURP Arasında Nasıl Seçim Yapılır',
         metaDescription:
-          'İyi huylu prostat büyümesi (BPH) tedavisinde HoLEP, Rezūm ve TURP yöntemleri; süreç, riskler, alternatifler ve fiyat aralığı.',
+          'İyi huylu prostat büyümesinde ilaç tedavisinin sınırları, hangi durumda beklenmez, HoLEP/Rezūm/TURP karşılaştırması, retrograd boşalma ve geçici idrar kaçırma konusunda dürüst beklentiler.',
+        quickFacts: {
+          duration: '30–90 dakika (yönteme göre)',
+          anesthesia: 'Genel veya spinal; Rezūm’de genellikle sedasyon',
+          hospitalStay: 'Günübirlik – 2 gece',
+          stayInTurkey: '5–8 gün',
+          catheter: '1–7 gün (yönteme göre)',
+          returnToWork: '1–3 hafta',
+          flightClearance: 'Sonda alındıktan ve kontrol yapıldıktan sonra'
+        },
         definition: [
-          'İyi huylu prostat büyümesi (BPH), yaşla birlikte prostatın büyüyerek idrar akışını zorlaştırmasıdır. Zayıf idrar akışı, sık ve gece idrara çıkma gibi şikâyetlere yol açar.',
-          'Modern yöntemler, prostat dokusunu lazerle çıkarma (HoLEP), buhar enerjisiyle küçültme (Rezūm) veya klasik endoskopik rezeksiyon (TURP) seçeneklerini içerir. Seçim prostat boyutuna ve hasta önceliğine göre yapılır.'
+          'İyi huylu prostat büyümesi (BPH), prostatın yaşla birlikte büyüyerek idrar kanalını sıkıştırmasıdır. İdrar akımının zayıflaması, idrarı başlatmakta zorlanma, sık idrara çıkma, gece uyanma ve tam boşaltamama hissi tipik şikâyetlerdir.',
+          'BPH KANSER DEĞİLDİR ve kansere dönüşmez. Ancak ikisi aynı organda birlikte bulunabileceği için, idrar şikâyeti nedeniyle başvuran bir erkekte PSA ve muayene ile kanser ayrıca değerlendirilir.',
+          'ÖNEMLİ BİR AYRIM: Prostatın büyük olması tek başına tedavi gerekçesi değildir. Büyük bir prostatla hiç şikâyeti olmayan erkek de vardır, küçük bir prostatla çok zorlanan erkek de. Tedavi kararı ultrasondaki hacme değil, şikâyetlerinize ve mesanenizin durumuna göre verilir.',
+          'BUNA KARŞILIK BEKLENMEMESİ GEREKEN DURUMLAR VARDIR: tekrarlayan idrar tıkanması (idrar yapamama), mesanede taş oluşması, tekrarlayan idrar yolu enfeksiyonu, prostattan tekrarlayan kanama ve böbrek işlevinde bozulma. Bunlar konfor meselesi değil, var olan hasarın işaretleridir.',
+          'Şikâyetlerin tek nedeni her zaman prostat değildir. Aşırı aktif mesane, şeker hastalığına bağlı sinir etkilenmesi, bazı ilaçlar ve uyku apnesi benzer tablo yaratabilir. Bu nedenle doğrudan prostata yönelmeden önce değerlendirme yapılır.'
+        ],
+        eligibility: {
+          suitable: [
+            'İlaç tedavisinden yeterli fayda görmeyen veya ilacın yan etkilerini kaldıramayan erkekler',
+            'Şikâyetleri günlük yaşamını ve uykusunu belirgin kısıtlayan erkekler',
+            'İdrar yapamama nedeniyle sonda takılmış olanlar',
+            'Mesanede taş gelişmiş olanlar',
+            'Tekrarlayan idrar yolu enfeksiyonu geçirenler',
+            'Prostattan tekrarlayan kanaması olanlar',
+            'Tıkanıklığa bağlı böbrek işlev bozukluğu gelişenler'
+          ],
+          notSuitable: [
+            'Hafif şikâyeti olan ve bu şikâyetten rahatsızlık duymayan erkekler — gereksiz girişimden kaçınılır',
+            'Tedavi edilmemiş idrar yolu enfeksiyonu olanlar: önce enfeksiyon tedavi edilir',
+            'Şikâyetin kaynağı prostat değil mesane olan hastalar — bu durumda prostat ameliyatı beklenen faydayı vermez',
+            'Çocuk sahibi olmayı planlayan erkeklerde doku çıkaran yöntemler ilk tercih olmayabilir',
+            'Anestezi açısından yüksek riskli hastalarda daha az girişimsel seçenekler öne çıkar'
+          ]
+        },
+        technology: [
+          'Üroflowmetri (idrar akım hızı ölçümü) ve işeme sonrası kalan idrar ölçümü',
+          'Ultrason ile prostat hacminin belirlenmesi',
+          'PSA ölçümü ve parmakla muayene — kanserin ayrıca değerlendirilmesi için',
+          'Holmiyum veya tulyum lazer ile enükleasyon (HoLEP / ThuLEP)',
+          'Su buharı ile doku küçültme (Rezūm)',
+          'Klasik endoskopik rezeksiyon (TURP)',
+          'Seçilmiş hastalarda ürodinami — şikâyetin mesaneden mi prostattan mı kaynaklandığının ayrımı'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
+          note: 'Prostat büyümesinin cerrahi tedavisi, Doç. Dr. Müslüm Ergün’ün çalışma alanlarındandır. Yöntem seçimi; prostat hacmi, idrar akım hızı, kalan idrar miktarı, kullanılan ilaçlar, cinsel işlev beklentileri ve çocuk isteği birlikte değerlendirilerek yapılır.'
         },
         timeline: [
-          { when: 'Uzaktan', title: 'Ön değerlendirme', body: 'İdrar akım testi, PSA ve prostat hacmi değerleriniz incelenir.' },
-          { when: '1. Gün', title: 'Varış ve muayene', body: 'Muayene, üroflowmetri ve gerekli tetkikler.' },
-          { when: '2. Gün', title: 'İşlem', body: 'Seçilen yönteme göre işlem; genellikle 1 gece yatış.' },
-          { when: '3–4. Gün', title: 'Kontrol', body: 'Sonda değerlendirmesi, taburculuk ve dönüş onayı.' }
+          { when: 'Uzaktan', title: 'Ön değerlendirme', body: 'Prostat hacmini gösteren görüntüleme, üroflowmetri ve kalan idrar ölçümü, PSA değeri, kullandığınız ilaçların listesi (özellikle kan sulandırıcılar) ve diğer hastalıklarınız incelenir.' },
+          { when: '1. Gün', title: 'Varış ve muayene', body: 'Yüz yüze muayene, gerekirse tetkiklerin tekrarı, idrar tahlili ve kültürü, anestezi değerlendirmesi. Kültürde üreme varsa işlem ertelenir.' },
+          { when: '2. Gün', title: 'İşlem', body: 'Seçilen yönteme göre uygulama yapılır. Enükleasyonda prostatın iç kısmı bütün hâlinde çıkarılır; Rezūm’de buhar verilir; TURP’ta doku kademeli olarak traşlanır.' },
+          { when: '3. Gün', title: 'Taburculuk', body: 'Çoğu hastada ertesi gün taburculuk. Sonda süresi yönteme göre değişir ve önceden anlatılır.' },
+          { when: '4–7. Gün', title: 'Sonda alımı ve kontrol', body: 'Sonda burada alınır; sonrasında idrar yapmakta zorluk olursa hastane yakınında çözülür. Rezūm uygulandıysa asıl düzelmenin haftalar içinde geleceği hatırlatılır.' }
         ],
         risks: [
-          'Geçici idrarda yanma veya kanama',
-          'Retrograd ejakülasyon (menide azalma)',
+          'RETROGRAD BOŞALMA: Doku çıkaran yöntemlerden sonra meninin dışarı çıkmak yerine mesaneye geri kaçması sık görülür. Zararsızdır, sertleşmeyi ve cinsel isteği bozmaz; ancak çocuk sahibi olmayı zorlaştırır ve bazı erkekler için rahatsız edicidir. Çocuk isteğiniz varsa bunu ameliyattan önce söyleyin',
+          'GEÇİCİ İDRAR KAÇIRMA: Özellikle enükleasyon sonrası görülebilir, çünkü idrar tutma görevi tek bir kasa kalır. Çoğu hastada haftalar içinde düzelir; pelvik taban egzersizleri bu süreci kısaltmaya yardımcı olur',
+          'İdrar yaparken yanma ve idrarda kan — ilk günlerde beklenen bulgulardır',
           'İdrar yolu enfeksiyonu',
-          'Nadiren tekrar işlem ihtiyacı'
+          'Sonda alındıktan sonra idrar yapamama ve sondanın geçici olarak yeniden takılması',
+          'Zamanla idrar kanalında veya mesane boynunda darlık gelişmesi',
+          'Zamanla yeniden girişim gerekmesi — dokunun tamamen çıkarılmadığı yöntemlerde olasılık daha yüksektir',
+          'Rezūm’de ilk haftalarda şikâyetlerin geçici olarak artması ve faydanın gecikmeli başlaması'
         ],
         alternatives: [
-          'İlaç tedavisi (alfa blokerler, 5-ARI)',
-          'Yaşam tarzı değişiklikleri (hafif şikâyetlerde)',
-          'Prostatik stent veya UroLift (seçili vakalarda)'
+          'Yaşam tarzı düzenlemesi — akşam sıvı alımının azaltılması, kafein ve alkolün kısıtlanması, kabızlığın giderilmesi. Hafif şikâyetlerde ölçülebilir fayda sağlar',
+          'Alfa bloker ilaçlar — mesane boynundaki kasları gevşeterek akımı hızlı iyileştirir; baş dönmesi, ayağa kalkarken tansiyon düşmesi ve boşalmada değişiklik yapabilir',
+          '5-alfa redüktaz inhibitörleri — prostatı aylar içinde küçültür. ÖNEMLİ: PSA değerini yaklaşık yarıya düşürürler; bu ilacı kullanıyorsanız PSA’nızı yorumlayan hekime mutlaka söyleyin',
+          'İki ilacın birlikte kullanımı — seçilmiş hastalarda',
+          'Rezūm (su buharı) — daha az girişimsel, boşalmayı koruma açısından öne çıkar; faydası gecikmeli başlar',
+          'Prostatik üretral askı (UroLift) — doku çıkarılmayan, seçilmiş anatomilerde uygulanabilen yöntem',
+          'TURP — yerleşik endoskopik yöntem',
+          'HoLEP / ThuLEP — dokunun tamamen çıkarıldığı enükleasyon; büyük prostatlarda öne çıkar',
+          'Prostat arter embolizasyonu — seçilmiş hastalarda girişimsel radyoloji seçeneği'
         ],
         comparison: {
-          title: 'HoLEP vs Rezūm vs TURP',
-          columns: ['Kriter', 'HoLEP (Lazer)', 'Rezūm (Buhar)', 'TURP (Endoskopik)'],
+          title: 'HoLEP, Rezūm ve TURP: hangi denge size uyuyor',
+          columns: ['Ölçüt', 'HoLEP / ThuLEP', 'Rezūm (buhar)', 'TURP'],
           rows: [
-            { label: 'Uygun prostat boyutu', values: ['Her boyut, özellikle büyük', 'Küçük–orta', 'Küçük–orta'] },
-            { label: 'Anestezi', values: ['Genel/spinal', 'Sedasyon/lokal', 'Genel/spinal'] },
-            { label: 'Cinsel işlev koruma', values: ['İyi', 'Yüksek', 'Orta'] },
-            { label: 'Yatış', values: ['1 gece', 'Günübirlik', '1–2 gece'] },
-            { label: 'Kalıcılık', values: ['Yüksek', 'Orta', 'Yüksek'] }
+            { label: 'Doku ne olur', values: ['Tamamen çıkarılır', 'Yerinde kalır, zamanla emilir', 'Kısmen traşlanır'] },
+            { label: 'Prostat boyutu sınırı', values: ['Pratik bir tavan yoktur', 'Küçük–orta', 'Küçük–orta'] },
+            { label: 'Etki ne zaman başlar', values: ['Hemen', 'Haftalar içinde', 'Hemen'] },
+            { label: 'Boşalmanın korunması', values: ['Daha az olasıdır', 'Daha çok korunur', 'Daha az olasıdır'] },
+            { label: 'Geçici idrar kaçırma', values: ['Görülebilir', 'Beklenmez', 'Daha az görülür'] },
+            { label: 'Kanama kontrolü', values: ['İyi — kan sulandırıcı kullananlarda öne çıkar', 'Sınırlı veri; büyük kanamalı hastada uygun değil', 'Orta'] },
+            { label: 'Yeniden girişim ihtimali', values: ['Daha düşük', 'Daha yüksek', 'Orta'] },
+            { label: 'Hastanede kalış', values: ['1 gece', 'Günübirlik', '1–2 gece'] },
+            { label: 'Patoloji incelemesi', values: ['Çıkarılan doku incelenir', 'Doku çıkmaz, inceleme olmaz', 'Çıkarılan doku incelenir'] }
           ],
-          note: 'Tablo genel bilgilendirmedir; nihai yöntem kişiye göre belirlenir.'
+          note: 'Doğru soru "hangi yöntem daha gelişmiş" değil, "benim için hangi denge uygun" sorusudur. Cinsel işlevi ve boşalmayı korumaya öncelik veriyorsanız bunu açıkça söyleyin; idrar şikâyetlerinin kesin biçimde çözülmesi önceliğinizse bunu söyleyin. İki öncelik farklı yöntemlere işaret eder. Ayrıca doku çıkarılan yöntemlerde çıkan dokunun patolojik incelenmesi, beklenmedik bir kanserin yakalanmasına da imkân verir.'
         },
+        recovery: [
+          { period: 'İlk 48 saat', body: 'İdrarda kan ve yanma beklenir. Bol sıvı alınır. Ateş veya idrar yapamama durumunda derhal başvurulmalıdır.' },
+          { period: 'Sonda alındıktan sonraki ilk günler', body: 'Sık idrara çıkma ve sıkışma hissi olağandır. Az sayıda hastada sonda geçici olarak yeniden takılabilir; bu nedenle sonda alımının ertesi günü uçuş planlanmaz.' },
+          { period: '1–4. hafta', body: 'Enükleasyon sonrası geçici idrar kaçırma görülebilir; pelvik taban egzersizleri düzenli yapılır. Ağır kaldırmaktan ve ıkınmaktan kaçınılır, kabızlık önlenir.' },
+          { period: 'Rezūm sonrası 2–6. hafta', body: 'Asıl düzelme bu dönemde belirginleşir. İlk haftalarda şikâyetlerin geçici olarak artması olağandır ve işlemin başarısız olduğu anlamına gelmez.' },
+          { period: '1–3. ay', body: 'İdrar akımı ve gece uyanmalarda belirgin düzelme beklenir. Kontrol üroflowmetri ve kalan idrar ölçümü ile sonuç değerlendirilir.' },
+          { period: 'Uzun dönem', body: 'Şikâyetlerin yeniden başlaması hâlinde neden araştırılır; her tekrar prostat kaynaklı olmayabilir. Mesane kaynaklı şikâyetler ayrıca değerlendirilir.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Yöntem ve prostat boyutuna göre değişir.'
+          disclaimer: 'Tutar; uygulanan yönteme, prostat hacmine ve hastanede kalış süresine göre değişir. Kalem kalem ayrılmış yazılı teklif, tetkikleriniz incelendikten sonra verilir.'
         },
         packageIncludes: [
-          'İşlem ve hastane yatışı',
-          'Anestezi ve tetkikler',
-          'Transferler ve konaklama',
-          'Tıbbi tercüman ve koordinatör',
-          'Kontrol ve online takip'
+          'Muayene, üroflowmetri ve kalan idrar ölçümü',
+          'Kan ve idrar tetkikleri, idrar kültürü',
+          'PSA ölçümü',
+          'Anestezi ve ameliyathane',
+          'İşlem ve sarf malzemeleri',
+          'Hastane yatışı',
+          'Doku çıkarılan yöntemlerde patolojik inceleme',
+          'Sonda alımı ve dönüş öncesi kontrol',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve hasta koordinatörü',
+          'Dönüşten sonra uzaktan takip'
         ],
         faqs: [
-          { q: 'Cinsel işlevim etkilenir mi?', a: 'Yöntemler cinsel işlevi korumayı hedefler; en sık görülen değişiklik retrograd ejakülasyondur.' },
-          { q: 'Hangi yöntem daha kalıcı?', a: 'HoLEP büyük prostatlarda kalıcı sonuç verir; Rezūm daha az invazivdir. Seçim size göre yapılır.' },
-          { q: 'Sonda ne kadar kalır?', a: 'Genellikle 1–3 gün; yönteme göre değişir.' }
+          { q: 'Prostatım büyük, ameliyat olmalı mıyım?', a: 'Tek başına büyüklük tedavi gerekçesi değildir. Büyük prostatla hiç şikâyeti olmayan erkek de vardır. Karar, şikâyetlerinizin günlük yaşamınızı ne kadar kısıttığına ve mesaneniz ile böbreklerinize zarar verip vermediğine bakılarak verilir.' },
+          { q: 'Hangi durumda beklemek doğru değildir?', a: 'İdrar yapamama nedeniyle sonda takılmışsa, mesanede taş oluşmuşsa, tekrarlayan idrar yolu enfeksiyonu varsa, prostattan tekrarlayan kanama oluyorsa veya böbrek işlevlerinde bozulma başladıysa beklemek doğru değildir. Bunlar konfor meselesi değil, hasar işaretleridir.' },
+          { q: 'BPH kansere dönüşür mü?', a: 'Hayır. İyi huylu büyüme kanser değildir ve kansere dönüşmez. Ancak ikisi aynı organda birlikte bulunabilir; bu nedenle idrar şikâyeti ile başvuran bir erkekte PSA ve muayene ile kanser ayrıca değerlendirilir.' },
+          { q: 'Önce ilaç denenmeli mi?', a: 'Çoğu hastada evet. Alfa blokerler akımı görece hızlı iyileştirir; prostatı küçülten ilaçların etkisi aylar alır. İlaçtan yeterli fayda görülmediğinde veya yan etkiler kaldırılamadığında girişimsel seçenekler gündeme gelir.' },
+          { q: 'Prostat küçülten ilaç kullanıyorum, PSA sonucum etkilenir mi?', a: 'Evet ve bu sık atlanan bir noktadır. 5-alfa redüktaz inhibitörleri PSA değerini yaklaşık yarıya düşürür. Bu ilacı kullandığınızı söylemezseniz, aslında dikkat gerektiren bir PSA değeri normal gibi yorumlanabilir. Her PSA ölçümünde bu bilgiyi hekiminize verin.' },
+          { q: 'Ameliyattan sonra cinsel işlevim etkilenir mi?', a: 'En sık görülen değişiklik, meninin dışarı çıkmak yerine mesaneye geri kaçmasıdır (retrograd boşalma). Bu durum zararsızdır ve sertleşmeyi ya da cinsel isteği bozmaz, ancak çocuk sahibi olmayı zorlaştırır. Rezūm’ün bu konuda daha koruyucu olduğu bildirilmektedir.' },
+          { q: 'Hâlâ çocuk sahibi olmak istiyorum, ne yapmalıyım?', a: 'Bunu değerlendirmenin başında açıkça söyleyin. Doku çıkaran yöntemler bu durumda ilk tercih olmayabilir ve plan değişir. Sonradan söylemek, geri alınamayan bir sonucu beraberinde getirir.' },
+          { q: 'Ameliyattan sonra idrar kaçırır mıyım?', a: 'Özellikle enükleasyon sonrası geçici kaçırma görülebilir, çünkü idrar tutma görevi tek bir kasa kalmıştır. Çoğu hastada haftalar içinde düzelir. Pelvik taban egzersizlerini ameliyattan ÖNCE öğrenmek bu süreci kolaylaştırır.' },
+          { q: 'Hangi yöntem daha kalıcı?', a: 'Dokunun tamamen çıkarıldığı enükleasyon yöntemlerinde yıllar içinde yeniden girişim gerekme ihtimali daha düşüktür. Rezūm daha az girişimseldir ama bu ihtimal daha yüksektir. Yurt dışından geliyorsanız, ikinci bir seyahat ihtimalini bu kararda ayrıca tartın.' },
+          { q: 'Kan sulandırıcı kullanıyorum, hangisi daha uygun?', a: 'Enükleasyon yöntemlerinde kanama kontrolünün iyi olması nedeniyle bu hastalarda öne çıkar. Yine de ilaç yönetimi her hastada ayrı planlanır; ilacınızı kendi kararınızla kesmeyin ve tam listenizi önceden gönderin.' },
+          { q: 'Sonda ne kadar kalır?', a: 'Yönteme ve prostatın durumuna göre değişir; genellikle birkaç gündür. Sonda burada alınır ki sonrasında idrar yapmakta zorluk olursa hastane yakınında çözülsün. Uçuşunuzu sonda alımının ertesi gününe planlamayın.' },
+          { q: 'Gelmeden önce hangi belgeleri göndermeliyim?', a: 'Prostat hacmini gösteren ultrason veya görüntüleme, varsa üroflowmetri ve işeme sonrası kalan idrar ölçümü, güncel PSA, idrar tahlili, kullandığınız tüm ilaçların listesi (kan sulandırıcılar dâhil) ve diğer hastalıklarınız. Bunlarla hangi yöntemin uygun olduğu siz yola çıkmadan değerlendirilebilir.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Management of Non-Neurogenic Male LUTS — Avrupa Üroloji Derneği', url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts' }
         ]
       },
       en: {
-        title: 'BPH / Benign Prostatic Enlargement (HoLEP, Rezūm, TURP)',
-        summary: 'Modern, tissue-preserving methods for benign prostate enlargement causing urinary symptoms.',
-        metaTitle: 'BPH Treatment | HoLEP, Rezūm and TURP Comparison',
-        metaDescription: 'HoLEP, Rezūm and TURP methods for benign prostatic hyperplasia (BPH): process, risks, alternatives and price range.',
+        title: 'BPH / Benign Prostate Enlargement (HoLEP, Rezūm, TURP)',
+        summary:
+          'An enlarged prostate is not in itself a reason for treatment. What matters is how much the symptoms restrict daily life and whether the bladder is being harmed — the method is chosen after that.',
+        metaTitle: 'BPH Treatment: Choosing Between HoLEP, Rezūm and TURP',
+        metaDescription:
+          'The limits of drug treatment for benign prostate enlargement, when waiting is not safe, how HoLEP, Rezūm and TURP compare, and honest expectations about ejaculation and temporary leakage.',
+        quickFacts: {
+          duration: '30–90 minutes depending on method',
+          anesthesia: 'General or spinal; usually sedation for Rezūm',
+          hospitalStay: 'Day case – 2 nights',
+          stayInTurkey: '5–8 days',
+          catheter: '1–7 days depending on method',
+          returnToWork: '1–3 weeks',
+          flightClearance: 'After catheter removal and review'
+        },
         definition: [
-          'Benign prostatic enlargement (BPH) is the age-related growth of the prostate that obstructs urine flow. It causes complaints such as a weak stream, frequent and nighttime urination.',
-          'Modern methods include laser enucleation of prostate tissue (HoLEP), steam-energy shrinking (Rezūm) or classic endoscopic resection (TURP). The choice is made according to prostate size and patient priorities.'
+          'Benign prostatic hyperplasia (BPH) is enlargement of the prostate with age, compressing the urinary channel. A weak stream, hesitancy, frequency, waking at night and a feeling of incomplete emptying are the typical symptoms.',
+          'BPH IS NOT CANCER and does not turn into cancer. Because both can occur in the same organ, however, cancer is assessed separately with PSA and examination in any man presenting with urinary symptoms.',
+          'AN IMPORTANT DISTINCTION: the size of the prostate alone is not a reason for treatment. Some men have a large prostate and no symptoms; others have a small prostate and considerable difficulty. The decision rests on your symptoms and the state of your bladder, not on the volume measured on ultrasound.',
+          'THERE ARE, HOWEVER, SITUATIONS IN WHICH WAITING IS NOT SAFE: repeated inability to pass urine, bladder stones, recurrent urinary infections, recurrent bleeding from the prostate, and deterioration in kidney function. These are not matters of comfort but signs of damage already occurring.',
+          'The prostate is not always the only cause. Overactive bladder, nerve involvement from diabetes, certain medications and sleep apnoea can produce a similar picture. Assessment therefore comes before turning straight to the prostate.'
+        ],
+        eligibility: {
+          suitable: [
+            'Men who gain insufficient benefit from medication or cannot tolerate its side effects',
+            'Men whose symptoms markedly restrict daily life and sleep',
+            'Men catheterised because of retention',
+            'Men who have developed bladder stones',
+            'Men with recurrent urinary tract infections',
+            'Men with recurrent bleeding from the prostate',
+            'Men with impaired kidney function caused by the obstruction'
+          ],
+          notSuitable: [
+            'Men with mild symptoms who are not troubled by them — unnecessary intervention is avoided',
+            'Men with untreated urinary infection: the infection is treated first',
+            'Men whose symptoms arise from the bladder rather than the prostate — prostate surgery will not deliver the expected benefit',
+            'Men still planning to father children, in whom tissue-removing methods may not be the first choice',
+            'Men at high anaesthetic risk, in whom less invasive options come to the fore'
+          ]
+        },
+        technology: [
+          'Uroflowmetry and measurement of post-void residual urine',
+          'Ultrasound determination of prostate volume',
+          'PSA and digital rectal examination — to assess cancer separately',
+          'Holmium or thulium laser enucleation (HoLEP / ThuLEP)',
+          'Water vapour therapy (Rezūm)',
+          'Conventional endoscopic resection (TURP)',
+          'Urodynamics in selected patients — to distinguish bladder from prostate as the source of symptoms'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
+          note: 'Surgical treatment of prostate enlargement is among Assoc. Prof. Müslüm Ergün\'s areas of practice. The method is selected from prostate volume, flow rate, residual urine, current medication, expectations regarding sexual function and any wish for children, considered together.'
         },
         timeline: [
-          { when: 'Remote', title: 'Pre-assessment', body: 'Your urinary flow test, PSA and prostate volume values are reviewed.' },
-          { when: 'Day 1', title: 'Arrival & exam', body: 'Examination, uroflowmetry and required tests.' },
-          { when: 'Day 2', title: 'Procedure', body: 'Procedure according to the chosen method; usually a 1-night stay.' },
-          { when: 'Day 3–4', title: 'Review', body: 'Catheter assessment, discharge and clearance to return.' }
+          { when: 'Remotely', title: 'Initial assessment', body: 'Imaging showing prostate volume, uroflowmetry and residual urine measurement, your PSA, your complete medication list (particularly anticoagulants) and your other medical conditions are reviewed.' },
+          { when: 'Day 1', title: 'Arrival and examination', body: 'Examination, repeat tests if needed, urinalysis and culture, anaesthetic assessment. If the culture grows an organism, the procedure is postponed.' },
+          { when: 'Day 2', title: 'Procedure', body: 'Performed according to the chosen method. Enucleation removes the inner portion whole; Rezūm delivers steam; TURP shaves tissue progressively.' },
+          { when: 'Day 3', title: 'Discharge', body: 'Most patients go home the following day. The duration of catheterisation depends on the method and is explained in advance.' },
+          { when: 'Days 4–7', title: 'Catheter removal and review', body: 'The catheter is removed here, so that difficulty passing urine is dealt with close to the hospital. After Rezūm you are reminded that the real improvement arrives over weeks.' }
         ],
         risks: [
-          'Temporary burning or blood on urination',
-          'Retrograde ejaculation (reduced semen release)',
+          'RETROGRADE EJACULATION: common after tissue-removing methods, with semen passing into the bladder instead of outwards. It is harmless and affects neither erections nor desire, but it impairs fertility and some men find it unwelcome. If you wish to father children, say so before surgery',
+          'TEMPORARY URINARY LEAKAGE: particularly after enucleation, because continence then depends on a single muscle. It settles within weeks in most men; pelvic floor exercises shorten the process',
+          'Stinging and blood in the urine — expected in the first days',
           'Urinary tract infection',
-          'Rarely, need for a repeat procedure'
+          'Inability to pass urine after catheter removal, requiring temporary recatheterisation',
+          'Narrowing of the urethra or bladder neck developing over time',
+          'The need for a further procedure in later years — more likely with methods that do not remove the tissue completely',
+          'With Rezūm, a temporary worsening of symptoms in the first weeks and a delayed onset of benefit'
         ],
         alternatives: [
-          'Medication (alpha blockers, 5-ARI)',
-          'Lifestyle changes (for mild complaints)',
-          'Prostatic stent or UroLift (in selected cases)'
+          'Lifestyle measures — reducing evening fluids, limiting caffeine and alcohol, treating constipation. Measurable benefit in mild symptoms',
+          'Alpha blockers — relax the bladder neck and improve flow relatively quickly; they can cause dizziness, a drop in blood pressure on standing, and changes in ejaculation',
+          '5-alpha reductase inhibitors — shrink the prostate over months. IMPORTANT: they roughly halve the PSA value; if you take one, always tell whoever interprets your PSA',
+          'Combination of the two, in selected patients',
+          'Rezūm (water vapour) — less invasive and more likely to preserve ejaculation; the benefit begins later',
+          'Prostatic urethral lift (UroLift) — no tissue removed, suitable for selected anatomy',
+          'TURP — the established endoscopic method',
+          'HoLEP / ThuLEP — complete enucleation of the obstructing tissue; prominent for large glands',
+          'Prostatic artery embolisation — an interventional radiology option in selected patients'
         ],
         comparison: {
-          title: 'HoLEP vs Rezūm vs TURP',
-          columns: ['Criterion', 'HoLEP (Laser)', 'Rezūm (Steam)', 'TURP (Endoscopic)'],
+          title: 'HoLEP, Rezūm and TURP: which trade-off suits you',
+          columns: ['Criterion', 'HoLEP / ThuLEP', 'Rezūm (vapour)', 'TURP'],
           rows: [
-            { label: 'Suitable prostate size', values: ['Any size, especially large', 'Small–medium', 'Small–medium'] },
-            { label: 'Anesthesia', values: ['General/spinal', 'Sedation/local', 'General/spinal'] },
-            { label: 'Sexual function preservation', values: ['Good', 'High', 'Moderate'] },
-            { label: 'Stay', values: ['1 night', 'Day-case', '1–2 nights'] },
-            { label: 'Durability', values: ['High', 'Moderate', 'High'] }
+            { label: 'What happens to the tissue', values: ['Removed completely', 'Left in place, absorbed over time', 'Partially shaved away'] },
+            { label: 'Prostate size limit', values: ['No practical ceiling', 'Small to moderate', 'Small to moderate'] },
+            { label: 'When the benefit starts', values: ['Immediately', 'Over weeks', 'Immediately'] },
+            { label: 'Ejaculation preserved', values: ['Less likely', 'More often preserved', 'Less likely'] },
+            { label: 'Temporary leakage', values: ['Can occur', 'Not expected', 'Less frequent'] },
+            { label: 'Bleeding control', values: ['Good — favoured on anticoagulants', 'Limited data; unsuitable with heavy bleeding', 'Moderate'] },
+            { label: 'Chance of a further procedure', values: ['Lower', 'Higher', 'Intermediate'] },
+            { label: 'Hospital stay', values: ['1 night', 'Day case', '1–2 nights'] },
+            { label: 'Tissue available for pathology', values: ['Yes, the removed tissue is examined', 'No tissue is removed', 'Yes, the removed tissue is examined'] }
           ],
-          note: 'This table is general information; the final method is determined individually.'
+          note: 'The right question is not which method is more advanced but which trade-off suits you. If preserving ejaculation and sexual function is your priority, say so plainly; if definitive resolution of your urinary symptoms is the priority, say that. They point to different methods. Note too that where tissue is removed it is examined, which can reveal an unsuspected cancer.'
         },
+        recovery: [
+          { period: 'First 48 hours', body: 'Blood in the urine and stinging are expected. Drink plenty. Seek care immediately for fever or inability to pass urine.' },
+          { period: 'First days after catheter removal', body: 'Frequency and urgency are usual. A small number of men need the catheter replaced temporarily, which is why a flight is not planned for the day after removal.' },
+          { period: 'Weeks 1–4', body: 'Temporary leakage can follow enucleation; pelvic floor exercises are done consistently. Avoid lifting and straining, and prevent constipation.' },
+          { period: 'Weeks 2–6 after Rezūm', body: 'The real improvement becomes apparent in this period. A temporary worsening in the first weeks is usual and does not mean the procedure has failed.' },
+          { period: 'Months 1–3', body: 'Marked improvement in flow and in waking at night is expected. The result is assessed with repeat uroflowmetry and residual urine measurement.' },
+          { period: 'Long term', body: 'If symptoms return, the cause is investigated; not every recurrence comes from the prostate. Bladder-related symptoms are assessed separately.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Varies by method and prostate size.'
+          disclaimer: 'The figure depends on the method, the prostate volume and the length of hospital stay. An itemised written quote follows review of your investigations.'
         },
         packageIncludes: [
-          'Procedure and hospital stay',
-          'Anesthesia and tests',
-          'Transfers and accommodation',
-          'Medical interpreter and coordinator',
-          'Follow-up and online monitoring'
+          'Examination, uroflowmetry and residual urine measurement',
+          'Blood and urine tests, urine culture',
+          'PSA measurement',
+          'Anaesthesia and theatre',
+          'The procedure and its consumables',
+          'Hospital stay',
+          'Pathological examination where tissue is removed',
+          'Catheter removal and the review before you fly',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and patient coordinator',
+          'Remote follow-up after you return home'
         ],
         faqs: [
-          { q: 'Will my sexual function be affected?', a: 'The methods aim to preserve sexual function; the most common change is retrograde ejaculation.' },
-          { q: 'Which method is more durable?', a: 'HoLEP gives durable results in large prostates; Rezūm is less invasive. The choice is made for you.' },
-          { q: 'How long does the catheter stay?', a: 'Usually 1–3 days; it varies by method.' }
+          { q: 'My prostate is large — do I need surgery?', a: 'Size alone is not a reason for treatment. Some men have a large prostate and no symptoms at all. The decision rests on how much your symptoms restrict daily life and whether your bladder and kidneys are being harmed.' },
+          { q: 'When is it not safe to wait?', a: 'If you have been catheterised because you could not pass urine, if bladder stones have formed, if you have recurrent urinary infections, if the prostate bleeds repeatedly, or if kidney function has started to deteriorate. These are not matters of comfort but signs of damage.' },
+          { q: 'Does BPH turn into cancer?', a: 'No. Benign enlargement is not cancer and does not become cancer. The two can coexist in the same organ, however, so cancer is assessed separately with PSA and examination in any man with urinary symptoms.' },
+          { q: 'Should medication be tried first?', a: 'In most men, yes. Alpha blockers improve flow relatively quickly; drugs that shrink the prostate take months to work. Interventional options come into play when medication gives insufficient benefit or its side effects cannot be tolerated.' },
+          { q: 'I take a prostate-shrinking drug — does it affect my PSA?', a: 'Yes, and this is frequently overlooked. 5-alpha reductase inhibitors roughly halve the PSA value. If you do not mention that you take one, a PSA result that actually warrants attention may be read as normal. Tell your doctor at every PSA test.' },
+          { q: 'Will my sexual function be affected?', a: 'The most common change is that semen passes backwards into the bladder instead of outwards (retrograde ejaculation). It is harmless and affects neither erections nor desire, but it does impair fertility. Rezūm is reported to preserve ejaculation more often.' },
+          { q: 'I still want children — what should I do?', a: 'Say so at the start of the assessment. Tissue-removing methods may not be the first choice in that situation and the plan changes. Mentioning it afterwards leaves you with a result that cannot be undone.' },
+          { q: 'Will I leak urine after the operation?', a: 'Temporary leakage can occur, particularly after enucleation, because continence then depends on a single muscle. It settles within weeks in most men. Learning pelvic floor exercises BEFORE surgery makes this easier.' },
+          { q: 'Which method lasts longer?', a: 'Enucleation, which removes the tissue completely, carries a lower chance of needing a further procedure in later years. Rezūm is less invasive but that chance is higher. If you are travelling from abroad, weigh the possibility of a second journey in this decision.' },
+          { q: 'I take blood thinners — which method suits me?', a: 'Enucleation is favoured in these patients because bleeding is well controlled. Medication is nonetheless managed individually; do not stop anything on your own, and send your full list in advance.' },
+          { q: 'How long does the catheter stay in?', a: 'It depends on the method and on the prostate, but it is usually a few days. It is removed here so that any difficulty passing urine is managed close to the hospital. Do not plan your flight for the day after removal.' },
+          { q: 'What should I send before coming?', a: 'Ultrasound or other imaging showing prostate volume, uroflowmetry and post-void residual if available, a current PSA, a urinalysis, a complete list of your medication including anticoagulants, and your other medical conditions. With these, the right method can be assessed before you travel.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Management of Non-Neurogenic Male LUTS — European Association of Urology', url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts' }
         ]
       },
       ar: {
-        title: 'تضخم البروستاتا الحميد (HoLEP، Rezūm، TURP)',
-        summary: 'طرق حديثة تحافظ على الأنسجة لعلاج تضخم البروستاتا الحميد المسبِّب لأعراض بولية.',
-        metaTitle: 'علاج تضخم البروستاتا | مقارنة HoLEP وRezūm وTURP',
-        metaDescription: 'طرق HoLEP وRezūm وTURP لعلاج تضخم البروستاتا الحميد (BPH): المسار، المخاطر، البدائل ونطاق السعر.',
+        title: 'تضخم البروستاتا الحميد (HoLEP وRezūm وTURP)',
+        summary:
+          'كِبَر البروستاتا وحده ليس سببًا للعلاج. فالمهم مدى تقييد الشكوى لحياتك اليومية وهل تضررت المثانة — واختيار الطريقة يأتي بعد ذلك.',
+        metaTitle: 'علاج تضخم البروستاتا: كيف يُختار بين HoLEP وRezūm وTURP',
+        metaDescription:
+          'حدود العلاج الدوائي في تضخم البروستاتا الحميد، ومتى لا يصح الانتظار، ومقارنة HoLEP وRezūm وTURP، وتوقعات صادقة عن القذف والتسرّب المؤقت للبول.',
+        quickFacts: {
+          duration: '30–90 دقيقة بحسب الطريقة',
+          anesthesia: 'عام أو نصفي؛ وفي Rezūm تخدير خفيف غالبًا',
+          hospitalStay: 'من دون مبيت إلى ليلتين',
+          stayInTurkey: '5–8 أيام',
+          catheter: '1–7 أيام بحسب الطريقة',
+          returnToWork: '1–3 أسابيع',
+          flightClearance: 'بعد نزع القسطرة والمراجعة'
+        },
         definition: [
-          'تضخم البروستاتا الحميد (BPH) هو تضخم البروستاتا مع التقدم في العمر بما يعيق تدفق البول. ويسبّب أعراضًا مثل ضعف التدفق وكثرة التبول والتبول الليلي.',
-          'تشمل الطرق الحديثة استئصال نسيج البروستاتا بالليزر (HoLEP)، أو تقليصه بطاقة البخار (Rezūm)، أو الاستئصال بالمنظار التقليدي (TURP). ويُحدَّد الاختيار حسب حجم البروستاتا وأولويات المريض.'
+          'تضخم البروستاتا الحميد هو كِبَر الغدة مع التقدم في العمر فتضغط على مجرى البول. والشكاوى المعتادة: ضعف اندفاع البول، والتأخر في بدء التبول، وكثرة التبول، والاستيقاظ ليلًا، والشعور بعدم إفراغ المثانة تمامًا.',
+          'التضخم الحميد ليس سرطانًا ولا يتحول إليه. لكن لأنهما قد يجتمعان في العضو نفسه، يُقيَّم السرطان على حدة بتحليل PSA والفحص عند كل رجل يراجع بشكوى بولية.',
+          'تمييز مهم: حجم الغدة وحده ليس سببًا للعلاج. فمن الرجال من لديه بروستاتا كبيرة بلا أيّ شكوى، ومنهم من لديه بروستاتا صغيرة ومعاناة واضحة. والقرار يقوم على شكواك وحال مثانتك، لا على الحجم المقيس بالموجات فوق الصوتية.',
+          'لكن ثمة حالات لا يصح فيها الانتظار: احتباس البول المتكرر، وتكوّن حصاة في المثانة، والتهابات بولية متكررة، ونزف متكرر من البروستاتا، وتراجع في وظيفة الكلى. فهذه ليست مسائل راحة بل علامات ضرر قائم بالفعل.',
+          'وليست البروستاتا دائمًا السبب الوحيد. ففرط نشاط المثانة، وتأثر الأعصاب بالسكري، وبعض الأدوية، وانقطاع النفس النومي تُحدث الصورة نفسها. ولذلك يسبق التقييمُ التوجّهَ المباشر إلى البروستاتا.'
+        ],
+        eligibility: {
+          suitable: [
+            'رجال لم تُجدِهم الأدوية بما يكفي أو لم يحتملوا آثارها',
+            'رجال تقيّد شكواهم حياتهم اليومية ونومهم بوضوح',
+            'رجال وُضعت لهم قسطرة بسبب احتباس البول',
+            'رجال تكوّنت لديهم حصاة في المثانة',
+            'رجال يعانون التهابات بولية متكررة',
+            'رجال لديهم نزف متكرر من البروستاتا',
+            'رجال تأثرت وظيفة كُلاهم بالانسداد'
+          ],
+          notSuitable: [
+            'رجال شكواهم خفيفة ولا تزعجهم — ويُتجنَّب التدخل غير اللازم',
+            'رجال لديهم التهاب بولي غير معالَج: يُعالَج أولًا',
+            'رجال مصدر شكواهم المثانة لا البروستاتا — فجراحة البروستاتا لن تعطي الفائدة المرجوّة',
+            'رجال ما زالوا يخططون للإنجاب، فقد لا تكون طرق إزالة النسيج خيارهم الأول',
+            'رجال ذوو خطورة تخديرية عالية، وتتقدم عندهم الخيارات الأقل تدخلًا'
+          ]
+        },
+        technology: [
+          'قياس تدفق البول وقياس البول المتبقي بعد التبول',
+          'تحديد حجم البروستاتا بالموجات فوق الصوتية',
+          'تحليل PSA والفحص بالإصبع — لتقييم السرطان على حدة',
+          'الاستئصال الكامل بليزر الهولميوم أو التوليوم (HoLEP / ThuLEP)',
+          'العلاج ببخار الماء (Rezūm)',
+          'الاستئصال بالمنظار التقليدي (TURP)',
+          'الدراسة الديناميكية البولية عند مرضى مختارين — للتمييز بين المثانة والبروستاتا كمصدر للشكوى'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'يعكس عدد الحالات إجمالي الخبرة الجراحية للأستاذ المشارك د. مسلم إرغن في هذا المجال.'
+          note: 'العلاج الجراحي لتضخم البروستاتا من مجالات عمل الأستاذ المشارك الدكتور مسلم إرغون. وتُختار الطريقة بتقييم حجم الغدة وتدفق البول والبول المتبقي والأدوية المستعملة وتوقعات الوظيفة الجنسية والرغبة في الإنجاب معًا.'
         },
         timeline: [
-          { when: 'عن بُعد', title: 'التقييم الأولي', body: 'تُراجَع نتائج اختبار تدفق البول وPSA وحجم البروستاتا.' },
-          { when: 'اليوم 1', title: 'الوصول والفحص', body: 'الفحص وقياس التدفق البولي والفحوصات اللازمة.' },
-          { when: 'اليوم 2', title: 'الإجراء', body: 'يتم الإجراء حسب الأسلوب المختار؛ عادةً بمبيت ليلة واحدة.' },
-          { when: 'اليوم 3–4', title: 'المراجعة', body: 'تقييم القسطرة، الخروج، والإذن بالعودة.' }
+          { when: 'عن بُعد', title: 'التقييم المبدئي', body: 'تُراجَع صور تُبيّن حجم البروستاتا، وقياس تدفق البول والبول المتبقي، وقيمة PSA، وقائمة أدويتك كاملةً (وخصوصًا مميعات الدم)، وأمراضك الأخرى.' },
+          { when: 'اليوم 1', title: 'الوصول والفحص', body: 'فحص سريري، وإعادة الفحوص عند اللزوم، وتحليل البول وزراعته، وتقييم التخدير. وإن نَمَت جرثومة في الزراعة أُجّل الإجراء.' },
+          { when: 'اليوم 2', title: 'الإجراء', body: 'يُنفَّذ بالطريقة المختارة. ففي الاستئصال الكامل يُفصَل الجزء الداخلي كاملًا؛ وفي Rezūm يُعطى بخار الماء؛ وفي TURP يُكشَط النسيج تدريجيًا.' },
+          { when: 'اليوم 3', title: 'الخروج', body: 'يعود معظم المرضى في اليوم التالي. ومدة القسطرة تختلف بحسب الطريقة وتُشرَح مسبقًا.' },
+          { when: 'اليوم 4–7', title: 'نزع القسطرة والمراجعة', body: 'تُنزَع القسطرة هنا ليُعالَج تعذّر التبول قرب المستشفى. وبعد Rezūm يُذكَّر المريض بأن التحسن الفعلي يأتي خلال أسابيع.' }
         ],
         risks: [
-          'حرقان أو دم مؤقت عند التبول',
-          'القذف الراجع (قلة كمية السائل المنوي)',
+          'القذف الرجوعي: شائع بعد طرق إزالة النسيج، إذ يرجع السائل المنوي إلى المثانة بدل خروجه. وهو غير ضار ولا يُفسد الانتصاب ولا الرغبة، لكنه يصعّب الإنجاب ويزعج بعض الرجال. فإن كنت ترغب في الإنجاب فقُل ذلك قبل العملية',
+          'تسرّب مؤقت للبول: خصوصًا بعد الاستئصال الكامل، لأن التحكم يصير معتمدًا على عضلة واحدة. ويزول عند معظم الرجال خلال أسابيع؛ وتمارين قاع الحوض تختصر هذه المدة',
+          'حرقة عند التبول ودم في البول — متوقعان في الأيام الأولى',
           'التهاب المسالك البولية',
-          'نادرًا، الحاجة لإجراء إضافي'
+          'تعذّر التبول بعد نزع القسطرة والحاجة إلى إعادتها مؤقتًا',
+          'تضيّق في الإحليل أو عنق المثانة مع الوقت',
+          'الحاجة إلى تدخل جديد بعد سنوات — وهو أرجح في الطرق التي لا تُزيل النسيج كاملًا',
+          'في Rezūm: زيادة مؤقتة في الشكوى خلال الأسابيع الأولى وتأخر ظهور الفائدة'
         ],
         alternatives: [
-          'العلاج الدوائي (حاصرات ألفا، مثبطات 5-ألفا ريدكتاز)',
-          'تغييرات نمط الحياة (للأعراض الخفيفة)',
-          'دعامة بروستاتية أو UroLift (في حالات مختارة)'
+          'تعديل نمط الحياة — تقليل الشرب مساءً، والحد من الكافيين والكحول، ومعالجة الإمساك. وفائدته ملموسة في الشكوى الخفيفة',
+          'حاصرات ألفا — تُرخي عنق المثانة وتُحسّن التدفق سريعًا نسبيًا؛ وقد تُحدث دوارًا وهبوطًا في الضغط عند الوقوف وتغيّرًا في القذف',
+          'مثبطات اختزال ألفا-5 — تُصغّر الغدة خلال أشهر. ومهم: تخفض قيمة PSA إلى نحو النصف؛ فإن كنت تستعملها فأخبر من يقرأ تحليلك',
+          'الجمع بين المجموعتين عند مرضى مختارين',
+          'Rezūm (بخار الماء) — أقل تدخلًا وأكثر حفاظًا على القذف؛ وفائدته متأخرة الظهور',
+          'الدعامة الإحليلية البروستاتية (UroLift) — من دون إزالة نسيج، وتصلح لتشريح معيّن',
+          'TURP — الطريقة المنظارية الراسخة',
+          'HoLEP / ThuLEP — استئصال كامل للنسيج المسدّ؛ ويتقدم في الغدد الكبيرة',
+          'إصمام شرايين البروستاتا — خيار في الأشعة التداخلية عند مرضى مختارين'
         ],
         comparison: {
-          title: 'HoLEP مقابل Rezūm مقابل TURP',
-          columns: ['المعيار', 'HoLEP (ليزر)', 'Rezūm (بخار)', 'TURP (بالمنظار)'],
+          title: 'HoLEP وRezūm وTURP: أيّ موازنة تناسبك',
+          columns: ['المعيار', 'HoLEP / ThuLEP', 'Rezūm (بخار)', 'TURP'],
           rows: [
-            { label: 'حجم البروستاتا المناسب', values: ['كل الأحجام، خصوصًا الكبيرة', 'صغير–متوسط', 'صغير–متوسط'] },
-            { label: 'التخدير', values: ['عام/نصفي', 'تخدير خفيف/موضعي', 'عام/نصفي'] },
-            { label: 'الحفاظ على الوظيفة الجنسية', values: ['جيد', 'مرتفع', 'متوسط'] },
-            { label: 'المبيت', values: ['ليلة واحدة', 'نفس اليوم', 'ليلة–ليلتان'] },
-            { label: 'الديمومة', values: ['مرتفعة', 'متوسطة', 'مرتفعة'] }
+            { label: 'ماذا يحدث للنسيج', values: ['يُزال كاملًا', 'يبقى ويُمتَص مع الوقت', 'يُكشَط جزئيًا'] },
+            { label: 'حدّ حجم البروستاتا', values: ['لا سقف عمليًا', 'صغيرة إلى متوسطة', 'صغيرة إلى متوسطة'] },
+            { label: 'متى تبدأ الفائدة', values: ['فورًا', 'خلال أسابيع', 'فورًا'] },
+            { label: 'الحفاظ على القذف', values: ['أقل احتمالًا', 'يُحفَظ أكثر', 'أقل احتمالًا'] },
+            { label: 'تسرّب مؤقت', values: ['وارد', 'غير متوقع', 'أقل حدوثًا'] },
+            { label: 'ضبط النزف', values: ['جيد — يُفضَّل مع مميعات الدم', 'بيانات محدودة؛ لا يصلح مع نزف غزير', 'متوسط'] },
+            { label: 'احتمال تدخل جديد', values: ['أقل', 'أعلى', 'بينهما'] },
+            { label: 'الإقامة', values: ['ليلة واحدة', 'من دون مبيت', 'ليلة إلى ليلتين'] },
+            { label: 'نسيج للفحص المرضي', values: ['نعم، يُفحَص النسيج المُزال', 'لا يُزال نسيج', 'نعم، يُفحَص النسيج المُزال'] }
           ],
-          note: 'هذا الجدول للمعلومات العامة؛ ويُحدَّد الأسلوب النهائي بحسب كل حالة.'
+          note: 'السؤال الصحيح ليس أيّ طريقة أحدث، بل أيّ موازنة تناسبك. فإن كان الحفاظ على القذف والوظيفة الجنسية أولويتك فقُلها صراحةً؛ وإن كانت الأولوية حسم الشكوى البولية فقُل ذلك أيضًا. فالأولويتان تقودان إلى طريقتين مختلفتين. ولاحظ أيضًا أن النسيج حيث يُزال يُفحَص، وقد يكشف ذلك سرطانًا غير متوقَّع.'
         },
+        recovery: [
+          { period: 'أول 48 ساعة', body: 'الدم في البول والحرقة متوقعان. اشرب كمية كافية. وراجع فورًا عند الحمى أو تعذّر التبول.' },
+          { period: 'الأيام الأولى بعد نزع القسطرة', body: 'كثرة التبول والإلحاح أمران معتادان. وقد يحتاج قليل من الرجال إلى إعادة القسطرة مؤقتًا؛ ولذلك لا يُخطَّط سفر في اليوم التالي للنزع.' },
+          { period: 'الأسبوع 1–4', body: 'قد يحدث تسرّب مؤقت بعد الاستئصال الكامل؛ وتُؤدّى تمارين قاع الحوض بانتظام. ويُتجنَّب حمل الثقيل والحزق، ويُمنَع الإمساك.' },
+          { period: 'الأسبوع 2–6 بعد Rezūm', body: 'يتضح التحسن الفعلي في هذه المدة. وزيادة الشكوى مؤقتًا في الأسابيع الأولى أمر معتاد ولا يعني فشل الإجراء.' },
+          { period: 'الشهر 1–3', body: 'يُتوقَّع تحسن واضح في اندفاع البول وفي الاستيقاظ الليلي. ويُقيَّم الناتج بإعادة قياس التدفق والبول المتبقي.' },
+          { period: 'على المدى البعيد', body: 'إن عادت الشكوى بُحث عن السبب؛ فليس كل عود منشؤه البروستاتا. والشكاوى ذات المنشأ المثاني تُقيَّم على حدة.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'يختلف حسب الأسلوب وحجم البروستاتا.'
+          disclaimer: 'يتغير المبلغ بحسب الطريقة المطبَّقة وحجم البروستاتا ومدة الإقامة في المستشفى. ويُقدَّم عرض مكتوب ومفصَّل بعد مراجعة فحوصك.'
         },
         packageIncludes: [
-          'الإجراء والإقامة في المستشفى',
-          'التخدير والفحوصات',
-          'التنقلات والإقامة',
-          'مترجم طبي ومنسّق',
-          'المراجعة والمتابعة الإلكترونية'
+          'الفحص وقياس تدفق البول والبول المتبقي',
+          'تحاليل الدم والبول وزراعة البول',
+          'قياس PSA',
+          'التخدير وغرفة العمليات',
+          'الإجراء والمستهلكات',
+          'الإقامة في المستشفى',
+          'الفحص المرضي حيث يُزال نسيج',
+          'نزع القسطرة والمراجعة قبل السفر',
+          'التنقلات بين المطار والمستشفى والفندق',
+          'الإقامة (المريض + مرافق واحد)',
+          'مترجم طبي ومنسّق للمرضى',
+          'متابعة عن بُعد بعد العودة إلى بلدك'
         ],
         faqs: [
-          { q: 'هل ستتأثر وظيفتي الجنسية؟', a: 'تهدف الطرق إلى الحفاظ على الوظيفة الجنسية؛ وأكثر تغيّر شيوعًا هو القذف الراجع.' },
-          { q: 'أي أسلوب أكثر ديمومة؟', a: 'يمنح HoLEP نتائج دائمة في البروستاتا الكبيرة؛ وRezūm أقل توغلًا. ويُتَّخذ الاختيار وفقًا لحالتك.' },
-          { q: 'كم تبقى القسطرة؟', a: 'عادةً 1–3 أيام؛ وتختلف حسب الأسلوب.' }
+          { q: 'بروستاتي كبيرة، هل يجب أن أُجري عملية؟', a: 'الحجم وحده ليس سببًا للعلاج. فمن الرجال من لديه بروستاتا كبيرة ولا شكوى لديه البتة. والقرار يقوم على مدى تقييد الشكوى لحياتك اليومية وهل تضررت مثانتك وكُلاك.' },
+          { q: 'متى لا يصح الانتظار؟', a: 'إذا وُضعت لك قسطرة بسبب تعذّر التبول، أو تكوّنت حصاة في المثانة، أو تكررت التهابات المسالك، أو تكرر النزف من البروستاتا، أو بدأ تراجع في وظيفة الكلى. فهذه ليست مسائل راحة بل علامات ضرر.' },
+          { q: 'هل يتحول التضخم الحميد إلى سرطان؟', a: 'لا. فالتضخم الحميد ليس سرطانًا ولا يصير إليه. لكنهما قد يجتمعان في العضو نفسه، ولذلك يُقيَّم السرطان على حدة بتحليل PSA والفحص عند وجود شكوى بولية.' },
+          { q: 'هل أجرّب الأدوية أولًا؟', a: 'عند معظم الرجال نعم. فحاصرات ألفا تُحسّن التدفق سريعًا نسبيًا؛ أما الأدوية المصغِّرة للغدة فتحتاج أشهرًا. وتُطرح الخيارات التدخلية حين لا تكفي فائدة الدواء أو لا تُحتمَل آثاره.' },
+          { q: 'أتناول دواءً يُصغّر البروستاتا، هل يتأثر تحليل PSA؟', a: 'نعم، وهذه نقطة كثيرًا ما تُغفَل. فمثبطات اختزال ألفا-5 تخفض قيمة PSA إلى نحو النصف. وإن لم تذكر ذلك فقد تُقرَأ قيمة تستحق الانتباه على أنها طبيعية. فأخبر طبيبك عند كل قياس.' },
+          { q: 'هل تتأثر وظيفتي الجنسية؟', a: 'أكثر التغيّرات شيوعًا رجوع السائل المنوي إلى المثانة بدل خروجه (القذف الرجوعي). وهو غير ضار ولا يُفسد الانتصاب ولا الرغبة، لكنه يصعّب الإنجاب. ويُذكَر أن Rezūm يحافظ على القذف أكثر.' },
+          { q: 'ما زلت أرغب في الإنجاب، ماذا أفعل؟', a: 'قُل ذلك في بداية التقييم. فقد لا تكون طرق إزالة النسيج خيارك الأول عندئذ، وتتغير الخطة. أما قوله لاحقًا فيترك نتيجة لا رجعة فيها.' },
+          { q: 'هل سأتسرّب بولًا بعد العملية؟', a: 'التسرّب المؤقت وارد خصوصًا بعد الاستئصال الكامل، لأن التحكم صار معتمدًا على عضلة واحدة. ويزول عند معظم الرجال خلال أسابيع. وتعلّم تمارين قاع الحوض قبل العملية يُسهّل هذه المرحلة.' },
+          { q: 'أيّ طريقة أطول أثرًا؟', a: 'الاستئصال الكامل الذي يُزيل النسيج كله أقل احتمالًا لأن يحتاج تدخلًا جديدًا بعد سنوات. وRezūm أقل تدخلًا لكن هذا الاحتمال فيه أعلى. وإن كنت قادمًا من خارج البلد فاحسب في قرارك احتمال سفرة ثانية.' },
+          { q: 'أتناول مميعات الدم، أيّ طريقة تناسبني؟', a: 'يُفضَّل الاستئصال الكامل هنا لأن ضبط النزف فيه جيد. ومع ذلك تُدار الأدوية لكل مريض على حدة؛ لا توقف شيئًا من تلقاء نفسك وأرسل قائمتك كاملةً مسبقًا.' },
+          { q: 'كم تبقى القسطرة؟', a: 'تختلف المدة بحسب الطريقة وحال البروستاتا، وهي عادةً بضعة أيام. وتُنزَع هنا ليُعالَج تعذّر التبول قرب المستشفى. ولا تحجز رحلتك في اليوم التالي للنزع.' },
+          { q: 'ما الوثائق التي أرسلها قبل القدوم؟', a: 'تصوير بالموجات فوق الصوتية أو غيره يُبيّن حجم البروستاتا، وقياس تدفق البول والبول المتبقي إن توفرا، وتحليل PSA حديث، وتحليل بول، وقائمة أدويتك كاملةً بما فيها مميعات الدم، وأمراضك الأخرى. وبهذه يمكن تقدير الطريقة المناسبة قبل سفرك.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Management of Non-Neurogenic Male LUTS — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts' }
         ]
       },
       de: {
-        title: 'BPH / gutartige Prostatavergrößerung (HoLEP, Rezūm, TURP)',
-        summary: 'Moderne, gewebeschonende Verfahren bei gutartiger Prostatavergrößerung mit Harnbeschwerden.',
-        metaTitle: 'BPH-Behandlung | Vergleich HoLEP, Rezūm und TURP',
-        metaDescription: 'HoLEP-, Rezūm- und TURP-Verfahren bei gutartiger Prostatavergrößerung (BPH): Ablauf, Risiken, Alternativen und Preisspanne.',
+        title: 'BPH / Gutartige Prostatavergrößerung (HoLEP, Rezūm, TURP)',
+        summary:
+          'Eine vergrößerte Prostata ist für sich genommen kein Behandlungsgrund. Entscheidend ist, wie stark die Beschwerden den Alltag einschränken und ob die Blase Schaden nimmt — die Verfahrenswahl kommt danach.',
+        metaTitle: 'BPH-Behandlung: HoLEP, Rezūm oder TURP — wie wird gewählt',
+        metaDescription:
+          'Grenzen der medikamentösen Therapie bei gutartiger Prostatavergrößerung, wann Abwarten nicht mehr vertretbar ist, Vergleich von HoLEP, Rezūm und TURP sowie ehrliche Erwartungen zu Ejakulation und vorübergehendem Harnverlust.',
+        quickFacts: {
+          duration: '30–90 Minuten je nach Verfahren',
+          anesthesia: 'Vollnarkose oder Spinalanästhesie; bei Rezūm meist Sedierung',
+          hospitalStay: 'Ambulant bis 2 Nächte',
+          stayInTurkey: '5–8 Tage',
+          catheter: '1–7 Tage je nach Verfahren',
+          returnToWork: '1–3 Wochen',
+          flightClearance: 'Nach Katheterentfernung und Kontrolle'
+        },
         definition: [
-          'Die gutartige Prostatavergrößerung (BPH) ist das altersbedingte Wachstum der Prostata, das den Harnfluss behindert. Sie verursacht Beschwerden wie einen schwachen Strahl sowie häufiges und nächtliches Wasserlassen.',
-          'Moderne Verfahren umfassen die Laser-Enukleation des Prostatagewebes (HoLEP), die Verkleinerung mit Dampfenergie (Rezūm) oder die klassische endoskopische Resektion (TURP). Die Wahl richtet sich nach Prostatagröße und Patientenpräferenz.'
+          'Die gutartige Prostatavergrößerung (BPH) ist die altersbedingte Zunahme der Prostata, die die Harnröhre einengt. Abgeschwächter Strahl, verzögerter Beginn, häufiger Harndrang, nächtliches Aufstehen und das Gefühl unvollständiger Entleerung sind die typischen Beschwerden.',
+          'BPH IST KEIN KREBS und wird auch nicht dazu. Da beides im selben Organ vorkommen kann, wird Krebs bei Männern mit Harnbeschwerden jedoch gesondert mit PSA und Untersuchung abgeklärt.',
+          'EINE WICHTIGE UNTERSCHEIDUNG: Die Größe allein ist kein Behandlungsgrund. Manche Männer haben eine große Prostata und keinerlei Beschwerden, andere eine kleine und erhebliche Schwierigkeiten. Entschieden wird nach Ihren Beschwerden und dem Zustand Ihrer Blase, nicht nach dem im Ultraschall gemessenen Volumen.',
+          'ES GIBT ALLERDINGS SITUATIONEN, IN DENEN ABWARTEN NICHT VERTRETBAR IST: wiederholter Harnverhalt, Blasensteine, wiederkehrende Harnwegsinfekte, wiederholte Blutungen aus der Prostata und eine Verschlechterung der Nierenfunktion. Das sind keine Komfortfragen, sondern Zeichen eines bereits eintretenden Schadens.',
+          'Nicht immer ist allein die Prostata die Ursache. Eine überaktive Blase, Nervenschädigung bei Diabetes, bestimmte Medikamente und eine Schlafapnoe können dasselbe Bild erzeugen. Deshalb steht die Abklärung vor dem direkten Zugriff auf die Prostata.'
+        ],
+        eligibility: {
+          suitable: [
+            'Männer, die von Medikamenten nicht ausreichend profitieren oder deren Nebenwirkungen nicht vertragen',
+            'Männer, deren Beschwerden Alltag und Schlaf deutlich einschränken',
+            'Männer, die wegen Harnverhalts einen Katheter tragen',
+            'Männer mit Blasensteinen',
+            'Männer mit wiederkehrenden Harnwegsinfekten',
+            'Männer mit wiederholten Blutungen aus der Prostata',
+            'Männer mit obstruktionsbedingter Einschränkung der Nierenfunktion'
+          ],
+          notSuitable: [
+            'Männer mit leichten Beschwerden, die sie nicht stören — unnötige Eingriffe werden vermieden',
+            'Männer mit unbehandeltem Harnwegsinfekt: Dieser wird zuerst behandelt',
+            'Männer, deren Beschwerden von der Blase und nicht von der Prostata ausgehen — eine Prostataoperation bringt dann nicht den erwarteten Nutzen',
+            'Männer mit bestehendem Kinderwunsch, bei denen gewebeentfernende Verfahren nicht die erste Wahl sein müssen',
+            'Männer mit hohem Narkoserisiko, bei denen weniger eingreifende Optionen in den Vordergrund rücken'
+          ]
+        },
+        technology: [
+          'Uroflowmetrie und Messung der Restharnmenge',
+          'Bestimmung des Prostatavolumens im Ultraschall',
+          'PSA-Wert und Tastuntersuchung — zur gesonderten Abklärung eines Karzinoms',
+          'Enukleation mit Holmium- oder Thuliumlaser (HoLEP / ThuLEP)',
+          'Wasserdampftherapie (Rezūm)',
+          'Klassische endoskopische Resektion (TURP)',
+          'Urodynamik bei ausgewählten Patienten — zur Unterscheidung von Blase und Prostata als Ursache'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
+          note: 'Die operative Behandlung der Prostatavergrößerung gehört zu den Arbeitsschwerpunkten von Assoc. Prof. Dr. Müslüm Ergün. Das Verfahren wird aus Prostatavolumen, Harnstrahlmessung, Restharn, bestehender Medikation, Erwartungen an die Sexualfunktion und einem etwaigen Kinderwunsch gemeinsam abgeleitet.'
         },
         timeline: [
-          { when: 'Aus der Ferne', title: 'Vorabbewertung', body: 'Ihre Harnflussmessung, PSA- und Prostatavolumenwerte werden geprüft.' },
-          { when: 'Tag 1', title: 'Ankunft & Untersuchung', body: 'Untersuchung, Uroflowmetrie und erforderliche Tests.' },
-          { when: 'Tag 2', title: 'Eingriff', body: 'Eingriff je nach gewähltem Verfahren; meist 1 Nacht Aufenthalt.' },
-          { when: 'Tag 3–4', title: 'Kontrolle', body: 'Katheterbewertung, Entlassung und Reisefreigabe.' }
+          { when: 'Aus der Ferne', title: 'Erstbeurteilung', body: 'Bildgebung mit Prostatavolumen, Uroflowmetrie und Restharnmessung, Ihr PSA-Wert, Ihre vollständige Medikamentenliste (insbesondere Gerinnungshemmer) und Ihre Begleiterkrankungen werden durchgesehen.' },
+          { when: 'Tag 1', title: 'Ankunft und Untersuchung', body: 'Untersuchung, bei Bedarf Wiederholung der Tests, Urinbefund und Kultur, Narkoseaufklärung. Wächst im Urin ein Keim, wird der Eingriff verschoben.' },
+          { when: 'Tag 2', title: 'Eingriff', body: 'Durchführung nach dem gewählten Verfahren. Bei der Enukleation wird der innere Anteil im Ganzen gelöst; bei Rezūm wird Wasserdampf abgegeben; bei der TURP wird Gewebe schrittweise abgetragen.' },
+          { when: 'Tag 3', title: 'Entlassung', body: 'Die meisten Patienten gehen am Folgetag nach Hause. Die Katheterdauer hängt vom Verfahren ab und wird vorher besprochen.' },
+          { when: 'Tag 4–7', title: 'Katheterentfernung und Kontrolle', body: 'Der Katheter wird hier entfernt, damit Schwierigkeiten beim Wasserlassen in Kliniknähe behandelt werden können. Nach Rezūm wird daran erinnert, dass die eigentliche Besserung erst über Wochen eintritt.' }
         ],
         risks: [
-          'Vorübergehendes Brennen oder Blut beim Wasserlassen',
-          'Retrograde Ejakulation (verminderter Samenerguss)',
-          'Harnwegsinfektion',
-          'Selten Bedarf an einem erneuten Eingriff'
+          'RETROGRADE EJAKULATION: Nach gewebeentfernenden Verfahren häufig; der Samen gelangt in die Blase statt nach außen. Das ist unschädlich und beeinträchtigt weder Erektion noch Lust, erschwert aber die Zeugung und wird von manchen als störend empfunden. Bei Kinderwunsch sagen Sie es vor der Operation',
+          'VORÜBERGEHENDER HARNVERLUST: vor allem nach Enukleation, da die Kontinenz dann von einem einzigen Muskel abhängt. Bei den meisten Männern legt sich das binnen Wochen; Beckenbodentraining verkürzt diese Phase',
+          'Brennen beim Wasserlassen und Blut im Urin — in den ersten Tagen zu erwarten',
+          'Harnwegsinfekt',
+          'Unvermögen, nach Katheterentfernung Wasser zu lassen, mit vorübergehender erneuter Katheterisierung',
+          'Spätere Enge der Harnröhre oder des Blasenhalses',
+          'Notwendigkeit eines erneuten Eingriffs nach Jahren — wahrscheinlicher bei Verfahren, die das Gewebe nicht vollständig entfernen',
+          'Bei Rezūm in den ersten Wochen vorübergehend stärkere Beschwerden und ein verzögerter Wirkungseintritt'
         ],
         alternatives: [
-          'Medikamentöse Therapie (Alphablocker, 5-ARI)',
-          'Lebensstiländerungen (bei leichten Beschwerden)',
-          'Prostatastent oder UroLift (in ausgewählten Fällen)'
+          'Allgemeine Maßnahmen — abends weniger trinken, Koffein und Alkohol begrenzen, Verstopfung behandeln. Bei leichten Beschwerden messbar wirksam',
+          'Alphablocker — entspannen den Blasenhals und verbessern den Strahl relativ rasch; möglich sind Schwindel, Blutdruckabfall beim Aufstehen und Veränderungen der Ejakulation',
+          '5-Alpha-Reduktase-Hemmer — verkleinern die Prostata über Monate. WICHTIG: Sie halbieren den PSA-Wert etwa; wer sie einnimmt, muss das demjenigen mitteilen, der den PSA-Wert beurteilt',
+          'Kombination beider Substanzgruppen bei ausgewählten Patienten',
+          'Rezūm (Wasserdampf) — weniger eingreifend und eher ejakulationserhaltend; der Nutzen setzt verzögert ein',
+          'Prostatisches Harnröhrenimplantat (UroLift) — ohne Gewebeentfernung, bei geeigneter Anatomie',
+          'TURP — das etablierte endoskopische Verfahren',
+          'HoLEP / ThuLEP — vollständige Enukleation des einengenden Gewebes; bei großen Drüsen im Vordergrund',
+          'Prostataarterienembolisation — eine interventionell-radiologische Option bei ausgewählten Patienten'
         ],
         comparison: {
-          title: 'HoLEP vs. Rezūm vs. TURP',
-          columns: ['Kriterium', 'HoLEP (Laser)', 'Rezūm (Dampf)', 'TURP (endoskopisch)'],
+          title: 'HoLEP, Rezūm und TURP: welche Abwägung passt zu Ihnen',
+          columns: ['Kriterium', 'HoLEP / ThuLEP', 'Rezūm (Dampf)', 'TURP'],
           rows: [
-            { label: 'Geeignete Prostatagröße', values: ['Jede Größe, besonders groß', 'Klein–mittel', 'Klein–mittel'] },
-            { label: 'Anästhesie', values: ['Vollnarkose/Spinal', 'Sedierung/lokal', 'Vollnarkose/Spinal'] },
-            { label: 'Erhalt der Sexualfunktion', values: ['Gut', 'Hoch', 'Mittel'] },
-            { label: 'Aufenthalt', values: ['1 Nacht', 'Ambulant', '1–2 Nächte'] },
-            { label: 'Dauerhaftigkeit', values: ['Hoch', 'Mittel', 'Hoch'] }
+            { label: 'Was geschieht mit dem Gewebe', values: ['Vollständig entfernt', 'Bleibt und wird resorbiert', 'Teilweise abgetragen'] },
+            { label: 'Grenze der Prostatagröße', values: ['Praktisch keine Obergrenze', 'Klein bis mittel', 'Klein bis mittel'] },
+            { label: 'Wann die Wirkung einsetzt', values: ['Sofort', 'Über Wochen', 'Sofort'] },
+            { label: 'Ejakulation erhalten', values: ['Seltener', 'Häufiger erhalten', 'Seltener'] },
+            { label: 'Vorübergehender Harnverlust', values: ['Möglich', 'Nicht zu erwarten', 'Seltener'] },
+            { label: 'Blutungskontrolle', values: ['Gut — unter Gerinnungshemmern bevorzugt', 'Begrenzte Daten; bei starker Blutung ungeeignet', 'Mittel'] },
+            { label: 'Erneuter Eingriff nötig', values: ['Seltener', 'Häufiger', 'Dazwischen'] },
+            { label: 'Klinikaufenthalt', values: ['1 Nacht', 'Ambulant', '1–2 Nächte'] },
+            { label: 'Gewebe für die Histologie', values: ['Ja, es wird untersucht', 'Es fällt kein Gewebe an', 'Ja, es wird untersucht'] }
           ],
-          note: 'Diese Tabelle dient der allgemeinen Information; das endgültige Verfahren wird individuell festgelegt.'
+          note: 'Die richtige Frage lautet nicht, welches Verfahren moderner ist, sondern welche Abwägung zu Ihnen passt. Steht der Erhalt von Ejakulation und Sexualfunktion im Vordergrund, sagen Sie das klar; steht die sichere Beseitigung der Harnbeschwerden im Vordergrund, sagen Sie auch das. Beides führt zu unterschiedlichen Verfahren. Wo Gewebe entfernt wird, wird es zudem untersucht — das kann ein unerwartetes Karzinom aufdecken.'
         },
+        recovery: [
+          { period: 'Erste 48 Stunden', body: 'Blut im Urin und Brennen sind zu erwarten. Viel trinken. Bei Fieber oder Unvermögen, Wasser zu lassen, sofort vorstellen.' },
+          { period: 'Erste Tage nach Katheterentfernung', body: 'Häufiger und dringender Harndrang ist üblich. Bei wenigen Männern muss der Katheter vorübergehend erneut gelegt werden; deshalb wird kein Flug für den Folgetag geplant.' },
+          { period: '1.–4. Woche', body: 'Nach Enukleation kann vorübergehender Harnverlust auftreten; Beckenbodentraining wird konsequent durchgeführt. Nicht schwer heben, nicht pressen, Verstopfung vermeiden.' },
+          { period: '2.–6. Woche nach Rezūm', body: 'In dieser Zeit wird die eigentliche Besserung deutlich. Eine vorübergehende Zunahme der Beschwerden in den ersten Wochen ist üblich und bedeutet kein Scheitern.' },
+          { period: '1.–3. Monat', body: 'Deutliche Besserung von Harnstrahl und nächtlichem Aufstehen ist zu erwarten. Das Ergebnis wird mit erneuter Uroflowmetrie und Restharnmessung beurteilt.' },
+          { period: 'Langfristig', body: 'Kehren Beschwerden zurück, wird die Ursache gesucht; nicht jedes Wiederauftreten stammt von der Prostata. Blasenbedingte Beschwerden werden gesondert abgeklärt.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Variiert je nach Verfahren und Prostatagröße.'
+          disclaimer: 'Der Betrag hängt vom Verfahren, vom Prostatavolumen und von der Dauer des Klinikaufenthalts ab. Ein schriftlicher, aufgeschlüsselter Kostenvoranschlag folgt nach Durchsicht Ihrer Befunde.'
         },
         packageIncludes: [
-          'Eingriff und Krankenhausaufenthalt',
-          'Anästhesie und Untersuchungen',
-          'Transfers und Unterkunft',
-          'Medizinischer Dolmetscher und Koordinator',
-          'Kontrolle und Online-Nachsorge'
+          'Untersuchung, Uroflowmetrie und Restharnmessung',
+          'Blut- und Urinuntersuchung, Urinkultur',
+          'PSA-Bestimmung',
+          'Anästhesie und Operationssaal',
+          'Eingriff und Verbrauchsmaterial',
+          'Klinikaufenthalt',
+          'Feingewebliche Untersuchung, soweit Gewebe anfällt',
+          'Katheterentfernung und Kontrolle vor dem Rückflug',
+          'Transfers Flughafen–Klinik–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und Patientenkoordination',
+          'Nachbetreuung aus der Ferne nach der Rückkehr'
         ],
         faqs: [
-          { q: 'Wird meine Sexualfunktion beeinträchtigt?', a: 'Die Verfahren zielen auf den Erhalt der Sexualfunktion; die häufigste Veränderung ist die retrograde Ejakulation.' },
-          { q: 'Welches Verfahren ist dauerhafter?', a: 'HoLEP liefert bei großen Prostatae dauerhafte Ergebnisse; Rezūm ist weniger invasiv. Die Wahl wird für Sie getroffen.' },
-          { q: 'Wie lange bleibt der Katheter?', a: 'Meist 1–3 Tage; je nach Verfahren unterschiedlich.' }
+          { q: 'Meine Prostata ist groß — muss ich operiert werden?', a: 'Die Größe allein ist kein Behandlungsgrund. Manche Männer haben eine große Prostata und überhaupt keine Beschwerden. Entschieden wird danach, wie stark Ihre Beschwerden den Alltag einschränken und ob Blase und Nieren Schaden nehmen.' },
+          { q: 'Wann ist Abwarten nicht mehr vertretbar?', a: 'Wenn Sie wegen Harnverhalts einen Katheter tragen, wenn sich Blasensteine gebildet haben, bei wiederkehrenden Harnwegsinfekten, bei wiederholten Blutungen aus der Prostata oder wenn sich die Nierenfunktion zu verschlechtern beginnt. Das sind keine Komfortfragen, sondern Schadenszeichen.' },
+          { q: 'Wird aus BPH Krebs?', a: 'Nein. Die gutartige Vergrößerung ist kein Krebs und wird auch nicht dazu. Beides kann jedoch im selben Organ vorkommen, weshalb bei Harnbeschwerden gesondert mit PSA und Untersuchung abgeklärt wird.' },
+          { q: 'Sollte man zuerst Medikamente versuchen?', a: 'Bei den meisten Männern ja. Alphablocker verbessern den Strahl relativ rasch; Medikamente, die die Prostata verkleinern, brauchen Monate. Eingreifende Optionen kommen infrage, wenn Medikamente nicht genug helfen oder die Nebenwirkungen nicht tragbar sind.' },
+          { q: 'Ich nehme ein Medikament zur Prostataverkleinerung — beeinflusst es meinen PSA-Wert?', a: 'Ja, und das wird häufig übersehen. 5-Alpha-Reduktase-Hemmer halbieren den PSA-Wert etwa. Erwähnen Sie das nicht, kann ein eigentlich abklärungsbedürftiger Wert als normal gelesen werden. Sagen Sie es bei jeder PSA-Bestimmung.' },
+          { q: 'Wird meine Sexualfunktion beeinträchtigt?', a: 'Die häufigste Veränderung ist, dass der Samen in die Blase statt nach außen gelangt (retrograde Ejakulation). Das ist unschädlich und beeinträchtigt weder Erektion noch Lust, erschwert aber die Zeugungsfähigkeit. Für Rezūm wird ein häufigerer Erhalt der Ejakulation berichtet.' },
+          { q: 'Ich möchte noch Kinder — was ist zu beachten?', a: 'Sagen Sie das zu Beginn der Abklärung. Gewebeentfernende Verfahren sind dann möglicherweise nicht die erste Wahl, und die Planung ändert sich. Später erwähnt, führt es zu einem nicht umkehrbaren Ergebnis.' },
+          { q: 'Werde ich nach der Operation Urin verlieren?', a: 'Vorübergehend ist das möglich, vor allem nach Enukleation, weil die Kontinenz dann von einem einzigen Muskel abhängt. Bei den meisten Männern legt es sich binnen Wochen. Das Beckenbodentraining VOR der Operation zu erlernen, erleichtert diese Phase.' },
+          { q: 'Welches Verfahren hält länger?', a: 'Die Enukleation mit vollständiger Gewebeentfernung hat eine geringere Wahrscheinlichkeit, nach Jahren einen erneuten Eingriff zu erfordern. Rezūm ist weniger eingreifend, diese Wahrscheinlichkeit aber höher. Wer aus dem Ausland anreist, sollte die Möglichkeit einer zweiten Reise mitbedenken.' },
+          { q: 'Ich nehme Gerinnungshemmer — welches Verfahren passt?', a: 'Die Enukleation wird hier bevorzugt, weil die Blutung gut kontrollierbar ist. Die Medikation wird dennoch individuell geplant; setzen Sie nichts eigenmächtig ab und senden Sie Ihre vollständige Liste vorab.' },
+          { q: 'Wie lange bleibt der Katheter?', a: 'Das hängt vom Verfahren und von der Prostata ab, meist einige Tage. Er wird hier entfernt, damit Schwierigkeiten beim Wasserlassen in Kliniknähe behandelt werden können. Planen Sie Ihren Flug nicht für den Tag danach.' },
+          { q: 'Welche Unterlagen soll ich vorab senden?', a: 'Ultraschall oder andere Bildgebung mit Prostatavolumen, falls vorhanden Uroflowmetrie und Restharnmessung, einen aktuellen PSA-Wert, eine Urinuntersuchung, die vollständige Medikamentenliste einschließlich Gerinnungshemmern sowie Ihre Begleiterkrankungen. Damit lässt sich das passende Verfahren schon vor der Reise beurteilen.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Management of Non-Neurogenic Male LUTS — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts' }
         ]
       },
       ru: {
-        title: 'ДГПЖ / доброкачественное увеличение простаты (HoLEP, Rezūm, TURP)',
-        summary: 'Современные, щадящие ткань методы при доброкачественном увеличении простаты с мочевыми симптомами.',
-        metaTitle: 'Лечение ДГПЖ | Сравнение HoLEP, Rezūm и TURP',
-        metaDescription: 'Методы HoLEP, Rezūm и TURP при доброкачественной гиперплазии простаты (ДГПЖ): процесс, риски, альтернативы и диапазон цен.',
+        title: 'ДГПЖ / доброкачественное увеличение простаты (HoLEP, Rezūm, ТУР)',
+        summary:
+          'Увеличенная простата сама по себе не повод для лечения. Важно, насколько жалобы ограничивают повседневную жизнь и страдает ли мочевой пузырь — метод выбирают уже после этого.',
+        metaTitle: 'Лечение ДГПЖ: как выбирают между HoLEP, Rezūm и ТУР',
+        metaDescription:
+          'Пределы возможностей лекарств при доброкачественном увеличении простаты, когда ждать нельзя, сравнение HoLEP, Rezūm и ТУР, честные ожидания в отношении семяизвержения и временного подтекания.',
+        quickFacts: {
+          duration: '30–90 минут в зависимости от метода',
+          anesthesia: 'Общая или спинальная; при Rezūm обычно седация',
+          hospitalStay: 'Амбулаторно — 2 ночи',
+          stayInTurkey: '5–8 дней',
+          catheter: '1–7 дней в зависимости от метода',
+          returnToWork: '1–3 недели',
+          flightClearance: 'После удаления катетера и осмотра'
+        },
         definition: [
-          'Доброкачественное увеличение простаты (ДГПЖ) — возрастной рост простаты, затрудняющий отток мочи. Оно вызывает жалобы: слабую струю, учащённое и ночное мочеиспускание.',
-          'Современные методы включают лазерную энуклеацию ткани простаты (HoLEP), уменьшение паровой энергией (Rezūm) или классическую эндоскопическую резекцию (TURP). Выбор зависит от размера простаты и приоритетов пациента.'
+          'Доброкачественное увеличение простаты (ДГПЖ) — это рост железы с возрастом, который сдавливает мочеиспускательный канал. Слабая струя, задержка начала мочеиспускания, учащённое мочеиспускание, ночные пробуждения и чувство неполного опорожнения — типичные жалобы.',
+          'ДГПЖ — ЭТО НЕ РАК, и в рак она не превращается. Но поскольку оба состояния могут быть в одном органе, у мужчины с жалобами на мочеиспускание рак оценивают отдельно по ПСА и осмотру.',
+          'ВАЖНОЕ РАЗЛИЧИЕ: сам по себе размер железы не является поводом для лечения. Есть мужчины с большой простатой и без единой жалобы, и мужчины с небольшой простатой и серьёзными затруднениями. Решение принимают по вашим жалобам и состоянию мочевого пузыря, а не по объёму на ультразвуке.',
+          'НО ЕСТЬ СИТУАЦИИ, КОГДА ЖДАТЬ НЕЛЬЗЯ: повторная задержка мочи, камень мочевого пузыря, повторяющиеся инфекции мочевых путей, повторяющиеся кровотечения из простаты и ухудшение функции почек. Это не вопрос удобства, а признаки уже происходящего повреждения.',
+          'Причина не всегда только в простате. Гиперактивный мочевой пузырь, поражение нервов при диабете, некоторые лекарства и ночное апноэ дают такую же картину. Поэтому обследование предшествует вмешательству на простате.'
+        ],
+        eligibility: {
+          suitable: [
+            'Мужчины, которым лекарства помогают недостаточно или у которых побочные эффекты непереносимы',
+            'Мужчины, у которых жалобы заметно ограничивают повседневную жизнь и сон',
+            'Мужчины с установленным катетером из-за задержки мочи',
+            'Мужчины, у которых образовался камень мочевого пузыря',
+            'Мужчины с повторяющимися инфекциями мочевых путей',
+            'Мужчины с повторяющимися кровотечениями из простаты',
+            'Мужчины с ухудшением функции почек из-за препятствия оттоку'
+          ],
+          notSuitable: [
+            'Мужчины с лёгкими жалобами, которых эти жалобы не беспокоят — лишнего вмешательства избегают',
+            'Мужчины с нелеченой инфекцией мочевых путей: сначала лечат инфекцию',
+            'Мужчины, у которых источник жалоб мочевой пузырь, а не простата — операция на простате не даст ожидаемого результата',
+            'Мужчины, планирующие иметь детей: методы с удалением ткани могут не быть первым выбором',
+            'Мужчины с высоким анестезиологическим риском, у которых на первый план выходят менее травматичные варианты'
+          ]
+        },
+        technology: [
+          'Урофлоуметрия и измерение остаточной мочи после мочеиспускания',
+          'Определение объёма простаты по ультразвуку',
+          'ПСА и пальцевое исследование — для отдельной оценки рака',
+          'Энуклеация гольмиевым или тулиевым лазером (HoLEP / ThuLEP)',
+          'Лечение водяным паром (Rezūm)',
+          'Классическая трансуретральная резекция (ТУР)',
+          'Уродинамическое исследование у отобранных пациентов — чтобы отличить причину со стороны пузыря от причины со стороны простаты'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Число операций отражает общий хирургический опыт доцента д-ра Мюслюма Эргюна в этой области.'
+          note: 'Хирургическое лечение увеличения простаты входит в сферу работы доц. д-ра Мюслюма Эргюна. Метод выбирают, оценивая вместе объём железы, скорость потока мочи, остаточную мочу, принимаемые препараты, ожидания в отношении половой функции и желание иметь детей.'
         },
         timeline: [
-          { when: 'Удалённо', title: 'Предварительная оценка', body: 'Изучаются показатели урофлоуметрии, PSA и объёма простаты.' },
-          { when: 'День 1', title: 'Прибытие и осмотр', body: 'Осмотр, урофлоуметрия и необходимые анализы.' },
-          { when: 'День 2', title: 'Процедура', body: 'Процедура по выбранному методу; обычно 1 ночь пребывания.' },
-          { when: 'День 3–4', title: 'Контроль', body: 'Оценка катетера, выписка и разрешение на возвращение.' }
+          { when: 'Дистанционно', title: 'Предварительная оценка', body: 'Изучают визуализацию с объёмом простаты, урофлоуметрию и остаточную мочу, значение ПСА, полный список принимаемых препаратов (особенно разжижающих кровь) и сопутствующие заболевания.' },
+          { when: '1-й день', title: 'Приезд и осмотр', body: 'Осмотр, при необходимости повторные исследования, анализ и посев мочи, осмотр анестезиолога. При росте в посеве вмешательство откладывают.' },
+          { when: '2-й день', title: 'Вмешательство', body: 'Выполняют выбранным методом. При энуклеации внутреннюю часть отделяют целиком; при Rezūm подают водяной пар; при ТУР ткань удаляют постепенно.' },
+          { when: '3-й день', title: 'Выписка', body: 'Большинство пациентов выписывают на следующий день. Срок стояния катетера зависит от метода и обсуждается заранее.' },
+          { when: '4–7-й день', title: 'Удаление катетера и осмотр', body: 'Катетер удаляют здесь, чтобы затруднение мочеиспускания решалось рядом с больницей. После Rezūm напоминают, что основное улучшение наступает в течение недель.' }
         ],
         risks: [
-          'Временное жжение или кровь при мочеиспускании',
-          'Ретроградная эякуляция (уменьшение выделения семени)',
-          'Инфекция мочевыводящих путей',
-          'Редко — необходимость повторной процедуры'
+          'РЕТРОГРАДНОЕ СЕМЯИЗВЕРЖЕНИЕ: часто после методов с удалением ткани — семя уходит в мочевой пузырь, а не наружу. Это безвредно и не нарушает ни эрекцию, ни влечение, но затрудняет зачатие и некоторым мужчинам неприятно. Если вы хотите иметь детей, скажите об этом до операции',
+          'ВРЕМЕННОЕ ПОДТЕКАНИЕ МОЧИ: особенно после энуклеации, потому что удержание начинает зависеть от одной мышцы. У большинства мужчин проходит за недели; упражнения для мышц тазового дна сокращают этот срок',
+          'Жжение при мочеиспускании и кровь в моче — ожидаемы в первые дни',
+          'Инфекция мочевых путей',
+          'Невозможность помочиться после удаления катетера с временной повторной катетеризацией',
+          'Сужение мочеиспускательного канала или шейки пузыря со временем',
+          'Необходимость повторного вмешательства спустя годы — вероятнее при методах, не удаляющих ткань полностью',
+          'При Rezūm в первые недели временное усиление жалоб и отсроченное наступление эффекта'
         ],
         alternatives: [
-          'Медикаментозная терапия (альфа-блокаторы, 5-ARI)',
-          'Изменения образа жизни (при лёгких жалобах)',
-          'Простатический стент или UroLift (в отдельных случаях)'
+          'Изменение образа жизни — меньше пить вечером, ограничить кофеин и алкоголь, устранить запоры. При лёгких жалобах даёт измеримую пользу',
+          'Альфа-адреноблокаторы — расслабляют шейку пузыря и сравнительно быстро улучшают поток; возможны головокружение, падение давления при вставании и изменения семяизвержения',
+          'Ингибиторы 5-альфа-редуктазы — уменьшают железу за месяцы. ВАЖНО: они примерно вдвое снижают значение ПСА; если вы их принимаете, обязательно сообщите об этом тому, кто оценивает ваш ПСА',
+          'Сочетание двух групп препаратов у отобранных пациентов',
+          'Rezūm (водяной пар) — менее травматичен и чаще сохраняет семяизвержение; эффект наступает позже',
+          'Простатический уретральный имплант (UroLift) — без удаления ткани, при подходящей анатомии',
+          'ТУР — устоявшийся эндоскопический метод',
+          'HoLEP / ThuLEP — полная энуклеация препятствующей ткани; на первом плане при крупной железе',
+          'Эмболизация артерий простаты — вариант интервенционной радиологии у отобранных пациентов'
         ],
         comparison: {
-          title: 'HoLEP против Rezūm против TURP',
-          columns: ['Критерий', 'HoLEP (лазер)', 'Rezūm (пар)', 'TURP (эндоскопически)'],
+          title: 'HoLEP, Rezūm и ТУР: какой выбор вам подходит',
+          columns: ['Критерий', 'HoLEP / ThuLEP', 'Rezūm (пар)', 'ТУР'],
           rows: [
-            { label: 'Подходящий размер простаты', values: ['Любой, особенно крупная', 'Малый–средний', 'Малый–средний'] },
-            { label: 'Анестезия', values: ['Общая/спинальная', 'Седация/местная', 'Общая/спинальная'] },
-            { label: 'Сохранение половой функции', values: ['Хорошее', 'Высокое', 'Среднее'] },
-            { label: 'Пребывание', values: ['1 ночь', 'В тот же день', '1–2 ночи'] },
-            { label: 'Долговечность', values: ['Высокая', 'Средняя', 'Высокая'] }
+            { label: 'Что происходит с тканью', values: ['Удаляется полностью', 'Остаётся и со временем рассасывается', 'Удаляется частично'] },
+            { label: 'Ограничение по объёму железы', values: ['Практического потолка нет', 'Малый и средний', 'Малый и средний'] },
+            { label: 'Когда наступает эффект', values: ['Сразу', 'В течение недель', 'Сразу'] },
+            { label: 'Сохранение семяизвержения', values: ['Реже', 'Чаще сохраняется', 'Реже'] },
+            { label: 'Временное подтекание', values: ['Возможно', 'Не ожидается', 'Реже'] },
+            { label: 'Контроль кровотечения', values: ['Хороший — предпочтителен при приёме препаратов, разжижающих кровь', 'Данных мало; при выраженном кровотечении не подходит', 'Средний'] },
+            { label: 'Вероятность повторного вмешательства', values: ['Ниже', 'Выше', 'Промежуточная'] },
+            { label: 'Пребывание в стационаре', values: ['1 ночь', 'Амбулаторно', '1–2 ночи'] },
+            { label: 'Ткань для гистологии', values: ['Да, удалённую ткань исследуют', 'Ткань не удаляется', 'Да, удалённую ткань исследуют'] }
           ],
-          note: 'Таблица носит общий характер; окончательный метод определяется индивидуально.'
+          note: 'Правильный вопрос не в том, какой метод современнее, а в том, какой компромисс подходит именно вам. Если для вас в приоритете сохранение семяизвержения и половой функции, скажите об этом прямо; если приоритет — надёжное устранение нарушений мочеиспускания, скажите и об этом. Эти приоритеты ведут к разным методам. Заметьте также: там, где ткань удаляют, её исследуют, и это может выявить неожиданный рак.'
         },
+        recovery: [
+          { period: 'Первые 48 часов', body: 'Кровь в моче и жжение ожидаемы. Пейте достаточно. При лихорадке или невозможности помочиться обращайтесь немедленно.' },
+          { period: 'Первые дни после удаления катетера', body: 'Учащённое и повелительное мочеиспускание обычно. Небольшой части мужчин катетер приходится ставить временно снова, поэтому перелёт на следующий день после удаления не планируют.' },
+          { period: '1–4-я неделя', body: 'После энуклеации возможно временное подтекание; упражнения для мышц тазового дна выполняют регулярно. Избегают подъёма тяжестей и натуживания, не допускают запоров.' },
+          { period: '2–6-я неделя после Rezūm', body: 'В этот период становится заметным основное улучшение. Временное усиление жалоб в первые недели обычно и не означает неудачи.' },
+          { period: '1–3-й месяц', body: 'Ожидается заметное улучшение потока мочи и уменьшение ночных пробуждений. Результат оценивают повторной урофлоуметрией и измерением остаточной мочи.' },
+          { period: 'В отдалённом периоде', body: 'При возвращении жалоб ищут причину; не всякий рецидив связан с простатой. Жалобы со стороны мочевого пузыря оценивают отдельно.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Зависит от метода и размера простаты.'
+          disclaimer: 'Сумма зависит от применённого метода, объёма простаты и длительности пребывания в стационаре. Письменная детализированная смета предоставляется после изучения ваших обследований.'
         },
         packageIncludes: [
-          'Процедура и пребывание в стационаре',
-          'Анестезия и анализы',
-          'Трансферы и проживание',
-          'Медицинский переводчик и координатор',
-          'Контроль и онлайн-наблюдение'
+          'Осмотр, урофлоуметрия и измерение остаточной мочи',
+          'Анализы крови и мочи, посев мочи',
+          'Определение ПСА',
+          'Анестезия и операционная',
+          'Вмешательство и расходные материалы',
+          'Пребывание в стационаре',
+          'Гистологическое исследование, если ткань удаляется',
+          'Удаление катетера и осмотр перед вылетом',
+          'Трансферы аэропорт — больница — отель',
+          'Проживание (пациент + 1 сопровождающий)',
+          'Медицинский переводчик и координатор пациента',
+          'Дистанционное наблюдение после возвращения домой'
         ],
         faqs: [
-          { q: 'Повлияет ли это на половую функцию?', a: 'Методы направлены на сохранение половой функции; самое частое изменение — ретроградная эякуляция.' },
-          { q: 'Какой метод долговечнее?', a: 'HoLEP даёт стойкий результат при крупной простате; Rezūm менее инвазивен. Выбор делается индивидуально.' },
-          { q: 'Сколько времени стоит катетер?', a: 'Обычно 1–3 дня; зависит от метода.' }
+          { q: 'У меня большая простата — нужна ли операция?', a: 'Один только размер не повод для лечения. Есть мужчины с большой простатой и вовсе без жалоб. Решение принимают по тому, насколько жалобы ограничивают вашу повседневную жизнь и страдают ли мочевой пузырь и почки.' },
+          { q: 'В каких случаях ждать нельзя?', a: 'Если из-за невозможности помочиться поставлен катетер, если образовался камень мочевого пузыря, при повторяющихся инфекциях мочевых путей, при повторяющихся кровотечениях из простаты или если начала ухудшаться функция почек. Это не вопрос удобства, а признаки повреждения.' },
+          { q: 'Переходит ли ДГПЖ в рак?', a: 'Нет. Доброкачественное увеличение не является раком и в рак не превращается. Однако оба состояния могут быть в одном органе, поэтому при жалобах на мочеиспускание рак оценивают отдельно по ПСА и осмотру.' },
+          { q: 'Нужно ли сначала попробовать лекарства?', a: 'У большинства мужчин да. Альфа-адреноблокаторы улучшают поток сравнительно быстро; препараты, уменьшающие железу, действуют месяцами. Вмешательство обсуждают, когда лекарства помогают недостаточно или их побочные эффекты непереносимы.' },
+          { q: 'Я принимаю препарат, уменьшающий простату, — влияет ли это на ПСА?', a: 'Да, и об этом часто забывают. Ингибиторы 5-альфа-редуктазы примерно вдвое снижают значение ПСА. Если вы об этом не скажете, значение, которое на самом деле требует внимания, могут счесть нормальным. Сообщайте об этом при каждом измерении ПСА.' },
+          { q: 'Пострадает ли половая функция?', a: 'Самое частое изменение — уход семени в мочевой пузырь вместо наружного выделения (ретроградное семяизвержение). Это безвредно и не нарушает ни эрекцию, ни влечение, но затрудняет зачатие. Сообщается, что Rezūm чаще сохраняет семяизвержение.' },
+          { q: 'Я ещё хочу детей — что делать?', a: 'Скажите об этом в самом начале обследования. Методы с удалением ткани в таком случае могут не быть первым выбором, и план меняется. Сказанное позже оставляет результат, который уже не отменить.' },
+          { q: 'Буду ли я подтекать после операции?', a: 'Временное подтекание возможно, особенно после энуклеации, потому что удержание начинает зависеть от одной мышцы. У большинства мужчин оно проходит за недели. Освоить упражнения для мышц тазового дна ДО операции заметно легче.' },
+          { q: 'Какой метод служит дольше?', a: 'При энуклеации с полным удалением ткани вероятность повторного вмешательства спустя годы ниже. Rezūm менее травматичен, но эта вероятность выше. Если вы приезжаете из другой страны, учтите в решении возможность второй поездки.' },
+          { q: 'Я принимаю препараты, разжижающие кровь, — какой метод подойдёт?', a: 'У таких пациентов предпочтительна энуклеация, поскольку кровотечение хорошо контролируется. Тем не менее приём препаратов планируют индивидуально; ничего не отменяйте сами и пришлите полный список заранее.' },
+          { q: 'Как долго остаётся катетер?', a: 'Срок зависит от метода и состояния простаты, обычно несколько дней. Катетер удаляют здесь, чтобы затруднение мочеиспускания решалось рядом с больницей. Не планируйте вылет на следующий день после удаления.' },
+          { q: 'Какие документы прислать до приезда?', a: 'Ультразвук или другую визуализацию с объёмом простаты, при наличии — урофлоуметрию и остаточную мочу, свежий ПСА, анализ мочи, полный список препаратов, включая разжижающие кровь, и сведения о других заболеваниях. С ними подходящий метод можно оценить ещё до поездки.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Management of Non-Neurogenic Male LUTS — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts' }
         ]
       },
       fr: {
         title: 'HBP / Hypertrophie bénigne de la prostate (HoLEP, Rezūm, RTUP)',
-        summary: 'Des méthodes modernes et préservant les tissus pour l’hypertrophie bénigne de la prostate à l’origine de troubles urinaires.',
-        metaTitle: 'Traitement de l’HBP | Comparatif HoLEP, Rezūm et RTUP',
-        metaDescription: 'Méthodes HoLEP, Rezūm et RTUP pour l’hypertrophie bénigne de la prostate (HBP) : déroulement, risques, alternatives et fourchette de prix.',
+        summary:
+          'Une prostate augmentée de volume n\'est pas en soi un motif de traitement. Ce qui compte, c\'est la gêne dans la vie quotidienne et le retentissement sur la vessie — le choix de la technique vient ensuite.',
+        metaTitle: 'Traitement de l\'HBP : comment choisir entre HoLEP, Rezūm et RTUP',
+        metaDescription:
+          'Limites du traitement médicamenteux de l\'hypertrophie bénigne de la prostate, situations où il ne faut plus attendre, comparaison HoLEP / Rezūm / RTUP et attentes réalistes sur l\'éjaculation et les fuites transitoires.',
+        quickFacts: {
+          duration: '30 à 90 minutes selon la technique',
+          anesthesia: 'Générale ou rachidienne ; sédation le plus souvent pour Rezūm',
+          hospitalStay: 'Ambulatoire à 2 nuits',
+          stayInTurkey: '5 à 8 jours',
+          catheter: '1 à 7 jours selon la technique',
+          returnToWork: '1 à 3 semaines',
+          flightClearance: 'Après retrait de la sonde et consultation de contrôle'
+        },
         definition: [
-          'L’hypertrophie bénigne de la prostate (HBP) est l’augmentation de volume de la prostate liée à l’âge, qui gêne l’écoulement des urines. Elle provoque un jet faible, des mictions fréquentes et des levers nocturnes.',
-          'Les méthodes modernes comprennent l’énucléation du tissu prostatique au laser (HoLEP), la réduction par vapeur d’eau (Rezūm) ou la résection endoscopique classique (RTUP). Le choix dépend du volume prostatique et des priorités du patient.'
+          'L\'hypertrophie bénigne de la prostate (HBP) correspond à l\'augmentation de volume de la prostate avec l\'âge, qui comprime le canal urinaire. Jet faible, retard au démarrage, pollakiurie, réveils nocturnes et sensation de vidange incomplète en sont les symptômes typiques.',
+          'L\'HBP N\'EST PAS UN CANCER et ne se transforme pas en cancer. Comme les deux peuvent coexister dans le même organe, le cancer est néanmoins évalué séparément par le PSA et l\'examen clinique chez tout homme consultant pour des troubles urinaires.',
+          'UNE DISTINCTION IMPORTANTE : le volume à lui seul ne justifie pas un traitement. Certains hommes ont une grosse prostate sans aucune gêne, d\'autres une petite prostate et des difficultés notables. La décision repose sur vos symptômes et l\'état de votre vessie, non sur le volume mesuré en échographie.',
+          'IL EXISTE EN REVANCHE DES SITUATIONS OÙ ATTENDRE N\'EST PAS RAISONNABLE : rétention urinaire répétée, calcul vésical, infections urinaires récidivantes, saignements répétés d\'origine prostatique et altération de la fonction rénale. Ce ne sont pas des questions de confort mais des signes de retentissement.',
+          'La prostate n\'est pas toujours seule en cause. Une hyperactivité vésicale, une atteinte nerveuse liée au diabète, certains médicaments et le syndrome d\'apnées du sommeil peuvent donner le même tableau. L\'évaluation précède donc toute intervention sur la prostate.'
+        ],
+        eligibility: {
+          suitable: [
+            'Hommes insuffisamment soulagés par les médicaments ou n\'en supportant pas les effets indésirables',
+            'Hommes dont les symptômes limitent nettement la vie quotidienne et le sommeil',
+            'Hommes sondés pour rétention urinaire',
+            'Hommes ayant développé un calcul vésical',
+            'Hommes présentant des infections urinaires récidivantes',
+            'Hommes présentant des saignements répétés d\'origine prostatique',
+            'Hommes dont la fonction rénale est altérée par l\'obstacle'
+          ],
+          notSuitable: [
+            'Hommes peu symptomatiques et non gênés — on évite une intervention inutile',
+            'Hommes porteurs d\'une infection urinaire non traitée : elle est traitée d\'abord',
+            'Hommes dont les symptômes viennent de la vessie et non de la prostate — la chirurgie prostatique n\'apportera pas le bénéfice attendu',
+            'Hommes souhaitant encore procréer, chez qui les techniques de résection peuvent ne pas être le premier choix',
+            'Hommes à haut risque anesthésique, chez qui les options peu invasives sont privilégiées'
+          ]
+        },
+        technology: [
+          'Débitmétrie et mesure du résidu post-mictionnel',
+          'Détermination du volume prostatique par échographie',
+          'PSA et toucher rectal — pour évaluer séparément un cancer',
+          'Énucléation au laser holmium ou thulium (HoLEP / ThuLEP)',
+          'Traitement par vapeur d\'eau (Rezūm)',
+          'Résection endoscopique classique (RTUP)',
+          'Bilan urodynamique chez des patients sélectionnés — pour distinguer vessie et prostate comme origine des troubles'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+          note: 'Le traitement chirurgical de l\'hypertrophie prostatique fait partie des domaines d\'exercice du Pr associé Müslüm Ergün. La technique est choisie à partir du volume prostatique, du débit, du résidu post-mictionnel, des traitements en cours, des attentes concernant la fonction sexuelle et d\'un éventuel désir d\'enfant.'
         },
         timeline: [
-          { when: 'À distance', title: 'Pré-évaluation', body: 'Votre débitmétrie urinaire, votre PSA et votre volume prostatique sont examinés.' },
-          { when: 'Jour 1', title: 'Arrivée et examen', body: 'Examen clinique, débitmétrie et bilan nécessaire.' },
-          { when: 'Jour 2', title: 'Intervention', body: 'Intervention selon la méthode retenue ; généralement une nuit d’hospitalisation.' },
-          { when: 'Jours 3–4', title: 'Contrôle', body: 'Évaluation de la sonde, sortie et autorisation de retour.' }
+          { when: 'À distance', title: 'Évaluation initiale', body: 'Imagerie précisant le volume prostatique, débitmétrie et résidu post-mictionnel, PSA, liste complète de vos traitements (en particulier les anticoagulants) et vos autres pathologies sont examinés.' },
+          { when: 'Jour 1', title: 'Arrivée et consultation', body: 'Examen clinique, examens refaits si nécessaire, ECBU, consultation d\'anesthésie. Si l\'ECBU est positif, l\'intervention est reportée.' },
+          { when: 'Jour 2', title: 'Intervention', body: 'Réalisée selon la technique retenue. L\'énucléation détache en bloc la partie interne ; Rezūm délivre de la vapeur ; la RTUP réséque le tissu progressivement.' },
+          { when: 'Jour 3', title: 'Sortie', body: 'La plupart des patients rentrent le lendemain. La durée de sondage dépend de la technique et est expliquée à l\'avance.' },
+          { when: 'Jours 4–7', title: 'Retrait de la sonde et contrôle', body: 'La sonde est retirée sur place, afin qu\'une difficulté à uriner soit prise en charge près de l\'hôpital. Après Rezūm, il est rappelé que l\'amélioration réelle survient en quelques semaines.' }
         ],
         risks: [
-          'Brûlures mictionnelles ou sang dans les urines, transitoires',
-          'Éjaculation rétrograde (diminution du sperme émis)',
+          'ÉJACULATION RÉTROGRADE : fréquente après les techniques de résection, le sperme passant dans la vessie au lieu d\'être émis. Sans danger, elle n\'altère ni l\'érection ni le désir, mais elle gêne la procréation et dérange certains hommes. En cas de désir d\'enfant, signalez-le avant l\'intervention',
+          'FUITES URINAIRES TRANSITOIRES : surtout après énucléation, la continence ne reposant plus que sur un seul muscle. Elles régressent en quelques semaines chez la plupart ; la rééducation périnéale raccourcit cette phase',
+          'Brûlures mictionnelles et hématurie — attendues les premiers jours',
           'Infection urinaire',
-          'Rarement, nécessité d’une seconde intervention'
+          'Impossibilité d\'uriner après le retrait de la sonde, imposant un resondage temporaire',
+          'Sténose de l\'urètre ou du col vésical apparaissant avec le temps',
+          'Nécessité d\'une nouvelle intervention des années plus tard — plus probable avec les techniques qui ne retirent pas tout le tissu',
+          'Avec Rezūm, majoration transitoire des symptômes les premières semaines et bénéfice différé'
         ],
         alternatives: [
-          'Traitement médicamenteux (alphabloquants, inhibiteurs de la 5-alpha-réductase)',
-          'Modifications du mode de vie (troubles légers)',
-          'Endoprothèse prostatique ou UroLift (dans des cas sélectionnés)'
+          'Mesures hygiéno-diététiques — réduire les boissons le soir, limiter caféine et alcool, traiter la constipation. Bénéfice mesurable dans les formes légères',
+          'Alpha-bloquants — relâchent le col vésical et améliorent le jet assez vite ; possibles vertiges, baisse de tension au lever et modifications de l\'éjaculation',
+          'Inhibiteurs de la 5-alpha-réductase — réduisent le volume prostatique en quelques mois. IMPORTANT : ils abaissent le PSA d\'environ la moitié ; si vous en prenez, signalez-le systématiquement à qui interprète votre PSA',
+          'Association des deux classes chez des patients sélectionnés',
+          'Rezūm (vapeur d\'eau) — moins invasif et plus souvent respectueux de l\'éjaculation ; le bénéfice est différé',
+          'Implant urétral prostatique (UroLift) — sans résection de tissu, pour certaines anatomies',
+          'RTUP — la technique endoscopique de référence',
+          'HoLEP / ThuLEP — énucléation complète du tissu obstructif ; au premier plan pour les grosses prostates',
+          'Embolisation des artères prostatiques — option de radiologie interventionnelle chez des patients sélectionnés'
         ],
         comparison: {
-          title: 'HoLEP vs Rezūm vs RTUP',
-          columns: ['Critère', 'HoLEP (laser)', 'Rezūm (vapeur)', 'RTUP (endoscopique)'],
+          title: 'HoLEP, Rezūm et RTUP : quel compromis vous convient',
+          columns: ['Critère', 'HoLEP / ThuLEP', 'Rezūm (vapeur)', 'RTUP'],
           rows: [
-            { label: 'Volume prostatique adapté', values: ['Tous volumes, surtout les gros', 'Petit à moyen', 'Petit à moyen'] },
-            { label: 'Anesthésie', values: ['Générale / rachidienne', 'Sédation / locale', 'Générale / rachidienne'] },
-            { label: 'Préservation de la fonction sexuelle', values: ['Bonne', 'Élevée', 'Modérée'] },
-            { label: 'Séjour', values: ['1 nuit', 'Ambulatoire', '1 à 2 nuits'] },
-            { label: 'Durabilité', values: ['Élevée', 'Modérée', 'Élevée'] }
+            { label: 'Devenir du tissu', values: ['Retiré en totalité', 'Laissé en place, résorbé avec le temps', 'Partiellement réséqué'] },
+            { label: 'Limite de volume prostatique', values: ['Pas de plafond pratique', 'Petit à moyen', 'Petit à moyen'] },
+            { label: 'Délai d\'action', values: ['Immédiat', 'Quelques semaines', 'Immédiat'] },
+            { label: 'Éjaculation préservée', values: ['Moins souvent', 'Plus souvent préservée', 'Moins souvent'] },
+            { label: 'Fuites transitoires', values: ['Possibles', 'Non attendues', 'Moins fréquentes'] },
+            { label: 'Contrôle du saignement', values: ['Bon — privilégié sous anticoagulants', 'Données limitées ; inadapté en cas de saignement important', 'Moyen'] },
+            { label: 'Risque de réintervention', values: ['Plus faible', 'Plus élevé', 'Intermédiaire'] },
+            { label: 'Hospitalisation', values: ['1 nuit', 'Ambulatoire', '1 à 2 nuits'] },
+            { label: 'Tissu analysable', values: ['Oui, le tissu retiré est analysé', 'Aucun tissu retiré', 'Oui, le tissu retiré est analysé'] }
           ],
-          note: 'Ce tableau est fourni à titre d’information générale ; la méthode définitive est déterminée au cas par cas.'
+          note: 'La bonne question n\'est pas de savoir quelle technique est la plus moderne, mais lequel de ces compromis vous convient. Si la préservation de l\'éjaculation et de la fonction sexuelle prime, dites-le clairement ; si la résolution durable des troubles urinaires prime, dites-le aussi. Ces priorités orientent vers des techniques différentes. Notez également que lorsqu\'un tissu est retiré, il est analysé, ce qui peut révéler un cancer insoupçonné.'
         },
+        recovery: [
+          { period: '48 premières heures', body: 'Hématurie et brûlures sont attendues. Buvez abondamment. Consultez immédiatement en cas de fièvre ou d\'impossibilité d\'uriner.' },
+          { period: 'Premiers jours après le retrait de la sonde', body: 'Pollakiurie et urgenturie sont habituelles. Quelques patients nécessitent un resondage temporaire : c\'est pourquoi aucun vol n\'est prévu le lendemain du retrait.' },
+          { period: 'Semaines 1 à 4', body: 'Des fuites transitoires peuvent suivre l\'énucléation ; la rééducation périnéale est menée régulièrement. Évitez le port de charges et les efforts de poussée, prévenez la constipation.' },
+          { period: 'Semaines 2 à 6 après Rezūm', body: 'L\'amélioration réelle devient perceptible à cette période. Une aggravation transitoire les premières semaines est habituelle et ne signifie pas un échec.' },
+          { period: 'Mois 1 à 3', body: 'Une nette amélioration du jet et des réveils nocturnes est attendue. Le résultat est évalué par une nouvelle débitmétrie et la mesure du résidu.' },
+          { period: 'À long terme', body: 'Si les troubles réapparaissent, la cause est recherchée ; toute récidive ne vient pas de la prostate. Les troubles d\'origine vésicale sont évalués à part.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Varie selon la méthode et le volume prostatique.'
+          disclaimer: 'Le montant dépend de la technique, du volume prostatique et de la durée d\'hospitalisation. Un devis écrit et détaillé est remis après examen de vos documents.'
         },
         packageIncludes: [
-          'Intervention et séjour hospitalier',
-          'Anesthésie et examens',
-          'Transferts et hébergement',
-          'Interprète médical et coordinateur',
-          'Contrôle et suivi en ligne'
+          'Consultation, débitmétrie et mesure du résidu post-mictionnel',
+          'Bilan sanguin et urinaire, ECBU',
+          'Dosage du PSA',
+          'Anesthésie et bloc opératoire',
+          'Intervention et consommables',
+          'Hospitalisation',
+          'Examen anatomopathologique lorsqu\'un tissu est retiré',
+          'Retrait de la sonde et contrôle avant le retour',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et coordination des patients',
+          'Suivi à distance après le retour'
         ],
         faqs: [
-          { q: 'Ma fonction sexuelle sera-t-elle affectée ?', a: 'Les méthodes visent à préserver la fonction sexuelle ; la modification la plus fréquente est l’éjaculation rétrograde.' },
-          { q: 'Quelle méthode est la plus durable ?', a: 'La HoLEP donne des résultats durables sur les grosses prostates ; le Rezūm est moins invasif. Le choix est adapté à votre situation.' },
-          { q: 'Combien de temps la sonde reste-t-elle en place ?', a: 'Généralement 1 à 3 jours ; cela varie selon la méthode.' }
+          { q: 'Ma prostate est volumineuse, dois-je être opéré ?', a: 'Le volume seul ne justifie pas un traitement. Certains hommes ont une grosse prostate sans aucun symptôme. La décision dépend de la gêne dans votre vie quotidienne et du retentissement sur votre vessie et vos reins.' },
+          { q: 'Dans quels cas ne faut-il plus attendre ?', a: 'Si vous avez été sondé pour rétention, en cas de calcul vésical, d\'infections urinaires récidivantes, de saignements répétés d\'origine prostatique ou d\'altération de la fonction rénale. Ce ne sont pas des questions de confort mais des signes de retentissement.' },
+          { q: 'L\'HBP évolue-t-elle vers un cancer ?', a: 'Non. L\'hypertrophie bénigne n\'est pas un cancer et ne le devient pas. Les deux peuvent cependant coexister dans le même organe : le cancer est donc évalué séparément par le PSA et l\'examen clinique.' },
+          { q: 'Faut-il essayer les médicaments d\'abord ?', a: 'Chez la plupart des hommes, oui. Les alpha-bloquants améliorent le jet assez vite ; les médicaments qui réduisent le volume agissent en quelques mois. Les options interventionnelles se discutent lorsque le bénéfice est insuffisant ou les effets indésirables intolérables.' },
+          { q: 'Je prends un médicament qui réduit la prostate : mon PSA est-il modifié ?', a: 'Oui, et ce point est souvent oublié. Les inhibiteurs de la 5-alpha-réductase abaissent le PSA d\'environ la moitié. Sans cette information, un PSA en réalité à surveiller peut être lu comme normal. Signalez-le à chaque dosage.' },
+          { q: 'Ma fonction sexuelle sera-t-elle touchée ?', a: 'La modification la plus fréquente est le passage du sperme dans la vessie au lieu d\'être émis (éjaculation rétrograde). Sans danger, elle n\'altère ni l\'érection ni le désir, mais elle gêne la procréation. Rezūm préserverait plus souvent l\'éjaculation.' },
+          { q: 'Je souhaite encore avoir des enfants, que faire ?', a: 'Dites-le dès le début de l\'évaluation. Les techniques de résection ne sont alors pas forcément le premier choix et la stratégie change. Le signaler après coup laisse un résultat irréversible.' },
+          { q: 'Vais-je avoir des fuites après l\'intervention ?', a: 'Des fuites transitoires sont possibles, surtout après énucléation, la continence ne reposant plus que sur un muscle. Elles régressent en quelques semaines chez la plupart. Apprendre la rééducation périnéale AVANT l\'intervention facilite cette période.' },
+          { q: 'Quelle technique dure le plus longtemps ?', a: 'L\'énucléation, qui retire tout le tissu, expose moins au besoin d\'une nouvelle intervention des années plus tard. Rezūm est moins invasif mais ce risque est plus élevé. Si vous venez de l\'étranger, intégrez la possibilité d\'un second voyage à votre décision.' },
+          { q: 'Je prends des anticoagulants, quelle technique me convient ?', a: 'L\'énucléation est privilégiée car le saignement y est bien contrôlé. La gestion des traitements reste individuelle : n\'arrêtez rien de vous-même et transmettez votre liste complète à l\'avance.' },
+          { q: 'Combien de temps la sonde reste-t-elle ?', a: 'Cela dépend de la technique et de la prostate, en général quelques jours. Elle est retirée sur place afin qu\'une difficulté à uriner soit prise en charge près de l\'hôpital. Ne prévoyez pas votre vol le lendemain du retrait.' },
+          { q: 'Quels documents envoyer avant de venir ?', a: 'Une échographie ou une autre imagerie précisant le volume prostatique, une débitmétrie et un résidu post-mictionnel si disponibles, un PSA récent, un examen urinaire, la liste complète de vos traitements anticoagulants compris, et vos autres pathologies. Cela permet d\'évaluer la technique adaptée avant votre départ.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Management of Non-Neurogenic Male LUTS — Association européenne d\'urologie', url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts' }
         ]
       }
     }
