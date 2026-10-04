@@ -24,6 +24,22 @@ export const treatmentSlugMap = {
     ru: 'roboticheskaya-prostatektomiya',
     ar: 'robotic-prostatectomy'
   },
+  'erektil-disfonksiyon': {
+    tr: 'erektil-disfonksiyon',
+    en: 'erectile-dysfunction',
+    de: 'erektile-dysfunktion',
+    fr: 'dysfonction-erectile',
+    ru: 'erektilnaya-disfunkciya',
+    ar: 'erectile-dysfunction'
+  },
+  varikosel: {
+    tr: 'varikosel',
+    en: 'varicocele',
+    de: 'varikozele',
+    fr: 'varicocele',
+    ru: 'varikocele',
+    ar: 'varicocele'
+  },
   rirs: {
     tr: 'rirs-fleksibl-ureteroskopi',
     en: 'rirs-flexible-ureteroscopy',

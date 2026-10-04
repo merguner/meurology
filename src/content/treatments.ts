@@ -15,6 +15,2450 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
+     * Androloji hub'ının altındaki varikosel sayfası (prompt m.4.1).
+     * KRİTİK DÜRÜSTLÜK: her varikosel ameliyat edilmez; görülen her
+     * varikosel kısırlık nedeni değildir. Ameliyatın gebelik GARANTİSİ
+     * VERMEDİĞİ ve sperm parametrelerinde düzelmenin her hastada
+     * olmadığı AÇIKÇA yazılıdır. Sol tarafta ani başlayan varikoselde
+     * böbrek kitlesi uyarısı eklenmiştir.
+     * Kaynak: EAU Sexual and Reproductive Health kılavuzu.
+     * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     */
+    slug: 'varikosel',
+    parent: 'androloji',
+    lastReviewed: '2026-10-04',
+    icon: 'andrology',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'Varikosel: Kimlerde Ameliyat Gerekir?',
+        summary:
+          'Testis damarlarındaki genişleme sık görülür ama her varikosel ameliyat gerektirmez. Asıl soru şudur: bu varikosel size zarar veriyor mu?',
+        metaTitle: 'Varikosel Nedir? Ameliyat Kimlere Gerekir?',
+        metaDescription:
+          'Varikoselin ne olduğu, kısırlıkla ilişkisi, hangi hastalarda ameliyat gerektiği, mikrocerrahi yöntem, riskleri ve ameliyatın gebelik garantisi vermediği gerçeği.',
+        quickFacts: {
+          duration: '45–90 dakika',
+          anesthesia: 'Genel veya spinal anestezi',
+          hospitalStay: 'Günübirlik',
+          stayInTurkey: '4–6 gün',
+          returnToWork: '3–7 gün',
+          flightClearance: '3–5 gün'
+        },
+        definition: [
+          'Varikosel, testisten kalbe dönen kanı taşıyan toplardamarların genişlemesi ve kanın bir kısmının geri kaçmasıdır. Bacaklardaki varise benzer bir durumdur. Erkeklerin önemli bir bölümünde bulunur ve çoğu zaman hiçbir yakınmaya yol açmaz.',
+          'ÇOĞUNLUKLA SOL TARAFTADIR. Bunun nedeni anatomiktir: sol testis toplardamarı sol böbrek damarına dik açıyla bağlanır ve bu, kanın geri kaçmasını kolaylaştırır. Sağ tarafta tek başına varikosel daha seyrek görülür.',
+          'Varikoselin testise verdiği zararın temel mekanizması ısıdır. Testisin sağlıklı sperm üretmesi için vücuttan biraz daha serin olması gerekir; bu yüzden testisler vücut dışındadır. Genişlemiş damarlarda biriken kan, testis çevresindeki sıcaklığı yükseltir ve sperm üretimini olumsuz etkileyebilir.',
+          'EN ÖNEMLİ YANLIŞ ANLAMA ŞUDUR: varikosel saptanan her erkeğin ameliyat olması gerekmez. Varikosel çok yaygındır ve taşıyan erkeklerin büyük kısmı sorunsuz biçimde çocuk sahibi olur. Ameliyat kararı, varikoselin varlığına değil, size zarar verdiğine dair bulguya dayanır: sperm değerlerinde bozulma, testiste küçülme veya geçmeyen ağrı.',
+          'Muayenede varikosel üç derecede tanımlanır: yalnızca ıkınmayla hissedilen (1. derece), elle hissedilen (2. derece) ve dışarıdan görülebilen (3. derece). Muayene ayakta yapılır; yatarak yapılan muayene yanıltıcı olabilir. Ultrason bulguyu doğrular ve testis hacimlerini ölçer.',
+          'ÖNEMLİ UYARI: Varikosel ileri yaşta aniden ortaya çıktıysa, yalnızca sağ taraftaysa veya yatınca kaybolmuyorsa, bunun böbrek bölgesindeki bir kitleye bağlı olup olmadığı araştırılmalıdır. Bu nadir bir durumdur ancak atlanmaması gerekir.'
+        ],
+        eligibility: {
+          suitable: [
+            'Elle muayenede saptanan varikoseli olan ve sperm değerlerinde bozulma bulunan, çocuk sahibi olmak isteyen çiftler',
+            'Varikosel tarafındaki testiste küçülme saptanan ergenler ve genç erkekler',
+            'Varikosele bağlı, ağrı kesiciye ve destekleyici önlemlere rağmen geçmeyen ağrısı olan hastalar',
+            'Yardımcı üreme tedavisi planlanan ve sperm kalitesinin iyileştirilmesi hedeflenen çiftler',
+            'Testosteron düşüklüğü varikoselle birlikte değerlendirilen seçilmiş hastalar'
+          ],
+          notSuitable: [
+            'Yakınması olmayan ve sperm değerleri normal olan erkekler — varikosel saptanmış olması tek başına ameliyat nedeni değildir',
+            'Yalnızca ultrasonda görülen, muayenede ele gelmeyen varikoseli olan hastalar — bu durumda ameliyatın yararı gösterilmemiştir',
+            'Kadın tarafında tedavi edilmemiş ve gebeliği engelleyen bir sorun bulunan çiftler — değerlendirme çift olarak yapılmalıdır',
+            'Sperm üretiminin tamamen durduğu, varikoselle açıklanamayan durumlar — önce genetik ve hormonal değerlendirme gerekir',
+            'Ameliyatın gebeliği garantileyeceğini düşünen hastalar — böyle bir garanti verilemez'
+          ]
+        },
+        technology: [
+          'Ayakta ve ıkınmalı (Valsalva) fizik muayene',
+          'Skrotal renkli Doppler ultrason — reflü ve testis hacimlerinin ölçümü',
+          'Sperm analizi (en az iki ayrı ölçüm) ve gerekirse sperm DNA değerlendirmesi',
+          'Hormon profili (FSH, LH, testosteron)',
+          'Ameliyat mikroskobu ile mikrocerrahi subinguinal yaklaşım — damar, atardamar ve lenfatiklerin ayırt edilmesi'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Androloji ve erkek infertilitesi, Doç. Dr. Müslüm Ergün’ün çalışma alanları arasındadır. Varikoselde karar, bulgunun varlığından çok hastaya verdiği zarara göre alınır; gereksiz ameliyattan kaçınmak bu yaklaşımın temelidir.'
+        },
+        timeline: [
+          {
+            when: '1. adım',
+            title: 'Değerlendirme',
+            body: 'Muayene ayakta ve ıkınmalı olarak yapılır. Ultrasonla reflü ve testis hacimleri ölçülür. En az iki sperm analizi istenir — tek bir analiz karar vermek için yeterli değildir.'
+          },
+          {
+            when: '2. adım',
+            title: 'Çiftin birlikte değerlendirilmesi',
+            body: 'Çocuk isteği varsa kadın tarafının da değerlendirilmiş olması gerekir. Varikosel ameliyatı, kadın tarafındaki bir sorunu çözmez.'
+          },
+          {
+            when: '3. adım',
+            title: 'Ameliyat kararı',
+            body: 'Karar, muayenede ele gelen varikosel ile bozulmuş sperm değeri, testis küçülmesi veya geçmeyen ağrının birlikte bulunmasına dayanır.'
+          },
+          {
+            when: 'Ameliyat günü',
+            title: 'Mikrocerrahi varikoselektomi',
+            body: 'Kasık altından yapılan küçük bir kesiyle girilir. Ameliyat mikroskobu altında genişlemiş toplardamarlar bağlanırken testis atardamarı ve lenfatik kanallar korunur. İşlem 45–90 dakika sürer; hasta aynı gün taburcu olur.'
+          },
+          {
+            when: '1. hafta',
+            title: 'Erken iyileşme',
+            body: 'Kasıkta şişlik ve hassasiyet beklenir. Buz uygulaması ve destekleyici iç çamaşırı rahatlatır. Hafif yürüyüş serbesttir.'
+          },
+          {
+            when: '3–6. ay',
+            title: 'Sonucun değerlendirilmesi',
+            body: 'Sperm üretimi yaklaşık üç ay süren bir döngüyle gerçekleştiği için, sperm analizi ameliyattan en erken üç ay sonra tekrarlanır. Değerlendirme 3. ve 6. aylarda yapılır.'
+          }
+        ],
+        risks: [
+          'GEBELİK GARANTİSİ YOKTUR: ameliyat sperm değerlerinde düzelme sağlayabilir, ancak bu her hastada olmaz ve düzelme olsa bile gebelik garanti edilemez. Bu, yöntemin başarısızlığı değil, erkek infertilitesinin çok etkenli yapısının sonucudur',
+          'Hidrosel (testis çevresinde sıvı birikmesi) — lenfatik kanalların zedelenmesine bağlıdır; mikrocerrahi yaklaşımın tercih edilme nedenlerinden biri bu riski azaltmaktır',
+          'Varikoselin tekrarlaması veya tamamen kaybolmaması',
+          'Testis atardamarının zedelenmesi — çok seyrek ancak ciddi bir risktir; mikroskop kullanımı bu riski azaltmak içindir',
+          'Yara yeri enfeksiyonu ve kanama',
+          'Kasıkta geçici uyuşukluk veya hassasiyet',
+          'Ağrı şikâyetiyle ameliyat olan hastalarda ağrının tamamen geçmemesi'
+        ],
+        alternatives: [
+          'İzlem — yakınması olmayan ve sperm değerleri normal olan erkeklerde doğru yaklaşım budur',
+          'Ağrı için destekleyici önlemler — destekleyici iç çamaşırı, ağrı kesici, uzun süre ayakta kalmaktan kaçınma',
+          'Perkütan embolizasyon — radyoloji eşliğinde damarın içeriden kapatılması; cerrahiye uygun olmayan veya tekrarlayan olgularda',
+          'Laparoskopik varikoselektomi — iki taraflı olgularda bir seçenek',
+          'Doğrudan yardımcı üreme tedavisine geçilmesi — kadın yaşı ileriyse veya zaman kısıtlıysa',
+          'Sperm dondurma — tedavi öncesinde güvence olarak'
+        ],
+        comparison: {
+          title: 'Tedavi seçeneklerinin karşılaştırması',
+          columns: ['Ölçüt', 'Mikrocerrahi', 'Embolizasyon', 'İzlem'],
+          rows: [
+            { label: 'Girişim', values: ['Kasık altından küçük kesi', 'Damar içinden, kesisiz', 'Yok'] },
+            { label: 'Anestezi', values: ['Genel veya spinal', 'Lokal', 'Yok'] },
+            { label: 'Hidrosel riski', values: ['Düşük (lenfatikler korunur)', 'Yok', 'Yok'] },
+            { label: 'Tekrarlama', values: ['Daha düşük', 'Daha yüksek olabilir', 'İlgisiz'] },
+            { label: 'İşe dönüş', values: ['3–7 gün', '1–2 gün', 'Yok'] },
+            { label: 'Kime uygun', values: ['Sperm bozukluğu, küçülme veya ağrı varsa', 'Cerrahiye uygun olmayan veya tekrarlayan olgular', 'Yakınması olmayanlar'] }
+          ],
+          note:
+            'Mikrocerrahi yaklaşım, atardamar ve lenfatik kanalların mikroskop altında ayırt edilebilmesi nedeniyle tercih edilir. Yine de her hastaya ameliyat gerekmez; izlem de meşru bir seçenektir.'
+        },
+        recovery: [
+          {
+            period: 'İlk 48 saat',
+            body: 'Kasıkta şişlik ve hassasiyet beklenir. Buz uygulaması ve destekleyici iç çamaşırı önerilir. Ağrı kesici ile rahat edilir.'
+          },
+          {
+            period: '3–7. gün',
+            body: 'Masa başı işe dönülebilir. Hafif yürüyüş serbesttir; ağır kaldırma ve spor yasaktır.'
+          },
+          {
+            period: '2–4. hafta',
+            body: 'Normal fiziksel aktiviteye kademeli dönüş yapılır. Cinsel yaşama dönüş bu dönemde planlanır.'
+          },
+          {
+            period: '3. ay',
+            body: 'İlk kontrol sperm analizi yapılır. Sperm üretimi yaklaşık üç aylık bir döngüyle gerçekleştiği için daha erken bakmak anlamlı değildir.'
+          },
+          {
+            period: '6. ay',
+            body: 'İkinci sperm analizi ile sonuç netleşir. Gerekirse yardımcı üreme seçenekleri yeniden konuşulur.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat; tek taraflı mı iki taraflı mı ameliyat yapılacağına ve ek tetkiklere göre değişir. Kesin teklif, değerlendirme sonrasında verilir.'
+        },
+        packageIncludes: [
+          'Androloji değerlendirmesi ve ayakta fizik muayene',
+          'Skrotal renkli Doppler ultrason',
+          'Sperm analizi ve hormon profili',
+          'Mikrocerrahi varikoselektomi ve anestezi',
+          'Günübirlik işlem ve gözlem',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve ülkenize döndükten sonra uzaktan takip'
+        ],
+        faqs: [
+          {
+            q: 'Varikoselim var, mutlaka ameliyat olmalı mıyım?',
+            a: 'Hayır. Varikosel çok yaygındır ve taşıyan erkeklerin büyük kısmı sorunsuz biçimde çocuk sahibi olur. Ameliyat kararı varikoselin varlığına değil, size zarar verdiğine dair bulguya dayanır: sperm değerlerinde bozulma, testiste küçülme veya geçmeyen ağrı. Bunlar yoksa izlem doğru yaklaşımdır.'
+          },
+          {
+            q: 'Varikosel kısırlık yapar mı?',
+            a: 'Varikosel sperm üretimini olumsuz etkileyebilir, ancak varikoseli olan her erkek kısır değildir. Bu nedenle tanı tek başına yeterli değildir; en az iki sperm analizi ve çiftin birlikte değerlendirilmesi gerekir. Kadın tarafında bir sorun varsa varikosel ameliyatı onu çözmez.'
+          },
+          {
+            q: 'Ameliyat olursam çocuğum olur mu?',
+            a: 'Bu konuda garanti verilemez. Ameliyat sperm değerlerinde düzelme sağlayabilir, ancak bu her hastada olmaz ve düzelme olsa bile gebelik kesin değildir. Erkek infertilitesi çok etkenlidir; kadın yaşı ve diğer etkenler de sonucu belirler. Size kesin gebelik vaat eden bir yaklaşıma karşı dikkatli olun.'
+          },
+          {
+            q: 'Neden hep sol tarafta oluyor?',
+            a: 'Nedeni anatomiktir. Sol testis toplardamarı sol böbrek damarına dik açıyla bağlanır; bu, kanın geri kaçmasını kolaylaştırır. Sağda ise bağlantı daha eğimlidir. Bu yüzden tek taraflı varikosel çoğunlukla soldadır.'
+          },
+          {
+            q: 'Yalnızca sağ tarafta varikoselim var, önemli mi?',
+            a: 'Bu durum daha az görülür ve dikkat gerektirir. İleri yaşta aniden başlayan, yalnızca sağ taraftaki veya yatınca kaybolmayan bir varikoselde, böbrek bölgesinde bir kitlenin damar üzerine baskı yapıp yapmadığı araştırılmalıdır. Nadir bir durumdur ama atlanmamalıdır.'
+          },
+          {
+            q: 'Ameliyattan sonra ne zaman sperm analizi yaptırmalıyım?',
+            a: 'En erken üç ay sonra. Sperm üretimi yaklaşık üç aylık bir döngüyle gerçekleşir; bu nedenle daha erken yapılan analiz gerçek sonucu yansıtmaz. Değerlendirme genellikle 3. ve 6. aylarda yapılır.'
+          },
+          {
+            q: 'Mikrocerrahi ile normal ameliyatın farkı nedir?',
+            a: 'Mikrocerrahide ameliyat mikroskobu kullanılır. Böylece bağlanması gereken toplardamarlar ile korunması gereken testis atardamarı ve lenfatik kanallar birbirinden ayırt edilebilir. Bu, hem testise giden kanın korunmasına hem de hidrosel (sıvı birikmesi) riskinin azalmasına yardımcı olur.'
+          },
+          {
+            q: 'Ağrım için ameliyat olabilir miyim?',
+            a: 'Ağrı, varikosele bağlıysa ve destekleyici önlemlerle geçmiyorsa ameliyat bir seçenektir. Ancak ağrının başka nedenleri de olabileceği için önce bunların dışlanması gerekir. Ayrıca ameliyat sonrası ağrının tamamen geçeceği garanti edilemez; bu baştan konuşulur.'
+          },
+          {
+            q: 'Ergenlik çağındaki oğlumda varikosel bulundu, ne yapmalıyız?',
+            a: 'Ergenlerde karar ölçütü, varikosel tarafındaki testiste küçülme olup olmadığıdır. Küçülme varsa ameliyat gündeme gelir; yoksa düzenli aralıklarla testis hacmi ölçülerek izlem yapılır. Bu yaş grubunda acele ameliyat kararı doğru değildir.'
+          },
+          {
+            q: 'Ne zaman uçabilir ve işe dönebilirim?',
+            a: 'Genellikle 3–5 gün sonra uçuşa izin verilir; yurt dışından gelen hastalar için 4–6 günlük kalış planlanır. Masa başı işe 3–7 gün içinde dönülebilir. Ağır kaldırma ve spor için 2–4 hafta beklenmesi önerilir.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      en: {
+        title: 'Varicocele: Who Actually Needs Surgery?',
+        summary:
+          'Enlargement of the veins around the testicle is common, but not every varicocele needs an operation. The real question is this: is this varicocele doing you harm?',
+        metaTitle: 'What Is a Varicocele? Who Needs Surgery?',
+        metaDescription:
+          'What a varicocele is, its relationship with infertility, which men need surgery, the microsurgical method, the risks, and the fact that surgery offers no guarantee of pregnancy.',
+        quickFacts: {
+          duration: '45–90 minutes',
+          anesthesia: 'General or spinal anaesthesia',
+          hospitalStay: 'Day case',
+          stayInTurkey: '4–6 days',
+          returnToWork: '3–7 days',
+          flightClearance: '3–5 days'
+        },
+        definition: [
+          'A varicocele is an enlargement of the veins that carry blood from the testicle back to the heart, with some of that blood flowing backwards. It is much like varicose veins in the legs. It is present in a considerable proportion of men and most of the time causes no symptoms at all.',
+          'IT IS USUALLY ON THE LEFT. The reason is anatomical: the left testicular vein joins the left kidney vein at a right angle, and this makes backward flow easier. A varicocele on the right side alone is less common.',
+          'The main way a varicocele harms the testicle is through heat. For healthy sperm production the testicle needs to be slightly cooler than the body, which is why the testicles sit outside it. Blood pooling in the enlarged veins raises the temperature around the testicle and can affect sperm production adversely.',
+          'THE MOST IMPORTANT MISUNDERSTANDING IS THIS: not every man found to have a varicocele needs an operation. Varicoceles are very common, and the great majority of men who have one father children without difficulty. The decision to operate rests not on the presence of a varicocele but on evidence that it is doing harm: deterioration in the sperm values, shrinkage of the testicle, or pain that does not settle.',
+          'On examination a varicocele is graded in three degrees: felt only on straining (grade 1), felt by hand (grade 2) and visible from outside (grade 3). The examination is carried out standing; an examination done lying down can be misleading. Ultrasound confirms the finding and measures the testicular volumes.',
+          'AN IMPORTANT WARNING: if a varicocele appears suddenly later in life, is on the right side only, or does not disappear on lying down, it must be investigated for a mass in the kidney region. This is a rare situation but one that should not be missed.'
+        ],
+        eligibility: {
+          suitable: [
+            'Couples wishing to conceive where the man has a varicocele detectable by hand and deterioration in the sperm values',
+            'Adolescents and young men in whom the testicle on the side of the varicocele has become smaller',
+            'Men with pain due to the varicocele that does not settle despite painkillers and supportive measures',
+            'Couples planning assisted reproduction where improving sperm quality is the aim',
+            'Selected men in whom low testosterone is being assessed alongside the varicocele'
+          ],
+          notSuitable: [
+            'Men with no symptoms and normal sperm values — having a varicocele is not in itself a reason to operate',
+            'Men whose varicocele is seen only on ultrasound and cannot be felt on examination — no benefit from surgery has been shown in this situation',
+            'Couples where there is an untreated problem on the woman’s side preventing pregnancy — the assessment must be made as a couple',
+            'Situations where sperm production has stopped altogether and cannot be explained by the varicocele — genetic and hormonal assessment is needed first',
+            'Men who believe surgery will guarantee a pregnancy — no such guarantee can be given'
+          ]
+        },
+        technology: [
+          'Physical examination standing and with straining (Valsalva)',
+          'Scrotal colour Doppler ultrasound — measuring reflux and testicular volumes',
+          'Semen analysis (at least two separate samples) and sperm DNA assessment where needed',
+          'Hormone profile (FSH, LH, testosterone)',
+          'Microsurgical subinguinal approach with the operating microscope — distinguishing veins, artery and lymphatics'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Andrology and male infertility are among Assoc. Prof. Müslüm Ergün’s areas of work. In varicocele the decision rests less on the presence of the finding than on the harm it is doing to the patient; avoiding unnecessary surgery is the foundation of this approach.'
+        },
+        timeline: [
+          {
+            when: 'Step 1',
+            title: 'Assessment',
+            body: 'The examination is carried out standing and with straining. Reflux and testicular volumes are measured by ultrasound. At least two semen analyses are requested — a single analysis is not enough to decide on.'
+          },
+          {
+            when: 'Step 2',
+            title: 'Assessing the couple together',
+            body: 'If there is a wish for children, the woman must have been assessed too. Varicocele surgery does not resolve a problem on the woman’s side.'
+          },
+          {
+            when: 'Step 3',
+            title: 'The decision to operate',
+            body: 'The decision rests on a varicocele that can be felt on examination occurring together with deteriorated sperm values, a smaller testicle, or pain that does not settle.'
+          },
+          {
+            when: 'Day of surgery',
+            title: 'Microsurgical varicocelectomy',
+            body: 'Access is through a small incision below the groin. Under the operating microscope the enlarged veins are tied off while the testicular artery and the lymphatic channels are preserved. The procedure takes 45–90 minutes and the patient is discharged the same day.'
+          },
+          {
+            when: 'Week 1',
+            title: 'Early recovery',
+            body: 'Swelling and tenderness in the groin are expected. Ice and supportive underwear bring relief. Gentle walking is allowed.'
+          },
+          {
+            when: 'Months 3–6',
+            title: 'Assessing the outcome',
+            body: 'Because sperm production works on a cycle of about three months, semen analysis is repeated no earlier than three months after surgery. Assessment is made at 3 and 6 months.'
+          }
+        ],
+        risks: [
+          'THERE IS NO GUARANTEE OF PREGNANCY: surgery can bring improvement in the sperm values, but this does not happen in every man, and even where it does a pregnancy cannot be guaranteed. This is not a failure of the method but a consequence of how many factors male infertility involves',
+          'Hydrocele (a collection of fluid around the testicle) — caused by damage to the lymphatic channels; reducing this risk is one of the reasons the microsurgical approach is preferred',
+          'The varicocele recurring or not disappearing completely',
+          'Damage to the testicular artery — very uncommon but serious; the microscope is used to reduce this risk',
+          'Wound infection and bleeding',
+          'Temporary numbness or tenderness in the groin',
+          'In men operated on for pain, the pain not going away completely'
+        ],
+        alternatives: [
+          'Surveillance — the right approach in men with no symptoms and normal sperm values',
+          'Supportive measures for pain — supportive underwear, painkillers, avoiding long periods standing',
+          'Percutaneous embolisation — closing the vein from the inside under radiological guidance; for men unsuited to surgery or with recurrence',
+          'Laparoscopic varicocelectomy — an option in bilateral cases',
+          'Going straight to assisted reproduction — where the woman’s age is advanced or time is short',
+          'Sperm freezing — as a safeguard before treatment'
+        ],
+        comparison: {
+          title: 'The treatment options compared',
+          columns: ['Criterion', 'Microsurgery', 'Embolisation', 'Surveillance'],
+          rows: [
+            { label: 'Intervention', values: ['Small incision below the groin', 'From inside the vein, no incision', 'None'] },
+            { label: 'Anaesthesia', values: ['General or spinal', 'Local', 'None'] },
+            { label: 'Hydrocele risk', values: ['Low (lymphatics preserved)', 'None', 'None'] },
+            { label: 'Recurrence', values: ['Lower', 'Can be higher', 'Not applicable'] },
+            { label: 'Return to work', values: ['3–7 days', '1–2 days', 'None'] },
+            { label: 'Who it suits', values: ['Where there is impaired sperm, shrinkage or pain', 'Men unsuited to surgery or with recurrence', 'Men with no symptoms'] }
+          ],
+          note:
+            'The microsurgical approach is preferred because the artery and the lymphatic channels can be distinguished under the microscope. Even so, not every man needs surgery; surveillance is a legitimate option too.'
+        },
+        recovery: [
+          {
+            period: 'First 48 hours',
+            body: 'Swelling and tenderness in the groin are expected. Ice and supportive underwear are advised. Painkillers provide comfort.'
+          },
+          {
+            period: 'Days 3–7',
+            body: 'A return to desk work is possible. Gentle walking is allowed; heavy lifting and sport are not.'
+          },
+          {
+            period: 'Weeks 2–4',
+            body: 'A gradual return to normal physical activity is made. A return to sexual activity is planned during this period.'
+          },
+          {
+            period: 'Month 3',
+            body: 'The first follow-up semen analysis is carried out. Because sperm production works on a cycle of about three months, testing earlier is not meaningful.'
+          },
+          {
+            period: 'Month 6',
+            body: 'A second semen analysis clarifies the outcome. Where needed, assisted reproduction options are discussed again.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies according to whether one or both sides are operated on and the additional investigations required. A firm quotation is given after assessment.'
+        },
+        packageIncludes: [
+          'Andrological assessment and physical examination standing',
+          'Scrotal colour Doppler ultrasound',
+          'Semen analysis and hormone profile',
+          'Microsurgical varicocelectomy and anaesthesia',
+          'Day-case procedure and observation',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and remote follow-up after you return home'
+        ],
+        faqs: [
+          {
+            q: 'I have a varicocele — must I have surgery?',
+            a: 'No. Varicoceles are very common and the great majority of men who have one father children without difficulty. The decision to operate rests not on the presence of a varicocele but on evidence that it is doing you harm: deterioration in the sperm values, a smaller testicle, or pain that does not settle. Where these are absent, surveillance is the right approach.'
+          },
+          {
+            q: 'Does a varicocele cause infertility?',
+            a: 'A varicocele can affect sperm production adversely, but not every man with one is infertile. The diagnosis alone is therefore not enough; at least two semen analyses and an assessment of the couple together are needed. If there is a problem on the woman’s side, varicocele surgery will not resolve it.'
+          },
+          {
+            q: 'If I have the operation, will I father a child?',
+            a: 'No guarantee can be given on this. Surgery can bring improvement in the sperm values, but this does not happen in every man, and even where it does a pregnancy is not certain. Male infertility involves many factors; the woman’s age and other factors also shape the outcome. Be wary of any approach that promises you a certain pregnancy.'
+          },
+          {
+            q: 'Why is it always on the left?',
+            a: 'The reason is anatomical. The left testicular vein joins the left kidney vein at a right angle, which makes backward flow easier. On the right the connection is at a shallower angle. That is why a one-sided varicocele is usually on the left.'
+          },
+          {
+            q: 'My varicocele is on the right side only — does that matter?',
+            a: 'This is less common and does call for attention. In a varicocele that begins suddenly later in life, is on the right side only, or does not disappear on lying down, it must be investigated whether a mass in the kidney region is pressing on the vein. It is a rare situation but should not be missed.'
+          },
+          {
+            q: 'When should I have a semen analysis after the operation?',
+            a: 'No earlier than three months. Sperm production works on a cycle of about three months, so an analysis done sooner does not reflect the true result. Assessment is usually made at 3 and 6 months.'
+          },
+          {
+            q: 'What is the difference between microsurgery and a standard operation?',
+            a: 'Microsurgery uses the operating microscope. This allows the veins that need tying off to be distinguished from the testicular artery and the lymphatic channels that need preserving. That helps both to protect the blood supply to the testicle and to reduce the risk of a hydrocele (a collection of fluid).'
+          },
+          {
+            q: 'Can I have surgery for my pain?',
+            a: 'If the pain is due to the varicocele and does not settle with supportive measures, surgery is an option. But because pain can have other causes, these must be ruled out first. It also cannot be guaranteed that the pain will disappear completely after surgery; this is discussed from the outset.'
+          },
+          {
+            q: 'A varicocele has been found in my teenage son — what should we do?',
+            a: 'In adolescents the criterion for a decision is whether the testicle on the affected side has become smaller. If it has, surgery comes into consideration; if not, surveillance with regular measurement of testicular volume is carried out. Rushing into surgery is not right in this age group.'
+          },
+          {
+            q: 'When can I fly and return to work?',
+            a: 'Flying is usually permitted after 3–5 days; a stay of 4–6 days is planned for patients travelling from abroad. A return to desk work is possible within 3–7 days. For heavy lifting and sport, waiting 2–4 weeks is advised.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      de: {
+        title: 'Varikozele: Wer braucht wirklich eine Operation?',
+        summary:
+          'Eine Erweiterung der Venen am Hoden ist häufig, doch nicht jede Varikozele muss operiert werden. Die eigentliche Frage lautet: Schadet Ihnen diese Varikozele?',
+        metaTitle: 'Was ist eine Varikozele? Wer muss operiert werden?',
+        metaDescription:
+          'Was eine Varikozele ist, ihr Zusammenhang mit Unfruchtbarkeit, wer eine Operation braucht, das mikrochirurgische Verfahren, die Risiken und die Tatsache, dass die Operation keine Schwangerschaft garantiert.',
+        quickFacts: {
+          duration: '45–90 Minuten',
+          anesthesia: 'Vollnarkose oder Spinalanästhesie',
+          hospitalStay: 'Ambulant',
+          stayInTurkey: '4–6 Tage',
+          returnToWork: '3–7 Tage',
+          flightClearance: '3–5 Tage'
+        },
+        definition: [
+          'Eine Varikozele ist eine Erweiterung der Venen, die das Blut vom Hoden zum Herzen zurückführen, wobei ein Teil des Blutes zurückfließt. Es ähnelt den Krampfadern an den Beinen. Sie findet sich bei einem erheblichen Teil der Männer und verursacht meist überhaupt keine Beschwerden.',
+          'MEIST LIEGT SIE LINKS. Der Grund ist anatomisch: Die linke Hodenvene mündet im rechten Winkel in die linke Nierenvene, was den Rückfluss erleichtert. Eine Varikozele allein auf der rechten Seite ist seltener.',
+          'Der Hauptweg, auf dem eine Varikozele dem Hoden schadet, ist die Wärme. Für eine gesunde Samenbildung muss der Hoden etwas kühler sein als der Körper; deshalb liegen die Hoden außerhalb. Das in den erweiterten Venen gestaute Blut erhöht die Temperatur um den Hoden und kann die Samenbildung beeinträchtigen.',
+          'DAS WICHTIGSTE MISSVERSTÄNDNIS LAUTET: Nicht jeder Mann, bei dem eine Varikozele festgestellt wird, muss operiert werden. Varikozelen sind sehr häufig, und die große Mehrheit der betroffenen Männer bekommt problemlos Kinder. Die Entscheidung zur Operation beruht nicht auf dem Vorhandensein einer Varikozele, sondern auf Hinweisen, dass sie Schaden anrichtet: verschlechterte Samenwerte, ein kleiner gewordener Hoden oder anhaltende Schmerzen.',
+          'Bei der Untersuchung wird die Varikozele in drei Grade eingeteilt: nur beim Pressen tastbar (Grad 1), mit der Hand tastbar (Grad 2) und von außen sichtbar (Grad 3). Die Untersuchung erfolgt im Stehen; eine im Liegen durchgeführte Untersuchung kann in die Irre führen. Der Ultraschall bestätigt den Befund und misst die Hodenvolumina.',
+          'EIN WICHTIGER HINWEIS: Tritt eine Varikozele im höheren Alter plötzlich auf, liegt sie nur rechts oder verschwindet sie im Liegen nicht, muss abgeklärt werden, ob eine Raumforderung im Nierenbereich dahintersteckt. Das ist selten, darf aber nicht übersehen werden.'
+        ],
+        eligibility: {
+          suitable: [
+            'Paare mit Kinderwunsch, bei denen der Mann eine tastbare Varikozele und verschlechterte Samenwerte hat',
+            'Jugendliche und junge Männer, bei denen der Hoden auf der Seite der Varikozele kleiner geworden ist',
+            'Männer mit varikozelebedingten Schmerzen, die trotz Schmerzmitteln und unterstützenden Maßnahmen nicht abklingen',
+            'Paare mit geplanter Kinderwunschbehandlung, bei denen die Samenqualität verbessert werden soll',
+            'Ausgewählte Männer, bei denen ein niedriger Testosteronspiegel zusammen mit der Varikozele beurteilt wird'
+          ],
+          notSuitable: [
+            'Männer ohne Beschwerden und mit normalen Samenwerten — eine festgestellte Varikozele ist für sich allein kein Operationsgrund',
+            'Männer, deren Varikozele nur im Ultraschall sichtbar und nicht tastbar ist — hier ist ein Nutzen der Operation nicht belegt',
+            'Paare, bei denen aufseiten der Frau ein unbehandeltes, die Schwangerschaft verhinderndes Problem besteht — die Abklärung muss als Paar erfolgen',
+            'Situationen mit vollständig erloschener Samenbildung, die sich nicht durch die Varikozele erklären lässt — zuerst sind genetische und hormonelle Abklärungen nötig',
+            'Männer, die glauben, die Operation garantiere eine Schwangerschaft — eine solche Garantie gibt es nicht'
+          ]
+        },
+        technology: [
+          'Körperliche Untersuchung im Stehen und unter Pressen (Valsalva)',
+          'Farbduplexsonographie des Hodensacks — Messung des Rückflusses und der Hodenvolumina',
+          'Spermiogramm (mindestens zwei getrennte Proben) und bei Bedarf Beurteilung der Spermien-DNA',
+          'Hormonprofil (FSH, LH, Testosteron)',
+          'Mikrochirurgischer subinguinaler Zugang mit dem Operationsmikroskop — Unterscheidung von Venen, Arterie und Lymphgefäßen'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Andrologie und männliche Unfruchtbarkeit gehören zu den Arbeitsgebieten von Doz. Dr. Müslüm Ergün. Bei der Varikozele richtet sich die Entscheidung weniger nach dem Vorhandensein des Befundes als nach dem Schaden, den er anrichtet; unnötige Operationen zu vermeiden ist das Fundament dieses Vorgehens.'
+        },
+        timeline: [
+          {
+            when: 'Schritt 1',
+            title: 'Abklärung',
+            body: 'Die Untersuchung erfolgt im Stehen und unter Pressen. Rückfluss und Hodenvolumina werden sonographisch gemessen. Es werden mindestens zwei Spermiogramme verlangt — ein einzelnes reicht für eine Entscheidung nicht aus.'
+          },
+          {
+            when: 'Schritt 2',
+            title: 'Gemeinsame Beurteilung des Paares',
+            body: 'Besteht Kinderwunsch, muss auch die Frau abgeklärt sein. Eine Varikozelenoperation löst kein Problem aufseiten der Frau.'
+          },
+          {
+            when: 'Schritt 3',
+            title: 'Entscheidung zur Operation',
+            body: 'Die Entscheidung beruht darauf, dass eine tastbare Varikozele gemeinsam mit verschlechterten Samenwerten, einem kleiner gewordenen Hoden oder anhaltenden Schmerzen vorliegt.'
+          },
+          {
+            when: 'Operationstag',
+            title: 'Mikrochirurgische Varikozelektomie',
+            body: 'Der Zugang erfolgt über einen kleinen Schnitt unterhalb der Leiste. Unter dem Operationsmikroskop werden die erweiterten Venen unterbunden, während Hodenarterie und Lymphgefäße geschont werden. Der Eingriff dauert 45–90 Minuten; die Entlassung erfolgt am selben Tag.'
+          },
+          {
+            when: 'Woche 1',
+            title: 'Frühe Heilung',
+            body: 'Schwellung und Empfindlichkeit in der Leiste sind zu erwarten. Kühlung und stützende Unterwäsche verschaffen Linderung. Leichtes Gehen ist erlaubt.'
+          },
+          {
+            when: 'Monat 3–6',
+            title: 'Beurteilung des Ergebnisses',
+            body: 'Da die Samenbildung in einem Zyklus von etwa drei Monaten abläuft, wird das Spermiogramm frühestens drei Monate nach der Operation wiederholt. Beurteilt wird nach 3 und 6 Monaten.'
+          }
+        ],
+        risks: [
+          'ES GIBT KEINE SCHWANGERSCHAFTSGARANTIE: Die Operation kann die Samenwerte verbessern, doch das geschieht nicht bei jedem Mann, und selbst dann lässt sich eine Schwangerschaft nicht garantieren. Das ist kein Versagen des Verfahrens, sondern Folge der vielen Faktoren, die bei männlicher Unfruchtbarkeit zusammenwirken',
+          'Hydrozele (Flüssigkeitsansammlung um den Hoden) — durch Verletzung der Lymphgefäße; dieses Risiko zu senken ist einer der Gründe, warum das mikrochirurgische Vorgehen bevorzugt wird',
+          'Wiederauftreten der Varikozele oder ihr unvollständiges Verschwinden',
+          'Verletzung der Hodenarterie — sehr selten, aber schwerwiegend; das Mikroskop dient dazu, dieses Risiko zu senken',
+          'Wundinfektion und Blutung',
+          'Vorübergehendes Taubheitsgefühl oder Empfindlichkeit in der Leiste',
+          'Bei wegen Schmerzen operierten Männern: dass die Schmerzen nicht vollständig verschwinden'
+        ],
+        alternatives: [
+          'Beobachtung — bei Männern ohne Beschwerden und mit normalen Samenwerten das richtige Vorgehen',
+          'Unterstützende Maßnahmen gegen Schmerzen — stützende Unterwäsche, Schmerzmittel, langes Stehen vermeiden',
+          'Perkutane Embolisation — Verschluss der Vene von innen unter radiologischer Kontrolle; bei für eine Operation ungeeigneten oder wiederkehrenden Fällen',
+          'Laparoskopische Varikozelektomie — eine Option bei beidseitigem Befund',
+          'Direkter Übergang zur Kinderwunschbehandlung — bei fortgeschrittenem Alter der Frau oder knapper Zeit',
+          'Einfrieren von Samen — als Absicherung vor der Behandlung'
+        ],
+        comparison: {
+          title: 'Die Behandlungsoptionen im Vergleich',
+          columns: ['Kriterium', 'Mikrochirurgie', 'Embolisation', 'Beobachtung'],
+          rows: [
+            { label: 'Eingriff', values: ['Kleiner Schnitt unterhalb der Leiste', 'Von innen durch das Gefäß, ohne Schnitt', 'Keiner'] },
+            { label: 'Narkose', values: ['Vollnarkose oder Spinalanästhesie', 'Örtlich', 'Keine'] },
+            { label: 'Hydrozelenrisiko', values: ['Gering (Lymphgefäße geschont)', 'Keines', 'Keines'] },
+            { label: 'Wiederauftreten', values: ['Geringer', 'Kann höher sein', 'Nicht zutreffend'] },
+            { label: 'Rückkehr zur Arbeit', values: ['3–7 Tage', '1–2 Tage', 'Keine'] },
+            { label: 'Für wen geeignet', values: ['Bei gestörten Samenwerten, Verkleinerung oder Schmerzen', 'Für eine Operation ungeeignete oder wiederkehrende Fälle', 'Männer ohne Beschwerden'] }
+          ],
+          note:
+            'Das mikrochirurgische Vorgehen wird bevorzugt, weil sich Arterie und Lymphgefäße unter dem Mikroskop unterscheiden lassen. Dennoch braucht nicht jeder Mann eine Operation; auch die Beobachtung ist eine legitime Option.'
+        },
+        recovery: [
+          {
+            period: 'Erste 48 Stunden',
+            body: 'Schwellung und Empfindlichkeit in der Leiste sind zu erwarten. Kühlung und stützende Unterwäsche werden empfohlen. Schmerzmittel sorgen für Linderung.'
+          },
+          {
+            period: 'Tag 3–7',
+            body: 'Die Rückkehr an den Schreibtisch ist möglich. Leichtes Gehen ist erlaubt; schweres Heben und Sport nicht.'
+          },
+          {
+            period: 'Woche 2–4',
+            body: 'Die Rückkehr zur normalen körperlichen Aktivität erfolgt schrittweise. Die Rückkehr zur Sexualität wird in dieser Zeit geplant.'
+          },
+          {
+            period: 'Monat 3',
+            body: 'Das erste Kontroll-Spermiogramm wird durchgeführt. Da die Samenbildung in einem Zyklus von etwa drei Monaten abläuft, ist eine frühere Untersuchung nicht aussagekräftig.'
+          },
+          {
+            period: 'Monat 6',
+            body: 'Ein zweites Spermiogramm klärt das Ergebnis. Bei Bedarf werden die Möglichkeiten der Kinderwunschbehandlung erneut besprochen.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Der Preis richtet sich danach, ob ein- oder beidseitig operiert wird, und nach den zusätzlich erforderlichen Untersuchungen. Ein verbindliches Angebot erfolgt nach der Abklärung.'
+        },
+        packageIncludes: [
+          'Andrologische Abklärung und körperliche Untersuchung im Stehen',
+          'Farbduplexsonographie des Hodensacks',
+          'Spermiogramm und Hormonprofil',
+          'Mikrochirurgische Varikozelektomie und Narkose',
+          'Ambulanter Eingriff und Überwachung',
+          'Transfers Flughafen–Krankenhaus–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und Fernbetreuung nach Ihrer Rückkehr'
+        ],
+        faqs: [
+          {
+            q: 'Ich habe eine Varikozele — muss ich unbedingt operiert werden?',
+            a: 'Nein. Varikozelen sind sehr häufig, und die große Mehrheit der betroffenen Männer bekommt problemlos Kinder. Die Entscheidung zur Operation beruht nicht auf dem Vorhandensein einer Varikozele, sondern auf Hinweisen, dass sie Ihnen schadet: verschlechterte Samenwerte, ein kleiner gewordener Hoden oder anhaltende Schmerzen. Fehlen diese, ist Beobachtung das richtige Vorgehen.'
+          },
+          {
+            q: 'Macht eine Varikozele unfruchtbar?',
+            a: 'Eine Varikozele kann die Samenbildung beeinträchtigen, doch nicht jeder Mann mit einer Varikozele ist unfruchtbar. Die Diagnose allein genügt deshalb nicht; es braucht mindestens zwei Spermiogramme und eine gemeinsame Beurteilung des Paares. Besteht ein Problem aufseiten der Frau, löst die Varikozelenoperation es nicht.'
+          },
+          {
+            q: 'Bekomme ich nach der Operation ein Kind?',
+            a: 'Dafür lässt sich keine Garantie geben. Die Operation kann die Samenwerte verbessern, doch das geschieht nicht bei jedem Mann, und selbst dann ist eine Schwangerschaft nicht sicher. Männliche Unfruchtbarkeit hat viele Ursachen; auch das Alter der Frau und weitere Faktoren bestimmen das Ergebnis. Seien Sie vorsichtig bei Angeboten, die Ihnen eine sichere Schwangerschaft versprechen.'
+          },
+          {
+            q: 'Warum ist sie immer links?',
+            a: 'Der Grund ist anatomisch. Die linke Hodenvene mündet im rechten Winkel in die linke Nierenvene, was den Rückfluss erleichtert. Rechts ist die Einmündung flacher. Deshalb liegt eine einseitige Varikozele meist links.'
+          },
+          {
+            q: 'Meine Varikozele ist nur rechts — ist das bedeutsam?',
+            a: 'Das ist seltener und erfordert Aufmerksamkeit. Bei einer Varikozele, die im höheren Alter plötzlich beginnt, nur rechts liegt oder im Liegen nicht verschwindet, muss abgeklärt werden, ob eine Raumforderung im Nierenbereich auf das Gefäß drückt. Das ist selten, darf aber nicht übersehen werden.'
+          },
+          {
+            q: 'Wann soll ich nach der Operation ein Spermiogramm machen lassen?',
+            a: 'Frühestens nach drei Monaten. Die Samenbildung läuft in einem Zyklus von etwa drei Monaten ab; eine frühere Untersuchung bildet das tatsächliche Ergebnis nicht ab. Beurteilt wird meist nach 3 und 6 Monaten.'
+          },
+          {
+            q: 'Worin unterscheidet sich die Mikrochirurgie von einer herkömmlichen Operation?',
+            a: 'Bei der Mikrochirurgie wird das Operationsmikroskop eingesetzt. Dadurch lassen sich die zu unterbindenden Venen von der zu schonenden Hodenarterie und den Lymphgefäßen unterscheiden. Das hilft, die Durchblutung des Hodens zu erhalten und das Risiko einer Hydrozele (Flüssigkeitsansammlung) zu senken.'
+          },
+          {
+            q: 'Kann ich mich wegen meiner Schmerzen operieren lassen?',
+            a: 'Wenn die Schmerzen von der Varikozele herrühren und mit unterstützenden Maßnahmen nicht abklingen, ist die Operation eine Option. Da Schmerzen aber auch andere Ursachen haben können, müssen diese zuvor ausgeschlossen werden. Zudem lässt sich nicht garantieren, dass die Schmerzen nach der Operation vollständig verschwinden; das wird von Anfang an besprochen.'
+          },
+          {
+            q: 'Bei meinem Sohn in der Pubertät wurde eine Varikozele festgestellt — was tun?',
+            a: 'Bei Jugendlichen ist das Entscheidungskriterium, ob der Hoden auf der betroffenen Seite kleiner geworden ist. Ist das der Fall, kommt eine Operation in Betracht; andernfalls wird mit regelmäßiger Messung des Hodenvolumens beobachtet. Eine überstürzte Operationsentscheidung ist in dieser Altersgruppe nicht richtig.'
+          },
+          {
+            q: 'Wann darf ich fliegen und arbeiten?',
+            a: 'Fliegen ist meist nach 3–5 Tagen erlaubt; für Patienten aus dem Ausland wird ein Aufenthalt von 4–6 Tagen geplant. An den Schreibtisch kann man innerhalb von 3–7 Tagen zurückkehren. Für schweres Heben und Sport werden 2–4 Wochen empfohlen.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — Europäische Gesellschaft für Urologie',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      fr: {
+        title: 'Varicocèle : qui a réellement besoin d’une opération ?',
+        summary:
+          'La dilatation des veines autour du testicule est fréquente, mais toute varicocèle ne nécessite pas d’intervention. La vraie question est celle-ci : cette varicocèle vous nuit-elle ?',
+        metaTitle: 'Qu’est-ce qu’une varicocèle ? Qui doit être opéré ?',
+        metaDescription:
+          'Ce qu’est une varicocèle, son lien avec l’infertilité, qui doit être opéré, la technique microchirurgicale, les risques, et le fait que l’opération ne garantit pas une grossesse.',
+        quickFacts: {
+          duration: '45–90 minutes',
+          anesthesia: 'Anesthésie générale ou rachianesthésie',
+          hospitalStay: 'Ambulatoire',
+          stayInTurkey: '4–6 jours',
+          returnToWork: '3–7 jours',
+          flightClearance: '3–5 jours'
+        },
+        definition: [
+          'La varicocèle est une dilatation des veines qui ramènent le sang du testicule vers le cœur, avec un reflux d’une partie de ce sang. Cela ressemble aux varices des jambes. Elle est présente chez une part importante des hommes et, le plus souvent, ne provoque aucun symptôme.',
+          'ELLE SIÈGE LE PLUS SOUVENT À GAUCHE. La raison est anatomique : la veine testiculaire gauche se jette à angle droit dans la veine rénale gauche, ce qui facilite le reflux. Une varicocèle isolée à droite est plus rare.',
+          'Le principal mécanisme par lequel une varicocèle nuit au testicule est la chaleur. Pour produire des spermatozoïdes sains, le testicule doit être un peu plus frais que le corps ; c’est pourquoi les testicules se trouvent à l’extérieur. Le sang stagnant dans les veines dilatées élève la température autour du testicule et peut nuire à la production de spermatozoïdes.',
+          'LE MALENTENDU LE PLUS IMPORTANT EST LE SUIVANT : tout homme chez qui l’on découvre une varicocèle n’a pas besoin d’être opéré. Les varicocèles sont très fréquentes, et la grande majorité des hommes qui en ont une deviennent pères sans difficulté. La décision d’opérer repose non sur la présence d’une varicocèle, mais sur des signes qu’elle vous nuit : altération du spermogramme, diminution de volume du testicule, ou douleur qui ne passe pas.',
+          'À l’examen, la varicocèle est classée en trois grades : perçue uniquement à la poussée (grade 1), palpable à la main (grade 2) et visible de l’extérieur (grade 3). L’examen se fait debout ; réalisé couché, il peut induire en erreur. L’échographie confirme le constat et mesure les volumes testiculaires.',
+          'AVERTISSEMENT IMPORTANT : si une varicocèle apparaît brutalement à un âge avancé, si elle siège uniquement à droite ou si elle ne disparaît pas en position couchée, il faut rechercher une masse dans la région rénale. C’est une situation rare mais à ne pas manquer.'
+        ],
+        eligibility: {
+          suitable: [
+            'Couples en désir d’enfant où l’homme présente une varicocèle palpable et un spermogramme altéré',
+            'Adolescents et jeunes hommes dont le testicule du côté de la varicocèle a diminué de volume',
+            'Hommes présentant des douleurs liées à la varicocèle qui persistent malgré les antalgiques et les mesures de soutien',
+            'Couples engagés dans une assistance médicale à la procréation chez qui l’on vise à améliorer la qualité du sperme',
+            'Hommes sélectionnés chez qui une testostérone basse est évaluée conjointement à la varicocèle'
+          ],
+          notSuitable: [
+            'Hommes sans symptôme et au spermogramme normal — la découverte d’une varicocèle n’est pas à elle seule une indication opératoire',
+            'Hommes dont la varicocèle n’est visible qu’à l’échographie et n’est pas palpable — aucun bénéfice de la chirurgie n’a été démontré dans ce cas',
+            'Couples chez qui existe, du côté féminin, un problème non traité empêchant la grossesse — l’évaluation doit se faire en couple',
+            'Situations d’arrêt complet de la production de spermatozoïdes non explicable par la varicocèle — un bilan génétique et hormonal s’impose d’abord',
+            'Hommes qui pensent que l’opération garantira une grossesse — une telle garantie ne peut être donnée'
+          ]
+        },
+        technology: [
+          'Examen clinique debout et en poussée (Valsalva)',
+          'Échographie-doppler couleur scrotale — mesure du reflux et des volumes testiculaires',
+          'Spermogramme (au moins deux prélèvements distincts) et, si besoin, évaluation de l’ADN spermatique',
+          'Bilan hormonal (FSH, LH, testostérone)',
+          'Abord microchirurgical sous-inguinal au microscope opératoire — distinction des veines, de l’artère et des lymphatiques'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'L’andrologie et l’infertilité masculine font partie des domaines d’activité du Dr Müslüm Ergün, maître de conférences. Dans la varicocèle, la décision repose moins sur la présence du constat que sur le préjudice qu’il cause au patient ; éviter la chirurgie inutile est le fondement de cette démarche.'
+        },
+        timeline: [
+          {
+            when: 'Étape 1',
+            title: 'Évaluation',
+            body: 'L’examen se fait debout et en poussée. Le reflux et les volumes testiculaires sont mesurés par échographie. Au moins deux spermogrammes sont demandés — un seul ne suffit pas pour décider.'
+          },
+          {
+            when: 'Étape 2',
+            title: 'Évaluation conjointe du couple',
+            body: 'En cas de désir d’enfant, la femme doit également avoir été évaluée. La chirurgie de la varicocèle ne résout pas un problème du côté féminin.'
+          },
+          {
+            when: 'Étape 3',
+            title: 'Décision opératoire',
+            body: 'La décision repose sur l’association d’une varicocèle palpable à un spermogramme altéré, à une diminution de volume testiculaire ou à une douleur persistante.'
+          },
+          {
+            when: 'Jour de l’intervention',
+            title: 'Varicocélectomie microchirurgicale',
+            body: 'L’abord se fait par une petite incision sous l’aine. Sous microscope opératoire, les veines dilatées sont liées tandis que l’artère testiculaire et les canaux lymphatiques sont préservés. L’intervention dure 45 à 90 minutes ; la sortie a lieu le jour même.'
+          },
+          {
+            when: 'Semaine 1',
+            title: 'Convalescence précoce',
+            body: 'Gonflement et sensibilité à l’aine sont attendus. Le froid et un sous-vêtement de soutien soulagent. La marche légère est permise.'
+          },
+          {
+            when: 'Mois 3–6',
+            title: 'Évaluation du résultat',
+            body: 'La production de spermatozoïdes suivant un cycle d’environ trois mois, le spermogramme est refait au plus tôt trois mois après l’intervention. L’évaluation se fait à 3 et 6 mois.'
+          }
+        ],
+        risks: [
+          'AUCUNE GARANTIE DE GROSSESSE : l’opération peut améliorer le spermogramme, mais cela ne survient pas chez tous les hommes et, même en cas d’amélioration, la grossesse ne peut être garantie. Ce n’est pas un échec de la méthode mais la conséquence du caractère multifactoriel de l’infertilité masculine',
+          'Hydrocèle (accumulation de liquide autour du testicule) — liée à une atteinte des canaux lymphatiques ; réduire ce risque est l’une des raisons du choix de l’abord microchirurgical',
+          'Récidive de la varicocèle ou disparition incomplète',
+          'Lésion de l’artère testiculaire — très rare mais grave ; le microscope sert précisément à réduire ce risque',
+          'Infection de la cicatrice et saignement',
+          'Engourdissement ou sensibilité transitoires à l’aine',
+          'Chez les hommes opérés pour douleur : persistance partielle de la douleur'
+        ],
+        alternatives: [
+          'Surveillance — la bonne démarche chez les hommes sans symptôme et au spermogramme normal',
+          'Mesures de soutien contre la douleur — sous-vêtement de soutien, antalgiques, éviter la station debout prolongée',
+          'Embolisation percutanée — occlusion de la veine par voie endovasculaire sous contrôle radiologique ; chez les patients non candidats à la chirurgie ou en cas de récidive',
+          'Varicocélectomie laparoscopique — une option dans les formes bilatérales',
+          'Passage direct à l’assistance médicale à la procréation — si l’âge de la femme est avancé ou le temps compté',
+          'Congélation de sperme — par sécurité avant le traitement'
+        ],
+        comparison: {
+          title: 'Comparaison des options thérapeutiques',
+          columns: ['Critère', 'Microchirurgie', 'Embolisation', 'Surveillance'],
+          rows: [
+            { label: 'Geste', values: ['Petite incision sous l’aine', 'Par voie endovasculaire, sans incision', 'Aucun'] },
+            { label: 'Anesthésie', values: ['Générale ou rachianesthésie', 'Locale', 'Aucune'] },
+            { label: 'Risque d’hydrocèle', values: ['Faible (lymphatiques préservés)', 'Nul', 'Nul'] },
+            { label: 'Récidive', values: ['Plus faible', 'Peut être plus élevée', 'Sans objet'] },
+            { label: 'Reprise du travail', values: ['3–7 jours', '1–2 jours', 'Aucune'] },
+            { label: 'À qui cela convient', values: ['Spermogramme altéré, atrophie ou douleur', 'Patients non candidats à la chirurgie ou récidives', 'Hommes sans symptôme'] }
+          ],
+          note:
+            'L’abord microchirurgical est privilégié car l’artère et les canaux lymphatiques se distinguent sous microscope. Cela dit, tout homme n’a pas besoin d’être opéré ; la surveillance est aussi une option légitime.'
+        },
+        recovery: [
+          {
+            period: 'Premières 48 heures',
+            body: 'Gonflement et sensibilité à l’aine sont attendus. Le froid et un sous-vêtement de soutien sont conseillés. Les antalgiques apportent du confort.'
+          },
+          {
+            period: 'Jours 3–7',
+            body: 'Le retour au travail de bureau est possible. La marche légère est permise ; le port de charges et le sport non.'
+          },
+          {
+            period: 'Semaines 2–4',
+            body: 'Le retour à l’activité physique normale se fait progressivement. La reprise de la vie sexuelle se planifie durant cette période.'
+          },
+          {
+            period: 'Mois 3',
+            body: 'Le premier spermogramme de contrôle est réalisé. La production de spermatozoïdes suivant un cycle d’environ trois mois, un contrôle plus précoce n’a pas de sens.'
+          },
+          {
+            period: 'Mois 6',
+            body: 'Un second spermogramme précise le résultat. Au besoin, les options d’assistance médicale à la procréation sont rediscutées.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Le prix varie selon que l’intervention est unilatérale ou bilatérale et selon les examens complémentaires. Un devis ferme est remis après l’évaluation.'
+        },
+        packageIncludes: [
+          'Évaluation andrologique et examen clinique debout',
+          'Échographie-doppler couleur scrotale',
+          'Spermogramme et bilan hormonal',
+          'Varicocélectomie microchirurgicale et anesthésie',
+          'Geste ambulatoire et surveillance',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et suivi à distance après votre retour'
+        ],
+        faqs: [
+          {
+            q: 'J’ai une varicocèle, dois-je absolument être opéré ?',
+            a: 'Non. Les varicocèles sont très fréquentes et la grande majorité des hommes qui en ont une deviennent pères sans difficulté. La décision d’opérer repose non sur la présence d’une varicocèle, mais sur des signes qu’elle vous nuit : spermogramme altéré, testicule diminué de volume ou douleur persistante. En leur absence, la surveillance est la bonne démarche.'
+          },
+          {
+            q: 'La varicocèle rend-elle stérile ?',
+            a: 'Une varicocèle peut nuire à la production de spermatozoïdes, mais tout homme qui en a une n’est pas infertile. Le diagnostic seul ne suffit donc pas ; il faut au moins deux spermogrammes et une évaluation du couple. S’il existe un problème du côté féminin, la chirurgie de la varicocèle ne le résoudra pas.'
+          },
+          {
+            q: 'Si je me fais opérer, aurai-je un enfant ?',
+            a: 'Aucune garantie ne peut être donnée. L’opération peut améliorer le spermogramme, mais cela ne survient pas chez tous les hommes et, même alors, la grossesse n’est pas certaine. L’infertilité masculine est multifactorielle ; l’âge de la femme et d’autres facteurs déterminent aussi le résultat. Méfiez-vous de toute approche qui vous promet une grossesse certaine.'
+          },
+          {
+            q: 'Pourquoi est-ce toujours à gauche ?',
+            a: 'La raison est anatomique. La veine testiculaire gauche se jette à angle droit dans la veine rénale gauche, ce qui facilite le reflux. À droite, l’abouchement est plus oblique. C’est pourquoi une varicocèle unilatérale siège le plus souvent à gauche.'
+          },
+          {
+            q: 'Ma varicocèle est uniquement à droite, est-ce important ?',
+            a: 'C’est plus rare et cela demande de l’attention. Devant une varicocèle apparue brutalement à un âge avancé, siégeant uniquement à droite ou ne disparaissant pas en position couchée, il faut rechercher si une masse de la région rénale comprime la veine. C’est rare, mais à ne pas manquer.'
+          },
+          {
+            q: 'Quand faire un spermogramme après l’opération ?',
+            a: 'Au plus tôt trois mois après. La production de spermatozoïdes suit un cycle d’environ trois mois ; une analyse plus précoce ne reflète pas le résultat réel. L’évaluation se fait généralement à 3 et 6 mois.'
+          },
+          {
+            q: 'Quelle différence entre microchirurgie et opération classique ?',
+            a: 'La microchirurgie utilise le microscope opératoire. Cela permet de distinguer les veines à lier de l’artère testiculaire et des canaux lymphatiques à préserver. Cela aide à la fois à protéger la vascularisation du testicule et à réduire le risque d’hydrocèle (accumulation de liquide).'
+          },
+          {
+            q: 'Puis-je être opéré pour ma douleur ?',
+            a: 'Si la douleur est liée à la varicocèle et ne cède pas aux mesures de soutien, la chirurgie est une option. Mais comme la douleur peut avoir d’autres causes, celles-ci doivent d’abord être écartées. Par ailleurs, il ne peut être garanti que la douleur disparaîtra complètement après l’opération ; cela se discute d’emblée.'
+          },
+          {
+            q: 'Une varicocèle a été trouvée chez mon fils adolescent, que faire ?',
+            a: 'Chez l’adolescent, le critère de décision est la diminution de volume du testicule du côté atteint. Si elle existe, la chirurgie s’envisage ; sinon, on surveille en mesurant régulièrement le volume testiculaire. Précipiter la décision opératoire n’est pas justifié à cet âge.'
+          },
+          {
+            q: 'Quand puis-je prendre l’avion et reprendre le travail ?',
+            a: 'Le vol est généralement autorisé après 3 à 5 jours ; pour les patients venant de l’étranger, un séjour de 4 à 6 jours est prévu. Le travail de bureau peut reprendre en 3 à 7 jours. Pour le port de charges et le sport, il est conseillé d’attendre 2 à 4 semaines.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — Association européenne d’urologie',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      ru: {
+        title: 'Варикоцеле: кому действительно нужна операция?',
+        summary:
+          'Расширение вен вокруг яичка встречается часто, но не каждое варикоцеле требует операции. Настоящий вопрос такой: вредит ли вам это варикоцеле?',
+        metaTitle: 'Что такое варикоцеле? Кому нужна операция?',
+        metaDescription:
+          'Что такое варикоцеле, его связь с бесплодием, кому нужна операция, микрохирургический метод, риски и тот факт, что операция не гарантирует наступления беременности.',
+        quickFacts: {
+          duration: '45–90 минут',
+          anesthesia: 'Общая или спинальная анестезия',
+          hospitalStay: 'Амбулаторно',
+          stayInTurkey: '4–6 дней',
+          returnToWork: '3–7 дней',
+          flightClearance: '3–5 дней'
+        },
+        definition: [
+          'Варикоцеле — это расширение вен, по которым кровь оттекает от яичка к сердцу, с обратным забросом части этой крови. Это похоже на варикозные вены на ногах. Оно встречается у значительной части мужчин и чаще всего не вызывает никаких жалоб.',
+          'ЧАЩЕ ВСЕГО ОНО СЛЕВА. Причина анатомическая: левая яичковая вена впадает в левую почечную вену под прямым углом, и это облегчает обратный заброс крови. Варикоцеле только справа встречается реже.',
+          'Главный механизм вреда для яичка — тепло. Для здоровой выработки сперматозоидов яичко должно быть немного прохладнее тела; именно поэтому яички расположены снаружи. Кровь, застаивающаяся в расширенных венах, повышает температуру вокруг яичка и может ухудшать выработку сперматозоидов.',
+          'САМОЕ ВАЖНОЕ ЗАБЛУЖДЕНИЕ ТАКОЕ: не каждому мужчине с выявленным варикоцеле нужна операция. Варикоцеле встречается очень часто, и подавляющее большинство мужчин с ним без труда становятся отцами. Решение об операции основано не на наличии варикоцеле, а на признаках того, что оно вредит: ухудшение показателей спермы, уменьшение яичка или не проходящая боль.',
+          'При осмотре варикоцеле делят на три степени: ощущается только при натуживании (1-я степень), прощупывается рукой (2-я степень) и видно снаружи (3-я степень). Осмотр проводят стоя; осмотр лёжа может ввести в заблуждение. Ультразвук подтверждает находку и измеряет объёмы яичек.',
+          'ВАЖНОЕ ПРЕДУПРЕЖДЕНИЕ: если варикоцеле возникло внезапно в зрелом возрасте, расположено только справа или не исчезает в положении лёжа, нужно проверить, нет ли образования в области почки. Это редкая ситуация, но её нельзя пропустить.'
+        ],
+        eligibility: {
+          suitable: [
+            'Пары, желающие зачать ребёнка, у мужчины в которых прощупывается варикоцеле и ухудшены показатели спермы',
+            'Подростки и молодые мужчины, у которых яичко на стороне варикоцеле уменьшилось',
+            'Мужчины с болью из-за варикоцеле, не проходящей несмотря на обезболивающие и поддерживающие меры',
+            'Пары, которым планируется вспомогательная репродуктивная технология и у которых цель — улучшить качество спермы',
+            'Отобранные мужчины, у которых низкий тестостерон оценивается вместе с варикоцеле'
+          ],
+          notSuitable: [
+            'Мужчины без жалоб и с нормальными показателями спермы — само по себе выявленное варикоцеле не повод для операции',
+            'Мужчины, у которых варикоцеле видно только на ультразвуке и не прощупывается при осмотре — польза операции в этом случае не показана',
+            'Пары, у которых со стороны женщины есть нелеченая проблема, мешающая беременности — оценка должна проводиться как у пары',
+            'Случаи полного прекращения выработки сперматозоидов, не объяснимые варикоцеле — сначала нужны генетическое и гормональное обследования',
+            'Мужчины, считающие, что операция гарантирует беременность — такой гарантии дать нельзя'
+          ]
+        },
+        technology: [
+          'Осмотр стоя и с натуживанием (проба Вальсальвы)',
+          'Цветное допплеровское УЗИ мошонки — оценка обратного заброса и измерение объёмов яичек',
+          'Спермограмма (не менее двух отдельных исследований) и при необходимости оценка ДНК сперматозоидов',
+          'Гормональный профиль (ФСГ, ЛГ, тестостерон)',
+          'Микрохирургический подпаховый доступ с операционным микроскопом — различение вен, артерии и лимфатических сосудов'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Андрология и мужское бесплодие входят в сферу работы доц. д-ра Мюслюма Эргюна. При варикоцеле решение зависит не столько от наличия находки, сколько от вреда, который она наносит пациенту; избегать ненужных операций — основа этого подхода.'
+        },
+        timeline: [
+          {
+            when: 'Шаг 1',
+            title: 'Обследование',
+            body: 'Осмотр проводят стоя и с натуживанием. На ультразвуке измеряют обратный заброс и объёмы яичек. Запрашивают не менее двух спермограмм — одной для решения недостаточно.'
+          },
+          {
+            when: 'Шаг 2',
+            title: 'Совместная оценка пары',
+            body: 'При желании иметь детей женщина также должна быть обследована. Операция по поводу варикоцеле не решает проблему со стороны женщины.'
+          },
+          {
+            when: 'Шаг 3',
+            title: 'Решение об операции',
+            body: 'Решение основано на сочетании прощупываемого варикоцеле с ухудшенными показателями спермы, уменьшением яичка или не проходящей болью.'
+          },
+          {
+            when: 'День операции',
+            title: 'Микрохирургическая варикоцелэктомия',
+            body: 'Доступ выполняют через небольшой разрез под паховой областью. Под операционным микроскопом расширенные вены перевязывают, сохраняя при этом яичковую артерию и лимфатические сосуды. Вмешательство занимает 45–90 минут; выписка в тот же день.'
+          },
+          {
+            when: '1-я неделя',
+            title: 'Раннее восстановление',
+            body: 'Ожидаемы отёк и чувствительность в паху. Облегчение приносят холод и поддерживающее бельё. Лёгкая ходьба разрешена.'
+          },
+          {
+            when: '3–6-й месяц',
+            title: 'Оценка результата',
+            body: 'Поскольку выработка сперматозоидов идёт циклом около трёх месяцев, спермограмму повторяют не ранее чем через три месяца после операции. Оценку проводят на 3-м и 6-м месяцах.'
+          }
+        ],
+        risks: [
+          'ГАРАНТИИ БЕРЕМЕННОСТИ НЕТ: операция может улучшить показатели спермы, но это происходит не у каждого мужчины, и даже при улучшении беременность гарантировать нельзя. Это не неудача метода, а следствие многофакторной природы мужского бесплодия',
+          'Гидроцеле (скопление жидкости вокруг яичка) — связано с повреждением лимфатических сосудов; снижение этого риска — одна из причин выбора микрохирургического подхода',
+          'Повторное появление варикоцеле или его неполное исчезновение',
+          'Повреждение яичковой артерии — очень редкое, но серьёзное; микроскоп применяют именно для снижения этого риска',
+          'Инфекция раны и кровотечение',
+          'Временное онемение или чувствительность в паху',
+          'У мужчин, оперированных по поводу боли, — неполное исчезновение боли'
+        ],
+        alternatives: [
+          'Наблюдение — правильный подход у мужчин без жалоб и с нормальными показателями спермы',
+          'Поддерживающие меры при боли — поддерживающее бельё, обезболивающие, избегать долгого стояния',
+          'Чрескожная эмболизация — закрытие вены изнутри под контролем рентгенолога; при непригодности к операции или при рецидиве',
+          'Лапароскопическая варикоцелэктомия — вариант при двустороннем поражении',
+          'Прямой переход к вспомогательным репродуктивным технологиям — при позднем возрасте женщины или нехватке времени',
+          'Замораживание спермы — как страховка перед лечением'
+        ],
+        comparison: {
+          title: 'Сравнение вариантов лечения',
+          columns: ['Критерий', 'Микрохирургия', 'Эмболизация', 'Наблюдение'],
+          rows: [
+            { label: 'Вмешательство', values: ['Небольшой разрез под паховой областью', 'Изнутри сосуда, без разреза', 'Нет'] },
+            { label: 'Анестезия', values: ['Общая или спинальная', 'Местная', 'Нет'] },
+            { label: 'Риск гидроцеле', values: ['Низкий (лимфатические сосуды сохраняются)', 'Нет', 'Нет'] },
+            { label: 'Рецидив', values: ['Ниже', 'Может быть выше', 'Неприменимо'] },
+            { label: 'Возвращение к работе', values: ['3–7 дней', '1–2 дня', 'Нет'] },
+            { label: 'Кому подходит', values: ['При нарушении спермограммы, уменьшении яичка или боли', 'Непригодным к операции или при рецидиве', 'Тем, у кого нет жалоб'] }
+          ],
+          note:
+            'Микрохирургический подход предпочитают потому, что под микроскопом можно различить артерию и лимфатические сосуды. И всё же операция нужна не каждому; наблюдение — тоже законный вариант.'
+        },
+        recovery: [
+          {
+            period: 'Первые 48 часов',
+            body: 'Ожидаемы отёк и чувствительность в паху. Рекомендуются холод и поддерживающее бельё. Обезболивающие обеспечивают комфорт.'
+          },
+          {
+            period: '3–7-й день',
+            body: 'Можно вернуться к работе за столом. Лёгкая ходьба разрешена; поднятие тяжестей и спорт — нет.'
+          },
+          {
+            period: '2–4-я неделя',
+            body: 'Возвращение к обычной физической активности происходит постепенно. Возвращение к половой жизни планируется в этот период.'
+          },
+          {
+            period: '3-й месяц',
+            body: 'Выполняют первую контрольную спермограмму. Поскольку выработка сперматозоидов идёт циклом около трёх месяцев, более раннее исследование смысла не имеет.'
+          },
+          {
+            period: '6-й месяц',
+            body: 'Вторая спермограмма проясняет результат. При необходимости варианты вспомогательной репродукции обсуждают заново.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Стоимость зависит от того, будет ли операция односторонней или двусторонней, и от дополнительных исследований. Точное предложение даётся после обследования.'
+        },
+        packageIncludes: [
+          'Андрологическое обследование и осмотр стоя',
+          'Цветное допплеровское УЗИ мошонки',
+          'Спермограмма и гормональный профиль',
+          'Микрохирургическая варикоцелэктомия и анестезия',
+          'Амбулаторная процедура и наблюдение',
+          'Трансферы аэропорт–больница–отель',
+          'Проживание (пациент + 1 сопровождающий)',
+          'Медицинский переводчик и дистанционное наблюдение после возвращения домой'
+        ],
+        faqs: [
+          {
+            q: 'У меня варикоцеле — обязательно ли оперироваться?',
+            a: 'Нет. Варикоцеле встречается очень часто, и подавляющее большинство мужчин с ним без труда становятся отцами. Решение об операции основано не на наличии варикоцеле, а на признаках того, что оно вам вредит: ухудшение показателей спермы, уменьшение яичка или не проходящая боль. Если их нет, правильный подход — наблюдение.'
+          },
+          {
+            q: 'Вызывает ли варикоцеле бесплодие?',
+            a: 'Варикоцеле может ухудшать выработку сперматозоидов, но не каждый мужчина с ним бесплоден. Поэтому одного диагноза недостаточно; нужны как минимум две спермограммы и совместная оценка пары. Если проблема есть со стороны женщины, операция по поводу варикоцеле её не решит.'
+          },
+          {
+            q: 'Если я прооперируюсь, будет ли у меня ребёнок?',
+            a: 'Гарантии в этом дать нельзя. Операция может улучшить показатели спермы, но это происходит не у каждого мужчины, и даже тогда беременность не гарантирована. Мужское бесплодие многофакторно; возраст женщины и другие факторы тоже определяют исход. Будьте осторожны с теми, кто обещает вам беременность наверняка.'
+          },
+          {
+            q: 'Почему оно всегда слева?',
+            a: 'Причина анатомическая. Левая яичковая вена впадает в левую почечную вену под прямым углом, и это облегчает обратный заброс крови. Справа впадение более пологое. Поэтому одностороннее варикоцеле чаще бывает слева.'
+          },
+          {
+            q: 'У меня варикоцеле только справа, это важно?',
+            a: 'Это встречается реже и требует внимания. При варикоцеле, возникшем внезапно в зрелом возрасте, расположенном только справа или не исчезающем в положении лёжа, нужно проверить, не давит ли на вену образование в области почки. Это редко, но пропускать нельзя.'
+          },
+          {
+            q: 'Когда после операции сдавать спермограмму?',
+            a: 'Не ранее чем через три месяца. Выработка сперматозоидов идёт циклом около трёх месяцев, поэтому более раннее исследование не отражает истинный результат. Оценку обычно проводят на 3-м и 6-м месяцах.'
+          },
+          {
+            q: 'Чем микрохирургия отличается от обычной операции?',
+            a: 'При микрохирургии используют операционный микроскоп. Благодаря этому вены, которые нужно перевязать, можно отличить от яичковой артерии и лимфатических сосудов, которые нужно сохранить. Это помогает и сберечь кровоснабжение яичка, и снизить риск гидроцеле (скопления жидкости).'
+          },
+          {
+            q: 'Можно ли оперироваться из-за боли?',
+            a: 'Если боль связана с варикоцеле и не проходит при поддерживающих мерах, операция — один из вариантов. Но поскольку у боли могут быть и другие причины, их нужно сначала исключить. Кроме того, нельзя гарантировать, что после операции боль исчезнет полностью; об этом говорят с самого начала.'
+          },
+          {
+            q: 'У сына-подростка нашли варикоцеле, что делать?',
+            a: 'У подростков критерием для решения служит то, уменьшилось ли яичко на поражённой стороне. Если уменьшилось, рассматривают операцию; если нет, наблюдают, регулярно измеряя объём яичка. Спешить с решением об операции в этом возрасте неправильно.'
+          },
+          {
+            q: 'Когда можно лететь и выходить на работу?',
+            a: 'Перелёт обычно разрешают через 3–5 дней; для пациентов из-за рубежа планируется пребывание 4–6 дней. К работе за столом можно вернуться за 3–7 дней. Для поднятия тяжестей и спорта рекомендуется подождать 2–4 недели.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — Европейская ассоциация урологии',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      ar: {
+        title: 'دوالي الخصية: من يحتاج فعلًا إلى عملية؟',
+        summary:
+          'توسّع أوردة الخصية شائع، لكن ليست كل دوالي تستوجب عملية. والسؤال الحقيقي هو: هل تضرّك هذه الدوالي؟',
+        metaTitle: 'ما هي دوالي الخصية؟ ومن يحتاج إلى عملية؟',
+        metaDescription:
+          'ما هي دوالي الخصية، وعلاقتها بالعقم، ومن يحتاج إلى عملية، والأسلوب الجراحي المجهري، والمخاطر، وحقيقة أن العملية لا تضمن حدوث الحمل.',
+        quickFacts: {
+          duration: '45–90 دقيقة',
+          anesthesia: 'تخدير عام أو نصفي',
+          hospitalStay: 'في اليوم نفسه',
+          stayInTurkey: '4–6 أيام',
+          returnToWork: '3–7 أيام',
+          flightClearance: '3–5 أيام'
+        },
+        definition: [
+          'دوالي الخصية هي توسّع الأوردة التي تنقل الدم من الخصية عائدًا إلى القلب، مع ارتداد جزء من هذا الدم. وهي تشبه دوالي الساقين. وتوجد عند نسبة كبيرة من الرجال ولا تسبب في الغالب أي شكوى.',
+          'وهي في الأغلب في الجانب الأيسر. والسبب تشريحي: فالوريد الخصوي الأيسر يصبّ في الوريد الكلوي الأيسر بزاوية قائمة، وهذا يسهّل ارتداد الدم. أما الدوالي في الجانب الأيمن وحده فأقلّ شيوعًا.',
+          'والآلية الأساسية لضرر الدوالي بالخصية هي الحرارة. فلكي تنتج الخصية حيوانات منوية سليمة ينبغي أن تكون أبرد قليلًا من الجسم؛ ولهذا تقع الخصيتان خارجه. والدم المحتبس في الأوردة المتوسعة يرفع الحرارة حول الخصية وقد يضرّ بإنتاج الحيوانات المنوية.',
+          'وأهم سوء فهم هو الآتي: ليس كل رجل تُكتشف لديه دوالي يحتاج إلى عملية. فالدوالي شائعة جدًا، والغالبية العظمى ممن يحملونها ينجبون من دون صعوبة. ويستند قرار العملية لا إلى وجود الدوالي، بل إلى دليل على أنها تضرّك: تدهور في قيم السائل المنوي، أو صغر حجم الخصية، أو ألم لا يزول.',
+          'وتُصنَّف الدوالي في الفحص إلى ثلاث درجات: تُحسّ عند الحزق فقط (الدرجة 1)، وتُجسّ باليد (الدرجة 2)، وتُرى من الخارج (الدرجة 3). ويُجرى الفحص وقوفًا؛ أما الفحص مستلقيًا فقد يكون مضللًا. ويؤكّد التصوير بالموجات فوق الصوتية الوجود ويقيس حجمي الخصيتين.',
+          'تنبيه مهم: إذا ظهرت الدوالي فجأةً في سن متقدمة، أو كانت في الجانب الأيمن وحده، أو لم تختفِ عند الاستلقاء، وجب البحث عما إذا كان وراءها كتلة في منطقة الكلية. وهذه حالة نادرة لكن لا يجوز إغفالها.'
+        ],
+        eligibility: {
+          suitable: [
+            'الأزواج الراغبون في الإنجاب حيث تُجسّ لدى الرجل دوالي ويوجد تدهور في قيم السائل المنوي',
+            'المراهقون والشبان الذين صغر لديهم حجم الخصية في جانب الدوالي',
+            'من يعانون ألمًا بسبب الدوالي لا يزول رغم المسكنات والتدابير الداعمة',
+            'الأزواج الذين يُخطَّط لهم علاج مساعد على الإنجاب ويُستهدف تحسين جودة السائل المنوي',
+            'مرضى مختارون يُقيَّم لديهم انخفاض التستوستيرون إلى جانب الدوالي'
+          ],
+          notSuitable: [
+            'من لا شكوى لديهم وقيم السائل المنوي لديهم طبيعية — فاكتشاف الدوالي وحده ليس سببًا للعملية',
+            'من تُرى الدوالي لديهم بالموجات فوق الصوتية فقط ولا تُجسّ بالفحص — ولم تَثبت فائدة العملية في هذه الحالة',
+            'الأزواج الذين توجد لدى المرأة مشكلة غير معالَجة تمنع الحمل — فالتقييم يجب أن يكون للزوجين معًا',
+            'حالات توقف إنتاج الحيوانات المنوية تمامًا ولا تفسّرها الدوالي — إذ يلزم أولًا تقييم جيني وهرموني',
+            'من يظنون أن العملية تضمن الحمل — إذ لا يمكن تقديم مثل هذا الضمان'
+          ]
+        },
+        technology: [
+          'الفحص السريري وقوفًا ومع الحزق (مناورة فالسالفا)',
+          'التصوير بالدوبلر الملون لكيس الصفن — قياس الارتداد وحجمي الخصيتين',
+          'تحليل السائل المنوي (عينتان منفصلتان على الأقل) وتقييم الحمض النووي للحيوانات المنوية عند الحاجة',
+          'المقطع الهرموني (الهرمون المنبه للجريب والهرمون الملوتن والتستوستيرون)',
+          'الأسلوب الجراحي المجهري تحت الإربي بالمجهر الجراحي — تمييز الأوردة والشريان والأوعية اللمفية'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'الأندرولوجيا والعقم عند الرجل من مجالات عمل الأستاذ المشارك الدكتور مسلم إرغون. وفي دوالي الخصية يُتخذ القرار بناءً على الضرر الذي تُحدثه لا على مجرد وجودها؛ وتجنّب العمليات غير الضرورية أساس هذا النهج.'
+        },
+        timeline: [
+          {
+            when: 'الخطوة 1',
+            title: 'التقييم',
+            body: 'يُجرى الفحص وقوفًا ومع الحزق. ويُقاس الارتداد وحجما الخصيتين بالموجات فوق الصوتية. ويُطلب تحليلان للسائل المنوي على الأقل — فتحليل واحد لا يكفي لاتخاذ القرار.'
+          },
+          {
+            when: 'الخطوة 2',
+            title: 'تقييم الزوجين معًا',
+            body: 'إن وُجدت رغبة في الإنجاب فيجب أن تكون المرأة قد قُيّمت أيضًا. فعملية الدوالي لا تحلّ مشكلة لدى المرأة.'
+          },
+          {
+            when: 'الخطوة 3',
+            title: 'قرار العملية',
+            body: 'يستند القرار إلى اجتماع دوالي مجسوسة بالفحص مع قيم سائل منوي متدهورة أو صغر في الخصية أو ألم لا يزول.'
+          },
+          {
+            when: 'يوم العملية',
+            title: 'استئصال الدوالي بالجراحة المجهرية',
+            body: 'يتم الدخول بشقّ صغير أسفل المنطقة الإربية. وتحت المجهر الجراحي تُربَط الأوردة المتوسعة مع الحفاظ على شريان الخصية والأوعية اللمفية. ويستغرق الإجراء 45–90 دقيقة، ويُخرَّج المريض في اليوم نفسه.'
+          },
+          {
+            when: 'الأسبوع 1',
+            title: 'التعافي المبكر',
+            body: 'يُتوقع تورم وحساسية في المنطقة الإربية. ويخفف وضع الثلج وارتداء ملابس داخلية داعمة. والمشي الخفيف مسموح.'
+          },
+          {
+            when: 'الشهر 3–6',
+            title: 'تقييم النتيجة',
+            body: 'لأن إنتاج الحيوانات المنوية يتم بدورة نحو ثلاثة أشهر، يُعاد تحليل السائل المنوي بعد ثلاثة أشهر من العملية على أقرب تقدير. ويُقيَّم في الشهرين الثالث والسادس.'
+          }
+        ],
+        risks: [
+          'لا ضمان للحمل: قد تحسّن العملية قيم السائل المنوي، لكن ذلك لا يحدث عند كل مريض، وحتى مع التحسّن لا يمكن ضمان الحمل. وهذا ليس فشلًا للطريقة بل نتيجة لتعدد عوامل العقم عند الرجل',
+          'القيلة المائية (تجمّع سائل حول الخصية) — سببها إصابة الأوعية اللمفية؛ وتقليل هذا الخطر أحد أسباب تفضيل الأسلوب المجهري',
+          'عودة الدوالي أو عدم زوالها تمامًا',
+          'إصابة شريان الخصية — نادرة جدًا لكنها خطيرة؛ واستعمال المجهر يهدف إلى تقليل هذا الخطر',
+          'التهاب الجرح والنزف',
+          'خدر أو حساسية مؤقتة في المنطقة الإربية',
+          'عند من يُجرون العملية بسبب الألم: ألّا يزول الألم تمامًا'
+        ],
+        alternatives: [
+          'المتابعة — وهي النهج الصحيح لمن لا شكوى لديهم وقيم السائل المنوي لديهم طبيعية',
+          'تدابير داعمة للألم — ملابس داخلية داعمة ومسكنات وتجنّب الوقوف الطويل',
+          'الإصمام عبر الجلد — إغلاق الوريد من الداخل بمرافقة الأشعة؛ لغير الملائمين للجراحة أو في الحالات المتكررة',
+          'استئصال الدوالي بالمنظار البطني — خيار في الحالات ثنائية الجانب',
+          'الانتقال مباشرةً إلى العلاج المساعد على الإنجاب — إذا كان عمر المرأة متقدمًا أو الوقت ضيقًا',
+          'تجميد الحيوانات المنوية — كضمان قبل العلاج'
+        ],
+        comparison: {
+          title: 'مقارنة خيارات العلاج',
+          columns: ['المعيار', 'الجراحة المجهرية', 'الإصمام', 'المتابعة'],
+          rows: [
+            { label: 'التدخل', values: ['شقّ صغير أسفل المنطقة الإربية', 'من داخل الوعاء من دون شقّ', 'لا يوجد'] },
+            { label: 'التخدير', values: ['عام أو نصفي', 'موضعي', 'لا يوجد'] },
+            { label: 'خطر القيلة المائية', values: ['منخفض (تُحفَظ الأوعية اللمفية)', 'لا يوجد', 'لا يوجد'] },
+            { label: 'التكرار', values: ['أقل', 'قد يكون أعلى', 'غير منطبق'] },
+            { label: 'العودة إلى العمل', values: ['3–7 أيام', '1–2 يوم', 'لا يوجد'] },
+            { label: 'لمن يصلح', values: ['عند اضطراب السائل المنوي أو صغر الخصية أو الألم', 'لغير الملائمين للجراحة أو الحالات المتكررة', 'لمن لا شكوى لديهم'] }
+          ],
+          note:
+            'يُفضَّل الأسلوب المجهري لأن الشريان والأوعية اللمفية يمكن تمييزها تحت المجهر. ومع ذلك لا يحتاج كل رجل إلى عملية؛ فالمتابعة خيار مشروع أيضًا.'
+        },
+        recovery: [
+          {
+            period: 'أول 48 ساعة',
+            body: 'يُتوقع تورم وحساسية في المنطقة الإربية. ويُنصح بوضع الثلج وارتداء ملابس داخلية داعمة. وتوفّر المسكنات الراحة.'
+          },
+          {
+            period: 'اليوم 3–7',
+            body: 'يمكن العودة إلى العمل المكتبي. والمشي الخفيف مسموح؛ أما رفع الأثقال والرياضة فلا.'
+          },
+          {
+            period: 'الأسبوع 2–4',
+            body: 'تتم العودة إلى النشاط البدني المعتاد تدريجيًا. ويُخطَّط في هذه المرحلة للعودة إلى الحياة الجنسية.'
+          },
+          {
+            period: 'الشهر 3',
+            body: 'يُجرى أول تحليل متابعة للسائل المنوي. ولأن إنتاج الحيوانات المنوية يتم بدورة نحو ثلاثة أشهر فإن الفحص قبل ذلك لا معنى له.'
+          },
+          {
+            period: 'الشهر 6',
+            body: 'يتضح الناتج بتحليل ثانٍ للسائل المنوي. وعند الحاجة تُناقَش خيارات العلاج المساعد على الإنجاب من جديد.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'يتغير السعر بحسب ما إذا كانت العملية لجانب واحد أم للجانبين وبحسب الفحوص الإضافية. ويُقدَّم العرض النهائي بعد التقييم.'
+        },
+        packageIncludes: [
+          'تقييم أندرولوجي وفحص سريري وقوفًا',
+          'التصوير بالدوبلر الملون لكيس الصفن',
+          'تحليل السائل المنوي والمقطع الهرموني',
+          'استئصال الدوالي بالجراحة المجهرية والتخدير',
+          'إجراء في اليوم نفسه مع فترة مراقبة',
+          'التنقلات بين المطار والمستشفى والفندق',
+          'الإقامة (المريض + مرافق واحد)',
+          'مترجم طبي ومتابعة عن بُعد بعد عودتك إلى بلدك'
+        ],
+        faqs: [
+          {
+            q: 'لديّ دوالي، هل يجب أن أُجري عملية بالضرورة؟',
+            a: 'لا. فالدوالي شائعة جدًا والغالبية العظمى ممن يحملونها ينجبون من دون صعوبة. ويستند قرار العملية لا إلى وجود الدوالي بل إلى دليل على أنها تضرّك: تدهور في قيم السائل المنوي أو صغر في الخصية أو ألم لا يزول. فإن غابت هذه فالمتابعة هي النهج الصحيح.'
+          },
+          {
+            q: 'هل تسبب الدوالي العقم؟',
+            a: 'قد تضرّ الدوالي بإنتاج الحيوانات المنوية، لكن ليس كل رجل لديه دوالي عقيمًا. ولذلك لا يكفي التشخيص وحده؛ بل يلزم تحليلان للسائل المنوي على الأقل وتقييم الزوجين معًا. وإن وُجدت مشكلة لدى المرأة فلن تحلّها عملية الدوالي.'
+          },
+          {
+            q: 'إن أجريت العملية فهل سأُنجب؟',
+            a: 'لا يمكن تقديم ضمان في ذلك. فقد تحسّن العملية قيم السائل المنوي، لكن ذلك لا يحدث عند كل مريض، وحتى مع التحسّن فالحمل غير مؤكد. والعقم عند الرجل متعدد العوامل؛ كما يحدد النتيجةَ عمرُ المرأة وعواملُ أخرى. فاحذر من أسلوب يَعِدك بحمل مؤكد.'
+          },
+          {
+            q: 'لماذا تكون دائمًا في الجانب الأيسر؟',
+            a: 'السبب تشريحي. فالوريد الخصوي الأيسر يصبّ في الوريد الكلوي الأيسر بزاوية قائمة، وهذا يسهّل ارتداد الدم. أما في الجانب الأيمن فالمصبّ أكثر ميلًا. ولهذا تكون الدوالي أحادية الجانب في الأيسر غالبًا.'
+          },
+          {
+            q: 'دواليي في الجانب الأيمن فقط، هل هذا مهم؟',
+            a: 'هذا أقل شيوعًا ويستدعي الانتباه. ففي دوالي بدأت فجأةً في سن متقدمة، أو كانت في الجانب الأيمن وحده، أو لم تختفِ عند الاستلقاء، يجب البحث عما إذا كانت كتلة في منطقة الكلية تضغط على الوعاء. وهي حالة نادرة لكن لا يجوز إغفالها.'
+          },
+          {
+            q: 'متى أُجري تحليل السائل المنوي بعد العملية؟',
+            a: 'بعد ثلاثة أشهر على أقرب تقدير. فإنتاج الحيوانات المنوية يتم بدورة نحو ثلاثة أشهر؛ ولذلك لا يعكس التحليل الأبكر النتيجة الحقيقية. ويُقيَّم عادةً في الشهرين الثالث والسادس.'
+          },
+          {
+            q: 'ما الفرق بين الجراحة المجهرية والعملية المعتادة؟',
+            a: 'تستعمل الجراحة المجهرية المجهر الجراحي. وبذلك يمكن تمييز الأوردة التي ينبغي ربطها عن شريان الخصية والأوعية اللمفية التي ينبغي الحفاظ عليها. وهذا يساعد على حماية تروية الخصية وعلى تقليل خطر القيلة المائية (تجمّع السائل) معًا.'
+          },
+          {
+            q: 'هل يمكنني إجراء عملية بسبب الألم؟',
+            a: 'إن كان الألم ناجمًا عن الدوالي ولا يزول بالتدابير الداعمة فالعملية خيار. لكن لأن للألم أسبابًا أخرى محتملة فينبغي استبعادها أولًا. كما لا يمكن ضمان زوال الألم تمامًا بعد العملية؛ ويُتحدث عن ذلك من البداية.'
+          },
+          {
+            q: 'وُجدت دوالي عند ابني المراهق، ماذا نفعل؟',
+            a: 'المعيار عند المراهقين هو ما إذا صغر حجم الخصية في الجانب المصاب. فإن صغر طُرحت العملية؛ وإلا فتُجرى المتابعة بقياس حجم الخصية على فترات منتظمة. والتسرّع في قرار العملية في هذه الفئة العمرية غير صحيح.'
+          },
+          {
+            q: 'متى يمكنني السفر جوًا والعودة إلى العمل؟',
+            a: 'يُسمح بالسفر جوًا عادةً بعد 3–5 أيام؛ ويُخطَّط للمرضى القادمين من الخارج بإقامة 4–6 أيام. ويمكن العودة إلى العمل المكتبي خلال 3–7 أيام. أما رفع الأثقال والرياضة فيُنصح بانتظار 2–4 أسابيع.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — الجمعية الأوروبية للمسالك البولية',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      }
+    }
+  },
+  {
+    /**
+     * Androloji hub'ının altındaki karar/tanı sayfası (prompt m.4.1).
+     * EN ÖNEMLİ MESAJ: ED bir semptomdur; damar hastalığının ilk işareti
+     * olabilir. Bu sayfa "mucize tedavi" pazarlamasına KARŞI yazılmıştır.
+     * Şok dalga tedavisi için kanıtın henüz kesinleşmediği, PRP/kök hücre
+     * uygulamalarının YERLEŞİK TEDAVİ OLMADIĞI açıkça yazılıdır.
+     * Testosteron yalnızca gerçekten düşükse verilir; genel ED tedavisi değildir.
+     * Kaynak: EAU Sexual and Reproductive Health kılavuzu.
+     * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     */
+    slug: 'erektil-disfonksiyon',
+    parent: 'androloji',
+    lastReviewed: '2026-10-04',
+    icon: 'andrology',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'Erektil Disfonksiyon: Nedenleri ve Tedavi Basamakları',
+        summary:
+          'Sertleşme sorunu çoğu zaman tek başına bir cinsel yakınma değil, bir uyarı işaretidir. Nedenin doğru bulunması, hangi tedavinin işe yarayacağını da belirler.',
+        metaTitle: 'Erektil Disfonksiyon (Sertleşme Sorunu): Nedenleri ve Tedavisi',
+        metaDescription:
+          'Sertleşme sorununun nedenleri, kalp-damar hastalığıyla ilişkisi, hangi tetkiklerin yapıldığı, ilaçtan proteze tedavi basamakları ve kanıtı tartışmalı yöntemler.',
+        quickFacts: {
+          duration: 'Değerlendirme 30–45 dakika',
+          anesthesia: 'Tanı aşamasında gerekmez',
+          hospitalStay: 'Yok (cerrahi seçenekler ayrıdır)',
+          stayInTurkey: '2–3 gün (yalnızca değerlendirme için)',
+          returnToWork: 'Aynı gün',
+          flightClearance: 'Kısıtlama yok'
+        },
+        definition: [
+          'Erektil disfonksiyon, cinsel ilişki için yeterli sertleşmenin sağlanamaması veya sürdürülememesi durumudur. Ara sıra yaşanan zorluklar normaldir; süreklilik kazandığında ve kişiyi rahatsız etmeye başladığında değerlendirilmesi gerekir.',
+          'EN ÖNEMLİ NOKTA ŞUDUR: sertleşme sorunu çoğu zaman yalnızca bir cinsel yakınma değildir. Sertleşme, penise giden küçük damarların sağlıklı çalışmasına bağlıdır. Bu küçük damarlar, kalbi besleyen damarlardan daha incedir; bu nedenle damar sertliği ilk belirtisini sıklıkla burada verir. Yani sertleşme sorunu, bazı erkeklerde kalp-damar hastalığının yıllar öncesinden gelen bir habercisi olabilir. Bu yüzden değerlendirme sadece cinsel işlevle sınırlı kalmaz.',
+          'Nedenler genellikle iç içedir. Damarsal nedenler en sık grubu oluşturur: şeker hastalığı, yüksek tansiyon, kolesterol yüksekliği, sigara ve hareketsizlik. Hormonal nedenler arasında testosteron düşüklüğü ve tiroid sorunları yer alır. Sinir sistemi kaynaklı nedenler arasında şeker hastalığına bağlı sinir hasarı, omurilik sorunları ve pelvis bölgesine yapılmış ameliyatlar bulunur.',
+          'İLAÇLAR SIK ATLANIR. Bazı tansiyon ilaçları, antidepresanlar ve prostat büyümesinde kullanılan bazı ilaçlar sertleşmeyi etkileyebilir. Kullandığınız tüm ilaçların gözden geçirilmesi değerlendirmenin ayrılmaz parçasıdır; çünkü bazen çözüm yeni bir ilaç eklemek değil, mevcut bir ilacı değiştirmektir.',
+          'Psikolojik etkenler de gerçektir ve küçümsenmemelidir: performans kaygısı, depresyon, stres ve ilişki sorunları. Ancak "hepsi kafanızda" yaklaşımı yanlıştır; bedensel ve ruhsal nedenler çoğu hastada bir aradadır ve biri diğerini besler.',
+          'Peyronie hastalığı (penis eğriliği) ayrı bir başlıktır ancak sertleşme sorunuyla birlikte görülebilir. Muayenede bu da değerlendirilir.'
+        ],
+        eligibility: {
+          suitable: [
+            'Sertleşme sorunu süreklilik kazanmış ve kişiyi rahatsız eden her erkek',
+            'Şeker hastalığı, yüksek tansiyon veya kolesterol yüksekliği olan ve sertleşme sorunu başlayan hastalar — damar değerlendirmesi öncelik taşır',
+            'Pelvis bölgesine ameliyat (prostat, mesane, rektum) geçirmiş hastalar',
+            'Kullandığı ilaçların etkisinden şüphelenen hastalar',
+            'İlaç tedavisinden fayda görmeyen ve bir sonraki basamağı konuşmak isteyen hastalar',
+            'Testosteron düşüklüğü belirtileri (halsizlik, istek azalması, kas kaybı) eşlik eden hastalar'
+          ],
+          notSuitable: [
+            'Kalp hastalığı nedeniyle cinsel aktivitenin güvenli olmadığı, kardiyoloji değerlendirmesi beklenen hastalar — önce kalp durumu netleştirilir',
+            'Nitrat grubu kalp ilacı kullananlar — bu hastalarda PDE5 inhibitörü kullanılamaz, farklı bir yol izlenir',
+            'Yakınmanın yalnızca ilişki sorunu veya durumsal kaygıdan kaynaklandığı, tıbbi bir neden bulunmayan kişiler — danışmanlık öncelikli olur',
+            '"Garantili ve kalıcı çözüm" arayan kişiler — hiçbir yöntem böyle bir söz veremez'
+          ]
+        },
+        technology: [
+          'IIEF gibi standart soru formlarıyla yakınmanın derecelendirilmesi',
+          'Kan şekeri, HbA1c, kolesterol ve sabah testosteron ölçümü',
+          'Kalp-damar risk değerlendirmesi ve gerekirse kardiyolojiye yönlendirme',
+          'Penil renkli Doppler ultrason — seçilmiş hastalarda, damar akımını değerlendirmek için',
+          'Kullanılan ilaçların tam listesinin gözden geçirilmesi'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Androloji ve cinsel işlev bozuklukları, Doç. Dr. Müslüm Ergün’ün çalışma alanları arasındadır. Yaklaşım, yakınmanın arkasındaki nedeni bulmaya dayanır; tedavi basamak basamak ilerler ve en az girişimsel seçenekten başlanır.'
+        },
+        timeline: [
+          {
+            when: '1. adım',
+            title: 'Öykü ve ilaç gözden geçirmesi',
+            body: 'Yakınmanın ne zaman başladığı, ani mi yavaş mı geliştiği, sabah sertleşmelerinin devam edip etmediği sorgulanır. Kullanılan tüm ilaçlar listelenir. Bu bilgiler neden hakkında çok şey söyler.'
+          },
+          {
+            when: '2. adım',
+            title: 'Muayene ve kan tetkikleri',
+            body: 'Genital muayene yapılır, Peyronie bulgusu araştırılır. Kan şekeri, HbA1c, kolesterol ve sabah testosteron bakılır. Kalp-damar riski hesaplanır.'
+          },
+          {
+            when: '3. adım',
+            title: 'Yaşam tarzı ve altta yatan hastalığın düzenlenmesi',
+            body: 'Sigaranın bırakılması, kilo verilmesi, düzenli egzersiz ve şeker-tansiyon kontrolünün sağlanması tedavinin temelidir. Bu adım atlanırsa diğer tedaviler de daha az işe yarar.'
+          },
+          {
+            when: '4. adım',
+            title: 'İlaç tedavisi',
+            body: 'PDE5 inhibitörü grubu ilaçlar ilk basamaktır. Doğru doz, doğru zamanlama ve cinsel uyarının gerekli olduğu anlatılır — bu ilaçlar uyarı olmadan etki etmez. Yetersiz yanıt çoğu zaman yanlış kullanımdan kaynaklanır.'
+          },
+          {
+            when: '5. adım',
+            title: 'İlaç yetersizse diğer seçenekler',
+            body: 'Vakum cihazı, penis içine enjeksiyon tedavisi veya üretral uygulamalar konuşulur. Bu seçenekler etkilidir ancak kullanım eğitimi gerektirir.'
+          },
+          {
+            when: '6. adım',
+            title: 'Penil protez',
+            body: 'Diğer tedavilerden fayda görmeyen hastalarda kalıcı çözüm sunar. Geri dönüşü olmayan bir karardır ve ayrıntılı konuşulması gerekir.'
+          }
+        ],
+        risks: [
+          'Nedenin araştırılmaması: yakınma doğrudan ilaçla geçiştirilirse, altta yatan şeker hastalığı veya kalp-damar hastalığı gözden kaçabilir — bu sayfanın en önemli uyarısıdır',
+          'PDE5 inhibitörlerinin yan etkileri — baş ağrısı, yüzde kızarma, burun tıkanıklığı, hazımsızlık; genellikle hafiftir',
+          'NİTRAT KULLANANLARDA CİDDİ TEHLİKE: kalp ilacı olarak nitrat alanlarda PDE5 inhibitörleri tansiyonu tehlikeli biçimde düşürebilir; bu ilaçlar birlikte kullanılamaz',
+          'İnternetten alınan sahte ilaçlar — içeriği bilinmeyen ürünler gerçek bir sağlık tehlikesidir',
+          'Enjeksiyon tedavisinde uzamış ağrılı ereksiyon (priapizm) — acil değerlendirme gerektirir',
+          'Testosteronun gereksiz kullanımı: değer normalse testosteron vermek sertleşme sorununu çözmez ve kendi riskleri vardır',
+          'Gerçekçi olmayan beklenti — hiçbir yöntem her hastada aynı sonucu vermez ve garanti verilemez'
+        ],
+        alternatives: [
+          'Yaşam tarzı değişikliği ve altta yatan hastalığın tedavisi — temel ve en çok ihmal edilen basamak',
+          'PDE5 inhibitörü ilaçlar — ilk basamak tedavi',
+          'Vakum ereksiyon cihazı — ilaç kullanamayan hastalarda',
+          'Penis içine enjeksiyon tedavisi — ilaca yanıt alınamayan hastalarda etkili bir seçenek',
+          'Testosteron tedavisi — YALNIZCA ölçülen değer gerçekten düşükse ve belirti varsa',
+          'Cinsel terapi ve psikolojik danışmanlık — tek başına ya da diğer tedavilerle birlikte',
+          'Penil protez — diğer seçenekler yetersiz kaldığında kalıcı çözüm'
+        ],
+        comparison: {
+          title: 'Tedavi seçeneklerinin karşılaştırması',
+          columns: ['Yöntem', 'Nasıl uygulanır', 'Kime uygun', 'Dikkat edilmesi gereken'],
+          rows: [
+            { label: 'Yaşam tarzı', values: ['Sigara bırakma, kilo, egzersiz', 'Her hastaya', 'Etkisi yavaş gelişir ama kalıcıdır'] },
+            { label: 'PDE5 inhibitörü', values: ['Ağızdan hap', 'İlk basamak, çoğu hasta', 'Nitrat kullananlarda kullanılamaz'] },
+            { label: 'Vakum cihazı', values: ['Dışarıdan uygulanan cihaz', 'İlaç kullanamayanlar', 'Kullanım alışkanlık gerektirir'] },
+            { label: 'Enjeksiyon', values: ['Penis içine ince iğne', 'İlaca yanıtsız hastalar', 'Priapizm riski, eğitim şart'] },
+            { label: 'Şok dalga', values: ['Dışarıdan düşük yoğunluklu dalga', 'Seçilmiş hastalar', 'Kanıt henüz kesinleşmemiştir'] },
+            { label: 'Penil protez', values: ['Cerrahi yerleştirme', 'Diğerleri yetersizse', 'Geri dönüşü yoktur'] }
+          ],
+          note:
+            'Tedavi basamak basamak ilerler; en az girişimsel seçenekten başlanır. Hiçbir basamak diğerinin yerine geçmez ve hiçbiri her hastada aynı sonucu vermez.'
+        },
+        recovery: [
+          {
+            period: 'İlk değerlendirme sonrası',
+            body: 'Kan sonuçlarıyla birlikte neden netleşir. Varsa şeker, tansiyon veya kolesterol sorunu için düzenleme başlatılır.'
+          },
+          {
+            period: '1–3. ay',
+            body: 'Yaşam tarzı değişikliklerinin etkisi bu dönemde görülmeye başlar. İlaç tedavisi başlandıysa doz ve kullanım şekli gözden geçirilerek ayarlanır.'
+          },
+          {
+            period: '3–6. ay',
+            body: 'Yanıt değerlendirilir. Yetersizse bir sonraki basamağa geçilir. Bu, tedavinin başarısız olduğu anlamına gelmez; basamaklı yaklaşımın doğal parçasıdır.'
+          },
+          {
+            period: 'Uzun dönem',
+            body: 'Altta yatan damar ve metabolik hastalıkların takibi sürer. Bu takip yalnızca cinsel işlev için değil, genel sağlık için de önemlidir.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Değerlendirme ve tedavi maliyeti; gereken tetkiklere ve seçilen tedavi basamağına göre değişir. Kesin teklif, ilk değerlendirme sonrasında verilir.'
+        },
+        packageIncludes: [
+          'Ayrıntılı androloji değerlendirmesi ve ilaç gözden geçirmesi',
+          'Kan tetkikleri (şeker, HbA1c, kolesterol, testosteron)',
+          'Gerekirse penil renkli Doppler ultrason',
+          'Kalp-damar risk değerlendirmesi ve gerekirse yönlendirme',
+          'Tedavi planının ayrıntılı anlatıldığı görüşme',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve ülkenize döndükten sonra uzaktan takip'
+        ],
+        faqs: [
+          {
+            q: 'Sertleşme sorunu kalp hastalığının habercisi olabilir mi?',
+            a: 'Evet, olabilir ve bu sayfanın en önemli mesajıdır. Penise giden damarlar kalbi besleyen damarlardan daha incedir; bu nedenle damar sertliği belirtisini sıklıkla önce burada verir. Bu yüzden sertleşme sorunu olan hastada şeker, tansiyon, kolesterol ve kalp-damar riski mutlaka değerlendirilmelidir.'
+          },
+          {
+            q: 'Sorunun bedensel mi ruhsal mı olduğu nasıl anlaşılır?',
+            a: 'Yakınmanın ani mi yavaş mı başladığı, duruma göre değişip değişmediği ve sabah sertleşmelerinin devam edip etmediği önemli ipuçları verir. Ancak çoğu hastada ikisi bir aradadır; "hepsi kafanızda" yaklaşımı yanlıştır ve tedaviyi geciktirir.'
+          },
+          {
+            q: 'Kullandığım ilaçlar neden olabilir mi?',
+            a: 'Evet. Bazı tansiyon ilaçları, antidepresanlar ve prostat ilaçları sertleşmeyi etkileyebilir. Bu nedenle kullandığınız tüm ilaçlar gözden geçirilir. Bazen çözüm yeni bir ilaç eklemek değil, mevcut bir ilacı değiştirmektir — bunu kendi başınıza değil, hekiminizle birlikte yapın.'
+          },
+          {
+            q: 'Hap işe yaramadı, başka seçeneğim yok mu?',
+            a: 'Var. Ancak önce şunu kontrol etmek gerekir: doz yeterli miydi, doğru zamanda mı alındı ve cinsel uyarı var mıydı? Bu ilaçlar uyarı olmadan etki etmez ve yetersiz yanıtın sık nedeni yanlış kullanımdır. Gerçekten yanıt yoksa vakum cihazı, enjeksiyon tedavisi ve protez seçenekleri konuşulur.'
+          },
+          {
+            q: 'Testosteron tedavisi sertleşme sorununu çözer mi?',
+            a: 'Yalnızca testosteron gerçekten düşükse ve buna bağlı belirtiler varsa anlamlıdır. Değeri normal olan bir erkeğe testosteron vermek sertleşme sorununu çözmez; ayrıca kendi riskleri vardır ve doğurganlığı olumsuz etkileyebilir. Bu nedenle sabah testosteron ölçümü yapılmadan bu tedaviye başlanmaz.'
+          },
+          {
+            q: 'Şok dalga tedavisi işe yarıyor mu?',
+            a: 'Düşük yoğunluklu şok dalga tedavisi üzerinde çalışmalar sürmektedir ve bazı hasta gruplarında umut verici bulunmuştur. Ancak kanıt düzeyi henüz kesinleşmiş değildir; etkinin kimde, ne kadar ve ne süreyle ortaya çıkacağı net olarak tanımlanmamıştır. Size bu tedavi sunuluyorsa, bunun standart ve garantili bir çözüm olarak değil, kanıtı gelişmekte olan bir seçenek olarak anlatılması gerekir.'
+          },
+          {
+            q: 'PRP veya kök hücre tedavisi olabilir miyim?',
+            a: 'Bu uygulamalar erektil disfonksiyonda yerleşik, kanıtlanmış tedaviler DEĞİLDİR. Araştırma aşamasındadırlar. Bunları kesin çözüm olarak sunan ve yüksek ücret talep eden yaklaşımlara karşı dikkatli olmanızı öneririz. Önce kanıtlanmış basamakların tamamlanması gerekir.'
+          },
+          {
+            q: 'İnternetten ilaç almak güvenli mi?',
+            a: 'Hayır. İnternetten satılan ürünlerin önemli bir kısmı sahtedir; içinde ne olduğu bilinmez, doz kontrolsüzdür ve ciddi sağlık tehlikesi oluşturur. Özellikle kalp ilacı kullanıyorsanız bu durum hayati risk taşır. İlaç mutlaka hekim değerlendirmesiyle ve eczaneden alınmalıdır.'
+          },
+          {
+            q: 'Yaşam tarzı değişikliği gerçekten fark yaratır mı?',
+            a: 'Evet ve bu basamak en çok ihmal edilenidir. Sigaranın bırakılması, kilo verilmesi, düzenli egzersiz ve şeker-tansiyon kontrolü hem sertleşme işlevine hem genel damar sağlığına katkı sağlar. Bu adım atlanırsa diğer tedavilerden alınan yanıt da daha düşük olur.'
+          },
+          {
+            q: 'Protez son çare mi?',
+            a: 'Evet, basamaklı yaklaşımın son adımıdır. Diğer tedavilerden fayda görmeyen hastalarda güvenilir ve kalıcı bir çözüm sunar. Ancak doğal ereksiyon dokusu yerine cihaz yerleştirildiği için geri dönüşü yoktur; bu nedenle karar acele verilmez ve ayrıntılı konuşulur.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      en: {
+        title: 'Erectile Dysfunction: Causes and the Steps of Treatment',
+        summary:
+          'Difficulty with erections is often not a sexual complaint on its own but a warning sign. Finding the right cause also determines which treatment will work.',
+        metaTitle: 'Erectile Dysfunction: Causes and Treatment',
+        metaDescription:
+          'The causes of erectile dysfunction, its link with cardiovascular disease, which investigations are done, the steps of treatment from tablets to a prosthesis, and methods whose evidence is still disputed.',
+        quickFacts: {
+          duration: 'Assessment 30–45 minutes',
+          anesthesia: 'Not needed at the diagnostic stage',
+          hospitalStay: 'None (surgical options are separate)',
+          stayInTurkey: '2–3 days (for assessment only)',
+          returnToWork: 'Same day',
+          flightClearance: 'No restriction'
+        },
+        definition: [
+          'Erectile dysfunction means not being able to achieve or maintain an erection sufficient for intercourse. Occasional difficulty is normal; it needs to be assessed when it becomes persistent and starts to trouble the man concerned.',
+          'THE MOST IMPORTANT POINT IS THIS: difficulty with erections is often not simply a sexual complaint. An erection depends on the healthy working of the small blood vessels supplying the penis. These small vessels are narrower than those feeding the heart, which is why hardening of the arteries frequently shows its first sign here. In other words, in some men difficulty with erections can be a warning of cardiovascular disease years in advance. For this reason the assessment is not confined to sexual function.',
+          'The causes are usually intertwined. Vascular causes form the largest group: diabetes, high blood pressure, raised cholesterol, smoking and inactivity. Hormonal causes include low testosterone and thyroid problems. Causes arising from the nervous system include nerve damage from diabetes, spinal problems and operations in the pelvic region.',
+          'MEDICATION IS OFTEN OVERLOOKED. Some blood pressure tablets, antidepressants and certain drugs used for prostate enlargement can affect erections. Reviewing every medicine you take is an inseparable part of the assessment, because sometimes the answer is not to add a new drug but to change an existing one.',
+          'Psychological factors are real too and should not be dismissed: performance anxiety, depression, stress and relationship difficulties. But the attitude of "it is all in your head" is wrong; in most men physical and psychological causes sit side by side and each feeds the other.',
+          'Peyronie’s disease (curvature of the penis) is a separate topic but can occur alongside difficulty with erections. It is also assessed during the examination.'
+        ],
+        eligibility: {
+          suitable: [
+            'Any man whose difficulty with erections has become persistent and troubles him',
+            'Men with diabetes, high blood pressure or raised cholesterol in whom difficulty with erections has begun — vascular assessment takes priority',
+            'Men who have had surgery in the pelvic region (prostate, bladder, rectum)',
+            'Men who suspect the medicines they take are responsible',
+            'Men who gain no benefit from tablets and want to discuss the next step',
+            'Men with accompanying signs of low testosterone (tiredness, reduced desire, loss of muscle)'
+          ],
+          notSuitable: [
+            'Men in whom sexual activity is not safe because of heart disease and who are awaiting cardiological assessment — the state of the heart is clarified first',
+            'Men taking nitrate heart medication — PDE5 inhibitors cannot be used in these men and a different route is taken',
+            'Men whose complaint arises solely from relationship difficulty or situational anxiety with no medical cause — counselling takes priority',
+            'Men looking for a "guaranteed and permanent solution" — no method can make such a promise'
+          ]
+        },
+        technology: [
+          'Grading the complaint with standard questionnaires such as the IIEF',
+          'Blood glucose, HbA1c, cholesterol and morning testosterone measurement',
+          'Cardiovascular risk assessment and referral to cardiology where needed',
+          'Penile colour Doppler ultrasound — in selected men, to assess blood flow',
+          'A full review of the medicines being taken'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Andrology and sexual dysfunction are among Assoc. Prof. Müslüm Ergün’s areas of work. The approach rests on finding the cause behind the complaint; treatment proceeds step by step and begins with the least invasive option.'
+        },
+        timeline: [
+          {
+            when: 'Step 1',
+            title: 'History and medication review',
+            body: 'When the difficulty began, whether it came on suddenly or gradually and whether morning erections continue are all asked about. Every medicine being taken is listed. This information says a great deal about the cause.'
+          },
+          {
+            when: 'Step 2',
+            title: 'Examination and blood tests',
+            body: 'A genital examination is carried out and signs of Peyronie’s disease are looked for. Blood glucose, HbA1c, cholesterol and morning testosterone are checked. Cardiovascular risk is calculated.'
+          },
+          {
+            when: 'Step 3',
+            title: 'Lifestyle and control of the underlying illness',
+            body: 'Stopping smoking, losing weight, regular exercise and getting diabetes and blood pressure under control are the foundation of treatment. If this step is skipped, the other treatments work less well too.'
+          },
+          {
+            when: 'Step 4',
+            title: 'Tablet treatment',
+            body: 'PDE5 inhibitors are the first step. The right dose, the right timing and the fact that sexual stimulation is required are explained — these tablets do not work without stimulation. An inadequate response often comes down to incorrect use.'
+          },
+          {
+            when: 'Step 5',
+            title: 'Other options if tablets are not enough',
+            body: 'A vacuum device, injection treatment into the penis or urethral applications are discussed. These options are effective but require training in their use.'
+          },
+          {
+            when: 'Step 6',
+            title: 'Penile prosthesis',
+            body: 'For men who gain no benefit from the other treatments, it offers a lasting solution. It is an irreversible decision and needs to be discussed in detail.'
+          }
+        ],
+        risks: [
+          'Not investigating the cause: if the complaint is simply covered over with a tablet, underlying diabetes or cardiovascular disease can be missed — this is the most important warning on this page',
+          'Side effects of PDE5 inhibitors — headache, facial flushing, blocked nose, indigestion; usually mild',
+          'A SERIOUS DANGER IN MEN TAKING NITRATES: in men on nitrate heart medication, PDE5 inhibitors can lower blood pressure dangerously; these drugs cannot be used together',
+          'Counterfeit tablets bought online — products of unknown content are a genuine health hazard',
+          'A prolonged, painful erection (priapism) with injection treatment — this requires urgent assessment',
+          'Unnecessary use of testosterone: if the level is normal, giving testosterone does not resolve difficulty with erections and carries risks of its own',
+          'Unrealistic expectation — no method gives the same result in every man and no guarantee can be made'
+        ],
+        alternatives: [
+          'Lifestyle change and treatment of the underlying illness — the fundamental and most neglected step',
+          'PDE5 inhibitor tablets — first-line treatment',
+          'Vacuum erection device — for men who cannot take the tablets',
+          'Injection treatment into the penis — an effective option for men who do not respond to tablets',
+          'Testosterone treatment — ONLY if the measured level is genuinely low and there are symptoms',
+          'Sex therapy and psychological counselling — alone or alongside other treatments',
+          'Penile prosthesis — a lasting solution when the other options prove insufficient'
+        ],
+        comparison: {
+          title: 'The treatment options compared',
+          columns: ['Method', 'How it is used', 'Who it suits', 'What to watch for'],
+          rows: [
+            { label: 'Lifestyle', values: ['Stopping smoking, weight, exercise', 'Every man', 'The effect builds slowly but lasts'] },
+            { label: 'PDE5 inhibitor', values: ['Tablet by mouth', 'First step, most men', 'Cannot be used by men on nitrates'] },
+            { label: 'Vacuum device', values: ['Device applied externally', 'Men who cannot take tablets', 'Takes getting used to'] },
+            { label: 'Injection', values: ['Fine needle into the penis', 'Men who do not respond to tablets', 'Risk of priapism, training essential'] },
+            { label: 'Shock wave', values: ['Low-intensity waves from outside', 'Selected men', 'The evidence is not yet settled'] },
+            { label: 'Penile prosthesis', values: ['Surgical placement', 'When the others are insufficient', 'It is irreversible'] }
+          ],
+          note:
+            'Treatment proceeds step by step, beginning with the least invasive option. No step replaces another and none gives the same result in every man.'
+        },
+        recovery: [
+          {
+            period: 'After the first assessment',
+            body: 'The cause becomes clear once the blood results are in. If there is a problem with glucose, blood pressure or cholesterol, management of it is started.'
+          },
+          {
+            period: 'Months 1–3',
+            body: 'The effect of lifestyle changes begins to show during this period. If tablet treatment has been started, the dose and the way it is taken are reviewed and adjusted.'
+          },
+          {
+            period: 'Months 3–6',
+            body: 'The response is assessed. If it is insufficient, the next step is taken. This does not mean the treatment has failed; it is a natural part of the stepwise approach.'
+          },
+          {
+            period: 'Long term',
+            body: 'Follow-up of the underlying vascular and metabolic conditions continues. This matters not only for sexual function but for general health.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The cost of assessment and treatment varies with the investigations required and the treatment step chosen. A firm quotation is given after the first assessment.'
+        },
+        packageIncludes: [
+          'Detailed andrological assessment and medication review',
+          'Blood tests (glucose, HbA1c, cholesterol, testosterone)',
+          'Penile colour Doppler ultrasound where needed',
+          'Cardiovascular risk assessment and referral where needed',
+          'A consultation in which the treatment plan is explained in detail',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and remote follow-up after you return home'
+        ],
+        faqs: [
+          {
+            q: 'Can difficulty with erections be a warning of heart disease?',
+            a: 'Yes, it can, and that is the most important message on this page. The vessels supplying the penis are narrower than those feeding the heart, which is why hardening of the arteries often shows itself here first. For that reason, in a man with difficulty achieving erections, glucose, blood pressure, cholesterol and cardiovascular risk must all be assessed.'
+          },
+          {
+            q: 'How can you tell whether the problem is physical or psychological?',
+            a: 'Whether the difficulty began suddenly or gradually, whether it varies with the situation and whether morning erections continue all give important clues. In most men, however, the two sit side by side; the attitude of "it is all in your head" is wrong and delays treatment.'
+          },
+          {
+            q: 'Could the medicines I take be the cause?',
+            a: 'Yes. Some blood pressure tablets, antidepressants and prostate medicines can affect erections. That is why every medicine you take is reviewed. Sometimes the answer is not to add a new drug but to change an existing one — do this with your doctor, never on your own.'
+          },
+          {
+            q: 'The tablet did not work — have I no other option?',
+            a: 'You have. But first it is worth checking: was the dose adequate, was it taken at the right time and was there sexual stimulation? These tablets do not work without stimulation, and incorrect use is a common reason for an inadequate response. If there really is no response, a vacuum device, injection treatment and the prosthesis option are discussed.'
+          },
+          {
+            q: 'Does testosterone treatment resolve difficulty with erections?',
+            a: 'It is only meaningful if testosterone is genuinely low and there are symptoms to match. Giving testosterone to a man whose level is normal does not resolve the difficulty; it also carries risks of its own and can affect fertility adversely. For this reason, treatment is not started without a morning testosterone measurement.'
+          },
+          {
+            q: 'Does shock wave therapy work?',
+            a: 'Studies of low-intensity shock wave therapy are continuing and it has been found promising in some groups of men. The level of evidence, however, is not yet settled; in whom, to what degree and for how long the effect appears has not been clearly defined. If this treatment is offered to you, it should be presented not as a standard and guaranteed solution but as an option whose evidence is still developing.'
+          },
+          {
+            q: 'Can I have PRP or stem cell treatment?',
+            a: 'These applications are NOT established, proven treatments for erectile dysfunction. They are at the research stage. We would advise caution towards approaches that present them as a definitive solution and charge a high fee for them. The proven steps should be worked through first.'
+          },
+          {
+            q: 'Is it safe to buy tablets online?',
+            a: 'No. A significant proportion of products sold online are counterfeit; what they contain is unknown, the dose is uncontrolled and they pose a serious health hazard. If you take heart medication in particular, this carries a risk to life. Medication must be obtained following a doctor’s assessment and from a pharmacy.'
+          },
+          {
+            q: 'Does changing my lifestyle really make a difference?',
+            a: 'Yes, and this is the most neglected step. Stopping smoking, losing weight, regular exercise and control of diabetes and blood pressure benefit both erectile function and the health of the blood vessels generally. If this step is skipped, the response to the other treatments is poorer as well.'
+          },
+          {
+            q: 'Is the prosthesis a last resort?',
+            a: 'Yes, it is the final step of the stepwise approach. For men who gain no benefit from the other treatments it offers a reliable and lasting solution. But because a device is placed in the place of the natural erectile tissue, it is irreversible; the decision is therefore not rushed and is discussed in detail.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      de: {
+        title: 'Erektile Dysfunktion: Ursachen und die Stufen der Behandlung',
+        summary:
+          'Eine Erektionsstörung ist oft nicht nur eine sexuelle Beschwerde, sondern ein Warnzeichen. Die richtige Ursache zu finden entscheidet auch darüber, welche Behandlung wirkt.',
+        metaTitle: 'Erektile Dysfunktion: Ursachen und Behandlung',
+        metaDescription:
+          'Die Ursachen der erektilen Dysfunktion, ihr Zusammenhang mit Herz-Kreislauf-Erkrankungen, welche Untersuchungen erfolgen, die Behandlungsstufen von der Tablette bis zur Prothese und Verfahren mit umstrittener Datenlage.',
+        quickFacts: {
+          duration: 'Abklärung 30–45 Minuten',
+          anesthesia: 'In der Diagnostik nicht erforderlich',
+          hospitalStay: 'Keiner (operative Optionen gesondert)',
+          stayInTurkey: '2–3 Tage (nur zur Abklärung)',
+          returnToWork: 'Am selben Tag',
+          flightClearance: 'Keine Einschränkung'
+        },
+        definition: [
+          'Erektile Dysfunktion bedeutet, dass eine für den Geschlechtsverkehr ausreichende Erektion nicht erreicht oder nicht aufrechterhalten werden kann. Gelegentliche Schwierigkeiten sind normal; abgeklärt werden sollte es, wenn sie anhalten und den Betroffenen belasten.',
+          'DER WICHTIGSTE PUNKT LAUTET: Eine Erektionsstörung ist häufig nicht nur eine sexuelle Beschwerde. Die Erektion hängt vom gesunden Funktionieren der kleinen Blutgefäße ab, die den Penis versorgen. Diese kleinen Gefäße sind feiner als jene, die das Herz versorgen; deshalb zeigt sich eine Gefäßverkalkung oft zuerst hier. Mit anderen Worten: Bei manchen Männern kann eine Erektionsstörung Jahre im Voraus auf eine Herz-Kreislauf-Erkrankung hinweisen. Deshalb beschränkt sich die Abklärung nicht auf die Sexualfunktion.',
+          'Die Ursachen greifen meist ineinander. Gefäßbedingte Ursachen bilden die größte Gruppe: Diabetes, Bluthochdruck, erhöhte Blutfette, Rauchen und Bewegungsmangel. Zu den hormonellen Ursachen zählen ein niedriger Testosteronspiegel und Schilddrüsenstörungen. Nervenbedingte Ursachen sind unter anderem Nervenschäden durch Diabetes, Probleme am Rückenmark und Operationen im Beckenbereich.',
+          'MEDIKAMENTE WERDEN HÄUFIG ÜBERSEHEN. Manche Blutdruckmittel, Antidepressiva und bestimmte Präparate gegen Prostatavergrößerung können die Erektion beeinträchtigen. Die Durchsicht aller eingenommenen Medikamente ist untrennbarer Teil der Abklärung, denn manchmal besteht die Lösung nicht darin, ein neues Mittel hinzuzufügen, sondern ein bestehendes zu wechseln.',
+          'Auch seelische Faktoren sind real und dürfen nicht kleingeredet werden: Versagensangst, Depression, Stress und Partnerschaftsprobleme. Die Haltung "das ist alles nur im Kopf" ist jedoch falsch; bei den meisten Männern treten körperliche und seelische Ursachen gemeinsam auf und bedingen einander.',
+          'Die Peyronie-Krankheit (Penisverkrümmung) ist ein eigenes Thema, kann aber zusammen mit einer Erektionsstörung auftreten. Auch sie wird bei der Untersuchung beurteilt.'
+        ],
+        eligibility: {
+          suitable: [
+            'Jeder Mann, dessen Erektionsstörung anhält und ihn belastet',
+            'Männer mit Diabetes, Bluthochdruck oder erhöhten Blutfetten, bei denen eine Erektionsstörung begonnen hat — die Gefäßabklärung hat Vorrang',
+            'Männer nach Operationen im Beckenbereich (Prostata, Blase, Enddarm)',
+            'Männer, die eine Wirkung ihrer Medikamente vermuten',
+            'Männer, die von Tabletten nicht profitieren und die nächste Stufe besprechen möchten',
+            'Männer mit begleitenden Zeichen eines niedrigen Testosteronspiegels (Müdigkeit, nachlassendes Verlangen, Muskelabbau)'
+          ],
+          notSuitable: [
+            'Männer, bei denen sexuelle Aktivität wegen einer Herzerkrankung nicht sicher ist und eine kardiologische Beurteilung aussteht — zuerst wird der Herzbefund geklärt',
+            'Männer unter Nitratpräparaten — bei ihnen dürfen PDE5-Hemmer nicht eingesetzt werden, es wird ein anderer Weg gewählt',
+            'Männer, deren Beschwerde allein aus Partnerschaftsproblemen oder situativer Angst erwächst und bei denen keine medizinische Ursache vorliegt — hier steht die Beratung im Vordergrund',
+            'Männer, die eine "garantierte und dauerhafte Lösung" suchen — kein Verfahren kann das zusagen'
+          ]
+        },
+        technology: [
+          'Einstufung der Beschwerde mit standardisierten Fragebögen wie dem IIEF',
+          'Bestimmung von Blutzucker, HbA1c, Blutfetten und morgendlichem Testosteron',
+          'Beurteilung des Herz-Kreislauf-Risikos und bei Bedarf Überweisung in die Kardiologie',
+          'Penile Farbduplexsonographie — bei ausgewählten Männern zur Beurteilung der Durchblutung',
+          'Vollständige Durchsicht der eingenommenen Medikamente'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Andrologie und sexuelle Funktionsstörungen gehören zu den Arbeitsgebieten von Doz. Dr. Müslüm Ergün. Das Vorgehen beruht darauf, die Ursache hinter der Beschwerde zu finden; die Behandlung schreitet stufenweise voran und beginnt mit der am wenigsten eingreifenden Option.'
+        },
+        timeline: [
+          {
+            when: 'Schritt 1',
+            title: 'Anamnese und Medikamentendurchsicht',
+            body: 'Es wird gefragt, wann die Beschwerde begann, ob sie plötzlich oder allmählich auftrat und ob morgendliche Erektionen fortbestehen. Alle eingenommenen Medikamente werden aufgelistet. Diese Angaben sagen viel über die Ursache aus.'
+          },
+          {
+            when: 'Schritt 2',
+            title: 'Untersuchung und Blutwerte',
+            body: 'Es erfolgt eine genitale Untersuchung, Hinweise auf eine Peyronie-Krankheit werden gesucht. Blutzucker, HbA1c, Blutfette und morgendliches Testosteron werden bestimmt. Das Herz-Kreislauf-Risiko wird berechnet.'
+          },
+          {
+            when: 'Schritt 3',
+            title: 'Lebensstil und Einstellung der Grunderkrankung',
+            body: 'Rauchstopp, Gewichtsabnahme, regelmäßige Bewegung sowie eine gute Zucker- und Blutdruckeinstellung bilden das Fundament der Behandlung. Wird dieser Schritt übersprungen, wirken auch die übrigen Behandlungen schlechter.'
+          },
+          {
+            when: 'Schritt 4',
+            title: 'Medikamentöse Therapie',
+            body: 'PDE5-Hemmer sind die erste Stufe. Die richtige Dosis, der richtige Zeitpunkt und die Notwendigkeit sexueller Stimulation werden erklärt — ohne Stimulation wirken diese Mittel nicht. Ein unzureichendes Ansprechen beruht häufig auf falscher Anwendung.'
+          },
+          {
+            when: 'Schritt 5',
+            title: 'Weitere Optionen, wenn Tabletten nicht genügen',
+            body: 'Vakuumpumpe, Injektionstherapie in den Penis oder Anwendungen über die Harnröhre werden besprochen. Diese Optionen sind wirksam, erfordern aber eine Einweisung.'
+          },
+          {
+            when: 'Schritt 6',
+            title: 'Penisprothese',
+            body: 'Für Männer, die von den anderen Behandlungen nicht profitieren, bietet sie eine dauerhafte Lösung. Es ist eine nicht umkehrbare Entscheidung und muss ausführlich besprochen werden.'
+          }
+        ],
+        risks: [
+          'Die Ursache nicht abzuklären: Wird die Beschwerde einfach mit einer Tablette überdeckt, können ein zugrunde liegender Diabetes oder eine Herz-Kreislauf-Erkrankung übersehen werden — das ist der wichtigste Hinweis dieser Seite',
+          'Nebenwirkungen der PDE5-Hemmer — Kopfschmerzen, Gesichtsrötung, verstopfte Nase, Verdauungsbeschwerden; meist leicht',
+          'ERNSTE GEFAHR BEI NITRATEINNAHME: Bei Männern unter Nitratpräparaten können PDE5-Hemmer den Blutdruck gefährlich senken; diese Mittel dürfen nicht zusammen eingenommen werden',
+          'Gefälschte Präparate aus dem Internet — Produkte unbekannten Inhalts sind eine echte Gesundheitsgefahr',
+          'Anhaltende, schmerzhafte Erektion (Priapismus) bei der Injektionstherapie — erfordert eine dringliche Abklärung',
+          'Unnötige Testosteroneinnahme: Ist der Wert normal, behebt Testosteron die Erektionsstörung nicht und bringt eigene Risiken mit sich',
+          'Unrealistische Erwartung — kein Verfahren liefert bei jedem Mann dasselbe Ergebnis, und eine Garantie gibt es nicht'
+        ],
+        alternatives: [
+          'Lebensstiländerung und Behandlung der Grunderkrankung — der grundlegende und am meisten vernachlässigte Schritt',
+          'PDE5-Hemmer — Behandlung der ersten Wahl',
+          'Vakuumerektionshilfe — für Männer, die die Tabletten nicht einnehmen können',
+          'Injektionstherapie in den Penis — eine wirksame Option bei fehlendem Ansprechen auf Tabletten',
+          'Testosterontherapie — NUR wenn der gemessene Wert tatsächlich niedrig ist und Beschwerden bestehen',
+          'Sexualtherapie und psychologische Beratung — allein oder zusammen mit anderen Behandlungen',
+          'Penisprothese — eine dauerhafte Lösung, wenn die übrigen Optionen nicht ausreichen'
+        ],
+        comparison: {
+          title: 'Die Behandlungsoptionen im Vergleich',
+          columns: ['Verfahren', 'Wie es angewandt wird', 'Für wen geeignet', 'Worauf zu achten ist'],
+          rows: [
+            { label: 'Lebensstil', values: ['Rauchstopp, Gewicht, Bewegung', 'Für jeden Mann', 'Die Wirkung baut sich langsam auf, hält aber an'] },
+            { label: 'PDE5-Hemmer', values: ['Tablette zum Einnehmen', 'Erste Stufe, die meisten Männer', 'Bei Nitrateinnahme nicht anwendbar'] },
+            { label: 'Vakuumpumpe', values: ['Von außen angewandtes Gerät', 'Männer, die keine Tabletten nehmen können', 'Erfordert Gewöhnung'] },
+            { label: 'Injektion', values: ['Feine Nadel in den Penis', 'Männer ohne Ansprechen auf Tabletten', 'Priapismusrisiko, Einweisung unerlässlich'] },
+            { label: 'Stoßwelle', values: ['Niedrigenergetische Wellen von außen', 'Ausgewählte Männer', 'Die Datenlage ist noch nicht gesichert'] },
+            { label: 'Penisprothese', values: ['Operative Einbringung', 'Wenn die übrigen nicht ausreichen', 'Nicht umkehrbar'] }
+          ],
+          note:
+            'Die Behandlung schreitet stufenweise voran und beginnt mit der am wenigsten eingreifenden Option. Keine Stufe ersetzt eine andere, und keine liefert bei jedem Mann dasselbe Ergebnis.'
+        },
+        recovery: [
+          {
+            period: 'Nach der ersten Abklärung',
+            body: 'Mit den Blutwerten klärt sich die Ursache. Besteht ein Problem mit Zucker, Blutdruck oder Blutfetten, wird dessen Behandlung begonnen.'
+          },
+          {
+            period: 'Monat 1–3',
+            body: 'In dieser Zeit beginnt sich die Wirkung der Lebensstiländerungen zu zeigen. Wurde eine medikamentöse Therapie begonnen, werden Dosis und Einnahmeweise überprüft und angepasst.'
+          },
+          {
+            period: 'Monat 3–6',
+            body: 'Das Ansprechen wird beurteilt. Reicht es nicht aus, folgt die nächste Stufe. Das bedeutet nicht, dass die Behandlung gescheitert ist; es gehört zum stufenweisen Vorgehen.'
+          },
+          {
+            period: 'Langfristig',
+            body: 'Die Kontrolle der zugrunde liegenden Gefäß- und Stoffwechselerkrankungen wird fortgeführt. Das ist nicht nur für die Sexualfunktion wichtig, sondern für die Gesundheit insgesamt.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Die Kosten für Abklärung und Behandlung richten sich nach den erforderlichen Untersuchungen und der gewählten Behandlungsstufe. Ein verbindliches Angebot erfolgt nach der ersten Abklärung.'
+        },
+        packageIncludes: [
+          'Ausführliche andrologische Abklärung und Medikamentendurchsicht',
+          'Blutuntersuchungen (Zucker, HbA1c, Blutfette, Testosteron)',
+          'Bei Bedarf penile Farbduplexsonographie',
+          'Beurteilung des Herz-Kreislauf-Risikos und bei Bedarf Überweisung',
+          'Ausführliches Gespräch über den Behandlungsplan',
+          'Transfers Flughafen–Krankenhaus–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und Fernbetreuung nach Ihrer Rückkehr'
+        ],
+        faqs: [
+          {
+            q: 'Kann eine Erektionsstörung auf eine Herzerkrankung hinweisen?',
+            a: 'Ja, das kann sie, und das ist die wichtigste Botschaft dieser Seite. Die Gefäße, die den Penis versorgen, sind feiner als jene des Herzens; deshalb zeigt sich eine Gefäßverkalkung häufig zuerst hier. Deswegen müssen bei einem Mann mit Erektionsstörung Zucker, Blutdruck, Blutfette und das Herz-Kreislauf-Risiko unbedingt beurteilt werden.'
+          },
+          {
+            q: 'Woran erkennt man, ob die Ursache körperlich oder seelisch ist?',
+            a: 'Ob die Beschwerde plötzlich oder allmählich begann, ob sie je nach Situation wechselt und ob morgendliche Erektionen fortbestehen, liefert wichtige Hinweise. Bei den meisten Männern besteht jedoch beides nebeneinander; die Haltung "das ist alles nur im Kopf" ist falsch und verzögert die Behandlung.'
+          },
+          {
+            q: 'Können meine Medikamente die Ursache sein?',
+            a: 'Ja. Manche Blutdruckmittel, Antidepressiva und Prostatapräparate können die Erektion beeinträchtigen. Deshalb werden alle Ihre Medikamente durchgesehen. Manchmal besteht die Lösung nicht darin, ein neues Mittel hinzuzufügen, sondern ein bestehendes zu wechseln — tun Sie das gemeinsam mit Ihrem Arzt, nie eigenmächtig.'
+          },
+          {
+            q: 'Die Tablette hat nicht gewirkt — habe ich keine andere Möglichkeit?',
+            a: 'Doch. Zuerst sollte aber geprüft werden: War die Dosis ausreichend, wurde sie zum richtigen Zeitpunkt eingenommen und lag sexuelle Stimulation vor? Ohne Stimulation wirken diese Mittel nicht, und falsche Anwendung ist ein häufiger Grund für unzureichendes Ansprechen. Besteht wirklich kein Ansprechen, werden Vakuumpumpe, Injektionstherapie und die Prothese besprochen.'
+          },
+          {
+            q: 'Behebt eine Testosterontherapie die Erektionsstörung?',
+            a: 'Sie ist nur sinnvoll, wenn das Testosteron tatsächlich niedrig ist und entsprechende Beschwerden bestehen. Einem Mann mit normalem Wert Testosteron zu geben, behebt die Erektionsstörung nicht; es bringt eigene Risiken mit sich und kann die Fruchtbarkeit beeinträchtigen. Deshalb wird ohne morgendliche Testosteronbestimmung nicht damit begonnen.'
+          },
+          {
+            q: 'Wirkt die Stoßwellentherapie?',
+            a: 'Zur niedrigenergetischen Stoßwellentherapie laufen weiterhin Studien, und in einigen Patientengruppen erschien sie vielversprechend. Die Datenlage ist jedoch noch nicht gesichert; bei wem, in welchem Ausmaß und wie lange die Wirkung eintritt, ist nicht klar definiert. Wird Ihnen diese Behandlung angeboten, sollte sie nicht als standardisierte und garantierte Lösung dargestellt werden, sondern als Option mit sich entwickelnder Datenlage.'
+          },
+          {
+            q: 'Kann ich eine PRP- oder Stammzellbehandlung bekommen?',
+            a: 'Diese Anwendungen sind bei erektiler Dysfunktion KEINE etablierten, belegten Behandlungen. Sie befinden sich im Forschungsstadium. Wir raten zur Vorsicht gegenüber Angeboten, die sie als sichere Lösung darstellen und dafür hohe Gebühren verlangen. Zuerst sollten die belegten Stufen ausgeschöpft werden.'
+          },
+          {
+            q: 'Ist es sicher, Medikamente im Internet zu kaufen?',
+            a: 'Nein. Ein erheblicher Teil der im Internet verkauften Produkte ist gefälscht; der Inhalt ist unbekannt, die Dosierung unkontrolliert, und sie stellen eine ernste Gesundheitsgefahr dar. Besonders wenn Sie Herzmedikamente einnehmen, besteht Lebensgefahr. Medikamente müssen nach ärztlicher Beurteilung und aus der Apotheke bezogen werden.'
+          },
+          {
+            q: 'Macht eine Lebensstiländerung wirklich einen Unterschied?',
+            a: 'Ja, und dieser Schritt wird am meisten vernachlässigt. Rauchstopp, Gewichtsabnahme, regelmäßige Bewegung sowie eine gute Zucker- und Blutdruckeinstellung nützen sowohl der Erektionsfähigkeit als auch der Gefäßgesundheit insgesamt. Wird dieser Schritt übersprungen, fällt auch das Ansprechen auf die übrigen Behandlungen schlechter aus.'
+          },
+          {
+            q: 'Ist die Prothese die letzte Möglichkeit?',
+            a: 'Ja, sie ist die letzte Stufe des stufenweisen Vorgehens. Männern, die von den anderen Behandlungen nicht profitieren, bietet sie eine verlässliche und dauerhafte Lösung. Da jedoch anstelle des natürlichen Schwellkörpergewebes ein Gerät eingebracht wird, ist sie nicht umkehrbar; die Entscheidung wird daher nicht überstürzt und ausführlich besprochen.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — Europäische Gesellschaft für Urologie',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      fr: {
+        title: 'Dysfonction érectile : causes et étapes du traitement',
+        summary:
+          'Les troubles de l’érection ne sont souvent pas une simple plainte sexuelle, mais un signal d’alerte. Identifier la bonne cause détermine aussi quel traitement sera efficace.',
+        metaTitle: 'Dysfonction érectile : causes et traitement',
+        metaDescription:
+          'Les causes de la dysfonction érectile, son lien avec les maladies cardiovasculaires, les examens réalisés, les étapes du traitement du comprimé à la prothèse, et les méthodes dont les preuves restent discutées.',
+        quickFacts: {
+          duration: 'Évaluation 30–45 minutes',
+          anesthesia: 'Non nécessaire au stade diagnostique',
+          hospitalStay: 'Aucune (les options chirurgicales sont distinctes)',
+          stayInTurkey: '2–3 jours (pour l’évaluation seule)',
+          returnToWork: 'Le jour même',
+          flightClearance: 'Aucune restriction'
+        },
+        definition: [
+          'La dysfonction érectile désigne l’incapacité à obtenir ou à maintenir une érection suffisante pour un rapport sexuel. Des difficultés occasionnelles sont normales ; une évaluation s’impose lorsqu’elles persistent et gênent la personne concernée.',
+          'LE POINT LE PLUS IMPORTANT EST LE SUIVANT : un trouble de l’érection n’est souvent pas qu’une plainte sexuelle. L’érection dépend du bon fonctionnement des petits vaisseaux qui irriguent la verge. Ces petits vaisseaux sont plus fins que ceux qui nourrissent le cœur ; c’est pourquoi l’athérosclérose se manifeste fréquemment ici en premier. Autrement dit, chez certains hommes, un trouble de l’érection peut annoncer une maladie cardiovasculaire plusieurs années à l’avance. L’évaluation ne se limite donc pas à la fonction sexuelle.',
+          'Les causes sont généralement intriquées. Les causes vasculaires constituent le groupe le plus fréquent : diabète, hypertension artérielle, cholestérol élevé, tabac et sédentarité. Parmi les causes hormonales figurent un taux bas de testostérone et les troubles thyroïdiens. Parmi les causes nerveuses, on trouve les lésions nerveuses du diabète, les atteintes médullaires et les interventions dans la région pelvienne.',
+          'LES MÉDICAMENTS SONT SOUVENT OUBLIÉS. Certains antihypertenseurs, antidépresseurs et traitements de l’hypertrophie prostatique peuvent affecter l’érection. La revue de tous vos médicaments fait partie intégrante de l’évaluation, car la solution consiste parfois non pas à ajouter un médicament mais à en modifier un existant.',
+          'Les facteurs psychologiques sont également réels et ne doivent pas être minimisés : anxiété de performance, dépression, stress et difficultés relationnelles. Mais l’attitude « tout est dans votre tête » est erronée ; chez la plupart des hommes, causes physiques et psychologiques coexistent et s’alimentent mutuellement.',
+          'La maladie de La Peyronie (courbure de la verge) est un sujet distinct mais peut accompagner un trouble de l’érection. Elle est également évaluée lors de l’examen.'
+        ],
+        eligibility: {
+          suitable: [
+            'Tout homme dont le trouble de l’érection persiste et le gêne',
+            'Hommes diabétiques, hypertendus ou présentant un cholestérol élevé chez qui un trouble de l’érection apparaît — l’évaluation vasculaire est prioritaire',
+            'Hommes opérés dans la région pelvienne (prostate, vessie, rectum)',
+            'Hommes qui suspectent un effet de leurs médicaments',
+            'Hommes ne tirant aucun bénéfice des comprimés et souhaitant discuter de l’étape suivante',
+            'Hommes présentant des signes associés de testostérone basse (fatigue, baisse du désir, fonte musculaire)'
+          ],
+          notSuitable: [
+            'Hommes chez qui l’activité sexuelle n’est pas sûre en raison d’une cardiopathie et dont l’évaluation cardiologique est en attente — l’état du cœur est clarifié d’abord',
+            'Hommes sous dérivés nitrés — les inhibiteurs de la PDE5 leur sont contre-indiqués et une autre voie est choisie',
+            'Hommes dont la plainte relève uniquement de difficultés relationnelles ou d’une anxiété situationnelle sans cause médicale — l’accompagnement est prioritaire',
+            'Hommes à la recherche d’une « solution garantie et définitive » — aucune méthode ne peut promettre cela'
+          ]
+        },
+        technology: [
+          'Cotation de la plainte par des questionnaires standardisés tels que l’IIEF',
+          'Dosage de la glycémie, de l’HbA1c, du cholestérol et de la testostérone matinale',
+          'Évaluation du risque cardiovasculaire et orientation en cardiologie si nécessaire',
+          'Échographie-doppler couleur pénienne — chez des patients sélectionnés, pour évaluer le flux sanguin',
+          'Revue complète des médicaments pris'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'L’andrologie et les troubles de la fonction sexuelle font partie des domaines d’activité du Dr Müslüm Ergün, maître de conférences. La démarche repose sur la recherche de la cause derrière la plainte ; le traitement progresse par étapes, en commençant par l’option la moins invasive.'
+        },
+        timeline: [
+          {
+            when: 'Étape 1',
+            title: 'Interrogatoire et revue des médicaments',
+            body: 'On demande quand la difficulté a commencé, si elle est apparue brutalement ou progressivement, et si les érections matinales persistent. Tous les médicaments pris sont listés. Ces éléments en disent long sur la cause.'
+          },
+          {
+            when: 'Étape 2',
+            title: 'Examen et bilan sanguin',
+            body: 'Un examen génital est réalisé et des signes de maladie de La Peyronie sont recherchés. Glycémie, HbA1c, cholestérol et testostérone matinale sont dosés. Le risque cardiovasculaire est calculé.'
+          },
+          {
+            when: 'Étape 3',
+            title: 'Mode de vie et équilibre de la maladie sous-jacente',
+            body: 'Arrêt du tabac, perte de poids, exercice régulier et bon contrôle du diabète et de la tension forment le socle du traitement. Si cette étape est négligée, les autres traitements fonctionnent moins bien.'
+          },
+          {
+            when: 'Étape 4',
+            title: 'Traitement médicamenteux',
+            body: 'Les inhibiteurs de la PDE5 constituent la première étape. La bonne dose, le bon moment et la nécessité d’une stimulation sexuelle sont expliqués — ces médicaments n’agissent pas sans stimulation. Une réponse insuffisante tient souvent à une mauvaise utilisation.'
+          },
+          {
+            when: 'Étape 5',
+            title: 'Autres options si les comprimés ne suffisent pas',
+            body: 'Pompe à vide, injections intracaverneuses ou applications urétrales sont discutées. Ces options sont efficaces mais nécessitent un apprentissage.'
+          },
+          {
+            when: 'Étape 6',
+            title: 'Prothèse pénienne',
+            body: 'Chez les hommes ne tirant aucun bénéfice des autres traitements, elle offre une solution durable. C’est une décision irréversible, qui doit être discutée en détail.'
+          }
+        ],
+        risks: [
+          'Ne pas rechercher la cause : si la plainte est simplement masquée par un comprimé, un diabète ou une maladie cardiovasculaire sous-jacents peuvent passer inaperçus — c’est l’avertissement le plus important de cette page',
+          'Effets indésirables des inhibiteurs de la PDE5 — céphalées, bouffées vasomotrices, nez bouché, troubles digestifs ; généralement légers',
+          'DANGER GRAVE SOUS DÉRIVÉS NITRÉS : chez les hommes traités par nitrés, les inhibiteurs de la PDE5 peuvent abaisser dangereusement la tension ; ces médicaments ne peuvent pas être associés',
+          'Médicaments contrefaits achetés sur internet — des produits de composition inconnue constituent un véritable danger sanitaire',
+          'Érection prolongée et douloureuse (priapisme) avec les injections — nécessite une évaluation urgente',
+          'Usage inutile de testostérone : si le taux est normal, la testostérone ne corrige pas le trouble de l’érection et comporte ses propres risques',
+          'Attente irréaliste — aucune méthode ne donne le même résultat chez tous les hommes et aucune garantie n’est possible'
+        ],
+        alternatives: [
+          'Modification du mode de vie et traitement de la maladie sous-jacente — étape fondamentale et la plus négligée',
+          'Inhibiteurs de la PDE5 — traitement de première intention',
+          'Pompe à vide — pour les hommes ne pouvant prendre les comprimés',
+          'Injections intracaverneuses — option efficace en cas d’absence de réponse aux comprimés',
+          'Traitement par testostérone — UNIQUEMENT si le taux mesuré est réellement bas et que des symptômes existent',
+          'Sexothérapie et accompagnement psychologique — seuls ou associés aux autres traitements',
+          'Prothèse pénienne — solution durable lorsque les autres options s’avèrent insuffisantes'
+        ],
+        comparison: {
+          title: 'Comparaison des options thérapeutiques',
+          columns: ['Méthode', 'Comment elle s’utilise', 'À qui elle convient', 'Point de vigilance'],
+          rows: [
+            { label: 'Mode de vie', values: ['Arrêt du tabac, poids, exercice', 'À tous les hommes', 'L’effet s’installe lentement mais dure'] },
+            { label: 'Inhibiteur de la PDE5', values: ['Comprimé par voie orale', 'Première étape, la plupart des hommes', 'Contre-indiqué sous dérivés nitrés'] },
+            { label: 'Pompe à vide', values: ['Dispositif appliqué de l’extérieur', 'Hommes ne pouvant prendre de comprimés', 'Demande un temps d’adaptation'] },
+            { label: 'Injection', values: ['Aiguille fine dans la verge', 'Hommes sans réponse aux comprimés', 'Risque de priapisme, apprentissage indispensable'] },
+            { label: 'Ondes de choc', values: ['Ondes de faible intensité, de l’extérieur', 'Patients sélectionnés', 'Les preuves ne sont pas encore établies'] },
+            { label: 'Prothèse pénienne', values: ['Mise en place chirurgicale', 'Si les autres ne suffisent pas', 'Irréversible'] }
+          ],
+          note:
+            'Le traitement progresse par étapes, en commençant par l’option la moins invasive. Aucune étape ne remplace une autre et aucune ne donne le même résultat chez tous les hommes.'
+        },
+        recovery: [
+          {
+            period: 'Après la première évaluation',
+            body: 'Les résultats sanguins précisent la cause. En présence d’un problème de glycémie, de tension ou de cholestérol, sa prise en charge est engagée.'
+          },
+          {
+            period: 'Mois 1–3',
+            body: 'L’effet des changements de mode de vie commence à se manifester durant cette période. Si un traitement médicamenteux a été instauré, la dose et les modalités de prise sont revues et ajustées.'
+          },
+          {
+            period: 'Mois 3–6',
+            body: 'La réponse est évaluée. Si elle est insuffisante, on passe à l’étape suivante. Cela ne signifie pas que le traitement a échoué ; c’est une part naturelle de la démarche par étapes.'
+          },
+          {
+            period: 'Long terme',
+            body: 'Le suivi des maladies vasculaires et métaboliques sous-jacentes se poursuit. Il importe non seulement pour la fonction sexuelle, mais pour la santé générale.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Le coût de l’évaluation et du traitement varie selon les examens nécessaires et l’étape thérapeutique retenue. Un devis ferme est remis après la première évaluation.'
+        },
+        packageIncludes: [
+          'Évaluation andrologique détaillée et revue des médicaments',
+          'Bilan sanguin (glycémie, HbA1c, cholestérol, testostérone)',
+          'Échographie-doppler couleur pénienne si nécessaire',
+          'Évaluation du risque cardiovasculaire et orientation si nécessaire',
+          'Consultation d’explication détaillée du plan de traitement',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et suivi à distance après votre retour'
+        ],
+        faqs: [
+          {
+            q: 'Un trouble de l’érection peut-il annoncer une maladie cardiaque ?',
+            a: 'Oui, et c’est le message le plus important de cette page. Les vaisseaux qui irriguent la verge sont plus fins que ceux du cœur ; l’athérosclérose se manifeste donc souvent ici en premier. C’est pourquoi, chez un homme présentant un trouble de l’érection, la glycémie, la tension, le cholestérol et le risque cardiovasculaire doivent impérativement être évalués.'
+          },
+          {
+            q: 'Comment savoir si le problème est physique ou psychologique ?',
+            a: 'Le caractère brutal ou progressif du début, la variabilité selon les situations et la persistance des érections matinales fournissent des indices importants. Chez la plupart des hommes, cependant, les deux coexistent ; l’attitude « tout est dans votre tête » est erronée et retarde la prise en charge.'
+          },
+          {
+            q: 'Mes médicaments peuvent-ils en être la cause ?',
+            a: 'Oui. Certains antihypertenseurs, antidépresseurs et traitements de la prostate peuvent affecter l’érection. C’est pourquoi tous vos médicaments sont passés en revue. La solution consiste parfois non pas à ajouter un médicament mais à en modifier un existant — faites-le avec votre médecin, jamais seul.'
+          },
+          {
+            q: 'Le comprimé n’a pas marché, n’ai-je pas d’autre option ?',
+            a: 'Si. Mais il faut d’abord vérifier : la dose était-elle suffisante, a-t-elle été prise au bon moment et y avait-il une stimulation sexuelle ? Ces médicaments n’agissent pas sans stimulation, et une mauvaise utilisation est une cause fréquente de réponse insuffisante. En l’absence réelle de réponse, la pompe à vide, les injections et la prothèse sont discutées.'
+          },
+          {
+            q: 'La testostérone corrige-t-elle le trouble de l’érection ?',
+            a: 'Elle n’a de sens que si la testostérone est réellement basse et qu’il existe des symptômes correspondants. Donner de la testostérone à un homme dont le taux est normal ne corrige pas le trouble ; cela comporte ses propres risques et peut altérer la fertilité. C’est pourquoi aucun traitement n’est débuté sans dosage matinal.'
+          },
+          {
+            q: 'Les ondes de choc fonctionnent-elles ?',
+            a: 'Les études sur les ondes de choc de faible intensité se poursuivent et les résultats sont apparus prometteurs dans certains groupes de patients. Le niveau de preuve n’est toutefois pas établi ; chez qui, dans quelle mesure et pour combien de temps l’effet apparaît n’est pas clairement défini. Si ce traitement vous est proposé, il doit être présenté non comme une solution standard et garantie, mais comme une option dont les preuves se construisent encore.'
+          },
+          {
+            q: 'Puis-je bénéficier d’un traitement par PRP ou cellules souches ?',
+            a: 'Ces applications NE SONT PAS des traitements établis et démontrés de la dysfonction érectile. Elles relèvent de la recherche. Nous conseillons la prudence face aux approches qui les présentent comme une solution définitive et les facturent cher. Les étapes démontrées doivent être épuisées d’abord.'
+          },
+          {
+            q: 'Est-il sûr d’acheter des médicaments sur internet ?',
+            a: 'Non. Une part importante des produits vendus en ligne est contrefaite ; leur composition est inconnue, le dosage incontrôlé, et ils représentent un danger sanitaire réel. Si vous prenez un traitement cardiaque en particulier, le risque est vital. Les médicaments doivent être obtenus après évaluation médicale et en pharmacie.'
+          },
+          {
+            q: 'Changer de mode de vie fait-il vraiment une différence ?',
+            a: 'Oui, et c’est l’étape la plus négligée. L’arrêt du tabac, la perte de poids, l’exercice régulier et le contrôle du diabète et de la tension bénéficient à la fonction érectile comme à la santé vasculaire en général. Si cette étape est négligée, la réponse aux autres traitements est également moindre.'
+          },
+          {
+            q: 'La prothèse est-elle le dernier recours ?',
+            a: 'Oui, c’est la dernière étape de la démarche progressive. Chez les hommes ne tirant aucun bénéfice des autres traitements, elle offre une solution fiable et durable. Mais comme un dispositif est mis en place à la place du tissu érectile naturel, elle est irréversible ; la décision n’est donc pas précipitée et se discute en détail.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — Association européenne d’urologie',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      ru: {
+        title: 'Эректильная дисфункция: причины и ступени лечения',
+        summary:
+          'Нарушение эрекции часто не просто сексуальная жалоба, а предупреждающий знак. Правильно найденная причина определяет и то, какое лечение окажется действенным.',
+        metaTitle: 'Эректильная дисфункция: причины и лечение',
+        metaDescription:
+          'Причины эректильной дисфункции, её связь с сердечно-сосудистыми болезнями, какие обследования проводятся, ступени лечения от таблеток до протеза и методы со спорной доказательной базой.',
+        quickFacts: {
+          duration: 'Обследование 30–45 минут',
+          anesthesia: 'На этапе диагностики не требуется',
+          hospitalStay: 'Нет (хирургические варианты отдельно)',
+          stayInTurkey: '2–3 дня (только для обследования)',
+          returnToWork: 'В тот же день',
+          flightClearance: 'Без ограничений'
+        },
+        definition: [
+          'Эректильная дисфункция — это невозможность достичь или удержать эрекцию, достаточную для полового акта. Эпизодические трудности нормальны; оценка нужна тогда, когда они становятся стойкими и начинают беспокоить мужчину.',
+          'САМОЕ ВАЖНОЕ ЗАКЛЮЧАЕТСЯ В СЛЕДУЮЩЕМ: нарушение эрекции часто не только сексуальная жалоба. Эрекция зависит от здоровой работы мелких сосудов, питающих половой член. Эти мелкие сосуды тоньше тех, что питают сердце; поэтому атеросклероз нередко даёт первый признак именно здесь. Иначе говоря, у некоторых мужчин нарушение эрекции может за годы предупреждать о сердечно-сосудистой болезни. Поэтому обследование не ограничивается половой функцией.',
+          'Причины обычно переплетаются. Сосудистые причины составляют самую частую группу: сахарный диабет, повышенное давление, высокий холестерин, курение и малоподвижность. Среди гормональных причин — низкий тестостерон и нарушения щитовидной железы. Среди причин со стороны нервной системы — повреждение нервов при диабете, болезни спинного мозга и операции в области таза.',
+          'ЛЕКАРСТВА ЧАСТО УПУСКАЮТ ИЗ ВИДУ. Некоторые препараты от давления, антидепрессанты и ряд средств при увеличении простаты могут влиять на эрекцию. Пересмотр всех принимаемых лекарств — неотъемлемая часть обследования, потому что иногда решение не в том, чтобы добавить новый препарат, а в том, чтобы заменить имеющийся.',
+          'Психологические факторы тоже реальны, и их не следует преуменьшать: тревога ожидания неудачи, депрессия, стресс и трудности в отношениях. Но подход «всё это у вас в голове» ошибочен; у большинства мужчин телесные и душевные причины существуют вместе и питают друг друга.',
+          'Болезнь Пейрони (искривление полового члена) — отдельная тема, но она может сопутствовать нарушению эрекции. Её также оценивают при осмотре.'
+        ],
+        eligibility: {
+          suitable: [
+            'Любой мужчина, у которого нарушение эрекции стало стойким и его беспокоит',
+            'Мужчины с диабетом, повышенным давлением или высоким холестерином, у которых началось нарушение эрекции — приоритет у сосудистой оценки',
+            'Мужчины, перенёсшие операции в области таза (простата, мочевой пузырь, прямая кишка)',
+            'Мужчины, подозревающие влияние принимаемых лекарств',
+            'Мужчины, которым не помогают таблетки и которые хотят обсудить следующую ступень',
+            'Мужчины с сопутствующими признаками низкого тестостерона (утомляемость, снижение влечения, потеря мышечной массы)'
+          ],
+          notSuitable: [
+            'Мужчины, у которых половая активность небезопасна из-за болезни сердца и ожидается оценка кардиолога — сначала выясняют состояние сердца',
+            'Мужчины, принимающие нитраты — ингибиторы ФДЭ-5 им противопоказаны, выбирается другой путь',
+            'Мужчины, у которых жалоба связана только с трудностями в отношениях или ситуативной тревогой при отсутствии медицинской причины — приоритет у консультирования',
+            'Мужчины, ищущие «гарантированное и окончательное решение» — ни один метод такого обещать не может'
+          ]
+        },
+        technology: [
+          'Оценка жалобы стандартными опросниками, такими как IIEF',
+          'Определение глюкозы крови, HbA1c, холестерина и утреннего тестостерона',
+          'Оценка сердечно-сосудистого риска и при необходимости направление к кардиологу',
+          'Цветное допплеровское ультразвуковое исследование полового члена — у отобранных пациентов для оценки кровотока',
+          'Полный пересмотр принимаемых лекарств'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Андрология и нарушения половой функции входят в сферу работы доц. д-ра Мюслюма Эргюна. Подход строится на поиске причины, стоящей за жалобой; лечение идёт ступенчато и начинается с наименее травматичного варианта.'
+        },
+        timeline: [
+          {
+            when: 'Шаг 1',
+            title: 'Расспрос и пересмотр лекарств',
+            body: 'Выясняют, когда началась жалоба, развилась ли она внезапно или постепенно и сохраняются ли утренние эрекции. Перечисляются все принимаемые лекарства. Эти сведения многое говорят о причине.'
+          },
+          {
+            when: 'Шаг 2',
+            title: 'Осмотр и анализы крови',
+            body: 'Проводят осмотр половых органов, ищут признаки болезни Пейрони. Определяют глюкозу крови, HbA1c, холестерин и утренний тестостерон. Рассчитывают сердечно-сосудистый риск.'
+          },
+          {
+            when: 'Шаг 3',
+            title: 'Образ жизни и контроль основного заболевания',
+            body: 'Отказ от курения, снижение веса, регулярные нагрузки и хороший контроль сахара и давления — основа лечения. Если пропустить этот шаг, остальные методы тоже работают хуже.'
+          },
+          {
+            when: 'Шаг 4',
+            title: 'Лекарственная терапия',
+            body: 'Ингибиторы ФДЭ-5 — первая ступень. Объясняют правильную дозу, правильное время приёма и необходимость полового возбуждения: без возбуждения эти препараты не действуют. Недостаточный ответ часто связан с неправильным применением.'
+          },
+          {
+            when: 'Шаг 5',
+            title: 'Другие варианты, если таблеток недостаточно',
+            body: 'Обсуждают вакуумное устройство, инъекции в половой член или введение препарата в уретру. Эти варианты действенны, но требуют обучения.'
+          },
+          {
+            when: 'Шаг 6',
+            title: 'Фаллопротезирование',
+            body: 'Для мужчин, которым не помогают другие методы, оно даёт стойкое решение. Это необратимое решение, и его нужно обсуждать подробно.'
+          }
+        ],
+        risks: [
+          'Не искать причину: если жалобу просто прикрыть таблеткой, можно пропустить скрытый диабет или сердечно-сосудистую болезнь — это самое важное предупреждение на этой странице',
+          'Побочные действия ингибиторов ФДЭ-5 — головная боль, прилив крови к лицу, заложенность носа, расстройство пищеварения; обычно лёгкие',
+          'СЕРЬЁЗНАЯ ОПАСНОСТЬ ПРИ ПРИЁМЕ НИТРАТОВ: у мужчин, принимающих нитраты, ингибиторы ФДЭ-5 могут опасно снизить давление; эти препараты нельзя сочетать',
+          'Поддельные таблетки из интернета — продукты неизвестного состава представляют реальную угрозу здоровью',
+          'Длительная болезненная эрекция (приапизм) при инъекционной терапии — требует срочной оценки',
+          'Ненужное применение тестостерона: при нормальном уровне тестостерон не устраняет нарушение эрекции и несёт собственные риски',
+          'Нереалистичные ожидания — ни один метод не даёт одинакового результата у всех мужчин, и гарантий дать нельзя'
+        ],
+        alternatives: [
+          'Изменение образа жизни и лечение основного заболевания — основная и чаще всего упускаемая ступень',
+          'Ингибиторы ФДЭ-5 — лечение первой линии',
+          'Вакуумное эрекционное устройство — для мужчин, которым нельзя принимать таблетки',
+          'Инъекции в половой член — действенный вариант при отсутствии ответа на таблетки',
+          'Терапия тестостероном — ТОЛЬКО если измеренный уровень действительно низкий и есть симптомы',
+          'Сексуальная терапия и психологическое консультирование — отдельно или вместе с другими методами',
+          'Фаллопротезирование — стойкое решение, когда остальные варианты оказались недостаточными'
+        ],
+        comparison: {
+          title: 'Сравнение вариантов лечения',
+          columns: ['Метод', 'Как применяется', 'Кому подходит', 'На что обратить внимание'],
+          rows: [
+            { label: 'Образ жизни', values: ['Отказ от курения, вес, нагрузки', 'Каждому мужчине', 'Эффект нарастает медленно, но сохраняется'] },
+            { label: 'Ингибитор ФДЭ-5', values: ['Таблетка внутрь', 'Первая ступень, большинство мужчин', 'Нельзя при приёме нитратов'] },
+            { label: 'Вакуумное устройство', values: ['Устройство, применяемое снаружи', 'Тем, кому нельзя таблетки', 'Требует привыкания'] },
+            { label: 'Инъекция', values: ['Тонкая игла в половой член', 'При отсутствии ответа на таблетки', 'Риск приапизма, обучение обязательно'] },
+            { label: 'Ударная волна', values: ['Низкоинтенсивные волны снаружи', 'Отобранным пациентам', 'Доказательная база ещё не устоялась'] },
+            { label: 'Фаллопротез', values: ['Хирургическая установка', 'Если остальное недостаточно', 'Необратимо'] }
+          ],
+          note:
+            'Лечение идёт ступенчато, начиная с наименее травматичного варианта. Ни одна ступень не заменяет другую, и ни одна не даёт одинакового результата у всех мужчин.'
+        },
+        recovery: [
+          {
+            period: 'После первого обследования',
+            body: 'С результатами анализов причина проясняется. Если есть проблема с сахаром, давлением или холестерином, начинают её коррекцию.'
+          },
+          {
+            period: '1–3-й месяц',
+            body: 'В этот период начинает проявляться действие изменений образа жизни. Если начата лекарственная терапия, пересматривают и корректируют дозу и способ приёма.'
+          },
+          {
+            period: '3–6-й месяц',
+            body: 'Оценивают ответ. Если он недостаточен, переходят на следующую ступень. Это не значит, что лечение не удалось; это естественная часть ступенчатого подхода.'
+          },
+          {
+            period: 'Долгосрочно',
+            body: 'Наблюдение за основными сосудистыми и обменными заболеваниями продолжается. Это важно не только для половой функции, но и для здоровья в целом.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Стоимость обследования и лечения зависит от нужных исследований и выбранной ступени лечения. Точное предложение даётся после первого обследования.'
+        },
+        packageIncludes: [
+          'Подробное андрологическое обследование и пересмотр лекарств',
+          'Анализы крови (глюкоза, HbA1c, холестерин, тестостерон)',
+          'При необходимости цветное допплеровское УЗИ полового члена',
+          'Оценка сердечно-сосудистого риска и при необходимости направление',
+          'Беседа с подробным разбором плана лечения',
+          'Трансферы аэропорт–больница–отель',
+          'Проживание (пациент + 1 сопровождающий)',
+          'Медицинский переводчик и дистанционное наблюдение после возвращения домой'
+        ],
+        faqs: [
+          {
+            q: 'Может ли нарушение эрекции предвещать болезнь сердца?',
+            a: 'Да, может, и это самое важное сообщение этой страницы. Сосуды, питающие половой член, тоньше сосудов сердца; поэтому атеросклероз часто проявляется сначала здесь. Именно поэтому у мужчины с нарушением эрекции обязательно оценивают сахар, давление, холестерин и сердечно-сосудистый риск.'
+          },
+          {
+            q: 'Как понять, телесная причина или душевная?',
+            a: 'Важные подсказки дают то, началась ли жалоба внезапно или постепенно, меняется ли она в зависимости от ситуации и сохраняются ли утренние эрекции. Однако у большинства мужчин присутствует и то и другое; подход «всё это у вас в голове» ошибочен и откладывает лечение.'
+          },
+          {
+            q: 'Могут ли быть виноваты мои лекарства?',
+            a: 'Да. Некоторые препараты от давления, антидепрессанты и средства для простаты могут влиять на эрекцию. Поэтому пересматривают все ваши лекарства. Иногда решение не в том, чтобы добавить новый препарат, а в том, чтобы заменить имеющийся, — делайте это вместе с врачом, а не самостоятельно.'
+          },
+          {
+            q: 'Таблетка не помогла, значит, других вариантов нет?',
+            a: 'Есть. Но сначала стоит проверить: была ли доза достаточной, принята ли она вовремя и было ли половое возбуждение? Без возбуждения эти препараты не действуют, и неправильное применение — частая причина недостаточного ответа. Если ответа действительно нет, обсуждают вакуумное устройство, инъекции и протез.'
+          },
+          {
+            q: 'Решает ли терапия тестостероном проблему эрекции?',
+            a: 'Она имеет смысл только тогда, когда тестостерон действительно низкий и есть соответствующие симптомы. Назначение тестостерона мужчине с нормальным уровнем не решает проблему эрекции; кроме того, у него есть собственные риски и оно может ухудшить способность к зачатию. Поэтому без утреннего измерения тестостерона лечение не начинают.'
+          },
+          {
+            q: 'Работает ли ударно-волновая терапия?',
+            a: 'Исследования низкоинтенсивной ударно-волновой терапии продолжаются, и в некоторых группах пациентов она выглядела многообещающе. Однако уровень доказательности пока не устоялся; у кого, в какой мере и как долго проявляется эффект, чётко не определено. Если вам предлагают это лечение, оно должно быть представлено не как стандартное и гарантированное решение, а как вариант с развивающейся доказательной базой.'
+          },
+          {
+            q: 'Можно ли мне сделать лечение плазмой или стволовыми клетками?',
+            a: 'Эти методы НЕ являются устоявшимися, доказанными способами лечения эректильной дисфункции. Они находятся на стадии исследований. Советуем с осторожностью относиться к предложениям, которые подают их как окончательное решение и берут за это высокую плату. Сначала следует пройти доказанные ступени.'
+          },
+          {
+            q: 'Безопасно ли покупать лекарства в интернете?',
+            a: 'Нет. Значительная часть продаваемых в интернете средств поддельна; их состав неизвестен, дозировка не контролируется, и они представляют серьёзную угрозу здоровью. Особенно если вы принимаете сердечные препараты, это опасно для жизни. Лекарства нужно получать после осмотра врача и в аптеке.'
+          },
+          {
+            q: 'Действительно ли изменение образа жизни что-то меняет?',
+            a: 'Да, и эта ступень упускается чаще всего. Отказ от курения, снижение веса, регулярные нагрузки и контроль сахара и давления помогают и эрекции, и сосудистому здоровью в целом. Если пропустить этот шаг, ответ на остальные методы тоже окажется слабее.'
+          },
+          {
+            q: 'Протез — это крайняя мера?',
+            a: 'Да, это последняя ступень ступенчатого подхода. Мужчинам, которым не помогают другие методы, он даёт надёжное и стойкое решение. Но поскольку вместо естественной эректильной ткани устанавливается устройство, это необратимо; поэтому решение не принимают второпях и обсуждают подробно.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — Европейская ассоциация урологии',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      },
+      ar: {
+        title: 'ضعف الانتصاب: الأسباب ومراحل العلاج',
+        summary:
+          'مشكلة الانتصاب ليست في الغالب شكوى جنسية وحدها، بل علامة تحذير. والعثور على السبب الصحيح هو ما يحدد أيّ علاج سينجح.',
+        metaTitle: 'ضعف الانتصاب: الأسباب والعلاج',
+        metaDescription:
+          'أسباب ضعف الانتصاب وعلاقته بأمراض القلب والأوعية، والفحوص التي تُجرى، ومراحل العلاج من الحبوب إلى الدعامة، والطرق التي ما زالت أدلتها محل جدل.',
+        quickFacts: {
+          duration: 'التقييم 30–45 دقيقة',
+          anesthesia: 'غير لازم في مرحلة التشخيص',
+          hospitalStay: 'لا يوجد (الخيارات الجراحية منفصلة)',
+          stayInTurkey: '2–3 أيام (للتقييم فقط)',
+          returnToWork: 'في اليوم نفسه',
+          flightClearance: 'من دون قيود'
+        },
+        definition: [
+          'ضعف الانتصاب هو عدم القدرة على بلوغ انتصاب كافٍ للجماع أو على المحافظة عليه. والصعوبات العابرة أمر طبيعي؛ أما إذا صارت مستمرة وبدأت تزعج صاحبها فيلزم تقييمها.',
+          'أهم نقطة هي الآتية: مشكلة الانتصاب ليست في الغالب شكوى جنسية فحسب. فالانتصاب يعتمد على سلامة عمل الأوعية الدموية الصغيرة التي تغذّي القضيب. وهذه الأوعية الصغيرة أدق من تلك التي تغذّي القلب؛ ولذلك كثيرًا ما يظهر تصلّب الشرايين علامته الأولى هنا. بعبارة أخرى، قد تكون مشكلة الانتصاب عند بعض الرجال نذيرًا يسبق مرض القلب والأوعية بسنوات. ولهذا لا يقتصر التقييم على الوظيفة الجنسية.',
+          'والأسباب متشابكة عادةً. فالأسباب الوعائية هي المجموعة الأكثر شيوعًا: داء السكري وارتفاع ضغط الدم وارتفاع الكوليسترول والتدخين وقلة الحركة. ومن الأسباب الهرمونية انخفاض التستوستيرون واضطرابات الغدة الدرقية. ومن الأسباب العصبية تلف الأعصاب بسبب السكري ومشكلات النخاع الشوكي والعمليات في منطقة الحوض.',
+          'الأدوية كثيرًا ما تُغفَل. فبعض أدوية الضغط ومضادات الاكتئاب وبعض أدوية تضخم البروستاتا قد تؤثر في الانتصاب. ومراجعة كل ما تتناوله من أدوية جزء لا يتجزأ من التقييم، لأن الحل أحيانًا ليس إضافة دواء جديد بل تغيير دواء قائم.',
+          'والعوامل النفسية حقيقية أيضًا ولا يصحّ التقليل منها: قلق الأداء والاكتئاب والتوتر ومشكلات العلاقة. غير أن نهج "كل ذلك في رأسك" خاطئ؛ فعند معظم المرضى تجتمع الأسباب الجسدية والنفسية ويغذّي أحدها الآخر.',
+          'ومرض بيروني (اعوجاج القضيب) موضوع مستقل لكنه قد يُرافق مشكلة الانتصاب، ويُقيَّم كذلك أثناء الفحص.'
+        ],
+        eligibility: {
+          suitable: [
+            'كل رجل صارت مشكلة الانتصاب لديه مستمرة وتزعجه',
+            'المصابون بالسكري أو ارتفاع الضغط أو ارتفاع الكوليسترول وبدأت لديهم مشكلة الانتصاب — فالتقييم الوعائي له الأولوية',
+            'من خضعوا لعمليات في منطقة الحوض (البروستاتا أو المثانة أو المستقيم)',
+            'من يشكّون في تأثير الأدوية التي يتناولونها',
+            'من لم يستفيدوا من العلاج الدوائي ويريدون مناقشة المرحلة التالية',
+            'من تُرافقهم علامات انخفاض التستوستيرون (التعب وقلة الرغبة وفقدان الكتلة العضلية)'
+          ],
+          notSuitable: [
+            'من لا يكون النشاط الجنسي آمنًا لهم بسبب مرض قلبي وينتظرون تقييم طبيب القلب — تُوضَّح حال القلب أولًا',
+            'من يتناولون أدوية النترات القلبية — إذ لا تُستعمل لديهم مثبطات الفوسفوديستراز-5 ويُسلك طريق آخر',
+            'من تنبع شكواهم من مشكلة في العلاقة أو قلق ظرفي فقط من دون سبب طبي — فالإرشاد له الأولوية',
+            'من يبحثون عن "حلّ مضمون ودائم" — إذ لا تستطيع أي طريقة أن تَعِد بذلك'
+          ]
+        },
+        technology: [
+          'تدريج الشكوى باستمارات معيارية مثل IIEF',
+          'قياس سكر الدم والخضاب السكري والكوليسترول والتستوستيرون الصباحي',
+          'تقييم خطر القلب والأوعية والإحالة إلى طبيب القلب عند الحاجة',
+          'التصوير بالدوبلر الملون للقضيب — عند مرضى مختارين لتقييم التدفق الدموي',
+          'مراجعة كاملة للأدوية المستعملة'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'الأندرولوجيا واضطرابات الوظيفة الجنسية من مجالات عمل الأستاذ المشارك الدكتور مسلم إرغون. ويقوم النهج على البحث عن السبب وراء الشكوى؛ ويتقدم العلاج مرحلة بعد مرحلة بدءًا من الخيار الأقل تدخلًا.'
+        },
+        timeline: [
+          {
+            when: 'الخطوة 1',
+            title: 'القصة المرضية ومراجعة الأدوية',
+            body: 'يُسأل متى بدأت الشكوى وهل ظهرت فجأة أم تدريجيًا وهل ما زالت الانتصابات الصباحية موجودة. وتُدوَّن كل الأدوية المستعملة. وهذه المعلومات تقول الكثير عن السبب.'
+          },
+          {
+            when: 'الخطوة 2',
+            title: 'الفحص والتحاليل',
+            body: 'يُجرى فحص للأعضاء التناسلية ويُبحَث عن علامات مرض بيروني. ويُفحَص سكر الدم والخضاب السكري والكوليسترول والتستوستيرون الصباحي. ويُحسَب خطر القلب والأوعية.'
+          },
+          {
+            when: 'الخطوة 3',
+            title: 'نمط الحياة وضبط المرض الأساسي',
+            body: 'الإقلاع عن التدخين وإنقاص الوزن والرياضة المنتظمة وضبط السكر والضغط هي أساس العلاج. فإن أُهملت هذه المرحلة قلّت فائدة العلاجات الأخرى أيضًا.'
+          },
+          {
+            when: 'الخطوة 4',
+            title: 'العلاج الدوائي',
+            body: 'مثبطات الفوسفوديستراز-5 هي المرحلة الأولى. ويُشرَح الجرعة الصحيحة والتوقيت الصحيح وضرورة وجود إثارة جنسية — فهذه الأدوية لا تعمل من دون إثارة. والاستجابة غير الكافية سببها الشائع سوء الاستعمال.'
+          },
+          {
+            when: 'الخطوة 5',
+            title: 'خيارات أخرى إذا لم تكفِ الحبوب',
+            body: 'تُناقَش المضخة التفريغية أو الحقن داخل القضيب أو التطبيقات عبر الإحليل. وهذه الخيارات فعّالة لكنها تتطلب تدريبًا على الاستعمال.'
+          },
+          {
+            when: 'الخطوة 6',
+            title: 'دعامة القضيب',
+            body: 'تقدّم حلًّا دائمًا لمن لا يستفيدون من العلاجات الأخرى. وهو قرار لا رجعة فيه ويجب مناقشته بالتفصيل.'
+          }
+        ],
+        risks: [
+          'عدم البحث عن السبب: فإن غُطّيت الشكوى بحبة دواء فحسب فقد يُغفَل السكري أو مرض القلب والأوعية الكامن — وهذا أهم تنبيه في هذه الصفحة',
+          'الآثار الجانبية لمثبطات الفوسفوديستراز-5 — صداع واحمرار الوجه واحتقان الأنف وعسر الهضم؛ وهي خفيفة عادةً',
+          'خطر جسيم عند متناولي النترات: فعند من يتناولون النترات القلبية قد تخفض مثبطات الفوسفوديستراز-5 الضغط بصورة خطرة؛ ولا يجوز الجمع بين هذين الدواءين',
+          'الأدوية المزيفة المشتراة عبر الإنترنت — فمنتجات مجهولة التركيب خطر صحي حقيقي',
+          'انتصاب مؤلم مطوّل (القساح) مع العلاج بالحقن — ويستدعي تقييمًا عاجلًا',
+          'استعمال التستوستيرون من دون داعٍ: فإن كانت القيمة طبيعية فإن التستوستيرون لا يحلّ مشكلة الانتصاب وله مخاطره الخاصة',
+          'التوقعات غير الواقعية — فلا توجد طريقة تعطي النتيجة نفسها عند كل رجل، ولا يمكن تقديم ضمان'
+        ],
+        alternatives: [
+          'تغيير نمط الحياة وعلاج المرض الأساسي — المرحلة الأساسية والأكثر إهمالًا',
+          'مثبطات الفوسفوديستراز-5 — علاج الخط الأول',
+          'جهاز الانتصاب التفريغي — لمن لا يستطيعون تناول الحبوب',
+          'الحقن داخل القضيب — خيار فعّال لمن لا يستجيبون للحبوب',
+          'العلاج بالتستوستيرون — فقط إذا كانت القيمة المقاسة منخفضة فعلًا ووُجدت أعراض',
+          'العلاج الجنسي والإرشاد النفسي — وحده أو مع العلاجات الأخرى',
+          'دعامة القضيب — حلّ دائم حين تكون الخيارات الأخرى غير كافية'
+        ],
+        comparison: {
+          title: 'مقارنة خيارات العلاج',
+          columns: ['الطريقة', 'كيف تُطبَّق', 'لمن تصلح', 'ما ينبغي الانتباه إليه'],
+          rows: [
+            { label: 'نمط الحياة', values: ['الإقلاع عن التدخين والوزن والرياضة', 'لكل رجل', 'أثرها يتراكم ببطء لكنه يدوم'] },
+            { label: 'مثبط الفوسفوديستراز-5', values: ['حبة عن طريق الفم', 'المرحلة الأولى، لمعظم الرجال', 'لا تُستعمل عند متناولي النترات'] },
+            { label: 'المضخة التفريغية', values: ['جهاز يُطبَّق من الخارج', 'لمن لا يستطيعون تناول الحبوب', 'تحتاج إلى اعتياد'] },
+            { label: 'الحقن', values: ['إبرة رفيعة داخل القضيب', 'لمن لا يستجيبون للحبوب', 'خطر القساح، والتدريب ضروري'] },
+            { label: 'الموجات التصادمية', values: ['موجات منخفضة الشدة من الخارج', 'لمرضى مختارين', 'الأدلة لم تستقر بعد'] },
+            { label: 'دعامة القضيب', values: ['زرع جراحي', 'حين لا تكفي الخيارات الأخرى', 'لا رجعة فيها'] }
+          ],
+          note:
+            'يتقدم العلاج مرحلة بعد مرحلة بدءًا من الخيار الأقل تدخلًا. ولا تحلّ مرحلة محل أخرى، ولا تعطي أي منها النتيجة نفسها عند كل رجل.'
+        },
+        recovery: [
+          {
+            period: 'بعد التقييم الأول',
+            body: 'يتضح السبب مع نتائج التحاليل. وإن وُجدت مشكلة في السكر أو الضغط أو الكوليسترول بُدِئ بضبطها.'
+          },
+          {
+            period: 'الشهر 1–3',
+            body: 'يبدأ أثر تغييرات نمط الحياة بالظهور في هذه المرحلة. وإن بُدِئ العلاج الدوائي رُوجعت الجرعة وطريقة الاستعمال وعُدِّلتا.'
+          },
+          {
+            period: 'الشهر 3–6',
+            body: 'تُقيَّم الاستجابة. فإن لم تكفِ انتُقِل إلى المرحلة التالية. وهذا لا يعني أن العلاج فشل؛ بل هو جزء طبيعي من النهج المتدرج.'
+          },
+          {
+            period: 'المدى الطويل',
+            body: 'تستمر متابعة الأمراض الوعائية والاستقلابية الكامنة. وهذه المتابعة مهمة لا للوظيفة الجنسية وحدها بل للصحة العامة أيضًا.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'تختلف كلفة التقييم والعلاج بحسب الفحوص اللازمة ومرحلة العلاج المختارة. ويُقدَّم العرض النهائي بعد التقييم الأول.'
+        },
+        packageIncludes: [
+          'تقييم أندرولوجي مفصّل ومراجعة للأدوية',
+          'تحاليل الدم (السكر والخضاب السكري والكوليسترول والتستوستيرون)',
+          'التصوير بالدوبلر الملون للقضيب عند الحاجة',
+          'تقييم خطر القلب والأوعية والإحالة عند الحاجة',
+          'لقاء يُشرَح فيه خطة العلاج بالتفصيل',
+          'التنقلات بين المطار والمستشفى والفندق',
+          'الإقامة (المريض + مرافق واحد)',
+          'مترجم طبي ومتابعة عن بُعد بعد عودتك إلى بلدك'
+        ],
+        faqs: [
+          {
+            q: 'هل يمكن أن تكون مشكلة الانتصاب نذيرًا لمرض القلب؟',
+            a: 'نعم، يمكن، وهذه أهم رسالة في هذه الصفحة. فالأوعية التي تغذّي القضيب أدق من أوعية القلب؛ ولذلك يظهر تصلّب الشرايين هنا أولًا في الغالب. ولهذا يجب عند الرجل الذي يعاني مشكلة الانتصاب تقييم السكر والضغط والكوليسترول وخطر القلب والأوعية بالضرورة.'
+          },
+          {
+            q: 'كيف يُعرَف إن كان السبب جسديًا أم نفسيًا؟',
+            a: 'يعطي مؤشرات مهمة أن تكون البداية فجائية أو تدريجية، وأن تتغير الشكوى بحسب الموقف، وأن تستمر الانتصابات الصباحية أو لا. لكن الاثنين يجتمعان عند معظم الرجال؛ ونهج "كل ذلك في رأسك" خاطئ ويؤخّر العلاج.'
+          },
+          {
+            q: 'هل يمكن أن تكون أدويتي هي السبب؟',
+            a: 'نعم. فبعض أدوية الضغط ومضادات الاكتئاب وأدوية البروستاتا قد تؤثر في الانتصاب. ولذلك تُراجَع كل أدويتك. والحلّ أحيانًا ليس إضافة دواء جديد بل تغيير دواء قائم — افعل ذلك مع طبيبك لا من تلقاء نفسك.'
+          },
+          {
+            q: 'لم تنفع الحبة، أليس لديّ خيار آخر؟',
+            a: 'بلى. لكن ينبغي التحقق أولًا: هل كانت الجرعة كافية، وهل أُخذت في الوقت الصحيح، وهل وُجدت إثارة جنسية؟ فهذه الأدوية لا تعمل من دون إثارة، وسوء الاستعمال سبب شائع للاستجابة غير الكافية. فإن لم تكن هناك استجابة فعلًا نُوقشت المضخة التفريغية والحقن والدعامة.'
+          },
+          {
+            q: 'هل يحلّ العلاج بالتستوستيرون مشكلة الانتصاب؟',
+            a: 'لا معنى له إلا إذا كان التستوستيرون منخفضًا فعلًا ووُجدت أعراض تابعة لذلك. فإعطاء التستوستيرون لرجل قيمته طبيعية لا يحلّ مشكلة الانتصاب؛ وله مخاطره الخاصة وقد يؤثر سلبًا في الخصوبة. ولهذا لا يُبدأ هذا العلاج من دون قياس التستوستيرون الصباحي.'
+          },
+          {
+            q: 'هل ينفع العلاج بالموجات التصادمية؟',
+            a: 'ما زالت الدراسات على العلاج بالموجات التصادمية منخفضة الشدة مستمرة، وقد بدا واعدًا في بعض مجموعات المرضى. غير أن مستوى الأدلة لم يستقر بعد؛ فلم يُحدَّد بوضوح عند من يظهر الأثر وبأي مقدار ولأي مدة. فإن عُرض عليك هذا العلاج فينبغي تقديمه لا على أنه حلّ معياري مضمون، بل على أنه خيار أدلته ما زالت تتكون.'
+          },
+          {
+            q: 'هل يمكنني إجراء علاج البلازما أو الخلايا الجذعية؟',
+            a: 'هذه التطبيقات ليست علاجات راسخة ولا مثبتة في ضعف الانتصاب. فهي في طور البحث. وننصح بالحذر تجاه الأساليب التي تقدّمها حلًّا قاطعًا وتطلب عليها أجرًا مرتفعًا. وينبغي أولًا استكمال المراحل المثبتة.'
+          },
+          {
+            q: 'هل شراء الدواء عبر الإنترنت آمن؟',
+            a: 'لا. فجزء كبير من المنتجات المباعة عبر الإنترنت مزيّف؛ لا يُعرَف ما فيه، والجرعة غير منضبطة، وهي تشكّل خطرًا صحيًا جسيمًا. وإن كنت تتناول أدوية للقلب على وجه الخصوص فالخطر على الحياة. ويجب الحصول على الدواء بعد تقييم الطبيب ومن الصيدلية.'
+          },
+          {
+            q: 'هل يُحدث تغيير نمط الحياة فرقًا حقيقيًا؟',
+            a: 'نعم، وهذه المرحلة هي الأكثر إهمالًا. فالإقلاع عن التدخين وإنقاص الوزن والرياضة المنتظمة وضبط السكر والضغط تفيد وظيفة الانتصاب وصحة الأوعية عمومًا. فإن أُهملت هذه الخطوة كانت الاستجابة للعلاجات الأخرى أضعف أيضًا.'
+          },
+          {
+            q: 'هل الدعامة هي الملاذ الأخير؟',
+            a: 'نعم، وهي الخطوة الأخيرة في النهج المتدرج. وتقدّم لمن لا يستفيدون من العلاجات الأخرى حلًّا موثوقًا ودائمًا. لكن لأن جهازًا يُوضَع مكان النسيج الانتصابي الطبيعي فلا رجعة فيها؛ ولذلك لا يُستعجَل القرار ويُناقَش بالتفصيل.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Sexual and Reproductive Health — الجمعية الأوروبية للمسالك البولية',
+            url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health'
+          }
+        ]
+      }
+    }
+  },
+  {
+    /**
      * Böbrek taşı hub'ının altındaki perkütan yöntem (prompt m.4.1).
      * RIRS ile ÜSTÜNLÜK KARŞILAŞTIRMASI YAPILMAZ; PCNL büyük ve geyik
      * boynuzu taşların yöntemidir. KANAMA en önemli risk olarak açıkça
