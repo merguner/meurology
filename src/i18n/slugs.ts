@@ -24,6 +24,22 @@ export const treatmentSlugMap = {
     ru: 'roboticheskaya-prostatektomiya',
     ar: 'robotic-prostatectomy'
   },
+  turp: {
+    tr: 'turp-prostat-rezeksiyonu',
+    en: 'turp-prostate-resection',
+    de: 'turp-prostataresektion',
+    fr: 'rtup-resection-prostatique',
+    ru: 'turp-transuretralnaya-rezekciya',
+    ar: 'turp-prostate-resection'
+  },
+  rezum: {
+    tr: 'rezum-buhar-tedavisi',
+    en: 'rezum-water-vapour-therapy',
+    de: 'rezum-wasserdampftherapie',
+    fr: 'rezum-therapie-vapeur-eau',
+    ru: 'rezum-parovaya-terapiya',
+    ar: 'rezum-water-vapour-therapy'
+  },
   'psa-yuksekligi-ve-biyopsi': {
     tr: 'psa-yuksekligi-ve-biyopsi',
     en: 'raised-psa-and-biopsy',
