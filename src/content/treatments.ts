@@ -26429,58 +26429,146 @@ export const treatments: Treatment[] = [
     i18n: {
       tr: {
         title: 'Üretroplasti (Üretral Darlık Cerrahisi)',
-        summary: 'Üretral darlıkta kalıcı çözüm sağlayan rekonstrüktif cerrahi; bulber, penil, uzun segment ve redo (tekrar) vakalar dahil.',
-        metaTitle: 'Üretroplasti | Üretral Darlık Cerrahisi (Bulber, Penil, Redo)',
-        metaDescription: 'Üretral darlıkta üretroplasti: bulber ve penil darlık, uzun segment/kompleks darlık ve başarısız girişim sonrası redo üretroplasti. Karmaşık ve nadir vaka deneyimi.',
+        summary:
+          'Üretral darlıkta kalıcı onarım. İçeriden kesme işlemleri kısa sürede rahatlatır ama darlık tekrarlar; her tekrar bir sonraki onarımı zorlaştırır. Bu sayfa, bu döngünün nasıl kırıldığını anlatır.',
+        metaTitle: 'Üretroplasti: Üretral Darlıkta Kalıcı Onarım (Bulber, Penil, Redo)',
+        metaDescription:
+          'Üretral darlıkta neden üretrotomi yetmediği, tekrarlayan girişimlerin zararı, yanak mukozası grefti ile onarım, tek ve çok aşamalı cerrahi ve redo vakalarda gerçekçi beklentiler.',
+        quickFacts: {
+          duration: '2–4 saat (darlığın uzunluğuna göre)',
+          anesthesia: 'Genel anestezi',
+          hospitalStay: '1–3 gece',
+          stayInTurkey: '3–4 hafta (kateter burada çekilir)',
+          catheter: '2–3 hafta',
+          returnToWork: '2–4 hafta (masa başı daha erken)',
+          flightClearance: 'Kateter çekildikten ve kontrol yapıldıktan sonra'
+        },
         definition: [
-          'Üretral darlık, idrar kanalının (üretra) skar dokusuyla daralmasıdır; zayıf idrar akışı, zorlanma ve tekrarlayan enfeksiyonlara yol açar. Basit girişimler (dilatasyon, iç üretrotomi) kısa vadeli rahatlama sağlasa da darlık çoğu zaman tekrarlar.',
-          'Üretroplasti, darlığın kalıcı olarak onarıldığı rekonstrüktif ameliyattır. Darlığın yeri (bulber/penil), uzunluğu ve daha önce geçirilmiş girişimler cerrahiyi belirler. Uzun segment ve tekrarlayan (redo) vakalar özel deneyim gerektirir ve genellikle bu cerrahiyi güvenle yapabilen az sayıda merkeze yönlendirilir.'
+          'Üretra, mesaneden idrarın dışarı taşındığı kanaldır. Bu kanalın bir bölümünde yara (skar) dokusu gelişip daralmasına üretral darlık denir. Belirtiler sinsi başlar: idrar akımının zayıflaması, dallanması, idrarı başlatmakta zorlanma, tam boşaltamama hissi, sık idrara çıkma ve tekrarlayan idrar yolu enfeksiyonları.',
+          'BU SAYFANIN TEMEL AYRIMI: ÜRETROTOMİ AÇAR, ÜRETROPLASTİ ONARIR. İçeriden kesme işlemi (iç üretrotomi) dar bölgeyi keserek açar, ancak darlığın nedeni olan yara dokusu yerinde kalır. Vücut kesilen yeri yine yara dokusuyla iyileştirdiği için darlık tekrarlama eğilimindedir.',
+          'TEKRARLAYAN KESİ İŞLEMLERİNİN ASIL ZARARI BUDUR: her girişim yeni yara dokusu oluşturur, darlık kısalmak yerine uzar ve çevre dokular sertleşir. Yani tekrarlanan üretrotomiler yalnızca işe yaramamakla kalmaz, ileride yapılacak kalıcı onarımı da zorlaştırır. İlk üretrotomi kısa ve uygun yerleşimli bir darlıkta makul bir seçenektir; sorun aynı işlemin tekrar tekrar yapılmasıdır.',
+          'Üretroplastide iki temel yaklaşım vardır. Kısa darlıklarda dar segment tamamen çıkarılıp sağlam uçlar birleştirilir (eksizyon ve anastomoz). Daha uzun darlıklarda kanal, bir doku yaması kullanılarak genişletilir (augmentasyon). Yama olarak en sık ağız içinden (yanak) alınan mukoza kullanılır; bu doku nemli ortama alışkın olduğu ve alındığı yer hızla iyileştiği için tercih edilir.',
+          'ÇOK AŞAMALI ONARIM BAŞARISIZLIK DEĞİLDİR. Yoğun skarlı, çok uzun veya daha önce birkaç kez girişim yapılmış darlıklarda onarım aylar arayla iki aşamada planlanabilir. Yurt dışından gelen hasta için bunun somut sonucu vardır: iki ayrı seyahat. Bu, herhangi bir rezervasyon yapılmadan önce konuşulmalıdır.'
+        ],
+        eligibility: {
+          suitable: [
+            'Üretrotomi veya dilatasyon sonrası darlığı tekrarlamış hastalar',
+            'Uzun segment darlığı olanlar — bu darlıklarda kesme işleminin kalıcı sonuç verme olasılığı düşüktür',
+            'Birden fazla bölgede darlığı olanlar',
+            'Yıllardır kendi kendine sonda takarak idare eden hastalar',
+            'Travma sonrası gelişmiş darlığı olanlar',
+            'Daha önce başka merkezde onarım yapılmış ve başarısız olmuş hastalar (redo)',
+            'Hipospadias cerrahisi sonrası darlık gelişmiş hastalar'
+          ],
+          notSuitable: [
+            'Aktif idrar yolu enfeksiyonu olan hastalar: önce enfeksiyon tedavi edilir',
+            'Lokal cilt enfeksiyonu veya iltihabı olan hastalarda ameliyat ertelenir',
+            'Kateter sürecine ve uzun kalış süresine uyum sağlayamayacak durumdaki hastalar — bu cerrahide kateter süresi kısaltılamaz',
+            'Ağız içi greft gerekip de ağız sağlığı uygun olmayan hastalarda önce bu durum düzeltilir; sigara kullanımı greft iyileşmesini olumsuz etkiler',
+            'Genel durumu uzun süreli genel anesteziye uygun olmayan hastalar'
+          ]
+        },
+        technology: [
+          'Retrograd üretrografi (RUG) ve işeme sistoüretrografisi (VCUG) — darlığın yerini ve uzunluğunu gösteren temel incelemeler',
+          'Üretroskopi — darlığın doğrudan görülmesi',
+          'Üroflowmetri ve işeme sonrası kalan idrar ölçümü',
+          'Yanak (bukkal) mukoza grefti alımı',
+          'Dil altı veya dudak içi mukoza — yanak daha önce kullanılmışsa',
+          'Cilt flepleri — seçilmiş yerleşimlerde',
+          'Büyütmeli görüş ve ince dikiş malzemeleri ile rekonstrüksiyon'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
+          note: 'Rekonstrüktif üroloji, Doç. Dr. Müslüm Ergün’ün çalışma alanlarındandır. Üretroplastide plan; darlığın yeri ve uzunluğu, daha önce yapılan girişimlerin sayısı ve greft olarak kullanılabilecek dokunun durumu birlikte değerlendirilerek yapılır.'
         },
         expertise: {
           redoRate: 'Vakaların önemli bir bölümü, başka merkezdeki başarısız girişim veya iatrojenik hasar sonrası başvuran redo (yeniden onarım) olgularıdır.',
           complexCase: 'Uzun segment darlık, pan-üretral darlık, lichen sclerosus’a bağlı darlık ve tekrarlayan başarısızlık kompleks vaka kapsamındadır.',
-          advancedTechnique: 'Buccal (yanak) mukoza grefti ile augmentasyon üretroplasti; gerektiğinde çok aşamalı rekonstrüksiyon.'
+          advancedTechnique: 'Yanak mukozası grefti ile augmentasyon üretroplasti; gerektiğinde çok aşamalı rekonstrüksiyon.'
         },
         timeline: [
-          { when: 'Uzaktan', title: 'Dosya değerlendirmesi', body: 'Üretrografi (RUG/VCUG), akım testi ve önceki ameliyat notlarınız cerrah tarafından incelenir. Bu vakalarda ayrıntılı ön değerlendirme şarttır.' },
-          { when: '1–2. Gün', title: 'Varış ve ileri tetkik', body: 'Muayene, gerekirse üretroskopi ve görüntüleme; darlığın uzunluğu ve yeri netleştirilir.' },
-          { when: '2–3. Gün', title: 'Ameliyat', body: 'Darlığın tipine göre eksizyon-anastomoz veya greft ile augmentasyon üretroplasti.' },
-          { when: 'Sonrası', title: 'Kateter süreci', body: 'Genellikle 2–3 hafta üretral kateter kalır; kateter çekilmeden önce kontrol görüntülemesi yapılır.' },
-          { when: 'Takip', title: 'Uzun dönem takip', body: 'Akım testi ve semptom takibi ile ilk yıl daha sık, sonrasında düzenli kontrol; başarı uzun dönem açıklıkla değerlendirilir.' }
+          { when: 'Uzaktan', title: 'Dosya değerlendirmesi', body: 'Üretrografi görüntüleri, akım testi ve ÖNCEKİ AMELİYAT NOTLARINIZ incelenir. Bu sonuncusu bu cerrahide en kritik belgedir: hangi tekniğin kullanıldığı, hangi segmentin onarıldığı ve greftin nereden alındığı planı doğrudan değiştirir. Ayrıca yanak mukozasının daha önce alınıp alınmadığı mutlaka belirtilmelidir.' },
+          { when: '1–2. Gün', title: 'Varış ve ileri tetkik', body: 'Muayene, gerekirse üretroskopi ve görüntülemenin tekrarı; darlığın uzunluğu ve yeri netleştirilir. İdrar kültürü temiz olmalıdır. Ağız içi greft planlanıyorsa ağız sağlığı değerlendirilir.' },
+          { when: 'Ameliyat günü', title: 'Onarım', body: 'Darlığın tipine göre eksizyon-anastomoz veya greft ile augmentasyon uygulanır. Plan ameliyat sırasındaki doku durumuna göre güncellenebilir; bu önceden konuşulur.' },
+          { when: 'Kateter dönemi', title: '2–3 hafta', body: 'Onarım bölgesinin iyileşmesi için kateter kalır. Bu süre keyfî değildir ve uçuş planına göre kısaltılmaz. Bu dönem çoğunlukla otelde geçer; hasta hareketlidir.' },
+          { when: 'Kateter çekimi', title: 'Kontrol görüntülemesi', body: 'Kateter çekilmeden önce onarım bölgesinden kaçak olup olmadığı görüntülemeyle kontrol edilir. Kaçak varsa kateter süresi uzatılır — bu nedenle dönüş biletinizi esnek alın.' },
+          { when: 'Uzun dönem', title: 'Takip', body: 'Akım testi ve şikâyet takibi ile ilk yıl daha sık, sonrasında düzenli kontrol. Bu cerrahide başarı ameliyat masasında değil, yıllar içindeki açıklıkla ölçülür.' }
         ],
         risks: [
-          'Darlığın tekrarlaması (nüks) — özellikle uzun/kompleks vakalarda',
-          'Greft alım yerinde (yanak içi) geçici his değişikliği',
-          'Enfeksiyon, kanama ve idrar kaçağı',
-          'Redo vakalarda doku kalitesinin sonucu etkilemesi'
+          'DARLIĞIN TEKRARLAMASI (NÜKS): Özellikle uzun ve kompleks darlıklarda ve çok sayıda önceki girişim bulunan hastalarda olasılık artar. Redo onarımın başarı şansı ilk onarımdan daha düşüktür ve bu açıkça söylenmelidir',
+          'Greft alınan yerde (yanak içi) geçici his değişikliği, ağız açmada kısa süreli kısıtlılık ve rahatsızlık',
+          'Enfeksiyon, kanama ve onarım bölgesinden idrar kaçağı',
+          'Kateter çekildikten sonra idrar yapmakta zorluk ve kateterin geçici olarak yeniden takılması',
+          'BOŞALMADA DEĞİŞİKLİK: Onarımın yerine bağlı olarak boşalmanın gücünde azalma veya meninin bir bölümünün geride kalması görülebilir',
+          'Onarımın yerine göre sertleşmede etkilenme — nadirdir ama bölgeye göre ayrıca konuşulmalıdır',
+          'İdrar akımının yönünde değişiklik veya ayrışma',
+          'Uzun ameliyat ve hareketsizliğe bağlı pıhtı riski; dönüş uçuşu bu açıdan ayrıca planlanır'
         ],
         alternatives: [
-          'Dilatasyon veya iç üretrotomi (kısa vadeli; nüks oranı yüksek)',
-          'Aralıklı kendi kendine kateterizasyon (geçici idame)',
-          'Çok aşamalı rekonstrüksiyon (çok kompleks vakalarda)'
+          'İç üretrotomi veya dilatasyon — kısa ve ilk kez görülen uygun yerleşimli darlıkta denenebilir; tekrarlayan darlıkta kalıcı çözüm değildir',
+          'Kendi kendine aralıklı sonda uygulaması — darlığın kapanmasını geciktirebilir, ancak kalıcı çözüm değildir ve yıllarca sürdürülmesi beklenen bir yöntem olarak sunulmamalıdır',
+          'Eksizyon ve uç uca birleştirme — kısa darlıklarda',
+          'Yanak mukozası grefti ile augmentasyon — uzun darlıklarda',
+          'Dil altı veya dudak içi mukoza, cilt flebi — yanak mukozası daha önce kullanılmışsa',
+          'Çok aşamalı rekonstrüksiyon — yoğun skarlı ve çok kompleks vakalarda',
+          'Kalıcı idrar yolu yönlendirmesi — yalnızca onarımın mümkün olmadığı istisnai durumlarda'
+        ],
+        comparison: {
+          title: 'Üretrotomi ve üretroplasti: neden farklı sonuç verirler',
+          columns: ['Ölçüt', 'İç üretrotomi / dilatasyon', 'Üretroplasti'],
+          rows: [
+            { label: 'Ne yapar', values: ['Dar bölgeyi keserek açar', 'Dar bölgeyi çıkarır veya yamayla genişletir'] },
+            { label: 'Yara dokusu', values: ['Yerinde kalır', 'Çıkarılır veya devre dışı bırakılır'] },
+            { label: 'İşlem süresi', values: ['Kısa', 'Uzun'] },
+            { label: 'Kateter süresi', values: ['Birkaç gün', '2–3 hafta'] },
+            { label: 'Tekrarlama eğilimi', values: ['Yüksek, özellikle uzun darlıkta', 'Belirgin biçimde düşük'] },
+            { label: 'Tekrarlanırsa', values: ['Her seferinde darlık uzar ve onarımı zorlaştırır', 'Gerekirse yeniden onarım planlanabilir'] },
+            { label: 'Kimde uygundur', values: ['Kısa, ilk kez görülen darlık', 'Uzun, tekrarlayan veya kompleks darlık'] }
+          ],
+          note: 'Buradaki asıl mesaj zamanlamadır: tekrarlayan kesi işlemleriyle yıllar geçirmek yerine, uygun hastada kalıcı onarımın erken gündeme gelmesi doku açısından avantajlıdır. Hekiminize şunu sormakta tereddüt etmeyin: "Benim darlığım kaç santim, nerede ve bu işlem tekrarlarsa sıradaki adım ne olacak?"'
+        },
+        recovery: [
+          { period: 'İlk 48 saat', body: 'Ağrı kesici ile kontrol altına alınır. Ağız içinden greft alındıysa ilk günler yumuşak gıda önerilir; konuşma ve çiğneme kısa süre rahatsız edici olabilir.' },
+          { period: '1. hafta', body: 'Kateterle taburculuk. Yürümek serbesttir; ağır kaldırmak, bisiklet ve ata biner pozisyonda oturmak yasaktır. Kabızlıktan kaçınmak için lifli beslenme ve bol su önemlidir.' },
+          { period: '2–3. hafta', body: 'Kateter dönemi sürer. Bu dönem çoğunlukla otelde geçirilir ve hasta hareketlidir ama aktivitesi sınırlıdır. Kateterin tıkanması veya çıkması durumunda vakit kaybetmeden başvurulmalıdır.' },
+          { period: 'Kateter çekimi sonrası', body: 'İlk işemelerde yanma ve zorlanma olağandır. İdrar akımının güçlenmesi birkaç gün alabilir. Hiç idrar yapılamazsa derhal başvurulmalıdır.' },
+          { period: '4–8. hafta', body: 'Normal aktiviteye kademeli dönüş. Cinsel ilişki için hekiminizin verdiği süre beklenir; erken dönüş onarımı zorlayabilir.' },
+          { period: 'İlk yıl ve sonrası', body: 'Akım testi ile düzenli takip. Akımda zayıflama fark ederseniz beklemeyin; erken saptanan bir daralma, tıkanıklık gelişmeden ele alınabilir.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Bu kategoride sabit fiyat aralığı verilmez; fiyat, vaka karmaşıklığına ve gereken tekniğe göre dosya değerlendirmesi sonrası bildirilir.'
+          disclaimer: 'Bu kategoride sabit bir aralık verilmez; tutar darlığın uzunluğuna, greft gerekip gerekmediğine, tek mi çok aşamalı mı planlandığına ve kalış süresine göre belirlenir ve dosya değerlendirmesi sonrası yazılı olarak bildirilir.'
         },
         packageIncludes: [
-          'Cerrahi ve hastane yatışı',
-          'Anestezi ve ameliyat öncesi ileri tetkikler',
-          'Greft gerektiren vakalarda greft alımı dahil',
-          'Transferler ve konaklama',
+          'Dosyanızın ve önceki ameliyat notlarınızın değerlendirilmesi',
+          'Muayene, üretroskopi ve gerekli görüntüleme',
+          'İdrar kültürü ve ameliyat öncesi tetkikler',
+          'Anestezi ve ameliyathane',
+          'Cerrahi ve greft gerektiren vakalarda greft alımı',
+          'Hastane yatışı',
+          'Kateter çekimi öncesi kontrol görüntülemesi',
+          'Kateter çekimi ve dönüş öncesi değerlendirme',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
           'Tıbbi tercüman ve hasta koordinatörü',
-          'Kateter çekimi ve uzun dönem online takip'
+          'Uzun dönem uzaktan takip'
         ],
         faqs: [
-          { q: 'Daha önce başka bir merkezde ameliyat oldum ve başarısız oldu; tekrar (redo) ameliyat mümkün mü?', a: 'Evet. Redo üretroplasti bu merkezin özellikle deneyimli olduğu alandır. Önceki ameliyat notlarınız ve güncel görüntüleme ile değerlendirme yapılır; doku durumuna göre greft veya çok aşamalı yaklaşım planlanır.' },
-          { q: 'İç üretrotomi/dilatasyon yerine neden üretroplasti?', a: 'Dilatasyon ve iç üretrotomi çoğu darlıkta kısa süre sonra tekrarlar. Üretroplasti, uygun vakalarda kalıcı çözüm sunan tek yöntemdir.' },
-          { q: 'Kateter ne kadar kalır ve iyileşme ne kadar sürer?', a: 'Genellikle 2–3 hafta kateter kalır. Günlük hafif aktiviteye kısa sürede dönülür; ağır aktivite ve uzun dönem başarı değerlendirmesi birkaç haftayı bulur.' }
+          { q: 'Daha önce birkaç kez üretrotomi oldum, yine kapandı. Bir kez daha denemeli miyim?', a: 'Bu soruyu sormanız yerinde. Her kesi işlemi yeni yara dokusu oluşturur; darlık zamanla kısalmak yerine uzar ve çevre dokular sertleşir. Yani tekrarlanan üretrotomiler yalnızca işe yaramamakla kalmaz, ileride yapılacak kalıcı onarımı da zorlaştırır. Belirli bir noktadan sonra "bir kez daha açalım" yaklaşımı sizin lehinize değildir.' },
+          { q: 'Daha önce başka merkezde ameliyat oldum ve başarısız oldu; yeniden onarım mümkün mü?', a: 'Çoğu durumda evet, ancak ikinci onarım ilkinden farklı bir ameliyattır ve farklı planlanmalıdır. Önceki ameliyat notunuz, hangi tekniğin kullanıldığı ve greftin nereden alındığı bu planı doğrudan belirler. Ayrıca yeniden onarımın başarı şansının ilk onarımdan daha düşük olduğu ve önceki girişim sayısı arttıkça bu farkın belirginleştiği açıkça söylenmelidir.' },
+          { q: 'Yanak mukozam daha önce alındı, başka seçenek var mı?', a: 'Evet. Her iki yanaktan da greft alınmışsa dil altı veya dudak içi mukoza kullanılabilir; bazı yerleşimlerde komşu dokudan hazırlanan cilt flepleri de seçenektir. Hangisinin uygun olduğu darlığın yerine ve uzunluğuna göre belirlenir. Bu bilgiyi başvurunuzda mutlaka belirtin.' },
+          { q: 'Ağzımdan doku alınması kalıcı sorun yaratır mı?', a: 'Yanak içinden greft alınan bölge genellikle kısa sürede iyileşir. İlk günlerde ağız açmada kısıtlılık, rahatsızlık ve geçici his değişikliği olabilir; yumuşak gıda önerilir. Sigara kullanımı hem greftin alındığı yerin hem de onarımın iyileşmesini olumsuz etkiler.' },
+          { q: 'Kateter neden bu kadar uzun süre kalıyor, kısaltılabilir mi?', a: 'Hayır. Onarım bölgesinin su geçirmez biçimde iyileşmesi için gereken süredir ve uçuş planına göre kısaltılmaz. Kateter çekilmeden önce kaçak olup olmadığı görüntülemeyle kontrol edilir; kaçak varsa süre uzatılır. Bu nedenle dönüş biletinizi esnek almanızı ve kalış sürenize birkaç gün marj koymanızı öneririz.' },
+          { q: 'Tek seferde bitmeyebilir mi?', a: 'Evet. Yoğun skarlı ve çok uzun darlıklarda onarım aylar arayla iki aşamada planlanabilir. Birinci aşamada üretra açılıp greft yerleştirilir ve olgunlaşması beklenir; ikinci aşamada tüp hâline getirilerek kapatılır. Bu bir başarısızlık işareti değil, zor dokuda daha kalıcı sonuç verme olasılığı yüksek olan yaklaşımdır. Ancak iki ayrı seyahat demektir ve rezervasyon yapılmadan önce konuşulmalıdır.' },
+          { q: 'Cinsel işlevim etkilenir mi?', a: 'Bu, onarımın üretranın hangi bölümünde yapıldığına bağlıdır. Boşalmanın gücünde azalma veya meninin bir bölümünün geride kalması görülebilir. Sertleşmenin etkilenmesi nadirdir ancak bölgeye göre değişir ve ameliyat öncesinde ayrıca konuşulmalıdır.' },
+          { q: 'Ameliyat başarılı oldu mu, nasıl anlarım?', a: 'Bu cerrahide başarı ameliyat masasında değil, yıllar içindeki açıklıkla ölçülür. Takip akım testi ve şikâyet sorgulamasıyla yapılır. İdrar akımında zayıflama fark ederseniz beklemeyin; erken saptanan bir daralma, tam tıkanıklık gelişmeden daha kolay ele alınır.' },
+          { q: 'Bu ameliyatı her üroloji merkezi yapar mı?', a: 'Üretroplasti, rutin üroloji pratiğinde sık yapılan bir ameliyat değildir; özellikle uzun segment ve yeniden onarım vakaları ayrı deneyim gerektirir. Bu nedenle hangi tekniğin planlandığını, cerrahın bu tekniği ne sıklıkta uyguladığını ve plan ameliyat sırasında değişirse ne yapılacağını sormanız makuldür.' },
+          { q: 'Gelmeden önce hangi belgeleri göndermeliyim?', a: 'Üretrografi görüntülerinin kendisi (yalnızca rapor değil), varsa üretroskopi kaydı, üroflowmetri ve işeme sonrası kalan idrar ölçümü, ÖNCEKİ TÜM AMELİYAT NOTLARI, daha önce kaç kez üretrotomi veya dilatasyon yapıldığı ve ne zaman, yanak mukozasının daha önce alınıp alınmadığı, kullandığınız ilaçlar ve diğer hastalıklarınız. Bu bilgilerle yola çıkmadan önce onarımın tek mi çok aşamalı mı planlanacağı değerlendirilebilir.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urethral Strictures — Avrupa Üroloji Derneği', url: 'https://uroweb.org/guidelines/urethral-strictures' }
         ]
       },
       en: {
@@ -26772,16 +26860,55 @@ export const treatments: Treatment[] = [
     i18n: {
       tr: {
         title: 'Piyeloplasti (UPJ Darlığı Cerrahisi)',
-        summary: 'Böbrek-üreter bileşkesi (UPJ) darlığında böbreği koruyan rekonstrüktif cerrahi; açık, laparoskopik ve robotik seçenekler.',
-        metaTitle: 'Piyeloplasti | UPJ (Üreteropelvik Bileşke) Darlığı Cerrahisi',
-        metaDescription: 'UPJ darlığında piyeloplasti: açık, laparoskopik ve robotik yöntemlerin karşılaştırması, süreç, riskler ve uzun dönem başarı. Redo ve kompleks vaka deneyimi.',
+        summary:
+          'Böbrek çıkışındaki darlığın onarımı. Bu darlığın en tehlikeli yanı ağrı yapmadan ilerleyebilmesidir: böbrek sessizce genişler ve işlev kaybeder. Amaç böbreği korumaktır.',
+        metaTitle: 'Piyeloplasti: UPJ Darlığında Böbrek Koruyucu Onarım',
+        metaDescription:
+          'Üreteropelvik bileşke darlığında ameliyat kararının nasıl verildiği, sintigrafinin neden belirleyici olduğu, robotik ve açık yöntem karşılaştırması, stent süreci ve redo vakalar.',
+        quickFacts: {
+          duration: '2–4 saat',
+          anesthesia: 'Genel anestezi',
+          hospitalStay: '2–3 gece',
+          stayInTurkey: '7–10 gün',
+          returnToWork: '2–4 hafta',
+          flightClearance: 'Kontrol sonrası; stentli uçulabilir'
+        },
         definition: [
-          'Üreteropelvik bileşke (UPJ) darlığı, böbrekten idrarı taşıyan kanalın çıkışındaki tıkanıklıktır; böbrekte şişme (hidronefroz), ağrı ve zamanla böbrek fonksiyon kaybına yol açabilir.',
-          'Piyeloplasti, darlığın çıkarılıp bileşkenin yeniden şekillendirildiği böbrek koruyucu rekonstrüktif ameliyattır. Robotik ve laparoskopik yaklaşımlar minimal invazivdir; daha önce başarısız girişim geçirmiş (redo) veya çapraz damar/taş eşlik eden kompleks vakalar özel deneyim gerektirir.'
+          'Üreteropelvik bileşke (UPJ) darlığı, böbrek havuzunun üreterle birleştiği noktadaki tıkanıklıktır. İdrar böbrekten yeterince boşalamaz; böbrek havuzu genişler (hidronefroz) ve zamanla böbrek işlevi azalabilir.',
+          'BU HASTALIĞIN EN ÖNEMLİ ÖZELLİĞİ: AĞRI YAPMAYABİLİR. Yavaş gelişen tıkanıklıkta böbrek sessizce genişler ve kişi hiçbir şey hissetmeyebilir. Bu nedenle "ağrım yok, demek ki sorun yok" çıkarımı burada tehlikelidir. Bazı hastalarda ise bol sıvı alımından veya alkolden sonra ortaya çıkan yan ağrısı tipiktir.',
+          'DARLIĞIN VARLIĞI TEK BAŞINA AMELİYAT GEREKÇESİ DEĞİLDİR. Görüntülemede genişleme görülmesi her zaman tıkanıklık anlamına gelmez; bazı böbrekler geniş görünür ama boşalması yeterlidir. Ameliyat kararı için gereken şey, tıkanıklığın gerçekten böbreği etkilediğinin gösterilmesidir. Bunu gösteren temel inceleme böbrek sintigrafisidir: hem o böbreğin toplam işleve katkısını hem de ilacın boşalıp boşalmadığını ortaya koyar.',
+          'AMELİYAT KARARINI BELİRLEYEN BAŞLICA DURUMLAR şunlardır: sintigrafide o böbreğin işlevinde azalma veya takipte azalma eğilimi, boşalmanın belirgin bozulması, tekrarlayan ağrı atakları, darlığa eşlik eden taş oluşumu ve tekrarlayan idrar yolu enfeksiyonu.',
+          'Piyeloplastide dar segment çıkarılır ve böbrek havuzu ile üreter yeniden, huni biçiminde ve geniş bir ağızla birleştirilir. Bazı hastalarda üreterin önünden geçen bir damar (çapraz damar) tıkanıklığa katkıda bulunur; bu durumda birleşme yeri damarın önüne alınacak şekilde yeniden düzenlenir.'
+        ],
+        eligibility: {
+          suitable: [
+            'Sintigrafide o böbreğin işlevinde azalma veya takipte azalma eğilimi saptanan hastalar',
+            'Böbrek boşalması belirgin bozulmuş olanlar',
+            'Tekrarlayan yan ağrısı atakları geçirenler — özellikle bol sıvı alımı sonrası ortaya çıkan ağrı tipiktir',
+            'Darlığa eşlik eden böbrek taşı gelişmiş hastalar',
+            'Tekrarlayan idrar yolu enfeksiyonu geçirenler',
+            'Daha önce endopiyelotomi veya piyeloplasti yapılmış ve darlığı tekrarlamış hastalar (redo)',
+            'Çapraz damar basısı saptanan hastalar'
+          ],
+          notSuitable: [
+            'Görüntülemede genişlik görülen ancak sintigrafide boşalması ve işlevi normal olan hastalar: ameliyat gerekmez, takip edilir',
+            'Tedavi edilmemiş idrar yolu enfeksiyonu olanlar: önce enfeksiyon tedavi edilir',
+            'Böbrek işlevi ileri derecede ve geri dönüşsüz biçimde kaybolmuş hastalarda onarım beklenen faydayı sağlamaz; bu durumda farklı bir plan yapılır',
+            'Genel durumu laparoskopik veya robotik cerrahi için uygun olmayan hastalarda yöntem yeniden değerlendirilir'
+          ]
+        },
+        technology: [
+          'Bilgisayarlı tomografi ürografi — anatomiyi ve varsa çapraz damarı gösterir',
+          'Böbrek sintigrafisi (MAG3 vb.) — ameliyat kararının temel dayanağı; işlev ve boşalmayı birlikte ölçer',
+          'Ultrason — takipte hidronefrozun izlenmesi',
+          'Robot destekli dismembered piyeloplasti',
+          'Laparoskopik ve açık teknikler',
+          'Aynı seansta böbrek taşının alınması (gerekirse)',
+          'JJ stent yerleştirilmesi ve çıkarılması'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
+          note: 'Rekonstrüktif üroloji, Doç. Dr. Müslüm Ergün’ün çalışma alanlarındandır. Piyeloplastide karar; sintigrafi bulguları, görüntülemedeki anatomi ve varsa önceki girişimler birlikte değerlendirilerek verilir.'
         },
         expertise: {
           redoRate: 'Vakaların önemli bir bölümü, başka merkezdeki başarısız girişim veya iatrojenik hasar sonrası başvuran redo (yeniden onarım) olgularıdır.',
@@ -26789,53 +26916,87 @@ export const treatments: Treatment[] = [
           advancedTechnique: 'Robot destekli dismembered piyeloplasti; redo vakalarda yoğun skar dokusunda rekonstrüksiyon.'
         },
         timeline: [
-          { when: 'Uzaktan', title: 'Dosya değerlendirmesi', body: 'BT ürografi ve böbrek sintigrafisi (MAG3) sonuçlarınız incelenir; darlık ve böbrek fonksiyonu değerlendirilir.' },
-          { when: '1–2. Gün', title: 'Varış ve tetkik', body: 'Muayene ve gerekli görüntülemenin tamamlanması, anestezi değerlendirmesi.' },
-          { when: '3. Gün', title: 'Ameliyat', body: 'Robotik/laparoskopik veya açık dismembered piyeloplasti; genellikle 2–3 gece yatış.' },
-          { when: 'Sonrası', title: 'Stent (JJ) süreci', body: 'İçeride 4–6 hafta kalan bir JJ stent yerleştirilir; sonra kısa bir işlemle alınır.' },
-          { when: 'Takip', title: 'Fonksiyon takibi', body: 'Kontrol sintigrafisi/ultrason ile drenaj ve böbrek fonksiyonu izlenir; başarı uzun dönem drenajla değerlendirilir.' }
+          { when: 'Uzaktan', title: 'Dosya değerlendirmesi', body: 'Tomografi ürografi görüntüleri ve BÖBREK SİNTİGRAFİSİ sonucunuz incelenir. Sintigrafi olmadan ameliyat kararı sağlıklı verilemez; yalnızca ultrasonda genişlik görülmesi yeterli değildir.' },
+          { when: '1–2. Gün', title: 'Varış ve tetkik', body: 'Muayene, eksik görüntülemenin tamamlanması, kan ve idrar tetkikleri, anestezi değerlendirmesi. İdrar kültüründe üreme varsa ameliyat ertelenir.' },
+          { when: 'Ameliyat günü', title: 'Onarım', body: 'Dar segment çıkarılır ve birleşme yeri geniş bir ağızla yeniden oluşturulur. Çapraz damar varsa birleşme damarın önüne alınır. Eşlik eden taş varsa aynı seansta alınabilir.' },
+          { when: '2–3. Gün', title: 'Taburculuk', body: 'Çoğu hasta bu sürede taburcu olur. İçeride bir JJ stent kalır ve buna bağlı şikâyetler anlatılır.' },
+          { when: 'Dönüş öncesi', title: 'Kontrol', body: 'Yara kontrolü ve dönüş onayı. Stentli uçmak genellikle sorun değildir, ancak stentin kim tarafından ve nerede alınacağı yazılı olarak planlanmalıdır.' },
+          { when: '4–6. hafta', title: 'Stent alımı', body: 'Kısa bir işlemle stent alınır. Bu işlem ülkenizde yapılabilir; yerel ürologunuzun bunu kabul ettiğinden önceden emin olun.' },
+          { when: '3–6. ay ve sonrası', title: 'İşlev takibi', body: 'Kontrol sintigrafisi ve ultrasonla boşalma ve böbrek işlevi izlenir. Bu cerrahide başarı, ameliyatın kendisiyle değil uzun dönem boşalmayla ölçülür.' }
         ],
         risks: [
-          'Stent’e bağlı geçici şikâyetler',
-          'İdrar kaçağı',
-          'Darlığın tekrarlaması (redo vakalarda daha yüksek)',
-          'Enfeksiyon ve kanama'
+          'STENTE BAĞLI ŞİKÂYETLER: Sık idrara çıkma, kasıkta ağrı ve idrarda kan olağandır ve stent alınınca geçer. Hastaların en çok şaşırdığı konu budur; beklenen olduğunu bilmek bu dönemi belirgin biçimde kolaylaştırır',
+          'Birleşme yerinden idrar kaçağı — genellikle stent ve dren ile yönetilir',
+          'DARLIĞIN TEKRARLAMASI: Redo vakalarda ve yoğun skar dokusu bulunan hastalarda olasılık daha yüksektir',
+          'Kanama ve enfeksiyon',
+          'Ateşli idrar yolu enfeksiyonu — özellikle ameliyat öncesi kültür temiz değilse',
+          'Komşu organ yaralanması — nadirdir',
+          'Böbrek işlevinin beklenen ölçüde düzelmemesi: ameliyat boşalmayı sağlar, ancak önceden kaybedilmiş işlevi geri getirmez. Bu, ameliyat öncesinde açıkça konuşulması gereken bir noktadır',
+          'Uzun uçuşla birleşen pelvis cerrahisi sonrası pıhtı riski'
         ],
         alternatives: [
-          'Endopyelotomi (seçili vakalarda; başarı oranı daha düşük)',
-          'İzlem (fonksiyon korunmuş, belirtisiz seçili vakalar)',
-          'Nefrektomi (yalnızca fonksiyonsuz böbrekte, son seçenek)'
+          'Takip — görüntülemede genişlik olan ancak sintigrafide işlev ve boşalması korunmuş hastalarda. Takip görüntülemeyle yapılır; şikâyet olmaması tek başına yeterli değildir',
+          'Endopiyelotomi — içeriden kesme işlemi; seçilmiş kısa darlıklarda uygulanabilir, ancak piyeloplastiye göre tekrarlama olasılığı daha yüksektir',
+          'Robot destekli piyeloplasti — dikiş hassasiyeti gerektiren bu onarımda yaygın tercih',
+          'Laparoskopik piyeloplasti',
+          'Açık piyeloplasti — seçilmiş ve özellikle karmaşık redo vakalarda',
+          'Nefrektomi — yalnızca işlevini tamamen yitirmiş ve şikâyet ya da enfeksiyon kaynağı olan böbrekte, son seçenek olarak'
         ],
         comparison: {
-          title: 'Açık vs Laparoskopik vs Robotik Piyeloplasti',
-          columns: ['Kriter', 'Açık', 'Laparoskopik', 'Robotik'],
+          title: 'Açık, laparoskopik ve robotik piyeloplasti',
+          columns: ['Ölçüt', 'Açık', 'Laparoskopik', 'Robotik'],
           rows: [
-            { label: 'İnvazivlik', values: ['Büyük kesi', 'Küçük kesiler', 'Küçük kesiler'] },
-            { label: 'Dikiş hassasiyeti', values: ['İyi', 'Teknik olarak zor', 'Çok yüksek'] },
+            { label: 'Kesi', values: ['Büyük tek kesi', 'Küçük kesiler', 'Küçük kesiler'] },
+            { label: 'Dikiş hassasiyeti', values: ['İyi', 'Teknik olarak zor', 'Yüksek'] },
             { label: 'İyileşme', values: ['Daha uzun', 'Kısa', 'Kısa'] },
-            { label: 'Redo/kompleks uygunluk', values: ['Seçili', 'Sınırlı', 'Yüksek'] },
-            { label: 'Yatış', values: ['3–5 gece', '2–3 gece', '2–3 gece'] }
+            { label: 'Redo ve kompleks vakaya uygunluk', values: ['Seçilmiş vakalarda', 'Sınırlı', 'Öne çıkar'] },
+            { label: 'Hastanede kalış', values: ['3–5 gece', '2–3 gece', '2–3 gece'] },
+            { label: 'Çapraz damar varlığında', values: ['Uygulanabilir', 'Uygulanabilir', 'Diseksiyon kolaylığı sağlar'] }
           ],
-          note: 'Yöntem; darlık tipi, önceki cerrahi ve anatomiye göre kişiye özel seçilir.'
+          note: 'Bu onarımın özelliği, ince ve su geçirmez bir dikiş hattı gerektirmesidir; bu nedenle dikiş hassasiyeti yöntem seçiminde öne çıkar. Yine de yöntem; darlığın tipine, önceki cerrahiye ve anatomiye göre kişiye özel belirlenir. "Robotik olmalı" demek, bu kararın yerine geçmez.'
         },
+        recovery: [
+          { period: 'İlk 48 saat', body: 'Ağrı kesici ile kontrol sağlanır. Erken yürüyüş hem bağırsak hareketinin dönmesi hem de pıhtı riskinin azalması açısından önemlidir.' },
+          { period: '1. hafta', body: 'Yara yerlerinde hassasiyet olağandır. Ağır kaldırmaktan kaçınılır. İdrarda hafif kan görülmesi, özellikle hareket sonrası, stent nedeniyle beklenen bir bulgudur.' },
+          { period: 'Stentli dönem (4–6 hafta)', body: 'Sık idrara çıkma, kasıkta ağrı ve idrar yaparken böğüre vuran his olağandır. Bu şikâyetler stent alınınca geçer. Ateş, titreme veya idrar yapamama durumunda derhal başvurulmalıdır.' },
+          { period: 'Stent alındıktan sonra', body: 'Şikâyetlerin belirgin biçimde azalması beklenir. İdrar yapmada birkaç gün yanma olabilir.' },
+          { period: '3–6. ay', body: 'Kontrol sintigrafisi veya ultrason ile boşalmanın düzelip düzelmediği değerlendirilir. Hidronefrozun tamamen kaybolmaması her zaman başarısızlık anlamına gelmez; önemli olan boşalmanın sağlanmasıdır.' },
+          { period: 'Uzun dönem', body: 'Düzenli takip sürer. Yan ağrısının yeniden başlaması veya ateşli enfeksiyon geçirilmesi durumunda vakit kaybetmeden değerlendirme yapılmalıdır.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Bu kategoride sabit fiyat aralığı verilmez; fiyat, vaka karmaşıklığına ve gereken tekniğe göre dosya değerlendirmesi sonrası bildirilir.'
+          disclaimer: 'Bu kategoride sabit bir aralık verilmez; tutar uygulanan yönteme, redo olup olmadığına, eşlik eden taşın alınıp alınmayacağına ve kalış süresine göre belirlenir ve dosya değerlendirmesi sonrası yazılı olarak bildirilir.'
         },
         packageIncludes: [
-          'Cerrahi ve hastane yatışı',
-          'Anestezi ve tetkikler',
-          'JJ stent ve alımı',
-          'Transferler ve konaklama',
-          'Tıbbi tercüman ve koordinatör',
-          'Uzun dönem fonksiyon takibi'
+          'Dosyanızın ve sintigrafi sonucunuzun değerlendirilmesi',
+          'Muayene ve eksik görüntülemenin tamamlanması',
+          'Kan ve idrar tetkikleri, idrar kültürü',
+          'Anestezi ve ameliyathane',
+          'Cerrahi ve JJ stent yerleştirilmesi',
+          'Eşlik eden taşın aynı seansta alınması (gerekirse)',
+          'Hastane yatışı',
+          'Dönüş öncesi kontrol',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve hasta koordinatörü',
+          'Uzun dönem işlev takibinin uzaktan değerlendirilmesi'
         ],
         faqs: [
-          { q: 'Daha önce endopyelotomi/piyeloplasti oldum ama darlık tekrarladı; ne yapılabilir?', a: 'Redo piyeloplasti mümkündür ve bu merkezin deneyimli olduğu bir alandır. Skar dokusuna rağmen böbreği koruyan rekonstrüksiyon planlanır; nadiren çok aşamalı yaklaşım gerekir.' },
-          { q: 'Robotik mi yoksa açık mı daha iyi?', a: 'Robotik yöntem çoğu vakada dikiş hassasiyeti ve hızlı iyileşme sağlar; ancak yöntem darlık tipi, önceki cerrahi ve anatomiye göre belirlenir.' },
-          { q: 'Böbreğim kurtarılabilir mi?', a: 'Amaç böbreği korumaktır. Fonksiyonun ne kadar korunabileceği sintigrafi ile değerlendirilir; nefrektomi yalnızca fonksiyonsuz böbrekte son seçenektir.' }
+          { q: 'Ultrasonumda böbreğimde genişleme var, ameliyat olmam şart mı?', a: 'Hayır, tek başına genişleme ameliyat gerekçesi değildir. Bazı böbrekler geniş görünür ama boşalması yeterlidir. Ameliyat kararı için tıkanıklığın gerçekten böbreği etkilediğinin gösterilmesi gerekir ve bunu gösteren temel inceleme böbrek sintigrafisidir. Sintigrafi yapılmadan verilen bir ameliyat kararı eksik kalır.' },
+          { q: 'Hiç ağrım yok, o hâlde acelem yok değil mi?', a: 'Bu varsayım bu hastalıkta tehlikelidir. Yavaş gelişen tıkanıklık ağrı yapmayabilir; böbrek sessizce genişler ve işlev kaybeder. Bilinen bir UPJ darlığınız varsa, şikâyetiniz olmasa bile sintigrafi ve görüntülemeyle takibi sürdürün.' },
+          { q: 'Bol su içince yan ağrım oluyor, bunun anlamı ne?', a: 'Bu tipik bir bulgudur. Sıvı yükü arttığında böbreğin boşaltması gereken miktar artar; darlık nedeniyle boşaltamayınca basınç yükselir ve ağrı ortaya çıkar. Bu şikâyeti hekiminize mutlaka söyleyin, çünkü tanıya yönlendiricidir.' },
+          { q: 'Böbreğim kurtarılabilir mi?', a: 'Amaç tam olarak budur. Ancak dürüst olmak gerekirse ameliyat boşalmayı sağlar; önceden kaybedilmiş işlevi geri getirmez. Bu nedenle erken karar vermek önemlidir. Ne kadar işlevin korunabileceği sintigrafi ile değerlendirilir.' },
+          { q: 'Robotik mi daha iyi, açık mı?', a: 'Bu onarım ince ve su geçirmez bir dikiş hattı gerektirir; bu nedenle dikiş hassasiyeti önemlidir ve robotik yöntem bu açıdan öne çıkar. Yine de yöntem; darlığın tipine, daha önce geçirilmiş cerrahiye ve anatominize göre belirlenir. Önemli olan hangi cihazın kullanıldığı değil, onarımın geniş ve gerilimsiz yapılmasıdır.' },
+          { q: 'Daha önce endopiyelotomi veya piyeloplasti oldum, darlık tekrarladı. Ne yapılabilir?', a: 'Yeniden onarım çoğu durumda mümkündür, ancak önceki girişimin bıraktığı skar dokusu nedeniyle ilk ameliyattan daha zordur ve başarı şansı daha düşüktür. Bu açıkça söylenmelidir. Planlamada önceki ameliyat notunuz belirleyicidir; hangi tekniğin kullanıldığını bilmeden yapılan plan eksik olur.' },
+          { q: 'Stent ne kadar kalır ve çok mu rahatsız eder?', a: 'Genellikle 4–6 hafta kalır. Sık idrara çıkma, kasıkta ağrı ve idrar yaparken böğüre vuran his olağandır; bunlar stent alınınca geçer. Hastaların en çok şaşırdığı konu budur, bu yüzden önceden söylüyoruz: rahatsızlık beklenen bir durumdur, bir komplikasyon değildir.' },
+          { q: 'Stentle uçabilir miyim ve stenti kim alacak?', a: 'Stentli uçmak genellikle sorun değildir. Asıl planlanması gereken, stentin kim tarafından ve nerede alınacağıdır. Bu kısa bir işlemdir ve ülkenizde yapılabilir, ancak yerel ürologunuzun bunu önceden kabul etmiş olması gerekir. Bu ayrıntıyı seyahat tarihinizi kesinleştirmeden önce netleştirin.' },
+          { q: 'Ameliyattan sonra hidronefroz tamamen kaybolur mu?', a: 'Her zaman değil ve bu mutlaka başarısızlık anlamına gelmez. Uzun süre genişlemiş kalmış bir böbrek havuzu, boşalma düzelse bile eski boyutuna dönmeyebilir. Takipte bakılan asıl şey havuzun küçülmesi değil, boşalmanın sağlanmış olmasıdır. Bu nedenle takipte sintigrafi ultrasondan daha anlamlıdır.' },
+          { q: 'Gelmeden önce hangi belgeleri göndermeliyim?', a: 'Tomografi ürografi görüntülerinin kendisi (yalnızca rapor değil), BÖBREK SİNTİGRAFİSİ SONUCUNUZ, varsa önceki ameliyat notlarınız, böbrek işlev testleriniz, idrar tahlili ve kültürünüz, kullandığınız ilaçlar ve diğer hastalıklarınız. Sintigrafi yoksa önce onun yapılması istenir; bu belge olmadan ameliyat endikasyonu sağlıklı biçimde değerlendirilemez.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urological Infections and Reconstructive Surgery — Avrupa Üroloji Derneği', url: 'https://uroweb.org/guidelines' }
         ]
       },
       en: {
@@ -27186,59 +27347,141 @@ export const treatments: Treatment[] = [
     category: 'reconstructive',
     i18n: {
       tr: {
-        title: 'Vezikovaginal ve Üreterovaginal Fistül Onarımı',
-        summary: 'İdrar kaçağına yol açan fistüllerin onarımı — doğum ya da pelvik/jinekolojik cerrahi sonrası gelişen durumlar dahil. Saygılı ve gizli bir süreç.',
-        metaTitle: 'Fistül Onarımı | Vezikovaginal ve Üreterovaginal Fistül Cerrahisi',
-        metaDescription: 'Vezikovaginal ve üreterovaginal fistül onarımı: sürekli idrar kaçağına yol açan fistüllerin rekonstrüktif cerrahi ile onarımı. Uluslararası sevk hastalarına saygılı, gizli yaklaşım.',
+        title: 'Vezikovajinal ve Üreterovajinal Fistül Onarımı',
+        summary:
+          'Sürekli idrar kaçağına yol açan fistüllerin onarımı. Bu bir kişisel kusur değil, onarılabilir bir tıbbi durumdur — ve en önemli iki şey doğru zamanlama ile ilk onarımın doğru yapılmasıdır.',
+        metaTitle: 'Fistül Onarımı: Vezikovajinal ve Üreterovajinal Fistül Cerrahisi',
+        metaDescription:
+          'Fistül nedir, neden oluşur, neden ilk onarım en önemli onarımdır, zamanlamanın rolü, doku destekli teknikler, iyileşme süreci ve mahremiyet.',
+        quickFacts: {
+          duration: '1,5–3 saat (fistülün yerine göre)',
+          anesthesia: 'Genel veya spinal anestezi',
+          hospitalStay: '1–3 gece',
+          stayInTurkey: '3–4 hafta (sonda burada çekilir)',
+          catheter: '2–3 hafta',
+          returnToWork: '3–4 hafta',
+          flightClearance: 'Sonda çekildikten ve kontrol yapıldıktan sonra'
+        },
         definition: [
-          'Fistül, mesane veya üreter ile vajina arasında oluşan anormal bir bağlantıdır ve sürekli, kontrol edilemeyen idrar kaçağına yol açar. Çoğunlukla zorlu doğum, pelvik/jinekolojik cerrahi veya radyoterapi sonrası gelişir.',
-          'Bu durum tıbbi olarak tamamen onarılabilir bir sorundur ve yaşanan sıkıntı bir utanç kaynağı değildir. Rekonstrüktif cerrahi, fistülün kapatılıp normal idrar tutmanın yeniden sağlanmasını hedefler. Uygun zamanlama, doku kalitesi ve fistülün yeri sonucu belirler; tekrarlayan (başarısız onarım sonrası) vakalar özel deneyim gerektirir.'
+          'Fistül, normalde ayrı olan iki organ arasında oluşan anormal bir bağlantıdır. Burada söz konusu olan, mesane ile vajina (vezikovajinal) veya üreter ile vajina (üreterovajinal) arasında açılan bir bağlantıdır. Sonuç, kişinin kontrol edemediği, sürekli idrar sızıntısıdır.',
+          'ÖNCE AÇIKÇA SÖYLEYELİM: BU SİZİN KUSURUNUZ DEĞİLDİR VE UTANILACAK BİR DURUM DEĞİLDİR. Fistül; zorlu veya uzamış doğum, rahim alınması gibi jinekolojik ameliyatlar, pelvik cerrahi ya da radyoterapi sonrası gelişebilen tıbbi bir komplikasyondur. Çoğu vakada tamamen onarılabilir.',
+          'ŞİKÂYET NASIL AYIRT EDİLİR: İdrar kaçırmanın diğer tiplerinde kaçak belirli durumlarda olur — öksürünce, gülünce veya ani bir sıkışmanın ardından. Fistülde ise sızıntı süreklidir; kişi idrarını normal yapabilse bile arada sürekli ıslaklık vardır. Bu ayrım önemlidir, çünkü sürekli ıslaklık tarifi doğrudan fistülü akla getirmelidir.',
+          'EN ÖNEMLİ CÜMLE: İLK ONARIM, EN İYİ ONARIM ŞANSIDIR. Her başarısız girişim doku kalitesini bozar, yara dokusu bırakır ve sonraki onarımın başarı şansını düşürür. Bu nedenle "önce bir deneyelim, olmazsa tekrar bakarız" yaklaşımı bu hastalıkta doğru değildir. İlk onarım, deneyimli ellerde ve doğru zamanda yapılmalıdır.',
+          'ZAMANLAMA KARARIN PARÇASIDIR. Fistül yeni oluşmuşsa ve çevre dokuda iltihap, ödem ve iyileşmemiş cerrahi alan varsa, hemen onarım başarısızlığa açıktır. Dokunun yatışması için bir süre beklenmesi gerekebilir. Bu bekleme süresi hastayı zorlar ve haklı olarak "neden hemen yapılmıyor" sorusu doğar; ama acele edilen bir onarımın bozulması, beklemekten daha büyük bir kayıptır.'
+        ],
+        eligibility: {
+          suitable: [
+            'Jinekolojik veya pelvik ameliyat sonrası sürekli idrar sızıntısı başlayan kadınlar',
+            'Zorlu veya uzamış doğum sonrası sürekli kaçak tarifleyen kadınlar',
+            'Radyoterapi sonrası fistül gelişen hastalar — bu grup ayrı bir değerlendirme gerektirir',
+            'Daha önce onarım yapılmış ancak kaçağı devam eden hastalar',
+            'Birden fazla fistül ağzı bulunan hastalar',
+            'Üreterin yaralanmasına bağlı kaçağı olan hastalar'
+          ],
+          notSuitable: [
+            'Dokunun henüz iltihaplı ve ödemli olduğu erken dönem: onarım ertelenir, bu bir gecikme değil planın parçasıdır',
+            'Tedavi edilmemiş idrar yolu enfeksiyonu olan hastalar: önce enfeksiyon tedavi edilir',
+            'Sonda sürecine ve uzun kalış süresine uyum sağlayamayacak durumdaki hastalar — bu onarımda sonda süresi kısaltılamaz',
+            'Aktif kanser varlığında plan ayrıca ve onkolojik tedaviyle birlikte yapılır'
+          ]
+        },
+        technology: [
+          'Sistoskopi — fistül ağzının yerinin, sayısının ve idrar yolu ağızlarına uzaklığının belirlenmesi',
+          'Bilgisayarlı tomografi ürografi — üreterin değerlendirilmesi',
+          'Boya testi — kaçağın mesaneden mi üreterden mi olduğunun ayırt edilmesi',
+          'Böbrek sintigrafisi — üreter tutulumunda böbrek işlevinin değerlendirilmesi',
+          'Vajinal yoldan veya karından onarım — fistülün yerine göre',
+          'Doku araya yerleştirme (ör. Martius flebi) — dikiş hatları arasına sağlam, kanlanması iyi doku koymak',
+          'Üreterin mesaneye yeniden ağızlaştırılması (reimplantasyon)'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
+          note: 'Rekonstrüktif üroloji, Doç. Dr. Müslüm Ergün’ün çalışma alanlarındandır. Fistül onarımında plan; fistülün yeri ve boyutu, doku kalitesi, radyoterapi öyküsü ve daha önce yapılmış girişimler birlikte değerlendirilerek yapılır.'
         },
         expertise: {
           redoRate: 'Vakaların önemli bir bölümü, başka merkezdeki başarısız girişim veya iatrojenik hasar sonrası başvuran redo (yeniden onarım) olgularıdır.',
-          complexCase: 'Radyoterapi sonrası fistül, büyük/çok odaklı fistül ve tekrarlayan başarısız onarım kompleks kapsamdadır.',
-          advancedTechnique: 'Doku araya yerleştirme (ör. Martius flebi) ile desteklenen transvajinal/abdominal onarım; üreter reimplantasyonu.'
+          complexCase: 'Radyoterapi sonrası fistül, büyük veya çok odaklı fistül ve tekrarlayan başarısız onarım kompleks kapsamdadır.',
+          advancedTechnique: 'Doku araya yerleştirme (ör. Martius flebi) ile desteklenen vajinal veya abdominal onarım; üreter reimplantasyonu.'
         },
         timeline: [
-          { when: 'Uzaktan', title: 'Gizli dosya değerlendirmesi', body: 'Öykünüz, önceki cerrahi notları ve görüntüleme gizlilikle incelenir; onarım için uygun zamanlama belirlenir.' },
-          { when: '1–2. Gün', title: 'Varış ve muayene', body: 'Muayene, sistoskopi ve gerekli görüntüleme ile fistülün yeri ve boyutu netleştirilir.' },
-          { when: '2–3. Gün', title: 'Ameliyat', body: 'Fistülün yerine göre transvajinal veya abdominal onarım; gerekli vakalarda doku desteği (flep).' },
-          { when: 'Sonrası', title: 'Kateter süreci', body: 'Onarımın iyileşmesi için genellikle 2–3 hafta idrar sondası kalır; erken dönemde ağır aktivite ve cinsel ilişkiden kaçınılır.' },
-          { when: 'Takip', title: 'Kontrol', body: 'Sonda çekilmeden önce kontrol; kaçağın tamamen düzeldiği doğrulanır ve takip planlanır.' }
+          { when: 'Uzaktan', title: 'Gizli dosya değerlendirmesi', body: 'Öykünüz, ÖNCEKİ AMELİYAT NOTLARINIZ ve görüntülemeleriniz gizlilikle incelenir. Kaçağın ne zaman başladığı ve hangi ameliyattan sonra ortaya çıktığı bu değerlendirmenin en önemli bilgisidir.' },
+          { when: '1–2. Gün', title: 'Varış ve değerlendirme', body: 'Muayene, sistoskopi ve gerekli görüntüleme ile fistülün yeri, boyutu ve sayısı netleştirilir; kaçağın mesaneden mi üreterden mi olduğu ayırt edilir. Talep ederseniz tüm bu aşamalarda kadın bir sağlık çalışanı bulunur.' },
+          { when: 'Ameliyat günü', title: 'Onarım', body: 'Fistülün yerine göre vajinal yoldan veya karından onarım yapılır. Doku kalitesi yetersizse dikiş hatları arasına sağlam ve kanlanması iyi bir doku yerleştirilir; bu, onarımın dayanıklılığını artırmak içindir.' },
+          { when: 'Sonda dönemi', title: '2–3 hafta', body: 'Onarım bölgesinin iyileşmesi için sonda kalır. Bu süre keyfî değildir; mesanenin gerilmesi onarımı zorlar ve kaçağa yol açabilir. Bu dönem çoğunlukla otelde geçer.' },
+          { when: 'Sonda çekimi', title: 'Kontrol', body: 'Sonda çekilmeden önce onarımın sağlam olup olmadığı kontrol edilir. Şüphe varsa süre uzatılır; bu nedenle dönüş biletinizi esnek alın.' },
+          { when: 'Takip', title: 'Uzun dönem', body: 'Kaçağın tamamen kesildiğinin doğrulanması ve idrar tutmanın değerlendirilmesi. Bazı hastalarda fistül kapandıktan sonra farklı tipte bir idrar kaçırma kalabilir; bu ayrı değerlendirilir ve kendi tedavisi vardır.' }
         ],
         risks: [
-          'Onarımın tekrar açılması (nüks) — özellikle radyoterapi/kompleks vakalarda',
+          'ONARIMIN TEKRAR AÇILMASI: Özellikle radyoterapi sonrası gelişmiş fistüllerde, büyük fistüllerde ve daha önce başarısız onarım yapılmış hastalarda olasılık artar',
           'Enfeksiyon ve kanama',
-          'Geçici idrar yapma güçlüğü',
-          'Nadiren ek onarım gereksinimi'
+          'Sonda çekildikten sonra geçici idrar yapma güçlüğü',
+          'Mesane kapasitesinde azalma hissi ve sık idrara çıkma — özellikle radyoterapi öyküsü olanlarda',
+          'ONARIM BAŞARILI OLSA BİLE FARKLI TİPTE İDRAR KAÇIRMA KALABİLMESİ: Fistül kapanır ama altta yatan destek dokusu hasarı nedeniyle stres tipi kaçırma ortaya çıkabilir. Bu, onarımın başarısız olduğu anlamına gelmez; ayrı bir durumdur ve kendi tedavisi vardır. Bu ihtimalin önceden konuşulması, sonradan yaşanacak hayal kırıklığını önler',
+          'Cinsel ilişkide rahatsızlık — özellikle vajinal yoldan onarım ve flep kullanılan vakalarda ilk dönemde',
+          'Üreter onarımı yapılan hastalarda darlık gelişmesi',
+          'Çok kompleks ve tekrarlayan vakalarda ek onarım gerekmesi'
         ],
         alternatives: [
-          'Küçük ve yeni fistüllerde uzun süreli sonda ile spontan kapanma denemesi (seçili)',
-          'Onarım öncesi doku iyileşmesi için bekleme (uygun zamanlama)',
-          'Kompleks vakalarda üriner diversiyon (son seçenek)'
+          'Uzun süreli sonda ile kendiliğinden kapanmanın beklenmesi — yalnızca çok küçük ve çok yeni fistüllerde, seçilmiş hastalarda denenebilir',
+          'Onarım öncesi dokunun yatışması için planlı bekleme — gecikme değil, başarı şansını artıran bir karardır',
+          'Vajinal yoldan onarım — uygun yerleşimli fistüllerde; iyileşmesi daha hızlıdır',
+          'Karından onarım — yüksek yerleşimli, üretere yakın veya kompleks fistüllerde',
+          'Doku destekli (flep) onarım — doku kalitesi zayıf olan ve tekrarlayan vakalarda',
+          'Üreterin mesaneye yeniden ağızlaştırılması — üreterovajinal fistülde',
+          'İdrar yolunun kalıcı olarak yönlendirilmesi — yalnızca onarımın mümkün olmadığı, çok ileri ve istisnai durumlarda'
+        ],
+        comparison: {
+          title: 'Fistül kaçağı mı, idrar kaçırma mı: ayrımı nasıl yapılır',
+          columns: ['Ölçüt', 'Fistüle bağlı kaçak', 'Stres tipi kaçırma', 'Sıkışma tipi kaçırma'],
+          rows: [
+            { label: 'Kaçak ne zaman olur', values: ['Sürekli, duruma bağlı değil', 'Öksürme, gülme, ağır kaldırma', 'Ani sıkışmanın ardından'] },
+            { label: 'Geceleri', values: ['Devam eder, yatak ıslanır', 'Genellikle olmaz', 'Olabilir'] },
+            { label: 'Normal işeme', values: ['Olabilir, ama arada sürekli ıslaklık vardır', 'Normaldir', 'Sık ve aceledir'] },
+            { label: 'Ne zaman başladı', values: ['Genellikle bir ameliyat veya doğumdan sonra', 'Yıllar içinde sinsice', 'Yıllar içinde sinsice'] },
+            { label: 'Tanıda ilk adım', values: ['Sistoskopi ve boya testi', 'Muayene ve işeme günlüğü', 'İşeme günlüğü'] }
+          ],
+          note: 'Bu ayrım önemlidir çünkü tedaviler tamamen farklıdır. Bir ameliyat veya doğumdan sonra başlayan ve duruma bağlı olmayan sürekli ıslaklık tarifi, aksi gösterilene kadar fistül olarak değerlendirilmelidir.'
+        },
+        recovery: [
+          { period: 'İlk günler', body: 'Sonda ile taburculuk. Sondanın tıkanmaması kritik önemdedir: mesane dolup gerilirse onarım zorlanır. Bol sıvı alınması bu nedenle önerilir.' },
+          { period: 'Sonda dönemi (2–3 hafta)', body: 'Ağır kaldırmak, ıkınmak ve kabızlık yasaktır. Lifli beslenme ve bol su önemlidir. Sondada tıkanma, çıkma veya vajinadan yeniden ıslaklık fark edilirse vakit kaybetmeden başvurulmalıdır.' },
+          { period: 'Sonda çekimi', body: 'Öncesinde onarımın sağlamlığı kontrol edilir. Çekildikten sonra ilk günlerde sık idrara çıkma olağandır.' },
+          { period: '4–6. hafta', body: 'Günlük yaşama dönüş. Cinsel ilişki için hekiminizin verdiği süre beklenir; erken dönüş onarımı zorlayabilir. Vajinal yoldan onarım yapılan hastalarda ilk ilişkilerde rahatsızlık olabilir.' },
+          { period: '3. ay ve sonrası', body: 'Kaçağın tamamen kesildiği doğrulanır. Bu aşamada farklı tipte bir idrar kaçırma kalmışsa ayrıca değerlendirilir ve tedavi edilir.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Bu kategoride sabit fiyat aralığı verilmez; fiyat, vaka karmaşıklığına ve gereken tekniğe göre dosya değerlendirmesi sonrası bildirilir.'
+          disclaimer: 'Bu kategoride sabit bir aralık verilmez; tutar fistülün yerine ve boyutuna, doku desteği gerekip gerekmediğine, üreter onarımı yapılıp yapılmayacağına ve kalış süresine göre belirlenir ve dosya değerlendirmesi sonrası yazılı olarak bildirilir.'
         },
         packageIncludes: [
-          'Cerrahi ve hastane yatışı',
-          'Anestezi ve tetkikler',
-          'Gerekli vakalarda doku desteği (flep) dahil',
-          'Kadın tıbbi tercüman ve gizli koordinasyon (talebe göre)',
-          'Transferler ve konaklama',
-          'Sonda çekimi ve online takip'
+          'Gizli dosya değerlendirmesi',
+          'Muayene, sistoskopi ve gerekli görüntüleme',
+          'İdrar tahlili ve kültürü',
+          'Anestezi ve ameliyathane',
+          'Onarım ve gerekli vakalarda doku desteği (flep)',
+          'Hastane yatışı',
+          'Sonda çekimi öncesi kontrol',
+          'Talep hâlinde kadın tıbbi tercüman ve mahremiyet esaslı koordinasyon',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Dönüşten sonra uzaktan takip'
         ],
         faqs: [
-          { q: 'Başka bir ülkede/merkezde onarım denendi ama başarısız oldu; yeniden onarılabilir mi?', a: 'Evet. Başarısız onarım sonrası tekrarlayan vakalar bu merkezin deneyimli olduğu alandır. Doku durumuna göre uygun zamanlama ve gerekirse doku destekli (flep) teknik planlanır.' },
-          { q: 'Bu durum kalıcı mı, utanmam gereken bir şey mi?', a: 'Hayır. Fistül tıbbi bir komplikasyondur, kişisel bir kusur değildir ve çoğu vakada tamamen onarılabilir. Tüm süreç mahremiyetinize saygıyla, gizlilik içinde yürütülür.' },
-          { q: 'Süreç gizli tutulur mu ve kadın personel talep edebilir miyim?', a: 'Evet. Görüşmeler ve koordinasyon gizlilik ilkesiyle yürütülür; talebe göre kadın tercüman ve destek sağlanır.' }
+          { q: 'Bu durum kalıcı mı ve utanmam gereken bir şey mi?', a: 'Hayır, hiçbir şekilde. Fistül tıbbi bir komplikasyondur, kişisel bir kusur veya ihmalin sonucu değildir. Çoğu vakada tamamen onarılabilir. Bu şikâyeti yıllarca kimseye söylemeden taşıyan pek çok kadın vardır; oysa onarılabilir bir durumdur.' },
+          { q: 'Sürekli ıslaklığım var ama idrarımı da normal yapabiliyorum. Fistül olabilir mi?', a: 'Evet ve bu tipik bir tabloda sık rastlanan durumdur. Fistülde idrarın bir kısmı normal yoldan çıkar, bir kısmı ise sürekli sızar. Özellikle bir ameliyat veya doğumdan sonra başlayan, duruma bağlı olmayan sürekli ıslaklık tarifi fistülü akla getirmelidir.' },
+          { q: 'Neden hemen ameliyat edilmiyorum?', a: 'Bu soru çok haklı ve en sık sorulandır. Fistül yeni oluşmuşsa çevre dokuda iltihap ve ödem vardır; bu dokuda yapılan onarım bozulmaya açıktır. Dokunun yatışmasını beklemek gecikme değil, planın parçasıdır. Bekleme süresi zorlayıcıdır ve bunun farkındayız, ancak acele edilen bir onarımın bozulması daha büyük bir kayıptır.' },
+          { q: 'Daha önce bir kez onarıldı ama kaçağım devam ediyor; yeniden onarılabilir mi?', a: 'Çoğu durumda evet. Ancak dürüst olmak gerekirse her başarısız girişim doku kalitesini bozar ve sonraki onarımın başarı şansını düşürür. Bu nedenle ikinci onarım daha dikkatli planlanır ve çoğu zaman doku destekli teknik gerekir. Önceki ameliyat notunuz bu planın en önemli belgesidir.' },
+          { q: 'Flep nedir ve neden gerekiyor?', a: 'Onarımda iki doku katmanı dikişle birleştirilir. Doku kalitesi zayıfsa — örneğin radyoterapi görmüş veya daha önce ameliyat edilmiş bölgede — bu iki katman arasına sağlam ve kanlanması iyi bir doku parçası yerleştirilir. Amaç dikiş hatlarını ayırmak ve iyileşmeyi desteklemektir. Bu bir "ek müdahale" değil, onarımın dayanıklılığını artıran bir adımdır.' },
+          { q: 'Radyoterapi gördüm, bu onarımı etkiler mi?', a: 'Evet ve bu açıkça söylenmelidir. Radyoterapi görmüş dokunun kanlanması ve iyileşme yeteneği azalmıştır; bu vakalarda onarımın tekrar açılma olasılığı daha yüksektir ve doku destekli teknik neredeyse her zaman gerekir. Beklentinin bu gerçeklik üzerine kurulması gerekir.' },
+          { q: 'Sonda neden bu kadar uzun kalıyor?', a: 'Mesanenin dolup gerilmesi onarım hattını zorlar ve kaçağa yol açabilir. Sonda, mesaneyi boş tutarak onarımın iyileşmesini sağlar. Bu süre uçuş planına göre kısaltılamaz. Sondanın tıkanmaması da bu yüzden kritik önemdedir.' },
+          { q: 'Onarımdan sonra idrar kaçırmam tamamen geçer mi?', a: 'Fistüle bağlı sürekli sızıntının kesilmesi beklenir. Ancak bazı hastalarda, altta yatan destek dokusu hasarı nedeniyle farklı tipte — örneğin öksürürken olan — bir idrar kaçırma kalabilir. Bu, onarımın başarısız olduğu anlamına gelmez; ayrı bir durumdur ve kendi tedavisi vardır. Bunu önceden bilmek, sonradan yaşanacak hayal kırıklığını önler.' },
+          { q: 'Süreç gizli tutulur mu, kadın personel talep edebilir miyim?', a: 'Evet, ikisi de. Muayene ve görüşmelerde kadın bir sağlık çalışanının bulunmasını ve kadın tıbbi tercüman sağlanmasını talep edebilirsiniz; bunu randevu alırken söylemeniz yeterlidir. Tıbbi bilgileriniz izniniz olmadan hiç kimseyle, refakatçiniz dâhil, paylaşılmaz. Sizden fotoğraf veya yorum istenmesi hâlinde reddetme hakkınız vardır ve bu tedavinizi etkilemez.' },
+          { q: 'Hangi belgeleri göndermeliyim?', a: 'Kaçağın ne zaman ve hangi ameliyat ya da doğumdan sonra başladığı, önceki ameliyat notlarınızın tamamı, varsa önceki onarım kayıtları, sistoskopi ve görüntüleme sonuçları, radyoterapi görüp görmediğiniz, böbrek işlev testleriniz ve kullandığınız ilaçlar. Radyoterapi öyküsü ve önceki onarım sayısı planı en çok değiştiren iki bilgidir.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urinary Incontinence and Reconstructive Surgery — Avrupa Üroloji Derneği', url: 'https://uroweb.org/guidelines' }
         ]
       },
       en: {
@@ -27529,61 +27772,146 @@ export const treatments: Treatment[] = [
     category: 'reconstructive',
     i18n: {
       tr: {
-        title: 'Üreter Rekonstrüksiyonu (Uzun Segment Darlık/Hasar)',
-        summary: 'Uzun segment üreter darlığı veya hasarında ileri rekonstrüksiyon: buccal mukoza grefti, ileal interpozisyon gibi teknikler.',
-        metaTitle: 'Üreter Rekonstrüksiyonu | Uzun Segment Üreter Darlığı Cerrahisi',
-        metaDescription: 'Uzun segment üreter darlığı/hasarında ileri rekonstrüksiyon: buccal mukoza grefti, ileal interpozisyon, üreter reimplantasyonu. Kompleks ve redo vaka deneyimi.',
+        title: 'Üreter Rekonstrüksiyonu (Uzun Segment Darlık ve Hasar)',
+        summary:
+          'Uzun üreter darlıklarında böbreği kurtarmaya yönelik ileri onarım. Bu hastaların çoğuna daha önce "yapılamaz" denmiştir; oysa darlığın uzunluğu tek başına onarımın mümkün olmadığı anlamına gelmez.',
+        metaTitle: 'Üreter Rekonstrüksiyonu: Uzun Segment Darlıkta Böbrek Koruyucu Onarım',
+        metaDescription:
+          'Uzun üreter darlığında onarım seçenekleri, yanak mukozası grefti ve bağırsak segmentiyle köprüleme, nefrostomi ve kalıcı stentin sınırları, redo vakalar ve gerçekçi beklentiler.',
+        quickFacts: {
+          duration: '3–6 saat (tekniğe göre)',
+          anesthesia: 'Genel anestezi',
+          hospitalStay: '4–7 gece',
+          stayInTurkey: '3–4 hafta',
+          returnToWork: '4–6 hafta',
+          flightClearance: 'Kontrol görüntülemesi sonrası'
+        },
         definition: [
-          'Üreter, böbreği mesaneye bağlayan kanaldır. Uzun segment darlık veya hasar; taş cerrahisi, pelvik/jinekolojik ameliyat, radyoterapi ya da travma sonrası gelişebilir ve böbreği tehdit eder.',
-          'Kısa darlıklar basit tekniklerle onarılabilirken, uzun segment darlıklar ileri rekonstrüksiyon gerektirir. Buccal mukoza grefti, ileal interpozisyon (barsak segmenti ile köprüleme) veya böbreğin aşağı indirilmesi gibi teknikler, böbreği korumak için deneyimli merkezlerde uygulanır.'
+          'Üreter, böbreği mesaneye bağlayan ince kanaldır. Bu kanalın uzun bir bölümünün daralması veya hasar görmesi, idrarın böbrekten boşalmasını engeller; böbrek genişler ve işlev kaybetmeye başlar.',
+          'EN SIK NEDEN BEKLENENDEN FARKLIDIR: Uzun üreter darlıklarının önemli bir bölümü, başka bir ameliyat sırasında üreterin farkında olmadan zedelenmesi sonucu gelişir. Jinekolojik ameliyatlar, kolorektal cerrahi ve taş cerrahisi bu nedenler arasındadır. Radyoterapi ve travma da uzun segment hasara yol açabilir. Bunu söylerken kimseyi suçlamıyoruz: üreter ince ve komşu organlara yakın bir yapıdır ve bu yaralanma bilinen bir cerrahi risktir. Önemli olan, sonrasında doğru planın yapılmasıdır.',
+          'BU SAYFANIN ASIL MESAJI: "YAPILAMAZ" DENMESİ, GERÇEKTEN YAPILAMAYACAĞI ANLAMINA GELMEZ. Kısa darlıklar basit tekniklerle onarılır ve bu çoğu merkezde uygulanır. Uzun darlıklarda ise farklı teknikler gerekir — yanak mukozasından yama, bağırsak segmentiyle köprüleme, böbreğin aşağı indirilmesi veya mesanenin yukarı doğru uzatılması gibi. Bu teknikler rutin üroloji pratiğinde sık uygulanmadığından, hastaya seçeneği kalmadığı söylenebilmektedir.',
+          'AMAÇ HER ZAMAN BÖBREĞİ KORUMAKTIR. Ancak dürüst olmak gerekirse: onarım boşalmayı sağlar, önceden kaybedilmiş böbrek işlevini geri getirmez. Bu nedenle böbreğin ne kadar işlev koruduğunun sintigrafi ile ölçülmesi, onarıma değip değmeyeceğinin belirlenmesinde temel adımdır.',
+          'NEFROSTOMİ VEYA KALICI STENTLE YAŞAMAK BİR ÇÖZÜM DEĞİL, BİR KÖPRÜDÜR. Bunlar böbreği korur ve zaman kazandırır, ancak sürekli bakım, düzenli değişim ve enfeksiyon riski getirir. Yıllarca bu şekilde idare etmek, uygun bir hastada onarım mümkünken kabul edilmesi gereken bir durum değildir.'
+        ],
+        eligibility: {
+          suitable: [
+            'Başka bir ameliyat sırasında üreteri zedelenmiş ve darlık gelişmiş hastalar',
+            'Taş cerrahisi sonrası uzun segment darlık gelişenler',
+            'Nefrostomi veya kalıcı stentle idare eden ve bundan kurtulmak isteyen hastalar',
+            'Daha önce onarım yapılmış ancak darlığı tekrarlamış hastalar (redo)',
+            'Radyoterapi sonrası darlık gelişmiş hastalar — ayrı değerlendirme gerektirir',
+            'Tek böbrekli hastalarda gelişen üreter darlığı — bu grupta onarım özellikle önemlidir',
+            'Sintigrafide o böbreğin korunmaya değer işlevi bulunan hastalar'
+          ],
+          notSuitable: [
+            'Sintigrafide böbreğin işlevini neredeyse tamamen yitirdiği ve şikâyet yaratmadığı hastalarda onarım beklenen faydayı sağlamaz',
+            'Tedavi edilmemiş idrar yolu enfeksiyonu olanlar: önce enfeksiyon tedavi edilir',
+            'Bağırsak segmenti kullanılması planlanan hastalarda böbrek işlevi belirli bir düzeyin altındaysa bu teknik uygun olmayabilir; değerlendirme ayrıca yapılır',
+            'Genel durumu uzun süreli büyük cerrahiye uygun olmayan hastalarda daha az girişimsel idame seçenekleri değerlendirilir',
+            'Aktif ve yaygın kanser varlığında plan onkolojik tedaviyle birlikte yapılır'
+          ]
+        },
+        technology: [
+          'Bilgisayarlı tomografi ürografi — darlığın yeri ve uzunluğunun belirlenmesi',
+          'Böbrek sintigrafisi — korunmaya değer işlev olup olmadığını gösteren temel inceleme',
+          'Antegrad ve retrograd üreterografi — darlığın iki ucunun görüntülenmesi',
+          'Üreteroskopi — darlığın doğrudan görülmesi',
+          'Yanak (bukkal) mukoza grefti ile üreteroplasti',
+          'Bağırsak segmenti ile köprüleme (ileal interpozisyon)',
+          'Böbreğin aşağı indirilmesi ve mesanenin yukarı uzatılması teknikleri',
+          'Üreterin mesaneye yeniden ağızlaştırılması',
+          'Robot destekli rekonstrüksiyon'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
+          note: 'Rekonstrüktif üroloji, Doç. Dr. Müslüm Ergün’ün çalışma alanlarındandır. Uzun segment üreter onarımında plan; darlığın uzunluğu ve yeri, böbrek işlevi, önceki girişimler ve radyoterapi öyküsü birlikte değerlendirilerek yapılır.'
         },
         expertise: {
           redoRate: 'Vakaların önemli bir bölümü, başka merkezdeki başarısız girişim veya iatrojenik hasar sonrası başvuran redo (yeniden onarım) olgularıdır.',
-          complexCase: 'Uzun segment/pan-üreteral darlık, radyoterapi sonrası ve tek böbrekli hastalar kompleks kapsamdadır.',
-          advancedTechnique: 'Buccal mukoza grefti ile üreteroplasti, ileal interpozisyon ve robot destekli rekonstrüksiyon.'
+          complexCase: 'Uzun segment ve tüm üreteri tutan darlık, radyoterapi sonrası darlık ve tek böbrekli hastalar kompleks kapsamdadır.',
+          advancedTechnique: 'Yanak mukozası grefti ile üreteroplasti, bağırsak segmentiyle köprüleme ve robot destekli rekonstrüksiyon.'
         },
         timeline: [
-          { when: 'Uzaktan', title: 'Dosya değerlendirmesi', body: 'BT ürografi, sintigrafi ve önceki ameliyat notlarınız detaylı incelenir; darlığın uzunluğu ve böbrek fonksiyonu belirlenir.' },
-          { when: '1–2. Gün', title: 'Varış ve ileri tetkik', body: 'Muayene, gerekirse üreteroskopi/görüntüleme; rekonstrüksiyon planı netleştirilir.' },
-          { when: '3. Gün', title: 'Ameliyat', body: 'Segmentin uzunluğuna göre greft, interpozisyon veya reimplantasyon; genellikle çok günlük yatış.' },
-          { when: 'Sonrası', title: 'Stent/kateter süreci', body: 'JJ stent ve/veya kateter bir süre kalır; kontrol görüntülemesiyle drenaj doğrulanır.' },
-          { when: 'Takip', title: 'Uzun dönem takip', body: 'Fonksiyon ve drenaj sintigrafi/ultrason ile izlenir; bu vakalarda takip özellikle kritiktir.' }
+          { when: 'Uzaktan', title: 'Dosya değerlendirmesi', body: 'Tomografi ürografi görüntüleri, BÖBREK SİNTİGRAFİSİ ve ÖNCEKİ AMELİYAT NOTLARINIZ ayrıntılı incelenir. Bu üç belge olmadan plan yapılamaz: sintigrafi onarımın değip değmeyeceğini, ameliyat notu ise nelerin yapıldığını gösterir.' },
+          { when: '1–2. Gün', title: 'Varış ve ileri tetkik', body: 'Muayene, gerekirse üreteroskopi ve görüntülemenin tamamlanması. Darlığın iki ucu görüntülenerek gerçek uzunluğu belirlenir; bu, hangi tekniğin gerekeceğini belirleyen bilgidir.' },
+          { when: 'Ameliyat günü', title: 'Rekonstrüksiyon', body: 'Segmentin uzunluğuna göre yama, köprüleme veya yeniden ağızlaştırma uygulanır. Plan ameliyat sırasındaki doku durumuna göre güncellenebilir; olası senaryolar önceden konuşulur.' },
+          { when: 'Hastanede', title: 'Erken dönem', body: 'Bağırsak segmenti kullanıldıysa bağırsak hareketinin dönmesi beklenir ve yatış süresi uzar. İçeride stent ve bir süre dren bulunur.' },
+          { when: '4–8. hafta', title: 'Stent alımı', body: 'Kontrol görüntülemesiyle onarımın sağlamlığı doğrulandıktan sonra stent alınır. Bu işlemin nerede yapılacağı önceden planlanmalıdır.' },
+          { when: 'Uzun dönem', title: 'İşlev takibi', body: 'Sintigrafi ve ultrasonla boşalma ve böbrek işlevi izlenir. Bu vakalarda takip özellikle kritiktir: sessiz bir yeniden daralma, şikâyet vermeden böbreğe zarar verebilir.' }
         ],
         risks: [
-          'Darlığın tekrarlaması ve ek girişim ihtiyacı',
-          'İleal interpozisyonda barsağa bağlı metabolik/mukus etkileri',
+          'DARLIĞIN TEKRARLAMASI ve ek girişim gerekmesi — uzun segment ve redo vakalarda olasılık daha yüksektir',
           'İdrar kaçağı, enfeksiyon ve kanama',
-          'Böbrek fonksiyonunda değişiklik'
+          'BAĞIRSAK SEGMENTİ KULLANILAN HASTALARDA ÖZEL DURUMLAR: İdrarda mukus görülmesi beklenen bir bulgudur ve geçmez; ayrıca kan değerlerinde dengesizlik gelişebileceği için uzun dönem takip gerekir. Bu teknik seçilmeden önce bu kalıcı değişiklikler açıkça konuşulmalıdır',
+          'Bağırsak segmenti alınmasına bağlı bağırsak işlevinde geçici veya kalıcı değişiklik',
+          'Ağız içinden greft alınan hastalarda geçici his değişikliği ve rahatsızlık',
+          'Böbrek işlevinde beklenen düzelmenin sağlanamaması: onarım boşalmayı sağlar, kaybedilmiş işlevi geri getirmez',
+          'Uzun ameliyat ve hareketsizliğe bağlı pıhtı riski; dönüş uçuşu ayrıca planlanır',
+          'Tekrarlayan idrar yolu enfeksiyonu'
         ],
         alternatives: [
-          'Kalıcı JJ stent veya nefrostomi ile idame (cerrahiye uygun olmayanlarda)',
-          'Kısa darlıkta uç-uca onarım/reimplantasyon',
-          'Ototransplantasyon (seçili kompleks vakalarda)',
-          'Nefrektomi (yalnızca fonksiyonsuz böbrekte, son seçenek)'
+          'Nefrostomi veya kalıcı stentle idame — böbreği korur ve zaman kazandırır, ancak sürekli bakım, düzenli değişim ve enfeksiyon riski getirir. Bir çözüm değil köprüdür',
+          'Kısa darlıkta uç uca onarım veya mesaneye yeniden ağızlaştırma',
+          'Mesanenin yukarı doğru uzatılması — alt üreter darlıklarında',
+          'Yanak mukozası grefti ile üreteroplasti — seçilmiş uzun darlıklarda',
+          'Bağırsak segmentiyle köprüleme — çok uzun darlıklarda; kalıcı değişiklikleri vardır',
+          'Böbreğin kendi damarlarıyla leğen kemiği bölgesine taşınması (ototransplantasyon) — seçilmiş kompleks vakalarda',
+          'Böbreğin alınması — yalnızca işlevini tamamen yitirmiş ve enfeksiyon ya da ağrı kaynağı olan böbrekte, son seçenek olarak'
+        ],
+        comparison: {
+          title: 'Darlığın uzunluğuna göre seçenekler',
+          columns: ['Durum', 'Öne çıkan teknik', 'Yük', 'Dikkat edilecek nokta'],
+          rows: [
+            { label: 'Kısa darlık', values: ['Uç uca onarım veya yeniden ağızlaştırma', 'Düşük', 'Çoğu merkezde uygulanabilir'] },
+            { label: 'Alt üreter, orta uzunluk', values: ['Mesanenin yukarı uzatılması', 'Orta', 'Mesane kapasitesi değerlendirilir'] },
+            { label: 'Orta–uzun darlık', values: ['Yanak mukozası ile yama', 'Orta', 'Ağız sağlığı ve sigara iyileşmeyi etkiler'] },
+            { label: 'Çok uzun darlık', values: ['Bağırsak segmentiyle köprüleme', 'Yüksek', 'Kalıcı metabolik ve mukus etkileri'] },
+            { label: 'Cerrahiye uygun olmayan hasta', values: ['Nefrostomi veya kalıcı stent', 'Sürekli bakım', 'Çözüm değil, köprü'] }
+          ],
+          note: 'Bu tablonun amacı şunu göstermektir: "uzun darlık" tek bir şey değildir ve her uzunluğun kendi tekniği vardır. Size tek bir seçenek sunuluyorsa, diğerlerinin neden uygun olmadığını sormakta haklısınız.'
+        },
+        recovery: [
+          { period: 'Hastanede', body: 'Bağırsak segmenti kullanıldıysa bağırsak hareketinin dönmesi beklenir; bu dönemde beslenme kademeli açılır. Erken yürüyüş pıhtı riskini azaltır.' },
+          { period: 'İlk 2 hafta', body: 'Ağır kaldırmak yasaktır. Stente bağlı sık idrara çıkma ve kasıkta ağrı olağandır. Ateş, titreme veya idrar yapamama durumunda derhal başvurulmalıdır.' },
+          { period: 'Stentli dönem', body: 'Bu dönem diğer ürolojik ameliyatlara göre daha uzundur. Stent alınmadan önce onarımın sağlamlığı görüntülemeyle doğrulanır.' },
+          { period: 'Bağırsak segmenti kullanıldıysa', body: 'İdrarda mukus görülmesi beklenen ve kalıcı bir bulgudur; bol sıvı alımı önerilir. Kan değerlerinin düzenli kontrolü uzun dönemde gereklidir.' },
+          { period: '3–6. ay', body: 'Sintigrafi ile boşalmanın sağlanıp sağlanmadığı değerlendirilir. Bu, onarımın gerçek başarı ölçütüdür.' },
+          { period: 'Uzun dönem', body: 'Takip ömür boyu sürer. Sessiz bir yeniden daralma şikâyet vermeden böbreğe zarar verebileceği için, şikâyet olmasa bile görüntüleme takvimine uyulmalıdır.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Bu kategoride sabit fiyat aralığı verilmez; fiyat, vaka karmaşıklığına ve gereken tekniğe göre dosya değerlendirmesi sonrası bildirilir.'
+          disclaimer: 'Bu kategoride sabit bir aralık verilmez; tutar darlığın uzunluğuna, uygulanan tekniğe, bağırsak segmenti kullanılıp kullanılmayacağına ve kalış süresine göre belirlenir ve dosya değerlendirmesi sonrası yazılı olarak bildirilir.'
         },
         packageIncludes: [
-          'Cerrahi ve hastane yatışı',
-          'Anestezi ve ileri tetkikler',
-          'Greft/interpozisyon gerektiren vakalarda dahil',
-          'Stent ve alımı',
-          'Transferler ve konaklama',
-          'Tıbbi tercüman ve koordinatör',
-          'Uzun dönem fonksiyon takibi'
+          'Dosyanızın, sintigrafinizin ve önceki ameliyat notlarınızın değerlendirilmesi',
+          'Muayene ve ileri görüntülemenin tamamlanması',
+          'Kan ve idrar tetkikleri, idrar kültürü',
+          'Anestezi ve ameliyathane',
+          'Rekonstrüksiyon ve greft veya segment gerektiren vakalarda bunların hazırlanması',
+          'Stent yerleştirilmesi',
+          'Hastane yatışı',
+          'Stent alımı öncesi kontrol görüntülemesi',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve hasta koordinatörü',
+          'Uzun dönem işlev takibinin uzaktan değerlendirilmesi'
         ],
         faqs: [
-          { q: 'Uzun bir üreter darlığım var ve “yapılamaz” dendi; seçenek var mı?', a: 'Uzun segment darlıklar buccal mukoza grefti veya ileal interpozisyon gibi ileri tekniklerle çoğu vakada onarılabilir. Dosyanız değerlendirilip böbreği koruyan bir plan çıkarılır.' },
-          { q: 'Başarısız bir girişim sonrası tekrar denenebilir mi?', a: 'Evet; iatrojenik hasar veya başarısız onarım sonrası redo rekonstrüksiyon bu merkezin deneyim alanıdır. Skar dokusuna rağmen böbrek koruyucu teknikler planlanır.' },
-          { q: 'İyileşme ve takip ne kadar sürer?', a: 'Yatış ve stent süreci diğer tedavilere göre daha uzundur; uzun dönem başarı, düzenli fonksiyon takibiyle değerlendirilir. Takip bu vakalarda kritiktir.' }
+          { q: 'Bana "üreterin çok uzun bir bölümü dar, yapılacak bir şey yok" dendi. Doğru mu?', a: 'Darlığın uzunluğu tek başına onarımın mümkün olmadığı anlamına gelmez. Uzun darlıklarda yanak mukozasından yama, bağırsak segmentiyle köprüleme, böbreğin aşağı indirilmesi veya mesanenin yukarı uzatılması gibi teknikler vardır. Bu teknikler rutin pratikte sık uygulanmadığından böyle bir cevapla karşılaşmak mümkündür. Dosyanızın değerlendirilmesini istemek hakkınızdır.' },
+          { q: 'Darlık önceki bir ameliyat sırasında mı oluştu?', a: 'Uzun üreter darlıklarının önemli bir bölümü, başka bir ameliyat sırasında üreterin zedelenmesi sonucu gelişir. Bunu söylerken kimseyi suçlamıyoruz: üreter ince ve komşu organlara çok yakın bir yapıdır ve bu yaralanma bilinen bir cerrahi risktir. Önemli olan şimdi doğru planın yapılmasıdır.' },
+          { q: 'Nefrostomi veya kalıcı stentle yaşamaya devam edebilir miyim?', a: 'Edebilirsiniz ve bazı hastalarda bu doğru karardır. Ancak bunların bir çözüm değil köprü olduğunu bilin: sürekli bakım, düzenli değişim ve enfeksiyon riski getirirler. Uygun bir hastada onarım mümkünken yıllarca bu şekilde idare etmek, kabul edilmesi gereken bir durum değildir.' },
+          { q: 'Böbreğim kurtarılabilir mi?', a: 'Amaç budur, ancak cevabı sintigrafi verir. Böbreğin ne kadar işlev koruduğu ölçülür. İşlevin bir bölümü korunmuşsa onarım anlamlıdır. Dürüst olmak gerekirse onarım boşalmayı sağlar; önceden kaybedilmiş işlevi geri getirmez. Bu yüzden erken karar vermek önemlidir.' },
+          { q: 'Bağırsak kullanılması ne anlama geliyor?', a: 'Çok uzun darlıklarda, ince bağırsaktan alınan bir segment böbrek ile mesane arasına köprü olarak yerleştirilir. Bu etkili bir tekniktir ama kalıcı değişiklikleri vardır: idrarda mukus görülmesi beklenen ve geçmeyen bir bulgudur, ayrıca kan değerlerinde dengesizlik gelişebileceği için uzun dönem takip gerekir. Bu teknik seçilmeden önce bunlar açıkça konuşulmalıdır.' },
+          { q: 'Daha önce bir onarım yapıldı ama darlık tekrarladı; yeniden denenebilir mi?', a: 'Çoğu durumda evet, ancak önceki girişimin bıraktığı skar dokusu nedeniyle ikinci onarım daha zordur ve başarı şansı daha düşüktür. Bu açıkça söylenmelidir. Planlamada önceki ameliyat notunuz en belirleyici belgedir; hangi tekniğin kullanıldığı ve ne kadar segmentin onarıldığı bilinmeden yapılan plan eksik kalır.' },
+          { q: 'Tek böbreğim var, risk daha mı yüksek?', a: 'Tek böbrekli hastalarda hem onarımın önemi hem de dikkat düzeyi artar, çünkü kaybedilecek bir yedek yoktur. Bu, ameliyattan kaçınma nedeni değildir; aksine, böbreği korumaya yönelik onarımın daha erken gündeme gelmesi gerekir. Planlama ve takip bu hastalarda daha yakın yapılır.' },
+          { q: 'İyileşme ne kadar sürer?', a: 'Bu, ürolojideki daha uzun iyileşme süreçlerinden biridir. Hastanede kalış ve stent dönemi diğer ameliyatlara göre uzundur; özellikle bağırsak segmenti kullanıldıysa bağırsak işlevinin dönmesi beklenir. Kalış sürenizi geniş planlayın ve değiştirilebilir bilet alın.' },
+          { q: 'Takip neden bu kadar önemli?', a: 'Çünkü yeniden daralma sessiz gelişebilir. Şikâyet vermeden ilerleyen bir daralma böbreğe zarar verebilir. Bu nedenle kendinizi iyi hissetseniz bile görüntüleme takvimine uymanız gerekir. Takip planınızı — hangi tetkik, ne sıklıkta ve kimin değerlendireceği — yazılı olarak isteyin.' },
+          { q: 'Hangi belgeleri göndermeliyim?', a: 'Tomografi ürografi görüntülerinin kendisi (yalnızca rapor değil), BÖBREK SİNTİGRAFİSİ SONUCU, ÖNCEKİ TÜM AMELİYAT NOTLARI, varsa üreterografi görüntüleri, böbrek işlev testleri, idrar kültürü, radyoterapi görüp görmediğiniz ve kullandığınız ilaçlar. Sintigrafi ve ameliyat notu olmadan bu vakalarda ciddi bir plan yapılamaz.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines — Avrupa Üroloji Derneği (rekonstrüktif üroloji)', url: 'https://uroweb.org/guidelines' }
         ]
       },
       en: {
