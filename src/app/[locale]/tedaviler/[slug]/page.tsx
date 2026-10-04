@@ -292,7 +292,14 @@ export default async function TreatmentPage({
 
       <div className="container-content grid gap-10 py-12 lg:grid-cols-3">
         {/* ANA İÇERİK */}
-        <div className="space-y-12 lg:col-span-2">
+        {/*
+          min-w-0 ZORUNLU: bu bir grid öğesidir ve grid öğelerinin örtük
+          en küçük genişliği içeriğinin min-content genişliğidir. İçerideki
+          karşılaştırma tablosu (overflow-x-auto sarmalayıcı içinde olsa bile)
+          bu değeri yükseltip sütunu kapsayıcıdan taşırıyordu; ölçümde mobilde
+          375 px yerine 445 px çıkıyor ve sayfada yatay kaydırma oluşuyordu.
+        */}
+        <div className="min-w-0 space-y-12 lg:col-span-2">
           {/* Durumun tanımı */}
           <section>
             <SectionHeading title={t('sectionDefinition')} />

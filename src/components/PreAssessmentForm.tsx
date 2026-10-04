@@ -124,10 +124,28 @@ export function PreAssessmentForm({
 
   return (
     <form onSubmit={onSubmit} noValidate className="space-y-4">
-      {/* Honeypot — ekran dışında; kullanıcıya görünmez, klavye/okuyucu erişemez. */}
+      {/*
+        Honeypot — kullanıcıya görünmez, klavye ve ekran okuyucu erişemez.
+
+        `left: -9999px` KULLANILMAZ. RTL (Arapça) düzende satır ekseni
+        ters çevrildiği için bu değer öğeyi belgenin kaydırılabilir alanına
+        taşıyordu: /ar mobilde belge genişliği 375 px yerine 10375 px
+        çıkıyor ve sayfa yana kayıyordu. Aşağıdaki kırpma (clip) yöntemi
+        yön bağımsızdır ve hiçbir dilde taşma üretmez.
+      */}
       <div
         aria-hidden="true"
-        style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}
+        style={{
+          position: 'absolute',
+          width: '1px',
+          height: '1px',
+          margin: '-1px',
+          padding: 0,
+          border: 0,
+          overflow: 'hidden',
+          clipPath: 'inset(50%)',
+          whiteSpace: 'nowrap'
+        }}
       >
         <label htmlFor="company">Company (leave empty)</label>
         <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
