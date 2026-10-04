@@ -15,6 +15,709 @@ import { assertTreatmentsValid } from './validate';
 export const treatments: Treatment[] = [
   {
     /**
+     * Üroonkoloji hub'ının altında (prompt m.4.1).
+     * DÖRT ZORUNLU MESAJ:
+     * 1. AĞRISIZ SERTLİK ACİLDİR. Genç erkekler utanma yüzünden geciktiriyor;
+     *    bu gecikme gerçekten zarar veriyor. Sayfa bunu doğrudan söylüyor.
+     * 2. SPERM DONDURMA TEDAVİDEN ÖNCE YAPILIR. Zaman kritik ve sık atlanıyor.
+     * 3. SKROTUMDAN BİYOPSİ YAPILMAZ — tanı inguinal orşiektomiyle konur.
+     * 4. İLERİ EVREDE BİLE YÜKSEK İYİLEŞME ŞANSI VARDIR. Bu doğru bir
+     *    güvencedir ve hastanın tedaviye gelmesini sağlar; abartı değildir.
+     * Erken evrede İZLEMİN meşru bir seçenek olduğu, herkese kemoterapi
+     * gerekmediği yazılmıştır.
+     * Kaynak: EAU Testicular Cancer kılavuzu.
+     * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
+     */
+    slug: 'testis-kanseri',
+    parent: 'uroonkoloji',
+    lastReviewed: '2026-10-04',
+    icon: 'oncology',
+    offersConsultation: false,
+    i18n: {
+      tr: {
+        title: 'Testis Kanseri: Erken Davranmak Neden Her Şeyi Değiştirir',
+        summary:
+          'Genç erkeklerde en sık görülen solid kanserdir ve tedaviye yanıtı yüksektir. Ağrısız bir sertlik fark ettiyseniz beklemeyin — gecikme, kolay tedavi edilebilir bir hastalığı zorlaştırır.',
+        metaTitle: 'Testis Kanseri Belirtileri ve Tedavisi',
+        metaDescription:
+          'Testiste ağrısız sertliğin anlamı, tümör belirteçleri, neden skrotumdan biyopsi yapılmadığı, sperm dondurmanın zamanlaması ve tedavi seçenekleri.',
+        quickFacts: {
+          duration: 'Orşiektomi 45–60 dakika',
+          anesthesia: 'Genel veya spinal anestezi',
+          hospitalStay: 'Günübirlik veya 1 gece',
+          stayInTurkey: '7–10 gün (evreleme ve plan için)',
+          returnToWork: '1–2 hafta',
+          flightClearance: '7–10 gün'
+        },
+        definition: [
+          'Testis kanseri, 15–40 yaş arası erkeklerde en sık görülen solid organ kanseridir. En önemli özelliği şudur: tedaviye yanıtı yüksek bir hastalıktır ve ileri evrede bile iyileşme şansı ciddi biçimde yüksektir. Bu bir teselli cümlesi değil, tedaviye zamanında başvurmanın neden bu kadar değerli olduğunun açıklamasıdır.',
+          'EN SIK BELİRTİ, TESTİSTE AĞRISIZ BİR SERTLİK VEYA BÜYÜMEDİR. Ağrı genellikle yoktur; bu yüzden birçok erkek "ağrımıyorsa bir şey yoktur" diye düşünür. Bu düşünce yanlıştır ve tanıyı geciktiren en büyük nedendir. Bazen testiste ağırlık hissi, karın alt kısmında dolgunluk veya meme dokusunda hassasiyet eşlik eder.',
+          'GECİKME GERÇEK BİR SORUNDUR VE ÇOĞU ZAMAN UTANMADAN KAYNAKLANIR. Genç erkekler bu bölgeyi muayene ettirmekten çekinir, "kendiliğinden geçer" diye bekler. Oysa testis kanserinde haftalar bile fark yaratabilir: erken evrede yalnızca ameliyat ve izlem yeterken, ilerlemiş hastalıkta kemoterapi gerekebilir. Fark ettiğiniz sertlik kanser olmayabilir — ama bunu beklemek değil, muayene belirler.',
+          'TANIDA İLK ADIM ULTRASON VE KAN TETKİKİDİR. Skrotal ultrason kitlenin testis içinde mi dışında mı olduğunu gösterir. Kanda bakılan tümör belirteçleri (AFP, beta-hCG, LDH) hem tanıya hem de tedavi sonrası takibe yardımcı olur; bu nedenle TEDAVİDEN ÖNCE ölçülmeleri önemlidir.',
+          'SKROTUMDAN BİYOPSİ YAPILMAZ. Bu önemli bir noktadır: testis kitlesine torbadan iğne batırmak veya kesi yapmak, tümör hücrelerinin yayılma yolunu değiştirebilir. Doğru yaklaşım, kasıktan yapılan bir kesiyle testisin kordonuyla birlikte çıkarılmasıdır (inguinal orşiektomi). Bu işlem hem tanıyı koyar hem tedavinin ilk basamağıdır. Size skrotumdan biyopsi öneren bir yaklaşıma karşı dikkatli olun.',
+          'SPERM DONDURMA TEDAVİDEN ÖNCE KONUŞULMALIDIR. Hem hastalığın kendisi hem de sonrasında gerekebilecek kemoterapi veya radyoterapi sperm üretimini etkileyebilir. Sperm dondurma, ameliyattan ve özellikle kemoterapiden ÖNCE yapılmalıdır — sonrasında geç kalınmış olabilir. Bu konuşma sık atlanır; atlanmamalıdır.'
+        ],
+        eligibility: {
+          suitable: [
+            'Testisinde ağrısız sertlik, büyüme veya şekil değişikliği fark eden her erkek — acil değerlendirme gerekir',
+            'Ultrasonda testis içinde solid kitle saptanan hastalar',
+            'Tümör belirteçleri yüksek bulunan hastalar',
+            'Testiste ağırlık hissi veya karın alt kısmında dolgunluk tarifleyen hastalar',
+            'İnmemiş testis öyküsü olan veya ailesinde testis kanseri bulunan erkekler — risk daha yüksektir'
+          ],
+          notSuitable: [
+            'Testis dışında, epididimde yerleşmiş kistik oluşumu olan hastalar — bunlar genellikle iyi huyludur ve ayrı değerlendirilir',
+            'Hidrosel veya varikosel saptanan hastalar — bunlar kanser değildir, ancak muayenede ayırt edilmelidir',
+            'Ani başlayan şiddetli testis ağrısı olan hastalar — bu testis torsiyonu olabilir ve SAATLER içinde acil girişim gerektirir; önce bu dışlanır',
+            'Epididimit (iltihap) düşünülen hastalar — tedaviye yanıt değerlendirilir, ancak kitle sürerse araştırma devam eder'
+          ]
+        },
+        technology: [
+          'Skrotal ultrason — kitlenin testis içinde mi dışında mı olduğunun belirlenmesi',
+          'Tümör belirteçleri: AFP, beta-hCG, LDH — tedaviden önce ve sonra',
+          'İnguinal (kasıktan) radikal orşiektomi — tanı ve tedavinin ilk basamağı',
+          'Patolojik inceleme: seminom / non-seminom ayrımı',
+          'Evreleme için bilgisayarlı tomografi',
+          'Sperm dondurma — tedaviden önce',
+          'İsteğe bağlı testis protezi'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Üroonkolojik cerrahi, Doç. Dr. Müslüm Ergün’ün çalışma alanları arasındadır. Testis kanserinde tedavi, patoloji tipi ve evreye göre planlanır ve tıbbi onkoloji ile birlikte yürütülür; her hastaya kemoterapi gerekmez.'
+        },
+        timeline: [
+          {
+            when: '1. adım',
+            title: 'Muayene ve ultrason — geciktirilmez',
+            body: 'Elle muayene ve skrotal ultrason aynı gün yapılabilir. Kitlenin testis içinde olup olmadığı bu aşamada büyük ölçüde anlaşılır.'
+          },
+          {
+            when: '2. adım',
+            title: 'Tümör belirteçleri',
+            body: 'AFP, beta-hCG ve LDH tedaviden ÖNCE ölçülür. Bu değerler hem tanıya hem de sonraki takibe temel oluşturur.'
+          },
+          {
+            when: '3. adım',
+            title: 'Sperm dondurma konuşulur',
+            body: 'Çocuk isteği olsun olmasın bu konu gündeme getirilir. Sperm dondurma ameliyattan ve özellikle kemoterapiden önce yapılmalıdır.'
+          },
+          {
+            when: '4. adım',
+            title: 'İnguinal radikal orşiektomi',
+            body: 'Kasıktan yapılan kesiyle testis kordonuyla birlikte çıkarılır. İşlem 45–60 dakika sürer; çoğu hasta aynı gün veya ertesi gün taburcu olur. İsterseniz aynı seansta testis protezi yerleştirilebilir.'
+          },
+          {
+            when: '5. adım',
+            title: 'Patoloji ve evreleme',
+            body: 'Patoloji seminom mu non-seminom mu olduğunu bildirir. Tomografi ile yayılım değerlendirilir, belirteçler tekrar ölçülür. Tedavi planı bu üç bilgiye dayanır.'
+          },
+          {
+            when: '6. adım',
+            title: 'Sonraki tedavi: izlem, kemoterapi veya radyoterapi',
+            body: 'Erken evrede yakın izlem tek başına yeterli olabilir. Gerekiyorsa kemoterapi veya radyoterapi planlanır. Bazı hastalarda karın arkasındaki lenf bezlerinin cerrahi olarak çıkarılması gündeme gelir.'
+          }
+        ],
+        risks: [
+          'TANIDA GECİKME: Bu sayfadaki en önemli risk tedavinin değil, beklemenin riskidir. Erken evrede ameliyat ve izlem yeterken, gecikmiş hastalıkta kemoterapi gerekebilir',
+          'Doğurganlığın etkilenmesi: hem hastalık hem tedavi sperm üretimini azaltabilir — bu nedenle sperm dondurma tedaviden önce yapılır',
+          'Tek testisle kalma: kalan testis sağlıklıysa hormon üretimi ve doğurganlık genellikle sürer, ancak bu garanti değildir; testosteron düzeyi takip edilir',
+          'Ameliyata bağlı riskler: kanama, enfeksiyon, skrotumda şişlik ve morarma',
+          'Kasıkta his değişikliği veya uyuşma',
+          'Kemoterapi uygulanırsa ona bağlı yan etkiler — tıbbi onkoloji ile ayrıca konuşulur',
+          'NÜKS: Tedavi sonrası hastalık tekrarlayabilir; bu nedenle belirteç ve görüntüleme takibi yıllarca sürdürülür ve bırakılmamalıdır'
+        ],
+        alternatives: [
+          'Orşiektomi yerine bir alternatif YOKTUR — tanı ve tedavinin ilk basamağıdır. Alternatifler sonraki basamakta konuşulur:',
+          'Erken evrede yakın izlem — düzenli belirteç ve görüntüleme ile; herkese kemoterapi gerekmez',
+          'Kemoterapi — evre ve patoloji tipine göre',
+          'Radyoterapi — seçilmiş seminom olgularında',
+          'Retroperitoneal lenf nodu diseksiyonu — seçilmiş non-seminom olgularında',
+          'Testis koruyucu cerrahi — yalnızca tek testisi olan veya iki taraflı tümörü bulunan çok seçilmiş hastalarda',
+          'Testis protezi — tıbbi gereklilik değildir, tamamen sizin tercihinizdir'
+        ],
+        comparison: {
+          title: 'Testiste ele gelen kitle — hangi durum ne anlama gelir?',
+          columns: ['Bulgu', 'Tipik özellik', 'Aciliyet'],
+          rows: [
+            { label: 'Ağrısız sert kitle (testis içinde)', values: ['Zamanla büyür, ağrı yok', 'ACİL değerlendirme — günler içinde'] },
+            { label: 'Ani şiddetli ağrı', values: ['Bulantı eşlik edebilir', 'ÇOK ACİL — saatler içinde (torsiyon olabilir)'] },
+            { label: 'Ateşle birlikte ağrı ve şişlik', values: ['İdrar yakınması eşlik edebilir', 'Acil — iltihap olabilir, tedavi edilir'] },
+            { label: 'Yumuşak, su dolu şişlik', values: ['Işık tutulduğunda geçirgen', 'Acil değil — hidrosel düşünülür'] },
+            { label: 'Testis üstünde küçük kistik yapı', values: ['Testisten ayrı ele gelir', 'Acil değil — epididim kisti'] }
+          ],
+          note:
+            'Bu tablo kendi kendinize tanı koymanız için değil, hangi durumun beklemeye gelmediğini göstermek içindir. Ele gelen her kitle muayene edilmelidir; ayrımı ultrason yapar.'
+        },
+        recovery: [
+          {
+            period: 'İlk 48 saat',
+            body: 'Kasıkta ve skrotumda şişlik, morarma ve hassasiyet beklenir. Buz uygulaması ve destekleyici iç çamaşırı rahatlatır.'
+          },
+          {
+            period: '1. hafta',
+            body: 'Hafif yürüyüş serbesttir. Ağır kaldırma ve karın kaslarını zorlayan hareketler yasaktır. Patoloji sonucu bu dönemde çıkar.'
+          },
+          {
+            period: '2. hafta',
+            body: 'Masa başı işe dönülebilir. Evreleme tamamlanır ve sonraki tedavi planı netleşir.'
+          },
+          {
+            period: '4–6. hafta',
+            body: 'Spora ve ağır fiziksel aktiviteye kademeli dönüş. Kemoterapi planlandıysa bu dönemde başlamış olabilir.'
+          },
+          {
+            period: 'Uzun dönem',
+            body: 'Belirteçler ve görüntüleme ile düzenli takip. Takip yılları kapsar ve erken yıllarda daha sıktır. Testosteron düzeyi de izlenir.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'Fiyat; yalnızca orşiektomi mi yoksa evreleme ve sonrasında kemoterapi gibi ek tedaviler mi gerekeceğine göre belirgin biçimde değişir. Kesin teklif, patoloji ve evreleme tamamlandıktan sonra verilebilir.'
+        },
+        packageIncludes: [
+          'Üroloji değerlendirmesi ve skrotal ultrason',
+          'Tümör belirteçleri (AFP, beta-hCG, LDH)',
+          'Sperm dondurma danışmanlığı ve yönlendirmesi',
+          'İnguinal radikal orşiektomi ve anestezi',
+          'Günübirlik işlem veya 1 gece konaklama',
+          'Patolojik inceleme ve evreleme görüntülemesi',
+          'Tıbbi onkoloji konsültasyonu (gerekiyorsa)',
+          'Yazılı takip planı',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve ülkenize döndükten sonra uzaktan takip'
+        ],
+        faqs: [
+          {
+            q: 'Testisimde sertlik var ama hiç ağrımıyor. Bekleyebilir miyim?',
+            a: 'Hayır. Testis kanserinin en tipik belirtisi tam olarak budur: ağrısız sertlik. "Ağrımıyorsa bir şey yoktur" düşüncesi tanıyı geciktiren en yaygın nedendir. Fark ettiğiniz sertlik kanser olmayabilir — ama bunu bekleyerek değil, muayene ve ultrasonla anlarsınız. Günler içinde değerlendirilmelidir.'
+          },
+          {
+            q: 'Muayene olmaya çekiniyorum.',
+            a: 'Bu duygu çok yaygındır ve tam olarak bu yüzden birçok genç erkek geç başvurur. Ancak testis kanseri, erken yakalandığında tedaviye çok iyi yanıt veren bir hastalıktır; gecikme ise basit bir tedaviyi zorlaştırır. Muayene birkaç dakika sürer. Bu kısa rahatsızlık, aylarca sürecek bir tedaviden kaçınmanızı sağlayabilir.'
+          },
+          {
+            q: 'Biyopsi yapılacak mı?',
+            a: 'Skrotumdan biyopsi YAPILMAZ. Torbadan iğne batırmak veya kesi yapmak tümörün yayılma yolunu değiştirebilir. Doğru yaklaşım kasıktan yapılan kesiyle testisin kordonuyla birlikte çıkarılmasıdır; bu hem tanıyı koyar hem tedavinin ilk basamağıdır. Size skrotumdan biyopsi öneriliyorsa ikinci bir görüş alın.'
+          },
+          {
+            q: 'Testisim alınırsa çocuk sahibi olabilir miyim?',
+            a: 'Kalan testis sağlıklıysa doğurganlık genellikle sürer, ancak bu garanti edilemez — hem hastalığın kendisi hem de gerekebilecek kemoterapi sperm üretimini etkileyebilir. Bu nedenle sperm dondurma tedaviden ÖNCE konuşulmalıdır. Bu adım sık atlanır; siz sorun.'
+          },
+          {
+            q: 'Sperm dondurmayı sonra yaptırsam olmaz mı?',
+            a: 'Olmayabilir. Kemoterapi başladıktan sonra sperm kalitesi belirgin biçimde düşebilir ve toparlanma aylar hatta yıllar alabilir, bazen hiç olmayabilir. Zamanlama kritiktir: dondurma ameliyattan ve özellikle kemoterapiden önce yapılmalıdır.'
+          },
+          {
+            q: 'Tek testisle hormonlarım bozulur mu?',
+            a: 'Kalan testis sağlıklıysa genellikle yeterli testosteron üretir ve cinsel işlev etkilenmez. Yine de testosteron düzeyi takipte ölçülür; düşerse yerine koyma tedavisi gündeme gelebilir.'
+          },
+          {
+            q: 'Protez taktırmak zorunda mıyım?',
+            a: 'Hayır. Testis protezi tıbbi bir gereklilik değildir; tamamen görünüm ve kişisel rahatlık tercihidir. İsterseniz orşiektomi ile aynı seansta veya daha sonra takılabilir. İstemezseniz hiçbir tıbbi dezavantajı yoktur.'
+          },
+          {
+            q: 'Mutlaka kemoterapi alacak mıyım?',
+            a: 'Hayır. Erken evrede, patoloji ve belirteçler uygunsa yakın izlem tek başına yeterli olabilir; bu meşru ve sık kullanılan bir yaklaşımdır. Kemoterapi veya radyoterapi kararı patoloji tipi, evre ve belirteç seyrine göre verilir.'
+          },
+          {
+            q: 'Hastalık ilerlemişse şansım var mı?',
+            a: 'Evet. Testis kanseri, yayılmış olsa bile tedaviye yanıtı yüksek bir hastalıktır — bu, onu diğer birçok kanserden ayıran özelliğidir. Bu nedenle ilerlemiş olma ihtimali, başvurmayı erteleme gerekçesi değil, aksine hemen başvurma gerekçesidir.'
+          },
+          {
+            q: 'Takip ne kadar sürer?',
+            a: 'Yıllar sürer ve ilk yıllarda daha sıktır. Belirteçler ve görüntüleme ile yapılır. Kendinizi iyi hissetmeniz takibi bırakmak için neden değildir; nüksler çoğu zaman yakınma vermeden belirteçlerde görülür ve o aşamada tedavi edilebilir.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Testicular Cancer — Avrupa Üroloji Derneği',
+            url: 'https://uroweb.org/guidelines/testicular-cancer'
+          }
+        ]
+      },
+      en: {
+        title: 'Testicular Cancer: Why Acting Early Changes Everything',
+        summary:
+          'The commonest solid cancer in young men, and one that responds very well to treatment. If you have noticed a painless lump, do not wait — delay turns a readily treatable disease into a harder one.',
+        metaTitle: 'Testicular Cancer: Symptoms and Treatment',
+        metaDescription:
+          'What a painless lump in the testicle means, tumour markers, why biopsy through the scrotum is not done, the timing of sperm banking and the treatment options.',
+        quickFacts: {
+          duration: 'Orchiectomy 45–60 minutes',
+          anesthesia: 'General or spinal anaesthesia',
+          hospitalStay: 'Day case or 1 night',
+          stayInTurkey: '7–10 days (for staging and planning)',
+          returnToWork: '1–2 weeks',
+          flightClearance: '7–10 days'
+        },
+        definition: [
+          'Testicular cancer is the commonest solid organ cancer in men aged 15 to 40. Its most important feature is this: it responds very well to treatment, and the chance of cure is substantially high even in advanced disease. That is not a consoling phrase but the reason why coming forward in good time matters so much.',
+          'THE COMMONEST SIGN IS A PAINLESS LUMP OR SWELLING IN THE TESTICLE. There is usually no pain, which is why many men reason that "if it does not hurt, there is nothing wrong". That reasoning is mistaken and is the single greatest cause of delayed diagnosis. Sometimes a feeling of heaviness in the testicle, fullness in the lower abdomen or tenderness of the breast tissue accompanies it.',
+          'DELAY IS A REAL PROBLEM AND IT USUALLY COMES FROM EMBARRASSMENT. Young men are reluctant to have this area examined and wait for it to "go away on its own". Yet in testicular cancer even weeks can make a difference: where early disease may need only surgery and surveillance, advanced disease may require chemotherapy. The lump you have noticed may not be cancer — but that is settled by examination, not by waiting.',
+          'THE FIRST STEPS IN DIAGNOSIS ARE ULTRASOUND AND BLOOD TESTS. Scrotal ultrasound shows whether the mass is inside the testicle or outside it. The tumour markers measured in blood (AFP, beta-hCG, LDH) help both with the diagnosis and with follow-up afterwards, which is why it matters that they are measured BEFORE treatment.',
+          'BIOPSY THROUGH THE SCROTUM IS NOT PERFORMED. This is an important point: putting a needle into a testicular mass through the scrotum, or cutting into it, can alter the route by which tumour cells spread. The correct approach is to remove the testicle together with its cord through an incision in the groin (inguinal orchiectomy). This both establishes the diagnosis and is the first step of treatment. Be cautious of anyone proposing a biopsy through the scrotum.',
+          'SPERM BANKING MUST BE DISCUSSED BEFORE TREATMENT. Both the disease itself and any chemotherapy or radiotherapy that may follow can affect sperm production. Sperm banking should be done BEFORE surgery and in particular before chemotherapy — afterwards it may be too late. This conversation is often skipped; it should not be.'
+        ],
+        eligibility: {
+          suitable: [
+            'Any man who notices a painless lump, swelling or change in shape of a testicle — urgent assessment is needed',
+            'Men with a solid mass inside the testicle on ultrasound',
+            'Men with raised tumour markers',
+            'Men describing heaviness in the testicle or fullness in the lower abdomen',
+            'Men with a history of an undescended testis or a family history of testicular cancer — the risk is higher'
+          ],
+          notSuitable: [
+            'Men with a cystic swelling sitting in the epididymis rather than the testicle — these are usually benign and assessed separately',
+            'Men found to have a hydrocele or varicocele — these are not cancer, but must be distinguished on examination',
+            'Men with sudden severe testicular pain — this may be testicular torsion and requires emergency intervention within HOURS; that is excluded first',
+            'Men in whom epididymitis (inflammation) is suspected — the response to treatment is assessed, but if the lump persists the investigation continues'
+          ]
+        },
+        technology: [
+          'Scrotal ultrasound — establishing whether the mass is inside or outside the testicle',
+          'Tumour markers: AFP, beta-hCG, LDH — before and after treatment',
+          'Inguinal radical orchiectomy — diagnosis and the first step of treatment',
+          'Pathological examination: seminoma versus non-seminoma',
+          'CT scanning for staging',
+          'Sperm banking — before treatment',
+          'An optional testicular prosthesis'
+        ],
+        surgeonExperience: {
+          caseVolume: '',
+          note:
+            'Uro-oncological surgery is among Assoc. Prof. Müslüm Ergün’s areas of work. In testicular cancer, treatment is planned according to the pathology type and stage and is carried out together with medical oncology; not every patient needs chemotherapy.'
+        },
+        timeline: [
+          {
+            when: 'Step 1',
+            title: 'Examination and ultrasound — not deferred',
+            body: 'Physical examination and scrotal ultrasound can be done the same day. Whether the mass lies within the testicle is largely established at this stage.'
+          },
+          {
+            when: 'Step 2',
+            title: 'Tumour markers',
+            body: 'AFP, beta-hCG and LDH are measured BEFORE treatment. These values underpin both the diagnosis and later follow-up.'
+          },
+          {
+            when: 'Step 3',
+            title: 'Sperm banking is discussed',
+            body: 'This is raised whether or not you currently want children. Sperm banking should be done before surgery and in particular before chemotherapy.'
+          },
+          {
+            when: 'Step 4',
+            title: 'Inguinal radical orchiectomy',
+            body: 'The testicle is removed with its cord through an incision in the groin. The operation takes 45–60 minutes; most men are discharged the same day or the next. A testicular prosthesis can be placed in the same sitting if you wish.'
+          },
+          {
+            when: 'Step 5',
+            title: 'Pathology and staging',
+            body: 'Pathology states whether it is a seminoma or a non-seminoma. CT assesses any spread and the markers are measured again. The treatment plan rests on these three pieces of information.'
+          },
+          {
+            when: 'Step 6',
+            title: 'Next treatment: surveillance, chemotherapy or radiotherapy',
+            body: 'In early disease, close surveillance alone may be enough. Where needed, chemotherapy or radiotherapy is planned. In some men, surgical removal of the lymph nodes behind the abdomen comes into consideration.'
+          }
+        ],
+        risks: [
+          'DELAY IN DIAGNOSIS: the most important risk on this page is not the risk of treatment but the risk of waiting. Where early disease may need only surgery and surveillance, delayed disease may require chemotherapy',
+          'Effects on fertility: both the disease and its treatment can reduce sperm production — which is why sperm banking is done before treatment',
+          'Living with one testicle: if the remaining testicle is healthy, hormone production and fertility usually continue, though that is not guaranteed; the testosterone level is monitored',
+          'Risks of the operation: bleeding, infection, swelling and bruising of the scrotum',
+          'Altered sensation or numbness in the groin',
+          'Side effects of chemotherapy if it is given — discussed separately with medical oncology',
+          'RECURRENCE: the disease can return after treatment, which is why follow-up with markers and imaging continues for years and must not be abandoned'
+        ],
+        alternatives: [
+          'There is NO alternative to orchiectomy — it is the first step of both diagnosis and treatment. The alternatives arise at the next step:',
+          'Close surveillance in early disease — with regular markers and imaging; not everyone needs chemotherapy',
+          'Chemotherapy — according to stage and pathology type',
+          'Radiotherapy — in selected seminoma cases',
+          'Retroperitoneal lymph node dissection — in selected non-seminoma cases',
+          'Testis-sparing surgery — only in very selected men with a solitary testicle or bilateral tumours',
+          'A testicular prosthesis — not a medical necessity but entirely your own choice'
+        ],
+        comparison: {
+          title: 'A lump felt in the testicle — what does each finding suggest?',
+          columns: ['Finding', 'Typical feature', 'Urgency'],
+          rows: [
+            { label: 'Painless firm lump (within the testicle)', values: ['Grows over time, no pain', 'URGENT assessment — within days'] },
+            { label: 'Sudden severe pain', values: ['Nausea may accompany it', 'VERY URGENT — within hours (may be torsion)'] },
+            { label: 'Pain and swelling with fever', values: ['Urinary symptoms may accompany it', 'Urgent — may be inflammation, which is treated'] },
+            { label: 'Soft, fluid-filled swelling', values: ['Transmits light when shone through', 'Not urgent — a hydrocele is likely'] },
+            { label: 'Small cystic structure above the testicle', values: ['Felt separately from the testicle', 'Not urgent — an epididymal cyst'] }
+          ],
+          note:
+            'This table is not for diagnosing yourself but to show which situations will not wait. Every lump that can be felt should be examined; ultrasound makes the distinction.'
+        },
+        recovery: [
+          {
+            period: 'First 48 hours',
+            body: 'Swelling, bruising and tenderness in the groin and scrotum are expected. Ice and supportive underwear bring relief.'
+          },
+          {
+            period: 'Week 1',
+            body: 'Gentle walking is allowed. Heavy lifting and movements that strain the abdominal muscles are not. The pathology result comes through during this period.'
+          },
+          {
+            period: 'Week 2',
+            body: 'A return to desk work is possible. Staging is completed and the next treatment plan becomes clear.'
+          },
+          {
+            period: 'Weeks 4–6',
+            body: 'A gradual return to sport and heavy physical activity. If chemotherapy has been planned, it may have begun during this period.'
+          },
+          {
+            period: 'Long term',
+            body: 'Regular follow-up with markers and imaging. It spans years and is more frequent in the early ones. The testosterone level is also monitored.'
+          }
+        ],
+        price: {
+          from: 0,
+          to: 0,
+          currency: 'EUR',
+          disclaimer:
+            'The price varies markedly according to whether orchiectomy alone is needed or staging and subsequent treatment such as chemotherapy as well. A firm quotation can be given once pathology and staging are complete.'
+        },
+        packageIncludes: [
+          'Urological assessment and scrotal ultrasound',
+          'Tumour markers (AFP, beta-hCG, LDH)',
+          'Sperm banking advice and referral',
+          'Inguinal radical orchiectomy and anaesthesia',
+          'Day-case procedure or 1 night’s stay',
+          'Pathological examination and staging imaging',
+          'Medical oncology consultation (where needed)',
+          'A written follow-up plan',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and remote follow-up after you return home'
+        ],
+        faqs: [
+          {
+            q: 'There is a lump in my testicle but it does not hurt at all. Can I wait?',
+            a: 'No. That is precisely the most typical sign of testicular cancer: a painless lump. The idea that "if it does not hurt, there is nothing wrong" is the commonest cause of delayed diagnosis. The lump you have found may not be cancer — but you establish that by examination and ultrasound, not by waiting. It should be assessed within days.'
+          },
+          {
+            q: 'I feel awkward about being examined.',
+            a: 'That feeling is very common, and it is exactly why many young men come forward late. But testicular cancer responds very well to treatment when caught early, whereas delay turns a straightforward treatment into a harder one. The examination takes a few minutes. That brief discomfort may spare you months of treatment.'
+          },
+          {
+            q: 'Will a biopsy be taken?',
+            a: 'A biopsy through the scrotum is NOT performed. Passing a needle through the scrotum or cutting into it can alter the route by which the tumour spreads. The correct approach is to remove the testicle with its cord through an incision in the groin; this both establishes the diagnosis and is the first step of treatment. If a biopsy through the scrotum is proposed to you, seek a second opinion.'
+          },
+          {
+            q: 'If my testicle is removed, can I still father children?',
+            a: 'If the remaining testicle is healthy, fertility usually continues, but it cannot be guaranteed — both the disease itself and any chemotherapy that may be needed can affect sperm production. That is why sperm banking must be discussed BEFORE treatment. This step is often skipped; ask about it.'
+          },
+          {
+            q: 'Could I bank sperm later instead?',
+            a: 'Possibly not. Once chemotherapy has begun, sperm quality can fall markedly and recovery may take months or years, and sometimes does not happen at all. The timing is critical: banking should be done before surgery and in particular before chemotherapy.'
+          },
+          {
+            q: 'Will my hormones be affected with one testicle?',
+            a: 'If the remaining testicle is healthy it usually produces enough testosterone and sexual function is unaffected. The testosterone level is nevertheless measured at follow-up; if it falls, replacement treatment may come into consideration.'
+          },
+          {
+            q: 'Do I have to have a prosthesis?',
+            a: 'No. A testicular prosthesis is not a medical necessity; it is entirely a matter of appearance and personal comfort. It can be placed at the same sitting as the orchiectomy or later if you wish. If you do not want one, there is no medical disadvantage.'
+          },
+          {
+            q: 'Will I definitely need chemotherapy?',
+            a: 'No. In early disease, where the pathology and markers are favourable, close surveillance alone may be sufficient; this is a legitimate and frequently used approach. The decision about chemotherapy or radiotherapy rests on the pathology type, the stage and the behaviour of the markers.'
+          },
+          {
+            q: 'If the disease has already spread, do I still have a chance?',
+            a: 'Yes. Testicular cancer responds very well to treatment even when it has spread — that is what sets it apart from many other cancers. The possibility that it has advanced is therefore not a reason to put off coming forward but a reason to come forward at once.'
+          },
+          {
+            q: 'How long does follow-up last?',
+            a: 'It lasts years and is more frequent in the early ones. It is carried out with markers and imaging. Feeling well is not a reason to stop; recurrences usually show up in the markers before causing any symptoms, and at that point they can be treated.'
+          }
+        ],
+        sources: [
+          {
+            label: 'EAU Guidelines on Testicular Cancer — European Association of Urology',
+            url: 'https://uroweb.org/guidelines/testicular-cancer'
+          }
+        ]
+      },
+      de: {
+        title: 'Hodenkrebs: warum frühes Handeln alles verändert',
+        summary: 'Die häufigste solide Krebserkrankung junger Männer — und eine, die sehr gut auf die Behandlung anspricht. Haben Sie einen schmerzlosen Knoten bemerkt, warten Sie nicht: Verzögerung macht aus einer gut behandelbaren Erkrankung eine schwierige.',
+        metaTitle: 'Hodenkrebs: Symptome und Behandlung',
+        metaDescription: 'Was ein schmerzloser Knoten im Hoden bedeutet, Tumormarker, warum keine Biopsie über den Hodensack erfolgt, der Zeitpunkt der Samenkonservierung und die Behandlungsmöglichkeiten.',
+        quickFacts: { duration: 'Orchiektomie 45–60 Minuten', anesthesia: 'Vollnarkose oder Spinalanästhesie', hospitalStay: 'Ambulant oder 1 Nacht', stayInTurkey: '7–10 Tage (für Staging und Planung)', returnToWork: '1–2 Wochen', flightClearance: '7–10 Tage' },
+        definition: [
+          'Hodenkrebs ist bei Männern zwischen 15 und 40 Jahren die häufigste solide Krebserkrankung. Sein wichtigstes Merkmal: Er spricht sehr gut auf die Behandlung an, und die Heilungschance ist selbst bei fortgeschrittener Erkrankung erheblich hoch. Das ist kein Trostsatz, sondern die Begründung dafür, warum rechtzeitiges Vorstelligwerden so viel wert ist.',
+          'DAS HÄUFIGSTE ZEICHEN IST EIN SCHMERZLOSER KNOTEN ODER EINE SCHWELLUNG IM HODEN. Schmerzen fehlen meist, weshalb viele Männer schließen: „Wenn es nicht wehtut, ist nichts." Dieser Schluss ist falsch und die größte Ursache verspäteter Diagnosen. Manchmal kommen ein Schweregefühl im Hoden, ein Völlegefühl im Unterbauch oder eine Empfindlichkeit des Brustgewebes hinzu.',
+          'DIE VERZÖGERUNG IST EIN ECHTES PROBLEM UND ENTSTEHT MEIST AUS SCHAM. Junge Männer scheuen die Untersuchung dieser Region und warten, dass es „von selbst weggeht". Beim Hodenkrebs können jedoch schon Wochen einen Unterschied machen: Wo im frühen Stadium Operation und Beobachtung genügen, kann bei fortgeschrittener Erkrankung eine Chemotherapie nötig werden. Der ertastete Knoten muss kein Krebs sein — aber das klärt die Untersuchung, nicht das Abwarten.',
+          'DIE ERSTEN SCHRITTE DER DIAGNOSTIK SIND ULTRASCHALL UND BLUTWERTE. Der Hodenultraschall zeigt, ob die Raumforderung im Hoden liegt oder außerhalb. Die im Blut bestimmten Tumormarker (AFP, Beta-hCG, LDH) helfen bei der Diagnose und bei der späteren Nachsorge — deshalb ist es wichtig, dass sie VOR der Behandlung gemessen werden.',
+          'EINE BIOPSIE ÜBER DEN HODENSACK WIRD NICHT DURCHGEFÜHRT. Das ist ein wichtiger Punkt: Eine Nadel durch den Hodensack zu führen oder dort zu schneiden, kann den Ausbreitungsweg der Tumorzellen verändern. Richtig ist, den Hoden samt Samenstrang über einen Schnitt in der Leiste zu entfernen (inguinale Orchiektomie). Das sichert die Diagnose und ist zugleich der erste Behandlungsschritt. Seien Sie vorsichtig, wenn Ihnen eine Biopsie über den Hodensack vorgeschlagen wird.',
+          'DIE SAMENKONSERVIERUNG MUSS VOR DER BEHANDLUNG BESPROCHEN WERDEN. Sowohl die Erkrankung selbst als auch eine eventuell folgende Chemo- oder Strahlentherapie können die Samenbildung beeinträchtigen. Das Einfrieren sollte VOR der Operation und insbesondere vor einer Chemotherapie erfolgen — danach kann es zu spät sein. Dieses Gespräch wird häufig übersprungen; das sollte es nicht.'
+        ],
+        eligibility: {
+          suitable: ['Jeder Mann, der einen schmerzlosen Knoten, eine Schwellung oder eine Formveränderung des Hodens bemerkt — dringende Abklärung nötig', 'Männer mit solider Raumforderung im Hoden im Ultraschall', 'Männer mit erhöhten Tumormarkern', 'Männer mit Schweregefühl im Hoden oder Völlegefühl im Unterbauch', 'Männer mit Hodenhochstand in der Vorgeschichte oder Hodenkrebs in der Familie — erhöhtes Risiko'],
+          notSuitable: ['Männer mit zystischer Schwellung im Nebenhoden statt im Hoden — meist gutartig, gesonderte Beurteilung', 'Männer mit Hydrozele oder Varikozele — kein Krebs, aber bei der Untersuchung abzugrenzen', 'Männer mit plötzlichen starken Hodenschmerzen — möglicherweise eine Hodentorsion, die binnen STUNDEN notfallmäßig behandelt werden muss; das wird zuerst ausgeschlossen', 'Männer mit Verdacht auf Nebenhodenentzündung — das Ansprechen auf die Therapie wird beurteilt, bleibt der Knoten bestehen, geht die Abklärung weiter']
+        },
+        technology: ['Hodenultraschall — Klärung, ob die Raumforderung im Hoden liegt', 'Tumormarker AFP, Beta-hCG, LDH — vor und nach der Behandlung', 'Inguinale radikale Orchiektomie — Diagnose und erster Behandlungsschritt', 'Pathologische Untersuchung: Seminom oder Nichtseminom', 'Computertomographie zum Staging', 'Samenkonservierung — vor der Behandlung', 'Optionale Hodenprothese'],
+        surgeonExperience: { caseVolume: '', note: 'Die uroonkologische Chirurgie gehört zu den Arbeitsgebieten von Doz. Dr. Müslüm Ergün. Beim Hodenkrebs wird die Behandlung nach Pathologietyp und Stadium geplant und gemeinsam mit der internistischen Onkologie durchgeführt; nicht jeder Patient braucht eine Chemotherapie.' },
+        timeline: [
+          { when: 'Schritt 1', title: 'Untersuchung und Ultraschall — ohne Aufschub', body: 'Tastuntersuchung und Hodenultraschall können am selben Tag erfolgen. Ob die Raumforderung im Hoden liegt, klärt sich hier weitgehend.' },
+          { when: 'Schritt 2', title: 'Tumormarker', body: 'AFP, Beta-hCG und LDH werden VOR der Behandlung bestimmt. Diese Werte bilden die Grundlage für Diagnose und spätere Nachsorge.' },
+          { when: 'Schritt 3', title: 'Samenkonservierung wird besprochen', body: 'Das Thema wird angesprochen, unabhängig davon, ob derzeit Kinderwunsch besteht. Eingefroren wird vor der Operation und besonders vor einer Chemotherapie.' },
+          { when: 'Schritt 4', title: 'Inguinale radikale Orchiektomie', body: 'Über einen Leistenschnitt wird der Hoden mit dem Samenstrang entfernt. Der Eingriff dauert 45–60 Minuten; die meisten Patienten gehen am selben oder nächsten Tag nach Hause. Auf Wunsch kann in derselben Sitzung eine Prothese eingesetzt werden.' },
+          { when: 'Schritt 5', title: 'Pathologie und Staging', body: 'Die Pathologie nennt Seminom oder Nichtseminom. Die Computertomographie beurteilt die Ausbreitung, die Marker werden erneut gemessen. Auf diesen drei Angaben beruht der Behandlungsplan.' },
+          { when: 'Schritt 6', title: 'Weitere Behandlung: Beobachtung, Chemo- oder Strahlentherapie', body: 'Im frühen Stadium kann engmaschige Beobachtung allein genügen. Bei Bedarf werden Chemo- oder Strahlentherapie geplant. Bei manchen Patienten kommt die operative Entfernung der Lymphknoten hinter dem Bauchraum infrage.' }
+        ],
+        risks: ['VERZÖGERUNG DER DIAGNOSE: Das wichtigste Risiko auf dieser Seite ist nicht das der Behandlung, sondern das des Wartens. Wo im frühen Stadium Operation und Beobachtung genügen, kann bei verspäteter Erkrankung eine Chemotherapie nötig werden', 'Beeinträchtigung der Fruchtbarkeit: Erkrankung wie Behandlung können die Samenbildung mindern — deshalb erfolgt die Samenkonservierung vor der Behandlung', 'Leben mit einem Hoden: Ist der verbliebene gesund, bleiben Hormonbildung und Fruchtbarkeit meist erhalten, garantiert ist das jedoch nicht; der Testosteronwert wird kontrolliert', 'Operationsbedingte Risiken: Blutung, Infektion, Schwellung und Bluterguss im Hodensack', 'Veränderte Empfindung oder Taubheit in der Leiste', 'Bei Chemotherapie deren Nebenwirkungen — gesondert mit der Onkologie besprochen', 'RÜCKFALL: Die Erkrankung kann nach der Behandlung wiederkehren; deshalb wird die Nachsorge mit Markern und Bildgebung über Jahre fortgeführt und darf nicht abgebrochen werden'],
+        alternatives: ['Zur Orchiektomie gibt es KEINE Alternative — sie ist der erste Schritt von Diagnose und Behandlung. Die Alternativen ergeben sich im nächsten Schritt:', 'Engmaschige Beobachtung im frühen Stadium — mit regelmäßigen Markern und Bildgebung; nicht jeder braucht eine Chemotherapie', 'Chemotherapie — je nach Stadium und Pathologietyp', 'Strahlentherapie — bei ausgewählten Seminomen', 'Retroperitoneale Lymphknotendissektion — bei ausgewählten Nichtseminomen', 'Hodenerhaltende Operation — nur bei sehr ausgewählten Männern mit Einzelhoden oder beidseitigen Tumoren', 'Hodenprothese — keine medizinische Notwendigkeit, sondern allein Ihre Entscheidung'],
+        comparison: {
+          title: 'Ein tastbarer Knoten im Hoden — was bedeutet welcher Befund?',
+          columns: ['Befund', 'Typisches Merkmal', 'Dringlichkeit'],
+          rows: [
+            { label: 'Schmerzloser fester Knoten (im Hoden)', values: ['Wächst mit der Zeit, keine Schmerzen', 'DRINGEND abklären — innerhalb von Tagen'] },
+            { label: 'Plötzlicher starker Schmerz', values: ['Übelkeit kann hinzukommen', 'SEHR DRINGEND — innerhalb von Stunden (mögliche Torsion)'] },
+            { label: 'Schmerz und Schwellung mit Fieber', values: ['Harnbeschwerden können hinzukommen', 'Dringend — mögliche Entzündung, die behandelt wird'] },
+            { label: 'Weiche, flüssigkeitsgefüllte Schwellung', values: ['Lässt Licht durchscheinen', 'Nicht dringend — wahrscheinlich Hydrozele'] },
+            { label: 'Kleines zystisches Gebilde über dem Hoden', values: ['Getrennt vom Hoden tastbar', 'Nicht dringend — Nebenhodenzyste'] }
+          ],
+          note: 'Diese Tabelle dient nicht der Selbstdiagnose, sondern zeigt, welche Situationen keinen Aufschub dulden. Jeder tastbare Knoten sollte untersucht werden; die Unterscheidung trifft der Ultraschall.'
+        },
+        recovery: [
+          { period: 'Erste 48 Stunden', body: 'Schwellung, Bluterguss und Empfindlichkeit in Leiste und Hodensack sind zu erwarten. Kühlung und stützende Unterwäsche verschaffen Linderung.' },
+          { period: 'Woche 1', body: 'Leichtes Gehen ist erlaubt. Schweres Heben und Bewegungen, die die Bauchmuskeln belasten, sind untersagt. Der pathologische Befund trifft in dieser Zeit ein.' },
+          { period: 'Woche 2', body: 'Die Rückkehr an den Schreibtisch ist möglich. Das Staging wird abgeschlossen und der weitere Plan steht fest.' },
+          { period: 'Woche 4–6', body: 'Schrittweise Rückkehr zu Sport und schwerer körperlicher Aktivität. Ist eine Chemotherapie geplant, kann sie in dieser Zeit begonnen haben.' },
+          { period: 'Langfristig', body: 'Regelmäßige Nachsorge mit Markern und Bildgebung über Jahre, in den ersten häufiger. Auch der Testosteronwert wird überwacht.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Der Preis unterscheidet sich deutlich danach, ob nur die Orchiektomie nötig ist oder zusätzlich Staging und Folgebehandlungen wie eine Chemotherapie. Ein verbindliches Angebot ist möglich, sobald Pathologie und Staging vorliegen.' },
+        packageIncludes: ['Urologische Abklärung und Hodenultraschall', 'Tumormarker (AFP, Beta-hCG, LDH)', 'Beratung und Vermittlung zur Samenkonservierung', 'Inguinale radikale Orchiektomie und Narkose', 'Ambulanter Eingriff oder 1 Übernachtung', 'Pathologische Untersuchung und Staging-Bildgebung', 'Konsil der internistischen Onkologie (falls nötig)', 'Schriftlicher Nachsorgeplan', 'Transfers Flughafen–Krankenhaus–Hotel', 'Unterkunft (Patient + 1 Begleitperson)', 'Medizinischer Dolmetscher und Fernbetreuung nach Ihrer Rückkehr'],
+        faqs: [
+          { q: 'Ich habe eine Verhärtung im Hoden, sie tut aber gar nicht weh. Kann ich warten?', a: 'Nein. Genau das ist das typischste Zeichen des Hodenkrebses: ein schmerzloser Knoten. Der Gedanke „wenn es nicht wehtut, ist nichts" ist die häufigste Ursache verspäteter Diagnosen. Der ertastete Knoten muss kein Krebs sein — aber das klären Untersuchung und Ultraschall, nicht das Abwarten. Die Abklärung sollte binnen Tagen erfolgen.' },
+          { q: 'Mir ist die Untersuchung unangenehm.', a: 'Dieses Gefühl ist sehr verbreitet, und genau deshalb kommen viele junge Männer spät. Hodenkrebs spricht jedoch bei früher Erkennung sehr gut auf die Behandlung an, während Verzögerung eine einfache Therapie erschwert. Die Untersuchung dauert wenige Minuten. Dieses kurze Unbehagen kann Ihnen eine monatelange Behandlung ersparen.' },
+          { q: 'Wird eine Biopsie gemacht?', a: 'Eine Biopsie über den Hodensack wird NICHT gemacht. Eine Nadel durch den Hodensack oder ein Schnitt dort kann den Ausbreitungsweg des Tumors verändern. Richtig ist die Entfernung des Hodens mit dem Samenstrang über einen Leistenschnitt; das sichert die Diagnose und ist der erste Behandlungsschritt. Wird Ihnen eine Biopsie über den Hodensack vorgeschlagen, holen Sie eine Zweitmeinung ein.' },
+          { q: 'Kann ich nach Entfernung eines Hodens Kinder bekommen?', a: 'Ist der verbliebene Hoden gesund, bleibt die Fruchtbarkeit meist erhalten, garantieren lässt sich das aber nicht — sowohl die Erkrankung als auch eine eventuelle Chemotherapie können die Samenbildung beeinträchtigen. Deshalb muss die Samenkonservierung VOR der Behandlung besprochen werden. Dieser Schritt wird oft übersprungen; fragen Sie danach.' },
+          { q: 'Kann ich Samen auch später einfrieren lassen?', a: 'Möglicherweise nicht. Nach Beginn einer Chemotherapie kann die Samenqualität deutlich abfallen, und die Erholung dauert Monate bis Jahre oder bleibt aus. Der Zeitpunkt ist entscheidend: Eingefroren wird vor der Operation und besonders vor der Chemotherapie.' },
+          { q: 'Geraten meine Hormone mit einem Hoden durcheinander?', a: 'Ist der verbliebene Hoden gesund, bildet er meist genug Testosteron, und die Sexualfunktion bleibt unberührt. Der Testosteronwert wird dennoch in der Nachsorge gemessen; fällt er ab, kann eine Ersatztherapie infrage kommen.' },
+          { q: 'Muss ich eine Prothese einsetzen lassen?', a: 'Nein. Eine Hodenprothese ist keine medizinische Notwendigkeit, sondern allein eine Frage des Aussehens und des persönlichen Empfindens. Sie kann in derselben Sitzung oder später eingesetzt werden. Verzichten Sie darauf, entsteht kein medizinischer Nachteil.' },
+          { q: 'Bekomme ich auf jeden Fall eine Chemotherapie?', a: 'Nein. Im frühen Stadium kann bei günstiger Pathologie und günstigen Markern die engmaschige Beobachtung allein genügen; das ist ein anerkanntes und häufig gewähltes Vorgehen. Über Chemo- oder Strahlentherapie entscheiden Pathologietyp, Stadium und der Verlauf der Marker.' },
+          { q: 'Habe ich noch eine Chance, wenn die Erkrankung fortgeschritten ist?', a: 'Ja. Hodenkrebs spricht auch im ausgebreiteten Zustand sehr gut auf die Behandlung an — das unterscheidet ihn von vielen anderen Krebserkrankungen. Die Möglichkeit, dass es fortgeschritten ist, ist daher kein Grund zu zögern, sondern einer, sich sofort vorzustellen.' },
+          { q: 'Wie lange dauert die Nachsorge?', a: 'Sie dauert Jahre und ist in den ersten häufiger. Sie erfolgt mit Markern und Bildgebung. Sich wohlzufühlen ist kein Grund aufzuhören; Rezidive zeigen sich meist in den Markern, bevor sie Beschwerden machen, und sind dann behandelbar.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Testicular Cancer — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/testicular-cancer' }
+        ]
+      },
+      fr: {
+        title: 'Cancer du testicule : pourquoi agir tôt change tout',
+        summary: 'Le cancer solide le plus fréquent chez l’homme jeune, et l’un de ceux qui répondent le mieux au traitement. Si vous avez remarqué une masse indolore, n’attendez pas : le retard transforme une maladie facile à traiter en une maladie difficile.',
+        metaTitle: 'Cancer du testicule : symptômes et traitement',
+        metaDescription: 'Ce que signifie une masse indolore du testicule, les marqueurs tumoraux, pourquoi on ne biopsie pas par le scrotum, le moment de la conservation du sperme et les options thérapeutiques.',
+        quickFacts: { duration: 'Orchidectomie 45–60 minutes', anesthesia: 'Anesthésie générale ou rachianesthésie', hospitalStay: 'Ambulatoire ou 1 nuit', stayInTurkey: '7–10 jours (bilan d’extension et planification)', returnToWork: '1–2 semaines', flightClearance: '7–10 jours' },
+        definition: [
+          'Le cancer du testicule est le cancer solide le plus fréquent chez l’homme de 15 à 40 ans. Sa caractéristique essentielle : il répond très bien au traitement, et les chances de guérison restent élevées même à un stade avancé. Ce n’est pas une formule de réconfort mais l’explication de la valeur d’une consultation rapide.',
+          'LE SIGNE LE PLUS FRÉQUENT EST UNE MASSE OU UN GONFLEMENT INDOLORE DU TESTICULE. La douleur est généralement absente, d’où le raisonnement de beaucoup d’hommes : « si ça ne fait pas mal, ce n’est rien ». Ce raisonnement est faux et constitue la première cause de retard diagnostique. Parfois s’y ajoutent une sensation de pesanteur testiculaire, une pesanteur du bas-ventre ou une sensibilité du tissu mammaire.',
+          'LE RETARD EST UN VRAI PROBLÈME ET VIENT LE PLUS SOUVENT DE LA GÊNE. Les hommes jeunes hésitent à faire examiner cette région et attendent que « cela passe tout seul ». Or, dans le cancer du testicule, quelques semaines peuvent faire la différence : là où un stade précoce ne demande qu’une chirurgie et une surveillance, une maladie avancée peut imposer une chimiothérapie. La masse que vous avez sentie n’est peut-être pas un cancer — mais c’est l’examen qui le dit, pas l’attente.',
+          'LES PREMIÈRES ÉTAPES DU DIAGNOSTIC SONT L’ÉCHOGRAPHIE ET LA PRISE DE SANG. L’échographie scrotale montre si la masse est dans le testicule ou en dehors. Les marqueurs tumoraux sanguins (AFP, bêta-hCG, LDH) aident au diagnostic et au suivi ultérieur ; d’où l’importance de les doser AVANT tout traitement.',
+          'ON NE BIOPSIE PAS PAR LE SCROTUM. C’est un point important : introduire une aiguille par les bourses ou y pratiquer une incision peut modifier la voie de dissémination des cellules tumorales. La démarche correcte est de retirer le testicule avec son cordon par une incision inguinale (orchidectomie par voie inguinale). Cela établit le diagnostic et constitue la première étape du traitement. Soyez prudent si l’on vous propose une biopsie par le scrotum.',
+          'LA CONSERVATION DU SPERME DOIT ÊTRE ABORDÉE AVANT LE TRAITEMENT. La maladie elle-même comme une éventuelle chimiothérapie ou radiothérapie peuvent altérer la production de spermatozoïdes. La congélation doit avoir lieu AVANT la chirurgie et surtout avant la chimiothérapie — après, il peut être trop tard. Cette discussion est souvent omise ; elle ne devrait pas l’être.'
+        ],
+        eligibility: {
+          suitable: ['Tout homme remarquant une masse indolore, un gonflement ou une modification de forme d’un testicule — évaluation urgente', 'Hommes présentant une masse solide intratesticulaire à l’échographie', 'Hommes dont les marqueurs tumoraux sont élevés', 'Hommes décrivant une pesanteur testiculaire ou du bas-ventre', 'Hommes ayant un antécédent de testicule non descendu ou des antécédents familiaux — risque plus élevé'],
+          notSuitable: ['Hommes présentant une formation kystique de l’épididyme plutôt que du testicule — généralement bénigne, évaluée à part', 'Hommes porteurs d’une hydrocèle ou d’une varicocèle — ce n’est pas un cancer, mais il faut les distinguer à l’examen', 'Hommes présentant une douleur testiculaire brutale et intense — possible torsion exigeant une intervention en urgence dans les HEURES ; elle est écartée en premier', 'Hommes chez qui une épididymite est suspectée — on évalue la réponse au traitement, mais si la masse persiste l’exploration se poursuit']
+        },
+        technology: ['Échographie scrotale — déterminer si la masse est intratesticulaire', 'Marqueurs tumoraux : AFP, bêta-hCG, LDH — avant et après traitement', 'Orchidectomie radicale par voie inguinale — diagnostic et première étape du traitement', 'Examen anatomopathologique : séminome ou non-séminome', 'Scanner pour le bilan d’extension', 'Conservation du sperme — avant le traitement', 'Prothèse testiculaire facultative'],
+        surgeonExperience: { caseVolume: '', note: 'La chirurgie uro-oncologique fait partie des domaines d’activité du Dr Müslüm Ergün, maître de conférences. Dans le cancer du testicule, le traitement est planifié selon le type anatomopathologique et le stade, en lien avec l’oncologie médicale ; tous les patients n’ont pas besoin de chimiothérapie.' },
+        timeline: [
+          { when: 'Étape 1', title: 'Examen et échographie — sans délai', body: 'La palpation et l’échographie scrotale peuvent être réalisées le jour même. La localisation intratesticulaire de la masse se précise largement à ce stade.' },
+          { when: 'Étape 2', title: 'Marqueurs tumoraux', body: 'AFP, bêta-hCG et LDH sont dosés AVANT le traitement. Ces valeurs fondent le diagnostic et le suivi ultérieur.' },
+          { when: 'Étape 3', title: 'La conservation du sperme est abordée', body: 'Le sujet est soulevé, que vous souhaitiez ou non des enfants actuellement. La congélation doit précéder la chirurgie et surtout la chimiothérapie.' },
+          { when: 'Étape 4', title: 'Orchidectomie radicale par voie inguinale', body: 'Le testicule est retiré avec son cordon par une incision inguinale. L’intervention dure 45 à 60 minutes ; la plupart des patients sortent le jour même ou le lendemain. Une prothèse peut être posée dans le même temps si vous le souhaitez.' },
+          { when: 'Étape 5', title: 'Anatomopathologie et bilan d’extension', body: 'L’examen précise s’il s’agit d’un séminome ou d’un non-séminome. Le scanner évalue l’extension et les marqueurs sont redosés. Le plan de traitement repose sur ces trois éléments.' },
+          { when: 'Étape 6', title: 'Suite : surveillance, chimiothérapie ou radiothérapie', body: 'Au stade précoce, une surveillance rapprochée peut suffire. Si nécessaire, une chimiothérapie ou une radiothérapie est planifiée. Chez certains patients, le curage des ganglions rétropéritonéaux est envisagé.' }
+        ],
+        risks: ['LE RETARD DIAGNOSTIQUE : le principal risque de cette page n’est pas celui du traitement mais celui de l’attente. Là où un stade précoce ne demande qu’une chirurgie et une surveillance, une maladie tardive peut imposer une chimiothérapie', 'Atteinte de la fertilité : la maladie comme le traitement peuvent réduire la production de spermatozoïdes — d’où la conservation du sperme avant traitement', 'Vivre avec un seul testicule : si celui qui reste est sain, la production hormonale et la fertilité se poursuivent généralement, sans garantie ; la testostérone est surveillée', 'Risques liés à l’intervention : saignement, infection, œdème et ecchymoses du scrotum', 'Modification de la sensibilité ou engourdissement de l’aine', 'Effets indésirables de la chimiothérapie si elle est administrée — discutés avec l’oncologie médicale', 'RÉCIDIVE : la maladie peut revenir après traitement ; le suivi par marqueurs et imagerie se poursuit donc des années et ne doit pas être interrompu'],
+        alternatives: ['Il n’existe AUCUNE alternative à l’orchidectomie — elle est la première étape du diagnostic et du traitement. Les alternatives se posent à l’étape suivante :', 'Surveillance rapprochée au stade précoce — marqueurs et imagerie réguliers ; tous n’ont pas besoin de chimiothérapie', 'Chimiothérapie — selon le stade et le type anatomopathologique', 'Radiothérapie — dans des séminomes sélectionnés', 'Curage ganglionnaire rétropéritonéal — dans des non-séminomes sélectionnés', 'Chirurgie conservatrice du testicule — uniquement chez des hommes très sélectionnés à testicule unique ou tumeurs bilatérales', 'Prothèse testiculaire — sans nécessité médicale, c’est uniquement votre choix'],
+        comparison: {
+          title: 'Une masse palpable au testicule — que suggère chaque situation ?',
+          columns: ['Constatation', 'Caractéristique typique', 'Urgence'],
+          rows: [
+            { label: 'Masse ferme indolore (dans le testicule)', values: ['Grossit avec le temps, sans douleur', 'Évaluation URGENTE — sous quelques jours'] },
+            { label: 'Douleur brutale et intense', values: ['Nausées possibles', 'TRÈS URGENT — sous quelques heures (torsion possible)'] },
+            { label: 'Douleur et gonflement avec fièvre', values: ['Signes urinaires possibles', 'Urgent — possible infection, qui se traite'] },
+            { label: 'Gonflement mou, rempli de liquide', values: ['Laisse passer la lumière', 'Non urgent — hydrocèle probable'] },
+            { label: 'Petite formation kystique au-dessus du testicule', values: ['Palpable séparément du testicule', 'Non urgent — kyste de l’épididyme'] }
+          ],
+          note: 'Ce tableau n’est pas destiné à l’autodiagnostic mais à montrer quelles situations ne souffrent pas d’attente. Toute masse palpable doit être examinée ; c’est l’échographie qui fait la distinction.'
+        },
+        recovery: [
+          { period: 'Premières 48 heures', body: 'Œdème, ecchymoses et sensibilité de l’aine et du scrotum sont attendus. Le froid et un sous-vêtement de soutien soulagent.' },
+          { period: 'Semaine 1', body: 'La marche légère est permise. Le port de charges et les mouvements sollicitant les abdominaux sont interdits. Le compte rendu anatomopathologique arrive à cette période.' },
+          { period: 'Semaine 2', body: 'Le retour au travail de bureau est possible. Le bilan d’extension est terminé et la suite du plan se précise.' },
+          { period: 'Semaines 4–6', body: 'Reprise progressive du sport et des activités physiques intenses. Si une chimiothérapie est prévue, elle peut avoir débuté.' },
+          { period: 'Long terme', body: 'Suivi régulier par marqueurs et imagerie pendant des années, plus rapproché au début. La testostérone est également surveillée.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Le prix varie nettement selon qu’une orchidectomie seule suffit ou qu’il faut y ajouter bilan d’extension et traitements ultérieurs comme une chimiothérapie. Un devis ferme est possible une fois l’anatomopathologie et le bilan d’extension connus.' },
+        packageIncludes: ['Évaluation urologique et échographie scrotale', 'Marqueurs tumoraux (AFP, bêta-hCG, LDH)', 'Conseil et orientation pour la conservation du sperme', 'Orchidectomie radicale par voie inguinale et anesthésie', 'Geste ambulatoire ou 1 nuit d’hospitalisation', 'Examen anatomopathologique et imagerie de stadification', 'Avis d’oncologie médicale (si nécessaire)', 'Plan de suivi remis par écrit', 'Transferts aéroport–hôpital–hôtel', 'Hébergement (patient + 1 accompagnant)', 'Interprète médical et suivi à distance après votre retour'],
+        faqs: [
+          { q: 'J’ai une induration du testicule mais elle ne fait pas mal. Puis-je attendre ?', a: 'Non. C’est précisément le signe le plus typique du cancer du testicule : une masse indolore. L’idée que « si ça ne fait pas mal, ce n’est rien » est la cause la plus fréquente de retard diagnostique. La masse que vous avez sentie n’est peut-être pas un cancer — mais c’est l’examen et l’échographie qui le disent, pas l’attente. L’évaluation doit avoir lieu sous quelques jours.' },
+          { q: 'Je suis gêné à l’idée d’être examiné.', a: 'Ce sentiment est très répandu, et c’est exactement pour cela que beaucoup d’hommes jeunes consultent tard. Or le cancer du testicule répond très bien au traitement lorsqu’il est pris tôt, alors que le retard complique une prise en charge simple. L’examen dure quelques minutes. Cette brève gêne peut vous épargner des mois de traitement.' },
+          { q: 'Va-t-on faire une biopsie ?', a: 'On ne biopsie PAS par le scrotum. Introduire une aiguille par les bourses ou y inciser peut modifier la voie de dissémination. La démarche correcte est de retirer le testicule avec son cordon par voie inguinale ; cela établit le diagnostic et constitue la première étape du traitement. Si l’on vous propose une biopsie par le scrotum, demandez un second avis.' },
+          { q: 'Si l’on m’enlève un testicule, pourrai-je avoir des enfants ?', a: 'Si le testicule restant est sain, la fertilité se poursuit généralement, sans garantie toutefois — la maladie comme une éventuelle chimiothérapie peuvent altérer la production de spermatozoïdes. C’est pourquoi la conservation du sperme doit être abordée AVANT le traitement. Cette étape est souvent omise ; posez la question.' },
+          { q: 'Puis-je conserver mon sperme plus tard ?', a: 'Peut-être pas. Une fois la chimiothérapie commencée, la qualité du sperme peut chuter nettement et la récupération demander des mois, voire des années, ou ne pas survenir. Le calendrier est déterminant : la congélation doit précéder la chirurgie et surtout la chimiothérapie.' },
+          { q: 'Mes hormones seront-elles perturbées avec un seul testicule ?', a: 'Si le testicule restant est sain, il produit généralement assez de testostérone et la fonction sexuelle n’est pas affectée. Le taux est néanmoins mesuré lors du suivi ; s’il baisse, un traitement substitutif peut s’envisager.' },
+          { q: 'Suis-je obligé d’avoir une prothèse ?', a: 'Non. La prothèse testiculaire n’est pas une nécessité médicale ; c’est uniquement une question d’apparence et de confort personnel. Elle peut être posée dans le même temps opératoire ou plus tard. Y renoncer n’entraîne aucun inconvénient médical.' },
+          { q: 'Aurai-je forcément une chimiothérapie ?', a: 'Non. Au stade précoce, si l’anatomopathologie et les marqueurs sont favorables, une surveillance rapprochée peut suffire ; c’est une approche reconnue et fréquente. La décision d’une chimiothérapie ou d’une radiothérapie dépend du type, du stade et de l’évolution des marqueurs.' },
+          { q: 'Si la maladie est avancée, ai-je encore une chance ?', a: 'Oui. Le cancer du testicule répond très bien au traitement même lorsqu’il s’est étendu — c’est ce qui le distingue de beaucoup d’autres cancers. La possibilité qu’il soit avancé n’est donc pas une raison de différer mais de consulter immédiatement.' },
+          { q: 'Combien de temps dure le suivi ?', a: 'Il dure des années et est plus rapproché au début. Il repose sur les marqueurs et l’imagerie. Se sentir bien n’est pas une raison d’arrêter : les récidives apparaissent le plus souvent dans les marqueurs avant de provoquer des symptômes, et elles sont alors traitables.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Testicular Cancer — Association européenne d’urologie', url: 'https://uroweb.org/guidelines/testicular-cancer' }
+        ]
+      },
+      ru: {
+        title: 'Рак яичка: почему своевременное обращение меняет всё',
+        summary: 'Самый частый солидный рак у молодых мужчин — и один из тех, что очень хорошо поддаются лечению. Если вы заметили безболезненное уплотнение, не ждите: промедление превращает легко излечимую болезнь в трудную.',
+        metaTitle: 'Рак яичка: симптомы и лечение',
+        metaDescription: 'Что означает безболезненное уплотнение в яичке, опухолевые маркёры, почему не делают биопсию через мошонку, сроки криоконсервации спермы и варианты лечения.',
+        quickFacts: { duration: 'Орхиэктомия 45–60 минут', anesthesia: 'Общая или спинальная анестезия', hospitalStay: 'Амбулаторно или 1 ночь', stayInTurkey: '7–10 дней (для стадирования и планирования)', returnToWork: '1–2 недели', flightClearance: '7–10 дней' },
+        definition: [
+          'Рак яичка — самый частый солидный рак у мужчин 15–40 лет. Его главная особенность: он очень хорошо отвечает на лечение, и шанс излечения остаётся значительным даже при распространённой болезни. Это не утешительная фраза, а объяснение того, почему своевременное обращение так ценно.',
+          'САМЫЙ ЧАСТЫЙ ПРИЗНАК — БЕЗБОЛЕЗНЕННОЕ УПЛОТНЕНИЕ ИЛИ УВЕЛИЧЕНИЕ ЯИЧКА. Боли обычно нет, поэтому многие мужчины рассуждают: «не болит — значит, ничего нет». Это рассуждение ошибочно и служит главной причиной поздней диагностики. Иногда присоединяются чувство тяжести в яичке, тяжесть внизу живота или болезненность ткани молочной железы.',
+          'ПРОМЕДЛЕНИЕ — РЕАЛЬНАЯ ПРОБЛЕМА, И ЧАЩЕ ВСЕГО ОНО ОТ СТЕСНЕНИЯ. Молодые мужчины избегают осмотра этой области и ждут, что «само пройдёт». Между тем при раке яичка даже недели могут иметь значение: там, где на ранней стадии достаточно операции и наблюдения, при запущенной болезни может понадобиться химиотерапия. Нащупанное уплотнение может и не быть раком — но это определяет осмотр, а не ожидание.',
+          'ПЕРВЫЕ ШАГИ ДИАГНОСТИКИ — УЛЬТРАЗВУК И АНАЛИЗЫ КРОВИ. Ультразвук мошонки показывает, находится ли образование внутри яичка или вне его. Опухолевые маркёры крови (АФП, бета-ХГЧ, ЛДГ) помогают и в постановке диагноза, и в дальнейшем наблюдении, поэтому важно измерить их ДО лечения.',
+          'БИОПСИЮ ЧЕРЕЗ МОШОНКУ НЕ ДЕЛАЮТ. Это важный момент: введение иглы через мошонку или разрез в ней может изменить путь распространения опухолевых клеток. Правильный подход — удалить яичко вместе с канатиком через разрез в паху (паховая орхиэктомия). Это и устанавливает диагноз, и является первым этапом лечения. С осторожностью отнеситесь к предложению биопсии через мошонку.',
+          'КРИОКОНСЕРВАЦИЮ СПЕРМЫ НУЖНО ОБСУДИТЬ ДО ЛЕЧЕНИЯ. И сама болезнь, и возможная последующая химио- или лучевая терапия могут нарушить выработку сперматозоидов. Заморозку следует выполнить ДО операции и особенно до химиотерапии — после может быть поздно. Этот разговор часто пропускают; пропускать его не следует.'
+        ],
+        eligibility: {
+          suitable: ['Любой мужчина, заметивший безболезненное уплотнение, увеличение или изменение формы яичка — нужна срочная оценка', 'Мужчины, у которых на ультразвуке выявлено плотное образование внутри яичка', 'Мужчины с повышенными опухолевыми маркёрами', 'Мужчины, описывающие тяжесть в яичке или внизу живота', 'Мужчины с неопущенным яичком в анамнезе или раком яичка в семье — риск выше'],
+          notSuitable: ['Мужчины с кистозным образованием в придатке, а не в самом яичке — обычно доброкачественное, оценивается отдельно', 'Мужчины с гидроцеле или варикоцеле — это не рак, но их нужно различить при осмотре', 'Мужчины с внезапной сильной болью в яичке — возможен перекрут, требующий неотложного вмешательства в течение ЧАСОВ; его исключают первым', 'Мужчины с подозрением на эпидидимит — оценивают ответ на лечение, но если образование сохраняется, обследование продолжается']
+        },
+        technology: ['Ультразвук мошонки — определение, находится ли образование внутри яичка', 'Опухолевые маркёры: АФП, бета-ХГЧ, ЛДГ — до и после лечения', 'Паховая радикальная орхиэктомия — диагноз и первый этап лечения', 'Патоморфологическое исследование: семинома или несеминома', 'Компьютерная томография для стадирования', 'Криоконсервация спермы — до лечения', 'Протез яичка по желанию'],
+        surgeonExperience: { caseVolume: '', note: 'Уроонкологическая хирургия входит в сферу работы доц. д-ра Мюслюма Эргюна. При раке яичка лечение планируют по типу опухоли и стадии совместно с онкологами; химиотерапия нужна не каждому пациенту.' },
+        timeline: [
+          { when: 'Шаг 1', title: 'Осмотр и ультразвук — без отсрочки', body: 'Пальпацию и ультразвук мошонки можно выполнить в тот же день. На этом этапе во многом выясняется, находится ли образование внутри яичка.' },
+          { when: 'Шаг 2', title: 'Опухолевые маркёры', body: 'АФП, бета-ХГЧ и ЛДГ измеряют ДО лечения. Эти значения служат основой и для диагноза, и для последующего наблюдения.' },
+          { when: 'Шаг 3', title: 'Обсуждение криоконсервации спермы', body: 'Тему поднимают независимо от того, планируете ли вы детей сейчас. Заморозку выполняют до операции и особенно до химиотерапии.' },
+          { when: 'Шаг 4', title: 'Паховая радикальная орхиэктомия', body: 'Через разрез в паху яичко удаляют вместе с канатиком. Операция занимает 45–60 минут; большинство пациентов выписывают в тот же или на следующий день. По желанию в ту же операцию можно установить протез.' },
+          { when: 'Шаг 5', title: 'Патоморфология и стадирование', body: 'Заключение указывает семиному или несеминому. Томография оценивает распространение, маркёры измеряют повторно. На этих трёх сведениях строится план лечения.' },
+          { when: 'Шаг 6', title: 'Дальнейшее лечение: наблюдение, химио- или лучевая терапия', body: 'На ранней стадии может хватить тщательного наблюдения. При необходимости планируют химио- или лучевую терапию. У части пациентов рассматривают хирургическое удаление лимфоузлов позади брюшной полости.' }
+        ],
+        risks: ['ЗАДЕРЖКА ДИАГНОЗА: главный риск на этой странице — не риск лечения, а риск ожидания. Там, где на ранней стадии достаточно операции и наблюдения, при запоздалой болезни может понадобиться химиотерапия', 'Влияние на способность к зачатию: и болезнь, и лечение могут снизить выработку сперматозоидов — поэтому криоконсервацию выполняют до лечения', 'Жизнь с одним яичком: если оставшееся здорово, выработка гормонов и способность к зачатию обычно сохраняются, но это не гарантировано; уровень тестостерона отслеживают', 'Риски операции: кровотечение, инфекция, отёк и синяки мошонки', 'Изменение чувствительности или онемение в паху', 'Побочные действия химиотерапии, если она проводится — обсуждаются отдельно с онкологами', 'РЕЦИДИВ: болезнь может вернуться после лечения, поэтому наблюдение с маркёрами и визуализацией продолжается годами и не должно прерываться'],
+        alternatives: ['Альтернативы орхиэктомии НЕТ — это первый этап и диагностики, и лечения. Альтернативы возникают на следующем шаге:', 'Тщательное наблюдение на ранней стадии — с регулярными маркёрами и визуализацией; химиотерапия нужна не всем', 'Химиотерапия — по стадии и типу опухоли', 'Лучевая терапия — при отобранных семиномах', 'Забрюшинная лимфаденэктомия — при отобранных несеминомах', 'Органосохраняющая операция на яичке — только у очень отобранных мужчин с единственным яичком или двусторонними опухолями', 'Протез яичка — не медицинская необходимость, а исключительно ваш выбор'],
+        comparison: {
+          title: 'Прощупываемое образование в яичке — о чём говорит каждая находка?',
+          columns: ['Находка', 'Типичная черта', 'Срочность'],
+          rows: [
+            { label: 'Безболезненное плотное образование (в яичке)', values: ['Растёт со временем, боли нет', 'СРОЧНАЯ оценка — в течение дней'] },
+            { label: 'Внезапная сильная боль', values: ['Может сопровождаться тошнотой', 'ОЧЕНЬ СРОЧНО — в течение часов (возможен перекрут)'] },
+            { label: 'Боль и отёк с лихорадкой', values: ['Могут быть мочевые жалобы', 'Срочно — возможно воспаление, которое лечат'] },
+            { label: 'Мягкая припухлость с жидкостью', values: ['Просвечивает при подсветке', 'Не срочно — вероятно гидроцеле'] },
+            { label: 'Небольшое кистозное образование над яичком', values: ['Прощупывается отдельно от яичка', 'Не срочно — киста придатка'] }
+          ],
+          note: 'Эта таблица не для самодиагностики, а чтобы показать, какие ситуации не терпят ожидания. Любое прощупываемое образование нужно осмотреть; различает их ультразвук.'
+        },
+        recovery: [
+          { period: 'Первые 48 часов', body: 'Ожидаемы отёк, синяки и чувствительность в паху и мошонке. Облегчение приносят холод и поддерживающее бельё.' },
+          { period: '1-я неделя', body: 'Лёгкая ходьба разрешена. Поднятие тяжестей и движения, нагружающие мышцы живота, запрещены. В этот период приходит патоморфологическое заключение.' },
+          { period: '2-я неделя', body: 'Можно вернуться к работе за столом. Стадирование завершают, дальнейший план проясняется.' },
+          { period: '4–6-я неделя', body: 'Постепенное возвращение к спорту и тяжёлым физическим нагрузкам. Если запланирована химиотерапия, она может уже начаться.' },
+          { period: 'Долгосрочно', body: 'Регулярное наблюдение с маркёрами и визуализацией в течение лет, чаще в первые годы. Отслеживают и уровень тестостерона.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'Стоимость заметно зависит от того, нужна ли только орхиэктомия или также стадирование и последующее лечение, например химиотерапия. Точное предложение возможно после получения патоморфологии и результатов стадирования.' },
+        packageIncludes: ['Урологическое обследование и ультразвук мошонки', 'Опухолевые маркёры (АФП, бета-ХГЧ, ЛДГ)', 'Консультирование и направление на криоконсервацию спермы', 'Паховая радикальная орхиэктомия и анестезия', 'Амбулаторная процедура или 1 ночь в стационаре', 'Патоморфологическое исследование и визуализация для стадирования', 'Консультация онколога (при необходимости)', 'Письменный план наблюдения', 'Трансферы аэропорт–больница–отель', 'Проживание (пациент + 1 сопровождающий)', 'Медицинский переводчик и дистанционное наблюдение после возвращения домой'],
+        faqs: [
+          { q: 'В яичке есть уплотнение, но оно совсем не болит. Можно подождать?', a: 'Нет. Именно это и есть самый типичный признак рака яичка: безболезненное уплотнение. Мысль «не болит — значит, ничего нет» — самая частая причина поздней диагностики. Нащупанное уплотнение может и не быть раком, но это выясняют осмотр и ультразвук, а не ожидание. Оценить нужно в течение нескольких дней.' },
+          { q: 'Мне неловко идти на осмотр.', a: 'Это чувство очень распространено, и именно поэтому многие молодые мужчины обращаются поздно. Но рак яичка при раннем выявлении очень хорошо поддаётся лечению, тогда как промедление усложняет простое лечение. Осмотр занимает несколько минут. Этот короткий дискомфорт может избавить вас от месяцев лечения.' },
+          { q: 'Будут ли делать биопсию?', a: 'Биопсию через мошонку НЕ делают. Игла через мошонку или разрез в ней могут изменить путь распространения опухоли. Правильный подход — удалить яичко вместе с канатиком через разрез в паху; это и ставит диагноз, и является первым этапом лечения. Если вам предлагают биопсию через мошонку, получите второе мнение.' },
+          { q: 'Если яичко удалят, смогу ли я иметь детей?', a: 'Если оставшееся яичко здорово, способность к зачатию обычно сохраняется, но гарантировать нельзя: и сама болезнь, и возможная химиотерапия могут повлиять на выработку сперматозоидов. Поэтому криоконсервацию нужно обсудить ДО лечения. Этот шаг часто пропускают; спросите сами.' },
+          { q: 'Нельзя ли заморозить сперму позже?', a: 'Возможно, нет. После начала химиотерапии качество спермы может заметно упасть, а восстановление занять месяцы или годы, а иногда не наступить вовсе. Сроки критичны: замораживать нужно до операции и особенно до химиотерапии.' },
+          { q: 'Нарушатся ли гормоны с одним яичком?', a: 'Если оставшееся яичко здорово, оно обычно вырабатывает достаточно тестостерона, и половая функция не страдает. Тем не менее уровень измеряют при наблюдении; при снижении может обсуждаться заместительная терапия.' },
+          { q: 'Обязательно ли ставить протез?', a: 'Нет. Протез яичка не является медицинской необходимостью; это исключительно вопрос внешнего вида и личного комфорта. Его можно установить в ту же операцию или позже. Отказ не несёт никаких медицинских недостатков.' },
+          { q: 'Химиотерапия точно понадобится?', a: 'Нет. На ранней стадии, если патоморфология и маркёры благоприятны, может хватить тщательного наблюдения; это признанный и часто используемый подход. Решение о химио- или лучевой терапии принимают по типу опухоли, стадии и динамике маркёров.' },
+          { q: 'Если болезнь уже распространилась, есть ли у меня шанс?', a: 'Да. Рак яичка очень хорошо отвечает на лечение даже при распространении — именно это отличает его от многих других опухолей. Поэтому вероятность того, что болезнь запущена, не повод откладывать обращение, а повод обратиться немедленно.' },
+          { q: 'Сколько длится наблюдение?', a: 'Оно длится годами и чаще проводится в первые годы. Ведётся по маркёрам и визуализации. Хорошее самочувствие не повод прекращать: рецидивы чаще всего видны в маркёрах ещё до появления жалоб и тогда поддаются лечению.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Testicular Cancer — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/testicular-cancer' }
+        ]
+      },
+      ar: {
+        title: 'سرطان الخصية: لماذا يغيّر التبكير كل شيء',
+        summary: 'أكثر الأورام الصلبة شيوعًا عند الشبان، وهو من أكثرها استجابةً للعلاج. فإن لاحظت كتلة غير مؤلمة فلا تنتظر؛ فالتأخير يحوّل مرضًا سهل العلاج إلى مرض صعب.',
+        metaTitle: 'سرطان الخصية: الأعراض والعلاج',
+        metaDescription: 'ما معنى كتلة غير مؤلمة في الخصية، ودلالات الأورام، ولماذا لا تُؤخذ خزعة عبر كيس الصفن، وتوقيت تجميد الحيوانات المنوية، وخيارات العلاج.',
+        quickFacts: { duration: 'استئصال الخصية 45–60 دقيقة', anesthesia: 'تخدير عام أو نصفي', hospitalStay: 'في اليوم نفسه أو ليلة واحدة', stayInTurkey: '7–10 أيام (لتحديد المرحلة والتخطيط)', returnToWork: '1–2 أسبوع', flightClearance: '7–10 أيام' },
+        definition: [
+          'سرطان الخصية أكثر أورام الأعضاء الصلبة شيوعًا عند الرجال بين 15 و40 سنة. وأهم ما يميّزه أنه يستجيب للعلاج استجابةً عالية، وأن فرصة الشفاء تبقى كبيرة حتى في المرض المتقدم. وهذه ليست عبارة مواساة بل تفسير لقيمة المراجعة في وقتها.',
+          'أكثر العلامات شيوعًا كتلة أو تضخم غير مؤلم في الخصية. والألم غائب عادةً، ولهذا يستنتج كثير من الرجال: «ما دام لا يؤلم فلا شيء». وهذا الاستنتاج خاطئ وهو أكبر سبب لتأخر التشخيص. وقد يصحبه شعور بثقل في الخصية أو امتلاء أسفل البطن أو إيلام في نسيج الثدي.',
+          'التأخير مشكلة حقيقية وسببه في الغالب الحرج. فالشبان يتحرجون من فحص هذه المنطقة وينتظرون أن «تزول وحدها». غير أن الأسابيع قد تُحدث فرقًا في سرطان الخصية: فحيث تكفي في المرحلة المبكرة عملية ومتابعة، قد يلزم في المرض المتقدم علاج كيميائي. والكتلة التي لمستها قد لا تكون سرطانًا — لكن الذي يحسم ذلك هو الفحص لا الانتظار.',
+          'أول خطوتين في التشخيص الموجات فوق الصوتية وتحاليل الدم. فتصوير كيس الصفن يبيّن ما إذا كانت الكتلة داخل الخصية أم خارجها. ودلالات الأورام في الدم (AFP وبيتا-hCG وLDH) تساعد في التشخيص وفي المتابعة لاحقًا؛ ولذلك يهم قياسها قبل العلاج.',
+          'لا تُؤخذ خزعة عبر كيس الصفن. وهذه نقطة مهمة: فإدخال إبرة عبر كيس الصفن أو إحداث شقّ فيه قد يغيّر طريق انتشار الخلايا الورمية. والنهج الصحيح إزالة الخصية مع حبلها عبر شقّ في المغبن (استئصال الخصية عبر المغبن). وهذا يضع التشخيص ويمثّل الخطوة الأولى في العلاج. فاحذر ممن يقترح عليك خزعة عبر كيس الصفن.',
+          'يجب بحث تجميد الحيوانات المنوية قبل العلاج. فالمرض نفسه وما قد يتلوه من علاج كيميائي أو إشعاعي قد يؤثر في إنتاج الحيوانات المنوية. والتجميد ينبغي أن يكون قبل العملية وخصوصًا قبل العلاج الكيميائي — فبعده قد يكون الأوان قد فات. وهذا الحديث كثيرًا ما يُتخطّى؛ ولا ينبغي تخطّيه.'
+        ],
+        eligibility: {
+          suitable: ['كل رجل يلاحظ كتلة غير مؤلمة أو تضخمًا أو تغيّرًا في شكل الخصية — يلزم تقييم عاجل', 'من تُكتشف لديهم كتلة صلبة داخل الخصية بالموجات فوق الصوتية', 'من ترتفع لديهم دلالات الأورام', 'من يصفون ثقلًا في الخصية أو امتلاءً أسفل البطن', 'من لديهم قصة خصية غير نازلة أو سرطان خصية في العائلة — فالخطر أعلى'],
+          notSuitable: ['من لديهم تكوّن كيسي في البربخ لا في الخصية — حميد عادةً ويُقيَّم على حدة', 'من لديهم قيلة مائية أو دوالي — فهذه ليست سرطانًا لكن يجب تمييزها بالفحص', 'من لديهم ألم خصوي مفاجئ شديد — فقد يكون التواءً يستلزم تدخلًا عاجلًا خلال ساعات؛ ويُستبعَد أولًا', 'من يُشتبه لديهم التهاب البربخ — تُقيَّم الاستجابة للعلاج، فإن بقيت الكتلة استمر البحث']
+        },
+        technology: ['تصوير كيس الصفن بالموجات فوق الصوتية — تحديد ما إذا كانت الكتلة داخل الخصية', 'دلالات الأورام: AFP وبيتا-hCG وLDH — قبل العلاج وبعده', 'استئصال الخصية الجذري عبر المغبن — التشخيص والخطوة الأولى في العلاج', 'الفحص النسيجي المرضي: ورم منوي أم غير منوي', 'التصوير المقطعي لتحديد المرحلة', 'تجميد الحيوانات المنوية — قبل العلاج', 'دعامة خصية اختيارية'],
+        surgeonExperience: { caseVolume: '', note: 'جراحة الأورام البولية من مجالات عمل الأستاذ المشارك الدكتور مسلم إرغون. وفي سرطان الخصية يُخطَّط العلاج بحسب نوع الورم ومرحلته ويُدار مع أطباء الأورام؛ ولا يحتاج كل مريض إلى علاج كيميائي.' },
+        timeline: [
+          { when: 'الخطوة 1', title: 'الفحص والموجات فوق الصوتية — من دون تأجيل', body: 'يمكن إجراء الجسّ وتصوير كيس الصفن في اليوم نفسه. وفي هذه المرحلة يتضح إلى حد كبير ما إذا كانت الكتلة داخل الخصية.' },
+          { when: 'الخطوة 2', title: 'دلالات الأورام', body: 'تُقاس AFP وبيتا-hCG وLDH قبل العلاج. وهذه القيم أساس التشخيص والمتابعة اللاحقة.' },
+          { when: 'الخطوة 3', title: 'بحث تجميد الحيوانات المنوية', body: 'يُطرح الموضوع سواء رغبت في الإنجاب الآن أم لا. والتجميد يسبق العملية وخصوصًا العلاج الكيميائي.' },
+          { when: 'الخطوة 4', title: 'استئصال الخصية الجذري عبر المغبن', body: 'تُزال الخصية مع حبلها عبر شقّ في المغبن. ويستغرق الإجراء 45–60 دقيقة؛ ويُخرَّج معظم المرضى في اليوم نفسه أو التالي. ويمكن وضع دعامة في الجلسة نفسها إن رغبت.' },
+          { when: 'الخطوة 5', title: 'الفحص النسيجي وتحديد المرحلة', body: 'يبيّن التقرير إن كان الورم منويًا أم غير منوي. ويُقيَّم الانتشار بالتصوير المقطعي وتُعاد قياسات الدلالات. وعلى هذه المعطيات الثلاثة تقوم خطة العلاج.' },
+          { when: 'الخطوة 6', title: 'العلاج التالي: متابعة أو كيميائي أو إشعاعي', body: 'في المرحلة المبكرة قد تكفي المتابعة اللصيقة وحدها. وعند اللزوم يُخطَّط علاج كيميائي أو إشعاعي. وعند بعض المرضى يُطرح استئصال العقد اللمفية خلف البطن جراحيًا.' }
+        ],
+        risks: ['تأخر التشخيص: أهم خطر في هذه الصفحة ليس خطر العلاج بل خطر الانتظار. فحيث تكفي في المرحلة المبكرة عملية ومتابعة، قد يلزم عند التأخر علاج كيميائي', 'التأثير في الخصوبة: فالمرض والعلاج كلاهما قد يقلل إنتاج الحيوانات المنوية — ولهذا يُجرى التجميد قبل العلاج', 'الحياة بخصية واحدة: إن كانت المتبقية سليمة استمر إنتاج الهرمونات والخصوبة عادةً، لكن ذلك غير مضمون؛ ويُتابَع مستوى التستوستيرون', 'مخاطر العملية: النزف والعدوى والتورم والكدمات في كيس الصفن', 'تغيّر الإحساس أو خدر في المغبن', 'الآثار الجانبية للعلاج الكيميائي إن أُعطي — تُناقَش مع أطباء الأورام على حدة', 'النكس: قد يعود المرض بعد العلاج؛ ولهذا تستمر المتابعة بالدلالات والتصوير سنوات ولا يجوز تركها'],
+        alternatives: ['لا بديل عن استئصال الخصية — فهو الخطوة الأولى في التشخيص والعلاج معًا. أما البدائل فتُطرح في الخطوة التالية:', 'المتابعة اللصيقة في المرحلة المبكرة — بدلالات وتصوير منتظمين؛ ولا يحتاج الجميع إلى علاج كيميائي', 'العلاج الكيميائي — بحسب المرحلة ونوع الورم', 'العلاج الإشعاعي — في أورام منوية مختارة', 'استئصال العقد اللمفية خلف الصفاق — في أورام غير منوية مختارة', 'الجراحة الحافظة للخصية — فقط عند مرضى مختارين جدًا ذوي خصية واحدة أو أورام ثنائية الجانب', 'دعامة الخصية — ليست ضرورة طبية بل خيارك وحدك'],
+        comparison: {
+          title: 'كتلة محسوسة في الخصية — ماذا تعني كل حالة؟',
+          columns: ['الموجودة', 'السمة المعتادة', 'درجة الاستعجال'],
+          rows: [
+            { label: 'كتلة صلبة غير مؤلمة (داخل الخصية)', values: ['تكبر مع الوقت ولا تؤلم', 'تقييم عاجل — خلال أيام'] },
+            { label: 'ألم مفاجئ شديد', values: ['قد يصحبه غثيان', 'عاجل جدًا — خلال ساعات (قد يكون التواءً)'] },
+            { label: 'ألم وتورم مع حمى', values: ['قد تصحبه شكوى بولية', 'عاجل — قد يكون التهابًا ويُعالَج'] },
+            { label: 'تورم طري ممتلئ بسائل', values: ['ينفذ الضوء منه', 'غير عاجل — يُرجَّح أنه قيلة مائية'] },
+            { label: 'تكوّن كيسي صغير فوق الخصية', values: ['يُجسّ منفصلًا عن الخصية', 'غير عاجل — كيس بربخي'] }
+          ],
+          note: 'هذا الجدول ليس لتشخّص نفسك بل ليبيّن أي الحالات لا تحتمل الانتظار. وكل كتلة محسوسة ينبغي فحصها؛ والتمييز تفعله الموجات فوق الصوتية.'
+        },
+        recovery: [
+          { period: 'أول 48 ساعة', body: 'يُتوقع تورم وكدمات وحساسية في المغبن وكيس الصفن. ويخفف وضع الثلج وارتداء ملابس داخلية داعمة.' },
+          { period: 'الأسبوع 1', body: 'المشي الخفيف مسموح. ورفع الأثقال والحركات التي تُجهد عضلات البطن ممنوعة. وتصل نتيجة الفحص النسيجي في هذه المرحلة.' },
+          { period: 'الأسبوع 2', body: 'يمكن العودة إلى العمل المكتبي. ويكتمل تحديد المرحلة وتتضح خطة العلاج التالية.' },
+          { period: 'الأسبوع 4–6', body: 'عودة تدريجية إلى الرياضة والنشاط البدني الشاق. وإن كان العلاج الكيميائي مخططًا فقد يكون قد بدأ.' },
+          { period: 'المدى الطويل', body: 'متابعة منتظمة بالدلالات والتصوير تمتد سنوات وتكون أكثف في سنواتها الأولى. ويُراقَب مستوى التستوستيرون أيضًا.' }
+        ],
+        price: { from: 0, to: 0, currency: 'EUR', disclaimer: 'يتغير السعر بوضوح بحسب ما إذا كان المطلوب استئصال الخصية وحده أم مع تحديد المرحلة وعلاجات تالية كالعلاج الكيميائي. ويمكن تقديم العرض النهائي بعد اكتمال الفحص النسيجي وتحديد المرحلة.' },
+        packageIncludes: ['تقييم المسالك البولية وتصوير كيس الصفن', 'دلالات الأورام (AFP وبيتا-hCG وLDH)', 'الإرشاد والإحالة لتجميد الحيوانات المنوية', 'استئصال الخصية الجذري عبر المغبن والتخدير', 'إجراء في اليوم نفسه أو إقامة ليلة واحدة', 'الفحص النسيجي المرضي وتصوير تحديد المرحلة', 'استشارة طب الأورام (عند اللزوم)', 'خطة متابعة مكتوبة', 'التنقلات بين المطار والمستشفى والفندق', 'الإقامة (المريض + مرافق واحد)', 'مترجم طبي ومتابعة عن بُعد بعد عودتك إلى بلدك'],
+        faqs: [
+          { q: 'في خصيتي تصلّب لكنه لا يؤلم إطلاقًا. هل يمكنني الانتظار؟', a: 'لا. فهذه بالضبط أكثر علامات سرطان الخصية نمطيةً: كتلة غير مؤلمة. وفكرة «ما دام لا يؤلم فلا شيء» أشيع أسباب تأخر التشخيص. والكتلة التي لمستها قد لا تكون سرطانًا — لكن الذي يبيّن ذلك هو الفحص والتصوير لا الانتظار. وينبغي التقييم خلال أيام.' },
+          { q: 'أتحرّج من الفحص.', a: 'هذا الشعور شائع جدًا، وهو تحديدًا سبب تأخر كثير من الشبان. غير أن سرطان الخصية يستجيب للعلاج استجابةً ممتازة عند اكتشافه مبكرًا، بينما يُصعّب التأخير علاجًا بسيطًا. والفحص يستغرق دقائق. وهذا الانزعاج القصير قد يجنّبك أشهرًا من العلاج.' },
+          { q: 'هل ستُؤخذ خزعة؟', a: 'لا تُؤخذ خزعة عبر كيس الصفن. فإدخال إبرة عبره أو إحداث شقّ فيه قد يغيّر طريق انتشار الورم. والنهج الصحيح إزالة الخصية مع حبلها عبر شقّ في المغبن؛ وهذا يضع التشخيص ويمثّل أول خطوة في العلاج. فإن عُرضت عليك خزعة عبر كيس الصفن فاطلب رأيًا ثانيًا.' },
+          { q: 'إن أُزيلت خصيتي فهل يمكنني الإنجاب؟', a: 'إن كانت الخصية المتبقية سليمة استمرت الخصوبة عادةً، لكن لا يمكن ضمان ذلك — فالمرض نفسه وما قد يلزم من علاج كيميائي قد يؤثران في إنتاج الحيوانات المنوية. ولذلك يجب بحث التجميد قبل العلاج. وهذه الخطوة كثيرًا ما تُتخطّى؛ فاسأل عنها.' },
+          { q: 'ألا يمكنني التجميد لاحقًا؟', a: 'قد لا يمكن. فبعد بدء العلاج الكيميائي قد تنخفض جودة السائل المنوي بوضوح، وقد يستغرق التعافي أشهرًا أو سنوات، وقد لا يحدث أصلًا. فالتوقيت حاسم: التجميد يسبق العملية وخصوصًا العلاج الكيميائي.' },
+          { q: 'هل تختلّ هرموناتي بخصية واحدة؟', a: 'إن كانت الخصية المتبقية سليمة فهي تنتج عادةً تستوستيرون كافيًا ولا تتأثر الوظيفة الجنسية. ومع ذلك يُقاس المستوى في المتابعة؛ فإن انخفض طُرح العلاج التعويضي.' },
+          { q: 'هل يجب أن أضع دعامة؟', a: 'لا. فدعامة الخصية ليست ضرورة طبية؛ بل هي مسألة مظهر وراحة شخصية بحتة. ويمكن وضعها في الجلسة نفسها أو لاحقًا. وإن لم ترغب فلا ضرر طبي في ذلك.' },
+          { q: 'هل سأتلقى علاجًا كيميائيًا حتمًا؟', a: 'لا. ففي المرحلة المبكرة، إن كان الفحص النسيجي والدلالات مواتية، قد تكفي المتابعة اللصيقة وحدها؛ وهذا نهج معترف به وشائع. ويُتخذ قرار العلاج الكيميائي أو الإشعاعي بحسب نوع الورم والمرحلة ومسار الدلالات.' },
+          { q: 'إن كان المرض متقدمًا فهل لي فرصة؟', a: 'نعم. فسرطان الخصية يستجيب للعلاج استجابةً عالية حتى عند انتشاره — وهذا ما يميّزه عن كثير من الأورام الأخرى. ولذلك فاحتمال أن يكون متقدمًا ليس سببًا لتأجيل المراجعة بل سبب للمراجعة فورًا.' },
+          { q: 'كم تستمر المتابعة؟', a: 'تستمر سنوات وتكون أكثف في سنواتها الأولى، وتُجرى بالدلالات والتصوير. وشعورك بأنك بخير ليس سببًا للتوقف؛ فالنكسات تظهر غالبًا في الدلالات قبل أن تسبب أي شكوى، وتكون حينها قابلة للعلاج.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Testicular Cancer — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/testicular-cancer' }
+        ]
+      }
+    }
+  },
+  {
+    /**
      * Kadın ürolojisi hub'ının altındaki ilk alt sayfa (prompt m.4.1).
      * ÜÇ ZORUNLU DÜRÜSTLÜK NOKTASI:
      * 1. STRES ve SIKIŞMA tipi kaçırma AYRI hastalıklardır ve tedavileri
