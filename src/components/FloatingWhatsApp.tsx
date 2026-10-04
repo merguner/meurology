@@ -36,11 +36,16 @@ export async function FloatingWhatsApp() {
           <Icon name="phone" size={18} />
           {tc('callCta')}
         </a>
+        {/*
+          aria-label KULLANILMAZ: düğmenin görünen metni zaten "WhatsApp".
+          Daha uzun bir aria-label vermek, erişilebilir adın görünen metni
+          içermemesine yol açıyordu (WCAG 2.5.3 "Label in Name" ihlali;
+          Lighthouse label-content-name-mismatch). Görünen metin yeterli ad.
+        */}
         <a
           href={whatsappLink()}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={t('whatsappCta')}
           className="flex min-w-0 items-center justify-center gap-2 bg-[#25D366] py-3 text-sm font-medium text-[#062b14] transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring"
         >
           <Icon name="whatsapp" size={18} />

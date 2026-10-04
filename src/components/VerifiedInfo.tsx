@@ -28,10 +28,22 @@ export function VerifiedInfo({
       {note && <p className="mb-4 text-sm text-muted">{note}</p>}
       <dl className="grid gap-4 sm:grid-cols-2">
         {items.map((item, i) => (
+          /*
+            <dl> içindeki sarmalayıcı <div> YALNIZCA <dt> ve <dd> içerebilir.
+            Not metni daha önce doğrudan div'in altında <p> olarak duruyordu;
+            bu geçersiz işaretlemedir ve erişilebilirlik denetiminde
+            "definition-list" hatası veriyordu. Not artık <dd> içine alındı.
+          */
           <div key={i} className="rounded-lg border border-border bg-surface p-4">
             <dt className="label-mono mb-1">{item.label}</dt>
-            <dd className="font-mono text-sm font-semibold text-fg">{item.value}</dd>
-            {item.note && <p className="mt-1 text-xs text-muted">{item.note}</p>}
+            <dd className="font-mono text-sm font-semibold text-fg">
+              {item.value}
+              {item.note && (
+                <span className="mt-1 block font-sans text-xs font-normal text-muted">
+                  {item.note}
+                </span>
+              )}
+            </dd>
           </div>
         ))}
       </dl>
