@@ -26668,59 +26668,147 @@ export const treatments: Treatment[] = [
         ]
       },
       en: {
-        title: 'Urethroplasty (Urethral Stricture Surgery)',
-        summary: 'Reconstructive surgery offering a durable solution for urethral stricture; bulbar, penile, long-segment and redo (repeat) cases included.',
-        metaTitle: 'Urethroplasty | Urethral Stricture Surgery (Bulbar, Penile, Redo)',
-        metaDescription: 'Urethroplasty for urethral stricture: bulbar and penile stricture, long-segment/complex stricture and redo urethroplasty after failed attempts. Experience with complex and rare cases.',
+        title: 'Urethroplasty (Surgery for Urethral Stricture)',
+        summary:
+          'Definitive repair of a urethral stricture. Cutting the stricture from inside brings quick relief but it comes back — and every repeat makes the next repair harder. This page explains how that cycle is broken.',
+        metaTitle: 'Urethroplasty: Definitive Repair of Urethral Stricture (Bulbar, Penile, Redo)',
+        metaDescription:
+          'Why urethrotomy is not enough, the harm of repeated endoscopic treatment, buccal mucosa graft repair, single and staged surgery, and realistic expectations in redo cases.',
+        quickFacts: {
+          duration: '2–4 hours depending on stricture length',
+          anesthesia: 'General anaesthesia',
+          hospitalStay: '1–3 nights',
+          stayInTurkey: '3–4 weeks (the catheter is removed here)',
+          catheter: '2–3 weeks',
+          returnToWork: '2–4 weeks (desk work sooner)',
+          flightClearance: 'After catheter removal and review'
+        },
         definition: [
-          'A urethral stricture is a narrowing of the urinary channel (urethra) by scar tissue, causing a weak stream, straining and recurrent infections. Simple procedures (dilation, internal urethrotomy) give short-term relief but the stricture usually recurs.',
-          'Urethroplasty is the reconstructive operation that repairs the stricture durably. The location (bulbar/penile), length and any previous attempts determine the surgery. Long-segment and recurrent (redo) cases require special experience and are typically referred to the few centers that can perform them safely.'
+          'The urethra is the channel that carries urine out of the bladder. When scar tissue develops in part of it and narrows it, the result is a urethral stricture. The symptoms begin insidiously: a weakening stream, spraying, hesitancy, a feeling of incomplete emptying, frequency and recurrent urinary infections.',
+          'THE CENTRAL DISTINCTION ON THIS PAGE: URETHROTOMY OPENS, URETHROPLASTY REPAIRS. Cutting the stricture from inside opens the narrowing, but the scar tissue that caused it stays where it is. The body heals the cut with further scar tissue, so the stricture tends to recur.',
+          'THAT IS THE REAL HARM OF REPEATED ENDOSCOPIC TREATMENT: each procedure creates fresh scar, the stricture lengthens rather than shortens, and the surrounding tissue stiffens. Repeated urethrotomy therefore not only fails to help, it makes the eventual reconstruction harder. A first urethrotomy is reasonable for a short, well-placed stricture; the problem is doing the same thing over and over.',
+          'There are two basic approaches in urethroplasty. For short strictures the narrowed segment is excised and the healthy ends joined (excision and anastomosis). For longer strictures the channel is widened with a patch of tissue (augmentation). The usual graft is mucosa taken from the inside of the cheek, chosen because it is accustomed to a moist environment and the donor site heals quickly.',
+          'A STAGED REPAIR IS NOT A FAILURE. In heavily scarred, very long strictures, or where several procedures have already been performed, the repair may be planned in two stages months apart. For an international patient this has a concrete consequence: two separate journeys. It must be discussed before any booking is made.'
+        ],
+        eligibility: {
+          suitable: [
+            'Men whose stricture has recurred after urethrotomy or dilatation',
+            'Men with long strictures, where cutting is unlikely to give a durable result',
+            'Men with strictures in more than one segment',
+            'Men who have been managing for years with intermittent self-catheterisation',
+            'Men with strictures following trauma',
+            'Men whose previous repair elsewhere has failed (redo)',
+            'Men who have developed a stricture after hypospadias surgery'
+          ],
+          notSuitable: [
+            'Men with active urinary infection: the infection is treated first',
+            'Men with local skin infection or inflammation, in whom surgery is deferred',
+            'Men who cannot accommodate the catheter period and the length of stay — the catheter time in this operation cannot be shortened',
+            'Men needing an oral graft whose oral health is unsuitable, which is corrected first; smoking impairs graft healing',
+            'Men whose general condition is unsuitable for prolonged general anaesthesia'
+          ]
+        },
+        technology: [
+          'Retrograde urethrography and voiding cystourethrography — the basic studies showing the site and length of the stricture',
+          'Urethroscopy — direct inspection',
+          'Uroflowmetry and post-void residual measurement',
+          'Buccal mucosa graft harvest',
+          'Lingual or labial mucosa where the cheek has already been used',
+          'Skin flaps in selected locations',
+          'Magnified vision and fine suture material for the reconstruction'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
+          note: 'Reconstructive urology is among Assoc. Prof. Müslüm Ergün\'s areas of practice. The plan is based on the site and length of the stricture, the number of previous procedures and the condition of the tissue available for grafting, considered together.'
         },
         expertise: {
-          redoRate: 'A significant share of cases are redo referrals after a failed attempt or iatrogenic injury at another center.',
-          complexCase: 'Long-segment stricture, pan-urethral stricture, lichen sclerosus–related stricture and repeated failure fall within complex cases.',
-          advancedTechnique: 'Augmentation urethroplasty with buccal (cheek) mucosa graft; staged reconstruction when needed.'
+          redoRate: 'A substantial proportion of cases are redo repairs following a failed procedure or iatrogenic injury elsewhere.',
+          complexCase: 'Long-segment stricture, pan-urethral stricture, stricture due to lichen sclerosus and repeated failure fall within the complex category.',
+          advancedTechnique: 'Augmentation urethroplasty with buccal mucosa graft; staged reconstruction where required.'
         },
         timeline: [
-          { when: 'Remote', title: 'File assessment', body: 'Your urethrogram (RUG/VCUG), flow test and previous operative notes are reviewed by the surgeon. Detailed pre-assessment is essential in these cases.' },
-          { when: 'Day 1–2', title: 'Arrival & advanced tests', body: 'Examination, urethroscopy and imaging if needed; the length and site of the stricture are clarified.' },
-          { when: 'Day 2–3', title: 'Surgery', body: 'Excision-anastomosis or graft augmentation urethroplasty depending on the stricture type.' },
-          { when: 'After', title: 'Catheter period', body: 'A urethral catheter usually stays 2–3 weeks; check imaging is done before removal.' },
-          { when: 'Follow-up', title: 'Long-term follow-up', body: 'Flow test and symptom tracking, more frequent in the first year; success is judged by long-term patency.' }
+          { when: 'Remotely', title: 'Review of your file', body: 'Your urethrogram images, flow study and PREVIOUS OPERATION NOTES are reviewed. That last item is the critical document here: which technique was used, which segment was repaired and where the graft was taken from all change the plan directly. Whether buccal mucosa has already been harvested must be stated.' },
+          { when: 'Days 1–2', title: 'Arrival and further assessment', body: 'Examination, urethroscopy and repeat imaging if needed; the site and length are confirmed. The urine culture must be clear. If an oral graft is planned, oral health is assessed.' },
+          { when: 'Day of surgery', title: 'Repair', body: 'Excision and anastomosis or graft augmentation according to the stricture. The plan may be revised according to the tissue found at operation; this is discussed beforehand.' },
+          { when: 'Catheter period', title: '2–3 weeks', body: 'The catheter stays while the repair heals. This period is not arbitrary and is not shortened to suit a flight. It is mostly spent at the hotel; you are mobile.' },
+          { when: 'Catheter removal', title: 'Check imaging', body: 'Before the catheter is removed, imaging confirms there is no leak at the repair. If there is, the catheter stays longer — which is why your return ticket should be flexible.' },
+          { when: 'Long term', title: 'Follow-up', body: 'Flow studies and symptom review, more frequently in the first year and regularly thereafter. Success in this operation is measured not on the table but by patency over years.' }
         ],
         risks: [
-          'Stricture recurrence — especially in long/complex cases',
-          'Temporary sensory change at the graft (inner cheek) site',
-          'Infection, bleeding and urine leak',
-          'In redo cases, tissue quality affecting the outcome'
+          'RECURRENCE OF THE STRICTURE: more likely in long and complex strictures and in men with multiple previous procedures. A redo repair has a lower success rate than a first repair, and that should be said plainly',
+          'Temporary altered sensation at the graft donor site, limited mouth opening and discomfort',
+          'Infection, bleeding and urine leak at the repair',
+          'Difficulty passing urine after catheter removal, requiring temporary recatheterisation',
+          'CHANGES IN EJACULATION: depending on the site of the repair, reduced force or retention of part of the ejaculate can occur',
+          'Effects on erection depending on the site — uncommon, but to be discussed specifically for your case',
+          'Change in the direction of the stream or spraying',
+          'Clot risk from a long operation and immobility; the return flight is planned with this in mind'
         ],
         alternatives: [
-          'Dilation or internal urethrotomy (short-term; high recurrence)',
-          'Intermittent self-catheterization (temporary maintenance)',
-          'Staged reconstruction (in very complex cases)'
+          'Urethrotomy or dilatation — reasonable for a short, first-presentation stricture in a suitable location; not a durable solution for a recurrent one',
+          'Intermittent self-catheterisation — can delay recurrence but is not a cure, and should not be presented as something to continue for years',
+          'Excision and end-to-end repair — for short strictures',
+          'Buccal mucosa graft augmentation — for longer strictures',
+          'Lingual or labial mucosa, or skin flaps, where buccal mucosa has already been used',
+          'Staged reconstruction — for heavily scarred and very complex strictures',
+          'Permanent urinary diversion — only in exceptional cases where repair is not possible'
+        ],
+        comparison: {
+          title: 'Urethrotomy and urethroplasty: why the results differ',
+          columns: ['Criterion', 'Urethrotomy / dilatation', 'Urethroplasty'],
+          rows: [
+            { label: 'What it does', values: ['Cuts the narrowing open', 'Removes it or widens with a patch'] },
+            { label: 'The scar tissue', values: ['Stays in place', 'Removed or bypassed'] },
+            { label: 'Length of procedure', values: ['Short', 'Long'] },
+            { label: 'Catheter time', values: ['A few days', '2–3 weeks'] },
+            { label: 'Tendency to recur', values: ['High, especially in long strictures', 'Markedly lower'] },
+            { label: 'If repeated', values: ['The stricture lengthens and repair becomes harder', 'A further repair can be planned if needed'] },
+            { label: 'Who it suits', values: ['Short, first-presentation stricture', 'Long, recurrent or complex stricture'] }
+          ],
+          note: 'The real point here is timing: rather than spending years on repeated endoscopic treatment, bringing definitive repair forward in a suitable patient preserves tissue. Do not hesitate to ask: "How long is my stricture, where is it, and what is the next step if this procedure fails again?"'
+        },
+        recovery: [
+          { period: 'First 48 hours', body: 'Pain is managed with medication. If an oral graft was taken, soft food is advised for the first days; speaking and chewing may be uncomfortable briefly.' },
+          { period: 'Week 1', body: 'Discharge with the catheter. Walking is fine; lifting, cycling and straddling positions are not. Avoid constipation with fibre and fluids.' },
+          { period: 'Weeks 2–3', body: 'The catheter period continues, mostly at the hotel. You are mobile but activity is limited. If the catheter blocks or comes out, seek help immediately.' },
+          { period: 'After catheter removal', body: 'Stinging and some straining are usual at first, and the stream may take a few days to strengthen. If you cannot pass urine at all, seek help immediately.' },
+          { period: 'Weeks 4–8', body: 'Graded return to normal activity. For intercourse, follow the interval your surgeon gives you; resuming early can stress the repair.' },
+          { period: 'First year and beyond', body: 'Regular follow-up with flow studies. If you notice the stream weakening, do not wait: a narrowing caught early can be dealt with before it obstructs.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'No fixed price range is given in this category; the price is shared after a file assessment, according to case complexity and the technique required.'
+          disclaimer: 'No fixed range is given in this category. The figure depends on the length of the stricture, whether a graft is required, whether the repair is single or staged, and the length of stay; it is provided in writing after your file has been reviewed.'
         },
         packageIncludes: [
-          'Surgery and hospital stay',
-          'Anesthesia and advanced pre-operative tests',
-          'Graft harvesting included where required',
-          'Transfers and accommodation',
+          'Review of your file and previous operation notes',
+          'Examination, urethroscopy and necessary imaging',
+          'Urine culture and pre-operative tests',
+          'Anaesthesia and theatre',
+          'Surgery, including graft harvest where required',
+          'Hospital stay',
+          'Check imaging before catheter removal',
+          'Catheter removal and assessment before you fly',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
           'Medical interpreter and patient coordinator',
-          'Catheter removal and long-term online follow-up'
+          'Long-term remote follow-up'
         ],
         faqs: [
-          { q: 'I had surgery at another center and it failed; is a redo possible?', a: 'Yes. Redo urethroplasty is an area this center is especially experienced in. Your previous operative notes and current imaging are reviewed; depending on tissue condition, a graft or staged approach is planned.' },
-          { q: 'Why urethroplasty instead of internal urethrotomy/dilation?', a: 'Dilation and internal urethrotomy recur soon in most strictures. Urethroplasty is the only method offering a durable solution in suitable cases.' },
-          { q: 'How long does the catheter stay and recovery take?', a: 'Usually 2–3 weeks with a catheter. Light daily activity resumes quickly; heavy activity and long-term success assessment take a few weeks.' }
+          { q: 'I have had several urethrotomies and it keeps closing. Should I try once more?', a: 'You are right to ask. Each cut creates fresh scar; over time the stricture lengthens rather than shortens and the surrounding tissue stiffens. Repeated urethrotomy therefore not only fails to help, it makes the eventual definitive repair harder. Beyond a certain point, "let us open it once more" is not in your interest.' },
+          { q: 'My previous repair elsewhere failed — can it be redone?', a: 'In most cases yes, but a second repair is a different operation and must be planned differently. Your previous operation note, the technique used and where the graft was taken from determine that plan directly. It should also be said plainly that a redo has a lower success rate than a first repair, and that the difference grows with the number of previous procedures.' },
+          { q: 'My buccal mucosa has already been taken — are there other options?', a: 'Yes. If both cheeks have been used, mucosa from under the tongue or from the inner lip can be used, and in some locations skin flaps raised from nearby tissue are an option. Which applies depends on the site and length of the stricture. Please state this when you make your enquiry.' },
+          { q: 'Does taking tissue from my mouth cause lasting problems?', a: 'The donor site inside the cheek usually heals quickly. In the first days there may be limited mouth opening, discomfort and altered sensation; soft food is advised. Smoking impairs healing both at the donor site and at the repair.' },
+          { q: 'Why does the catheter stay so long — can it be shortened?', a: 'No. It is the time needed for the repair to heal watertight, and it is not shortened to suit a flight. Imaging checks for a leak before removal, and if there is one the catheter stays longer. For that reason we advise a changeable return ticket and a few days of margin in your stay.' },
+          { q: 'Might it not be finished in one operation?', a: 'Yes. In heavily scarred and very long strictures the repair may be planned in two stages months apart: the urethra is opened and the graft laid down to mature, then closed into a tube at the second stage. This is not a sign of failure but the approach most likely to give a durable result in difficult tissue. It does mean two journeys, and it must be discussed before booking.' },
+          { q: 'Will my sexual function be affected?', a: 'That depends on which part of the urethra is repaired. Reduced force of ejaculation or retention of part of the ejaculate can occur. Effects on erection are uncommon but vary by site and should be discussed specifically before surgery.' },
+          { q: 'How will I know whether the operation worked?', a: 'Success here is measured not on the table but by patency over years. Follow-up is by flow study and symptom review. If you notice the stream weakening, do not wait: a narrowing caught early is far easier to address than complete obstruction.' },
+          { q: 'Does every urology centre perform this operation?', a: 'Urethroplasty is not a frequent part of routine urological practice, and long-segment and redo cases in particular require specific experience. It is therefore reasonable to ask which technique is planned, how often the surgeon performs it, and what will be done if the plan changes during the operation.' },
+          { q: 'What should I send before coming?', a: 'The urethrogram images themselves (not only the report), any urethroscopy record, uroflowmetry and post-void residual, ALL PREVIOUS OPERATION NOTES, how many urethrotomies or dilatations you have had and when, whether buccal mucosa has already been harvested, your medication and your other medical conditions. With these it can be assessed before you travel whether the repair would be single or staged.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urethral Strictures — European Association of Urology', url: 'https://uroweb.org/guidelines/urethral-strictures' }
         ]
       },
       ar: {
@@ -27096,71 +27184,144 @@ export const treatments: Treatment[] = [
         ]
       },
       en: {
-        title: 'Pyeloplasty (UPJ Obstruction Surgery)',
-        summary: 'Kidney-preserving reconstructive surgery for ureteropelvic junction (UPJ) obstruction; open, laparoscopic and robotic options.',
-        metaTitle: 'Pyeloplasty | UPJ (Ureteropelvic Junction) Obstruction Surgery',
-        metaDescription: 'Pyeloplasty for UPJ obstruction: comparison of open, laparoscopic and robotic methods, process, risks and long-term success. Redo and complex case experience.',
+        title: 'Pyeloplasty (Surgery for PUJ Obstruction)',
+        summary:
+          'Repair of the narrowing where the kidney drains. The dangerous feature of this condition is that it can progress without pain: the kidney quietly dilates and loses function. The aim is to preserve the kidney.',
+        metaTitle: 'Pyeloplasty: Kidney-Preserving Repair for PUJ Obstruction',
+        metaDescription:
+          'How the decision to operate on PUJ obstruction is made, why the renogram is decisive, robotic versus open repair, the stent period and redo cases.',
+        quickFacts: {
+          duration: '2–4 hours',
+          anesthesia: 'General anaesthesia',
+          hospitalStay: '2–3 nights',
+          stayInTurkey: '7–10 days',
+          returnToWork: '2–4 weeks',
+          flightClearance: 'After review; flying with a stent is possible'
+        },
         definition: [
-          'Ureteropelvic junction (UPJ) obstruction is a blockage at the outlet of the channel that carries urine from the kidney, causing swelling (hydronephrosis), pain and, over time, loss of kidney function.',
-          'Pyeloplasty is the kidney-preserving reconstructive operation that removes the narrowing and reshapes the junction. Robotic and laparoscopic approaches are minimally invasive; cases with prior failed attempts (redo) or a crossing vessel/stone require special experience.'
+          'Pelviureteric junction (PUJ) obstruction is a narrowing where the renal pelvis joins the ureter. Urine cannot drain adequately from the kidney, the pelvis dilates (hydronephrosis), and over time renal function can decline.',
+          'THE MOST IMPORTANT FEATURE OF THIS CONDITION: IT MAY NOT HURT. Where obstruction develops slowly the kidney dilates quietly and the person may feel nothing at all. The inference "I have no pain, so there is no problem" is therefore dangerous here. In some patients, flank pain that appears after drinking a large volume of fluid or alcohol is characteristic.',
+          'THE PRESENCE OF A NARROWING IS NOT IN ITSELF A REASON TO OPERATE. Dilatation on imaging does not always mean obstruction; some kidneys look full but drain adequately. What is needed for a decision is evidence that the obstruction is actually affecting the kidney. The study that shows this is the renogram: it measures both that kidney\'s share of total function and whether the tracer drains.',
+          'THE SITUATIONS THAT DRIVE THE DECISION are: reduced function of that kidney on the renogram or a declining trend on follow-up, clearly impaired drainage, recurrent episodes of pain, stone formation associated with the narrowing, and recurrent urinary infection.',
+          'In pyeloplasty the narrowed segment is removed and the renal pelvis and ureter are rejoined as a wide, funnel-shaped anastomosis. In some patients a vessel crossing in front of the ureter contributes to the obstruction; the join is then repositioned in front of that vessel.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients with reduced function of that kidney on the renogram, or a declining trend on follow-up',
+            'Patients with clearly impaired drainage',
+            'Patients with recurrent flank pain — pain appearing after a large fluid intake is characteristic',
+            'Patients who have developed a kidney stone alongside the narrowing',
+            'Patients with recurrent urinary infections',
+            'Patients whose previous endopyelotomy or pyeloplasty has failed (redo)',
+            'Patients found to have a crossing vessel'
+          ],
+          notSuitable: [
+            'Patients with dilatation on imaging but normal drainage and function on the renogram: surgery is not required and they are followed',
+            'Patients with untreated urinary infection: the infection is treated first',
+            'Patients whose kidney function is lost to an advanced and irreversible degree, in whom repair will not deliver the expected benefit; a different plan is made',
+            'Patients whose general condition is unsuitable for laparoscopic or robotic surgery, in whom the approach is reconsidered'
+          ]
+        },
+        technology: [
+          'CT urography — shows the anatomy and any crossing vessel',
+          'Renogram (MAG3 or similar) — the basis of the decision to operate; it measures function and drainage together',
+          'Ultrasound — for following hydronephrosis',
+          'Robot-assisted dismembered pyeloplasty',
+          'Laparoscopic and open techniques',
+          'Removal of an associated kidney stone in the same session where required',
+          'Placement and removal of a JJ stent'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
+          note: 'Reconstructive urology is among Assoc. Prof. Müslüm Ergün\'s areas of practice. The decision in pyeloplasty rests on the renogram findings, the anatomy on imaging and any previous procedures, considered together.'
         },
         expertise: {
-          redoRate: 'A significant share of cases are redo referrals after a failed attempt or iatrogenic injury at another center.',
-          complexCase: 'Crossing-vessel compression, concurrent kidney stone, anatomical variants such as horseshoe kidney and redo cases fall within complex.',
+          redoRate: 'A substantial proportion of cases are redo repairs following a failed procedure or iatrogenic injury elsewhere.',
+          complexCase: 'Crossing vessels, associated kidney stones, anatomical variants such as horseshoe kidney, and redo cases fall within the complex category.',
           advancedTechnique: 'Robot-assisted dismembered pyeloplasty; reconstruction in dense scar tissue in redo cases.'
         },
         timeline: [
-          { when: 'Remote', title: 'File assessment', body: 'Your CT urography and renal scan (MAG3) are reviewed; the obstruction and kidney function are assessed.' },
-          { when: 'Day 1–2', title: 'Arrival & tests', body: 'Examination and completion of required imaging, anesthesia assessment.' },
-          { when: 'Day 3', title: 'Surgery', body: 'Robotic/laparoscopic or open dismembered pyeloplasty; usually a 2–3 night stay.' },
-          { when: 'After', title: 'Stent (JJ) period', body: 'A JJ stent stays inside for 4–6 weeks, then is removed in a short procedure.' },
-          { when: 'Follow-up', title: 'Function follow-up', body: 'Drainage and kidney function are monitored with follow-up scan/ultrasound; success is judged by long-term drainage.' }
+          { when: 'Remotely', title: 'Review of your file', body: 'Your CT urography images and your RENOGRAM are reviewed. A sound decision cannot be made without a renogram; dilatation seen on ultrasound alone is not enough.' },
+          { when: 'Days 1–2', title: 'Arrival and work-up', body: 'Examination, completion of any missing imaging, blood and urine tests, anaesthetic assessment. If the urine culture grows an organism, surgery is postponed.' },
+          { when: 'Day of surgery', title: 'Repair', body: 'The narrowed segment is removed and the join reconstructed with a wide opening. Where there is a crossing vessel, the join is brought in front of it. An associated stone can be removed in the same session.' },
+          { when: 'Days 2–3', title: 'Discharge', body: 'Most patients go home at this point. A JJ stent remains inside, and the symptoms it causes are explained.' },
+          { when: 'Before you fly', title: 'Review', body: 'Wound check and flying clearance. Flying with a stent is usually not a problem, but who will remove it and where must be planned in writing.' },
+          { when: 'Weeks 4–6', title: 'Stent removal', body: 'A short procedure. It can be done in your own country, but confirm in advance that your local urologist has agreed to it.' },
+          { when: 'Months 3–6 and beyond', title: 'Function follow-up', body: 'Drainage and renal function are followed with a repeat renogram and ultrasound. Success in this operation is measured by long-term drainage, not by the operation itself.' }
         ],
         risks: [
-          'Temporary stent-related symptoms',
-          'Urine leak',
-          'Stricture recurrence (higher in redo cases)',
-          'Infection and bleeding'
+          'STENT SYMPTOMS: frequency, flank discomfort and blood in the urine are usual and resolve on removal. This is what surprises patients most; knowing it is expected makes the period considerably easier',
+          'Urine leak at the join — usually managed with the stent and a drain',
+          'RECURRENCE OF THE NARROWING: more likely in redo cases and where there is dense scar tissue',
+          'Bleeding and infection',
+          'Febrile urinary infection — particularly if the pre-operative culture was not clear',
+          'Injury to adjacent organs — uncommon',
+          'Renal function not improving as hoped: the operation restores drainage but does not recover function already lost. This must be discussed plainly before surgery',
+          'Clot risk after pelvic surgery combined with a long flight'
         ],
         alternatives: [
-          'Endopyelotomy (in selected cases; lower success)',
-          'Surveillance (selected, function-preserved, asymptomatic cases)',
-          'Nephrectomy (only for a non-functioning kidney, last resort)'
+          'Observation — for patients with dilatation on imaging but preserved function and drainage on the renogram. Observation means imaging; absence of symptoms alone is not enough',
+          'Endopyelotomy — cutting the narrowing from inside; possible in selected short strictures but with a higher recurrence rate than pyeloplasty',
+          'Robot-assisted pyeloplasty — widely preferred for a repair that demands suture precision',
+          'Laparoscopic pyeloplasty',
+          'Open pyeloplasty — in selected cases, particularly complex redo surgery',
+          'Nephrectomy — only for a kidney that has lost all function and is a source of symptoms or infection, as a last resort'
         ],
         comparison: {
-          title: 'Open vs Laparoscopic vs Robotic Pyeloplasty',
+          title: 'Open, laparoscopic and robotic pyeloplasty',
           columns: ['Criterion', 'Open', 'Laparoscopic', 'Robotic'],
           rows: [
-            { label: 'Invasiveness', values: ['Large incision', 'Small incisions', 'Small incisions'] },
-            { label: 'Suturing precision', values: ['Good', 'Technically hard', 'Very high'] },
+            { label: 'Incision', values: ['One large incision', 'Small incisions', 'Small incisions'] },
+            { label: 'Suture precision', values: ['Good', 'Technically demanding', 'High'] },
             { label: 'Recovery', values: ['Longer', 'Short', 'Short'] },
-            { label: 'Redo/complex suitability', values: ['Selected', 'Limited', 'High'] },
-            { label: 'Stay', values: ['3–5 nights', '2–3 nights', '2–3 nights'] }
+            { label: 'Suitability for redo and complex cases', values: ['In selected cases', 'Limited', 'Favoured'] },
+            { label: 'Hospital stay', values: ['3–5 nights', '2–3 nights', '2–3 nights'] },
+            { label: 'With a crossing vessel', values: ['Feasible', 'Feasible', 'Easier dissection'] }
           ],
-          note: 'The method is chosen individually by stricture type, previous surgery and anatomy.'
+          note: 'What distinguishes this repair is that it requires a fine, watertight suture line, which is why suture precision weighs heavily in the choice. The method is nonetheless individualised to the type of narrowing, previous surgery and anatomy. Saying "it must be robotic" does not replace that assessment.'
         },
+        recovery: [
+          { period: 'First 48 hours', body: 'Pain is controlled with medication. Early walking matters both for bowel recovery and to reduce clot risk.' },
+          { period: 'Week 1', body: 'Tenderness at the port sites is usual. Avoid lifting. A little blood in the urine, particularly after activity, is expected with a stent in place.' },
+          { period: 'With the stent (4–6 weeks)', body: 'Frequency, flank discomfort and a tugging sensation on voiding are usual and resolve on removal. Seek help immediately for fever, shivering or inability to pass urine.' },
+          { period: 'After stent removal', body: 'A marked reduction in symptoms is expected. Some stinging on passing urine may persist for a few days.' },
+          { period: 'Months 3–6', body: 'A repeat renogram or ultrasound assesses whether drainage has improved. Hydronephrosis not disappearing entirely does not always mean failure; what matters is that drainage is restored.' },
+          { period: 'Long term', body: 'Regular follow-up continues. Return of flank pain or a febrile infection should prompt assessment without delay.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'No fixed price range is given in this category; the price is shared after a file assessment, according to case complexity and the technique required.'
+          disclaimer: 'No fixed range is given in this category. The figure depends on the method, whether it is a redo, whether an associated stone is removed and the length of stay; it is provided in writing after your file has been reviewed.'
         },
         packageIncludes: [
-          'Surgery and hospital stay',
-          'Anesthesia and tests',
-          'JJ stent and its removal',
-          'Transfers and accommodation',
-          'Medical interpreter and coordinator',
-          'Long-term function follow-up'
+          'Review of your file and renogram',
+          'Examination and completion of any missing imaging',
+          'Blood and urine tests, urine culture',
+          'Anaesthesia and theatre',
+          'Surgery and placement of a JJ stent',
+          'Removal of an associated stone in the same session where required',
+          'Hospital stay',
+          'Review before you fly',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and patient coordinator',
+          'Remote review of long-term function follow-up'
         ],
         faqs: [
-          { q: 'I had endopyelotomy/pyeloplasty but the obstruction recurred; what can be done?', a: 'Redo pyeloplasty is possible and an area this center is experienced in. Despite scar tissue, kidney-preserving reconstruction is planned; rarely a staged approach is needed.' },
-          { q: 'Is robotic or open better?', a: 'The robotic method gives suturing precision and fast recovery in most cases; but the method is determined by stricture type, previous surgery and anatomy.' },
-          { q: 'Can my kidney be saved?', a: 'The goal is to preserve the kidney. How much function can be preserved is assessed by scan; nephrectomy is a last resort only for a non-functioning kidney.' }
+          { q: 'My ultrasound shows dilatation of the kidney — must I have surgery?', a: 'No, dilatation alone is not a reason to operate. Some kidneys look full but drain adequately. A decision requires evidence that the obstruction is actually affecting the kidney, and the study that shows this is the renogram. A decision made without one is incomplete.' },
+          { q: 'I have no pain, so there is no hurry — is that right?', a: 'That assumption is dangerous in this condition. Slowly developing obstruction may be painless while the kidney quietly dilates and loses function. If you have a known PUJ obstruction, continue follow-up with renography and imaging even without symptoms.' },
+          { q: 'I get flank pain after drinking a lot of water — what does that mean?', a: 'That is a characteristic finding. When fluid load rises the kidney must drain more; the narrowing prevents it, pressure builds and pain follows. Do tell your doctor about this, because it points towards the diagnosis.' },
+          { q: 'Can my kidney be saved?', a: 'That is exactly the aim. To be honest, though, the operation restores drainage; it does not recover function already lost. That is why deciding early matters. How much function can be preserved is assessed on the renogram.' },
+          { q: 'Is robotic better than open?', a: 'This repair requires a fine, watertight suture line, so suture precision matters and the robotic approach is favoured for that. The method is nonetheless chosen according to the type of narrowing, any previous surgery and your anatomy. What matters is not which device is used but that the join is wide and tension-free.' },
+          { q: 'I had an endopyelotomy or pyeloplasty before and it recurred. What can be done?', a: 'A redo repair is possible in most cases, but scar tissue from the previous procedure makes it harder than a first operation and the success rate is lower. That should be said plainly. Your previous operation note is decisive in planning; a plan made without knowing which technique was used is incomplete.' },
+          { q: 'How long does the stent stay and is it very uncomfortable?', a: 'Usually 4–6 weeks. Frequency, flank discomfort and a tugging sensation on voiding are usual and resolve on removal. This is what surprises patients most, which is why we say it in advance: the discomfort is expected, not a complication.' },
+          { q: 'Can I fly with the stent, and who removes it?', a: 'Flying with a stent is usually not a problem. What must be planned is who will remove it and where. It is a short procedure and can be done in your own country, but your local urologist must have agreed to it beforehand. Settle this before you fix your travel dates.' },
+          { q: 'Will the hydronephrosis disappear completely after surgery?', a: 'Not always, and that does not necessarily mean failure. A renal pelvis that has been dilated for a long time may not return to its former size even once drainage is restored. What is assessed on follow-up is not shrinkage of the pelvis but restoration of drainage — which is why a renogram is more informative than an ultrasound here.' },
+          { q: 'What should I send before coming?', a: 'The CT urography images themselves (not only the report), YOUR RENOGRAM RESULT, any previous operation notes, renal function tests, urinalysis and culture, your medication and your other medical conditions. If there is no renogram, one will be requested first: without it the indication for surgery cannot be assessed properly.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines — European Association of Urology (reconstructive urology)', url: 'https://uroweb.org/guidelines' }
         ]
       },
       ar: {
@@ -27581,59 +27742,141 @@ export const treatments: Treatment[] = [
         ]
       },
       en: {
-        title: 'Vesicovaginal & Ureterovaginal Fistula Repair',
-        summary: 'Repair of fistulas causing urine leakage — including those developing after childbirth or pelvic/gynecological surgery. A respectful, confidential process.',
-        metaTitle: 'Fistula Repair | Vesicovaginal & Ureterovaginal Fistula Surgery',
-        metaDescription: 'Vesicovaginal and ureterovaginal fistula repair: reconstructive surgery for fistulas causing continuous urine leakage. A respectful, confidential approach for international referral patients.',
+        title: 'Vesicovaginal and Ureterovaginal Fistula Repair',
+        summary:
+          'Repair of fistulas causing continuous urinary leakage. This is not a personal failing but a repairable medical condition — and the two things that matter most are correct timing and getting the first repair right.',
+        metaTitle: 'Fistula Repair: Vesicovaginal and Ureterovaginal Surgery',
+        metaDescription:
+          'What a fistula is, why it occurs, why the first repair is the best chance, the role of timing, tissue-interposition techniques, recovery and privacy.',
+        quickFacts: {
+          duration: '1.5–3 hours depending on the site',
+          anesthesia: 'General or spinal anaesthesia',
+          hospitalStay: '1–3 nights',
+          stayInTurkey: '3–4 weeks (the catheter is removed here)',
+          catheter: '2–3 weeks',
+          returnToWork: '3–4 weeks',
+          flightClearance: 'After catheter removal and review'
+        },
         definition: [
-          'A fistula is an abnormal connection between the bladder or ureter and the vagina, causing continuous, uncontrollable urine leakage. It most often develops after difficult childbirth, pelvic/gynecological surgery or radiotherapy.',
-          'This is a medically repairable condition and the distress it causes is not a source of shame. Reconstructive surgery aims to close the fistula and restore normal continence. Timing, tissue quality and the fistula’s location determine the outcome; recurrent cases (after a failed repair) require special experience.'
+          'A fistula is an abnormal connection between two structures that should be separate. Here it is a connection between the bladder and the vagina (vesicovaginal) or between a ureter and the vagina (ureterovaginal). The result is continuous, uncontrollable leakage of urine.',
+          'LET US SAY THIS PLAINLY FIRST: THIS IS NOT YOUR FAULT AND IT IS NOT SOMETHING TO BE ASHAMED OF. A fistula is a medical complication that can follow a difficult or prolonged labour, gynaecological surgery such as hysterectomy, pelvic surgery or radiotherapy. In most cases it can be repaired completely.',
+          'HOW THE SYMPTOM IS RECOGNISED: in other types of urinary leakage, the leak occurs in specific circumstances — on coughing, laughing, or after a sudden urge. With a fistula the leak is continuous; even if you pass urine normally, there is constant wetness in between. The distinction matters, because a description of constant wetness should bring a fistula to mind immediately.',
+          'THE MOST IMPORTANT SENTENCE: THE FIRST REPAIR IS THE BEST CHANCE OF REPAIR. Every failed attempt degrades the tissue, leaves scar and lowers the success rate of the next one. "Let us try and see, we can look again if it fails" is not the right approach in this condition. The first repair should be performed in experienced hands and at the right time.',
+          'TIMING IS PART OF THE DECISION. If the fistula is recent and the surrounding tissue is inflamed, oedematous and still healing from surgery, an immediate repair is prone to fail. A period of waiting may be needed for the tissue to settle. That wait is hard on the patient, and the question "why not now" is entirely fair — but a hurried repair that breaks down costs more than waiting.'
+        ],
+        eligibility: {
+          suitable: [
+            'Women with continuous urinary leakage beginning after gynaecological or pelvic surgery',
+            'Women describing continuous leakage after a difficult or prolonged labour',
+            'Women who have developed a fistula after radiotherapy — this group requires separate assessment',
+            'Women whose previous repair has not stopped the leakage',
+            'Women with more than one fistula opening',
+            'Women leaking because of ureteric injury'
+          ],
+          notSuitable: [
+            'The early period while tissue is still inflamed and oedematous: repair is deferred, and that is part of the plan rather than a delay',
+            'Women with untreated urinary infection: the infection is treated first',
+            'Women who cannot accommodate the catheter period and the length of stay — the catheter time in this repair cannot be shortened',
+            'Where there is active cancer, the plan is made separately and alongside oncological treatment'
+          ]
+        },
+        technology: [
+          'Cystoscopy — to establish the site and number of fistula openings and their distance from the ureteric orifices',
+          'CT urography — to assess the ureters',
+          'Dye testing — to distinguish leakage from the bladder from leakage from a ureter',
+          'Renogram — to assess renal function where a ureter is involved',
+          'Vaginal or abdominal approach according to the site',
+          'Tissue interposition (for example a Martius flap) — placing healthy, well-vascularised tissue between the suture lines',
+          'Reimplantation of the ureter into the bladder'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
+          note: 'Reconstructive urology is among Assoc. Prof. Müslüm Ergün\'s areas of practice. The plan in fistula repair is based on the site and size of the fistula, tissue quality, any history of radiotherapy and previous attempts, considered together.'
         },
         expertise: {
-          redoRate: 'A significant share of cases are redo referrals after a failed attempt or iatrogenic injury at another center.',
-          complexCase: 'Post-radiotherapy fistula, large/multifocal fistula and recurrent failed repair fall within complex.',
-          advancedTechnique: 'Transvaginal/abdominal repair supported by tissue interposition (e.g., Martius flap); ureteric reimplantation.'
+          redoRate: 'A substantial proportion of cases are redo repairs following a failed procedure or iatrogenic injury elsewhere.',
+          complexCase: 'Post-radiotherapy fistula, large or multiple fistulas and repeated failed repair fall within the complex category.',
+          advancedTechnique: 'Vaginal or abdominal repair supported by tissue interposition (for example a Martius flap); ureteric reimplantation.'
         },
         timeline: [
-          { when: 'Remote', title: 'Confidential file assessment', body: 'Your history, previous operative notes and imaging are reviewed confidentially; the right timing for repair is determined.' },
-          { when: 'Day 1–2', title: 'Arrival & examination', body: 'Examination, cystoscopy and imaging clarify the fistula’s location and size.' },
-          { when: 'Day 2–3', title: 'Surgery', body: 'Transvaginal or abdominal repair depending on location; tissue support (flap) where required.' },
-          { when: 'After', title: 'Catheter period', body: 'A catheter usually stays 2–3 weeks for the repair to heal; heavy activity and intercourse are avoided early on.' },
-          { when: 'Follow-up', title: 'Review', body: 'A check before catheter removal confirms the leakage has fully resolved, and follow-up is planned.' }
+          { when: 'Remotely', title: 'Confidential review of your file', body: 'Your history, YOUR PREVIOUS OPERATION NOTES and your imaging are reviewed in confidence. When the leakage began and which operation it followed is the single most important piece of information.' },
+          { when: 'Days 1–2', title: 'Arrival and assessment', body: 'Examination, cystoscopy and imaging establish the site, size and number of fistulas and distinguish bladder from ureteric leakage. On request, a female member of staff is present throughout.' },
+          { when: 'Day of surgery', title: 'Repair', body: 'A vaginal or abdominal approach according to the site. Where tissue quality is poor, healthy well-vascularised tissue is placed between the suture lines to make the repair more durable.' },
+          { when: 'Catheter period', title: '2–3 weeks', body: 'The catheter stays while the repair heals. The period is not arbitrary: a distended bladder stresses the repair and can cause it to leak. It is mostly spent at the hotel.' },
+          { when: 'Catheter removal', title: 'Check', body: 'The integrity of the repair is checked before the catheter is removed. If there is any doubt, the catheter stays longer — so keep your return ticket flexible.' },
+          { when: 'Follow-up', title: 'Long term', body: 'Confirming that the leakage has stopped completely and assessing continence. In some women a different type of urinary leakage remains after the fistula closes; that is assessed separately and has its own treatment.' }
         ],
         risks: [
-          'Re-opening of the repair (recurrence) — especially in radiotherapy/complex cases',
+          'BREAKDOWN OF THE REPAIR: more likely in fistulas following radiotherapy, in large fistulas and where a previous repair has failed',
           'Infection and bleeding',
-          'Temporary difficulty urinating',
-          'Rarely, need for additional repair'
+          'Temporary difficulty passing urine after catheter removal',
+          'A sense of reduced bladder capacity and frequency — particularly where there is a history of radiotherapy',
+          'A DIFFERENT TYPE OF LEAKAGE MAY REMAIN EVEN AFTER A SUCCESSFUL REPAIR: the fistula closes, but damage to the underlying support tissue can leave stress incontinence. This does not mean the repair failed; it is a separate condition with its own treatment. Knowing this in advance prevents later disappointment',
+          'Discomfort during intercourse — particularly in the early period after a vaginal repair or where a flap was used',
+          'Stricture where a ureter has been repaired',
+          'The need for further repair in very complex and recurrent cases'
         ],
         alternatives: [
-          'A trial of spontaneous closure with a prolonged catheter in small, recent fistulas (selected)',
-          'Waiting for tissue healing before repair (right timing)',
-          'Urinary diversion in complex cases (last resort)'
+          'Waiting for spontaneous closure with prolonged catheterisation — only for very small and very recent fistulas in selected patients',
+          'Planned waiting for tissue to settle before repair — not a delay but a decision that improves the chance of success',
+          'Vaginal repair — for suitably located fistulas; recovery is quicker',
+          'Abdominal repair — for high, ureter-adjacent or complex fistulas',
+          'Tissue-supported (flap) repair — where tissue quality is poor and in recurrent cases',
+          'Reimplantation of the ureter into the bladder — for ureterovaginal fistula',
+          'Permanent urinary diversion — only in very advanced and exceptional situations where repair is not possible'
+        ],
+        comparison: {
+          title: 'Fistula leakage or urinary incontinence: how to tell',
+          columns: ['Criterion', 'Fistula leakage', 'Stress incontinence', 'Urgency incontinence'],
+          rows: [
+            { label: 'When the leak occurs', values: ['Continuously, not situation-dependent', 'Coughing, laughing, lifting', 'After a sudden urge'] },
+            { label: 'At night', values: ['Continues; the bed becomes wet', 'Usually not', 'Possible'] },
+            { label: 'Normal voiding', values: ['Possible, but with constant wetness in between', 'Normal', 'Frequent and urgent'] },
+            { label: 'When it began', values: ['Usually after an operation or childbirth', 'Insidiously over years', 'Insidiously over years'] },
+            { label: 'First diagnostic step', values: ['Cystoscopy and dye test', 'Examination and bladder diary', 'Bladder diary'] }
+          ],
+          note: 'The distinction matters because the treatments are entirely different. Continuous wetness that is not situation-dependent and began after an operation or childbirth should be treated as a fistula until proved otherwise.'
+        },
+        recovery: [
+          { period: 'First days', body: 'Discharge with the catheter. Keeping the catheter unblocked is critical: if the bladder fills and distends, the repair is stressed. Plenty of fluids are therefore advised.' },
+          { period: 'Catheter period (2–3 weeks)', body: 'Lifting, straining and constipation are to be avoided. Fibre and fluids matter. If the catheter blocks or comes out, or if vaginal wetness returns, seek help without delay.' },
+          { period: 'Catheter removal', body: 'The integrity of the repair is checked beforehand. Frequency is usual in the first days afterwards.' },
+          { period: 'Weeks 4–6', body: 'Return to daily life. For intercourse, follow the interval your surgeon gives you; resuming early can stress the repair. Some discomfort is possible at first after a vaginal repair.' },
+          { period: 'Month 3 onwards', body: 'Confirmation that leakage has stopped completely. If a different type of incontinence remains at this point, it is assessed and treated separately.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'No fixed price range is given in this category; the price is shared after a file assessment, according to case complexity and the technique required.'
+          disclaimer: 'No fixed range is given in this category. The figure depends on the site and size of the fistula, whether tissue interposition is required, whether a ureter is repaired and the length of stay; it is provided in writing after your file has been reviewed.'
         },
         packageIncludes: [
-          'Surgery and hospital stay',
-          'Anesthesia and tests',
-          'Tissue support (flap) included where required',
-          'Female medical interpreter and confidential coordination (on request)',
-          'Transfers and accommodation',
-          'Catheter removal and online follow-up'
+          'Confidential review of your file',
+          'Examination, cystoscopy and necessary imaging',
+          'Urinalysis and culture',
+          'Anaesthesia and theatre',
+          'The repair, including tissue interposition (flap) where required',
+          'Hospital stay',
+          'Check before catheter removal',
+          'Female medical interpreter and confidential coordination on request',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Remote follow-up after you return home'
         ],
         faqs: [
-          { q: 'A repair was attempted in another country/center but failed; can it be repaired again?', a: 'Yes. Recurrent cases after a failed repair are an area this center is experienced in. Depending on tissue condition, the right timing and, if needed, a tissue-supported (flap) technique are planned.' },
-          { q: 'Is this permanent, something to be ashamed of?', a: 'No. A fistula is a medical complication, not a personal fault, and is fully repairable in most cases. The entire process is handled with respect for your privacy, in confidence.' },
-          { q: 'Is the process kept confidential and can I request female staff?', a: 'Yes. Consultations and coordination follow the principle of confidentiality; on request, a female interpreter and support are provided.' }
+          { q: 'Is this permanent, and is it something to be ashamed of?', a: 'No, in no sense. A fistula is a medical complication, not a personal failing or the result of negligence on your part, and in most cases it can be repaired completely. Many women carry this for years without telling anyone — when it is a treatable condition.' },
+          { q: 'I am constantly wet but I can still pass urine normally. Could it be a fistula?', a: 'Yes, and that is a common picture. With a fistula part of the urine leaves normally and part leaks continuously. Constant wetness that is not situation-dependent and began after an operation or childbirth should bring a fistula to mind.' },
+          { q: 'Why am I not being operated on straight away?', a: 'This is a fair question and the most frequently asked. If the fistula is recent, the surrounding tissue is inflamed and oedematous, and a repair in that tissue is prone to break down. Waiting for the tissue to settle is part of the plan, not a delay. We know the wait is difficult, but a hurried repair that fails costs more.' },
+          { q: 'I have had one repair already and I am still leaking — can it be repaired again?', a: 'In most cases yes. To be honest, though, each failed attempt degrades tissue quality and lowers the success rate of the next. The second repair is therefore planned more carefully and usually requires a tissue-supported technique. Your previous operation note is the most important document in that plan.' },
+          { q: 'What is a flap and why is it needed?', a: 'A repair joins two tissue layers with sutures. Where tissue quality is poor — for instance in an irradiated or previously operated field — a piece of healthy, well-vascularised tissue is placed between those layers. The aim is to separate the suture lines and support healing. It is not an "extra procedure" but a step that makes the repair more durable.' },
+          { q: 'I have had radiotherapy — does that affect the repair?', a: 'Yes, and it should be said plainly. Irradiated tissue has reduced blood supply and healing capacity; the chance of the repair breaking down is higher in these cases and a tissue-supported technique is almost always required. Expectations need to be built on that reality.' },
+          { q: 'Why does the catheter stay so long?', a: 'A bladder that fills and distends stresses the suture line and can cause a leak. The catheter keeps the bladder empty so the repair can heal. This period is not shortened to suit a flight, and keeping the catheter unblocked is equally critical.' },
+          { q: 'Will my leakage stop completely after the repair?', a: 'The continuous leakage caused by the fistula is expected to stop. In some women, however, damage to the underlying support tissue leaves a different type of leakage — for instance on coughing. That does not mean the repair failed; it is a separate condition with its own treatment. Knowing this in advance prevents later disappointment.' },
+          { q: 'Will this be confidential, and can I ask for female staff?', a: 'Yes to both. You may ask for a female member of staff to be present at examinations and consultations and for a female medical interpreter; saying so when you book is enough. Your medical information is not shared with anyone without your consent, including your companion. If you are asked for photographs or a testimonial you may refuse, and it will not affect your treatment.' },
+          { q: 'What should I send?', a: 'When the leakage began and after which operation or delivery, all of your previous operation notes, records of any previous repair, cystoscopy and imaging results, whether you have had radiotherapy, renal function tests and your medication. A history of radiotherapy and the number of previous repairs are the two pieces of information that change the plan most.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urinary Incontinence and Reconstructive Surgery — European Association of Urology', url: 'https://uroweb.org/guidelines' }
         ]
       },
       ar: {
@@ -28011,61 +28254,146 @@ export const treatments: Treatment[] = [
         ]
       },
       en: {
-        title: 'Ureteral Reconstruction (Long-Segment Stricture/Injury)',
-        summary: 'Advanced reconstruction for long-segment ureteral stricture or injury: techniques such as buccal mucosa graft and ileal interposition.',
-        metaTitle: 'Ureteral Reconstruction | Long-Segment Ureteral Stricture Surgery',
-        metaDescription: 'Advanced reconstruction for long-segment ureteral stricture/injury: buccal mucosa graft, ileal interposition, ureteric reimplantation. Complex and redo case experience.',
+        title: 'Ureteric Reconstruction (Long-Segment Stricture and Injury)',
+        summary:
+          'Advanced repair to save the kidney in long ureteric strictures. Most of these patients have been told it cannot be done — yet the length of the stricture alone does not mean repair is impossible.',
+        metaTitle: 'Ureteric Reconstruction: Kidney-Preserving Repair of Long Strictures',
+        metaDescription:
+          'Options for long ureteric strictures, buccal mucosa graft and bowel interposition, the limits of nephrostomy and permanent stents, redo cases and realistic expectations.',
+        quickFacts: {
+          duration: '3–6 hours depending on technique',
+          anesthesia: 'General anaesthesia',
+          hospitalStay: '4–7 nights',
+          stayInTurkey: '3–4 weeks',
+          returnToWork: '4–6 weeks',
+          flightClearance: 'After check imaging'
+        },
         definition: [
-          'The ureter is the channel connecting the kidney to the bladder. Long-segment stricture or injury can develop after stone surgery, pelvic/gynecological surgery, radiotherapy or trauma and threatens the kidney.',
-          'While short strictures can be repaired with simple techniques, long-segment strictures require advanced reconstruction. Techniques such as buccal mucosa graft, ileal interposition (bridging with a bowel segment) or bringing the kidney down are performed in experienced centers to preserve the kidney.'
+          'The ureter is the narrow tube connecting the kidney to the bladder. When a long segment narrows or is damaged, urine cannot drain from the kidney; the kidney dilates and begins to lose function.',
+          'THE COMMONEST CAUSE IS NOT THE ONE PEOPLE EXPECT: a substantial proportion of long ureteric strictures follow unrecognised injury to the ureter during another operation. Gynaecological surgery, colorectal surgery and stone surgery are among the causes. Radiotherapy and trauma can also produce long-segment damage. We say this without blaming anyone: the ureter is a fine structure lying close to neighbouring organs, and such injury is a recognised surgical risk. What matters is that the plan from here is the right one.',
+          'THE CENTRAL MESSAGE OF THIS PAGE: BEING TOLD "IT CANNOT BE DONE" DOES NOT MEAN IT CANNOT BE DONE. Short strictures are repaired with simple techniques available in most centres. Long strictures require different ones — a patch of buccal mucosa, bridging with a segment of bowel, bringing the kidney down, or extending the bladder upwards. Because these are not frequently performed in routine practice, patients are sometimes told they have no options left.',
+          'THE AIM IS ALWAYS TO PRESERVE THE KIDNEY. To be honest, though: repair restores drainage, it does not recover function already lost. Measuring how much function the kidney retains, with a renogram, is therefore the fundamental step in deciding whether repair is worthwhile.',
+          'LIVING WITH A NEPHROSTOMY OR A PERMANENT STENT IS A BRIDGE, NOT A SOLUTION. These protect the kidney and buy time, but they bring continuous care, regular exchanges and a risk of infection. Managing like this for years is not something to accept when repair is possible in a suitable patient.'
+        ],
+        eligibility: {
+          suitable: [
+            'Patients whose ureter was injured during another operation and who have developed a stricture',
+            'Patients with a long-segment stricture after stone surgery',
+            'Patients managing with a nephrostomy or permanent stent who wish to be free of it',
+            'Patients whose previous repair has failed (redo)',
+            'Patients with a stricture after radiotherapy — requiring separate assessment',
+            'Patients with a single kidney and a ureteric stricture, in whom repair matters particularly',
+            'Patients whose renogram shows function worth preserving'
+          ],
+          notSuitable: [
+            'Patients whose renogram shows the kidney has lost almost all function and which causes no symptoms: repair will not deliver the expected benefit',
+            'Patients with untreated urinary infection: the infection is treated first',
+            'Patients in whom a bowel segment is planned but whose renal function is below a certain level; this is assessed separately',
+            'Patients whose general condition is unsuitable for prolonged major surgery, in whom less invasive maintenance options are considered',
+            'Where there is active, widespread cancer, the plan is made alongside oncological treatment'
+          ]
+        },
+        technology: [
+          'CT urography — to establish the site and length of the stricture',
+          'Renogram — the key study showing whether there is function worth preserving',
+          'Antegrade and retrograde ureterography — to visualise both ends of the stricture',
+          'Ureteroscopy — direct inspection',
+          'Ureteroplasty with buccal mucosa graft',
+          'Bridging with a bowel segment (ileal interposition)',
+          'Bringing the kidney down and extending the bladder upwards',
+          'Reimplantation of the ureter into the bladder',
+          'Robot-assisted reconstruction'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
+          note: 'Reconstructive urology is among Assoc. Prof. Müslüm Ergün\'s areas of practice. The plan in long-segment ureteric repair is based on the length and site of the stricture, renal function, previous procedures and any history of radiotherapy, considered together.'
         },
         expertise: {
-          redoRate: 'A significant share of cases are redo referrals after a failed attempt or iatrogenic injury at another center.',
-          complexCase: 'Long-segment/pan-ureteral stricture, post-radiotherapy and single-kidney patients fall within complex.',
-          advancedTechnique: 'Ureteroplasty with buccal mucosa graft, ileal interposition and robot-assisted reconstruction.'
+          redoRate: 'A substantial proportion of cases are redo repairs following a failed procedure or iatrogenic injury elsewhere.',
+          complexCase: 'Long-segment and pan-ureteric stricture, post-radiotherapy stricture and patients with a single kidney fall within the complex category.',
+          advancedTechnique: 'Ureteroplasty with buccal mucosa graft, bowel interposition and robot-assisted reconstruction.'
         },
         timeline: [
-          { when: 'Remote', title: 'File assessment', body: 'Your CT urography, renal scan and previous operative notes are reviewed in detail; the stricture length and kidney function are determined.' },
-          { when: 'Day 1–2', title: 'Arrival & advanced tests', body: 'Examination, ureteroscopy/imaging if needed; the reconstruction plan is finalized.' },
-          { when: 'Day 3', title: 'Surgery', body: 'Graft, interposition or reimplantation depending on segment length; usually a multi-day stay.' },
-          { when: 'After', title: 'Stent/catheter period', body: 'A JJ stent and/or catheter stays for a while; drainage is confirmed by check imaging.' },
-          { when: 'Follow-up', title: 'Long-term follow-up', body: 'Function and drainage are monitored with scan/ultrasound; follow-up is especially critical in these cases.' }
+          { when: 'Remotely', title: 'Review of your file', body: 'Your CT urography images, YOUR RENOGRAM and YOUR PREVIOUS OPERATION NOTES are reviewed in detail. No plan can be made without these three: the renogram shows whether repair is worthwhile, the operation note shows what has already been done.' },
+          { when: 'Days 1–2', title: 'Arrival and further assessment', body: 'Examination, ureteroscopy if needed and completion of imaging. Both ends of the stricture are visualised to establish its true length — the information that determines which technique will be required.' },
+          { when: 'Day of surgery', title: 'Reconstruction', body: 'A patch, a bridge or reimplantation according to the length of the segment. The plan may be revised according to the tissue found at operation; the possible scenarios are discussed beforehand.' },
+          { when: 'In hospital', title: 'Early period', body: 'If a bowel segment has been used, bowel function must return and the stay is longer. A stent remains inside, with a drain for a period.' },
+          { when: 'Weeks 4–8', title: 'Stent removal', body: 'The stent is removed once check imaging has confirmed the integrity of the repair. Where this will be done must be planned in advance.' },
+          { when: 'Long term', title: 'Function follow-up', body: 'Drainage and renal function are followed with renography and ultrasound. Follow-up is particularly critical in these cases: a silent re-stricture can damage the kidney without causing symptoms.' }
         ],
         risks: [
-          'Stricture recurrence and need for additional intervention',
-          'Bowel-related metabolic/mucus effects in ileal interposition',
+          'RECURRENCE OF THE STRICTURE requiring further intervention — more likely in long-segment and redo cases',
           'Urine leak, infection and bleeding',
-          'Change in kidney function'
+          'SPECIFIC CONSIDERATIONS WHERE A BOWEL SEGMENT IS USED: mucus in the urine is an expected finding that does not resolve, and imbalance in blood chemistry can develop, so long-term follow-up is required. These permanent changes must be discussed plainly before the technique is chosen',
+          'Temporary or lasting change in bowel function from harvesting the segment',
+          'Temporary altered sensation and discomfort where an oral graft has been taken',
+          'Renal function not improving as hoped: repair restores drainage, it does not recover lost function',
+          'Clot risk from long surgery and immobility; the return flight is planned separately',
+          'Recurrent urinary infection'
         ],
         alternatives: [
-          'Maintenance with a long-term JJ stent or nephrostomy (for those unfit for surgery)',
-          'End-to-end repair/reimplantation in short strictures',
-          'Autotransplantation (in selected complex cases)',
-          'Nephrectomy (only for a non-functioning kidney, last resort)'
+          'Maintenance with a nephrostomy or permanent stent — protects the kidney and buys time, but brings continuous care, regular exchanges and infection risk. A bridge, not a solution',
+          'End-to-end repair or reimplantation for short strictures',
+          'Extending the bladder upwards — for lower ureteric strictures',
+          'Ureteroplasty with buccal mucosa graft — for selected long strictures',
+          'Bridging with a bowel segment — for very long strictures; it carries permanent changes',
+          'Moving the kidney to the pelvis on its own vessels (autotransplantation) — in selected complex cases',
+          'Removal of the kidney — only for a kidney that has lost all function and is a source of infection or pain, as a last resort'
+        ],
+        comparison: {
+          title: 'Options by length of stricture',
+          columns: ['Situation', 'Favoured technique', 'Burden', 'What to watch'],
+          rows: [
+            { label: 'Short stricture', values: ['End-to-end repair or reimplantation', 'Low', 'Available in most centres'] },
+            { label: 'Lower ureter, moderate length', values: ['Extending the bladder upwards', 'Moderate', 'Bladder capacity is assessed'] },
+            { label: 'Moderate to long stricture', values: ['Buccal mucosa patch', 'Moderate', 'Oral health and smoking affect healing'] },
+            { label: 'Very long stricture', values: ['Bridging with a bowel segment', 'High', 'Permanent metabolic and mucus effects'] },
+            { label: 'Patient unfit for surgery', values: ['Nephrostomy or permanent stent', 'Continuous care', 'A bridge, not a solution'] }
+          ],
+          note: 'The purpose of this table is to show that "long stricture" is not one thing: each length has its own technique. If you are offered only one option, you are entitled to ask why the others do not apply to you.'
+        },
+        recovery: [
+          { period: 'In hospital', body: 'If a bowel segment was used, bowel function must return and feeding is resumed gradually. Early walking reduces clot risk.' },
+          { period: 'First 2 weeks', body: 'Lifting is not allowed. Frequency and flank discomfort from the stent are usual. Seek help immediately for fever, shivering or inability to pass urine.' },
+          { period: 'With the stent', body: 'This period is longer than after other urological operations. The integrity of the repair is confirmed with imaging before the stent is removed.' },
+          { period: 'If a bowel segment was used', body: 'Mucus in the urine is an expected and permanent finding; plenty of fluids are advised. Regular blood tests are needed in the long term.' },
+          { period: 'Months 3–6', body: 'A renogram assesses whether drainage has been restored. That is the true measure of success for this repair.' },
+          { period: 'Long term', body: 'Follow-up continues for life. Because a silent re-stricture can damage the kidney without symptoms, the imaging schedule should be kept even when you feel well.' }
         ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'No fixed price range is given in this category; the price is shared after a file assessment, according to case complexity and the technique required.'
+          disclaimer: 'No fixed range is given in this category. The figure depends on the length of the stricture, the technique used, whether a bowel segment is required and the length of stay; it is provided in writing after your file has been reviewed.'
         },
         packageIncludes: [
-          'Surgery and hospital stay',
-          'Anesthesia and advanced tests',
-          'Included where graft/interposition is required',
-          'Stent and its removal',
-          'Transfers and accommodation',
-          'Medical interpreter and coordinator',
-          'Long-term function follow-up'
+          'Review of your file, renogram and previous operation notes',
+          'Examination and completion of advanced imaging',
+          'Blood and urine tests, urine culture',
+          'Anaesthesia and theatre',
+          'Reconstruction, including preparation of a graft or segment where required',
+          'Stent placement',
+          'Hospital stay',
+          'Check imaging before stent removal',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and patient coordinator',
+          'Remote review of long-term function follow-up'
         ],
         faqs: [
-          { q: 'I have a long ureteral stricture and was told it "can’t be done"; are there options?', a: 'Long-segment strictures can be repaired in most cases with advanced techniques such as buccal mucosa graft or ileal interposition. Your file is assessed and a kidney-preserving plan is produced.' },
-          { q: 'Can it be attempted again after a failed procedure?', a: 'Yes; redo reconstruction after iatrogenic injury or a failed repair is an area of this center’s experience. Kidney-preserving techniques are planned despite scar tissue.' },
-          { q: 'How long do recovery and follow-up take?', a: 'The stay and stent period are longer than other treatments; long-term success is judged with regular function follow-up. Follow-up is critical in these cases.' }
+          { q: 'I was told a very long segment of my ureter is narrowed and nothing can be done. Is that right?', a: 'The length of the stricture alone does not mean repair is impossible. For long strictures there are techniques: a buccal mucosa patch, bridging with a bowel segment, bringing the kidney down or extending the bladder upwards. Because these are not frequently performed in routine practice, that answer is sometimes given. You are entitled to ask for your file to be reviewed.' },
+          { q: 'Did the stricture happen during a previous operation?', a: 'A substantial proportion of long ureteric strictures follow injury to the ureter during another operation. We say this without blaming anyone: the ureter is a fine structure lying very close to neighbouring organs, and such injury is a recognised surgical risk. What matters now is making the right plan.' },
+          { q: 'Can I carry on living with a nephrostomy or a permanent stent?', a: 'You can, and in some patients that is the right decision. But know that these are a bridge, not a solution: they bring continuous care, regular exchanges and a risk of infection. Managing like this for years is not something to accept when repair is possible in a suitable patient.' },
+          { q: 'Can my kidney be saved?', a: 'That is the aim, but the renogram gives the answer. It measures how much function the kidney retains. If part of that function is preserved, repair is meaningful. To be honest, repair restores drainage; it does not recover function already lost. That is why deciding early matters.' },
+          { q: 'What does using bowel mean?', a: 'For very long strictures, a segment of small bowel is placed as a bridge between the kidney and the bladder. It is an effective technique but it carries permanent changes: mucus in the urine is an expected finding that does not resolve, and imbalance in blood chemistry can develop, so long-term follow-up is required. These must be discussed plainly before the technique is chosen.' },
+          { q: 'A repair was done before and the stricture recurred — can it be tried again?', a: 'In most cases yes, but scar tissue from the previous procedure makes the second repair harder and the success rate lower. That should be said plainly. Your previous operation note is the single most decisive document in planning; a plan made without knowing the technique used and how much segment was repaired is incomplete.' },
+          { q: 'I have only one kidney — is the risk higher?', a: 'In patients with a single kidney both the importance of the repair and the level of caution increase, because there is no spare. That is not a reason to avoid surgery; on the contrary, kidney-preserving repair should be brought forward. Planning and follow-up are closer in these patients.' },
+          { q: 'How long is the recovery?', a: 'This is one of the longer recoveries in urology. The hospital stay and stent period are longer than after other operations, particularly where a bowel segment has been used and bowel function must return. Plan a generous stay and buy a changeable ticket.' },
+          { q: 'Why is follow-up so important?', a: 'Because re-stricture can develop silently. A narrowing that progresses without symptoms can damage the kidney. You therefore need to keep to the imaging schedule even when you feel well. Ask for your follow-up plan in writing: which test, how often, and who will review it.' },
+          { q: 'What should I send?', a: 'The CT urography images themselves (not only the report), YOUR RENOGRAM RESULT, ALL PREVIOUS OPERATION NOTES, any ureterography images, renal function tests, urine culture, whether you have had radiotherapy and your medication. Without the renogram and the operation note, no serious plan can be made in these cases.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines — European Association of Urology (reconstructive urology)', url: 'https://uroweb.org/guidelines' }
         ]
       },
       ar: {
