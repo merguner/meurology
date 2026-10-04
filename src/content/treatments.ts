@@ -22279,371 +22279,823 @@ export const treatments: Treatment[] = [
       tr: {
         title: 'Böbrek Taşı Tedavisi (RIRS, PCNL, ESWL)',
         summary:
-          'Taşın boyutu ve yerine göre kişiye özel yöntem: lazerle kırma, perkütan cerrahi veya ses dalgası.',
-        metaTitle: 'Böbrek Taşı Tedavisi | RIRS, PCNL, ESWL Karşılaştırması',
+          'Her taş ameliyat gerektirmez ve her bekleme güvenli değildir. Yöntem; taşın boyutu, sertliği, yerleşimi ve böbreğin durumuna göre seçilir — taşın temizlenmesi ise tedavinin yalnızca yarısıdır.',
+        metaTitle: 'Böbrek Taşı Tedavisi: RIRS, PCNL ve ESWL Nasıl Seçilir',
         metaDescription:
-          'Böbrek taşında RIRS (lazer), PCNL (perkütan) ve ESWL (ses dalgası) yöntemlerinin karşılaştırması, süreç, riskler ve fiyat aralığı.',
+          'Böbrek taşında hangi yöntemin neden seçildiği, ateşle birlikte ağrının neden acil olduğu, stentin yarattığı şikâyetler, riskler ve taşın tekrarlamasını önlemek için yapılması gerekenler.',
+        quickFacts: {
+          duration: '30–90 dakika (yönteme göre)',
+          anesthesia: 'Genel veya spinal; ESWL’de genellikle sedasyon',
+          hospitalStay: 'Günübirlik – 2 gece',
+          stayInTurkey: '4–7 gün',
+          returnToWork: '2–7 gün',
+          flightClearance: 'Genellikle kontrol sonrası'
+        },
         definition: [
-          'Böbrek taşları idrardaki minerallerin kristalleşerek birikmesiyle oluşur ve şiddetli yan ağrısı, kanlı idrar veya enfeksiyona yol açabilir.',
-          'Tedavi yöntemi taşın boyutu, sertliği ve konumuna göre seçilir. Küçük taşlarda ses dalgası, orta boy taşlarda esnek üreteroskopi ile lazer, büyük taşlarda perkütan (deriden) cerrahi öne çıkar.'
+          'Böbrek taşı, idrardaki minerallerin kristalleşip birikmesiyle oluşur. Böbrek içinde sessizce durabilir; idrar yoluna düştüğünde ise tıkanıklık yaparak şiddetli yan ağrısına (renal kolik) yol açar.',
+          'ÖNCE EN ÖNEMLİ UYARI: Yan ağrısına ATEŞ VE TİTREME eşlik ediyorsa bu acil bir durumdur. Tıkalı bir idrar yolunun enfeksiyon kapması hızla ilerleyebilir ve idrarın acilen boşaltılmasını gerektirir. Bu tablo poliklinik randevusu beklenerek yönetilmez.',
+          'Hiç idrar çıkaramamak, ilaçla geçmeyen ağrı ve su içemeyecek kadar kusmak da acil başvuru nedenleridir.',
+          'AĞRISIZ OLMASI GÜVENLİ OLDUĞU ANLAMINA GELMEZ. Yavaş gelişen tıkanıklık ağrı yapmayabilir; böbrek sessizce genişler ve işlevini kaybedebilir. Bu nedenle bilinen bir taşın görüntüleme ile takibi, şikâyet olmamasına bakılmaksızın sürdürülür.',
+          'Tedavi yöntemi tek bir ölçüye göre değil; taşın boyutu, tomografideki yoğunluğu (sertliği), böbrek içindeki yerleşimi, böbreğin anatomisi, kullandığınız ilaçlar ve genel durumunuz birlikte değerlendirilerek seçilir.'
+        ],
+        eligibility: {
+          suitable: [
+            'Şikâyet yaratan, kendiliğinden düşmesi beklenmeyen taşı olanlar',
+            'Tekrarlayan kolik atakları geçirenler',
+            'Taşa bağlı idrar yolu tıkanıklığı ve böbrekte genişleme saptananlar',
+            'Tekrarlayan idrar yolu enfeksiyonu ile birlikte taşı olanlar',
+            'Böbrek işlevinde taşa bağlı bozulma başlayanlar',
+            'Mesleği gereği ani kolik riskinin kabul edilemeyeceği kişiler (örneğin pilotlar) — şikâyetsiz taşta bile tedavi gündeme gelebilir'
+          ],
+          notSuitable: [
+            'Tedavi edilmemiş idrar yolu enfeksiyonu olanlar: kültür temizlenmeden taş ameliyatı planlanmaz, bu kural esnetilmez',
+            'Küçük, şikâyetsiz ve takip edilebilen taşı olanlar — gereksiz girişimden kaçınılır',
+            'Kanama bozukluğu kontrol altına alınmamış hastalar (özellikle PCNL için)',
+            'Gebelik: girişim ve görüntüleme seçenekleri değişir, plan ayrıca yapılır',
+            'ESWL için: gebeler, kontrol altına alınmamış kanama bozukluğu olanlar ve taşın altında darlık bulunanlar'
+          ]
+        },
+        technology: [
+          'Kontrastsız bilgisayarlı tomografi — taşın boyutu, yeri ve yoğunluğunu gösterir; yöntem seçiminin temelidir',
+          'Esnek (fleksibl) üreteroskop — böbrek içinde dönerek kaliksler arasında çalışmaya imkân verir',
+          'Holmiyum lazer — taşı toz hâline getirme veya parçalama',
+          'Perkütan erişim — ultrason veya skopi eşliğinde böbreğe tünel açılması',
+          'Taş tutucu basketler ve çıkarma kılıfları',
+          'Çıkarılan veya düşen taşın kimyasal analizi — tekrarı önlemenin ilk adımı'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Vaka sayısı, Doç. Dr. Müslüm Ergün’ün bu alandaki toplam cerrahi deneyimini yansıtır.'
+          note: 'Endoürolojik taş cerrahisi, Doç. Dr. Müslüm Ergün’ün çalışma alanlarındandır. Yöntem seçimi tomografi, idrar kültürü ve böbrek işlev testleri birlikte değerlendirilerek yapılır; tek bir yöntem herkese uygulanmaz.'
         },
         timeline: [
-          { when: 'Uzaktan', title: 'Ön değerlendirme', body: 'BT/ultrason ve kan-idrar sonuçlarınız incelenir, uygun yöntem planlanır.' },
-          { when: '1. Gün', title: 'Varış ve tetkik', body: 'Muayene, gerekli görüntüleme ve anestezi değerlendirmesi.' },
-          { when: '2. Gün', title: 'İşlem', body: 'Seçilen yönteme göre işlem; çoğu vaka günübirlik veya 1 gece yatış.' },
-          { when: '3–4. Gün', title: 'Kontrol', body: 'Taşsızlık kontrolü, gerekirse stent değerlendirmesi ve dönüş onayı.' }
+          { when: 'Uzaktan', title: 'Ön değerlendirme', body: 'Kontrastsız tomografiniz, böbrek işlev testleriniz ve idrar kültürünüz incelenir. Tomografi raporu değil, görüntülerin kendisi istenir; taşın yoğunluk değeri raporda çoğu zaman yazmaz ve yöntem seçiminde belirleyicidir.' },
+          { when: '1. Gün', title: 'Varış ve tetkik', body: 'Muayene, gerekirse görüntülemenin tekrarı, kan ve idrar tetkikleri, anestezi değerlendirmesi. İdrar kültüründe üreme varsa işlem ertelenir ve önce tedavi edilir.' },
+          { when: '2. Gün', title: 'İşlem', body: 'Seçilen yönteme göre işlem yapılır. RIRS’te kesi yoktur; PCNL’de sırtta bir santimetre kadar bir giriş açılır; ESWL dışarıdan uygulanır.' },
+          { when: '3. Gün', title: 'Taburculuk', body: 'Çoğu hasta işlemin ertesi günü taburcu olur. Stent takıldıysa buna bağlı şikâyetler anlatılır.' },
+          { when: '4–6. Gün', title: 'Kontrol ve dönüş onayı', body: 'Görüntüleme ile taşsızlık değerlendirilir. Stent varsa ne zaman ve nerede alınacağı yazılı olarak planlanır; bu, yurt dışından gelen hastalarda en sık atlanan ayrıntıdır.' }
         ],
         risks: [
-          'Kanama ve idrar yolu enfeksiyonu',
-          'Geçici idrarda yanma veya kanama',
-          'Stent gerektiren durumlar',
-          'Taşın tam temizlenememesi ve tekrar işlem ihtiyacı'
+          'ATEŞLİ ENFEKSİYON: Her iki girişimsel yöntemin de en ciddiye alınması gereken riskidir. Bu nedenle ameliyat öncesi idrar kültürünün temiz olması zorunludur. İşlemden sonra ateş, titreme veya halsizlik olursa gecikmeden başvurun',
+          'KANAMA: PCNL’de böbreğe tünel açıldığı için risk RIRS’e göre yüksektir. Nadiren kan verilmesi veya ek girişim gerekebilir',
+          'ÜRETER YARALANMASI VE SONRADAN DARLIK: RIRS’te alet geçişine bağlı olarak bildirilmiştir',
+          'Taşın tam temizlenememesi ve ikinci bir seans gerekmesi — özellikle büyük taşlarda ve alt kaliks yerleşiminde',
+          'ESWL sonrası parçaların üretere dizilerek tıkanıklık yapması',
+          'Stente bağlı şikâyetler: sık idrara çıkma, kasıkta ağrı, idrarda kan',
+          'PCNL’de nadiren akciğer zarına veya komşu organlara ulaşma',
+          'İdrarda geçici kanama ve yanma — beklenen bulgulardır'
         ],
         alternatives: [
-          'İlaçla taş düşürme (küçük taşlarda)',
-          'Bekle-gör yaklaşımı (belirtisiz küçük taşlar)',
-          'Açık/laparoskopik cerrahi (nadiren, kompleks vakalarda)'
+          'Tıbbi taş düşürme tedavisi — küçük üreter taşlarında, ilaç ve bol sıvı desteğiyle taşın kendiliğinden düşmesinin beklenmesi',
+          'Takip (bekle-gör) — küçük, şikâyetsiz ve böbreği tehdit etmeyen taşlarda. Takip, görüntüleme ile yapılır; şikâyet olmaması tek başına yeterli değildir',
+          'ESWL — uygun boyut, yerleşim ve yoğunluktaki taşlarda, vücuda alet girmeden',
+          'RIRS — kesi olmadan, idrar yolundan',
+          'PCNL — büyük ve dallanmış taşlarda tek seansta temizlik',
+          'Laparoskopik veya açık cerrahi — günümüzde nadiren, anatomik sorunların eşlik ettiği seçilmiş vakalarda'
         ],
         comparison: {
-          title: 'RIRS vs PCNL vs ESWL',
-          columns: ['Kriter', 'RIRS (Lazer)', 'PCNL (Perkütan)', 'ESWL (Ses dalgası)'],
+          title: 'RIRS, PCNL ve ESWL: hangi taşta hangisi öne çıkar',
+          columns: ['Ölçüt', 'RIRS (lazer)', 'PCNL (perkütan)', 'ESWL (ses dalgası)'],
           rows: [
-            { label: 'Uygun taş boyutu', values: ['~2 cm’e kadar', '2 cm ve üzeri', '~1 cm’e kadar'] },
-            { label: 'Kesi', values: ['Yok (idrar yolundan)', 'Küçük deri kesisi', 'Yok (dıştan)'] },
-            { label: 'Anestezi', values: ['Genel/spinal', 'Genel', 'Genelde sedasyon'] },
-            { label: 'Yatış', values: ['Günübirlik–1 gece', '1–2 gece', 'Günübirlik'] },
-            { label: 'Taşsızlık oranı', values: ['Yüksek', 'Çok yüksek', 'Orta'] }
+            { label: 'Vücuda giriş', values: ['İdrar yolundan, kesi yok', 'Sırtta yaklaşık 1 cm giriş', 'Giriş yok, dışarıdan'] },
+            { label: 'Öne çıktığı taş boyutu', values: ['Küçük ve orta', 'Büyük ve dallanmış', 'Küçük'] },
+            { label: 'Taş sertliği etkisi', values: ['Sert taşta süre uzar', 'Sertlikten az etkilenir', 'Sert taşta başarı düşer'] },
+            { label: 'Alt kaliks taşında', values: ['Parçaların boşalması zor olabilir', 'Doğrudan temizlenir', 'Parçalar yerinde kalabilir'] },
+            { label: 'Anestezi', values: ['Genel veya spinal', 'Genel', 'Genellikle sedasyon'] },
+            { label: 'Hastanede kalış', values: ['Günübirlik–1 gece', '1–2 gece', 'Günübirlik'] },
+            { label: 'Öne çıkan risk', values: ['Üreter zedelenmesi, darlık', 'Kanama', 'Parçaların üreteri tıkaması'] },
+            { label: 'Kan sulandırıcı kullananlarda', values: ['Daha uygun', 'Riskli', 'Uygun değil'] },
+            { label: 'Tek seansta temizlik', values: ['Taş büyüdükçe azalır', 'En yüksek', 'Sıklıkla birden fazla seans'] }
           ],
-          note: 'Tablo genel bilgilendirmedir; nihai yöntem kişiye göre belirlenir.'
+          note: 'Tablo yön göstericidir; karar tek bir satıra göre değil, tomografi ve klinik durumun tamamı değerlendirilerek verilir. Yurt dışından gelen bir hasta için "ikinci seans gerekme ihtimali" ayrıca önemlidir, çünkü bu ya kalış süresinin uzaması ya da ikinci bir seyahat demektir — bunu önceden sorun.'
         },
+        recovery: [
+          { period: 'İlk 48 saat', body: 'İdrarda kan görülmesi ve yanma beklenen bulgulardır. Bol sıvı alınması önerilir. Ateş, titreme veya idrar yapamama durumunda derhal başvurulmalıdır.' },
+          { period: '1. hafta', body: 'ESWL veya RIRS sonrası taş parçaları düşerken kolik tarzı ağrı olabilir. Ağrı kesici planı önceden verilir. Ağır egzersizden kaçınılır.' },
+          { period: 'Stentli dönem', body: 'Stent varsa sık idrara çıkma, kasıkta ağrı ve idrarda kan olağandır; stent alınınca geçer. Bu şikâyetlerin beklenen olduğunu bilmek bu dönemi belirgin biçimde kolaylaştırır.' },
+          { period: 'PCNL sonrası ilk 2 hafta', body: 'Giriş yerinde hassasiyet olur. Ağır kaldırmaktan kaçınılır; yara bakımı anlatılır.' },
+          { period: '4–12. hafta', body: 'Taşsızlık görüntüleme ile doğrulanır. ESWL sonrası parçaların düşmesi haftalar alabileceği için değerlendirme erken yapılmaz.' },
+          { period: 'Uzun dönem', body: 'Taş analizi ve metabolik değerlendirme sonuçlarına göre sıvı ve beslenme düzeni kişiye özel planlanır. Bu adım atlanırsa taş tekrarlama eğilimindedir.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Yöntem ve taş yüküne göre değişir; kesin teklif değerlendirme sonrası verilir.'
+          disclaimer: 'Tutar; uygulanan yönteme, taş yüküne, ikinci seans gerekip gerekmediğine ve stent alımının nerede yapılacağına göre değişir. Kalem kalem ayrılmış yazılı teklif, tomografiniz incelendikten sonra verilir.'
         },
         packageIncludes: [
-          'İşlem ve hastane yatışı',
-          'Anestezi ve gerekli tetkikler',
-          'Transferler ve konaklama',
-          'Tıbbi tercüman ve koordinatör',
-          'Kontrol ve online takip'
+          'Muayene, kan ve idrar tetkikleri, idrar kültürü',
+          'Gerekirse görüntülemenin tekrarı',
+          'Anestezi ve ameliyathane',
+          'İşlem ve gerekli sarf malzemeleri',
+          'Hastane yatışı',
+          'Çıkarılan taşın kimyasal analizi',
+          'Taşsızlık kontrolü ve dönüş öncesi değerlendirme',
+          'Havalimanı–hastane–otel transferleri',
+          'Konaklama (hasta + 1 refakatçi)',
+          'Tıbbi tercüman ve hasta koordinatörü',
+          'Dönüşten sonra uzaktan takip'
         ],
         faqs: [
-          { q: 'Hangi yöntem bana uygun?', a: 'Taşın boyutu, sertliği ve yerine bağlıdır; görüntüleme sonrası netleşir.' },
-          { q: 'İşlem ağrılı mı?', a: 'İşlemler anestezi altında yapılır; sonrasında hafif rahatsızlık olabilir.' },
-          { q: 'Stent takılır mı?', a: 'Bazı vakalarda geçici stent gerekir; genellikle kısa süre sonra alınır.' }
+          { q: 'Her böbrek taşı ameliyat gerektirir mi?', a: 'Hayır. Küçük, şikâyet yaratmayan ve böbreği tehdit etmeyen taşlar takip edilebilir; küçük üreter taşlarının bir bölümü ilaç desteğiyle kendiliğinden düşer. Girişim; şikâyet, tıkanıklık, enfeksiyon veya böbrek işlevinde bozulma varsa gündeme gelir.' },
+          { q: 'Ağrım yok, o hâlde acelem yok değil mi?', a: 'Bu varsayım tehlikelidir. Yavaş gelişen tıkanıklık ağrı yapmayabilir ve böbrek sessizce genişleyip işlev kaybedebilir. Bilinen bir taşınız varsa, şikâyetiniz olmasa bile görüntüleme ile takibi sürdürün.' },
+          { q: 'Hangi durumda acile gitmeliyim?', a: 'Yan ağrısına ateş ve titreme eşlik ediyorsa gecikmeden. Tıkalı idrar yolunda enfeksiyon hızla ilerleyebilir. Ayrıca hiç idrar çıkaramamak, ilaçla geçmeyen ağrı ve su içemeyecek kadar kusmak da acil başvuru nedenleridir.' },
+          { q: 'Hangi yöntem bana uygun?', a: 'Karar; taşın boyutu, tomografideki yoğunluğu, böbrek içindeki yerleşimi, böbreğin anatomisi, kullandığınız kan sulandırıcılar ve genel durumunuz birlikte değerlendirilerek verilir. Özellikle alt kaliks yerleşimli taşlar, aynı boyuttaki diğer taşlardan farklı değerlendirilir çünkü parçalar buradan zor boşalır.' },
+          { q: 'Tek seansta taşım tamamen temizlenir mi?', a: 'Küçük ve orta taşlarda genellikle evet. Taş büyüdükçe ikinci seans ihtimali artar; ESWL’de birden fazla seans sık gerekir. Yurt dışından geliyorsanız bu ihtimali ve bunun kalış sürenize etkisini önceden sorun.' },
+          { q: 'Stent takılacak mı ve ne kadar kalacak?', a: 'Bazı işlemlerden sonra böbreğin boşalmasını güvence altına almak için geçici stent konur. Stent varken sık idrara çıkma, kasıkta ağrı ve idrarda kan olağandır ve alındığında geçer. Ne kadar kalacağını, kimin ve nerede alacağını ayrılmadan önce yazılı olarak netleştirin.' },
+          { q: 'İşlem ağrılı mı?', a: 'İşlem anestezi veya sedasyon altında yapılır, bu sırada ağrı duymazsınız. Sonrasında idrar yaparken yanma, idrarda kan ve parçalar düşerken kolik tarzı ağrı olabilir; bunlar için ağrı kesici planı önceden verilir.' },
+          { q: 'Kan sulandırıcı kullanıyorum, ameliyat olabilir miyim?', a: 'Bu durum yöntem seçimini doğrudan etkiler; böbreğe tünel açılan PCNL bu hastalarda daha risklidir ve RIRS öne çıkar. İlacınızı kendi kararınızla kesmeyin; tam ilaç listenizi başvuru sırasında gönderin ki plan siz yola çıkmadan yapılsın.' },
+          { q: 'Taşım neden oluştu ve yine olur mu?', a: 'Hiçbir şey değişmezse taşlar tekrarlama eğilimindedir. Bu nedenle düşen veya çıkarılan taşın kimyasal analizi yapılmalı, idrar incelemesi ve gerekirse metabolik değerlendirme eklenmelidir. Günlük sıvı alımını artırmak en basit ve en çok ihmal edilen önlemdir. Beslenme önerileri taşın cinsine göre değişir; herkese aynı liste verilmez.' },
+          { q: 'Sıcak iklimde yaşıyorum, bunun bir etkisi var mı?', a: 'Evet. Terleme ile sıvı kaybı idrarı yoğunlaştırır ve taş oluşumunu kolaylaştırır. Serin iklimde yeterli olan sıvı miktarı sıcak iklimde yetersiz kalabilir. Bu, Körfez ve benzeri bölgelerden gelen hastalarda özellikle önemlidir.' },
+          { q: 'İşlemden sonra ne zaman uçabilirim?', a: 'Çoğu hasta kontrol muayenesinden sonra uçuş onayı alır. Ancak stentli uçmak ve dönüşte stentin kim tarafından alınacağı ayrı bir plan gerektirir; bunu seyahat tarihinizi kesinleştirmeden önce konuşun.' },
+          { q: 'Gelmeden önce hangi belgeleri göndermeliyim?', a: 'Kontrastsız bilgisayarlı tomografinizin görüntüleri (yalnızca rapor değil), böbrek işlev testleriniz, güncel idrar tahlili ve kültürünüz, kullandığınız ilaçların tam listesi ve varsa daha önceki taş tedavilerinizin kayıtları. Daha önce taş analizi yapıldıysa onu da gönderin. Bu belgelerle, siz bilet almadan önce hangi yöntemin uygun olduğu ve tek seansın yetip yetmeyeceği değerlendirilebilir.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urolithiasis — Avrupa Üroloji Derneği', url: 'https://uroweb.org/guidelines/urolithiasis' }
         ]
       },
       en: {
         title: 'Kidney Stone Treatment (RIRS, PCNL, ESWL)',
-        summary: 'A method tailored to stone size and location: laser fragmentation, percutaneous surgery or shock waves.',
-        metaTitle: 'Kidney Stone Treatment | RIRS, PCNL, ESWL Comparison',
-        metaDescription: 'Comparison of RIRS (laser), PCNL (percutaneous) and ESWL (shock wave) for kidney stones: process, risks and price range.',
+        summary:
+          'Not every stone needs an operation, and not every wait is safe. The method is chosen from the stone\'s size, density and position — and removing the stone is only half the treatment.',
+        metaTitle: 'Kidney Stone Treatment: How RIRS, PCNL and ESWL Are Chosen',
+        metaDescription:
+          'Why a particular stone treatment is chosen, why pain with fever is an emergency, the discomfort a ureteric stent causes, the risks, and how to stop stones coming back.',
+        quickFacts: {
+          duration: '30–90 minutes depending on method',
+          anesthesia: 'General or spinal; usually sedation for ESWL',
+          hospitalStay: 'Day case – 2 nights',
+          stayInTurkey: '4–7 days',
+          returnToWork: '2–7 days',
+          flightClearance: 'Usually after the review appointment'
+        },
         definition: [
-          'Kidney stones form when minerals in the urine crystallize and build up, and can cause severe flank pain, blood in the urine or infection.',
-          'The treatment method is chosen according to the size, hardness and location of the stone. Shock waves are used for small stones, flexible ureteroscopy with laser for medium stones, and percutaneous (through the skin) surgery for large stones.'
+          'Kidney stones form when minerals in the urine crystallise and accumulate. A stone can sit silently inside the kidney; when it drops into the urinary tract it obstructs flow and causes severe flank pain (renal colic).',
+          'THE MOST IMPORTANT WARNING FIRST: flank pain accompanied by FEVER AND SHIVERING is an emergency. Infection behind an obstructed urinary tract can progress rapidly and may require urgent drainage. This is not a situation to manage by waiting for a clinic appointment.',
+          'Passing no urine at all, pain not controlled by medication, and vomiting that prevents you from drinking are also reasons to seek urgent care.',
+          'PAINLESS DOES NOT MEAN SAFE. Obstruction that develops slowly may cause no pain at all; the kidney dilates quietly and can lose function. For this reason a known stone is followed with imaging regardless of whether it causes symptoms.',
+          'The treatment is not chosen from one measurement. Size, density on CT, position within the kidney, the anatomy of the collecting system, your medication and your general condition are weighed together.'
+        ],
+        eligibility: {
+          suitable: [
+            'Stones causing symptoms that are unlikely to pass on their own',
+            'Recurrent episodes of colic',
+            'Obstruction with dilatation of the kidney',
+            'Stones together with recurrent urinary infection',
+            'Deterioration of kidney function attributable to the stone',
+            'People whose occupation makes a sudden episode of colic unacceptable (pilots, for example) — treatment may be considered even for a silent stone'
+          ],
+          notSuitable: [
+            'Patients with untreated urinary infection: surgery is not scheduled until the culture is clear, and this rule is not relaxed',
+            'Patients with small, asymptomatic stones that can be followed — unnecessary intervention is avoided',
+            'Patients with uncorrected bleeding disorders, particularly for PCNL',
+            'Pregnancy: imaging and treatment options differ and the plan is made separately',
+            'For ESWL specifically: pregnancy, uncorrected bleeding disorders, and obstruction distal to the stone'
+          ]
+        },
+        technology: [
+          'Non-contrast CT — shows the size, position and density of the stone and is the basis of the choice of method',
+          'Flexible ureteroscope — deflects within the kidney to reach the individual calyces',
+          'Holmium laser — to dust or fragment the stone',
+          'Percutaneous access under ultrasound or fluoroscopic guidance',
+          'Stone baskets and access sheaths',
+          'Chemical analysis of the passed or removed stone — the first step in preventing recurrence'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'The case volume reflects Assoc. Prof. Dr. Müslüm Ergün’s total surgical experience in this area.'
+          note: 'Endourological stone surgery is among Assoc. Prof. Müslüm Ergün\'s areas of practice. The method is selected from the CT, the urine culture and renal function together; a single technique is not applied to everyone.'
         },
         timeline: [
-          { when: 'Remote', title: 'Pre-assessment', body: 'Your CT/ultrasound and blood-urine results are reviewed and the suitable method is planned.' },
-          { when: 'Day 1', title: 'Arrival & tests', body: 'Examination, required imaging and anesthesia assessment.' },
-          { when: 'Day 2', title: 'Procedure', body: 'Procedure according to the chosen method; most cases are day-case or a 1-night stay.' },
-          { when: 'Day 3–4', title: 'Review', body: 'Stone-free check, stent assessment if needed and clearance to return.' }
+          { when: 'Remotely', title: 'Initial assessment', body: 'Your non-contrast CT, renal function tests and urine culture are reviewed. The CT images are requested, not only the report: the density value is often absent from the report and is decisive in choosing the method.' },
+          { when: 'Day 1', title: 'Arrival and work-up', body: 'Examination, repeat imaging if required, blood and urine tests, anaesthetic assessment. If the urine culture grows an organism, the procedure is postponed and the infection treated first.' },
+          { when: 'Day 2', title: 'Procedure', body: 'Performed according to the chosen method. RIRS involves no incision; PCNL uses a track of about a centimetre in the back; ESWL is applied from outside the body.' },
+          { when: 'Day 3', title: 'Discharge', body: 'Most patients are discharged the following day. If a stent has been placed, the symptoms it causes are explained.' },
+          { when: 'Days 4–6', title: 'Review and flying clearance', body: 'Stone clearance is assessed with imaging. If a stent is in place, when and where it will be removed is planned in writing — the detail most often overlooked for patients travelling from abroad.' }
         ],
         risks: [
-          'Bleeding and urinary tract infection',
-          'Temporary burning or blood on urination',
-          'Situations requiring a stent',
-          'Incomplete stone clearance and need for a repeat procedure'
+          'FEBRILE INFECTION: the complication to take most seriously with either procedure. This is why a clear urine culture beforehand is mandatory. Report fever, shivering or malaise after the procedure without delay',
+          'BLEEDING: higher with PCNL because a track is made through the kidney. Transfusion or a further procedure is occasionally required',
+          'URETERIC INJURY AND LATER STRICTURE: reported with RIRS from the passage of instruments',
+          'Incomplete clearance requiring a second session — particularly for larger stones and lower pole stones',
+          'Fragments lining up in the ureter and obstructing it after ESWL',
+          'Stent symptoms: urinary frequency, flank discomfort, blood in the urine',
+          'Rarely, involvement of the pleura or adjacent organs during PCNL',
+          'Temporary blood in the urine and stinging — these are expected'
         ],
         alternatives: [
-          'Medical stone passage (for small stones)',
-          'Watch-and-wait approach (asymptomatic small stones)',
-          'Open/laparoscopic surgery (rarely, in complex cases)'
+          'Medical expulsive therapy — for small ureteric stones, allowing the stone to pass with medication and fluids',
+          'Observation — for small, asymptomatic stones that do not threaten the kidney. Observation means imaging; absence of symptoms alone is not enough',
+          'ESWL — for stones of suitable size, position and density, with nothing entering the body',
+          'RIRS — through the natural urinary passage, with no incision',
+          'PCNL — single-session clearance for large and branched stones',
+          'Laparoscopic or open surgery — now uncommon, for selected cases with associated anatomical problems'
         ],
         comparison: {
-          title: 'RIRS vs PCNL vs ESWL',
-          columns: ['Criterion', 'RIRS (Laser)', 'PCNL (Percutaneous)', 'ESWL (Shock wave)'],
+          title: 'RIRS, PCNL and ESWL: which suits which stone',
+          columns: ['Criterion', 'RIRS (laser)', 'PCNL (percutaneous)', 'ESWL (shock wave)'],
           rows: [
-            { label: 'Suitable stone size', values: ['Up to ~2 cm', '2 cm and above', 'Up to ~1 cm'] },
-            { label: 'Incision', values: ['None (via urinary tract)', 'Small skin incision', 'None (external)'] },
-            { label: 'Anesthesia', values: ['General/spinal', 'General', 'Usually sedation'] },
-            { label: 'Stay', values: ['Day-case–1 night', '1–2 nights', 'Day-case'] },
-            { label: 'Stone-free rate', values: ['High', 'Very high', 'Moderate'] }
+            { label: 'Access', values: ['Natural urinary passage, no incision', 'About a 1 cm track in the back', 'None; applied externally'] },
+            { label: 'Stone size it suits', values: ['Small and moderate', 'Large and branched', 'Small'] },
+            { label: 'Effect of hardness', values: ['Hard stones take longer', 'Little affected', 'Success falls with hard stones'] },
+            { label: 'Lower pole stones', values: ['Fragments may drain poorly', 'Cleared directly', 'Fragments may remain'] },
+            { label: 'Anaesthesia', values: ['General or spinal', 'General', 'Usually sedation'] },
+            { label: 'Hospital stay', values: ['Day case–1 night', '1–2 nights', 'Day case'] },
+            { label: 'Main risk', values: ['Ureteric injury, stricture', 'Bleeding', 'Fragments obstructing the ureter'] },
+            { label: 'On anticoagulants', values: ['More suitable', 'Higher risk', 'Not suitable'] },
+            { label: 'Single-session clearance', values: ['Falls as the stone grows', 'Highest', 'Often needs several sessions'] }
           ],
-          note: 'This table is general information; the final method is determined individually.'
+          note: 'The table is a guide; the decision is made from the CT and the whole clinical picture, not from one row. For a patient travelling from abroad the likelihood of needing a second session matters especially, because it means either a longer stay or a second journey — ask about it in advance.'
         },
+        recovery: [
+          { period: 'First 48 hours', body: 'Blood in the urine and stinging are expected. Drink plenty of fluids. Seek care immediately for fever, shivering or inability to pass urine.' },
+          { period: 'Week 1', body: 'Colicky pain can occur as fragments pass after ESWL or RIRS. A pain relief plan is given in advance. Avoid strenuous exercise.' },
+          { period: 'While the stent is in', body: 'Frequency, flank discomfort on voiding and blood in the urine are usual and resolve when the stent is removed. Knowing these symptoms are expected makes the period considerably easier.' },
+          { period: 'First 2 weeks after PCNL', body: 'The access site is tender. Avoid lifting; wound care is explained before discharge.' },
+          { period: 'Weeks 4–12', body: 'Stone clearance is confirmed with imaging. After ESWL this is not assessed early, since fragments may take weeks to pass.' },
+          { period: 'Long term', body: 'Fluid intake and diet are planned individually from the stone analysis and any metabolic assessment. Skipping this step is why stones recur.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Varies by method and stone burden; a firm quote is given after assessment.'
+          disclaimer: 'The figure depends on the method, the stone burden, whether a second session is required and where the stent is removed. An itemised written quote follows review of your CT.'
         },
         packageIncludes: [
-          'Procedure and hospital stay',
-          'Anesthesia and required tests',
-          'Transfers and accommodation',
-          'Medical interpreter and coordinator',
-          'Follow-up and online monitoring'
+          'Examination, blood and urine tests, urine culture',
+          'Repeat imaging if required',
+          'Anaesthesia and theatre',
+          'The procedure and its consumables',
+          'Hospital stay',
+          'Chemical analysis of the removed stone',
+          'Stone clearance check and assessment before you fly',
+          'Airport–hospital–hotel transfers',
+          'Accommodation (patient + 1 companion)',
+          'Medical interpreter and patient coordinator',
+          'Remote follow-up after you return home'
         ],
         faqs: [
-          { q: 'Which method is right for me?', a: 'It depends on the size, hardness and location of the stone; it becomes clear after imaging.' },
-          { q: 'Is the procedure painful?', a: 'Procedures are performed under anesthesia; mild discomfort may follow.' },
-          { q: 'Will a stent be placed?', a: 'Some cases need a temporary stent; it is usually removed a short time later.' }
+          { q: 'Does every kidney stone need surgery?', a: 'No. Small stones that cause no symptoms and do not threaten the kidney can be observed, and many small ureteric stones pass with medication and fluids. Intervention is considered when there are symptoms, obstruction, infection or deterioration in kidney function.' },
+          { q: 'I have no pain, so there is no hurry — is that right?', a: 'That assumption is dangerous. Obstruction that develops slowly may cause no pain, while the kidney quietly dilates and loses function. If you have a known stone, continue imaging follow-up even without symptoms.' },
+          { q: 'When should I go to an emergency department?', a: 'Without delay if flank pain is accompanied by fever and shivering: infection behind an obstruction can progress rapidly. Passing no urine at all, pain not relieved by medication and vomiting that prevents drinking are also reasons to attend urgently.' },
+          { q: 'Which method is right for me?', a: 'The decision comes from the size of the stone, its density on CT, its position in the kidney, the anatomy of your collecting system, any anticoagulants you take and your general condition. Lower pole stones in particular are judged differently from stones of the same size elsewhere, because fragments drain poorly from there.' },
+          { q: 'Will one session clear my stone completely?', a: 'Usually, for small and moderate stones. As the stone grows the chance of needing a second session rises, and ESWL often requires more than one. If you are travelling from abroad, ask about this and about its effect on the length of your stay.' },
+          { q: 'Will I need a stent, and for how long?', a: 'A temporary stent is often placed after these procedures to secure drainage. With a stent in place, frequency, flank discomfort and blood in the urine are usual and resolve on removal. Establish in writing before you leave how long it stays, and who will remove it and where.' },
+          { q: 'Is the procedure painful?', a: 'It is performed under anaesthesia or sedation, so you feel nothing at the time. Afterwards there can be stinging, blood in the urine and colicky pain as fragments pass; a pain relief plan is provided in advance.' },
+          { q: 'I take blood thinners — can I have this treatment?', a: 'This directly affects which method is chosen: PCNL, which creates a track through the kidney, carries more risk in these patients, and RIRS comes to the fore. Do not stop any medication on your own; send your complete medication list with your enquiry so the plan is made before you travel.' },
+          { q: 'Why did I form a stone, and will it come back?', a: 'If nothing changes, stones tend to recur. The stone you pass or that is removed should be analysed, with urine testing and, where you form stones repeatedly, metabolic assessment. Increasing daily fluid intake is the simplest and most neglected measure. Dietary advice depends on the stone type; there is no single list for everyone.' },
+          { q: 'I live in a hot climate — does that matter?', a: 'Yes. Fluid lost through sweating concentrates the urine and favours stone formation. An intake that is adequate in a cool climate may not be enough in a hot one. This matters particularly for patients from the Gulf and similar regions.' },
+          { q: 'When can I fly after the procedure?', a: 'Most patients are cleared after the review appointment. However, flying with a stent and arranging who will remove it at home require a separate plan; discuss that before you fix your travel dates.' },
+          { q: 'What should I send before coming?', a: 'The images of your non-contrast CT (not just the report), renal function tests, a current urinalysis and culture, your full medication list and records of any previous stone treatment. Send any previous stone analysis too. With these it can be assessed, before you buy a ticket, which method suits you and whether one session is likely to be enough.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urolithiasis — European Association of Urology', url: 'https://uroweb.org/guidelines/urolithiasis' }
         ]
       },
       ar: {
-        title: 'علاج حصوات الكلى (RIRS، PCNL، ESWL)',
-        summary: 'أسلوب مُخصَّص حسب حجم الحصاة وموقعها: تفتيت بالليزر، جراحة عبر الجلد، أو موجات صادمة.',
-        metaTitle: 'علاج حصوات الكلى | مقارنة RIRS وPCNL وESWL',
-        metaDescription: 'مقارنة بين RIRS (ليزر) وPCNL (عبر الجلد) وESWL (موجات صادمة) لحصوات الكلى: المسار، المخاطر، ونطاق السعر.',
+        title: 'علاج حصوات الكلى (RIRS وPCNL وتفتيت الحصى)',
+        summary:
+          'ليست كل حصاة تحتاج إلى جراحة، وليس كل انتظار آمنًا. وتُختار الطريقة بحسب حجم الحصاة وكثافتها وموضعها — وإزالتها نصف العلاج فقط.',
+        metaTitle: 'حصوات الكلى: كيف يُختار بين RIRS وPCNL وتفتيت الحصى',
+        metaDescription:
+          'لماذا تُختار طريقة بعينها، ولماذا يُعدّ الألم مع الحمى حالة إسعافية، وما الأعراض التي تسببها الدعامة، والمخاطر، وكيف تُمنَع عودة الحصوات.',
+        quickFacts: {
+          duration: '30–90 دقيقة بحسب الطريقة',
+          anesthesia: 'عام أو نصفي؛ وفي التفتيت تخدير خفيف غالبًا',
+          hospitalStay: 'من دون مبيت إلى ليلتين',
+          stayInTurkey: '4–7 أيام',
+          returnToWork: '2–7 أيام',
+          flightClearance: 'عادةً بعد المراجعة'
+        },
         definition: [
-          'تتكوّن حصوات الكلى عند تبلور المعادن في البول وتراكمها، وقد تسبب ألمًا شديدًا في الخاصرة أو دمًا في البول أو التهابًا.',
-          'يُختار أسلوب العلاج حسب حجم الحصاة وصلابتها وموقعها. تُستخدَم الموجات الصادمة للحصوات الصغيرة، وتنظير الحالب المرن بالليزر للحصوات المتوسطة، والجراحة عبر الجلد للحصوات الكبيرة.'
+          'تتكوّن حصوات الكلى حين تتبلور المعادن الموجودة في البول وتتراكم. وقد تستقر الحصاة في الكلية بلا أعراض؛ فإذا نزلت إلى الحالب سدّت مجرى البول وسببت ألمًا شديدًا في الخاصرة (المغص الكلوي).',
+          'أهم تنبيه أولًا: إذا صحب ألمَ الخاصرة حمّى ورعشة فهذه حالة إسعافية. فالعدوى خلف انسداد في المجرى البولي قد تتطور بسرعة وتستدعي تصريفًا عاجلًا. ولا يُدار هذا بانتظار موعد في العيادة.',
+          'وكذلك انقطاع البول تمامًا، والألم الذي لا تُسكّنه الأدوية، والقيء الذي يمنع شرب الماء — كلها أسباب لمراجعة فورية.',
+          'وغياب الألم لا يعني السلامة. فالانسداد البطيء قد لا يؤلم أبدًا؛ وتتوسع الكلية بصمت وقد تفقد وظيفتها. ولذلك تُتابَع الحصاة المعروفة بالتصوير سواء سبّبت شكوى أم لا.',
+          'ولا تُختار الطريقة بمقياس واحد. فالحجم، والكثافة على التصوير المقطعي، والموضع داخل الكلية، وتشريح الجهاز المُجمِّع، وأدويتك، وحالتك العامة — تُوزَن جميعها معًا.'
+        ],
+        eligibility: {
+          suitable: [
+            'حصوات تسبب شكوى ولا يُرجَّح نزولها وحدها',
+            'نوبات مغص متكررة',
+            'انسداد مع توسّع في الكلية',
+            'حصوات مع التهابات بولية متكررة',
+            'تراجع في وظيفة الكلية بسبب الحصاة',
+            'أشخاص لا تحتمل مهنتهم نوبة مغص مفاجئة (كالطيّارين) — فقد يُطرح العلاج حتى مع حصاة صامتة'
+          ],
+          notSuitable: [
+            'من لديهم التهاب بولي غير معالَج: لا تُجدوَل الجراحة قبل أن تصبح زراعة البول سلبية، وهذه قاعدة لا تُخفَّف',
+            'من لديهم حصوات صغيرة بلا أعراض يمكن متابعتها — ويُتجنَّب التدخل غير اللازم',
+            'من لديهم اضطراب تخثّر غير مضبوط، وخصوصًا لعملية PCNL',
+            'الحمل: تختلف خيارات التصوير والعلاج وتُوضَع الخطة على حدة',
+            'وخاصةً للتفتيت: الحمل، واضطراب التخثّر غير المضبوط، ووجود تضيّق أسفل الحصاة'
+          ]
+        },
+        technology: [
+          'تصوير مقطعي من دون صبغة — يُظهر الحجم والموضع والكثافة، وهو أساس اختيار الطريقة',
+          'منظار مرن للحالب والكلية — ينثني داخل الكلية ليصل إلى مختلف الكؤوس',
+          'ليزر الهولميوم — لتذرية الحصاة أو تفتيتها',
+          'دخول عبر الجلد بتوجيه الأمواج فوق الصوتية أو التنظير الشعاعي',
+          'سلال التقاط الحصى وأغماد الدخول',
+          'تحليل تركيب الحصاة النازلة أو المُستخرَجة — أول خطوة لمنع التكرار'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'يعكس عدد الحالات إجمالي الخبرة الجراحية للأستاذ المشارك د. مسلم إرغن في هذا المجال.'
+          note: 'جراحة الحصى بالمنظار الداخلي من مجالات عمل الأستاذ المشارك الدكتور مسلم إرغون. وتُختار الطريقة بتقييم التصوير المقطعي وزراعة البول ووظيفة الكلى معًا؛ ولا تُطبَّق طريقة واحدة على الجميع.'
         },
         timeline: [
-          { when: 'عن بُعد', title: 'التقييم الأولي', body: 'تُراجَع نتائج الأشعة المقطعية/الموجات فوق الصوتية وفحوص الدم والبول، ويُخطَّط للأسلوب المناسب.' },
-          { when: 'اليوم 1', title: 'الوصول والفحوصات', body: 'الفحص، التصوير اللازم، وتقييم التخدير.' },
-          { when: 'اليوم 2', title: 'الإجراء', body: 'يتم الإجراء حسب الأسلوب المختار؛ معظم الحالات في اليوم نفسه أو بمبيت ليلة واحدة.' },
-          { when: 'اليوم 3–4', title: 'المراجعة', body: 'التأكد من خلو الكلية من الحصوات، تقييم الدعامة عند الحاجة، والإذن بالعودة.' }
+          { when: 'عن بُعد', title: 'التقييم المبدئي', body: 'تُراجَع صور التصوير المقطعي من دون صبغة ووظائف الكلى وزراعة البول. والمطلوب صور التصوير نفسها لا التقرير وحده: فقيمة الكثافة كثيرًا ما تغيب عن التقرير وهي حاسمة في اختيار الطريقة.' },
+          { when: 'اليوم 1', title: 'الوصول والفحوص', body: 'فحص سريري، وإعادة التصوير عند اللزوم، وتحاليل دم وبول، وتقييم التخدير. وإن نَمَت جرثومة في زراعة البول أُجّل الإجراء وعولجت العدوى أولًا.' },
+          { when: 'اليوم 2', title: 'الإجراء', body: 'يُجرى بالطريقة المختارة. فـ RIRS بلا شق؛ وPCNL تستعمل منفذًا نحو سنتيمتر في الظهر؛ والتفتيت يُطبَّق من خارج الجسم.' },
+          { when: 'اليوم 3', title: 'الخروج', body: 'يخرج معظم المرضى في اليوم التالي. وإن وُضعت دعامة شُرحت الأعراض التي تسببها.' },
+          { when: 'اليوم 4–6', title: 'المراجعة وإذن السفر', body: 'يُقيَّم خلو الكلية من الحصى بالتصوير. وإن كانت الدعامة موضوعة حُدِّد كتابةً متى وأين تُنزَع — وهي أكثر التفاصيل إغفالًا عند القادمين من خارج البلد.' }
         ],
         risks: [
-          'نزيف والتهاب المسالك البولية',
-          'حرقان أو دم مؤقت عند التبول',
-          'حالات تستلزم وضع دعامة',
-          'عدم إزالة الحصاة بالكامل والحاجة لإجراء إضافي'
+          'العدوى المصحوبة بحمّى: أخطر ما يُحسَب حسابه في الطريقتين. ولذلك فسلبية زراعة البول قبل العملية شرط لازم. وأبلغ فورًا عن أيّ حمّى أو رعشة أو وهن بعد الإجراء',
+          'النزف: أعلى في PCNL لأن نفقًا يُحدَث عبر نسيج الكلية. وقد يلزم أحيانًا نقل دم أو تدخل إضافي',
+          'إصابة الحالب وتضيّقه لاحقًا: وردت في RIRS بسبب مرور الأدوات',
+          'عدم اكتمال التنظيف والحاجة إلى جلسة ثانية — خصوصًا في الحصوات الكبيرة وحصوات الكأس السفلي',
+          'بعد التفتيت قد تصطفّ الشظايا في الحالب فتسدّه',
+          'أعراض الدعامة: كثرة التبول، وألم في الخاصرة، ودم في البول',
+          'نادرًا في PCNL: بلوغ غشاء الجنب أو أعضاء مجاورة',
+          'دم مؤقت في البول وحرقة عند التبول — وهذا متوقع'
         ],
         alternatives: [
-          'إسقاط الحصاة بالأدوية (للحصوات الصغيرة)',
-          'نهج الانتظار والمراقبة (حصوات صغيرة دون أعراض)',
-          'الجراحة المفتوحة/بالمنظار (نادرًا، في الحالات المعقّدة)'
+          'العلاج الدوائي المساعد على النزول — لحصوات الحالب الصغيرة، مع الأدوية وشرب كمية وافرة من الماء',
+          'المتابعة — للحصوات الصغيرة بلا أعراض التي لا تهدد الكلية. والمتابعة تعني التصوير؛ وغياب الشكوى وحده لا يكفي',
+          'التفتيت بالموجات الصادمة — عند ملاءمة الحجم والموضع والكثافة، ومن دون إدخال شيء إلى الجسم',
+          'RIRS — عبر المجرى البولي الطبيعي ومن دون شق',
+          'PCNL — تنظيف الحصوات الكبيرة والمتشعبة في جلسة واحدة',
+          'الجراحة بالمنظار البطني أو المفتوحة — نادرة اليوم، لحالات مختارة مع مشكلات تشريحية'
         ],
         comparison: {
-          title: 'RIRS مقابل PCNL مقابل ESWL',
-          columns: ['المعيار', 'RIRS (ليزر)', 'PCNL (عبر الجلد)', 'ESWL (موجات صادمة)'],
+          title: 'RIRS وPCNL والتفتيت: أيّ طريقة لأيّ حصاة',
+          columns: ['المعيار', 'RIRS (ليزر)', 'PCNL (عبر الجلد)', 'التفتيت (موجات صادمة)'],
           rows: [
-            { label: 'حجم الحصاة المناسب', values: ['حتى نحو 2 سم', '2 سم فأكثر', 'حتى نحو 1 سم'] },
-            { label: 'الشق', values: ['لا يوجد (عبر المسالك)', 'شق جلدي صغير', 'لا يوجد (خارجي)'] },
-            { label: 'التخدير', values: ['عام/نصفي', 'عام', 'تخدير خفيف عادةً'] },
-            { label: 'المبيت', values: ['نفس اليوم–ليلة واحدة', 'ليلة–ليلتان', 'نفس اليوم'] },
-            { label: 'نسبة الخلو من الحصى', values: ['مرتفعة', 'مرتفعة جدًا', 'متوسطة'] }
+            { label: 'طريق الدخول', values: ['المجرى البولي الطبيعي بلا شق', 'منفذ نحو سنتيمتر في الظهر', 'لا دخول؛ من الخارج'] },
+            { label: 'حجم الحصاة المناسب', values: ['صغير ومتوسط', 'كبير ومتشعب', 'صغير'] },
+            { label: 'أثر صلابة الحصاة', values: ['الصلبة تطيل المدة', 'تأثّر قليل', 'النتيجة أضعف مع الصلبة'] },
+            { label: 'حصوات الكأس السفلي', values: ['تتصرّف الشظايا بصعوبة', 'تُزال مباشرةً', 'قد تبقى الشظايا'] },
+            { label: 'التخدير', values: ['عام أو نصفي', 'عام', 'تخدير خفيف غالبًا'] },
+            { label: 'الإقامة', values: ['من دون مبيت إلى ليلة', 'ليلة إلى ليلتين', 'من دون مبيت'] },
+            { label: 'الخطر الأبرز', values: ['إصابة الحالب وتضيّقه', 'النزف', 'انسداد الحالب بالشظايا'] },
+            { label: 'مع مميعات الدم', values: ['أنسب', 'خطر أعلى', 'غير مناسب'] },
+            { label: 'التنظيف في جلسة واحدة', values: ['يقل كلما كبرت الحصاة', 'الأعلى', 'غالبًا جلسات متعددة'] }
           ],
-          note: 'هذا الجدول للمعلومات العامة؛ ويُحدَّد الأسلوب النهائي بحسب كل حالة.'
+          note: 'الجدول للتوجيه؛ والقرار يُتخذ بالتصوير المقطعي والصورة السريرية كاملةً لا بسطر واحد. وللقادم من خارج البلد يهم بوجه خاص احتمال الحاجة إلى جلسة ثانية، لأنه يعني إما إقامة أطول وإما سفرة ثانية — فاسأل عنه مسبقًا.'
         },
+        recovery: [
+          { period: 'أول 48 ساعة', body: 'الدم في البول والحرقة متوقعان. ويُنصَح بشرب كمية وافرة من الماء. وراجع فورًا عند الحمى أو الرعشة أو تعذّر التبول.' },
+          { period: 'الأسبوع الأول', body: 'قد يحدث ألم يشبه المغص أثناء نزول الشظايا بعد التفتيت أو RIRS. ويُعطى مخطط المسكنات مسبقًا. وتُتجنَّب المجهودات الشاقة.' },
+          { period: 'مدة وجود الدعامة', body: 'كثرة التبول وألم الخاصرة عند التبول والدم في البول أمور معتادة وتزول بنزع الدعامة. ومعرفة أن هذه الأعراض متوقعة تُسهّل هذه المرحلة كثيرًا.' },
+          { period: 'أول أسبوعين بعد PCNL', body: 'يكون موضع الدخول مؤلمًا عند الضغط. ويُتجنَّب حمل الثقيل؛ وتُشرَح العناية بالجرح.' },
+          { period: 'الأسبوع 4–12', body: 'يُؤكَّد خلو الكلية من الحصى بالتصوير. وبعد التفتيت لا يُقيَّم ذلك مبكرًا، لأن نزول الشظايا قد يستغرق أسابيع.' },
+          { period: 'على المدى البعيد', body: 'يُخطَّط شرب السوائل والنظام الغذائي بحسب تحليل الحصاة والتقييم الاستقلابي. وإهمال هذه الخطوة هو سبب عودة الحصوات.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'يختلف حسب الأسلوب وكمية الحصى؛ يُقدَّم عرض نهائي بعد التقييم.'
+          disclaimer: 'يتغير المبلغ بحسب الطريقة المطبَّقة وحجم الحصى والحاجة إلى جلسة ثانية ومكان نزع الدعامة. ويُقدَّم عرض مكتوب ومفصَّل بعد مراجعة تصويرك المقطعي.'
         },
         packageIncludes: [
-          'الإجراء والإقامة في المستشفى',
-          'التخدير والفحوصات اللازمة',
-          'التنقلات والإقامة',
-          'مترجم طبي ومنسّق',
-          'المراجعة والمتابعة الإلكترونية'
+          'الفحص وتحاليل الدم والبول وزراعة البول',
+          'إعادة التصوير عند الحاجة',
+          'التخدير وغرفة العمليات',
+          'الإجراء والمستهلكات',
+          'الإقامة في المستشفى',
+          'تحليل تركيب الحصاة المُستخرَجة',
+          'التحقق من خلو الكلية والتقييم قبل السفر',
+          'التنقلات بين المطار والمستشفى والفندق',
+          'الإقامة (المريض + مرافق واحد)',
+          'مترجم طبي ومنسّق للمرضى',
+          'متابعة عن بُعد بعد العودة إلى بلدك'
         ],
         faqs: [
-          { q: 'أي أسلوب يناسبني؟', a: 'يعتمد على حجم الحصاة وصلابتها وموقعها؛ ويتّضح بعد التصوير.' },
-          { q: 'هل الإجراء مؤلم؟', a: 'تُجرى الإجراءات تحت التخدير؛ وقد يعقبها انزعاج خفيف.' },
-          { q: 'هل تُوضَع دعامة؟', a: 'تحتاج بعض الحالات دعامة مؤقتة؛ وتُزال عادةً بعد فترة قصيرة.' }
+          { q: 'هل كل حصاة كلى تحتاج جراحة؟', a: 'لا. فالحصوات الصغيرة بلا أعراض التي لا تهدد الكلية يمكن متابعتها، وكثير من حصوات الحالب الصغيرة تنزل وحدها مع الأدوية وشرب الماء. ويُطرح التدخل عند وجود شكوى أو انسداد أو عدوى أو تراجع في وظيفة الكلية.' },
+          { q: 'لا ألم عندي، إذن لا داعي للعجلة؟', a: 'هذا افتراض خطِر. فالانسداد البطيء قد يبقى بلا ألم بينما تتوسع الكلية بصمت وتفقد وظيفتها. فإن كانت لديك حصاة معروفة فواصل المتابعة بالتصوير ولو من دون شكوى.' },
+          { q: 'متى أذهب إلى الطوارئ؟', a: 'فورًا إذا صحب ألمَ الخاصرة حمّى ورعشة: فالعدوى خلف انسداد قد تتطور بسرعة. وكذلك انقطاع البول تمامًا، والألم الذي لا تُسكّنه الأدوية، والقيء الذي يمنع الشرب.' },
+          { q: 'أيّ طريقة تناسبني؟', a: 'يتحدد ذلك بحجم الحصاة وكثافتها على التصوير المقطعي وموضعها داخل الكلية وتشريح كليتك ومميعات الدم التي تتناولها وحالتك العامة. وحصوات الكأس السفلي تُقيَّم على نحو مختلف عن حصوات بالحجم نفسه في مواضع أخرى، لأن الشظايا تتصرّف منها بصعوبة.' },
+          { q: 'هل تُنظَّف حصاتي كاملةً في جلسة واحدة؟', a: 'في الحصوات الصغيرة والمتوسطة غالبًا نعم. وكلما كبرت الحصاة زاد احتمال الجلسة الثانية، والتفتيت كثيرًا ما يحتاج أكثر من جلسة. فإن كنت قادمًا من خارج البلد فاسأل عن ذلك وعن أثره في مدة إقامتك.' },
+          { q: 'هل ستُوضَع دعامة وكم تبقى؟', a: 'كثيرًا ما تُوضَع دعامة مؤقتة بعد هذه الإجراءات لضمان التصريف. ومع وجودها تكون كثرة التبول وألم الخاصرة والدم في البول أمورًا معتادة تزول بنزعها. وحدِّد كتابةً قبل سفرك مدة بقائها ومن ينزعها وأين.' },
+          { q: 'هل الإجراء مؤلم؟', a: 'يُجرى تحت تخدير عام أو خفيف، فلا تشعر بشيء حينها. وبعده قد تحدث حرقة ودم في البول وألم يشبه المغص أثناء نزول الشظايا؛ ويُعطى مخطط المسكنات مسبقًا.' },
+          { q: 'أتناول مميعات الدم، هل يمكن علاجي؟', a: 'هذا يؤثر مباشرةً في اختيار الطريقة: فـ PCNL التي تُحدِث نفقًا في نسيج الكلية أخطر عند هؤلاء المرضى، ويتقدم RIRS. ولا توقف دواءك من تلقاء نفسك؛ وأرسل قائمة أدويتك كاملةً مع استفسارك لتُوضَع الخطة قبل سفرك.' },
+          { q: 'لماذا تكوّنت الحصاة وهل تعود؟', a: 'إن لم يتغير شيء فالحصوات تميل إلى العودة. ولذلك يجب تحليل الحصاة النازلة أو المُستخرَجة، مع فحص البول، وتقييم استقلابي عند تكرار التكوّن. وزيادة كمية السوائل اليومية أبسط الإجراءات وأكثرها إهمالًا. أما التوصيات الغذائية فتختلف بحسب نوع الحصاة، ولا تُعطى قائمة واحدة للجميع.' },
+          { q: 'أعيش في مناخ حار، هل لذلك أثر؟', a: 'نعم. ففقد السوائل بالتعرّق يرفع تركيز البول ويسهّل تكوّن الحصوات. والكمية التي تكفي في مناخ معتدل قد لا تكفي في مناخ حار. وهذا مهم بوجه خاص لمرضى الخليج والمناطق المشابهة.' },
+          { q: 'متى أستطيع السفر جوًّا بعد الإجراء؟', a: 'يحصل معظم المرضى على الإذن بعد المراجعة. لكن السفر والدعامة موضوعة، وترتيب من ينزعها في بلدك، يحتاجان خطة مستقلة؛ فابحث ذلك قبل تثبيت مواعيد سفرك.' },
+          { q: 'ما الوثائق التي أرسلها قبل القدوم؟', a: 'صور تصويرك المقطعي من دون صبغة (لا التقرير وحده)، ووظائف الكلى، وتحليل بول وزراعة حديثين، وقائمة أدويتك كاملةً، وسجلات علاجاتك السابقة للحصى. وأرسل كذلك تحليل تركيب حصاة سابقة إن وُجد. وبهذه يمكن تقدير الطريقة المناسبة وما إذا كانت جلسة واحدة تكفي، قبل أن تشتري التذكرة.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urolithiasis — الجمعية الأوروبية للمسالك البولية', url: 'https://uroweb.org/guidelines/urolithiasis' }
         ]
       },
       de: {
         title: 'Nierensteinbehandlung (RIRS, PCNL, ESWL)',
-        summary: 'Ein auf Größe und Lage des Steins abgestimmtes Verfahren: Laserzertrümmerung, perkutane Chirurgie oder Stoßwellen.',
-        metaTitle: 'Nierensteinbehandlung | Vergleich RIRS, PCNL, ESWL',
-        metaDescription: 'Vergleich von RIRS (Laser), PCNL (perkutan) und ESWL (Stoßwelle) bei Nierensteinen: Ablauf, Risiken und Preisspanne.',
+        summary:
+          'Nicht jeder Stein muss operiert werden, und nicht jedes Abwarten ist unbedenklich. Das Verfahren richtet sich nach Größe, Dichte und Lage des Steins — und die Entfernung ist nur die halbe Behandlung.',
+        metaTitle: 'Nierensteine: Wie RIRS, PCNL und ESWL ausgewählt werden',
+        metaDescription:
+          'Warum welches Verfahren gewählt wird, warum Schmerzen mit Fieber ein Notfall sind, welche Beschwerden eine Harnleiterschiene macht, die Risiken und wie Rezidive vermieden werden.',
+        quickFacts: {
+          duration: '30–90 Minuten je nach Verfahren',
+          anesthesia: 'Vollnarkose oder Spinalanästhesie; bei ESWL meist Sedierung',
+          hospitalStay: 'Ambulant bis 2 Nächte',
+          stayInTurkey: '4–7 Tage',
+          returnToWork: '2–7 Tage',
+          flightClearance: 'In der Regel nach der Kontrolle'
+        },
         definition: [
-          'Nierensteine entstehen, wenn Mineralien im Urin auskristallisieren und sich ablagern; sie können starke Flankenschmerzen, Blut im Urin oder eine Infektion verursachen.',
-          'Das Verfahren richtet sich nach Größe, Härte und Lage des Steins. Bei kleinen Steinen kommen Stoßwellen zum Einsatz, bei mittleren die flexible Ureteroskopie mit Laser, bei großen die perkutane (durch die Haut) Chirurgie.'
+          'Nierensteine entstehen, wenn Mineralien im Harn auskristallisieren und sich zusammenlagern. Ein Stein kann still in der Niere liegen; gelangt er in den Harnleiter, blockiert er den Abfluss und verursacht heftige Flankenschmerzen (Nierenkolik).',
+          'ZUERST DER WICHTIGSTE HINWEIS: Flankenschmerz zusammen mit FIEBER UND SCHÜTTELFROST ist ein Notfall. Eine Infektion hinter einem gestauten Harnweg kann rasch fortschreiten und eine sofortige Harnableitung erfordern. Darauf wartet man nicht bis zum Sprechstundentermin.',
+          'Auch gar keinen Harn mehr lassen zu können, Schmerzen, die auf Medikamente nicht ansprechen, und Erbrechen, das das Trinken unmöglich macht, sind Gründe für eine sofortige Vorstellung.',
+          'SCHMERZFREI HEISST NICHT UNGEFÄHRLICH. Eine langsam entstehende Abflussstörung kann völlig schmerzlos verlaufen; die Niere staut sich still und kann Funktion verlieren. Ein bekannter Stein wird deshalb unabhängig von Beschwerden bildgebend kontrolliert.',
+          'Die Wahl des Verfahrens erfolgt nicht nach einem einzigen Maß. Größe, Dichte in der Computertomographie, Lage im Hohlsystem, die Anatomie der Niere, Ihre Medikation und Ihr Allgemeinzustand werden gemeinsam gewichtet.'
+        ],
+        eligibility: {
+          suitable: [
+            'Steine mit Beschwerden, bei denen ein spontaner Abgang nicht zu erwarten ist',
+            'Wiederholte Koliken',
+            'Abflussstörung mit Aufstau der Niere',
+            'Steine bei wiederkehrenden Harnwegsinfekten',
+            'Steinbedingte Verschlechterung der Nierenfunktion',
+            'Menschen, deren Beruf ein plötzliches Kolikereignis nicht zulässt (etwa Piloten) — hier kann auch ein stummer Stein behandelt werden'
+          ],
+          notSuitable: [
+            'Patienten mit unbehandeltem Harnwegsinfekt: Vor sterilem Urinbefund wird nicht operiert; von dieser Regel wird nicht abgewichen',
+            'Patienten mit kleinen, beschwerdefreien Steinen, die kontrolliert werden können — unnötige Eingriffe werden vermieden',
+            'Patienten mit nicht eingestellter Gerinnungsstörung, insbesondere für die PCNL',
+            'Schwangerschaft: Bildgebung und Behandlungsoptionen unterscheiden sich; die Planung erfolgt gesondert',
+            'Speziell für die ESWL: Schwangerschaft, nicht eingestellte Gerinnungsstörung und eine Enge unterhalb des Steins'
+          ]
+        },
+        technology: [
+          'Nativ-Computertomographie — zeigt Größe, Lage und Dichte und ist die Grundlage der Verfahrenswahl',
+          'Flexibles Ureterorenoskop — lässt sich in der Niere abwinkeln und erreicht die einzelnen Kelche',
+          'Holmium-Laser — zum Verstauben oder Zertrümmern des Steins',
+          'Perkutaner Zugang unter Ultraschall- oder Durchleuchtungskontrolle',
+          'Steinkörbchen und Zugangsschleusen',
+          'Chemische Analyse des abgegangenen oder entfernten Steins — der erste Schritt zur Rezidivprophylaxe'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Die Fallzahl spiegelt die gesamte chirurgische Erfahrung von Doz. Dr. Müslüm Ergün in diesem Bereich wider.'
+          note: 'Die endourologische Steinchirurgie gehört zu den Arbeitsschwerpunkten von Assoc. Prof. Dr. Müslüm Ergün. Das Verfahren wird aus Computertomographie, Urinbefund und Nierenfunktion gemeinsam abgeleitet; ein einziges Verfahren passt nicht für alle.'
         },
         timeline: [
-          { when: 'Aus der Ferne', title: 'Vorabbewertung', body: 'Ihre CT-/Ultraschall- sowie Blut- und Urinbefunde werden geprüft und das passende Verfahren geplant.' },
-          { when: 'Tag 1', title: 'Ankunft & Untersuchungen', body: 'Untersuchung, erforderliche Bildgebung und Anästhesiebewertung.' },
-          { when: 'Tag 2', title: 'Eingriff', body: 'Eingriff je nach gewähltem Verfahren; die meisten Fälle ambulant oder mit 1 Nacht Aufenthalt.' },
-          { when: 'Tag 3–4', title: 'Kontrolle', body: 'Steinfreiheitskontrolle, ggf. Stentbewertung und Reisefreigabe.' }
+          { when: 'Aus der Ferne', title: 'Erstbeurteilung', body: 'Ihre Nativ-CT, die Nierenwerte und der Urinbefund werden durchgesehen. Angefordert werden die CT-Bilder, nicht nur der Befundtext: Der Dichtewert fehlt im Befund häufig und ist für die Verfahrenswahl entscheidend.' },
+          { when: 'Tag 1', title: 'Ankunft und Abklärung', body: 'Untersuchung, bei Bedarf erneute Bildgebung, Blut- und Urinuntersuchung, Narkoseaufklärung. Wächst im Urin ein Keim, wird der Eingriff verschoben und zuerst behandelt.' },
+          { when: 'Tag 2', title: 'Eingriff', body: 'Durchführung nach dem gewählten Verfahren. Die RIRS kommt ohne Schnitt aus; die PCNL nutzt einen etwa zentimetergroßen Zugang am Rücken; die ESWL wird von außen angewandt.' },
+          { when: 'Tag 3', title: 'Entlassung', body: 'Die meisten Patienten werden am Folgetag entlassen. Wurde eine Schiene eingelegt, werden die dadurch bedingten Beschwerden erklärt.' },
+          { when: 'Tag 4–6', title: 'Kontrolle und Flugfreigabe', body: 'Die Steinfreiheit wird bildgebend beurteilt. Liegt eine Schiene, wird schriftlich festgelegt, wann und wo sie entfernt wird — das bei Auslandspatienten am häufigsten übersehene Detail.' }
         ],
         risks: [
-          'Blutung und Harnwegsinfektion',
-          'Vorübergehendes Brennen oder Blut beim Wasserlassen',
-          'Situationen, die einen Stent erfordern',
-          'Unvollständige Steinentfernung und Bedarf an einem erneuten Eingriff'
+          'FIEBERHAFTE INFEKTION: die ernsteste Komplikation beider Eingriffe. Deshalb ist ein steriler Urinbefund vorab zwingend. Fieber, Schüttelfrost oder Abgeschlagenheit nach dem Eingriff unverzüglich melden',
+          'BLUTUNG: bei der PCNL höher, weil ein Kanal durch das Nierengewebe angelegt wird. Gelegentlich sind Transfusion oder ein weiterer Eingriff nötig',
+          'HARNLEITERVERLETZUNG UND SPÄTERE ENGE: für die RIRS durch die Instrumentenpassage beschrieben',
+          'Unvollständige Steinfreiheit mit Notwendigkeit einer zweiten Sitzung — vor allem bei größeren Steinen und Unterkelchsteinen',
+          'Nach ESWL können sich Fragmente im Harnleiter aufreihen und ihn verlegen',
+          'Schienenbeschwerden: häufiger Harndrang, Flankenschmerz, Blut im Urin',
+          'Bei der PCNL selten Beteiligung des Rippenfells oder benachbarter Organe',
+          'Vorübergehend Blut im Urin und Brennen — das ist zu erwarten'
         ],
         alternatives: [
-          'Medikamentöser Steinabgang (bei kleinen Steinen)',
-          'Abwartendes Vorgehen (asymptomatische kleine Steine)',
-          'Offene/laparoskopische Chirurgie (selten, in komplexen Fällen)'
+          'Medikamentöse Austreibungstherapie — bei kleinen Harnleitersteinen, mit Medikamenten und reichlich Flüssigkeit',
+          'Beobachtung — bei kleinen, beschwerdefreien Steinen ohne Gefährdung der Niere. Beobachtung heißt Bildgebung; Beschwerdefreiheit allein genügt nicht',
+          'ESWL — bei passender Größe, Lage und Dichte, ohne dass etwas in den Körper eingebracht wird',
+          'RIRS — über die natürlichen Harnwege, ohne Schnitt',
+          'PCNL — Steinfreiheit in einer Sitzung bei großen und verzweigten Steinen',
+          'Laparoskopische oder offene Chirurgie — heute selten, bei ausgewählten Fällen mit anatomischen Besonderheiten'
         ],
         comparison: {
-          title: 'RIRS vs. PCNL vs. ESWL',
+          title: 'RIRS, PCNL und ESWL: welches Verfahren zu welchem Stein',
           columns: ['Kriterium', 'RIRS (Laser)', 'PCNL (perkutan)', 'ESWL (Stoßwelle)'],
           rows: [
-            { label: 'Geeignete Steingröße', values: ['bis ca. 2 cm', '2 cm und mehr', 'bis ca. 1 cm'] },
-            { label: 'Schnitt', values: ['Keiner (über die Harnwege)', 'Kleiner Hautschnitt', 'Keiner (extern)'] },
-            { label: 'Anästhesie', values: ['Vollnarkose/Spinal', 'Vollnarkose', 'Meist Sedierung'] },
-            { label: 'Aufenthalt', values: ['Ambulant–1 Nacht', '1–2 Nächte', 'Ambulant'] },
-            { label: 'Steinfreiheitsrate', values: ['Hoch', 'Sehr hoch', 'Mittel'] }
+            { label: 'Zugang', values: ['Natürliche Harnwege, kein Schnitt', 'Etwa 1 cm Zugang am Rücken', 'Keiner; von außen'] },
+            { label: 'Passende Steingröße', values: ['Klein und mittel', 'Groß und verzweigt', 'Klein'] },
+            { label: 'Einfluss der Härte', values: ['Harte Steine dauern länger', 'Kaum beeinflusst', 'Erfolg sinkt bei harten Steinen'] },
+            { label: 'Unterkelchsteine', values: ['Fragmente entleeren sich schlecht', 'Werden direkt entfernt', 'Fragmente können verbleiben'] },
+            { label: 'Narkose', values: ['Vollnarkose oder Spinalanästhesie', 'Vollnarkose', 'Meist Sedierung'] },
+            { label: 'Klinikaufenthalt', values: ['Ambulant–1 Nacht', '1–2 Nächte', 'Ambulant'] },
+            { label: 'Wesentliches Risiko', values: ['Harnleiterverletzung, Enge', 'Blutung', 'Verlegung des Harnleiters durch Fragmente'] },
+            { label: 'Unter Gerinnungshemmern', values: ['Eher geeignet', 'Erhöhtes Risiko', 'Nicht geeignet'] },
+            { label: 'Steinfreiheit in einer Sitzung', values: ['Sinkt mit zunehmender Größe', 'Am höchsten', 'Häufig mehrere Sitzungen'] }
           ],
-          note: 'Diese Tabelle dient der allgemeinen Information; das endgültige Verfahren wird individuell festgelegt.'
+          note: 'Die Tabelle dient der Orientierung; entschieden wird anhand der Computertomographie und des gesamten Befunds, nicht anhand einer Zeile. Für Patienten aus dem Ausland ist die Wahrscheinlichkeit einer zweiten Sitzung besonders wichtig, denn sie bedeutet entweder längeren Aufenthalt oder eine zweite Reise — fragen Sie vorher danach.'
         },
+        recovery: [
+          { period: 'Erste 48 Stunden', body: 'Blut im Urin und Brennen sind zu erwarten. Viel trinken. Bei Fieber, Schüttelfrost oder Unvermögen, Wasser zu lassen, sofort vorstellen.' },
+          { period: '1. Woche', body: 'Beim Abgang von Fragmenten nach ESWL oder RIRS kann es zu kolikartigen Schmerzen kommen. Ein Schmerzmittelplan wird vorab mitgegeben. Anstrengende Belastung vermeiden.' },
+          { period: 'Zeit mit liegender Schiene', body: 'Häufiger Harndrang, Flankenschmerz beim Wasserlassen und Blut im Urin sind üblich und verschwinden nach der Entfernung. Zu wissen, dass das erwartbar ist, erleichtert diese Phase erheblich.' },
+          { period: 'Erste 2 Wochen nach PCNL', body: 'Die Zugangsstelle ist druckempfindlich. Nicht schwer heben; die Wundpflege wird erklärt.' },
+          { period: '4.–12. Woche', body: 'Die Steinfreiheit wird bildgebend bestätigt. Nach ESWL wird das nicht zu früh beurteilt, da der Abgang von Fragmenten Wochen dauern kann.' },
+          { period: 'Langfristig', body: 'Trinkmenge und Ernährung werden anhand der Steinanalyse und einer etwaigen Stoffwechselabklärung individuell geplant. Wird dieser Schritt ausgelassen, treten Steine erneut auf.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Variiert je nach Verfahren und Steinlast; ein verbindliches Angebot folgt nach der Bewertung.'
+          disclaimer: 'Der Betrag hängt vom Verfahren, von der Steinlast, von einer etwaigen zweiten Sitzung und davon ab, wo die Schiene entfernt wird. Ein schriftlicher, aufgeschlüsselter Kostenvoranschlag folgt nach Durchsicht Ihrer Computertomographie.'
         },
         packageIncludes: [
-          'Eingriff und Krankenhausaufenthalt',
-          'Anästhesie und erforderliche Untersuchungen',
-          'Transfers und Unterkunft',
-          'Medizinischer Dolmetscher und Koordinator',
-          'Kontrolle und Online-Nachsorge'
+          'Untersuchung, Blut- und Urinbefund, Urinkultur',
+          'Erneute Bildgebung bei Bedarf',
+          'Anästhesie und Operationssaal',
+          'Eingriff und Verbrauchsmaterial',
+          'Klinikaufenthalt',
+          'Chemische Analyse des entfernten Steins',
+          'Kontrolle der Steinfreiheit und Beurteilung vor dem Rückflug',
+          'Transfers Flughafen–Klinik–Hotel',
+          'Unterkunft (Patient + 1 Begleitperson)',
+          'Medizinischer Dolmetscher und Patientenkoordination',
+          'Nachbetreuung aus der Ferne nach der Rückkehr'
         ],
         faqs: [
-          { q: 'Welches Verfahren ist für mich geeignet?', a: 'Das hängt von Größe, Härte und Lage des Steins ab und wird nach der Bildgebung klar.' },
-          { q: 'Ist der Eingriff schmerzhaft?', a: 'Die Eingriffe erfolgen unter Anästhesie; danach können leichte Beschwerden auftreten.' },
-          { q: 'Wird ein Stent gelegt?', a: 'Manche Fälle benötigen einen vorübergehenden Stent; er wird meist kurz darauf entfernt.' }
+          { q: 'Muss jeder Nierenstein operiert werden?', a: 'Nein. Kleine Steine ohne Beschwerden, die die Niere nicht gefährden, können beobachtet werden, und viele kleine Harnleitersteine gehen mit Medikamenten und viel Flüssigkeit spontan ab. Ein Eingriff kommt bei Beschwerden, Abflussstörung, Infektion oder Verschlechterung der Nierenfunktion infrage.' },
+          { q: 'Ich habe keine Schmerzen, also hat es Zeit — stimmt das?', a: 'Diese Annahme ist gefährlich. Eine langsam entstehende Abflussstörung kann schmerzlos bleiben, während die Niere still staut und Funktion verliert. Bei bekanntem Stein sollten Sie die bildgebende Kontrolle auch ohne Beschwerden fortführen.' },
+          { q: 'Wann muss ich in die Notaufnahme?', a: 'Unverzüglich, wenn Flankenschmerz mit Fieber und Schüttelfrost einhergeht: Eine Infektion hinter einem Aufstau kann rasch fortschreiten. Auch gar keinen Harn mehr lassen zu können, Schmerzen trotz Medikamenten und Erbrechen, das das Trinken verhindert, sind Gründe für eine sofortige Vorstellung.' },
+          { q: 'Welches Verfahren passt zu mir?', a: 'Die Entscheidung ergibt sich aus Größe und Dichte des Steins in der Computertomographie, seiner Lage im Hohlsystem, der Anatomie Ihrer Niere, etwaigen Gerinnungshemmern und Ihrem Allgemeinzustand. Unterkelchsteine werden anders beurteilt als gleich große Steine an anderer Stelle, weil Fragmente von dort schlecht abgehen.' },
+          { q: 'Wird mein Stein in einer Sitzung vollständig entfernt?', a: 'Bei kleinen und mittleren Steinen meist ja. Mit zunehmender Größe steigt die Wahrscheinlichkeit einer zweiten Sitzung, und bei der ESWL sind mehrere Sitzungen häufig. Wenn Sie aus dem Ausland anreisen, fragen Sie danach und nach den Folgen für Ihre Aufenthaltsdauer.' },
+          { q: 'Bekomme ich eine Harnleiterschiene, und wie lange bleibt sie?', a: 'Nach diesen Eingriffen wird häufig vorübergehend eine Schiene eingelegt, um den Abfluss zu sichern. Mit liegender Schiene sind häufiger Harndrang, Flankenschmerz und Blut im Urin üblich und verschwinden nach der Entfernung. Klären Sie vor der Abreise schriftlich, wie lange sie bleibt und wer sie wo entfernt.' },
+          { q: 'Ist der Eingriff schmerzhaft?', a: 'Er erfolgt in Narkose oder Sedierung, Sie spüren dabei nichts. Danach können Brennen, Blut im Urin und kolikartige Schmerzen beim Abgang von Fragmenten auftreten; dafür wird vorab ein Schmerzmittelplan mitgegeben.' },
+          { q: 'Ich nehme Gerinnungshemmer — kann ich behandelt werden?', a: 'Das beeinflusst die Verfahrenswahl unmittelbar: Die PCNL mit ihrem Zugang durch das Nierengewebe ist hier risikoreicher, die RIRS rückt in den Vordergrund. Setzen Sie kein Medikament eigenmächtig ab; senden Sie Ihre vollständige Medikamentenliste mit der Anfrage, damit die Planung vor der Reise steht.' },
+          { q: 'Warum ist der Stein entstanden, und kommt er wieder?', a: 'Ändert sich nichts, neigen Steine zum Wiederauftreten. Der abgegangene oder entfernte Stein sollte analysiert werden, ergänzt um Urinuntersuchungen und bei wiederholter Steinbildung eine Stoffwechselabklärung. Die Trinkmenge zu erhöhen ist die einfachste und am meisten vernachlässigte Maßnahme. Ernährungsempfehlungen hängen vom Steintyp ab; eine Liste für alle gibt es nicht.' },
+          { q: 'Ich lebe in einem heißen Klima — spielt das eine Rolle?', a: 'Ja. Flüssigkeitsverlust durch Schwitzen konzentriert den Harn und begünstigt die Steinbildung. Eine Trinkmenge, die in kühlem Klima reicht, kann in heißem Klima zu gering sein.' },
+          { q: 'Wann darf ich nach dem Eingriff fliegen?', a: 'Die meisten Patienten erhalten die Freigabe nach der Kontrolle. Mit liegender Schiene zu fliegen und die Entfernung zu Hause zu organisieren, erfordert jedoch eine eigene Planung; besprechen Sie das, bevor Sie Ihre Reisedaten festlegen.' },
+          { q: 'Welche Unterlagen soll ich vorab senden?', a: 'Die Bilddaten Ihrer Nativ-CT (nicht nur den Befund), die Nierenwerte, eine aktuelle Urinuntersuchung mit Kultur, Ihre vollständige Medikamentenliste und Unterlagen zu früheren Steinbehandlungen. Senden Sie auch eine frühere Steinanalyse mit. Damit lässt sich vor dem Ticketkauf beurteilen, welches Verfahren passt und ob eine Sitzung voraussichtlich genügt.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urolithiasis — Europäische Gesellschaft für Urologie', url: 'https://uroweb.org/guidelines/urolithiasis' }
         ]
       },
       ru: {
-        title: 'Лечение камней в почках (RIRS, PCNL, ESWL)',
-        summary: 'Метод, подобранный по размеру и расположению камня: лазерное дробление, чрескожная операция или ударные волны.',
-        metaTitle: 'Лечение камней в почках | Сравнение RIRS, PCNL, ESWL',
-        metaDescription: 'Сравнение RIRS (лазер), PCNL (чрескожно) и ESWL (ударная волна) при камнях в почках: процесс, риски и диапазон цен.',
+        title: 'Лечение камней почек (RIRS, ПНЛ, ДЛТ)',
+        summary:
+          'Не каждый камень требует операции, и не всякое ожидание безопасно. Метод выбирают по размеру, плотности и расположению камня — а удаление камня это лишь половина лечения.',
+        metaTitle: 'Камни почек: как выбирают между RIRS, ПНЛ и ДЛТ',
+        metaDescription:
+          'Почему выбирают тот или иной метод, почему боль с лихорадкой это неотложное состояние, какие жалобы даёт стент, риски и как не допустить повторного камнеобразования.',
+        quickFacts: {
+          duration: '30–90 минут в зависимости от метода',
+          anesthesia: 'Общая или спинальная; при ДЛТ обычно седация',
+          hospitalStay: 'Амбулаторно — 2 ночи',
+          stayInTurkey: '4–7 дней',
+          returnToWork: '2–7 дней',
+          flightClearance: 'Обычно после контрольного осмотра'
+        },
         definition: [
-          'Камни в почках образуются при кристаллизации и накоплении минералов в моче и могут вызывать сильную боль в боку, кровь в моче или инфекцию.',
-          'Метод лечения выбирают по размеру, плотности и расположению камня. При мелких камнях применяют ударные волны, при средних — гибкую уретероскопию с лазером, при крупных — чрескожную (через кожу) операцию.'
+          'Камни почек образуются, когда содержащиеся в моче минералы кристаллизуются и накапливаются. Камень может молча находиться в почке; попав в мочеточник, он перекрывает отток и вызывает сильную боль в пояснице (почечную колику).',
+          'САМОЕ ВАЖНОЕ ПРЕДУПРЕЖДЕНИЕ: боль в пояснице вместе с ЛИХОРАДКОЙ И ОЗНОБОМ — неотложное состояние. Инфекция выше места перекрытия может развиваться стремительно и требовать срочного отведения мочи. Ждать приёма в поликлинике в такой ситуации нельзя.',
+          'Полное отсутствие мочи, боль, не снимаемая обезболивающими, и рвота, не позволяющая пить, также являются поводом для срочного обращения.',
+          'ОТСУТСТВИЕ БОЛИ НЕ ОЗНАЧАЕТ БЕЗОПАСНОСТЬ. Медленно развивающееся препятствие может не болеть вовсе; почка молча расширяется и теряет функцию. Поэтому за известным камнем наблюдают с помощью визуализации независимо от наличия жалоб.',
+          'Метод выбирают не по одному показателю. Размер, плотность по данным компьютерной томографии, расположение внутри почки, строение чашечно-лоханочной системы, принимаемые препараты и общее состояние оценивают вместе.'
+        ],
+        eligibility: {
+          suitable: [
+            'Камни, вызывающие жалобы, самостоятельное отхождение которых маловероятно',
+            'Повторяющиеся приступы колики',
+            'Нарушение оттока с расширением почки',
+            'Камни в сочетании с повторяющимися инфекциями мочевых путей',
+            'Ухудшение функции почки, связанное с камнем',
+            'Люди, у которых профессия исключает внезапный приступ колики (например, пилоты) — лечение может обсуждаться даже при бессимптомном камне'
+          ],
+          notSuitable: [
+            'Пациенты с нелеченой инфекцией мочевых путей: операцию не планируют до отрицательного посева, и это правило не смягчается',
+            'Пациенты с небольшими бессимптомными камнями, за которыми можно наблюдать — лишнего вмешательства избегают',
+            'Пациенты с некорригированным нарушением свёртывания крови, особенно для ПНЛ',
+            'Беременность: возможности визуализации и лечения иные, план составляется отдельно',
+            'Отдельно для ДЛТ: беременность, некорригированное нарушение свёртывания и препятствие ниже камня'
+          ]
+        },
+        technology: [
+          'Компьютерная томография без контраста — показывает размер, расположение и плотность камня и лежит в основе выбора метода',
+          'Гибкий уретерореноскоп — изгибается внутри почки и позволяет работать в разных чашечках',
+          'Гольмиевый лазер — для превращения камня в пыль или его дробления',
+          'Чрескожный доступ под ультразвуковым или рентгеновским контролем',
+          'Корзинки для извлечения камней и кожухи доступа',
+          'Химический анализ отошедшего или удалённого камня — первый шаг к предупреждению повторного образования'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Число операций отражает общий хирургический опыт доцента д-ра Мюслюма Эргюна в этой области.'
+          note: 'Эндоурологическая хирургия камней входит в сферу работы доц. д-ра Мюслюма Эргюна. Метод выбирают, оценивая вместе компьютерную томографию, посев мочи и функцию почек; один и тот же метод не применяют ко всем.'
         },
         timeline: [
-          { when: 'Удалённо', title: 'Предварительная оценка', body: 'Изучаются результаты КТ/УЗИ и анализов крови и мочи, планируется подходящий метод.' },
-          { when: 'День 1', title: 'Прибытие и обследование', body: 'Осмотр, необходимая визуализация и анестезиологическая оценка.' },
-          { when: 'День 2', title: 'Процедура', body: 'Процедура по выбранному методу; большинство случаев — в тот же день или с 1 ночью пребывания.' },
-          { when: 'День 3–4', title: 'Контроль', body: 'Проверка отсутствия камней, при необходимости оценка стента и разрешение на возвращение.' }
+          { when: 'Дистанционно', title: 'Предварительная оценка', body: 'Изучают вашу бесконтрастную компьютерную томографию, показатели функции почек и посев мочи. Запрашивают сами изображения, а не только заключение: значение плотности в заключении часто отсутствует, а оно определяет выбор метода.' },
+          { when: '1-й день', title: 'Приезд и обследование', body: 'Осмотр, при необходимости повторная визуализация, анализы крови и мочи, осмотр анестезиолога. Если в посеве мочи есть рост, вмешательство откладывают и сначала лечат инфекцию.' },
+          { when: '2-й день', title: 'Вмешательство', body: 'Выполняют выбранным методом. При RIRS разрезов нет; при ПНЛ в пояснице делают доступ около сантиметра; ДЛТ проводят снаружи.' },
+          { when: '3-й день', title: 'Выписка', body: 'Большинство пациентов выписывают на следующий день. Если установлен стент, объясняют связанные с ним ощущения.' },
+          { when: '4–6-й день', title: 'Контроль и разрешение на перелёт', body: 'Отсутствие камней оценивают по данным визуализации. При наличии стента письменно планируют, когда и где его удалят — именно эту деталь чаще всего упускают у приезжающих из других стран.' }
         ],
         risks: [
-          'Кровотечение и инфекция мочевыводящих путей',
-          'Временное жжение или кровь при мочеиспускании',
-          'Ситуации, требующие стента',
-          'Неполное удаление камня и необходимость повторной процедуры'
+          'ЛИХОРАДОЧНАЯ ИНФЕКЦИЯ: самое серьёзное осложнение обоих методов. Именно поэтому отрицательный посев мочи до операции обязателен. О лихорадке, ознобе или слабости после вмешательства сообщайте немедленно',
+          'КРОВОТЕЧЕНИЕ: при ПНЛ выше, поскольку через ткань почки создаётся канал. Изредка требуется переливание крови или дополнительное вмешательство',
+          'ПОВРЕЖДЕНИЕ МОЧЕТОЧНИКА И ПОСЛЕДУЮЩЕЕ СУЖЕНИЕ: описано при RIRS из-за проведения инструментов',
+          'Неполное удаление камня с необходимостью второго сеанса — особенно при крупных камнях и камнях нижней чашечки',
+          'После ДЛТ осколки могут выстроиться в мочеточнике и перекрыть его',
+          'Жалобы, связанные со стентом: учащённое мочеиспускание, боль в пояснице, кровь в моче',
+          'Редко при ПНЛ — вовлечение плевры или соседних органов',
+          'Временная кровь в моче и жжение — это ожидаемо'
         ],
         alternatives: [
-          'Медикаментозное отхождение камня (при мелких камнях)',
-          'Выжидательная тактика (бессимптомные мелкие камни)',
-          'Открытая/лапароскопическая операция (редко, в сложных случаях)'
+          'Медикаментозная изгоняющая терапия — при небольших камнях мочеточника, с препаратами и обильным питьём',
+          'Наблюдение — при небольших бессимптомных камнях, не угрожающих почке. Наблюдение означает визуализацию; одного отсутствия жалоб недостаточно',
+          'ДЛТ — при подходящих размере, расположении и плотности, без введения чего-либо в тело',
+          'RIRS — через естественные мочевые пути, без разреза',
+          'ПНЛ — удаление за один сеанс крупных и коралловидных камней',
+          'Лапароскопическая или открытая операция — сегодня редко, при отобранных случаях с анатомическими особенностями'
         ],
         comparison: {
-          title: 'RIRS против PCNL против ESWL',
-          columns: ['Критерий', 'RIRS (лазер)', 'PCNL (чрескожно)', 'ESWL (ударная волна)'],
+          title: 'RIRS, ПНЛ и ДЛТ: какой метод какому камню',
+          columns: ['Критерий', 'RIRS (лазер)', 'ПНЛ (чрескожно)', 'ДЛТ (ударная волна)'],
           rows: [
-            { label: 'Подходящий размер камня', values: ['до ~2 см', '2 см и более', 'до ~1 см'] },
-            { label: 'Разрез', values: ['Нет (через мочевые пути)', 'Небольшой разрез кожи', 'Нет (снаружи)'] },
-            { label: 'Анестезия', values: ['Общая/спинальная', 'Общая', 'Обычно седация'] },
-            { label: 'Пребывание', values: ['В тот же день–1 ночь', '1–2 ночи', 'В тот же день'] },
-            { label: 'Частота полного удаления', values: ['Высокая', 'Очень высокая', 'Средняя'] }
+            { label: 'Доступ', values: ['Естественные пути, без разреза', 'Доступ около 1 см в пояснице', 'Нет; воздействие снаружи'] },
+            { label: 'Подходящий размер камня', values: ['Небольшой и средний', 'Крупный и коралловидный', 'Небольшой'] },
+            { label: 'Влияние плотности', values: ['Плотный камень дробится дольше', 'Влияет мало', 'При плотном камне результат хуже'] },
+            { label: 'Камни нижней чашечки', values: ['Осколки отходят плохо', 'Удаляются напрямую', 'Осколки могут остаться'] },
+            { label: 'Анестезия', values: ['Общая или спинальная', 'Общая', 'Обычно седация'] },
+            { label: 'Пребывание в стационаре', values: ['Амбулаторно — 1 ночь', '1–2 ночи', 'Амбулаторно'] },
+            { label: 'Основной риск', values: ['Травма мочеточника, сужение', 'Кровотечение', 'Перекрытие мочеточника осколками'] },
+            { label: 'При приёме препаратов, разжижающих кровь', values: ['Более подходит', 'Выше риск', 'Не подходит'] },
+            { label: 'Удаление за один сеанс', values: ['Снижается с ростом камня', 'Наиболее высокое', 'Часто требуется несколько сеансов'] }
           ],
-          note: 'Таблица носит общий характер; окончательный метод определяется индивидуально.'
+          note: 'Таблица служит ориентиром; решение принимают по компьютерной томографии и всей клинической картине, а не по одной строке. Для приезжающего из другой страны особенно важна вероятность второго сеанса — это означает либо более длительное пребывание, либо вторую поездку, поэтому спрашивайте об этом заранее.'
         },
+        recovery: [
+          { period: 'Первые 48 часов', body: 'Кровь в моче и жжение ожидаемы. Рекомендуется обильное питьё. При лихорадке, ознобе или невозможности помочиться обращайтесь немедленно.' },
+          { period: '1-я неделя', body: 'При отхождении осколков после ДЛТ или RIRS возможны боли по типу колики. План обезболивания выдают заранее. Избегайте тяжёлых нагрузок.' },
+          { period: 'Период со стентом', body: 'Учащённое мочеиспускание, боль в пояснице при мочеиспускании и кровь в моче обычны и проходят после удаления стента. Знание о том, что это ожидаемо, заметно облегчает этот период.' },
+          { period: 'Первые 2 недели после ПНЛ', body: 'Место доступа болезненно при надавливании. Не поднимайте тяжести; уход за раной объясняют при выписке.' },
+          { period: '4–12-я неделя', body: 'Отсутствие камней подтверждают визуализацией. После ДЛТ оценку рано не проводят, так как отхождение осколков может занять недели.' },
+          { period: 'В отдалённом периоде', body: 'Питьевой режим и питание планируют индивидуально по результатам анализа камня и обменного обследования. Пропуск этого шага и есть причина повторного камнеобразования.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Зависит от метода и объёма камней; точное предложение — после оценки.'
+          disclaimer: 'Сумма зависит от метода, объёма камней, необходимости второго сеанса и того, где будет удалён стент. Письменная детализированная смета предоставляется после изучения вашей компьютерной томографии.'
         },
         packageIncludes: [
-          'Процедура и пребывание в стационаре',
-          'Анестезия и необходимые анализы',
-          'Трансферы и проживание',
-          'Медицинский переводчик и координатор',
-          'Контроль и онлайн-наблюдение'
+          'Осмотр, анализы крови и мочи, посев мочи',
+          'Повторная визуализация при необходимости',
+          'Анестезия и операционная',
+          'Вмешательство и расходные материалы',
+          'Пребывание в стационаре',
+          'Химический анализ удалённого камня',
+          'Контроль отсутствия камней и оценка перед вылетом',
+          'Трансферы аэропорт — больница — отель',
+          'Проживание (пациент + 1 сопровождающий)',
+          'Медицинский переводчик и координатор пациента',
+          'Дистанционное наблюдение после возвращения домой'
         ],
         faqs: [
-          { q: 'Какой метод мне подходит?', a: 'Зависит от размера, плотности и расположения камня; становится ясно после визуализации.' },
-          { q: 'Процедура болезненна?', a: 'Процедуры проводятся под анестезией; после возможен лёгкий дискомфорт.' },
-          { q: 'Будет ли установлен стент?', a: 'В некоторых случаях нужен временный стент; обычно его удаляют вскоре.' }
+          { q: 'Любой ли камень почки требует операции?', a: 'Нет. За небольшими камнями без жалоб, не угрожающими почке, можно наблюдать, а многие небольшие камни мочеточника отходят сами на фоне препаратов и обильного питья. Вмешательство обсуждают при жалобах, нарушении оттока, инфекции или ухудшении функции почки.' },
+          { q: 'У меня ничего не болит, значит, спешить некуда?', a: 'Это опасное предположение. Медленно развивающееся препятствие может не болеть, пока почка молча расширяется и теряет функцию. Если камень известен, продолжайте наблюдение с визуализацией даже без жалоб.' },
+          { q: 'Когда нужно ехать в скорую помощь?', a: 'Безотлагательно, если боль в пояснице сопровождается лихорадкой и ознобом: инфекция выше препятствия может развиваться быстро. Полное отсутствие мочи, боль, не снимаемая препаратами, и рвота, не позволяющая пить, тоже являются поводом для срочного обращения.' },
+          { q: 'Какой метод подходит мне?', a: 'Решение складывается из размера камня, его плотности по данным томографии, расположения внутри почки, строения чашечно-лоханочной системы, принимаемых препаратов, разжижающих кровь, и общего состояния. Камни нижней чашечки оценивают иначе, чем такие же по размеру камни в другом месте, потому что осколки оттуда отходят плохо.' },
+          { q: 'Удалят ли камень полностью за один сеанс?', a: 'При небольших и средних камнях обычно да. С увеличением размера вероятность второго сеанса растёт, а при ДЛТ несколько сеансов требуются часто. Если вы приезжаете из другой страны, спросите об этом и о том, как это отразится на сроке пребывания.' },
+          { q: 'Поставят ли стент и надолго ли?', a: 'После этих вмешательств часто устанавливают временный стент, чтобы обеспечить отток. При стенте учащённое мочеиспускание, боль в пояснице и кровь в моче обычны и проходят после его удаления. До отъезда письменно уточните, насколько он остаётся, а также кто и где его удалит.' },
+          { q: 'Больно ли это?', a: 'Вмешательство выполняют под анестезией или седацией, в этот момент вы ничего не чувствуете. Затем возможны жжение, кровь в моче и боли по типу колики при отхождении осколков; план обезболивания выдают заранее.' },
+          { q: 'Я принимаю препараты, разжижающие кровь, — можно ли мне лечиться?', a: 'Это напрямую влияет на выбор метода: ПНЛ с созданием канала через ткань почки у таких пациентов рискованнее, и на первый план выходит RIRS. Не отменяйте препараты самостоятельно; пришлите полный список лекарств при обращении, чтобы план составили до вашей поездки.' },
+          { q: 'Почему образовался камень и появится ли он снова?', a: 'Если ничего не менять, камни склонны образовываться вновь. Отошедший или удалённый камень следует проанализировать, добавив исследование мочи, а при повторном камнеобразовании — обменное обследование. Увеличение суточного объёма жидкости — самая простая и чаще всего игнорируемая мера. Рекомендации по питанию зависят от состава камня; единого списка для всех нет.' },
+          { q: 'Я живу в жарком климате, это имеет значение?', a: 'Да. Потеря жидкости с потом повышает концентрацию мочи и способствует образованию камней. Объём питья, достаточный в прохладном климате, в жарком может оказаться недостаточным.' },
+          { q: 'Когда можно лететь после вмешательства?', a: 'Большинство пациентов получают разрешение после контрольного осмотра. Однако перелёт со стентом и вопрос о том, кто удалит его дома, требуют отдельного плана; обсудите это до того, как зафиксируете даты поездки.' },
+          { q: 'Какие документы прислать до приезда?', a: 'Изображения бесконтрастной компьютерной томографии (а не только заключение), показатели функции почек, свежий анализ и посев мочи, полный список принимаемых препаратов и записи о прежнем лечении камней. Пришлите также прежний анализ состава камня, если он выполнялся. С этими данными ещё до покупки билета можно оценить, какой метод подходит и достаточно ли будет одного сеанса.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urolithiasis — Европейская ассоциация урологии', url: 'https://uroweb.org/guidelines/urolithiasis' }
         ]
       },
       fr: {
-        title: 'Traitement des calculs rénaux (RIRS, NLPC, LEC)',
+        title: 'Traitement des calculs rénaux (RIRS, NLPC, LEOC)',
         summary:
-          'Une méthode adaptée à la taille et à la localisation du calcul : fragmentation laser, chirurgie percutanée ou ondes de choc.',
-        metaTitle: 'Traitement des calculs rénaux | Comparatif RIRS, NLPC, LEC',
+          'Tout calcul ne relève pas de la chirurgie, et toute attente n\'est pas sans risque. Le choix dépend de la taille, de la densité et de la position du calcul — et le retirer ne représente que la moitié du traitement.',
+        metaTitle: 'Calculs rénaux : comment choisir entre RIRS, NLPC et LEOC',
         metaDescription:
-          'Comparaison du RIRS (laser), de la NLPC (percutanée) et de la LEC (ondes de choc) pour les calculs rénaux : déroulement, risques et fourchette de prix.',
+          'Pourquoi telle technique est choisie, pourquoi la douleur avec fièvre est une urgence, les désagréments de la sonde JJ, les risques et comment éviter la récidive.',
+        quickFacts: {
+          duration: '30 à 90 minutes selon la technique',
+          anesthesia: 'Générale ou rachidienne ; sédation le plus souvent pour la LEOC',
+          hospitalStay: 'Ambulatoire à 2 nuits',
+          stayInTurkey: '4 à 7 jours',
+          returnToWork: '2 à 7 jours',
+          flightClearance: 'En général après la consultation de contrôle'
+        },
         definition: [
-          'Les calculs rénaux se forment lorsque des minéraux présents dans l’urine cristallisent et s’agglomèrent ; ils peuvent provoquer de fortes douleurs lombaires, du sang dans les urines ou une infection.',
-          'La méthode de traitement est choisie en fonction de la taille, de la dureté et de la localisation du calcul. Les ondes de choc sont utilisées pour les petits calculs, l’urétéroscopie souple avec laser pour les calculs de taille moyenne, et la chirurgie percutanée (à travers la peau) pour les calculs volumineux.'
+          'Les calculs rénaux se forment par cristallisation et agrégation de minéraux présents dans les urines. Un calcul peut rester silencieux dans le rein ; lorsqu\'il migre dans l\'uretère, il bloque l\'écoulement et provoque une douleur lombaire intense (colique néphrétique).',
+          'AVERTISSEMENT PRIORITAIRE : une douleur lombaire accompagnée de FIÈVRE ET DE FRISSONS est une urgence. Une infection en amont d\'un obstacle peut évoluer rapidement et imposer un drainage en urgence. Cela ne se gère pas en attendant un rendez-vous.',
+          'Ne plus uriner du tout, une douleur non calmée par les antalgiques et des vomissements empêchant de boire justifient également un recours urgent.',
+          'ABSENCE DE DOULEUR NE SIGNIFIE PAS ABSENCE DE DANGER. Une obstruction d\'installation lente peut être totalement indolore ; le rein se dilate silencieusement et peut perdre sa fonction. Un calcul connu est donc surveillé par imagerie, qu\'il soit ou non symptomatique.',
+          'Le choix de la technique ne repose pas sur une seule mesure. Taille, densité au scanner, position dans les cavités, anatomie du rein, traitements en cours et état général sont pesés ensemble.'
+        ],
+        eligibility: {
+          suitable: [
+            'Calculs symptomatiques dont l\'expulsion spontanée est peu probable',
+            'Coliques néphrétiques à répétition',
+            'Obstruction avec dilatation du rein',
+            'Calculs associés à des infections urinaires récidivantes',
+            'Altération de la fonction rénale imputable au calcul',
+            'Personnes dont la profession rend une colique soudaine inacceptable (pilotes par exemple) — un calcul silencieux peut alors être traité'
+          ],
+          notSuitable: [
+            'Patients présentant une infection urinaire non traitée : aucune intervention n\'est programmée avant stérilisation des urines, et cette règle ne souffre pas d\'exception',
+            'Patients porteurs de petits calculs asymptomatiques pouvant être surveillés — on évite une intervention inutile',
+            'Patients dont un trouble de la coagulation n\'est pas corrigé, en particulier pour la NLPC',
+            'Grossesse : l\'imagerie et les options thérapeutiques diffèrent ; la prise en charge est planifiée à part',
+            'Pour la LEOC en particulier : grossesse, trouble de la coagulation non corrigé et obstacle situé en aval du calcul'
+          ]
+        },
+        technology: [
+          'Scanner sans injection — montre la taille, la position et la densité ; c\'est la base du choix de technique',
+          'Urétéroscope souple — se défléchit dans le rein pour atteindre les différents calices',
+          'Laser holmium — pour pulvériser ou fragmenter le calcul',
+          'Abord percutané sous guidage échographique ou radioscopique',
+          'Sondes paniers et gaines d\'accès',
+          'Analyse de la composition du calcul expulsé ou retiré — première étape de la prévention des récidives'
         ],
         surgeonExperience: {
           caseVolume: '' /* TODO-DOGRULA: caseStats.ts */,
-          note: 'Le nombre d’interventions reflète l’expérience chirurgicale totale du Dr Müslüm Ergün dans ce domaine.'
+          note: 'La chirurgie endo-urologique des calculs fait partie des domaines d\'exercice du Pr associé Müslüm Ergün. La technique est choisie à partir du scanner, de l\'ECBU et de la fonction rénale considérés ensemble ; une même technique ne convient pas à tous.'
         },
         timeline: [
-          { when: 'À distance', title: 'Pré-évaluation', body: 'Votre scanner ou échographie et vos analyses de sang et d’urine sont examinés, puis la méthode adaptée est planifiée.' },
-          { when: 'Jour 1', title: 'Arrivée et examens', body: 'Examen clinique, imagerie nécessaire et consultation d’anesthésie.' },
-          { when: 'Jour 2', title: 'Intervention', body: 'Intervention selon la méthode retenue ; le plus souvent en ambulatoire ou avec une nuit d’hospitalisation.' },
-          { when: 'Jours 3–4', title: 'Contrôle', body: 'Vérification de l’absence de calcul résiduel, évaluation de la sonde JJ si nécessaire et autorisation de retour.' }
+          { when: 'À distance', title: 'Évaluation initiale', body: 'Votre scanner sans injection, votre fonction rénale et votre ECBU sont examinés. Ce sont les images du scanner qui sont demandées, et non le seul compte rendu : la valeur de densité y figure rarement et elle est déterminante.' },
+          { when: 'Jour 1', title: 'Arrivée et bilan', body: 'Examen clinique, imagerie refaite si nécessaire, bilan sanguin et urinaire, consultation d\'anesthésie. Si l\'ECBU est positif, l\'intervention est reportée et l\'infection traitée d\'abord.' },
+          { when: 'Jour 2', title: 'Intervention', body: 'Réalisée selon la technique retenue. La RIRS ne comporte aucune incision ; la NLPC utilise un trajet d\'environ un centimètre dans le dos ; la LEOC est appliquée de l\'extérieur.' },
+          { when: 'Jour 3', title: 'Sortie', body: 'La plupart des patients sortent le lendemain. Si une sonde JJ a été posée, les symptômes qu\'elle entraîne sont expliqués.' },
+          { when: 'Jours 4–6', title: 'Contrôle et autorisation de vol', body: 'L\'absence de calcul résiduel est évaluée par imagerie. En cas de sonde JJ, la date et le lieu du retrait sont planifiés par écrit — c\'est le détail le plus souvent oublié pour les patients venus de l\'étranger.' }
         ],
         risks: [
-          'Saignement et infection urinaire',
-          'Brûlures mictionnelles ou sang dans les urines, transitoires',
-          'Situations nécessitant la pose d’une sonde JJ',
-          'Élimination incomplète du calcul et nécessité d’une seconde intervention'
+          'INFECTION FÉBRILE : la complication à prendre le plus au sérieux pour les deux techniques. D\'où l\'exigence d\'un ECBU stérile au préalable. Signalez sans délai fièvre, frissons ou altération de l\'état général après l\'intervention',
+          'SAIGNEMENT : plus important avec la NLPC, qui crée un trajet à travers le parenchyme rénal. Une transfusion ou un geste complémentaire est parfois nécessaire',
+          'LÉSION URÉTÉRALE ET STÉNOSE SECONDAIRE : décrites avec la RIRS du fait du passage des instruments',
+          'Résidu lithiasique imposant une seconde séance — surtout pour les gros calculs et les calculs du calice inférieur',
+          'Après LEOC, empilement de fragments dans l\'uretère pouvant l\'obstruer',
+          'Symptômes liés à la sonde JJ : pollakiurie, douleur lombaire, hématurie',
+          'Rarement, atteinte de la plèvre ou d\'organes voisins lors de la NLPC',
+          'Hématurie et brûlures mictionnelles transitoires — attendues'
         ],
         alternatives: [
-          'Expulsion du calcul sous traitement médical (petits calculs)',
-          'Surveillance simple (petits calculs asymptomatiques)',
-          'Chirurgie ouverte ou laparoscopique (rarement, dans les cas complexes)'
+          'Traitement médical expulsif — pour les petits calculs urétéraux, avec médicaments et hydratation abondante',
+          'Surveillance — pour les petits calculs asymptomatiques ne menaçant pas le rein. Surveiller signifie imager ; l\'absence de symptômes ne suffit pas',
+          'LEOC — pour une taille, une position et une densité adaptées, sans rien introduire dans l\'organisme',
+          'RIRS — par les voies naturelles, sans incision',
+          'NLPC — élimination en une séance des calculs volumineux et coralliformes',
+          'Chirurgie laparoscopique ou ouverte — rare aujourd\'hui, pour des cas sélectionnés avec anomalies anatomiques'
         ],
         comparison: {
-          title: 'RIRS vs NLPC vs LEC',
-          columns: ['Critère', 'RIRS (laser)', 'NLPC (percutanée)', 'LEC (ondes de choc)'],
+          title: 'RIRS, NLPC et LEOC : quelle technique pour quel calcul',
+          columns: ['Critère', 'RIRS (laser)', 'NLPC (percutanée)', 'LEOC (ondes de choc)'],
           rows: [
-            { label: 'Taille de calcul adaptée', values: ['Jusqu’à ~2 cm', '2 cm et plus', 'Jusqu’à ~1 cm'] },
-            { label: 'Incision', values: ['Aucune (voies urinaires)', 'Petite incision cutanée', 'Aucune (externe)'] },
-            { label: 'Anesthésie', values: ['Générale / rachidienne', 'Générale', 'Sédation le plus souvent'] },
-            { label: 'Séjour', values: ['Ambulatoire – 1 nuit', '1 à 2 nuits', 'Ambulatoire'] },
-            { label: 'Taux sans calcul résiduel', values: ['Élevé', 'Très élevé', 'Modéré'] }
+            { label: 'Voie d\'abord', values: ['Voies naturelles, sans incision', 'Trajet d\'environ 1 cm dans le dos', 'Aucune ; appliquée de l\'extérieur'] },
+            { label: 'Taille de calcul adaptée', values: ['Petite et moyenne', 'Grande et coralliforme', 'Petite'] },
+            { label: 'Influence de la dureté', values: ['Un calcul dur allonge la durée', 'Peu influencée', 'Résultat moindre sur calcul dur'] },
+            { label: 'Calculs du calice inférieur', values: ['Fragments difficiles à évacuer', 'Retirés directement', 'Fragments pouvant persister'] },
+            { label: 'Anesthésie', values: ['Générale ou rachidienne', 'Générale', 'Sédation le plus souvent'] },
+            { label: 'Hospitalisation', values: ['Ambulatoire–1 nuit', '1 à 2 nuits', 'Ambulatoire'] },
+            { label: 'Risque principal', values: ['Lésion urétérale, sténose', 'Saignement', 'Obstruction urétérale par fragments'] },
+            { label: 'Sous anticoagulants', values: ['Plutôt adaptée', 'Risque accru', 'Non adaptée'] },
+            { label: 'Élimination en une séance', values: ['Diminue avec la taille', 'La plus élevée', 'Souvent plusieurs séances'] }
           ],
-          note: 'Ce tableau est fourni à titre d’information générale ; la méthode définitive est déterminée au cas par cas.'
+          note: 'Ce tableau est indicatif ; la décision se prend sur le scanner et l\'ensemble du tableau clinique, non sur une ligne isolée. Pour un patient venu de l\'étranger, la probabilité d\'une seconde séance compte particulièrement, car elle implique un séjour prolongé ou un second voyage — posez la question d\'emblée.'
         },
+        recovery: [
+          { period: '48 premières heures', body: 'Hématurie et brûlures sont attendues. Buvez abondamment. Consultez immédiatement en cas de fièvre, de frissons ou d\'impossibilité d\'uriner.' },
+          { period: 'Semaine 1', body: 'Des douleurs de type colique peuvent survenir lors du passage des fragments après LEOC ou RIRS. Un protocole antalgique est remis à l\'avance. Évitez les efforts intenses.' },
+          { period: 'Période avec la sonde JJ', body: 'Pollakiurie, douleur lombaire à la miction et hématurie sont habituelles et disparaissent au retrait. Savoir que ces symptômes sont attendus facilite nettement cette période.' },
+          { period: '2 premières semaines après NLPC', body: 'Le point de ponction est sensible. Évitez le port de charges ; les soins locaux sont expliqués.' },
+          { period: 'Semaines 4 à 12', body: 'L\'absence de résidu est confirmée par imagerie. Après LEOC, l\'évaluation n\'est pas faite trop tôt, l\'élimination des fragments pouvant prendre des semaines.' },
+          { period: 'À long terme', body: 'Hydratation et alimentation sont adaptées individuellement selon l\'analyse du calcul et un éventuel bilan métabolique. Négliger cette étape explique les récidives.' }
+        ],
         price: {
           from: 0,
           to: 0,
           currency: 'EUR',
-          disclaimer: 'Varie selon la méthode et la charge lithiasique ; un devis ferme est établi après évaluation.'
+          disclaimer: 'Le montant dépend de la technique, de la charge lithiasique, de la nécessité d\'une seconde séance et du lieu de retrait de la sonde JJ. Un devis écrit et détaillé est remis après examen de votre scanner.'
         },
         packageIncludes: [
-          'Intervention et séjour hospitalier',
-          'Anesthésie et examens nécessaires',
-          'Transferts et hébergement',
-          'Interprète médical et coordinateur',
-          'Contrôle et suivi en ligne'
+          'Consultation, bilan sanguin et urinaire, ECBU',
+          'Imagerie refaite si nécessaire',
+          'Anesthésie et bloc opératoire',
+          'Intervention et consommables',
+          'Hospitalisation',
+          'Analyse de la composition du calcul retiré',
+          'Contrôle de l\'absence de résidu et évaluation avant le retour',
+          'Transferts aéroport–hôpital–hôtel',
+          'Hébergement (patient + 1 accompagnant)',
+          'Interprète médical et coordination des patients',
+          'Suivi à distance après le retour'
         ],
         faqs: [
-          { q: 'Quelle méthode me convient ?', a: 'Cela dépend de la taille, de la dureté et de la localisation du calcul ; le choix se précise après l’imagerie.' },
-          { q: 'L’intervention est-elle douloureuse ?', a: 'Les interventions sont réalisées sous anesthésie ; une gêne légère peut suivre.' },
-          { q: 'Une sonde JJ sera-t-elle posée ?', a: 'Certains cas nécessitent une sonde temporaire ; elle est généralement retirée peu de temps après.' }
+          { q: 'Tout calcul rénal doit-il être opéré ?', a: 'Non. Les petits calculs asymptomatiques qui ne menacent pas le rein peuvent être surveillés, et beaucoup de petits calculs urétéraux s\'évacuent avec un traitement médical et une bonne hydratation. L\'intervention se discute en cas de symptômes, d\'obstruction, d\'infection ou d\'altération de la fonction rénale.' },
+          { q: 'Je n\'ai pas mal, rien ne presse donc ?', a: 'Cette idée est dangereuse. Une obstruction d\'installation lente peut rester indolore pendant que le rein se dilate et perd sa fonction. Si vous avez un calcul connu, poursuivez la surveillance par imagerie même sans symptôme.' },
+          { q: 'Quand dois-je aller aux urgences ?', a: 'Sans délai si la douleur lombaire s\'accompagne de fièvre et de frissons : une infection en amont d\'un obstacle peut évoluer vite. Ne plus uriner du tout, une douleur résistante aux antalgiques et des vomissements empêchant de boire justifient aussi un recours urgent.' },
+          { q: 'Quelle technique me convient ?', a: 'La décision dépend de la taille et de la densité du calcul au scanner, de sa position dans les cavités, de l\'anatomie de votre rein, d\'éventuels anticoagulants et de votre état général. Les calculs du calice inférieur sont jugés différemment de calculs de même taille situés ailleurs, car les fragments s\'en évacuent mal.' },
+          { q: 'Une seule séance suffira-t-elle ?', a: 'Le plus souvent pour les petits et moyens calculs. La probabilité d\'une seconde séance augmente avec la taille, et la LEOC en nécessite souvent plusieurs. Si vous venez de l\'étranger, posez la question et demandez l\'incidence sur la durée du séjour.' },
+          { q: 'Une sonde JJ sera-t-elle posée, et pour combien de temps ?', a: 'Une sonde temporaire est fréquemment posée pour sécuriser le drainage. Avec elle, pollakiurie, douleur lombaire et hématurie sont habituelles et cessent au retrait. Déterminez par écrit avant de partir combien de temps elle reste et qui la retirera, et où.' },
+          { q: 'L\'intervention est-elle douloureuse ?', a: 'Elle se déroule sous anesthésie ou sédation : vous ne ressentez rien sur le moment. Ensuite, brûlures, hématurie et douleurs de type colique lors du passage des fragments sont possibles ; un protocole antalgique est prévu.' },
+          { q: 'Je prends des anticoagulants, puis-je être traité ?', a: 'Cela influe directement sur le choix : la NLPC, qui traverse le parenchyme rénal, est plus risquée dans ce cas et la RIRS est privilégiée. N\'arrêtez aucun traitement de vous-même ; transmettez la liste complète de vos médicaments dès la prise de contact afin que tout soit planifié avant votre départ.' },
+          { q: 'Pourquoi ai-je fait un calcul, et vais-je récidiver ?', a: 'Si rien ne change, les calculs récidivent. Le calcul expulsé ou retiré doit être analysé, avec un bilan urinaire et, en cas de récidives, un bilan métabolique. Augmenter les apports hydriques est la mesure la plus simple et la plus négligée. Les conseils alimentaires dépendent du type de calcul : il n\'existe pas de liste unique.' },
+          { q: 'Je vis sous un climat chaud, est-ce important ?', a: 'Oui. Les pertes par transpiration concentrent les urines et favorisent la formation de calculs. Une hydratation suffisante sous un climat tempéré peut être insuffisante sous un climat chaud.' },
+          { q: 'Quand pourrai-je prendre l\'avion ?', a: 'La plupart des patients sont autorisés après la consultation de contrôle. Voyager avec une sonde JJ et organiser son retrait au retour demandent toutefois une planification spécifique ; abordez-la avant de fixer vos dates.' },
+          { q: 'Quels documents envoyer avant de venir ?', a: 'Les images de votre scanner sans injection (et pas seulement le compte rendu), votre fonction rénale, un ECBU récent, la liste complète de vos traitements et les comptes rendus de vos éventuels traitements antérieurs. Joignez aussi toute analyse de calcul déjà réalisée. Cela permet d\'évaluer, avant l\'achat du billet, quelle technique convient et si une séance suffira probablement.' }
+        ],
+        sources: [
+          { label: 'EAU Guidelines on Urolithiasis — Association européenne d\'urologie', url: 'https://uroweb.org/guidelines/urolithiasis' }
         ]
       }
     }
