@@ -1,10 +1,10 @@
 import type { MetadataRoute } from 'next';
-import { routing } from '@/i18n/routing';
+import { routing, type Locale } from '@/i18n/routing';
 import { getPathname, treatmentHref } from '@/i18n/navigation';
 import { siteConfig } from '@/config/site';
 import { features } from '@/config/features';
 import { treatmentSlugs } from '@/content/treatments';
-import { publishedPosts } from '@/content/blog';
+import { publishedPosts, isPostInLocale } from '@/content/blog';
 import { countries } from '@/content/countries';
 
 /** Tüm diller ve içerik yolları için otomatik sitemap (lokalize slug'larla). */
@@ -43,8 +43,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
    * Bir yolun o dilde yayında olup olmadığı.
    * /deneyimler Türkçe'de yayından kaldırıldı (301 → /tr), sitemap'e girmez.
    */
-  const isPublished = (locale: string, href: (typeof allHrefs)[number]) =>
-    !(href === '/deneyimler' && !features(locale).testimonials);
+  const isPublished = (locale: string, href: (typeof allHrefs)[number]) => {
+    if (href === '/deneyimler' && !features(locale).testimonials) return false;
+    // Blog yazıları pazara özgüdür; yalnızca yayınlandıkları dilde listelenir.
+    if (typeof href === 'object' && href.pathname === '/blog/[slug]') {
+      const post = publishedPosts.find((p) => p.slug === href.params.slug);
+      return post ? isPostInLocale(post, locale as Locale) : false;
+    }
+    return true;
+  };
 
   /** hreflang listesi — yalnızca o yolun yayında olduğu diller. */
   const languagesFor = (href: (typeof allHrefs)[number]) =>

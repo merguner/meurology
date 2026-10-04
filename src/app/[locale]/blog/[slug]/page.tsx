@@ -4,7 +4,14 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { routing, type Locale } from '@/i18n/routing';
-import { publishedPosts, getBlogPost, readingMinutes } from '@/content/blog';
+import {
+  publishedPosts,
+  getBlogPost,
+  readingMinutes,
+  postLocales,
+  isPostInLocale,
+  type BlogPost
+} from '@/content/blog';
 import { getTreatment } from '@/content/treatments';
 import { resolveContent } from '@/content/types';
 import { siteConfig } from '@/config/site';
@@ -13,10 +20,31 @@ import { Icon } from '@/components/Icon';
 import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { JsonLd } from '@/components/JsonLd';
 
+/**
+ * Yazılar çeviri değil, pazara özgüdür (bkz. BlogPost.languages). Bu yüzden
+ * her yazı yalnızca yayınlandığı dillerde üretilir — Türkçe bir yazının
+ * /ar altında Türkçe görünmesi engellenir.
+ */
 export function generateStaticParams() {
-  return routing.locales.flatMap((locale) =>
-    publishedPosts.map((p) => ({ locale, slug: p.slug }))
+  return publishedPosts.flatMap((p) =>
+    postLocales(p).map((locale) => ({ locale, slug: p.slug }))
   );
+}
+
+/**
+ * hreflang YALNIZCA yazının gerçekten yayında olduğu dilleri listeler.
+ * Var olmayan çeviriyi bildirmek Search Console'da hata üretir.
+ */
+function blogAlternates(post: BlogPost, locale: Locale) {
+  const href = { pathname: '/blog/[slug]' as const, params: { slug: post.slug } };
+  const published = postLocales(post);
+  if (!post.languages) return buildAlternates(locale, href);
+  return {
+    canonical: getPathname({ locale, href }),
+    languages: Object.fromEntries(
+      published.map((l) => [l, getPathname({ locale: l, href })])
+    ) as Partial<Record<Locale, string>>
+  };
 }
 
 export async function generateMetadata({
@@ -26,12 +54,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, slug } = await params;
   const post = getBlogPost(slug);
-  if (!post) return {};
+  if (!post || !isPostInLocale(post, locale)) return {};
   const c = post.i18n[locale] ?? post.i18n.en ?? post.i18n.tr!;
   return {
     title: c.metaTitle,
     description: c.metaDescription,
-    alternates: buildAlternates(locale, { pathname: '/blog/[slug]', params: { slug } }),
+    alternates: blogAlternates(post, locale),
     openGraph: { title: c.metaTitle, description: c.metaDescription, type: 'article' }
   };
 }
@@ -44,7 +72,7 @@ export default async function BlogPostPage({
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const post = getBlogPost(slug);
-  if (!post) notFound();
+  if (!post || !isPostInLocale(post, locale)) notFound();
 
   const c = post.i18n[locale] ?? post.i18n.en ?? post.i18n.tr!;
   const t = await getTranslations('Blog');

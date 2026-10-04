@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { buildAlternates } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
-import { publishedPosts, readingMinutes } from '@/content/blog';
+import { postsForLocale, readingMinutes } from '@/content/blog';
 import { PageHero } from '@/components/PageHero';
 import { Link } from '@/i18n/navigation';
 import { Icon } from '@/components/Icon';
@@ -30,7 +30,8 @@ export default async function BlogIndexPage({
   setRequestLocale(locale);
   const t = await getTranslations('Blog');
 
-  const posts = publishedPosts; // zaten tarihe göre sıralı, taslaklar hariç
+  // Tarihe göre sıralı, taslaklar hariç; yalnızca bu dilde yayında olanlar.
+  const posts = postsForLocale(locale);
 
   return (
     <>
