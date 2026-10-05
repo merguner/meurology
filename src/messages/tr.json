@@ -23,7 +23,11 @@
     "ureterRekon": "Üreter Rekonstrüksiyonu",
     "toggleSubmenu": "Alt menüyü aç/kapat",
     "glossary": "Üroloji Sözlüğü",
-    "insurance": "SGK ve Sigorta"
+    "insurance": "SGK ve Sigorta",
+    "androloji": "Androloji",
+    "uroonkoloji": "Üroonkoloji",
+    "kadinUrolojisi": "Kadın Ürolojisi",
+    "cocukUrolojisi": "Çocuk Ürolojisi"
   },
   "Common": {
     "whatsappCta": "Hemen WhatsApp'tan yaz",

@@ -23,7 +23,11 @@
     "ureterRekon": "Реконструкция мочеточника",
     "toggleSubmenu": "Открыть/закрыть подменю",
     "glossary": "Урологический словарь",
-    "insurance": "Страхование"
+    "insurance": "Страхование",
+    "androloji": "Андрология",
+    "uroonkoloji": "Онкоурология",
+    "kadinUrolojisi": "Женская урология",
+    "cocukUrolojisi": "Детская урология"
   },
   "Common": {
     "whatsappCta": "Написать нам в WhatsApp",

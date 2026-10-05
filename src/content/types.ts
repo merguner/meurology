@@ -184,6 +184,16 @@ export interface Treatment {
   /** Son tıbbi gözden geçirme tarihi (ISO) — sayfada gösterilir, JSON-LD lastReviewed. */
   lastReviewed?: string;
   /**
+   * İÇERİK GÖZDEN GEÇİRME DURUMU.
+   * 'draft': metin hazır ama HEKİM HENÜZ ONAYLAMADI. Bu durumda
+   * `lastReviewed` DOLDURULMAZ; sayfada "Son tıbbi gözden geçirme —
+   * Doç. Dr. Müslüm Ergün" satırı ve JSON-LD'deki reviewedBy alanı
+   * basılmaz. Onaylanmamış bir metni hekim onaylıymış gibi göstermek
+   * yanıltıcı olurdu.
+   * Onaydan sonra: reviewStatus 'reviewed' yapılır ve lastReviewed girilir.
+   */
+  reviewStatus?: 'draft' | 'reviewed';
+  /**
    * Fiyat aralığı — EURO (tedavi başına bir kez; dile bağlı değil).
    * YALNIZCA features(locale).prices === true olan dillerde gösterilir;
    * Türkçe sayfalarda hiçbir koşulda gösterilmez (yönetmelik).

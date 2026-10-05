@@ -25,7 +25,20 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
   { href: '/', key: 'home' },
-  { href: '/tedaviler', key: 'treatments' },
+  {
+    href: '/tedaviler',
+    key: 'treatments',
+    /**
+     * Kategori (hub) sayfalari menuden dogrudan erisilebilir olsun.
+     * 'cocuk-urolojisi' Gorev 7'de eklendi.
+     */
+    children: [
+      { slug: 'androloji', key: 'androloji' },
+      { slug: 'uroonkoloji', key: 'uroonkoloji' },
+      { slug: 'kadin-urolojisi', key: 'kadinUrolojisi' },
+      { slug: 'cocuk-urolojisi', key: 'cocukUrolojisi' }
+    ]
+  },
   {
     href: '/rekonstruktif-uroloji',
     key: 'reconstructive',

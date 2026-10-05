@@ -23,7 +23,11 @@
     "ureterRekon": "إعادة بناء الحالب",
     "toggleSubmenu": "فتح/إغلاق القائمة الفرعية",
     "glossary": "قاموس المسالك البولية",
-    "insurance": "التأمين"
+    "insurance": "التأمين",
+    "androloji": "طب الذكورة",
+    "uroonkoloji": "أورام المسالك البولية",
+    "kadinUrolojisi": "مسالك النساء",
+    "cocukUrolojisi": "مسالك الأطفال"
   },
   "Common": {
     "whatsappCta": "راسلنا على واتساب",

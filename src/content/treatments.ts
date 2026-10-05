@@ -1,6 +1,7 @@
 import type { Treatment, TreatmentCategory } from './types';
 import { treatmentCategory } from './types';
 import { assertTreatmentsValid } from './validate';
+import { newProcedures } from './procedures';
 
 /**
  * TEDAVİ İÇERİKLERİ
@@ -12,7 +13,7 @@ import { assertTreatmentsValid } from './validate';
  * - Yeni dil eklerken ilgili tedavinin i18n.<locale> alanını doldurun.
  */
 
-export const treatments: Treatment[] = [
+const baseTreatments: Treatment[] = [
   {
     /**
      * Kadın ürolojisi hub'ının ikinci alt sayfası; stres inkontinansın
@@ -52,6 +53,12 @@ export const treatments: Treatment[] = [
           stayInTurkey: '3–5 gün (değerlendirme ve botoks için)',
           returnToWork: 'Aynı gün (botoks sonrası 1–2 gün)',
           flightClearance: 'Kısıtlama yok'
+        },
+        topNote: {
+          body:
+            'İlaç tedavisinden fayda görülmediğinde gündeme gelen mesane içi botulinum toksini uygulaması, kendi kendine sonda takma ihtimali dâhil ayrı sayfada ele alınmıştır.',
+          linkSlug: 'mesane-botoksu',
+          linkLabel: 'Mesane botoksu sayfasına gidin'
         },
         definition: [
           'Aşırı aktif mesane (AAM), ani ve ertelenmesi güç bir tuvalete gitme ihtiyacıyla seyreden durumdur. Buna sık idrara çıkma ve gece uyanma eşlik eder; bir kısım hastada tuvalete yetişilemeden kaçırma olur (sıkışma tipi kaçırma). Altta yatan sorun, mesane kasının dolum sırasında istem dışı kasılmasıdır.',
@@ -260,6 +267,12 @@ export const treatments: Treatment[] = [
           returnToWork: 'Same day (1–2 days after Botox)',
           flightClearance: 'No restriction'
         },
+        topNote: {
+          body:
+            'Intravesical botulinum toxin, which comes into play when medication does not help, is covered on a separate page — including the possibility of self-catheterisation.',
+          linkSlug: 'mesane-botoksu',
+          linkLabel: 'Go to the bladder Botox page'
+        },
         definition: [
           'Overactive bladder (OAB) is a condition marked by a sudden need to pass urine that is hard to put off. It is accompanied by going frequently and waking at night; in some women the leak happens before the toilet is reached (urgency incontinence). The underlying problem is involuntary contraction of the bladder muscle during filling.',
           'THIS IS A DIFFERENT CONDITION FROM STRESS INCONTINENCE. In the stress type the leak occurs with coughing or straining and without any urge; here an overwhelming need comes first. The distinction matters because the treatments differ: a sling operation brings no benefit in OAB. Where both occur together (mixed type), it is established which predominates.',
@@ -458,6 +471,12 @@ export const treatments: Treatment[] = [
         metaTitle: 'Überaktive Blase: Ursachen und Behandlungsstufen',
         metaDescription: 'Ursachen der Dranginkontinenz, was zuerst auszuschließen ist, Blasentraining, Medikamente und ihre Nebenwirkungen, Blasen-Botox und sakrale Neuromodulation.',
         quickFacts: { duration: 'Abklärung 30–45 Minuten', anesthesia: 'Für die Diagnostik nicht nötig', hospitalStay: 'Keiner (Botox und Neuromodulation gesondert)', stayInTurkey: '3–5 Tage (Abklärung und Botox)', returnToWork: 'Am selben Tag (nach Botox 1–2 Tage)', flightClearance: 'Keine Einschränkung' },
+        topNote: {
+          body:
+            'Botulinumtoxin in die Blase, das infrage kommt, wenn Medikamente nicht helfen, wird auf einer eigenen Seite behandelt — einschließlich der Möglichkeit des Selbstkatheterisierens.',
+          linkSlug: 'mesane-botoksu',
+          linkLabel: 'Zur Seite Blasen-Botox'
+        },
         definition: [
           'Die überaktive Blase ist ein Zustand mit plötzlichem, schwer aufschiebbarem Harndrang. Hinzu kommen häufiges Wasserlassen und nächtliches Aufwachen; bei einem Teil der Frauen geht Urin verloren, bevor die Toilette erreicht ist (Dranginkontinenz). Zugrunde liegt eine unwillkürliche Kontraktion des Blasenmuskels während der Füllung.',
           'DIES IST EINE ANDERE ERKRANKUNG ALS DIE BELASTUNGSINKONTINENZ. Dort tritt der Verlust beim Husten oder Pressen auf, ohne Drang; hier entsteht zuerst ein übermächtiges Bedürfnis. Die Unterscheidung zählt, weil die Behandlungen verschieden sind: Eine Schlingenoperation nützt bei der überaktiven Blase nichts. Treten beide zusammen auf (Mischtyp), wird bestimmt, was überwiegt.',
@@ -525,6 +544,12 @@ export const treatments: Treatment[] = [
         metaTitle: 'Vessie hyperactive : causes et étapes du traitement',
         metaDescription: 'Causes de l’incontinence par urgenturie, ce qu’il faut écarter d’abord, rééducation vésicale, médicaments et effets indésirables, toxine botulique intravésicale et neuromodulation sacrée.',
         quickFacts: { duration: 'Évaluation 30–45 minutes', anesthesia: 'Non nécessaire au diagnostic', hospitalStay: 'Aucune (toxine et neuromodulation à part)', stayInTurkey: '3–5 jours (évaluation et toxine)', returnToWork: 'Le jour même (1–2 jours après la toxine)', flightClearance: 'Aucune restriction' },
+        topNote: {
+          body:
+            'La toxine botulique intravésicale, envisagée lorsque les médicaments n’aident pas, est traitée sur une page distincte — y compris l’éventualité de l’autosondage.',
+          linkSlug: 'mesane-botoksu',
+          linkLabel: 'Aller à la page botox vésical'
+        },
         definition: [
           'La vessie hyperactive se manifeste par un besoin d’uriner soudain et difficile à différer. S’y ajoutent des mictions fréquentes et des réveils nocturnes ; chez certaines femmes, la fuite survient avant d’atteindre les toilettes (incontinence par urgenturie). Le problème sous-jacent est une contraction involontaire du muscle vésical pendant le remplissage.',
           'C’EST UNE AFFECTION DIFFÉRENTE DE L’INCONTINENCE D’EFFORT. Dans celle-ci, la fuite survient à la toux ou à l’effort, sans besoin préalable ; ici, un besoin irrépressible précède. La distinction compte car les traitements diffèrent : une bandelette n’apporte rien dans la vessie hyperactive. Lorsque les deux coexistent (forme mixte), on détermine laquelle prédomine.',
@@ -592,6 +617,12 @@ export const treatments: Treatment[] = [
         metaTitle: 'Гиперактивный мочевой пузырь: причины и ступени лечения',
         metaDescription: 'Причины ургентного недержания, что нужно исключить в первую очередь, тренировка мочевого пузыря, лекарства и их побочные действия, ботулотоксин и сакральная нейромодуляция.',
         quickFacts: { duration: 'Обследование 30–45 минут', anesthesia: 'Для диагностики не требуется', hospitalStay: 'Нет (ботулотоксин и нейромодуляция отдельно)', stayInTurkey: '3–5 дней (обследование и ботулотоксин)', returnToWork: 'В тот же день (после ботулотоксина 1–2 дня)', flightClearance: 'Без ограничений' },
+        topNote: {
+          body:
+            'Внутрипузырный ботулотоксин, который рассматривают, когда лекарства не помогают, разобран на отдельной странице — включая вероятность самокатетеризации.',
+          linkSlug: 'mesane-botoksu',
+          linkLabel: 'Перейти на страницу ботокса мочевого пузыря'
+        },
         definition: [
           'Гиперактивный мочевой пузырь — состояние с внезапным позывом, который трудно отложить. К нему присоединяются частое мочеиспускание и ночные пробуждения; у части женщин моча теряется до того, как удаётся дойти до туалета (ургентное недержание). В основе лежит непроизвольное сокращение мышцы пузыря во время наполнения.',
           'ЭТО ДРУГОЕ ЗАБОЛЕВАНИЕ, ЧЕМ СТРЕССОВОЕ НЕДЕРЖАНИЕ. Там потеря происходит при кашле или натуживании без предшествующего позыва; здесь сначала возникает непреодолимая потребность. Различие важно, потому что лечение разное: слинговая операция при гиперактивном пузыре пользы не приносит. Когда оба типа сочетаются, определяют преобладающий.',
@@ -659,6 +690,12 @@ export const treatments: Treatment[] = [
         metaTitle: 'فرط نشاط المثانة: الأسباب ومراحل العلاج',
         metaDescription: 'أسباب سلس الإلحاح، وما ينبغي استبعاده أولًا، وتدريب المثانة، والأدوية وآثارها الجانبية، وتوكسين البوتولينوم في المثانة، والتنظيم العصبي العجزي.',
         quickFacts: { duration: 'التقييم 30–45 دقيقة', anesthesia: 'غير لازم للتشخيص', hospitalStay: 'لا يوجد (البوتوكس والتنظيم العصبي على حدة)', stayInTurkey: '3–5 أيام (للتقييم والبوتوكس)', returnToWork: 'في اليوم نفسه (بعد البوتوكس 1–2 يوم)', flightClearance: 'من دون قيود' },
+        topNote: {
+          body:
+            'وحقن الذيفان الوشيقي في المثانة، الذي يُطرَح حين لا تفيد الأدوية، يُعالَج في صفحة مستقلة — بما في ذلك احتمال القسطرة الذاتية.',
+          linkSlug: 'mesane-botoksu',
+          linkLabel: 'انتقل إلى صفحة بوتوكس المثانة'
+        },
         definition: [
           'فرط نشاط المثانة حالة يصحبها إلحاح مفاجئ يصعب تأجيله. ويرافقه تبول متكرر واستيقاظ ليلي؛ وعند بعض النساء يحدث التسرّب قبل بلوغ الحمّام (سلس الإلحاح). والمشكلة الكامنة انقباض عضلة المثانة من دون إرادة أثناء الامتلاء.',
           'هذا مرض مختلف عن السلس الجهدي. ففي ذاك يحدث التسرّب عند السعال أو الحزق من دون إلحاح سابق؛ أما هنا فيسبقه شعور لا يُقاوَم. والتمييز مهم لأن العلاجين مختلفان: فعملية الشريط لا تنفع في فرط النشاط. وعند اجتماعهما يُحدَّد أيهما أغلب.',
@@ -1461,6 +1498,12 @@ export const treatments: Treatment[] = [
           returnToWork: '1–2 hafta',
           flightClearance: '5–7 gün'
         },
+        topNote: {
+          body:
+            'Cerrahi gerektiğinde en sık uygulanan yöntem orta üretral askıdır; ayrıntıları ve mesh konusundaki dürüst değerlendirme ayrı sayfadadır.',
+          linkSlug: 'tot',
+          linkLabel: 'TOT askı ameliyatı sayfasına gidin'
+        },
         definition: [
           'Stres tipi idrar kaçırma, karın içi basıncın arttığı anlarda — öksürme, hapşırma, gülme, ağır kaldırma veya spor sırasında — istem dışı idrar gelmesidir. Buradaki "stres" ruhsal gerginlik değil, mesane üzerine binen fiziksel yüktür. Nedeni, idrar kanalını kapalı tutan destek yapılarının ve kasların zayıflamasıdır; doğum, menopoz, kronik öksürük, kabızlık ve kilo fazlası başlıca katkıda bulunan etkenlerdir.',
           'ÖNCE HANGİ TİP OLDUĞU BELİRLENMELİDİR; BU AYRIM HER ŞEYİ DEĞİŞTİRİR. Stres tipinde kaçırma ani bir sıkışma hissi olmadan, doğrudan fiziksel zorlanmayla olur. Sıkışma (urge) tipinde ise önce dayanılmaz bir tuvalete gitme ihtiyacı doğar ve yetişemeden kaçırılır. İkisi farklı hastalıklardır: stres tipinde destek yapısı sorunu vardır, sıkışma tipinde mesane kası aşırı çalışır.',
@@ -1664,6 +1707,12 @@ export const treatments: Treatment[] = [
           returnToWork: '1–2 weeks',
           flightClearance: '5–7 days'
         },
+        topNote: {
+          body:
+            'Where surgery is needed, the mid-urethral sling is the most common method; the details, and an honest discussion of mesh, are on a separate page.',
+          linkSlug: 'tot',
+          linkLabel: 'Go to the TOT sling surgery page'
+        },
         definition: [
           'Stress urinary incontinence is the involuntary loss of urine at moments when pressure inside the abdomen rises — coughing, sneezing, laughing, lifting or exercising. The "stress" here is not emotional tension but the physical load placed on the bladder. The cause is weakening of the muscles and supporting structures that keep the urinary passage closed; childbirth, the menopause, a chronic cough, constipation and excess weight are the main contributing factors.',
           'THE TYPE MUST BE ESTABLISHED FIRST, AND THAT DISTINCTION CHANGES EVERYTHING. In the stress type, leaking occurs with physical strain and without any preceding urge. In the urgency type, an overwhelming need to pass urine comes first and the leak happens before the toilet can be reached. These are different conditions: in the stress type the supporting structure is at fault, in the urgency type the bladder muscle is overactive.',
@@ -1858,6 +1907,12 @@ export const treatments: Treatment[] = [
         metaTitle: 'Belastungsinkontinenz: von der Übung bis zur Schlingenoperation',
         metaDescription: 'Der Unterschied zwischen Belastungs- und Dranginkontinenz, warum Beckenbodentraining an erster Stelle steht, die Schlingenoperation, die Netz-Debatte und die Alternativen.',
         quickFacts: { duration: 'Schlingenoperation 30–45 Minuten', anesthesia: 'Spinal- oder Vollnarkose', hospitalStay: 'Ambulant oder 1 Nacht', stayInTurkey: '5–7 Tage', returnToWork: '1–2 Wochen', flightClearance: '5–7 Tage' },
+        topNote: {
+          body:
+            'Ist eine Operation nötig, ist die mittelurethrale Schlinge das häufigste Verfahren; Einzelheiten und eine ehrliche Einordnung zum Netz finden Sie auf einer eigenen Seite.',
+          linkSlug: 'tot',
+          linkLabel: 'Zur Seite TOT-Schlingenoperation'
+        },
         definition: [
           'Belastungsinkontinenz ist der unwillkürliche Harnverlust in Momenten, in denen der Druck im Bauchraum steigt — beim Husten, Niesen, Lachen, Heben oder Sport. „Belastung" meint hier nicht seelische Anspannung, sondern die körperliche Last auf der Blase. Ursache ist die Schwächung der Muskeln und Strukturen, die die Harnröhre verschlossen halten; Geburten, die Wechseljahre, chronischer Husten, Verstopfung und Übergewicht sind die wichtigsten begünstigenden Faktoren.',
           'ZUERST MUSS DER TYP BESTIMMT WERDEN, UND DIESE UNTERSCHEIDUNG ÄNDERT ALLES. Beim Belastungstyp tritt der Harnverlust bei körperlicher Anstrengung auf, ohne vorangehenden Harndrang. Beim Drangtyp entsteht zuerst ein übermächtiger Harndrang, und der Verlust erfolgt, bevor die Toilette erreicht ist. Es sind verschiedene Erkrankungen: beim Belastungstyp liegt das Problem in der Stützstruktur, beim Drangtyp in einem überaktiven Blasenmuskel.',
@@ -1925,6 +1980,12 @@ export const treatments: Treatment[] = [
         metaTitle: 'Incontinence urinaire d’effort : de la rééducation à la bandelette',
         metaDescription: 'La différence entre incontinence d’effort et par urgenturie, pourquoi la rééducation périnéale vient en premier, la bandelette sous-urétrale, la polémique sur les prothèses et les alternatives.',
         quickFacts: { duration: 'Pose de bandelette 30–45 minutes', anesthesia: 'Rachianesthésie ou anesthésie générale', hospitalStay: 'Ambulatoire ou 1 nuit', stayInTurkey: '5–7 jours', returnToWork: '1–2 semaines', flightClearance: '5–7 jours' },
+        topNote: {
+          body:
+            'Lorsqu’une intervention est nécessaire, la bandelette sous-urétrale est la méthode la plus courante ; les détails et une discussion honnête sur les bandelettes figurent sur une page distincte.',
+          linkSlug: 'tot',
+          linkLabel: 'Aller à la page bandelette TOT'
+        },
         definition: [
           'L’incontinence urinaire d’effort est une perte involontaire d’urine lorsque la pression abdominale augmente : toux, éternuement, rire, port de charges ou sport. Le mot « effort » ne renvoie pas à une tension psychique mais à la charge physique exercée sur la vessie. La cause est l’affaiblissement des muscles et des structures qui maintiennent l’urètre fermé ; accouchements, ménopause, toux chronique, constipation et surpoids en sont les principaux facteurs favorisants.',
           'LE TYPE DOIT ÊTRE DÉTERMINÉ EN PREMIER, ET CETTE DISTINCTION CHANGE TOUT. Dans l’incontinence d’effort, la fuite survient lors d’un effort physique, sans besoin impérieux préalable. Dans l’incontinence par urgenturie, un besoin irrépressible survient d’abord et la fuite se produit avant d’atteindre les toilettes. Ce sont deux affections distinctes : dans la première, le soutien est en cause ; dans la seconde, le muscle vésical est hyperactif.',
@@ -1992,6 +2053,12 @@ export const treatments: Treatment[] = [
         metaTitle: 'Стрессовое недержание мочи: от упражнений до слинговой операции',
         metaDescription: 'Чем стрессовое недержание отличается от ургентного, почему тренировка мышц тазового дна идёт первой, слинговая операция, споры о синтетических сетках и альтернативы.',
         quickFacts: { duration: 'Слинговая операция 30–45 минут', anesthesia: 'Спинальная или общая анестезия', hospitalStay: 'Амбулаторно или 1 ночь', stayInTurkey: '5–7 дней', returnToWork: '1–2 недели', flightClearance: '5–7 дней' },
+        topNote: {
+          body:
+            'Когда нужна операция, самый частый метод — среднеуретральная петля; подробности и честный разбор вопроса о сетке — на отдельной странице.',
+          linkSlug: 'tot',
+          linkLabel: 'Перейти на страницу операции TOT'
+        },
         definition: [
           'Стрессовое недержание мочи — это непроизвольная потеря мочи в моменты повышения давления в животе: при кашле, чихании, смехе, подъёме тяжестей или занятиях спортом. Слово «стрессовое» здесь означает не душевное напряжение, а физическую нагрузку на мочевой пузырь. Причина — ослабление мышц и структур, удерживающих мочеиспускательный канал закрытым; главные способствующие факторы — роды, менопауза, хронический кашель, запоры и лишний вес.',
           'СНАЧАЛА НУЖНО ОПРЕДЕЛИТЬ ТИП, И ЭТО РАЗЛИЧИЕ МЕНЯЕТ ВСЁ. При стрессовом типе подтекание происходит при физическом усилии, без предшествующего позыва. При ургентном типе сначала возникает непреодолимый позыв, и потеря случается прежде, чем удаётся дойти до туалета. Это разные состояния: при стрессовом нарушена опорная структура, при ургентном мышца пузыря работает избыточно.',
@@ -2059,6 +2126,12 @@ export const treatments: Treatment[] = [
         metaTitle: 'سلس البول الجهدي: من التمارين إلى عملية الشريط',
         metaDescription: 'الفرق بين السلس الجهدي وسلس الإلحاح، ولماذا تأتي تمارين قاع الحوض أولًا، وعملية الشريط، والجدل حول الشرائح الصناعية، والبدائل.',
         quickFacts: { duration: 'عملية الشريط 30–45 دقيقة', anesthesia: 'تخدير نصفي أو عام', hospitalStay: 'في اليوم نفسه أو ليلة واحدة', stayInTurkey: '5–7 أيام', returnToWork: '1–2 أسبوع', flightClearance: '5–7 أيام' },
+        topNote: {
+          body:
+            'وعند الحاجة إلى الجراحة يكون الشريط تحت منتصف الإحليل الطريقة الأكثر استعمالًا؛ وتفاصيله والحديث الصريح عن الشبكة في صفحة مستقلة.',
+          linkSlug: 'tot',
+          linkLabel: 'انتقل إلى صفحة عملية TOT'
+        },
         definition: [
           'سلس البول الجهدي هو خروج البول من دون إرادة في لحظات ارتفاع الضغط داخل البطن: عند السعال أو العطاس أو الضحك أو رفع الأثقال أو الرياضة. وكلمة «الجهد» هنا لا تعني التوتر النفسي بل الحمل البدني على المثانة. والسبب ضعف العضلات والبنى التي تُبقي المجرى البولي مغلقًا؛ وأهم العوامل المساعدة الولادات وسنّ اليأس والسعال المزمن والإمساك وزيادة الوزن.',
           'يجب تحديد النوع أولًا، وهذا التمييز يغيّر كل شيء. ففي النوع الجهدي يحدث التسرّب مع المجهود البدني من دون إلحاح سابق. أما في نوع الإلحاح فيأتي أولًا شعور لا يُقاوَم بالحاجة إلى التبول ويحدث التسرّب قبل بلوغ الحمّام. وهما مرضان مختلفان: ففي الجهدي خلل في بنية الدعم، وفي الإلحاحي فرط نشاط في عضلة المثانة.',
@@ -5609,6 +5682,12 @@ export const treatments: Treatment[] = [
           returnToWork: '3–7 gün',
           flightClearance: '3–5 gün'
         },
+        topNote: {
+          body:
+            'Ameliyat gerekli bulunursa kliniğimizde mikrocerrahi yöntem uygulanır: damarlar ameliyat mikroskobu altında tek tek ayrılır.',
+          linkSlug: 'mikroskopik-varikoselektomi',
+          linkLabel: 'Mikroskopik varikoselektomi sayfasına gidin'
+        },
         definition: [
           'Varikosel, testisten kalbe dönen kanı taşıyan toplardamarların genişlemesi ve kanın bir kısmının geri kaçmasıdır. Bacaklardaki varise benzer bir durumdur. Erkeklerin önemli bir bölümünde bulunur ve çoğu zaman hiçbir yakınmaya yol açmaz.',
           'ÇOĞUNLUKLA SOL TARAFTADIR. Bunun nedeni anatomiktir: sol testis toplardamarı sol böbrek damarına dik açıyla bağlanır ve bu, kanın geri kaçmasını kolaylaştırır. Sağ tarafta tek başına varikosel daha seyrek görülür.',
@@ -5815,6 +5894,12 @@ export const treatments: Treatment[] = [
           returnToWork: '3–7 days',
           flightClearance: '3–5 days'
         },
+        topNote: {
+          body:
+            'Where surgery is indicated, the microsurgical technique is used here: the vessels are separated one by one under the operating microscope.',
+          linkSlug: 'mikroskopik-varikoselektomi',
+          linkLabel: 'Go to the microsurgical varicocelectomy page'
+        },
         definition: [
           'A varicocele is an enlargement of the veins that carry blood from the testicle back to the heart, with some of that blood flowing backwards. It is much like varicose veins in the legs. It is present in a considerable proportion of men and most of the time causes no symptoms at all.',
           'IT IS USUALLY ON THE LEFT. The reason is anatomical: the left testicular vein joins the left kidney vein at a right angle, and this makes backward flow easier. A varicocele on the right side alone is less common.',
@@ -6016,6 +6101,12 @@ export const treatments: Treatment[] = [
           stayInTurkey: '4–6 Tage',
           returnToWork: '3–7 Tage',
           flightClearance: '3–5 Tage'
+        },
+        topNote: {
+          body:
+            'Ist eine Operation angezeigt, kommt bei uns die mikrochirurgische Technik zum Einsatz: Die Gefäße werden unter dem Operationsmikroskop einzeln dargestellt.',
+          linkSlug: 'mikroskopik-varikoselektomi',
+          linkLabel: 'Zur Seite mikrochirurgische Varikozelektomie'
         },
         definition: [
           'Eine Varikozele ist eine Erweiterung der Venen, die das Blut vom Hoden zum Herzen zurückführen, wobei ein Teil des Blutes zurückfließt. Es ähnelt den Krampfadern an den Beinen. Sie findet sich bei einem erheblichen Teil der Männer und verursacht meist überhaupt keine Beschwerden.',
@@ -6219,6 +6310,12 @@ export const treatments: Treatment[] = [
           returnToWork: '3–7 jours',
           flightClearance: '3–5 jours'
         },
+        topNote: {
+          body:
+            'Lorsqu’une intervention est indiquée, nous utilisons la technique microchirurgicale : les vaisseaux sont disséqués un à un sous microscope opératoire.',
+          linkSlug: 'mikroskopik-varikoselektomi',
+          linkLabel: 'Aller à la page varicocélectomie microchirurgicale'
+        },
         definition: [
           'La varicocèle est une dilatation des veines qui ramènent le sang du testicule vers le cœur, avec un reflux d’une partie de ce sang. Cela ressemble aux varices des jambes. Elle est présente chez une part importante des hommes et, le plus souvent, ne provoque aucun symptôme.',
           'ELLE SIÈGE LE PLUS SOUVENT À GAUCHE. La raison est anatomique : la veine testiculaire gauche se jette à angle droit dans la veine rénale gauche, ce qui facilite le reflux. Une varicocèle isolée à droite est plus rare.',
@@ -6420,6 +6517,12 @@ export const treatments: Treatment[] = [
           stayInTurkey: '4–6 дней',
           returnToWork: '3–7 дней',
           flightClearance: '3–5 дней'
+        },
+        topNote: {
+          body:
+            'Если операция показана, у нас применяется микрохирургическая методика: сосуды выделяют по одному под операционным микроскопом.',
+          linkSlug: 'mikroskopik-varikoselektomi',
+          linkLabel: 'Перейти на страницу микрохирургической варикоцелэктомии'
         },
         definition: [
           'Варикоцеле — это расширение вен, по которым кровь оттекает от яичка к сердцу, с обратным забросом части этой крови. Это похоже на варикозные вены на ногах. Оно встречается у значительной части мужчин и чаще всего не вызывает никаких жалоб.',
@@ -6626,6 +6729,12 @@ export const treatments: Treatment[] = [
           stayInTurkey: '4–6 أيام',
           returnToWork: '3–7 أيام',
           flightClearance: '3–5 أيام'
+        },
+        topNote: {
+          body:
+            'وإن لزمت الجراحة فتُطبَّق عندنا التقنية المجهرية: تُفصَل الأوعية واحدًا واحدًا تحت المجهر الجراحي.',
+          linkSlug: 'mikroskopik-varikoselektomi',
+          linkLabel: 'انتقل إلى صفحة الاستئصال بالجراحة المجهرية'
         },
         definition: [
           'دوالي الخصية هي توسّع الأوردة التي تنقل الدم من الخصية عائدًا إلى القلب، مع ارتداد جزء من هذا الدم. وهي تشبه دوالي الساقين. وتوجد عند نسبة كبيرة من الرجال ولا تسبب في الغالب أي شكوى.',
@@ -30254,6 +30363,14 @@ export const treatments: Treatment[] = [
     }
   }
 ];
+
+/**
+ * YENİ SAYFALAR ayrı dosyalarda tutulur (content/procedures/) ve burada
+ * ana listeye eklenir: bu dosya 30.000 satırı aştığı için yeni içeriği
+ * buraya yazmak hem gözden geçirmeyi hem de düzenlemeyi zorlaştırıyordu.
+ * Dizi sırası listelerdeki sıradır.
+ */
+export const treatments: Treatment[] = [...baseTreatments, ...newProcedures];
 
 // Derleme/başlangıç sırasında içerik bütünlüğünü zorunlu kıl: eksik veya boş
 // bir alan varsa build burada net bir mesajla kırılır (sessizce boş geçmez).

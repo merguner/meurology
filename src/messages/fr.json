@@ -23,7 +23,11 @@
     "ureterRekon": "Reconstruction urétérale",
     "toggleSubmenu": "Afficher le sous-menu",
     "glossary": "Glossaire d’urologie",
-    "insurance": "Assurance"
+    "insurance": "Assurance",
+    "androloji": "Andrologie",
+    "uroonkoloji": "Onco-urologie",
+    "kadinUrolojisi": "Urologie féminine",
+    "cocukUrolojisi": "Urologie pédiatrique"
   },
   "Common": {
     "whatsappCta": "Écrivez-nous sur WhatsApp",
