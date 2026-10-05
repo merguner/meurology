@@ -27,5 +27,5 @@ export default async function MedicalDisclaimerPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Legal');
-  return <LegalDocView doc={disclaimerDoc} title={t('disclaimerTitle')} locale={locale} />;
+  return <LegalDocView doc={disclaimerDoc} title={t('disclaimerTitle')} locale={locale} href="/yasal/tibbi-sorumluluk-reddi" />;
 }

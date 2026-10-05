@@ -289,7 +289,7 @@ export const treatmentSlugMap = {
     ar: 'vesicoureteral-reflux-surgery'
   },
   tot: {
-    tr: 'tot-askı-ameliyati',
+    tr: 'tot-aski-ameliyati',
     en: 'tot-sling-surgery',
     de: 'tot-schlingenoperation',
     fr: 'bandelette-tot',

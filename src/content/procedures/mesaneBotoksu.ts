@@ -10,6 +10,7 @@ import type { Treatment } from '../types';
  */
 export const mesaneBotoksu: Treatment = {
   slug: 'mesane-botoksu',
+  procedure: { type: 'TherapeuticProcedure', bodyLocation: 'Urinary bladder' },
   parent: 'kadin-urolojisi',
   icon: 'female',
   reviewStatus: 'draft',

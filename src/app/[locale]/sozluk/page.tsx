@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { buildAlternates, getPathname, treatmentHref, Link } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
@@ -71,6 +72,7 @@ export default async function GlossaryPage({
   return (
     <>
       <JsonLd data={jsonLd} />
+      <BreadcrumbJsonLd locale={locale} items={[{ name: t('title'), href: '/sozluk' }]} />
       <PageHero eyebrow={t('title')} title={t('title')} description={t('subtitle')} />
 
       <div className="container-content py-12">

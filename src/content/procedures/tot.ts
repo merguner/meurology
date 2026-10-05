@@ -9,6 +9,7 @@ import type { Treatment } from '../types';
  */
 export const tot: Treatment = {
   slug: 'tot',
+  procedure: { type: 'SurgicalProcedure', bodyLocation: 'Urethra' },
   parent: 'kadin-urolojisi',
   icon: 'female',
   reviewStatus: 'draft',

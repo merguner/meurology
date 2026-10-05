@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { ogImages, ogImagePath } from '@/config/ogImage';
 import { buildAlternates, getPathname, treatmentHref } from '@/i18n/navigation';
 import { notFound } from 'next/navigation';
@@ -124,6 +125,13 @@ export default async function BlogPostPage({
   return (
     <>
       <JsonLd data={jsonLd} />
+      <BreadcrumbJsonLd
+        locale={locale}
+        items={[
+          { name: t('title'), href: '/blog' },
+          { name: c.title, href: { pathname: '/blog/[slug]', params: { slug: post.slug } } }
+        ]}
+      />
       <article className="container-content max-w-3xl py-12">
         <Link href="/blog" className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-muted hover:text-fg">
           <Icon name="arrow" size={16} className="rotate-180 rtl:rotate-0" />

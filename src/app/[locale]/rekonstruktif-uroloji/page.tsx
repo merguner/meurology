@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { ogImages, ogImagePath } from '@/config/ogImage';
 import { buildAlternates, getPathname } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -63,6 +64,10 @@ export default async function ReconstructivePage({
   return (
     <>
       <JsonLd data={jsonLd} />
+      <BreadcrumbJsonLd
+        locale={locale}
+        items={[{ name: c.title, href: '/rekonstruktif-uroloji' }]}
+      />
 
       {/* Hero — uzmanlık/karmaşıklık çerçevesi, fiyat vurgusu yok */}
       <section className="border-b border-border bg-surface">

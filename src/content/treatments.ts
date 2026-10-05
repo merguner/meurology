@@ -2206,6 +2206,7 @@ const baseTreatments: Treatment[] = [
      * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
      */
     slug: 'eswl',
+    procedure: { type: 'NoninvasiveProcedure', bodyLocation: 'Kidney' },
     parent: 'bobrek-tasi',
     lastReviewed: '2026-10-04',
     icon: 'kidney',
@@ -2912,6 +2913,7 @@ const baseTreatments: Treatment[] = [
      * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
      */
     slug: 'erkek-infertilitesi',
+    procedure: { type: 'SurgicalProcedure', bodyLocation: 'Testis' },
     parent: 'androloji',
     lastReviewed: '2026-10-04',
     icon: 'andrology',
@@ -8153,6 +8155,7 @@ const baseTreatments: Treatment[] = [
      * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
      */
     slug: 'pcnl',
+    procedure: { type: 'PercutaneousProcedure', bodyLocation: 'Kidney' },
     parent: 'bobrek-tasi',
     lastReviewed: '2026-10-04',
     icon: 'kidney',
@@ -9412,6 +9415,7 @@ const baseTreatments: Treatment[] = [
      * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
      */
     slug: 'rirs',
+    procedure: { type: 'SurgicalProcedure', bodyLocation: 'Ureter' },
     parent: 'bobrek-tasi',
     lastReviewed: '2026-10-04',
     icon: 'kidney',
@@ -10635,6 +10639,7 @@ const baseTreatments: Treatment[] = [
      * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
      */
     slug: 'rezum',
+    procedure: { type: 'TherapeuticProcedure', bodyLocation: 'Prostate' },
     parent: 'bph-prostat-buyumesi',
     lastReviewed: '2026-10-04',
     icon: 'prostate',
@@ -11848,6 +11853,7 @@ const baseTreatments: Treatment[] = [
      * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
      */
     slug: 'turp',
+    procedure: { type: 'SurgicalProcedure', bodyLocation: 'Prostate' },
     parent: 'bph-prostat-buyumesi',
     lastReviewed: '2026-10-04',
     icon: 'prostate',
@@ -13066,6 +13072,7 @@ const baseTreatments: Treatment[] = [
      * Kaynaksız oran/yüzde YAZILMAMIŞTIR.
      */
     slug: 'psa-yuksekligi-ve-biyopsi',
+    procedure: { type: 'DiagnosticProcedure', bodyLocation: 'Prostate' },
     parent: 'prostat-kanseri',
     lastReviewed: '2026-10-04',
     icon: 'prostate',
@@ -15370,6 +15377,7 @@ const baseTreatments: Treatment[] = [
      * prompt m.4.1 uyarınca prostat-kanseri hub'ının altındadır.
      */
     slug: 'sinir-koruyucu-cerrahi',
+    procedure: { type: 'SurgicalProcedure', bodyLocation: 'Prostate' },
     parent: 'prostat-kanseri',
     lastReviewed: '2026-10-04',
     icon: 'prostate',
@@ -16576,6 +16584,7 @@ const baseTreatments: Treatment[] = [
      * Kaynak: EAU Sexual and Reproductive Health kılavuzu.
      */
     slug: 'penis-buyutme',
+    procedure: { type: 'SurgicalProcedure', bodyLocation: 'Penis' },
     parent: 'androloji',
     lastReviewed: '2026-10-04',
     icon: 'andrology',
@@ -17758,6 +17767,7 @@ const baseTreatments: Treatment[] = [
      * Aquadisseksiyon: rutin değil, seçilmiş ve uygun olgularda uygulanıyor.
      */
     slug: 'penil-protez',
+    procedure: { type: 'SurgicalProcedure', bodyLocation: 'Penis' },
     parent: 'androloji',
     lastReviewed: '2026-10-04',
     icon: 'andrology',
@@ -19037,6 +19047,7 @@ const baseTreatments: Treatment[] = [
      * Kaynaklar: EAU non-neurogenic male LUTS kılavuzu + cerrahın 2025 ThuLEP yayını.
      */
     slug: 'thulep',
+    procedure: { type: 'SurgicalProcedure', bodyLocation: 'Prostate' },
     parent: 'bph-prostat-buyumesi',
     lastReviewed: '2026-10-04',
     icon: 'prostate',
@@ -20359,6 +20370,7 @@ const baseTreatments: Treatment[] = [
      * Kaynak: EAU non-neurogenic male LUTS kılavuzu.
      */
     slug: 'holep',
+    procedure: { type: 'SurgicalProcedure', bodyLocation: 'Prostate' },
     parent: 'bph-prostat-buyumesi',
     lastReviewed: '2026-10-04',
     icon: 'prostate',
@@ -21589,6 +21601,7 @@ const baseTreatments: Treatment[] = [
   },
   {
     slug: 'robotik-prostatektomi',
+    procedure: { type: 'SurgicalProcedure', bodyLocation: 'Prostate' },
     parent: 'prostat-kanseri',
     lastReviewed: '2026-10-03',
     // TODO-DOGRULA: robotik prostatektomi EUR fiyat aralığı girilecek (priceRangeEUR).
@@ -26936,6 +26949,7 @@ const baseTreatments: Treatment[] = [
   },
   {
     slug: 'uretroplasti',
+    procedure: { type: 'SurgicalProcedure', bodyLocation: 'Urethra' },
     lastReviewed: '2026-10-04',
     icon: 'urethra',
     category: 'reconstructive',
@@ -27808,6 +27822,7 @@ const baseTreatments: Treatment[] = [
   },
   {
     slug: 'piyeloplasti',
+    procedure: { type: 'SurgicalProcedure', bodyLocation: 'Renal pelvis' },
     lastReviewed: '2026-10-04',
     icon: 'kidney',
     category: 'reconstructive',
@@ -28662,6 +28677,7 @@ const baseTreatments: Treatment[] = [
   },
   {
     slug: 'fistul-onarimi',
+    procedure: { type: 'SurgicalProcedure', bodyLocation: 'Urinary bladder' },
     lastReviewed: '2026-10-04',
     icon: 'repair',
     category: 'reconstructive',
@@ -29498,6 +29514,7 @@ const baseTreatments: Treatment[] = [
   },
   {
     slug: 'ureter-rekonstruksiyonu',
+    procedure: { type: 'SurgicalProcedure', bodyLocation: 'Ureter' },
     lastReviewed: '2026-10-04',
     icon: 'graft',
     category: 'reconstructive',

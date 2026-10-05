@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import Image from 'next/image';
 import { buildAlternates } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -44,6 +45,7 @@ export default async function HospitalPage({
 
   return (
     <>
+      <BreadcrumbJsonLd locale={locale} items={[{ name: t('title'), href: '/hastane' }]} />
       <PageHero eyebrow={t('title')} title={c.name} description={c.intro[0]} />
 
       <div className="container-content py-12">

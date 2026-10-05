@@ -9,6 +9,7 @@ import type { Treatment } from '../types';
  */
 export const pektopeksi: Treatment = {
   slug: 'pektopeksi',
+  procedure: { type: 'SurgicalProcedure', bodyLocation: 'Uterus' },
   parent: 'kadin-urolojisi',
   icon: 'female',
   category: 'reconstructive',

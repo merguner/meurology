@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getPathname, Link } from '@/i18n/navigation';
@@ -96,6 +97,13 @@ export default async function CountryPage({
   return (
     <>
       <JsonLd data={faqJsonLd} />
+      <BreadcrumbJsonLd
+        locale={locale}
+        items={[
+          { name: t('listTitle'), href: '/uluslararasi-hasta' },
+          { name: c.title, href: { pathname: '/uluslararasi-hasta/ulke/[slug]', params: { slug: country.slug } } }
+        ]}
+      />
       <PageHero title={c.title} description={c.summary} />
 
       <div className="container-content py-12 md:py-16">

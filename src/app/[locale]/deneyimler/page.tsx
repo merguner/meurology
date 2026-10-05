@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { buildAlternates, redirect } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
@@ -52,6 +53,7 @@ export default async function ExperiencesPage({
 
   return (
     <>
+      <BreadcrumbJsonLd locale={locale} items={[{ name: t('title'), href: '/deneyimler' }]} />
       <PageHero eyebrow={t('title')} title={t('title')} description={t('subtitle')} />
 
       {/* Google yorumları — otomatik (anahtar varsa); yoksa profil linki */}

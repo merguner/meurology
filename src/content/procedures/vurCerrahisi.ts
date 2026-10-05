@@ -9,6 +9,7 @@ import type { Treatment } from '../types';
  */
 export const vurCerrahisi: Treatment = {
   slug: 'vur-cerrahisi',
+  procedure: { type: 'SurgicalProcedure', bodyLocation: 'Ureter' },
   parent: 'cocuk-urolojisi',
   icon: 'kidney',
   reviewStatus: 'draft',

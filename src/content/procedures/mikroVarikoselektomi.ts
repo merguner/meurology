@@ -11,6 +11,7 @@ import type { Treatment } from '../types';
  */
 export const mikroVarikoselektomi: Treatment = {
   slug: 'mikroskopik-varikoselektomi',
+  procedure: { type: 'SurgicalProcedure', bodyLocation: 'Spermatic cord' },
   parent: 'androloji',
   icon: 'andrology',
   reviewStatus: 'draft',

@@ -157,7 +157,24 @@ export default async function TreatmentPage({
         description: c.metaDescription,
         inLanguage: locale,
         url: `${siteConfig.domain}${getPathname({ locale, href: treatmentHref(canonical, locale) })}`,
-        about: { '@type': 'MedicalProcedure', name: c.title },
+        /*
+          about: YALNIZCA gerçekten bir İŞLEM olan sayfalarda
+          MedicalProcedure olur. Hastalık ve kategori sayfalarında
+          MedicalCondition kullanılır — bir hastalığı "procedure" diye
+          işaretlemek yanlış veridir ve zengin sonuç denetiminde de hata verir.
+          howPerformed için ayrı bir alan tutulmaz: işlem sayfalarında
+          `summary` zaten işlemin nasıl yapıldığını anlatan cümledir.
+        */
+        about: treatment.procedure
+          ? {
+              '@type': 'MedicalProcedure',
+              name: c.title,
+              procedureType: `https://schema.org/${treatment.procedure.type}`,
+              bodyLocation: treatment.procedure.bodyLocation,
+              howPerformed: c.summary,
+              description: c.metaDescription
+            }
+          : { '@type': 'MedicalCondition', name: c.title, description: c.metaDescription },
         // lastReviewed GERÇEK gözden geçirme tarihinden gelir. Daha önce her
         // derlemede "bugün" yazılıyordu — bu, doğrulanmamış bir güncellik
         // sinyaliydi. Tarih girilmemişse alan hiç yayınlanmaz.

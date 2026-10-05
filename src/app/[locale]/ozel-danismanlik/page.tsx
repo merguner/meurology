@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { buildAlternates } from '@/i18n/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
@@ -39,6 +40,7 @@ export default async function ConsultationPage({
 
   return (
     <>
+      <BreadcrumbJsonLd locale={locale} items={[{ name: c.title, href: '/ozel-danismanlik' }]} />
       <PageHero eyebrow={c.eyebrow} title={c.title} description={c.summary} />
 
       <div className="container-content grid gap-10 py-12 lg:grid-cols-2">

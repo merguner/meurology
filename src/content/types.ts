@@ -194,6 +194,28 @@ export interface Treatment {
    */
   reviewStatus?: 'draft' | 'reviewed';
   /**
+   * schema.org MedicalProcedure ALANLARI.
+   *
+   * YALNIZCA bir İŞLEMİ anlatan sayfalarda doldurulur. Hastalık veya
+   * kategori (hub) sayfalarında boş bırakılır — bir hastalığı
+   * "MedicalProcedure" olarak işaretlemek yanlış veri olurdu ve
+   * zengin sonuç doğrulamasında da hata verir.
+   *
+   * howPerformed ayrıca tanımlanmaz: işlem sayfalarında `summary`
+   * zaten işlemin nasıl yapıldığını anlatan tek cümledir.
+   */
+  procedure?: {
+    /** schema.org MedicalProcedureType. */
+    type:
+      | 'SurgicalProcedure'
+      | 'NoninvasiveProcedure'
+      | 'PercutaneousProcedure'
+      | 'TherapeuticProcedure'
+      | 'DiagnosticProcedure';
+    /** Anatomik bölge — schema.org için İngilizce yazılır, çevrilmez. */
+    bodyLocation: string;
+  };
+  /**
    * Fiyat aralığı — EURO (tedavi başına bir kez; dile bağlı değil).
    * YALNIZCA features(locale).prices === true olan dillerde gösterilir;
    * Türkçe sayfalarda hiçbir koşulda gösterilmez (yönetmelik).

@@ -10,6 +10,7 @@ import type { Treatment } from '../types';
  */
 export const tumt: Treatment = {
   slug: 'tumt',
+  procedure: { type: 'TherapeuticProcedure', bodyLocation: 'Prostate' },
   parent: 'bph-prostat-buyumesi',
   icon: 'prostate',
   reviewStatus: 'draft',

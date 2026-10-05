@@ -13,6 +13,7 @@ import type { Treatment } from '../types';
  */
 export const hipospadias: Treatment = {
   slug: 'hipospadias-onarimi',
+  procedure: { type: 'SurgicalProcedure', bodyLocation: 'Urethra' },
   parent: 'cocuk-urolojisi',
   icon: 'urethra',
   category: 'reconstructive',

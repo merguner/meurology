@@ -10,6 +10,7 @@ import type { Treatment } from '../types';
  */
 export const yapaySfinkter: Treatment = {
   slug: 'yapay-idrar-sfinkteri',
+  procedure: { type: 'SurgicalProcedure', bodyLocation: 'Urethra' },
   icon: 'repair',
   category: 'reconstructive',
   reviewStatus: 'draft',

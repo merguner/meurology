@@ -27,5 +27,5 @@ export default async function CookiePolicyPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Legal');
-  return <LegalDocView doc={cookiesDoc} title={t('cookiesTitle')} locale={locale} />;
+  return <LegalDocView doc={cookiesDoc} title={t('cookiesTitle')} locale={locale} href="/yasal/cerez-politikasi" />;
 }
