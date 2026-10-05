@@ -11,7 +11,20 @@ import { Icon } from './Icon';
 
 const AUTOPLAY_MS = 6500;
 
-export function HeroSlider() {
+/**
+ * Hekim kimlik satırı — hero'nun üstünde, her slaytta aynı yerde durur.
+ * Değerler SUNUCUDA hesaplanıp prop olarak gelir: fotoğrafın var olup
+ * olmadığı dosya sistemine bakılarak belirlenir (bkz. lib/publicImage).
+ */
+export interface HeroDoctor {
+  name: string;
+  specialty: string;
+  /** Dosya yoksa undefined gelir ve fotoğraf alanı hiç render edilmez. */
+  photo?: string;
+  photoAlt: string;
+}
+
+export function HeroSlider({ doctor }: { doctor?: HeroDoctor }) {
   const t = useTranslations('Home');
   const tc = useTranslations('Common');
   const locale = useLocale() as Locale;
@@ -109,6 +122,29 @@ export function HeroSlider() {
               ) : null}
 
               <div className="container-content relative flex min-h-[460px] flex-col justify-center py-16 md:min-h-[540px] md:py-24">
+                {/* HEKİM KİMLİĞİ — başlığın üstünde, her slaytta aynı.
+                    Fotoğraf dosyası yoksa yalnızca ad satırı görünür. */}
+                {doctor && (
+                  <p className="mb-5 flex items-center gap-3">
+                    {doctor.photo && (
+                      <Image
+                        src={doctor.photo}
+                        alt={doctor.photoAlt}
+                        width={44}
+                        height={44}
+                        priority={i === 0}
+                        className="h-11 w-11 shrink-0 rounded-full object-cover ring-2 ring-primary/30"
+                      />
+                    )}
+                    <span className="text-sm font-semibold text-fg md:text-base">
+                      {doctor.name}
+                      <span aria-hidden="true" className="mx-2 text-muted">
+                        ·
+                      </span>
+                      <span className="font-normal text-muted">{doctor.specialty}</span>
+                    </span>
+                  </p>
+                )}
                 <Heading className="max-w-3xl text-3xl font-bold leading-[1.22] md:text-5xl md:leading-[1.18]">
                   {c.title}
                 </Heading>
