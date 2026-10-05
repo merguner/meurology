@@ -23,7 +23,11 @@
     "ureterRekon": "إعادة بناء الحالب",
     "toggleSubmenu": "فتح/إغلاق القائمة الفرعية",
     "glossary": "قاموس المسالك البولية",
-    "insurance": "التأمين"
+    "insurance": "التأمين",
+    "androloji": "طب الذكورة",
+    "uroonkoloji": "أورام المسالك البولية",
+    "kadinUrolojisi": "مسالك النساء",
+    "cocukUrolojisi": "مسالك الأطفال"
   },
   "Common": {
     "whatsappCta": "راسلنا على واتساب",
@@ -34,6 +38,7 @@
     "allTreatments": "جميع العلاجات",
     "backToTreatments": "العودة إلى العلاجات",
     "skipToContent": "الانتقال إلى المحتوى",
+    "logoAlt": "شعار ME Urology Clinic",
     "toggleTheme": "تبديل المظهر",
     "lightTheme": "المظهر الفاتح",
     "darkTheme": "المظهر الداكن",
@@ -47,6 +52,8 @@
     "positioning": "عنوان موثوق لجراحة المسالك البولية للمرضى الدوليين",
     "heroTitle": "الخبرة والشفافية والمعايير الدولية في جراحة المسالك البولية",
     "heroSubtitle": "تنسيق من نقطة واحدة للجراحة الروبوتية والجراحة قليلة التوغل: التقييم والعلاج والإقامة والمتابعة.",
+    "heroSpecialty": "المسالك البولية",
+    "heroDoctorPhotoAlt": "{name}، أخصائي المسالك البولية — صورة شخصية",
     "heroPrimaryCta": "تقييم مجاني عبر واتساب",
     "heroSecondaryCta": "استكشف العلاجات",
     "accreditationsTitle": "الاعتماد والضمان",
@@ -72,9 +79,7 @@
     "sliderLabel": "أبرز المحتوى",
     "sliderPrev": "الشريحة السابقة",
     "sliderNext": "الشريحة التالية",
-    "sliderGoTo": "الانتقال إلى الشريحة",
-    "seeAllReviews": "عرض كل التقييمات",
-    "trustReviewsLabel": "تقييمات Google"
+    "sliderGoTo": "الانتقال إلى الشريحة"
   },
   "Treatment": {
     "sectionDefinition": "عن الحالة",
@@ -107,6 +112,7 @@
     "sectionTechnology": "التقنية المستخدمة",
     "sectionRecovery": "فترة التعافي",
     "sectionSources": "المصادر العلمية",
+    "sectionPublication": "بحث منشور لجرّاحنا في هذا المجال",
     "quickFacts": {
       "duration": "مدة العملية",
       "anesthesia": "التخدير",
@@ -142,7 +148,10 @@
     "laserLabel": "منصّة الليزر",
     "licenseLabel": "تصريح السياحة الصحية",
     "licenseHolder": "صاحب الشهادة: {holder} (صادرة عن وزارة الصحة)",
-    "licenseNo": "رقم الشهادة"
+    "licenseNo": "رقم الشهادة",
+    "centersTitle": "المراكز التي تُجرى فيها العمليات",
+    "hospitalPhotoAlt": "{name} — مبنى المستشفى",
+    "mapLink": "عرض على الخريطة"
   },
   "Process": {
     "title": "رحلة المريض الدولي",
@@ -169,7 +178,14 @@
     "visaTitle": "دليل التأشيرة والسفر",
     "visaBody": "يمكن لمواطني العديد من الدول دخول تركيا بدون تأشيرة أو بتأشيرة إلكترونية. بعد تأكيد موعدك، ندعمك بخطاب دعوة ووثائق السفر عند الحاجة.",
     "visaDisclaimer": "متطلبات التأشيرة تختلف حسب الدولة؛ تحقق من المصادر الرسمية الحديثة.",
-    "faqTitle": "الأسئلة الشائعة"
+    "faqTitle": "الأسئلة الشائعة",
+    "packageTableTitle": "الباقات وأسعار البداية",
+    "packageColTreatment": "العلاج",
+    "packageColPrice": "نطاق البداية",
+    "packageColStay": "الإقامة في تركيا",
+    "packageColIncludes": "ما تشمله الباقة",
+    "packageNights": "{count} ليالٍ",
+    "packageTableNote": "هذه المبالغ ليست عرضًا؛ بل نطاق بداية. ويُبلَّغ المبلغ النهائي في عرض مكتوب مفصّل بعد مراجعة فحوصك."
   },
   "Experiences": {
     "title": "تجارب المرضى",
@@ -240,8 +256,18 @@
     "treatmentPlaceholder": "اختر علاجًا",
     "message": "رسالتك",
     "messagePlaceholder": "الأعراض أو الأسئلة",
+    "attachments": "إرفاق مستندات (اختياري)",
+    "attachmentsHint": "PDF أو JPG أو PNG. ثلاثة ملفات كحد أقصى، و10 ميغابايت لكل ملف.",
+    "attachmentsChoose": "اختيار ملفات",
+    "attachmentsNone": "لم يُختَر أي ملف بعد",
+    "attachmentsKvkk": "المستندات التي ترفعها تُعدّ بيانات صحية. ولا تُحفَظ على خوادمنا؛ بل تُرسَل إلى بريد العيادة فقط ليتسنى تقييم طلبك. ويُرجى التأكد من أنها تتضمن المعلومات الضرورية وحدها.",
+    "attachmentsSelected": "الملفات المختارة",
+    "attachmentsClear": "مسح الاختيار",
+    "validationTooManyFiles": "يمكنك إرفاق ثلاثة ملفات كحد أقصى.",
+    "validationFileTooLarge": "ألا يتجاوز حجم كل ملف 10 ميغابايت.",
+    "validationFileType": "يمكن إرفاق ملفات PDF وJPG وPNG فقط.",
     "privacyLinksIntro": "قبل الإرسال، اقرأ كيف تُعالج بياناتك:",
-    "consent": "أوافق صراحةً على معالجة المعلومات الصحية التي أختار مشاركتها للتقييم الأولي.",
+    "consent": "أوافق صراحةً على معالجة المعلومات الصحية التي أشاركها والمستندات التي أرفقها لغرض التقييم الأولي، وعلى نقل بياناتي في هذا الإطار إلى مزوّدي خدمات خارج تركيا.",
     "consentRequired": "الموافقة الصريحة مطلوبة للمتابعة.",
     "submit": "إرسال النموذج",
     "submitting": "جارٍ الإرسال...",

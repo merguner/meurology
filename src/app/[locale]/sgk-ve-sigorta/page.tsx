@@ -36,5 +36,5 @@ export default async function InsurancePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Insurance');
-  return <LegalDocView doc={insuranceDoc} title={t('title')} locale={locale} />;
+  return <LegalDocView doc={insuranceDoc} title={t('title')} locale={locale} href="/sgk-ve-sigorta" />;
 }

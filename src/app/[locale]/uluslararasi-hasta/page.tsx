@@ -1,4 +1,11 @@
 import type { Metadata } from 'next';
+import { servicePromises } from '@/config/promises';
+import { publishablePackages } from '@/config/packages';
+import { publishedTreatments } from '@/content/treatments';
+import { resolveContent } from '@/content/types';
+import { features } from '@/config/features';
+import { formatPriceRangeEUR } from '@/config/site';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { buildAlternates } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
@@ -48,12 +55,47 @@ export default async function ProcessPage({
 
   const steps = ['s1', 's2', 's3', 's4', 's5'] as const;
   const faqs = resolveInternationalFaq(locale);
+  /*
+    PAKET KALEMLERI — HIZMET VAADINE BAGLI.
+    Bir vaat config/promises.ts'te kapatilirsa ilgili kalem listede
+    hic gorunmez. Metin degismez; yalnizca gosterilip gosterilmedigi
+    tek bir boolean'a baglanir.
+  */
   const packageItems = [
-    t('packageAccommodation'),
-    t('packageTransfer'),
-    t('packageInterpreter'),
+    servicePromises.packageIncludesStayAndTransfer ? t('packageAccommodation') : null,
+    servicePromises.packageIncludesStayAndTransfer ? t('packageTransfer') : null,
+    servicePromises.interpreter || servicePromises.internationalCoordinator
+      ? t('packageInterpreter')
+      : null,
     t('packageFollowup')
-  ];
+  ].filter((x): x is string => Boolean(x));
+
+  /*
+    PAKETLER VE BASLANGIC FIYATLARI.
+    config/packages.ts BOSKEN bu bolum hic render edilmez — yayinda
+    bos tablo veya "yakinda" yazisi gorunmez.
+    Tutarlar yalnizca fiyat gosterimine izin verilen dillerde basilir.
+  */
+  const packages = features(locale).prices ? publishablePackages() : [];
+  const packageRows = packages.map((pk) => {
+    const tr = publishedTreatments.find((x) => x.slug === pk.treatmentSlug);
+    return {
+      name: tr ? resolveContent(tr, locale).title : pk.treatmentSlug,
+      price: formatPriceRangeEUR({ from: pk.priceFromEUR, to: pk.priceToEUR }, locale),
+      nights: pk.nights,
+      includes: pk.includes
+        .map((k) =>
+          k === 'accommodation'
+            ? t('packageAccommodation')
+            : k === 'transfer'
+              ? t('packageTransfer')
+              : k === 'interpreter'
+                ? t('packageInterpreter')
+                : t('packageFollowup')
+        )
+        .join(' · ')
+    };
+  });
 
   // FAQPage yapısal verisi — arama sonuçlarında soru/cevap görünürlüğü.
   const faqJsonLd = {
@@ -69,6 +111,7 @@ export default async function ProcessPage({
   return (
     <>
       {faqs.length > 0 && <JsonLd data={faqJsonLd} />}
+      <BreadcrumbJsonLd locale={locale} items={[{ name: t('title'), href: '/uluslararasi-hasta' }]} />
       <PageHero eyebrow={t('title')} title={t('title')} description={t('subtitle')} />
 
       <div className="container-content py-12">
@@ -105,6 +148,52 @@ export default async function ProcessPage({
               </li>
             ))}
           </ul>
+
+          {/*
+            PAKETLER VE BASLANGIC FIYATLARI.
+            config/packages.ts bos oldugu surece bu blok HIC basilmaz.
+            Tutarlar bir TEKLIF degil, baslangic araligidir; bu not
+            tablonun altinda acikca yaziyor.
+          */}
+          {packageRows.length > 0 && (
+            <div className="sm:col-span-2">
+              <h3 className="mb-3 mt-8 text-lg font-bold">{t('packageTableTitle')}</h3>
+              <div className="min-w-0 overflow-x-auto rounded-xl border border-border">
+                <table className="w-full border-collapse text-sm">
+                  <caption className="sr-only">{t('packageTableTitle')}</caption>
+                  <thead>
+                    <tr className="bg-surface-2">
+                      <th scope="col" className="whitespace-nowrap px-4 py-3 text-start font-semibold">
+                        {t('packageColTreatment')}
+                      </th>
+                      <th scope="col" className="whitespace-nowrap px-4 py-3 text-start font-semibold">
+                        {t('packageColPrice')}
+                      </th>
+                      <th scope="col" className="whitespace-nowrap px-4 py-3 text-start font-semibold">
+                        {t('packageColStay')}
+                      </th>
+                      <th scope="col" className="whitespace-nowrap px-4 py-3 text-start font-semibold">
+                        {t('packageColIncludes')}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {packageRows.map((r) => (
+                      <tr key={r.name} className="border-t border-border">
+                        <th scope="row" className="px-4 py-3 text-start font-medium text-fg">{r.name}</th>
+                        <td className="whitespace-nowrap px-4 py-3 text-muted">{r.price}</td>
+                        <td className="whitespace-nowrap px-4 py-3 text-muted">
+                          {r.nights > 0 ? t('packageNights', { count: r.nights }) : '—'}
+                        </td>
+                        <td className="px-4 py-3 text-muted">{r.includes}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-2 text-xs text-muted">{t('packageTableNote')}</p>
+            </div>
+          )}
         </section>
 
         {/* Vize & seyahat */}

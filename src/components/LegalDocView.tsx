@@ -2,21 +2,26 @@ import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
 import type { LegalDoc } from '@/content/legal';
 import { PageHero } from './PageHero';
+import { BreadcrumbJsonLd, type Crumb } from './BreadcrumbJsonLd';
 
 export async function LegalDocView({
   doc,
   title,
-  locale
+  locale,
+  href
 }: {
   doc: LegalDoc;
   title: string;
   locale: Locale;
+  /** Ekmek kirintisi icin bu belgenin kendi yolu. */
+  href?: Crumb['href'];
 }) {
   const t = await getTranslations('Legal');
   const c = doc.i18n[locale] ?? doc.i18n.en ?? doc.i18n.tr!;
 
   return (
     <>
+      {href && <BreadcrumbJsonLd locale={locale} items={[{ name: title, href }]} />}
       <PageHero title={title} />
       <div className="container-content max-w-3xl py-12">
         <p className="label-mono mb-6">

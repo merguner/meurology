@@ -27,5 +27,5 @@ export default async function ConsentPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Legal');
-  return <LegalDocView doc={consentDoc} title={t('consentTitle')} locale={locale} />;
+  return <LegalDocView doc={consentDoc} title={t('consentTitle')} locale={locale} href="/yasal/acik-riza" />;
 }

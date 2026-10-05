@@ -23,7 +23,11 @@
     "ureterRekon": "Harnleiter-Rekonstruktion",
     "toggleSubmenu": "Untermenü umschalten",
     "glossary": "Urologie-Glossar",
-    "insurance": "Kostenübernahme"
+    "insurance": "Kostenübernahme",
+    "androloji": "Andrologie",
+    "uroonkoloji": "Uroonkologie",
+    "kadinUrolojisi": "Urologie der Frau",
+    "cocukUrolojisi": "Kinderurologie"
   },
   "Common": {
     "whatsappCta": "Schreiben Sie uns auf WhatsApp",
@@ -34,6 +38,7 @@
     "allTreatments": "Alle Behandlungen",
     "backToTreatments": "Zurück zu den Behandlungen",
     "skipToContent": "Zum Inhalt springen",
+    "logoAlt": "Logo der ME Urology Clinic",
     "toggleTheme": "Design wechseln",
     "lightTheme": "Helles Design",
     "darkTheme": "Dunkles Design",
@@ -47,6 +52,8 @@
     "positioning": "Eine vertrauenswürdige Adresse für urologische Chirurgie für internationale Patienten",
     "heroTitle": "Erfahrung, Transparenz und internationale Standards in der urologischen Chirurgie",
     "heroSubtitle": "Koordination aus einer Hand für robotische und minimalinvasive urologische Chirurgie: Bewertung, Behandlung, Unterkunft und Nachsorge.",
+    "heroSpecialty": "Urologie",
+    "heroDoctorPhotoAlt": "{name}, Facharzt für Urologie — Porträtfoto",
     "heroPrimaryCta": "Kostenlose Bewertung über WhatsApp",
     "heroSecondaryCta": "Behandlungen ansehen",
     "accreditationsTitle": "Akkreditierung und Sicherheit",
@@ -72,9 +79,7 @@
     "sliderLabel": "Höhepunkte",
     "sliderPrev": "Vorherige Folie",
     "sliderNext": "Nächste Folie",
-    "sliderGoTo": "Zu Folie springen",
-    "seeAllReviews": "Alle Bewertungen ansehen",
-    "trustReviewsLabel": "Google-Bewertungen"
+    "sliderGoTo": "Zu Folie springen"
   },
   "Treatment": {
     "sectionDefinition": "Über den Zustand",
@@ -107,6 +112,7 @@
     "sectionTechnology": "Eingesetzte Technologie",
     "sectionRecovery": "Genesung",
     "sectionSources": "Wissenschaftliche Quellen",
+    "sectionPublication": "Eigene Publikation unseres Operateurs auf diesem Gebiet",
     "quickFacts": {
       "duration": "Eingriffsdauer",
       "anesthesia": "Anästhesie",
@@ -142,7 +148,10 @@
     "laserLabel": "Laserplattform",
     "licenseLabel": "Zulassung Gesundheitstourismus",
     "licenseHolder": "Zulassungsinhaber: {holder} (ausgestellt vom Gesundheitsministerium)",
-    "licenseNo": "Zulassungsnummer"
+    "licenseNo": "Zulassungsnummer",
+    "centersTitle": "Wo die Eingriffe stattfinden",
+    "hospitalPhotoAlt": "{name} — Krankenhausgebäude",
+    "mapLink": "Auf der Karte zeigen"
   },
   "Process": {
     "title": "Ablauf für internationale Patienten",
@@ -169,7 +178,14 @@
     "visaTitle": "Visum & Reiseführer",
     "visaBody": "Bürger vieler Länder können visumfrei oder mit E-Visum in die Türkei einreisen. Nach Bestätigung Ihres Termins unterstützen wir Sie bei Bedarf mit einem Einladungsschreiben und Reisedokumenten.",
     "visaDisclaimer": "Visabestimmungen variieren je nach Land; prüfen Sie aktuelle offizielle Quellen.",
-    "faqTitle": "Häufig gestellte Fragen"
+    "faqTitle": "Häufig gestellte Fragen",
+    "packageTableTitle": "Pakete und Startpreise",
+    "packageColTreatment": "Behandlung",
+    "packageColPrice": "Ab-Preisspanne",
+    "packageColStay": "Aufenthalt in der Türkei",
+    "packageColIncludes": "Enthalten",
+    "packageNights": "{count} Nächte",
+    "packageTableNote": "Diese Beträge sind KEIN ANGEBOT, sondern eine Ab-Preisspanne. Der endgültige Betrag folgt in einem detaillierten schriftlichen Angebot, sobald Ihre Befunde gesichtet sind."
   },
   "Experiences": {
     "title": "Patientenerfahrungen",
@@ -240,8 +256,18 @@
     "treatmentPlaceholder": "Behandlung auswählen",
     "message": "Ihre Nachricht",
     "messagePlaceholder": "Ihre Beschwerden oder Fragen",
+    "attachments": "Unterlagen anhängen (optional)",
+    "attachmentsHint": "PDF, JPG oder PNG. Höchstens 3 Dateien, je 10 MB.",
+    "attachmentsChoose": "Dateien wählen",
+    "attachmentsNone": "Noch keine Datei ausgewählt",
+    "attachmentsKvkk": "Die hochgeladenen Unterlagen gelten als Gesundheitsdaten. Sie werden nicht auf unseren Servern gespeichert, sondern ausschließlich an das Postfach der Klinik gesendet, damit Ihre Anfrage beurteilt werden kann. Achten Sie bitte darauf, dass sie nur die erforderlichen Angaben enthalten.",
+    "attachmentsSelected": "Ausgewählte Dateien",
+    "attachmentsClear": "Auswahl entfernen",
+    "validationTooManyFiles": "Sie können höchstens 3 Dateien anhängen.",
+    "validationFileTooLarge": "Jede Datei darf höchstens 10 MB groß sein.",
+    "validationFileType": "Es können nur PDF-, JPG- und PNG-Dateien angehängt werden.",
     "privacyLinksIntro": "Lesen Sie vor dem Absenden, wie Ihre Daten verarbeitet werden:",
-    "consent": "Ich willige ausdrücklich in die Verarbeitung der Gesundheitsangaben ein, die ich für die Vorabbewertung mitteile.",
+    "consent": "Ich willige ausdrücklich in die Verarbeitung der für die Vorabbewertung mitgeteilten Gesundheitsangaben und der beigefügten Dokumente sowie in die hierfür erforderliche Übermittlung meiner Daten an Dienstleister im Ausland ein.",
     "consentRequired": "Zum Fortfahren ist eine ausdrückliche Einwilligung erforderlich.",
     "submit": "Formular senden",
     "submitting": "Wird gesendet...",

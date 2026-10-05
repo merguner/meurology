@@ -119,6 +119,27 @@ export interface TreatmentContent {
   recovery?: RecoveryStep[];
   /** Bilimsel kaynaklar (EAU kılavuzu, cerrahın yayınları). */
   sources?: ContentSource[];
+  /**
+   * SAYFANIN EN ÜSTÜNDEKİ KISA KLİNİK NOT — opsiyonel.
+   * Örn. "Kliniğimizde enükleasyon yöntemi olarak öncelikle ThuLEP
+   * uygulanmaktadır." Boşken hiç render edilmez.
+   * linkSlug verilirse notun sonunda ilgili tedavi sayfasına bağlantı çıkar
+   * (slug KANONİK yazılır; dile göre çevrilmiş adrese dönüştürülür).
+   */
+  topNote?: { body: string; linkSlug?: string; linkLabel?: string };
+  /**
+   * HEKİMİN BU ALANDAKİ KENDİ YAYINI — opsiyonel.
+   * YALNIZCA atıf yapılır. Yayından başarı oranı, yüzde veya vaka sayısı
+   * ÇIKARILMAZ; tanıtım yönetmeliği açısından bu bir sonuç iddiası olurdu.
+   * Boşken bölüm hiç render edilmez.
+   */
+  surgeonPublication?: {
+    /** Kutunun içindeki kısa giriş cümlesi (dile göre). */
+    intro: string;
+    /** Tam atıf — kaynak biçiminde, çevrilmez. */
+    citation: string;
+    url?: string;
+  };
   /** Bu prosedürde cerrah deneyimi — PLACEHOLDER sayılar. */
   surgeonExperience: {
     caseVolume: string; // ör. "1.500+ vaka" — doğrulanana kadar boş bırakılır
@@ -162,6 +183,38 @@ export interface Treatment {
   parent?: string;
   /** Son tıbbi gözden geçirme tarihi (ISO) — sayfada gösterilir, JSON-LD lastReviewed. */
   lastReviewed?: string;
+  /**
+   * İÇERİK GÖZDEN GEÇİRME DURUMU.
+   * 'draft': metin hazır ama HEKİM HENÜZ ONAYLAMADI. Bu durumda
+   * `lastReviewed` DOLDURULMAZ; sayfada "Son tıbbi gözden geçirme —
+   * Doç. Dr. Müslüm Ergün" satırı ve JSON-LD'deki reviewedBy alanı
+   * basılmaz. Onaylanmamış bir metni hekim onaylıymış gibi göstermek
+   * yanıltıcı olurdu.
+   * Onaydan sonra: reviewStatus 'reviewed' yapılır ve lastReviewed girilir.
+   */
+  reviewStatus?: 'draft' | 'reviewed';
+  /**
+   * schema.org MedicalProcedure ALANLARI.
+   *
+   * YALNIZCA bir İŞLEMİ anlatan sayfalarda doldurulur. Hastalık veya
+   * kategori (hub) sayfalarında boş bırakılır — bir hastalığı
+   * "MedicalProcedure" olarak işaretlemek yanlış veri olurdu ve
+   * zengin sonuç doğrulamasında da hata verir.
+   *
+   * howPerformed ayrıca tanımlanmaz: işlem sayfalarında `summary`
+   * zaten işlemin nasıl yapıldığını anlatan tek cümledir.
+   */
+  procedure?: {
+    /** schema.org MedicalProcedureType. */
+    type:
+      | 'SurgicalProcedure'
+      | 'NoninvasiveProcedure'
+      | 'PercutaneousProcedure'
+      | 'TherapeuticProcedure'
+      | 'DiagnosticProcedure';
+    /** Anatomik bölge — schema.org için İngilizce yazılır, çevrilmez. */
+    bodyLocation: string;
+  };
   /**
    * Fiyat aralığı — EURO (tedavi başına bir kez; dile bağlı değil).
    * YALNIZCA features(locale).prices === true olan dillerde gösterilir;

@@ -1,5 +1,15 @@
 import type { Locale } from '@/i18n/routing';
 import type { Faq } from './types';
+import { promiseEnabled, type ServicePromiseKey } from '@/config/promises';
+
+/**
+ * SSS maddesi + (varsa) bagli oldugu HIZMET VAADI.
+ * Vaat config/promises.ts'te kapatilirsa bu madde sayfadan ve
+ * FAQPage yapilandirilmis verisinden tamamen cikar.
+ */
+export interface InternationalFaqItem extends Faq {
+  promise?: ServicePromiseKey;
+}
 
 /**
  * ULUSLARARASI HASTA SSS (prompt m.4.5 — en az 15 soru).
@@ -12,7 +22,7 @@ import type { Faq } from './types';
  * cevaplar yalnızca yabancı dillerde tutar ifade eder; tr sürümü "değerlendirme
  * sonrası" der. Bkz. config/features.ts.
  */
-export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
+export const internationalFaq: Partial<Record<Locale, InternationalFaqItem[]>> = {
   tr: [
     {
       q: 'Tedavi süreci nasıl başlıyor?',
@@ -28,15 +38,18 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'Yanımda refakatçi getirebilir miyim?',
-      a: 'Evet. Paketlerimiz hasta ve bir refakatçinin konaklamasını kapsayacak şekilde planlanır.'
+      a: 'Evet. Paketlerimiz hasta ve bir refakatçinin konaklamasını kapsayacak şekilde planlanır.',
+      promise: 'companionAccommodation'
     },
     {
       q: 'Tercüman desteği var mı?',
-      a: 'Uluslararası hasta koordinatörümüz İngilizce hizmet vermektedir. Diğer diller için görüşme öncesinde tercüman ayarlanır.'
+      a: 'Uluslararası hasta koordinatörümüz İngilizce hizmet vermektedir. Diğer diller için görüşme öncesinde tercüman ayarlanır.',
+      promise: 'interpreter'
     },
     {
       q: 'Havalimanı transferi ve konaklama dahil mi?',
-      a: 'Evet. Havalimanı–hastane–otel transferleri ve konaklama paket kapsamındadır; ayrıntılar teklifinizde açıkça belirtilir.'
+      a: 'Evet. Havalimanı–hastane–otel transferleri ve konaklama paket kapsamındadır; ayrıntılar teklifinizde açıkça belirtilir.',
+      promise: 'packageIncludesStayAndTransfer'
     },
     {
       q: 'Vize gerekiyor mu?',
@@ -68,7 +81,8 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'Tıbbi raporlarım hangi dilde veriliyor?',
-      a: 'Epikriz ve patoloji raporları İngilizce olarak düzenlenebilir; böylece ülkenizdeki hekiminiz süreci takip edebilir.'
+      a: 'Epikriz ve patoloji raporları İngilizce olarak düzenlenebilir; böylece ülkenizdeki hekiminiz süreci takip edebilir.',
+      promise: 'englishEpicrisis'
     },
     {
       q: 'Sigortam bu tedaviyi karşılar mı?',
@@ -84,7 +98,8 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'Mahremiyetim korunuyor mu?',
-      a: 'Evet. Paylaştığınız tüm bilgiler yalnızca değerlendirme amacıyla işlenir. Androloji gibi mahremiyet önceliği olan konularda süreç tamamen gizli yürütülür ve talep üzerine kadın koordinatör desteği sağlanır.'
+      a: 'Evet. Paylaştığınız tüm bilgiler yalnızca değerlendirme amacıyla işlenir. Androloji gibi mahremiyet önceliği olan konularda süreç tamamen gizli yürütülür ve talep üzerine kadın koordinatör desteği sağlanır.',
+      promise: 'femaleCoordinator'
     }
   ],
   en: [
@@ -102,15 +117,18 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'Can I bring a companion?',
-      a: 'Yes. Our packages are planned to cover accommodation for the patient and one companion.'
+      a: 'Yes. Our packages are planned to cover accommodation for the patient and one companion.',
+      promise: 'companionAccommodation'
     },
     {
       q: 'Is interpreter support available?',
-      a: 'Our international patient coordinator works in English. For other languages an interpreter is arranged before your consultation.'
+      a: 'Our international patient coordinator works in English. For other languages an interpreter is arranged before your consultation.',
+      promise: 'interpreter'
     },
     {
       q: 'Are airport transfers and accommodation included?',
-      a: 'Yes. Airport–hospital–hotel transfers and accommodation are part of the package; the details are stated clearly in your offer.'
+      a: 'Yes. Airport–hospital–hotel transfers and accommodation are part of the package; the details are stated clearly in your offer.',
+      promise: 'packageIncludesStayAndTransfer'
     },
     {
       q: 'Do I need a visa?',
@@ -142,7 +160,8 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'In which language are my medical reports issued?',
-      a: 'Discharge summaries and pathology reports can be issued in English so your physician at home can follow the process.'
+      a: 'Discharge summaries and pathology reports can be issued in English so your physician at home can follow the process.',
+      promise: 'englishEpicrisis'
     },
     {
       q: 'Will my insurance cover this treatment?',
@@ -158,7 +177,8 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'Is my privacy protected?',
-      a: 'Yes. Everything you share is processed only for assessment. For privacy-sensitive areas such as andrology the process is handled confidentially, and a female coordinator is available on request.'
+      a: 'Yes. Everything you share is processed only for assessment. For privacy-sensitive areas such as andrology the process is handled confidentially, and a female coordinator is available on request.',
+      promise: 'femaleCoordinator'
     }
   ],
   de: [
@@ -176,15 +196,18 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'Kann ich eine Begleitperson mitbringen?',
-      a: 'Ja. Unsere Pakete sind so geplant, dass die Unterbringung für Patient und eine Begleitperson enthalten ist.'
+      a: 'Ja. Unsere Pakete sind so geplant, dass die Unterbringung für Patient und eine Begleitperson enthalten ist.',
+      promise: 'companionAccommodation'
     },
     {
       q: 'Gibt es Dolmetscherunterstützung?',
-      a: 'Unsere Koordinatorin für internationale Patienten arbeitet auf Englisch. Für andere Sprachen wird vor Ihrem Termin ein Dolmetscher organisiert.'
+      a: 'Unsere Koordinatorin für internationale Patienten arbeitet auf Englisch. Für andere Sprachen wird vor Ihrem Termin ein Dolmetscher organisiert.',
+      promise: 'interpreter'
     },
     {
       q: 'Sind Flughafentransfer und Unterkunft inbegriffen?',
-      a: 'Ja. Transfers Flughafen–Krankenhaus–Hotel und die Unterkunft gehören zum Paket; die Einzelheiten stehen klar in Ihrem Angebot.'
+      a: 'Ja. Transfers Flughafen–Krankenhaus–Hotel und die Unterkunft gehören zum Paket; die Einzelheiten stehen klar in Ihrem Angebot.',
+      promise: 'packageIncludesStayAndTransfer'
     },
     {
       q: 'Brauche ich ein Visum?',
@@ -216,7 +239,8 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'In welcher Sprache erhalte ich meine Befunde?',
-      a: 'Entlassungsbriefe und Pathologiebefunde können auf Englisch ausgestellt werden, damit Ihr Arzt zu Hause den Verlauf verfolgen kann.'
+      a: 'Entlassungsbriefe und Pathologiebefunde können auf Englisch ausgestellt werden, damit Ihr Arzt zu Hause den Verlauf verfolgen kann.',
+      promise: 'englishEpicrisis'
     },
     {
       q: 'Übernimmt meine Versicherung die Behandlung?',
@@ -232,7 +256,8 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'Wird meine Privatsphäre geschützt?',
-      a: 'Ja. Alles, was Sie teilen, wird ausschließlich zur Beurteilung verarbeitet. In sensiblen Bereichen wie der Andrologie läuft der Prozess vertraulich ab; auf Wunsch steht eine weibliche Koordinatorin zur Verfügung.'
+      a: 'Ja. Alles, was Sie teilen, wird ausschließlich zur Beurteilung verarbeitet. In sensiblen Bereichen wie der Andrologie läuft der Prozess vertraulich ab; auf Wunsch steht eine weibliche Koordinatorin zur Verfügung.',
+      promise: 'femaleCoordinator'
     }
   ],
   ru: [
@@ -250,15 +275,18 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'Можно ли приехать с сопровождающим?',
-      a: 'Да. Наши пакеты рассчитаны на проживание пациента и одного сопровождающего.'
+      a: 'Да. Наши пакеты рассчитаны на проживание пациента и одного сопровождающего.',
+      promise: 'companionAccommodation'
     },
     {
       q: 'Есть ли поддержка переводчика?',
-      a: 'Наш координатор по работе с иностранными пациентами говорит по-английски. Для других языков переводчик организуется до консультации.'
+      a: 'Наш координатор по работе с иностранными пациентами говорит по-английски. Для других языков переводчик организуется до консультации.',
+      promise: 'interpreter'
     },
     {
       q: 'Включены ли трансфер из аэропорта и проживание?',
-      a: 'Да. Трансферы аэропорт–больница–отель и проживание входят в пакет; детали чётко указаны в вашем предложении.'
+      a: 'Да. Трансферы аэропорт–больница–отель и проживание входят в пакет; детали чётко указаны в вашем предложении.',
+      promise: 'packageIncludesStayAndTransfer'
     },
     {
       q: 'Нужна ли виза?',
@@ -290,7 +318,8 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'На каком языке выдаются медицинские документы?',
-      a: 'Выписки и результаты гистологии могут быть оформлены на английском языке, чтобы ваш врач дома мог следить за процессом.'
+      a: 'Выписки и результаты гистологии могут быть оформлены на английском языке, чтобы ваш врач дома мог следить за процессом.',
+      promise: 'englishEpicrisis'
     },
     {
       q: 'Покроет ли страховка это лечение?',
@@ -306,7 +335,8 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'Защищена ли моя конфиденциальность?',
-      a: 'Да. Всё, чем вы делитесь, обрабатывается только для оценки. В деликатных областях, таких как андрология, процесс ведётся конфиденциально; по запросу доступна координатор-женщина.'
+      a: 'Да. Всё, чем вы делитесь, обрабатывается только для оценки. В деликатных областях, таких как андрология, процесс ведётся конфиденциально; по запросу доступна координатор-женщина.',
+      promise: 'femaleCoordinator'
     }
   ],
   ar: [
@@ -324,15 +354,18 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'هل يمكنني اصطحاب مرافق؟',
-      a: 'نعم. تُخطَّط باقاتنا لتشمل إقامة المريض ومرافق واحد.'
+      a: 'نعم. تُخطَّط باقاتنا لتشمل إقامة المريض ومرافق واحد.',
+      promise: 'companionAccommodation'
     },
     {
       q: 'هل تتوفّر خدمة الترجمة؟',
-      a: 'منسّقة المرضى الدوليين لدينا تعمل باللغة الإنجليزية. ولغات أخرى يُرتَّب لها مترجم قبل الموعد.'
+      a: 'منسّقة المرضى الدوليين لدينا تعمل باللغة الإنجليزية. ولغات أخرى يُرتَّب لها مترجم قبل الموعد.',
+      promise: 'interpreter'
     },
     {
       q: 'هل التنقّل من المطار والإقامة مشمولان؟',
-      a: 'نعم. تنقّلات المطار–المستشفى–الفندق والإقامة ضمن الباقة؛ وتُذكر التفاصيل بوضوح في عرضكم.'
+      a: 'نعم. تنقّلات المطار–المستشفى–الفندق والإقامة ضمن الباقة؛ وتُذكر التفاصيل بوضوح في عرضكم.',
+      promise: 'packageIncludesStayAndTransfer'
     },
     {
       q: 'هل أحتاج إلى تأشيرة؟',
@@ -364,7 +397,8 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'بأي لغة تصدر تقاريري الطبية؟',
-      a: 'يمكن إصدار تقرير الخروج ونتائج علم الأمراض باللغة الإنجليزية حتى يتمكّن طبيبكم في بلدكم من متابعة الحالة.'
+      a: 'يمكن إصدار تقرير الخروج ونتائج علم الأمراض باللغة الإنجليزية حتى يتمكّن طبيبكم في بلدكم من متابعة الحالة.',
+      promise: 'englishEpicrisis'
     },
     {
       q: 'هل يغطّي تأميني هذا العلاج؟',
@@ -380,7 +414,8 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'هل تُحفظ خصوصيتي؟',
-      a: 'نعم. تُعالَج كل المعلومات التي تشاركونها لغرض التقييم فقط. وفي المجالات الحسّاسة مثل طب الذكورة تُدار العملية بسرّية تامة، وتتوفّر منسّقة سيدة عند الطلب.'
+      a: 'نعم. تُعالَج كل المعلومات التي تشاركونها لغرض التقييم فقط. وفي المجالات الحسّاسة مثل طب الذكورة تُدار العملية بسرّية تامة، وتتوفّر منسّقة سيدة عند الطلب.',
+      promise: 'femaleCoordinator'
     }
   ],
   fr: [
@@ -398,15 +433,18 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'Puis-je venir accompagné ?',
-      a: 'Oui. Nos forfaits sont conçus pour couvrir l’hébergement du patient et d’un accompagnant.'
+      a: 'Oui. Nos forfaits sont conçus pour couvrir l’hébergement du patient et d’un accompagnant.',
+      promise: 'companionAccommodation'
     },
     {
       q: 'Un interprète est-il disponible ?',
-      a: 'Notre coordinatrice des patients internationaux travaille en anglais. Pour les autres langues, un interprète est organisé avant la consultation.'
+      a: 'Notre coordinatrice des patients internationaux travaille en anglais. Pour les autres langues, un interprète est organisé avant la consultation.',
+      promise: 'interpreter'
     },
     {
       q: 'Les transferts aéroport et l’hébergement sont-ils inclus ?',
-      a: 'Oui. Les transferts aéroport–hôpital–hôtel et l’hébergement font partie du forfait ; les détails figurent clairement dans votre offre.'
+      a: 'Oui. Les transferts aéroport–hôpital–hôtel et l’hébergement font partie du forfait ; les détails figurent clairement dans votre offre.',
+      promise: 'packageIncludesStayAndTransfer'
     },
     {
       q: 'Ai-je besoin d’un visa ?',
@@ -438,7 +476,8 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'Dans quelle langue mes comptes rendus sont-ils rédigés ?',
-      a: 'Le compte rendu de sortie et les résultats anatomopathologiques peuvent être établis en anglais afin que votre médecin dans votre pays puisse suivre l’évolution.'
+      a: 'Le compte rendu de sortie et les résultats anatomopathologiques peuvent être établis en anglais afin que votre médecin dans votre pays puisse suivre l’évolution.',
+      promise: 'englishEpicrisis'
     },
     {
       q: 'Mon assurance couvre-t-elle ce traitement ?',
@@ -454,12 +493,15 @@ export const internationalFaq: Partial<Record<Locale, Faq[]>> = {
     },
     {
       q: 'Ma confidentialité est-elle protégée ?',
-      a: 'Oui. Tout ce que vous partagez est traité uniquement à des fins d’évaluation. Dans les domaines sensibles comme l’andrologie, le parcours est mené en toute confidentialité et une coordinatrice est disponible sur demande.'
+      a: 'Oui. Tout ce que vous partagez est traité uniquement à des fins d’évaluation. Dans les domaines sensibles comme l’andrologie, le parcours est mené en toute confidentialité et une coordinatrice est disponible sur demande.',
+      promise: 'femaleCoordinator'
     }
   ]
 };
 
 /** Dile göre SSS listesi; eksik dilde İngilizce'ye düşer. */
-export function resolveInternationalFaq(locale: Locale): Faq[] {
-  return internationalFaq[locale] ?? internationalFaq.en ?? [];
+export function resolveInternationalFaq(locale: Locale): InternationalFaqItem[] {
+  const list = internationalFaq[locale] ?? internationalFaq.en ?? internationalFaq.tr!;
+  // Kapatilmis bir vaadin cevabi hic gosterilmez.
+  return list.filter((f) => promiseEnabled(f.promise));
 }

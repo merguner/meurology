@@ -27,5 +27,5 @@ export default async function TermsPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Legal');
-  return <LegalDocView doc={termsDoc} title={t('termsTitle')} locale={locale} />;
+  return <LegalDocView doc={termsDoc} title={t('termsTitle')} locale={locale} href="/yasal/kullanim-kosullari" />;
 }

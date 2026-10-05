@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import { track } from '@/lib/analytics';
 import { useParams } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
@@ -34,6 +35,8 @@ export function LanguageSwitcher() {
 
   function switchTo(next: Locale) {
     setOpen(false);
+    // Ölçüm: yalnızca hedef dil kodu ve sayfa yolu gider.
+    track('language_switch', { toLocale: next });
     // Aynı sayfada dili değiştir; dinamik route parametreleri ([slug]) korunur.
     router.replace(
       // @ts-expect-error next-intl: dinamik params tipi statik doğrulanamaz

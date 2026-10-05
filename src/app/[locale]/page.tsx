@@ -1,14 +1,16 @@
 import { getTranslations, getLocale, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
-import { generalTreatments } from '@/content/treatments';
+import { publishedTreatments } from '@/content/treatments';
 import { resolveContent } from '@/content/types';
+import { surgeonFullName } from '@/content/surgeon';
+import { featuredTreatmentSlugs, heroDoctorPhoto } from '@/config/homepage';
+import { publicImage } from '@/lib/publicImage';
 import { resolveConsultation } from '@/content/consultation';
 import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { whatsappMessageFor } from '@/config/site';
 import { TreatmentCard } from '@/components/TreatmentCard';
 import { HeroSlider } from '@/components/HeroSlider';
-import { TrustStrip } from '@/components/TrustStrip';
 import { Icon, type IconName } from '@/components/Icon';
 
 export default async function HomePage({
@@ -27,6 +29,16 @@ export default async function HomePage({
     'anasayfa'
   );
 
+  /**
+   * ÖNE ÇIKAN TEDAVİLER — config/homepage.ts'teki SIRAYLA.
+   * Taslağa alınmış veya silinmiş bir slug sessizce atlanır.
+   */
+  const featured = featuredTreatmentSlugs
+    .map((slug) => publishedTreatments.find((tr) => tr.slug === slug))
+    .filter((tr): tr is NonNullable<typeof tr> => Boolean(tr));
+
+  const doctorName = surgeonFullName(locale);
+
   const why: { icon: IconName; title: string; body: string }[] = [
     { icon: 'robot', title: t('why.experienceTitle'), body: t('why.experienceBody') },
     { icon: 'swap', title: t('why.transparencyTitle'), body: t('why.transparencyBody') },
@@ -37,10 +49,20 @@ export default async function HomePage({
   return (
     <>
       {/* HERO SLIDER — içerik src/content/heroSlides.ts'ten okunur (güncellenebilir) */}
-      <HeroSlider />
-
-      {/* SABİT GÜVEN ŞERİDİ — kaymaz; yalnızca tr dışı dillerde Google yorumları */}
-      <TrustStrip locale={locale} />
+      <HeroSlider
+        doctor={{
+          name: doctorName,
+          specialty: t('heroSpecialty'),
+          // Dosya yoksa undefined gelir → fotoğraf alanı hiç basılmaz.
+          photo: publicImage(heroDoctorPhoto),
+          photoAlt: t('heroDoctorPhotoAlt', { name: doctorName })
+        }}
+      />
+      {/* KALDIRILDI: ana sayfadaki Google yorumlari seridi (yildiz + hasta
+          alintilari). Gerekce: hasta yorumu ve yildiz gosterimi Saglik
+          Bakanligi tanitim yonetmeligi acisindan risklidir; bu bolum yalnizca
+          Turkce disi dillerde aciktir diye tutulmustu, simdi tum dillerden
+          kaldirildi. Footer'daki Google Isletme baglantisi (alintisiz) kalir. */}
 
       {/* KALDIRILDI: "Mesleki üyelik" bölümü (EAU rozeti).
           Gerekçe: Bölüm 0 → dernek üyeliği yok; doğrulanamayan üyelik beyanı
@@ -53,20 +75,16 @@ export default async function HomePage({
 
       {/* TEDAVİLER */}
       <section className="container-content py-6 md:py-10">
-        <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <h2 className="text-xl font-bold md:text-2xl">{t('treatmentsTitle')}</h2>
-            <p className="mt-1 text-muted">{t('treatmentsSubtitle')}</p>
-          </div>
-          <Link
-            href="/tedaviler"
-            className="text-sm font-semibold text-primary hover:underline"
-          >
-            {tc('allTreatments')} →
-          </Link>
+        <div className="mb-6">
+          <h2 className="text-xl font-bold md:text-2xl">{t('treatmentsTitle')}</h2>
+          <p className="mt-1 text-muted">{t('treatmentsSubtitle')}</p>
         </div>
+        {/*
+          Ana sayfada TÜM tedaviler değil, config/homepage.ts'te belirtilen
+          altı öne çıkan tedavi gösterilir. Tam liste /tedaviler sayfasında.
+        */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {generalTreatments.map((tr) => {
+          {featured.map((tr) => {
             const c = resolveContent(tr, locale);
             return (
               <TreatmentCard
@@ -78,6 +96,15 @@ export default async function HomePage({
               />
             );
           })}
+        </div>
+        <div className="mt-6">
+          <Link
+            href="/tedaviler"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+          >
+            {tc('allTreatments')}
+            <Icon name="arrow" size={16} className="rtl:rotate-180" />
+          </Link>
         </div>
 
         {/* Rekonstrüktif kategori — diğerlerinden ayrışan, uzmanlık odaklı kart */}

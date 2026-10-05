@@ -6,11 +6,14 @@ import { routing, rtlLocales, type Locale } from '@/i18n/routing';
 import { fontVariablesFor } from '@/app/fonts';
 import { siteConfig } from '@/config/site';
 import { robotsMeta } from '@/config/seo';
+import { ogImages, ogImagePath } from '@/config/ogImage';
 import { ThemeScript } from '@/components/ThemeScript';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 import { CookieConsent } from '@/components/CookieConsent';
+import { AnalyticsEvents } from '@/components/AnalyticsEvents';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
+import { AssistantBubble } from '@/components/AssistantBubble';
 import { JsonLd } from '@/components/JsonLd';
 import { buildAlternates, getPathname } from '@/i18n/navigation';
 import '@/app/globals.css';
@@ -40,7 +43,13 @@ export async function generateMetadata({
       title: t('defaultTitle'),
       description: t('defaultDescription'),
       locale,
-      images: [{ url: '/brand/og.svg', width: 1200, height: 630, alt: t('siteName') }]
+      images: ogImages(locale, t('defaultTitle'))
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('defaultTitle'),
+      description: t('defaultDescription'),
+      images: [ogImagePath(locale)]
     },
     // Geçici dağıtım adresinde (*.vercel.app) noindex — bkz. config/seo.ts
     robots: robotsMeta()
@@ -73,7 +82,7 @@ export default async function LocaleLayout({
     url: `${siteConfig.domain}/${locale}`,
     email: siteConfig.email,
     telephone: siteConfig.phoneIntl,
-    image: `${siteConfig.domain}/brand/og.svg`,
+    image: `${siteConfig.domain}${ogImagePath(locale as Locale)}`,
     medicalSpecialty: 'Urology',
     address: {
       '@type': 'PostalAddress',
@@ -116,7 +125,15 @@ export default async function LocaleLayout({
           <main id="main">{children}</main>
           <SiteFooter />
           <FloatingWhatsApp />
+          {/*
+            Yapay zekâ sohbet balonu — WhatsApp düğmesinin ÜSTÜNDE durur
+            (AsistanSohbet → altBosluk). ANTHROPIC_API_KEY tanımlı
+            değilse hiç render edilmez.
+          */}
+          <AssistantBubble locale={locale as Locale} />
           <CookieConsent />
+          {/* WhatsApp / telefon / e-posta tiklamalarini tek noktadan olcer. */}
+          <AnalyticsEvents />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -113,22 +113,90 @@ export const blogPosts: BlogPost[] = [
           'Prostat kanseri belirtileri, PSA testi, tanı süreci ve robotik prostatektomi dahil tedavi seçenekleri hakkında bilgilendirici rehber.',
         sections: [
           {
-            heading: 'Prostat kanseri nedir?',
+            heading: 'Prostat kanseri erken evrede neden belirti vermez?',
             paragraphs: [
-              'Prostat kanseri, erkeklerde en sık görülen kanserlerden biridir ve erken evrede genellikle belirti vermez. Bu nedenle düzenli kontrol önemlidir.'
+              'Prostat, mesanenin hemen altında idrar kanalını çepeçevre saran bir bezdir. Kanser çoğunlukla bezin DIŞ kısmında, idrar kanalından uzakta başlar. Bu yüzden erken evrede idrar yolunu sıkıştırmaz ve hiçbir şikâyet yaratmaz.',
+              'Pratikte bunun anlamı şudur: şikâyeti olmayan bir erkekte prostat kanseri olabilir, şikâyeti olan bir erkekte ise şikâyetin nedeni çoğu zaman kanser DEĞİL, iyi huylu prostat büyümesidir. İdrar şikâyetini kanserin habercisi saymak da, şikâyet yok diye rahatlamak da yanlıştır.',
+              'Erken tanı, taramayla ilgili bir karardır ve bu karar kişiseldir: yaşınız, ailenizde prostat kanseri olup olmadığı, genel sağlık durumunuz ve beklenen yaşam süreniz birlikte değerlendirilir. Hekiminizle "bana tarama yapılmalı mı" sorusunu açıkça konuşun.'
             ]
           },
           {
-            heading: 'Belirtiler ve tanı',
+            heading: 'Hangi belirtiler değerlendirilmelidir?',
             paragraphs: [
-              'İdrar yapmada zorluk, sık idrara çıkma veya idrarda kan gibi belirtiler görülebilir. Tanıda PSA kan testi, muayene, görüntüleme ve gerektiğinde biyopsi kullanılır.'
+              'İdrar akımında zayıflama, idrara başlamakta zorlanma, sık idrara çıkma ve gece uyanma en sık görülen idrar şikâyetleridir. Bunlar kansere özgü değildir; aynı şikâyetler iyi huylu büyümede de görülür.',
+              'ANCAK ŞU BULGULAR GECİKTİRİLMEDEN DEĞERLENDİRİLMELİDİR: idrarda veya menide kan, yeni başlayan ve geçmeyen kemik ağrısı (özellikle bel ve kalça), açıklanamayan kilo kaybı, bacaklarda güçsüzlük veya his kaybı.',
+              'İdrarda kan AĞRISIZ da olabilir; ağrı yokluğu bunu önemsiz yapmaz. Ağrısız idrarda kan her yaşta araştırılır.'
+            ]
+          },
+          {
+            heading: 'PSA nedir, ne değildir?',
+            paragraphs: [
+              'PSA (prostat spesifik antijen) prostat dokusunun ürettiği bir proteindir. Kanda ölçülür ve prostatla ilgili bir bilgi verir — ama KANSER TESTİ DEĞİLDİR.',
+              'PSA; iyi huylu prostat büyümesinde, idrar yolu enfeksiyonunda, prostat iltihabında, sonda takılmasından sonra ve bazen bisiklet veya cinsel ilişkinin ardından da yükselebilir. Yüksek bir PSA "kanser var" demek değildir; normal bir PSA da kanseri tamamen dışlamaz.',
+              'ÇOK SIK ATLANAN BİR NOKTA: Prostat küçülten ilaçlar (5-alfa redüktaz inhibitörleri) PSA değerini yaklaşık YARIYA düşürür. Bu ilacı kullandığınızı söylemezseniz, aslında dikkat gerektiren bir değer normal gibi yorumlanabilir. Her PSA ölçümünde bu bilgiyi verin.',
+              'Tek bir PSA değeri genellikle yeterli değildir. Değerin zaman içindeki eğilimi, prostat hacmine oranı ve muayene bulgusu birlikte değerlendirilir.'
+            ]
+          },
+          {
+            heading: 'Tanı süreci: önce görüntüleme, sonra biyopsi',
+            paragraphs: [
+              'PSA yüksekliği veya şüpheli bir muayene bulgusunda ilk adım artık çoğu zaman doğrudan biyopsi değil, çok parametreli prostat MR’ıdır. MR, şüpheli bir alan olup olmadığını gösterir ve varsa biyopsinin nereye yapılacağını belirler.',
+              'Bu sıralamanın iki faydası vardır: gereksiz biyopsiden kaçınılabilir ve biyopsi yapılacaksa doğru yerden alınır. "Önce MR" yaklaşımı, hastayı rastgele iğne almaktan korur.',
+              'Biyopsi gerekiyorsa işlem öncesi idrar kültürü temiz olmalıdır. Biyopsi sonrası idrarda ve menide bir süre kan görülmesi beklenen bir durumdur; ateş ve titreme ise beklenen değildir ve derhal başvurmayı gerektirir.'
+            ]
+          },
+          {
+            heading: 'Patoloji raporundaki sayı ne anlama gelir?',
+            paragraphs: [
+              'Biyopsi sonucunda kanser saptanırsa, patolog hücrelerin ne kadar farklılaştığını bir derece ile bildirir (Gleason skoru ve ona karşılık gelen ISUP derece grubu). Bu derece, hastalığın ne kadar hareketli davranma eğiliminde olduğunu gösterir.',
+              'Düşük dereceli, az sayıda odakta ve PSA’sı düşük bir hastalık ile yüksek dereceli bir hastalık aynı tablo değildir ve aynı şekilde tedavi edilmez. Bu nedenle "prostat kanseri" tek bir hastalık gibi konuşulmamalıdır.',
+              'Raporunuzu anlamıyorsanız açıklanmasını isteyin. Hangi derecede olduğunuzu bilmeden tedavi seçeneklerini karşılaştıramazsınız.'
             ]
           },
           {
             heading: 'Tedavi seçenekleri',
             paragraphs: [
-              'Tedavi; kanserin evresine, yaşa ve hasta tercihine göre planlanır. Seçenekler aktif izlem, cerrahi (robotik prostatektomi) ve radyoterapiyi içerir.',
-              'Bu içerik genel bilgilendirme amaçlıdır ve tıbbi tavsiye yerine geçmez. Kişisel değerlendirme için ekibimizle iletişime geçin.'
+              'AKTİF İZLEM, düşük riskli hastalıkta geçerli bir seçenektir ve "tedaviyi reddetmek" değildir. Düzenli PSA, muayene, MR ve gerektiğinde tekrar biyopsi ile hastalık yakından izlenir; ilerleme belirtisi görülürse tedaviye geçilir. Amaç, gerekmediği hâlde ameliyat veya ışın tedavisinin yan etkilerini yaşamamaktır.',
+              'CERRAHİ (radikal prostatektomi), prostatın tamamının çıkarılmasıdır; günümüzde sıklıkla robotik yardımla yapılır. Çıkarılan doku patolojiye gider ve hastalığın gerçek yaygınlığı böylece görülür.',
+              'RADYOTERAPİ, ışın tedavisidir ve seçilmiş hastalarda cerrahiye benzer bir hedefe yönelir. Hormon tedavisiyle birlikte uygulanabilir.',
+              'HORMON TEDAVİSİ, tek başına küratif bir yöntem değildir; ileri evrede veya radyoterapiye eklenerek kullanılır.',
+              'Hangi yöntemin seçileceği; hastalığın derecesi ve yaygınlığı, yaşınız, diğer hastalıklarınız ve sizin önceliklerinizle belirlenir. Hiçbir yöntem herkes için "en iyi" değildir.'
+            ]
+          },
+          {
+            heading: 'Dürüst beklentiler',
+            paragraphs: [
+              'Prostat ameliyatından sonra meni dışarı gelmez; doğal yolla çocuk sahibi olmak mümkün olmaz. Çocuk isteğiniz varsa bunu ameliyattan ÖNCE söyleyin.',
+              'Sertleşme işlevi, sinirler korunsa bile kesin olarak geri dönmeyebilir; dönüş aylar sürebilir ve ameliyat öncesi durumunuza bağlıdır.',
+              'İdrar kaçırma ilk haftalarda sık görülür ve çoğu hastada aylar içinde belirgin olarak azalır. Pelvik taban egzersizlerini ameliyattan ÖNCE öğrenmek bu süreci kolaylaştırır.',
+              'PATOLOJİ SONUCU BEKLENENDEN KÖTÜ ÇIKABİLİR. Ameliyattan sonra ek tedavi (radyoterapi veya hormon) gerekmesi, ameliyatın başarısız olduğu anlamına gelmez; hastalığın gerçek yaygınlığının ancak çıkarılan dokuda görülebilmesinden kaynaklanır.'
+            ]
+          },
+          {
+            heading: 'Hekiminize sorabileceğiniz sorular',
+            paragraphs: [
+              'Hastalığımın derecesi ve risk grubu nedir? Aktif izlem benim için bir seçenek mi, değilse neden?',
+              'Önerdiğiniz yöntemin bana özgü avantajı nedir; diğer seçenekler neden geride kalıyor?',
+              'Ameliyat olursam idrar kaçırma ve sertleşme açısından bana özel beklenti nedir; bu beklentiyi neye dayandırıyorsunuz?',
+              'Ameliyat sonrası ek tedavi gerekme ihtimalim nedir ve bu nasıl takip edilecek?',
+              'Takip planım nedir: hangi tetkik, hangi sıklıkta, kim yorumlayacak?'
+            ]
+          },
+          {
+            heading: 'Sık karşılaşılan yanlış bilgiler',
+            paragraphs: [
+              '"PSA’m normal, o hâlde kanser yok." Doğru değil. Normal bir PSA kanseri tamamen dışlamaz; muayene bulgusu ve risk etkenleri de değerlendirilir.',
+              '"PSA’m yüksek çıktı, demek ki kanserim var." Bu da doğru değil. Enfeksiyon, iyi huylu büyüme ve prostat iltihabı PSA’yı yükseltir. İlk adım genellikle tekrar ölçüm ve değerlendirmedir.',
+              '"Biyopsi kanseri yayar." Bu endişe sık dile getirilir ancak biyopsinin kanseri yaydığına dair bir kanıt yoktur. Asıl risk, gereken biyopsinin yapılmamasıdır.',
+              '"Ameliyat olursam her şey biter." Prostat kanserinde takip ameliyattan sonra da sürer. PSA düzenli ölçülür; bu bir güvensizlik değil, hastalığın doğru yönetilmesidir.',
+              '"Aktif izlem hiçbir şey yapmamaktır." Hayır. Aktif izlem bir programdır: belirli aralıklarla PSA, muayene, görüntüleme ve gerektiğinde biyopsi içerir. Takibe gelmeyecekseniz aktif izlem sizin için uygun değildir.'
+            ]
+          },
+          {
+            heading: 'Önemli not',
+            paragraphs: [
+              'Bu yazı genel bilgilendirme amaçlıdır ve tıbbi tavsiye yerine geçmez. Prostat kanseri tek bir hastalık değildir; kararlar kişiye özeldir ve hekim muayenesi gerektirir.',
+              'Yan ağrısıyla birlikte ateş, idrar yapamama, bacaklarda güçsüzlük veya his kaybı gibi bulgular ACİL değerlendirme gerektirir.'
             ]
           }
         ]
@@ -142,22 +210,90 @@ export const blogPosts: BlogPost[] = [
           'An informative guide to prostate cancer symptoms, the PSA test, the diagnostic process and treatment options including robotic prostatectomy.',
         sections: [
           {
-            heading: 'What is prostate cancer?',
+            heading: 'Why does prostate cancer cause no symptoms early on?',
             paragraphs: [
-              'Prostate cancer is one of the most common cancers in men and often causes no symptoms in early stages, which is why regular check-ups matter.'
+              'The prostate is a gland sitting just below the bladder and surrounding the urinary channel. Cancer most often begins in the OUTER part of the gland, away from that channel. That is why, early on, it does not compress the urinary passage and causes no complaints at all.',
+              'In practice this means two things: a man with no symptoms can have prostate cancer, and in a man who does have urinary symptoms the cause is usually NOT cancer but benign enlargement. Treating urinary symptoms as a warning sign of cancer is as wrong as being reassured by their absence.',
+              'Early detection is a decision about screening, and that decision is personal: your age, a family history of prostate cancer, your general health and your life expectancy are weighed together. Discuss plainly with your doctor whether screening is right for you.'
             ]
           },
           {
-            heading: 'Symptoms and diagnosis',
+            heading: 'Which symptoms should be assessed?',
             paragraphs: [
-              'Symptoms may include difficulty urinating, frequent urination or blood in the urine. Diagnosis uses the PSA blood test, examination, imaging and, when needed, biopsy.'
+              'A weakening stream, hesitancy, frequency and waking at night are the commonest urinary symptoms. They are not specific to cancer; the same symptoms occur with benign enlargement.',
+              'THESE FINDINGS, HOWEVER, SHOULD BE ASSESSED WITHOUT DELAY: blood in the urine or semen, new bone pain that does not settle (particularly in the back or hips), unexplained weight loss, weakness or loss of sensation in the legs.',
+              'Blood in the urine can be PAINLESS; the absence of pain does not make it unimportant. Painless blood in the urine is investigated at any age.'
+            ]
+          },
+          {
+            heading: 'What PSA is — and what it is not',
+            paragraphs: [
+              'PSA (prostate-specific antigen) is a protein produced by prostate tissue. It is measured in the blood and tells you something about the prostate — but it IS NOT A CANCER TEST.',
+              'PSA can rise with benign enlargement, with urinary infection, with inflammation of the prostate, after catheterisation and sometimes after cycling or intercourse. A high PSA does not mean "there is cancer", and a normal PSA does not entirely exclude it.',
+              'A POINT VERY OFTEN MISSED: drugs that shrink the prostate (5-alpha reductase inhibitors) roughly HALVE the PSA value. If you do not say that you take one, a value that actually warrants attention can be read as normal. Give this information at every PSA measurement.',
+              'A single PSA value is usually not enough. Its trend over time, its ratio to the prostate volume and the examination finding are considered together.'
+            ]
+          },
+          {
+            heading: 'Diagnosis: imaging first, biopsy afterwards',
+            paragraphs: [
+              'Where the PSA is raised or the examination is suspicious, the first step is now usually not a biopsy but a multiparametric MRI of the prostate. The scan shows whether there is a suspicious area and, if so, where the biopsy should be directed.',
+              'That order has two benefits: an unnecessary biopsy can be avoided, and where a biopsy is needed it is taken from the right place. "MRI first" protects the patient from random needling.',
+              'If a biopsy is needed, the urine culture must be clear beforehand. Blood in the urine and semen for a while afterwards is expected; fever and shivering are not, and require immediate contact.'
+            ]
+          },
+          {
+            heading: 'What the number in the pathology report means',
+            paragraphs: [
+              'If cancer is found, the pathologist reports how far the cells have changed, as a grade (the Gleason score and the corresponding ISUP grade group). That grade indicates how actively the disease tends to behave.',
+              'Low-grade disease in a few cores with a low PSA is not the same picture as high-grade disease, and it is not treated the same way. "Prostate cancer" should therefore not be spoken of as a single illness.',
+              'If you do not understand your report, ask for it to be explained. You cannot compare treatment options without knowing which grade you are in.'
             ]
           },
           {
             heading: 'Treatment options',
             paragraphs: [
-              'Treatment is planned according to stage, age and patient preference. Options include active surveillance, surgery (robotic prostatectomy) and radiotherapy.',
-              'This content is for general information only and is not a substitute for medical advice. Contact our team for a personal assessment.'
+              'ACTIVE SURVEILLANCE is a legitimate option in low-risk disease and is not "refusing treatment". The disease is followed closely with regular PSA, examination, MRI and, where needed, repeat biopsy; treatment begins if there are signs of progression. The aim is to avoid the side effects of surgery or radiotherapy where they are not needed.',
+              'SURGERY (radical prostatectomy) removes the whole prostate and is today often performed with robotic assistance. The removed tissue goes to pathology, which is how the true extent of the disease becomes visible.',
+              'RADIOTHERAPY aims at a similar goal to surgery in selected patients and may be combined with hormone therapy.',
+              'HORMONE THERAPY is not a curative method on its own; it is used in advanced disease or added to radiotherapy.',
+              'Which approach is chosen depends on the grade and extent of the disease, your age, your other conditions and your own priorities. No method is "best" for everyone.'
+            ]
+          },
+          {
+            heading: 'Honest expectations',
+            paragraphs: [
+              'After prostate surgery semen no longer passes outwards, and fathering a child naturally is not possible. If you wish to have children, say so BEFORE surgery.',
+              'Erectile function may not return reliably even where the nerves are preserved; recovery can take months and depends on your function before surgery.',
+              'Leakage of urine is common in the first weeks and lessens markedly over months in most men. Learning pelvic floor exercises BEFORE surgery makes that period easier.',
+              'THE PATHOLOGY RESULT CAN BE WORSE THAN EXPECTED. Needing further treatment (radiotherapy or hormones) after surgery does not mean the operation failed; it follows from the fact that the true extent of the disease can only be seen in the removed tissue.'
+            ]
+          },
+          {
+            heading: 'Questions you can ask your doctor',
+            paragraphs: [
+              'What is the grade and risk group of my disease? Is active surveillance an option for me, and if not, why not?',
+              'What is the specific advantage of the approach you propose for me, and why do the other options fall behind?',
+              'If I have surgery, what is my individual expectation regarding continence and erections, and on what is that expectation based?',
+              'What is the chance that I will need further treatment after surgery, and how will that be monitored?',
+              'What is my follow-up plan: which test, how often, and who interprets it?'
+            ]
+          },
+          {
+            heading: 'Common misconceptions',
+            paragraphs: [
+              '"My PSA is normal, so I do not have cancer." Not true. A normal PSA does not entirely exclude cancer; the examination finding and your risk factors are assessed as well.',
+              '"My PSA is high, so I must have cancer." Also not true. Infection, benign enlargement and inflammation of the prostate all raise PSA. The first step is usually to repeat the measurement and reassess.',
+              '"A biopsy spreads cancer." This worry is often voiced, but there is no evidence that biopsy spreads the disease. The real risk is not having the biopsy that was needed.',
+              '"Once I have surgery it is all over." In prostate cancer follow-up continues after surgery. PSA is measured regularly; that is not mistrust but proper management of the disease.',
+              '"Active surveillance means doing nothing." No. Active surveillance is a programme: PSA at set intervals, examination, imaging and, where needed, biopsy. If you will not attend follow-up, active surveillance is not right for you.'
+            ]
+          },
+          {
+            heading: 'Important note',
+            paragraphs: [
+              'This article is for general information and does not replace medical advice. Prostate cancer is not a single disease; decisions are individual and require examination by a doctor.',
+              'Fever with flank pain, inability to pass urine, or weakness or loss of sensation in the legs require URGENT assessment.'
             ]
           }
         ]
@@ -169,22 +305,90 @@ export const blogPosts: BlogPost[] = [
         metaDescription: 'دليل تعريفي حول أعراض سرطان البروستاتا واختبار PSA ومسار التشخيص وخيارات العلاج بما فيها استئصال البروستاتا بالروبوت.',
         sections: [
           {
-            heading: 'ما هو سرطان البروستاتا؟',
+            heading: 'لماذا لا يُحدِث سرطان البروستاتا أعراضًا في مرحلته المبكرة؟',
             paragraphs: [
-              'سرطان البروستاتا من أكثر السرطانات شيوعًا لدى الرجال، وغالبًا لا يسبّب أعراضًا في مراحله المبكرة؛ لذا تُعدّ الفحوصات المنتظمة مهمة.'
+              'تقع البروستاتا تحت المثانة مباشرة وتُحيط بقناة البول. ويبدأ السرطان غالبًا في الجزء الخارجي من الغدة بعيدًا عن هذه القناة. ولذلك فهو لا يضغط المسلك البولي في المرحلة المبكرة ولا يُحدِث أي شكوى.',
+              'ومعنى ذلك عمليًا أمران: قد يكون لدى رجل بلا شكوى سرطان بروستاتا، وأما الرجل الذي يشكو من البول فسبب شكواه غالبًا ليس السرطان بل التضخم الحميد. فعدّ الشكوى البولية نذيرًا للسرطان خطأ، والاطمئنان لغيابها خطأ أيضًا.',
+              'والكشف المبكر قرار يتعلق بالمسح، وهو قرار شخصي: يُوزَن فيه عمرك ووجود سوابق عائلية وحالتك الصحية العامة وتوقع العمر معًا. فناقش طبيبك بصراحة: هل المسح مناسب لي؟'
             ]
           },
           {
-            heading: 'الأعراض والتشخيص',
+            heading: 'أي الأعراض ينبغي تقييمها؟',
             paragraphs: [
-              'قد تشمل الأعراض صعوبة التبول أو كثرته أو وجود دم في البول. ويعتمد التشخيص على تحليل PSA والفحص والتصوير وأخذ خزعة عند الحاجة.'
+              'ضعف تيار البول وصعوبة البدء وتكرار التبول والاستيقاظ ليلًا أكثر الشكاوى البولية شيوعًا. وهي ليست خاصة بالسرطان؛ فالشكاوى نفسها تظهر في التضخم الحميد.',
+              'لكن هذه العلامات ينبغي تقييمها من دون تأخير: دم في البول أو في المني، وألم عظمي حديث لا يزول (ولا سيما في الظهر والورك)، ونقص وزن غير مفسَّر، وضعف أو فقدان إحساس في الساقين.',
+              'وقد يكون الدم في البول غير مؤلم؛ وغياب الألم لا يجعله غير مهم. فالبيلة الدموية غير المؤلمة تُقصّى في كل عمر.'
+            ]
+          },
+          {
+            heading: 'ما هو PSA وما ليس هو',
+            paragraphs: [
+              'PSA (المستضد النوعي للبروستاتا) بروتين تُنتجه أنسجة البروستاتا. ويُقاس في الدم ويعطي معلومة عن البروستاتا — لكنه ليس تحليلًا للسرطان.',
+              'وقد يرتفع PSA في التضخم الحميد وفي التهاب المسالك وفي التهاب البروستاتا وبعد وضع القسطرة وأحيانًا بعد ركوب الدراجة أو الجماع. فارتفاعه لا يعني «يوجد سرطان»، وقيمته الطبيعية لا تنفي السرطان نفيًا تامًا.',
+              'ونقطة كثيرًا ما تُغفَل: الأدوية التي تُصغّر البروستاتا (مثبطات اختزال ألفا-5) تخفض قيمة PSA إلى نحو النصف. فإن لم تُخبر أنك تستعملها فقد تُقرَأ قيمة تستحق الانتباه على أنها طبيعية. فأعطِ هذه المعلومة عند كل قياس.',
+              'وقيمة واحدة من PSA لا تكفي عادة. إذ يُقيَّم معًا اتجاهها عبر الزمن ونسبتها إلى حجم البروستاتا ونتيجة الفحص.'
+            ]
+          },
+          {
+            heading: 'التشخيص: التصوير أولًا ثم الخزعة',
+            paragraphs: [
+              'عند ارتفاع PSA أو وجود فحص مريب لم تعد الخطوة الأولى اليوم الخزعة في الغالب، بل الرنين المغناطيسي متعدد المعاملات للبروستاتا. فهو يُظهر وجود منطقة مريبة من عدمه، ويحدد أين تُوجَّه الخزعة.',
+              'ولهذا الترتيب فائدتان: يمكن تجنّب خزعة غير ضرورية، وإن لزمت الخزعة أُخذت من الموضع الصحيح. ومنهج «الرنين أولًا» يحمي المريض من وخز عشوائي.',
+              'وإن لزمت الخزعة فينبغي أن يكون زرع البول نظيفًا قبلها. ووجود دم في البول والمني مدة بعدها أمر متوقَّع؛ أما الحمى والقشعريرة فغير متوقعة وتستدعي تواصلًا فوريًا.'
+            ]
+          },
+          {
+            heading: 'ماذا يعني الرقم في تقرير علم الأمراض؟',
+            paragraphs: [
+              'إن وُجد سرطان فإن اختصاصي علم الأمراض يذكر مقدار تغيّر الخلايا بدرجة (مجموع غليسون ومجموعة الدرجة ISUP المقابلة). وتدل هذه الدرجة على مقدار ميل المرض إلى السلوك النشط.',
+              'والمرض منخفض الدرجة في عدد قليل من العينات مع PSA منخفض ليس الصورة نفسها للمرض عالي الدرجة، ولا يُعالَج بالطريقة نفسها. ولذلك لا ينبغي الحديث عن «سرطان البروستاتا» وكأنه مرض واحد.',
+              'وإن لم تفهم تقريرك فاطلب شرحه. فمن دون معرفة درجتك لا تستطيع مقارنة خيارات العلاج.'
             ]
           },
           {
             heading: 'خيارات العلاج',
             paragraphs: [
-              'يُخطَّط للعلاج حسب المرحلة والعمر وتفضيل المريض. وتشمل الخيارات المراقبة النشطة والجراحة (استئصال البروستاتا بالروبوت) والعلاج الإشعاعي.',
-              'هذا المحتوى لأغراض المعلومات العامة فقط وليس بديلاً عن الاستشارة الطبية. تواصل مع فريقنا لتقييم شخصي.'
+              'المراقبة النشطة خيار مشروع في المرض منخفض الخطورة وليست «رفضًا للعلاج». إذ يُتابَع المرض عن كثب بـ PSA منتظم وفحص وتصوير بالرنين وخزعة عند الحاجة؛ ويُبدَأ العلاج عند ظهور علامات تقدّم. والهدف ألّا يعيش المريض آثار الجراحة أو الإشعاع من دون لزوم.',
+              'والجراحة (الاستئصال الجذري للبروستاتا) تُزيل الغدة كاملة، وتُجرى اليوم كثيرًا بمساعدة الروبوت. ويُرسَل النسيج المُزال إلى علم الأمراض، وبذلك يتبيّن الامتداد الحقيقي للمرض.',
+              'والعلاج الإشعاعي يستهدف عند مرضى مختارين غاية قريبة من غاية الجراحة، وقد يُجمَع مع العلاج الهرموني.',
+              'والعلاج الهرموني ليس وحده أسلوبًا شافيًا؛ بل يُستعمَل في المراحل المتقدمة أو مضافًا إلى الإشعاع.',
+              'ويتحدد الاختيار بدرجة المرض وامتداده وعمرك وأمراضك الأخرى وأولوياتك أنت. وما من أسلوب هو «الأفضل» للجميع.'
+            ]
+          },
+          {
+            heading: 'توقعات صادقة',
+            paragraphs: [
+              'بعد جراحة البروستاتا لا يخرج المني إلى الخارج؛ ولا يمكن الإنجاب بالطريق الطبيعي. فإن كنت ترغب في الإنجاب فقل ذلك قبل العملية.',
+              'وقد لا تعود وظيفة الانتصاب عودة مؤكدة حتى مع الحفاظ على الأعصاب؛ وقد يستغرق التعافي أشهرًا ويتوقف على حالتك قبل العملية.',
+              'وتسرّب البول شائع في الأسابيع الأولى ويخفّ خفضًا واضحًا خلال أشهر عند معظم الرجال. وتعلّم تمارين قاع الحوض قبل العملية يسهّل هذه المدة.',
+              'وقد تأتي نتيجة الفحص المرضي أسوأ من المتوقع. والحاجة إلى علاج إضافي (إشعاع أو هرمونات) بعد العملية لا تعني فشلها؛ بل تنبع من أن الامتداد الحقيقي لا يُرى إلا في النسيج المُزال.'
+            ]
+          },
+          {
+            heading: 'أسئلة يمكنك طرحها على طبيبك',
+            paragraphs: [
+              'ما درجة مرضي ومجموعة خطورته؟ وهل المراقبة النشطة خيار لي، وإن لم تكن فلماذا؟',
+              'ما الميزة المحددة للأسلوب الذي تقترحه عليّ، ولماذا تتراجع الخيارات الأخرى؟',
+              'إن أُجريت لي العملية فما توقعي الشخصي في التحكم بالبول وفي الانتصاب، وعلى أي أساس؟',
+              'ما احتمال احتياجي إلى علاج إضافي بعد العملية، وكيف ستتم متابعة ذلك؟',
+              'ما خطة متابعتي: أي فحص، وبأي تواتر، ومن يقرأ النتيجة؟'
+            ]
+          },
+          {
+            heading: 'أخطاء شائعة',
+            paragraphs: [
+              '«PSA عندي طبيعي، إذن لا سرطان.» غير صحيح. فالقيمة الطبيعية لا تنفي السرطان نفيًا تامًا؛ ويُؤخَذ الفحص وعوامل الخطورة بالحسبان أيضًا.',
+              '«PSA عندي مرتفع، إذن لديّ سرطان.» غير صحيح أيضًا. فالالتهاب والتضخم الحميد والتهاب البروستاتا ترفع القيمة. والخطوة الأولى عادة إعادة القياس والتقييم.',
+              '«الخزعة تنشر السرطان.» يتردد هذا القلق كثيرًا، ولا دليل عليه. والخطر الحقيقي هو عدم إجراء الخزعة اللازمة.',
+              '«إذا أُجريت العملية انتهى كل شيء.» في سرطان البروستاتا تستمر المتابعة بعد العملية. ويُقاس PSA بانتظام؛ وهذا ليس انعدام ثقة بل تدبير سليم للمرض.',
+              '«المراقبة النشطة تعني عدم فعل شيء.» لا. بل هي برنامج: PSA على فترات محددة وفحص وتصوير وخزعة عند الحاجة. ومن لا يأتي إلى المتابعة فهي لا تناسبه.'
+            ]
+          },
+          {
+            heading: 'ملاحظة مهمة',
+            paragraphs: [
+              'هذه المقالة للمعلومة العامة ولا تغني عن المشورة الطبية. وسرطان البروستاتا ليس مرضًا واحدًا؛ والقرارات فردية وتستلزم فحصًا طبيًا.',
+              'والحمى مع ألم الخاصرة، أو تعذّر التبول، أو الضعف وفقدان الإحساس في الساقين، كلها تستدعي تقييمًا عاجلًا.'
             ]
           }
         ]
@@ -196,22 +400,90 @@ export const blogPosts: BlogPost[] = [
         metaDescription: 'Ein informativer Leitfaden zu Symptomen von Prostatakrebs, dem PSA-Test, dem Diagnoseprozess und Behandlungsoptionen einschließlich robotischer Prostatektomie.',
         sections: [
           {
-            heading: 'Was ist Prostatakrebs?',
+            heading: 'Warum verursacht Prostatakrebs früh keine Beschwerden?',
             paragraphs: [
-              'Prostatakrebs ist eine der häufigsten Krebserkrankungen bei Männern und verursacht im Frühstadium oft keine Symptome – deshalb sind regelmäßige Vorsorgeuntersuchungen wichtig.'
+              'Die Prostata liegt unmittelbar unter der Blase und umschließt den Harnkanal. Krebs entsteht meist im ÄUSSEREN Teil der Drüse, fern von diesem Kanal. Deshalb engt er den Harnweg früh nicht ein und verursacht überhaupt keine Beschwerden.',
+              'Praktisch heißt das zweierlei: Ein Mann ohne Beschwerden kann Prostatakrebs haben, und bei einem Mann mit Harnbeschwerden ist die Ursache meist NICHT Krebs, sondern eine gutartige Vergrößerung. Harnbeschwerden als Krebswarnung zu deuten ist ebenso falsch wie sich durch ihr Fehlen beruhigen zu lassen.',
+              'Früherkennung ist eine Entscheidung über Screening, und diese Entscheidung ist persönlich: Alter, familiäre Belastung, allgemeiner Gesundheitszustand und Lebenserwartung werden gemeinsam abgewogen. Besprechen Sie offen mit Ihrer Ärztin oder Ihrem Arzt, ob Screening für Sie sinnvoll ist.'
             ]
           },
           {
-            heading: 'Symptome und Diagnose',
+            heading: 'Welche Beschwerden gehören abgeklärt?',
             paragraphs: [
-              'Symptome können Probleme beim Wasserlassen, häufiges Wasserlassen oder Blut im Urin sein. Zur Diagnose dienen der PSA-Bluttest, die Untersuchung, Bildgebung und bei Bedarf eine Biopsie.'
+              'Schwächerer Strahl, Startverzögerung, häufiges Wasserlassen und nächtliches Aufstehen sind die häufigsten Harnbeschwerden. Sie sind nicht krebsspezifisch; dieselben Beschwerden treten bei gutartiger Vergrößerung auf.',
+              'FOLGENDE BEFUNDE GEHÖREN JEDOCH OHNE VERZÖGERUNG ABGEKLÄRT: Blut im Urin oder im Sperma, neu aufgetretene und anhaltende Knochenschmerzen (besonders Rücken und Hüfte), ungeklärter Gewichtsverlust, Schwäche oder Gefühlsstörungen in den Beinen.',
+              'Blut im Urin kann SCHMERZLOS sein; das Fehlen von Schmerzen macht es nicht harmlos. Schmerzlose Hämaturie wird in jedem Alter abgeklärt.'
+            ]
+          },
+          {
+            heading: 'Was der PSA-Wert ist — und was nicht',
+            paragraphs: [
+              'PSA (prostataspezifisches Antigen) ist ein Eiweiß, das Prostatagewebe bildet. Es wird im Blut gemessen und sagt etwas über die Prostata aus — ist aber KEIN KREBSTEST.',
+              'PSA kann bei gutartiger Vergrößerung, bei Harnwegsinfekt, bei Prostataentzündung, nach Katheterisierung und manchmal nach Radfahren oder Geschlechtsverkehr steigen. Ein hoher Wert bedeutet nicht „es liegt Krebs vor", ein normaler Wert schließt Krebs nicht vollständig aus.',
+              'EIN SEHR OFT ÜBERSEHENER PUNKT: Medikamente, die die Prostata verkleinern (5-Alpha-Reduktase-Hemmer), HALBIEREN den PSA-Wert etwa. Sagen Sie nicht, dass Sie ein solches Präparat nehmen, kann ein eigentlich auffälliger Wert als normal gelesen werden. Geben Sie diese Information bei jeder Messung an.',
+              'Ein einzelner PSA-Wert genügt meist nicht. Sein Verlauf über die Zeit, sein Verhältnis zum Prostatavolumen und der Tastbefund werden gemeinsam beurteilt.'
+            ]
+          },
+          {
+            heading: 'Diagnostik: erst Bildgebung, dann Biopsie',
+            paragraphs: [
+              'Bei erhöhtem PSA oder auffälligem Tastbefund ist der erste Schritt heute meist keine Biopsie, sondern eine multiparametrische MRT der Prostata. Sie zeigt, ob ein auffälliges Areal besteht, und wohin die Biopsie gezielt werden soll.',
+              'Diese Reihenfolge hat zwei Vorteile: Eine unnötige Biopsie lässt sich vermeiden, und wenn biopsiert wird, dann an der richtigen Stelle. „Erst MRT" schützt den Patienten vor zufälligem Stechen.',
+              'Ist eine Biopsie nötig, muss die Urinkultur vorher unauffällig sein. Blut im Urin und im Sperma für eine Weile danach ist zu erwarten; Fieber und Schüttelfrost sind es nicht und erfordern sofortigen Kontakt.'
+            ]
+          },
+          {
+            heading: 'Was die Zahl im Pathologiebefund bedeutet',
+            paragraphs: [
+              'Wird Krebs gefunden, gibt die Pathologie an, wie stark sich die Zellen verändert haben — als Grad (Gleason-Score und die zugehörige ISUP-Gradgruppe). Dieser Grad zeigt, wie aktiv sich die Erkrankung zu verhalten neigt.',
+              'Niedriggradige Erkrankung in wenigen Stanzen bei niedrigem PSA ist nicht dasselbe Bild wie eine hochgradige Erkrankung und wird nicht gleich behandelt. „Prostatakrebs" sollte deshalb nicht wie eine einzige Krankheit besprochen werden.',
+              'Verstehen Sie Ihren Befund nicht, lassen Sie ihn sich erklären. Ohne zu wissen, in welchem Grad Sie sind, können Sie die Optionen nicht vergleichen.'
             ]
           },
           {
             heading: 'Behandlungsoptionen',
             paragraphs: [
-              'Die Behandlung wird nach Stadium, Alter und Patientenpräferenz geplant. Zu den Optionen zählen aktive Überwachung, Operation (robotische Prostatektomie) und Strahlentherapie.',
-              'Dieser Inhalt dient nur der allgemeinen Information und ersetzt keine ärztliche Beratung. Kontaktieren Sie unser Team für eine persönliche Einschätzung.'
+              'DIE AKTIVE ÜBERWACHUNG ist bei Niedrigrisiko-Erkrankung eine legitime Option und bedeutet nicht, „die Behandlung abzulehnen". Die Erkrankung wird mit regelmäßigem PSA, Untersuchung, MRT und bei Bedarf erneuter Biopsie eng verfolgt; bei Zeichen eines Fortschreitens wird behandelt. Ziel ist, die Nebenwirkungen von Operation oder Bestrahlung nicht ohne Not zu erleben.',
+              'DIE OPERATION (radikale Prostatektomie) entfernt die gesamte Prostata und erfolgt heute häufig robotisch assistiert. Das entfernte Gewebe geht in die Pathologie; so wird die tatsächliche Ausdehnung sichtbar.',
+              'DIE STRAHLENTHERAPIE verfolgt bei ausgewählten Patienten ein ähnliches Ziel wie die Operation und kann mit einer Hormontherapie kombiniert werden.',
+              'DIE HORMONTHERAPIE ist für sich genommen kein heilendes Verfahren; sie wird im fortgeschrittenen Stadium oder ergänzend zur Bestrahlung eingesetzt.',
+              'Welches Vorgehen gewählt wird, hängt von Grad und Ausdehnung, Ihrem Alter, Ihren Begleiterkrankungen und Ihren eigenen Prioritäten ab. Kein Verfahren ist für alle „das beste".'
+            ]
+          },
+          {
+            heading: 'Ehrliche Erwartungen',
+            paragraphs: [
+              'Nach einer Prostataoperation tritt kein Sperma mehr nach außen; ein Kind auf natürlichem Weg zu zeugen ist nicht möglich. Besteht Kinderwunsch, sagen Sie es VOR der Operation.',
+              'Die Erektionsfähigkeit kehrt auch bei Nervenerhalt nicht sicher zurück; die Erholung kann Monate dauern und hängt von Ihrem Zustand vor der Operation ab.',
+              'Harnverlust ist in den ersten Wochen häufig und nimmt bei den meisten Männern über Monate deutlich ab. Das Beckenbodentraining VOR der Operation zu erlernen erleichtert diese Zeit.',
+              'DER PATHOLOGIEBEFUND KANN SCHLECHTER AUSFALLEN ALS ERWARTET. Dass nach der Operation eine weitere Behandlung (Bestrahlung oder Hormone) nötig wird, bedeutet kein Versagen; es folgt daraus, dass die wahre Ausdehnung erst im entfernten Gewebe sichtbar wird.'
+            ]
+          },
+          {
+            heading: 'Fragen, die Sie stellen können',
+            paragraphs: [
+              'Welchen Grad und welche Risikogruppe hat meine Erkrankung? Ist die aktive Überwachung für mich eine Option, und wenn nicht, warum nicht?',
+              'Worin liegt der konkrete Vorteil des vorgeschlagenen Verfahrens für mich, und warum treten die anderen Optionen zurück?',
+              'Wenn ich operiert werde: Welche individuelle Erwartung besteht für Kontinenz und Erektion, und worauf stützt sie sich?',
+              'Wie wahrscheinlich ist bei mir eine weitere Behandlung nach der Operation, und wie wird das überwacht?',
+              'Wie sieht mein Nachsorgeplan aus: welche Untersuchung, wie oft, und wer befundet sie?'
+            ]
+          },
+          {
+            heading: 'Häufige Irrtümer',
+            paragraphs: [
+              '„Mein PSA ist normal, also habe ich keinen Krebs." Nicht richtig. Ein normaler Wert schließt Krebs nicht vollständig aus; Tastbefund und Risikofaktoren zählen ebenfalls.',
+              '„Mein PSA ist hoch, also habe ich Krebs." Auch nicht richtig. Infekt, gutartige Vergrößerung und Entzündung erhöhen den Wert. Der erste Schritt ist meist eine erneute Messung und Beurteilung.',
+              '„Eine Biopsie streut den Krebs." Diese Sorge wird oft geäußert, doch es gibt keinen Beleg dafür. Das eigentliche Risiko ist, die notwendige Biopsie nicht zu machen.',
+              '„Nach der Operation ist alles vorbei." Beim Prostatakrebs geht die Nachsorge nach der Operation weiter. PSA wird regelmäßig gemessen; das ist kein Misstrauen, sondern sachgerechte Betreuung.',
+              '„Aktive Überwachung heißt nichts tun." Nein. Sie ist ein Programm: PSA in festen Abständen, Untersuchung, Bildgebung und bei Bedarf Biopsie. Wer nicht zur Nachsorge kommt, für den ist sie nicht geeignet.'
+            ]
+          },
+          {
+            heading: 'Wichtiger Hinweis',
+            paragraphs: [
+              'Dieser Beitrag dient der allgemeinen Information und ersetzt keine ärztliche Beratung. Prostatakrebs ist keine einheitliche Erkrankung; Entscheidungen sind individuell und erfordern eine ärztliche Untersuchung.',
+              'Fieber mit Flankenschmerz, Unvermögen zu urinieren oder Schwäche beziehungsweise Gefühlsverlust in den Beinen erfordern eine DRINGENDE Abklärung.'
             ]
           }
         ]
@@ -223,22 +495,90 @@ export const blogPosts: BlogPost[] = [
         metaDescription: 'Информативное руководство по симптомам рака простаты, тесту PSA, процессу диагностики и вариантам лечения, включая роботическую простатэктомию.',
         sections: [
           {
-            heading: 'Что такое рак простаты?',
+            heading: 'Почему рак простаты на ранней стадии не даёт симптомов?',
             paragraphs: [
-              'Рак простаты — один из самых частых видов рака у мужчин и на ранних стадиях часто протекает бессимптомно, поэтому важны регулярные обследования.'
+              'Простата расположена сразу под мочевым пузырём и охватывает мочеиспускательный канал. Рак чаще всего начинается в НАРУЖНОЙ части железы, вдали от этого канала. Поэтому на ранней стадии он не сдавливает мочевые пути и вовсе не вызывает жалоб.',
+              'На практике это означает два вывода: у мужчины без жалоб может быть рак простаты, а у мужчины с мочевыми жалобами причина обычно НЕ рак, а доброкачественное увеличение. Считать мочевые жалобы предвестником рака так же неверно, как успокаиваться из-за их отсутствия.',
+              'Раннее выявление — это решение о скрининге, и решение это личное: вместе взвешивают возраст, семейный анамнез, общее состояние здоровья и ожидаемую продолжительность жизни. Прямо обсудите с врачом, показан ли скрининг именно вам.'
             ]
           },
           {
-            heading: 'Симптомы и диагностика',
+            heading: 'Какие симптомы требуют обследования?',
             paragraphs: [
-              'Симптомы могут включать затруднённое мочеиспускание, учащённое мочеиспускание или кровь в моче. Для диагностики используют анализ крови на PSA, осмотр, визуализацию и при необходимости биопсию.'
+              'Ослабление струи, затруднённое начало, учащённое мочеиспускание и ночные подъёмы — самые частые мочевые жалобы. Они не специфичны для рака; те же жалобы бывают при доброкачественном увеличении.',
+              'ОДНАКО СЛЕДУЮЩИЕ ПРИЗНАКИ НУЖНО ОБСЛЕДОВАТЬ БЕЗ ОТЛАГАТЕЛЬСТВ: кровь в моче или сперме, впервые возникшая и не проходящая боль в костях (особенно в пояснице и бёдрах), необъяснимая потеря веса, слабость или нарушение чувствительности в ногах.',
+              'Кровь в моче может быть БЕЗБОЛЕЗНЕННОЙ; отсутствие боли не делает её незначимой. Безболезненная гематурия обследуется в любом возрасте.'
+            ]
+          },
+          {
+            heading: 'Что такое ПСА и чем он не является',
+            paragraphs: [
+              'ПСА (простатспецифический антиген) — белок, вырабатываемый тканью простаты. Его измеряют в крови, и он сообщает нечто о простате, — но ЭТО НЕ АНАЛИЗ НА РАК.',
+              'ПСА может повышаться при доброкачественном увеличении, при инфекции мочевых путей, при воспалении простаты, после катетеризации, а иногда после езды на велосипеде или полового акта. Высокий ПСА не значит «рак есть», а нормальный не исключает его полностью.',
+              'ОЧЕНЬ ЧАСТО УПУСКАЕМЫЙ МОМЕНТ: препараты, уменьшающие простату (ингибиторы 5-альфа-редуктазы), снижают ПСА примерно ВДВОЕ. Если вы не скажете, что принимаете такой препарат, значение, требующее внимания, могут прочесть как нормальное. Сообщайте об этом при каждом измерении.',
+              'Одного значения ПСА обычно недостаточно. Вместе оценивают его динамику во времени, отношение к объёму железы и данные осмотра.'
+            ]
+          },
+          {
+            heading: 'Диагностика: сначала визуализация, потом биопсия',
+            paragraphs: [
+              'При повышенном ПСА или подозрительных данных осмотра первым шагом теперь обычно служит не биопсия, а мультипараметрическая МРТ простаты. Она показывает, есть ли подозрительная зона, и если да — куда направить биопсию.',
+              'У такого порядка два преимущества: можно избежать ненужной биопсии, а при её необходимости взять материал из нужного места. Подход «сначала МРТ» ограждает пациента от случайных вколов.',
+              'Если биопсия нужна, посев мочи перед ней должен быть чистым. Кровь в моче и сперме какое-то время после — ожидаемое явление; лихорадка и озноб — нет, и требуют немедленного обращения.'
+            ]
+          },
+          {
+            heading: 'Что означает число в гистологическом заключении?',
+            paragraphs: [
+              'Если рак найден, патолог указывает степень изменения клеток в виде градации (сумма Глисона и соответствующая группа ISUP). Эта степень показывает, насколько активно болезнь склонна себя вести.',
+              'Низкая степень в нескольких столбиках при низком ПСА — не та же картина, что высокая степень, и лечится она иначе. Поэтому о «раке простаты» не следует говорить как об одной болезни.',
+              'Если вы не понимаете своё заключение, попросите объяснить. Не зная своей степени, вы не сможете сравнивать варианты лечения.'
             ]
           },
           {
             heading: 'Варианты лечения',
             paragraphs: [
-              'Лечение планируется с учётом стадии, возраста и предпочтений пациента. Варианты включают активное наблюдение, операцию (роботическую простатэктомию) и лучевую терапию.',
-              'Этот материал носит только общий информационный характер и не заменяет консультацию врача. Свяжитесь с нашей командой для индивидуальной оценки.'
+              'АКТИВНОЕ НАБЛЮДЕНИЕ — правомерный вариант при болезни низкого риска, и это не «отказ от лечения». Болезнь ведут вплотную: регулярный ПСА, осмотр, МРТ и при необходимости повторная биопсия; при признаках прогрессирования переходят к лечению. Цель — не переносить побочные эффекты операции или облучения без нужды.',
+              'ОПЕРАЦИЯ (радикальная простатэктомия) удаляет всю простату и сегодня нередко выполняется с роботической ассистенцией. Удалённая ткань направляется на гистологию, и так становится видна истинная распространённость болезни.',
+              'ЛУЧЕВАЯ ТЕРАПИЯ у отобранных пациентов преследует сходную с операцией цель и может сочетаться с гормональной терапией.',
+              'ГОРМОНАЛЬНАЯ ТЕРАПИЯ сама по себе не является излечивающим методом; её применяют на поздних стадиях или в дополнение к облучению.',
+              'Выбор зависит от степени и распространённости болезни, вашего возраста, сопутствующих заболеваний и ваших собственных приоритетов. Ни один метод не является «лучшим» для всех.'
+            ]
+          },
+          {
+            heading: 'Честные ожидания',
+            paragraphs: [
+              'После операции на простате сперма наружу не выходит; зачать ребёнка естественным путём невозможно. Если вы хотите детей, скажите об этом ДО операции.',
+              'Эректильная функция может не вернуться наверняка даже при сохранении нервов; восстановление занимает месяцы и зависит от вашего состояния до операции.',
+              'Подтекание мочи часто в первые недели и у большинства мужчин заметно уменьшается за месяцы. Освоить упражнения для тазового дна ДО операции облегчает этот период.',
+              'РЕЗУЛЬТАТ ГИСТОЛОГИИ МОЖЕТ ОКАЗАТЬСЯ ХУЖЕ ОЖИДАЕМОГО. Необходимость дополнительного лечения (облучения или гормонов) после операции не означает её неудачи; она вытекает из того, что истинная распространённость видна только в удалённой ткани.'
+            ]
+          },
+          {
+            heading: 'Вопросы, которые стоит задать врачу',
+            paragraphs: [
+              'Какова степень и группа риска моей болезни? Является ли активное наблюдение вариантом для меня, а если нет — почему?',
+              'В чём конкретное преимущество предлагаемого метода именно для меня и почему другие варианты отходят на второй план?',
+              'Если меня прооперируют, каково моё индивидуальное ожидание по удержанию мочи и эрекции и на чём оно основано?',
+              'Какова вероятность, что мне понадобится дополнительное лечение после операции, и как это будет отслеживаться?',
+              'Каков мой план наблюдения: какое исследование, как часто и кто его интерпретирует?'
+            ]
+          },
+          {
+            heading: 'Частые заблуждения',
+            paragraphs: [
+              '«ПСА нормальный — значит, рака нет.» Неверно. Нормальный ПСА не исключает рак полностью; учитываются также данные осмотра и факторы риска.',
+              '«ПСА высокий — значит, у меня рак.» Тоже неверно. Инфекция, доброкачественное увеличение и воспаление простаты повышают ПСА. Первый шаг — обычно повторное измерение и переоценка.',
+              '«Биопсия разносит рак.» Это опасение высказывают часто, но доказательств этому нет. Настоящий риск — не сделать нужную биопсию.',
+              '«После операции всё закончится.» При раке простаты наблюдение продолжается и после операции. ПСА измеряют регулярно; это не недоверие, а правильное ведение болезни.',
+              '«Активное наблюдение — это ничего не делать.» Нет. Это программа: ПСА через определённые промежутки, осмотр, визуализация и при необходимости биопсия. Если вы не будете приходить на контроль, такой подход вам не подходит.'
+            ]
+          },
+          {
+            heading: 'Важное замечание',
+            paragraphs: [
+              'Эта статья носит общий информационный характер и не заменяет врачебной консультации. Рак простаты — не одна болезнь; решения индивидуальны и требуют осмотра врача.',
+              'Лихорадка с болью в боку, невозможность помочиться, слабость или потеря чувствительности в ногах требуют СРОЧНОЙ оценки.'
             ]
           }
         ]
@@ -252,22 +592,90 @@ export const blogPosts: BlogPost[] = [
           'Un guide informatif sur les symptômes du cancer de la prostate, le dosage du PSA, la démarche diagnostique et les options thérapeutiques dont la prostatectomie robotique.',
         sections: [
           {
-            heading: 'Qu’est-ce que le cancer de la prostate ?',
+            heading: 'Pourquoi le cancer de la prostate ne donne-t-il pas de symptômes au début ?',
             paragraphs: [
-              'Le cancer de la prostate est l’un des cancers les plus fréquents chez l’homme et ne provoque souvent aucun symptôme à un stade précoce : c’est pourquoi un suivi régulier est important.'
+              'La prostate se situe juste sous la vessie et entoure le canal urinaire. Le cancer naît le plus souvent dans la partie EXTERNE de la glande, loin de ce canal. C’est pourquoi, au début, il ne comprime pas les voies urinaires et ne provoque aucune gêne.',
+              'En pratique, cela signifie deux choses : un homme sans symptôme peut avoir un cancer de la prostate, et chez un homme qui a des troubles urinaires, la cause n’est généralement PAS un cancer mais une hypertrophie bénigne. Voir dans les troubles urinaires un signe d’alerte du cancer est aussi faux que se rassurer de leur absence.',
+              'Le dépistage précoce est une décision, et cette décision est personnelle : âge, antécédents familiaux, état de santé général et espérance de vie sont pesés ensemble. Demandez clairement à votre médecin si un dépistage est indiqué pour vous.'
             ]
           },
           {
-            heading: 'Symptômes et diagnostic',
+            heading: 'Quels symptômes doivent être explorés ?',
             paragraphs: [
-              'Les signes possibles sont des difficultés à uriner, des mictions fréquentes ou du sang dans les urines. Le diagnostic repose sur le dosage sanguin du PSA, l’examen clinique, l’imagerie et, si nécessaire, une biopsie.'
+              'Jet affaibli, retard au démarrage, pollakiurie et réveils nocturnes sont les troubles urinaires les plus fréquents. Ils ne sont pas spécifiques du cancer ; on les retrouve dans l’hypertrophie bénigne.',
+              'EN REVANCHE, CES SIGNES DOIVENT ÊTRE EXPLORÉS SANS DÉLAI : sang dans les urines ou le sperme, douleurs osseuses récentes et persistantes (surtout du dos et des hanches), amaigrissement inexpliqué, faiblesse ou troubles de la sensibilité des jambes.',
+              'Le sang dans les urines peut être INDOLORE ; l’absence de douleur ne le rend pas anodin. Une hématurie indolore s’explore à tout âge.'
             ]
           },
           {
-            heading: 'Options thérapeutiques',
+            heading: 'Ce qu’est le PSA — et ce qu’il n’est pas',
             paragraphs: [
-              'Le traitement est planifié selon le stade, l’âge et la préférence du patient. Les options comprennent la surveillance active, la chirurgie (prostatectomie robotique) et la radiothérapie.',
-              'Ce contenu est fourni à titre d’information générale et ne remplace pas un avis médical. Contactez notre équipe pour une évaluation personnalisée.'
+              'Le PSA (antigène prostatique spécifique) est une protéine produite par le tissu prostatique. Il se dose dans le sang et renseigne sur la prostate — mais CE N’EST PAS UN TEST DE CANCER.',
+              'Le PSA peut s’élever en cas d’hypertrophie bénigne, d’infection urinaire, de prostatite, après un sondage et parfois après du vélo ou un rapport sexuel. Un PSA élevé ne signifie pas « il y a un cancer », et un PSA normal ne l’exclut pas totalement.',
+              'UN POINT TRÈS SOUVENT OUBLIÉ : les médicaments qui réduisent le volume prostatique (inhibiteurs de la 5-alpha-réductase) abaissent le PSA d’environ LA MOITIÉ. Si vous ne signalez pas en prendre, une valeur qui mérite attention peut être lue comme normale. Donnez cette information à chaque dosage.',
+              'Un PSA isolé ne suffit généralement pas. Son évolution dans le temps, son rapport au volume prostatique et le toucher rectal sont évalués ensemble.'
+            ]
+          },
+          {
+            heading: 'Diagnostic : imagerie d’abord, biopsie ensuite',
+            paragraphs: [
+              'Devant un PSA élevé ou un toucher suspect, la première étape n’est aujourd’hui plus la biopsie mais une IRM multiparamétrique de la prostate. Elle montre s’il existe une zone suspecte et, le cas échéant, où diriger la biopsie.',
+              'Cet ordre a deux avantages : éviter une biopsie inutile et, lorsqu’elle est nécessaire, la réaliser au bon endroit. « IRM d’abord » protège le patient de ponctions au hasard.',
+              'Si une biopsie est nécessaire, l’ECBU doit être négatif au préalable. Du sang dans les urines et le sperme pendant quelque temps est attendu ; fièvre et frissons ne le sont pas et imposent un contact immédiat.'
+            ]
+          },
+          {
+            heading: 'Que signifie le chiffre du compte rendu anatomopathologique ?',
+            paragraphs: [
+              'Si un cancer est trouvé, le pathologiste indique le degré de transformation des cellules sous forme d’un grade (score de Gleason et groupe ISUP correspondant). Ce grade traduit le caractère plus ou moins actif de la maladie.',
+              'Une maladie de bas grade, sur quelques carottes, avec un PSA bas, n’est pas le même tableau qu’une maladie de haut grade et ne se traite pas de la même façon. « Cancer de la prostate » ne devrait donc pas se dire comme s’il s’agissait d’une seule maladie.',
+              'Si vous ne comprenez pas votre compte rendu, demandez qu’on vous l’explique. Sans connaître votre grade, vous ne pouvez pas comparer les options.'
+            ]
+          },
+          {
+            heading: 'Les options thérapeutiques',
+            paragraphs: [
+              'LA SURVEILLANCE ACTIVE est une option légitime dans les formes à bas risque et ne signifie pas « refuser le traitement ». La maladie est suivie de près par PSA réguliers, examen, IRM et, si besoin, nouvelle biopsie ; le traitement commence en cas de signes de progression. Le but est de ne pas subir les effets indésirables de la chirurgie ou de la radiothérapie sans nécessité.',
+              'LA CHIRURGIE (prostatectomie radicale) retire la totalité de la prostate et se fait aujourd’hui souvent avec assistance robotique. Le tissu retiré part en anatomopathologie, ce qui révèle l’étendue réelle de la maladie.',
+              'LA RADIOTHÉRAPIE vise un objectif comparable chez des patients sélectionnés et peut être associée à une hormonothérapie.',
+              'L’HORMONOTHÉRAPIE n’est pas curative à elle seule ; elle s’emploie aux stades avancés ou en complément de la radiothérapie.',
+              'Le choix dépend du grade et de l’étendue, de votre âge, de vos autres maladies et de vos propres priorités. Aucune méthode n’est « la meilleure » pour tout le monde.'
+            ]
+          },
+          {
+            heading: 'Attentes réalistes',
+            paragraphs: [
+              'Après une prostatectomie, le sperme ne sort plus ; concevoir naturellement n’est plus possible. Si vous souhaitez des enfants, dites-le AVANT l’intervention.',
+              'La fonction érectile ne revient pas de façon certaine, même en cas de préservation nerveuse ; la récupération peut prendre des mois et dépend de votre état préopératoire.',
+              'Les fuites urinaires sont fréquentes les premières semaines et diminuent nettement en quelques mois chez la plupart des hommes. Apprendre la rééducation périnéale AVANT l’intervention facilite cette période.',
+              'LE RÉSULTAT ANATOMOPATHOLOGIQUE PEUT ÊTRE MOINS BON QUE PRÉVU. Devoir ajouter un traitement (radiothérapie ou hormones) après l’opération ne signifie pas qu’elle a échoué : l’étendue réelle ne se voit que sur le tissu retiré.'
+            ]
+          },
+          {
+            heading: 'Questions à poser à votre médecin',
+            paragraphs: [
+              'Quel est le grade et le groupe de risque de ma maladie ? La surveillance active est-elle une option pour moi, et sinon pourquoi ?',
+              'Quel est l’avantage concret, pour moi, de l’option que vous proposez, et pourquoi les autres passent-elles au second plan ?',
+              'Si je suis opéré, quelle est mon attente individuelle pour la continence et l’érection, et sur quoi repose-t-elle ?',
+              'Quelle est la probabilité que j’aie besoin d’un traitement complémentaire après l’opération, et comment sera-t-il surveillé ?',
+              'Quel est mon plan de suivi : quel examen, à quelle fréquence, et qui l’interprète ?'
+            ]
+          },
+          {
+            heading: 'Idées reçues fréquentes',
+            paragraphs: [
+              '« Mon PSA est normal, donc je n’ai pas de cancer. » Faux. Un PSA normal n’exclut pas totalement un cancer ; le toucher rectal et les facteurs de risque comptent aussi.',
+              '« Mon PSA est élevé, donc j’ai un cancer. » Faux également. Infection, hypertrophie bénigne et prostatite élèvent le PSA. La première étape est souvent un nouveau dosage et une réévaluation.',
+              '« La biopsie dissémine le cancer. » Cette crainte revient souvent, mais rien ne l’étaye. Le vrai risque est de ne pas faire la biopsie nécessaire.',
+              '« Une fois opéré, c’est terminé. » Dans le cancer de la prostate, le suivi se poursuit après l’opération. Le PSA est dosé régulièrement ; ce n’est pas de la méfiance, c’est une prise en charge correcte.',
+              '« La surveillance active, c’est ne rien faire. » Non. C’est un programme : PSA à intervalles définis, examen, imagerie et biopsie si nécessaire. Si vous ne venez pas au suivi, elle ne vous convient pas.'
+            ]
+          },
+          {
+            heading: 'Note importante',
+            paragraphs: [
+              'Cet article est à visée d’information générale et ne remplace pas un avis médical. Le cancer de la prostate n’est pas une maladie unique ; les décisions sont individuelles et nécessitent un examen médical.',
+              'Fièvre avec douleur lombaire, impossibilité d’uriner, faiblesse ou perte de sensibilité des jambes imposent une évaluation URGENTE.'
             ]
           }
         ]
@@ -295,16 +703,96 @@ export const blogPosts: BlogPost[] = [
           'Böbrek taşı oluşum nedenleri, risk faktörleri, beslenme önerileri ve tedavi yöntemleri hakkında bilgilendirici rehber.',
         sections: [
           {
-            heading: 'Böbrek taşı neden oluşur?',
+            heading: 'Böbrek taşı nasıl oluşur?',
             paragraphs: [
-              'Böbrek taşları, idrardaki bazı minerallerin yoğunlaşıp kristalleşmesiyle oluşur. Yetersiz su tüketimi en önemli risk faktörlerinden biridir.'
+              'İdrar, vücudun atması gereken mineralleri suda çözünmüş hâlde taşır. İdrar yeterince seyreltik olduğunda bu mineraller çözünmüş kalır. İdrar yoğunlaştığında ise çözünürlük sınırı aşılır, mineraller önce mikroskobik kristaller hâlinde çöker, sonra bu kristaller birbirine yapışarak taşı oluşturur.',
+              'Bu yüzden taş hastalığının temelinde çoğu zaman tek bir "suçlu" yoktur: az su içmek, terleyerek sıvı kaybetmek, aşırı tuz, hayvansal proteinin fazlası, bazı ilaçlar, kronik ishal ve bazı metabolik hastalıklar aynı sonuca farklı yollardan katkı verir.',
+              'Taş oluşumu bir anda olmaz; aylar içinde gelişir. Bunun pratik anlamı şudur: taşı düşürdükten sonra hiçbir şey değiştirmezseniz, aynı koşullar yeni bir taş üretmeye devam eder.'
             ]
           },
           {
-            heading: 'Korunma önerileri',
+            heading: 'Taş türleri neden önemli?',
             paragraphs: [
-              'Yeterli su içmek, tuz ve hayvansal protein tüketimini dengelemek ve düzenli takip taş oluşma riskini azaltabilir.',
-              'Bu içerik genel bilgilendirme amaçlıdır. Tekrarlayan taş öykünüz varsa değerlendirme için bize ulaşın.'
+              'En sık görülen tür kalsiyum oksalat taşıdır. Ürik asit taşları, enfeksiyonla ilişkili (struvit) taşlar, sistin taşları ve bazı ilaçlara bağlı taşlar daha az görülür.',
+              'Tür bilgisi önemlidir çünkü KORUNMA TÜRE GÖRE DEĞİŞİR. Ürik asit taşında idrarı alkalileştirmek taşın erimesine katkıda bulunabilirken, kalsiyum oksalat taşında yaklaşım farklıdır. Enfeksiyon taşı ise tamamen temizlenmedikçe büyümeye devam eder.',
+              'Bu yüzden düşürdüğünüz veya çıkarılan taşı ATMAYIN. Taş analizi, sonraki yılların planını belirleyen en ucuz tetkiktir.'
+            ]
+          },
+          {
+            heading: 'Belirtiler ve ACİL olan durum',
+            paragraphs: [
+              'Tipik şikâyet, belden yan tarafa ve kasığa vuran, dalgalar hâlinde gelen şiddetli ağrıdır (renal kolik). Bulantı, kusma, idrarda kan ve sık idrara çıkma eşlik edebilir.',
+              'ŞU DURUM ACİLDİR: yan ağrısıyla BİRLİKTE ateş veya titreme. Bu, tıkanmış bir böbrekte enfeksiyon gelişmiş olabileceği anlamına gelir ve saatler içinde ciddi bir tabloya dönüşebilir. Bekleyip "geçer mi" diye izlemek doğru değildir; derhal hastaneye başvurun.',
+              'ÖNEMLİ BİR YANILGI: Ağrının olmaması güvenli olunduğu anlamına gelmez. Yavaş gelişen bir tıkanıklık ağrı yapmadan böbrek işlevini sessizce azaltabilir. Bu yüzden "ağrım geçti" denilerek kontrol atlanmaz.',
+              'İdrar yapamama, tek böbrekli bir kişide kolik ağrı veya kontrol altına alınamayan kusma da gecikmeden değerlendirilmelidir.'
+            ]
+          },
+          {
+            heading: 'Tanı nasıl konur?',
+            paragraphs: [
+              'İlk basamakta idrar tahlili, kan tetkikleri (böbrek işlevi dâhil) ve görüntüleme yapılır. Ultrason radyasyon içermez ve özellikle gebelerde ve çocuklarda ilk tercihtir.',
+              'Kontrastsız bilgisayarlı tomografi, taşın yerini, boyutunu ve yoğunluğunu en net gösteren yöntemdir; tedavi planı çoğu zaman buna göre yapılır. Ancak her kontrolde tomografi çekilmesi gerekmez — radyasyon yükü gereksiz yere artırılmaz.',
+              'Tedavi planlanmadan önce idrar kültürünün temiz olması gerekir. Enfeksiyon varken taşa girişim yapmak riskleri belirgin biçimde artırır.'
+            ]
+          },
+          {
+            heading: 'Korunmanın temeli: sıvı',
+            paragraphs: [
+              'Taş hastalığında en etkili tek önlem, idrar miktarını artıracak kadar sıvı almaktır. Hedef, günlük idrar hacmini belirgin biçimde artırmaktır; bunun pratik göstergesi idrarın açık renkli olmasıdır.',
+              'Sıcak iklimde yaşıyorsanız, fiziksel iş yapıyorsanız veya çok terliyorsanız ihtiyacınız daha yüksektir. Kaybettiğiniz sıvıyı geri koymadığınız her gün, idrarınız yoğunlaşır.',
+              'Gece de önemlidir: uyku boyunca idrar yoğunlaşır. Gece bir kez kalkıp su içmek bazı hastalarda önerilir.',
+              'Suyun yerine şekerli içecek koymak koruyucu değildir; şekerli ve fruktozlu içecekler taş riskini artırabilir.'
+            ]
+          },
+          {
+            heading: 'Beslenmede neyi değiştirmeli, neyi değiştirmemeli',
+            paragraphs: [
+              'TUZ: Fazla tuz, idrarla atılan kalsiyumu artırır ve taş oluşumunu kolaylaştırır. Tuzu azaltmak, kalsiyumu kesmekten çok daha doğru bir adımdır.',
+              'HAYVANSAL PROTEİN: Aşırı et tüketimi idrar asitliğini artırır ve hem ürik asit hem kalsiyum taşı riskini yükseltir. Amaç proteini tamamen kesmek değil, aşırıya kaçmamaktır.',
+              'OKSALAT: Ispanak, pancar, kuruyemiş, çikolata ve çay gibi yiyecekler oksalattan zengindir. Tamamen yasaklamak gerekmez; miktarı dengelemek ve bu yiyecekleri KALSİYUM İÇEREN bir öğünle birlikte almak daha etkilidir.',
+              'KALSİYUM — EN SIK YAPILAN HATA: Taşı olan birçok kişi kalsiyumu keser. Bu YANLIŞTIR ve riski ARTIRABİLİR. Besinle alınan kalsiyum, bağırsakta oksalata bağlanarak emilimini azaltır. Kalsiyum besinlerden normal miktarda alınmalıdır; kalsiyum takviyesi ise hekime danışmadan kullanılmamalıdır.',
+              'SİTRAT: Limon ve turunçgiller idrardaki sitratı artırır; sitrat kristalleşmeyi güçleştirir. Suya limon sıkmak basit ve zararsız bir destektir.'
+            ]
+          },
+          {
+            heading: 'Taş analizi ve metabolik değerlendirme',
+            paragraphs: [
+              'Tekrarlayan taş, tek böbrek, çocukluk çağında taş, aile öyküsü veya alışılmadık taş türü varsa daha ayrıntılı bir değerlendirme gerekir.',
+              'Bu değerlendirmede 24 saatlik idrar toplanır ve hacim, kalsiyum, oksalat, sitrat, ürik asit ve diğer parametreler ölçülür. Amaç, taşın NEDEN oluştuğunu bulmak ve korunmayı kişiye göre ayarlamaktır.',
+              'Bazı hastalarda ilaç tedavisi (örneğin idrarı alkalileştiren veya idrarla kalsiyum atılımını azaltan ilaçlar) eklenir. Bu ilaçlar hekim kontrolünde başlanır ve kan değerleriyle izlenir.'
+            ]
+          },
+          {
+            heading: 'Taş varsa tedavi seçenekleri',
+            paragraphs: [
+              'Küçük ve uygun konumdaki taşların bir bölümü kendiliğinden düşebilir; bu süreçte ağrı kontrolü ve bazı hastalarda taşın düşmesini kolaylaştıran ilaç kullanılır.',
+              'Düşmeyen veya tıkanıklık yapan taşlarda seçenekler; ses dalgasıyla kırma (ESWL), idrar yolundan girilerek yapılan fleksibl üreteroskopi (RIRS) ve ciltten böbreğe girilerek yapılan perkütan yöntemdir (PCNL). Hangisinin uygun olduğu taşın boyutuna, yerine, sertliğine ve böbreğin anatomisine göre belirlenir.',
+              'İşlem sonrası geçici olarak bir stent (JJ) takılabilir. Stent varken sık idrara çıkma, sıkışma ve hafif kanama olağandır. Stentin KİMİN, NEREDE ve NE ZAMAN alacağı işlemden önce planlanmalıdır — bu, yurt dışından gelen hastalar için özellikle önemlidir.'
+            ]
+          },
+          {
+            heading: 'Tekrarı önlemek',
+            paragraphs: [
+              'Taş hastalığı tek seferlik bir olay değil, tekrarlama eğilimi olan bir durumdur. Bir kez taş düşüren kişinin yıllar içinde yeniden taş oluşturma ihtimali azımsanmayacak düzeydedir.',
+              'Bu nedenle tedavi, taşın çıkarılmasıyla bitmez. Sıvı alımı, tuz ve protein dengesi, taş analizi ve gerekiyorsa metabolik değerlendirme ile sürdürülür.',
+              'Düzenli kontrol, sessiz bir taşın büyüyüp tıkanıklık yapmadan fark edilmesini sağlar. Ultrason bu takip için çoğu zaman yeterlidir ve radyasyon içermez.'
+            ]
+          },
+          {
+            heading: 'Önemli not',
+            paragraphs: [
+              'Bu yazı genel bilgilendirme amaçlıdır ve tıbbi tavsiye yerine geçmez. Taş hastalığının yönetimi kişiye özeldir.',
+              'YAN AĞRISI İLE BİRLİKTE ATEŞ VEYA TİTREME ACİL BİR DURUMDUR; vakit kaybetmeden hastaneye başvurun.'
+            ]
+          },
+          {
+            heading: 'Sık duyulan yanlış bilgiler',
+            paragraphs: [
+              '"Bitkisel çaylar taşı eritir." Gerçekten eritilebilen tek grup ürik asit taşlarıdır ve bu, idrarın alkalileştirilmesiyle hekim kontrolünde yapılır. Kalsiyum oksalat taşı hiçbir çayla erimez; bu iddiaya dayanarak tedaviyi ertelemek böbreğe zarar verebilir.',
+              '"Taşım düştü, iş bitti." Düşen taş o atağı bitirir, hastalığı bitirmez. Koşullar değişmezse yenisi oluşur.',
+              '"Kalsiyumdan uzak durmalıyım." Hayır. Besinle alınan kalsiyumu kesmek taş riskini artırabilir; asıl azaltılması gereken tuz ve aşırı hayvansal proteindir.',
+              '"Ağrım yoksa taşım yoktur." Sessiz taşlar vardır ve yavaş gelişen tıkanıklık ağrısız olabilir. Böbrek işlevi fark edilmeden azalabilir.',
+              '"Çok su içince taş düşer." Sıvı almak yeni taş oluşumunu önlemede en etkili önlemdir; ancak sıkışmış bir taşı suyla itmek mümkün değildir ve tıkanıklık varsa fazla su ağrıyı artırabilir.'
             ]
           }
         ]
@@ -317,16 +805,96 @@ export const blogPosts: BlogPost[] = [
           'An informative guide to why kidney stones form, risk factors, dietary tips and treatment methods.',
         sections: [
           {
-            heading: 'Why do kidney stones form?',
+            heading: 'How does a kidney stone form?',
             paragraphs: [
-              'Kidney stones form when certain minerals in urine concentrate and crystallize. Insufficient water intake is one of the main risk factors.'
+              'Urine carries the minerals the body needs to excrete, dissolved in water. While the urine is dilute enough, those minerals stay dissolved. When it becomes concentrated the limit of solubility is passed: the minerals first precipitate as microscopic crystals, and those crystals then stick together to form a stone.',
+              'That is why stone disease rarely has a single culprit. Drinking too little, losing fluid through sweat, too much salt, excess animal protein, certain medicines, chronic diarrhoea and some metabolic conditions all contribute to the same result by different routes.',
+              'A stone does not form suddenly; it develops over months. The practical meaning of that is simple: if nothing changes after you pass a stone, the same conditions carry on producing new ones.'
             ]
           },
           {
-            heading: 'Prevention tips',
+            heading: 'Why does the type of stone matter?',
             paragraphs: [
-              'Drinking enough water, balancing salt and animal protein intake and regular follow-up can reduce the risk of stone formation.',
-              'This content is for general information only. If you have recurrent stones, contact us for an assessment.'
+              'The commonest type is calcium oxalate. Uric acid stones, infection-related (struvite) stones, cystine stones and stones caused by certain drugs are less common.',
+              'The type matters because PREVENTION DEPENDS ON IT. In uric acid stones, making the urine less acidic can contribute to dissolving the stone, whereas the approach in calcium oxalate stones is different. An infection stone will keep growing unless it is cleared completely.',
+              'So DO NOT THROW AWAY the stone you pass or that is removed. Stone analysis is the cheapest test that shapes the plan for years to come.'
+            ]
+          },
+          {
+            heading: 'Symptoms — and the situation that is an emergency',
+            paragraphs: [
+              'The typical complaint is severe pain coming in waves from the loin to the groin (renal colic). Nausea, vomiting, blood in the urine and frequency can accompany it.',
+              'THIS IS AN EMERGENCY: flank pain TOGETHER WITH fever or shivering. It can mean infection in an obstructed kidney, and that can become a serious situation within hours. Waiting to see whether it settles is not right; go to hospital immediately.',
+              'AN IMPORTANT MISCONCEPTION: the absence of pain does not mean you are safe. A slowly developing obstruction can quietly reduce kidney function without causing pain. A follow-up appointment is therefore not skipped because "the pain has gone".',
+              'Inability to pass urine, colic in someone with a single kidney, and vomiting that cannot be controlled also require assessment without delay.'
+            ]
+          },
+          {
+            heading: 'How is it diagnosed?',
+            paragraphs: [
+              'The first step is urinalysis, blood tests including kidney function, and imaging. Ultrasound involves no radiation and is the first choice particularly in pregnancy and in children.',
+              'A non-contrast CT scan shows the position, size and density of the stone most clearly, and the treatment plan is often based on it. A CT is not needed at every review, however; the radiation burden is not increased without reason.',
+              'The urine culture must be clear before treatment is planned. Intervening on a stone while an infection is present raises the risks markedly.'
+            ]
+          },
+          {
+            heading: 'The foundation of prevention: fluid',
+            paragraphs: [
+              'The single most effective measure in stone disease is drinking enough to increase the volume of urine. The aim is a markedly higher daily urine output, and the practical sign of that is pale urine.',
+              'If you live in a hot climate, do physical work or sweat a great deal, your requirement is higher. Every day you fail to replace what you lose, your urine becomes more concentrated.',
+              'The night matters too: urine concentrates during sleep. Getting up once at night to drink is advised for some patients.',
+              'Replacing water with sugary drinks is not protective; sugar- and fructose-sweetened drinks can increase the risk.'
+            ]
+          },
+          {
+            heading: 'What to change in your diet — and what not to',
+            paragraphs: [
+              'SALT: excess salt increases the calcium excreted in the urine and makes stone formation easier. Reducing salt is a far sounder step than cutting out calcium.',
+              'ANIMAL PROTEIN: excessive meat raises the acidity of the urine and increases the risk of both uric acid and calcium stones. The aim is not to cut protein out but to avoid excess.',
+              'OXALATE: spinach, beetroot, nuts, chocolate and tea are rich in oxalate. A complete ban is not required; balancing the quantity and taking these foods together with a meal CONTAINING CALCIUM is more effective.',
+              'CALCIUM — THE COMMONEST MISTAKE: many people with stones cut out calcium. That is WRONG and can INCREASE the risk. Calcium taken in food binds oxalate in the bowel and reduces its absorption. Calcium should be taken in normal amounts from food; calcium supplements should not be used without medical advice.',
+              'CITRATE: lemons and citrus fruit raise citrate in the urine, and citrate makes crystallisation harder. Squeezing lemon into water is a simple and harmless support.'
+            ]
+          },
+          {
+            heading: 'Stone analysis and metabolic assessment',
+            paragraphs: [
+              'A more detailed assessment is needed where stones recur, where there is a single kidney, where stones began in childhood, where there is a family history, or where the stone type is unusual.',
+              'That assessment involves a 24-hour urine collection measuring volume, calcium, oxalate, citrate, uric acid and other parameters. The aim is to find out WHY the stone formed and to tailor prevention to the individual.',
+              'In some patients medication is added — for example drugs that make the urine less acidic or reduce calcium excretion. These are started under medical supervision and monitored with blood tests.'
+            ]
+          },
+          {
+            heading: 'Treatment options when a stone is present',
+            paragraphs: [
+              'Some small, favourably placed stones pass on their own; pain control and, in some patients, medication that helps the stone pass are used during that time.',
+              'For stones that do not pass or that cause obstruction, the options are shock wave lithotripsy (ESWL), flexible ureteroscopy through the urinary passage (RIRS) and the percutaneous route through the skin into the kidney (PCNL). Which suits you depends on the size, position and hardness of the stone and on the anatomy of your kidney.',
+              'A stent (JJ) may be placed temporarily after the procedure. With a stent in place, frequency, urgency and slight bleeding are usual. WHO removes the stent, WHERE and WHEN must be planned before the procedure — this matters particularly for patients travelling from abroad.'
+            ]
+          },
+          {
+            heading: 'Preventing recurrence',
+            paragraphs: [
+              'Stone disease is not a one-off event but a condition with a tendency to recur. Someone who has passed one stone has a far from negligible chance of forming another over the years.',
+              'Treatment therefore does not end when the stone is removed. It continues with fluid intake, the balance of salt and protein, stone analysis and, where needed, metabolic assessment.',
+              'Regular review allows a silent stone to be noticed before it grows and obstructs. Ultrasound is usually sufficient for that follow-up and involves no radiation.'
+            ]
+          },
+          {
+            heading: 'Important note',
+            paragraphs: [
+              'This article is for general information and does not replace medical advice. The management of stone disease is individual.',
+              'FLANK PAIN TOGETHER WITH FEVER OR SHIVERING IS AN EMERGENCY; go to hospital without delay.'
+            ]
+          },
+          {
+            heading: 'Common myths',
+            paragraphs: [
+              '"Herbal teas dissolve stones." The only group that can genuinely be dissolved is uric acid stones, and that is done by making the urine less acidic, under medical supervision. A calcium oxalate stone dissolves with no tea at all; delaying treatment on the strength of that claim can damage the kidney.',
+              '"I passed my stone, so that is the end of it." Passing a stone ends that episode, not the disease. If the conditions do not change, another will form.',
+              '"I should avoid calcium." No. Cutting dietary calcium can increase the risk; what should be reduced is salt and excess animal protein.',
+              '"If I have no pain, I have no stone." Silent stones exist, and slowly developing obstruction can be painless. Kidney function can decline without being noticed.',
+              '"Drinking a lot of water will flush the stone out." Fluid is the most effective measure for preventing new stones, but water cannot push out a stone that is already impacted, and where there is obstruction, drinking a great deal can increase the pain.'
             ]
           }
         ]
@@ -338,16 +906,96 @@ export const blogPosts: BlogPost[] = [
         metaDescription: 'دليل تعريفي حول أسباب تكوّن حصوات الكلى وعوامل الخطر ونصائح التغذية وطرق العلاج.',
         sections: [
           {
-            heading: 'لماذا تتكوّن حصوات الكلى؟',
+            heading: 'كيف تتكوّن حصاة الكلية؟',
             paragraphs: [
-              'تتكوّن حصوات الكلى عند تركّز بعض المعادن في البول وتبلورها. ويُعدّ قلة شرب الماء أحد أهم عوامل الخطر.'
+              'ينقل البول المعادن التي يحتاج الجسم إلى طرحها وهي ذائبة في الماء. وما دام البول مخفَّفًا بما يكفي تبقى هذه المعادن ذائبة. فإذا تركّز البول تُجووِز حد الذوبان: تترسب المعادن أولًا بلورات مجهرية، ثم تلتصق هذه البلورات ببعضها فتتكوّن الحصاة.',
+              'ولذلك نادرًا ما يكون لداء الحصى سبب واحد. فقلة الشرب وفقدان السوائل بالتعرّق وكثرة الملح والإفراط في البروتين الحيواني وبعض الأدوية والإسهال المزمن وبعض أمراض الاستقلاب تسهم كلها في النتيجة نفسها بطرق مختلفة.',
+              'ولا تتكوّن الحصاة فجأة بل خلال أشهر. ومعنى ذلك عمليًا بسيط: إن لم يتغيّر شيء بعد نزول الحصاة فإن الظروف نفسها تستمر في إنتاج حصى جديدة.'
             ]
           },
           {
-            heading: 'نصائح للوقاية',
+            heading: 'لماذا يهمّ نوع الحصاة؟',
             paragraphs: [
-              'شرب كمية كافية من الماء، وموازنة استهلاك الملح والبروتين الحيواني، والمتابعة المنتظمة قد تقلّل خطر تكوّن الحصوات.',
-              'هذا المحتوى لأغراض المعلومات العامة. إذا كان لديك تاريخ متكرر للحصوات، فتواصل معنا للتقييم.'
+              'أكثر الأنواع شيوعًا حصاة أكسالات الكالسيوم. أما حصى حمض البول وحصى الالتهاب (الستروفيت) وحصى السيستين والحصى الناجمة عن بعض الأدوية فأقل شيوعًا.',
+              'والنوع مهم لأن الوقاية تتوقف عليه. ففي حصى حمض البول قد يسهم قلونة البول في إذابتها، أما في حصى أكسالات الكالسيوم فالمنهج مختلف. وحصاة الالتهاب تستمر في النمو ما لم تُزَل كاملة.',
+              'فلا تَرمِ الحصاة التي نزلت أو أُزيلت. فتحليل الحصاة أرخص فحص يرسم خطة السنوات القادمة.'
+            ]
+          },
+          {
+            heading: 'الأعراض — والحالة الإسعافية',
+            paragraphs: [
+              'الشكوى النموذجية ألم شديد يأتي موجات من الخاصرة إلى المغبن (المغص الكلوي). وقد يرافقه غثيان وقيء ودم في البول وتكرار في التبول.',
+              'وهذه حالة إسعافية: ألم الخاصرة مع حمى أو قشعريرة. فقد يعني ذلك التهابًا في كلية محتبسة، وقد يصير خطيرًا خلال ساعات. والانتظار لمعرفة هل يزول خطأ؛ فتوجّه إلى المستشفى فورًا.',
+              'ومن الأخطاء المهمة أن غياب الألم يعني الأمان. فالانسداد البطيء قد يُنقِص وظيفة الكلية بصمت من دون ألم. ولذلك لا تُلغى المراجعة بحجة «زال الألم».',
+              'كما أن تعذّر التبول، والمغص عند صاحب كلية وحيدة، والقيء الذي لا يُضبَط، كلها تستلزم تقييمًا من دون تأخير.'
+            ]
+          },
+          {
+            heading: 'كيف يُوضَع التشخيص؟',
+            paragraphs: [
+              'في الخطوة الأولى: تحليل البول وتحاليل الدم بما فيها وظيفة الكلية والتصوير. والموجات فوق الصوتية خالية من الإشعاع وهي الخيار الأول خصوصًا عند الحوامل والأطفال.',
+              'والتصوير المقطعي من دون حقن أوضح ما يبيّن موضع الحصاة وحجمها وكثافتها؛ وغالبًا ما تُبنى خطة العلاج عليه. لكن لا يلزم تصوير مقطعي في كل مراجعة — فلا يُزاد الحمل الإشعاعي من دون داعٍ.',
+              'ويجب أن يكون زرع البول نظيفًا قبل تخطيط العلاج. فالتدخل على الحصاة مع وجود التهاب يرفع المخاطر رفعًا واضحًا.'
+            ]
+          },
+          {
+            heading: 'أساس الوقاية: السوائل',
+            paragraphs: [
+              'أنجع إجراء مفرد في داء الحصى شرب ما يكفي لزيادة كمية البول. والهدف زيادة واضحة في حجم البول اليومي، وعلامته العملية أن يكون البول فاتح اللون.',
+              'ومن يعيش في مناخ حار أو يعمل عملًا بدنيًا أو يتعرّق كثيرًا فحاجته أكبر. وفي كل يوم لا تُعوَّض فيه الخسارة يتركّز البول.',
+              'والليل مهم أيضًا: إذ يتركّز البول أثناء النوم. ويُنصَح بعض المرضى بالنهوض مرة ليلًا لشرب الماء.',
+              'واستبدال الماء بالمشروبات المحلاة لا يقي؛ بل قد ترفع المشروبات السكرية والغنية بالفركتوز الخطر.'
+            ]
+          },
+          {
+            heading: 'ما الذي يُغيَّر في الغذاء وما الذي لا يُغيَّر',
+            paragraphs: [
+              'الملح: كثرة الملح تزيد الكالسيوم المطروح في البول وتُسهّل تكوّن الحصى. وتقليل الملح أصوب بكثير من قطع الكالسيوم.',
+              'البروتين الحيواني: الإفراط في اللحم يرفع حموضة البول ويزيد خطر حصى حمض البول وحصى الكالسيوم معًا. والهدف ليس قطع البروتين بل تجنّب الإفراط.',
+              'الأكسالات: السبانخ والشمندر والمكسرات والشوكولاتة والشاي غنية بالأكسالات. ولا يلزم منعها كليًا؛ بل الأجدى ضبط الكمية وتناولها مع وجبة تحتوي كالسيوم.',
+              'الكالسيوم — أكثر الأخطاء شيوعًا: يقطع كثير من أصحاب الحصى الكالسيوم. وهذا خطأ وقد يزيد الخطر. فالكالسيوم المتناوَل مع الطعام يرتبط بالأكسالات في الأمعاء فيقلّل امتصاصها. فينبغي أخذ الكالسيوم بكمية معتادة من الطعام؛ أما المكمّلات فلا تُستعمَل من دون استشارة الطبيب.',
+              'السترات: الليمون والحمضيات ترفع السترات في البول، والسترات تُعسّر التبلور. وعصر الليمون في الماء دعم بسيط وغير ضار.'
+            ]
+          },
+          {
+            heading: 'تحليل الحصاة والتقييم الاستقلابي',
+            paragraphs: [
+              'يلزم تقييم أوسع عند تكرار الحصى، أو وجود كلية وحيدة، أو حصى منذ الطفولة، أو سوابق عائلية، أو نوع غير معتاد من الحصى.',
+              'ويتضمن هذا التقييم جمع بول 24 ساعة وقياس الحجم والكالسيوم والأكسالات والسترات وحمض البول ومؤشرات أخرى. والهدف معرفة سبب تكوّن الحصاة وضبط الوقاية بحسب الشخص.',
+              'وعند بعض المرضى يُضاف علاج دوائي — كأدوية تُقلون البول أو تُقلّل طرح الكالسيوم. وتُبدَأ تحت إشراف طبي وتُتابَع بتحاليل الدم.'
+            ]
+          },
+          {
+            heading: 'خيارات العلاج عند وجود حصاة',
+            paragraphs: [
+              'ينزل جزء من الحصى الصغيرة الحسنة الموضع من تلقاء نفسه؛ ويُستعمَل في هذه المدة ضبط الألم، وعند بعض المرضى دواء يُسهّل النزول.',
+              'أما الحصى التي لا تنزل أو تُحدِث انسدادًا فخياراتها: التفتيت بالموجات الصادمة، وتنظير الحالب المرن عبر المسالك، والدخول عبر الجلد إلى الكلية. ويتحدد الأنسب بحجم الحصاة وموضعها وصلابتها وبتشريح الكلية.',
+              'وقد تُوضَع دعامة (JJ) مؤقتًا بعد الإجراء. ومع وجود الدعامة يكون تكرار التبول والإلحاح والنزف الخفيف أمورًا معتادة. ويجب التخطيط قبل الإجراء لمن ينزع الدعامة وأين ومتى — وهذا مهم خصوصًا للمرضى القادمين من الخارج.'
+            ]
+          },
+          {
+            heading: 'منع التكرار',
+            paragraphs: [
+              'داء الحصى ليس حدثًا مفردًا بل حالة تميل إلى التكرار. ومن نزلت عنده حصاة مرة فاحتمال تكوّن حصاة جديدة عنده خلال السنين ليس بالقليل.',
+              'ولذلك لا ينتهي العلاج بإزالة الحصاة. بل يستمر بكمية السوائل وضبط الملح والبروتين وتحليل الحصاة والتقييم الاستقلابي عند الحاجة.',
+              'والمراجعة المنتظمة تتيح اكتشاف حصاة صامتة قبل أن تكبر وتُحدِث انسدادًا. والموجات فوق الصوتية تكفي غالبًا لهذه المتابعة ولا تحمل إشعاعًا.'
+            ]
+          },
+          {
+            heading: 'أخطاء شائعة',
+            paragraphs: [
+              '«الأعشاب تُذيب الحصى.» المجموعة الوحيدة القابلة للإذابة حقًا هي حصى حمض البول، وذلك بقلونة البول تحت إشراف طبي. أما حصاة أكسالات الكالسيوم فلا يُذيبها أي شاي؛ وتأجيل العلاج بناءً على هذا الادعاء قد يضر الكلية.',
+              '«نزلت حصاتي، انتهى الأمر.» النزول ينهي النوبة لا المرض. وإن لم تتغير الظروف تكوّنت حصاة جديدة.',
+              '«عليّ تجنّب الكالسيوم.» لا. فقطع كالسيوم الطعام قد يزيد الخطر؛ والذي ينبغي تقليله هو الملح والإفراط في البروتين الحيواني.',
+              '«ما دام لا ألم فلا حصاة.» هناك حصى صامتة، والانسداد البطيء قد يكون غير مؤلم. وقد تتراجع وظيفة الكلية من دون أن يُلاحَظ.',
+              '«شرب الكثير من الماء يُنزِل الحصاة.» السوائل أنجع إجراء لمنع حصى جديدة، لكن الماء لا يدفع حصاة منحشرة أصلًا، ومع وجود انسداد قد يزيد الشرب الكثير الألم.'
+            ]
+          },
+          {
+            heading: 'ملاحظة مهمة',
+            paragraphs: [
+              'هذه المقالة للمعلومة العامة ولا تغني عن المشورة الطبية. وتدبير داء الحصى فردي.',
+              'ألم الخاصرة مع الحمى أو القشعريرة حالة إسعافية؛ فتوجّه إلى المستشفى من دون تأخير.'
             ]
           }
         ]
@@ -359,16 +1007,96 @@ export const blogPosts: BlogPost[] = [
         metaDescription: 'Ein informativer Leitfaden dazu, warum Nierensteine entstehen, zu Risikofaktoren, Ernährungstipps und Behandlungsmethoden.',
         sections: [
           {
-            heading: 'Warum entstehen Nierensteine?',
+            heading: 'Wie entsteht ein Nierenstein?',
             paragraphs: [
-              'Nierensteine entstehen, wenn bestimmte Mineralien im Urin konzentrieren und auskristallisieren. Zu geringe Wasseraufnahme ist einer der wichtigsten Risikofaktoren.'
+              'Der Urin transportiert die auszuscheidenden Mineralien in Wasser gelöst. Solange er ausreichend verdünnt ist, bleiben sie gelöst. Konzentriert sich der Urin, wird die Löslichkeitsgrenze überschritten: Die Mineralien fallen zunächst als mikroskopische Kristalle aus, und diese Kristalle verkleben zu einem Stein.',
+              'Deshalb gibt es beim Steinleiden selten einen einzigen Schuldigen. Zu wenig trinken, Flüssigkeitsverlust durch Schwitzen, zu viel Salz, zu viel tierisches Eiweiß, bestimmte Medikamente, chronischer Durchfall und einige Stoffwechselerkrankungen tragen auf verschiedenen Wegen zum selben Ergebnis bei.',
+              'Ein Stein entsteht nicht plötzlich, sondern über Monate. Praktisch heißt das: Ändert sich nach dem Abgang eines Steins nichts, produzieren dieselben Bedingungen weiter neue.'
             ]
           },
           {
-            heading: 'Tipps zur Vorbeugung',
+            heading: 'Warum ist die Steinart wichtig?',
             paragraphs: [
-              'Ausreichend Wasser trinken, den Salz- und tierischen Eiweißkonsum ausgleichen und regelmäßige Kontrollen können das Risiko der Steinbildung senken.',
-              'Dieser Inhalt dient nur der allgemeinen Information. Wenn Sie wiederkehrende Steine haben, kontaktieren Sie uns für eine Bewertung.'
+              'Die häufigste Art ist der Calciumoxalatstein. Harnsäuresteine, infektbedingte (Struvit-)Steine, Cystinsteine und arzneimittelbedingte Steine sind seltener.',
+              'Die Art ist wichtig, weil DIE VORBEUGUNG DAVON ABHÄNGT. Bei Harnsäuresteinen kann eine Anhebung des Urin-pH zur Auflösung beitragen, bei Calciumoxalatsteinen ist das Vorgehen ein anderes. Ein Infektstein wächst weiter, solange er nicht vollständig entfernt ist.',
+              'WERFEN SIE den abgegangenen oder entfernten Stein deshalb NICHT WEG. Die Steinanalyse ist die günstigste Untersuchung, die den Plan für Jahre bestimmt.'
+            ]
+          },
+          {
+            heading: 'Beschwerden — und der Notfall',
+            paragraphs: [
+              'Typisch ist ein wellenförmiger, heftiger Schmerz von der Flanke in die Leiste (Nierenkolik). Übelkeit, Erbrechen, Blut im Urin und häufiges Wasserlassen können hinzukommen.',
+              'DIES IST EIN NOTFALL: Flankenschmerz ZUSAMMEN MIT Fieber oder Schüttelfrost. Das kann eine Infektion in einer gestauten Niere bedeuten und binnen Stunden bedrohlich werden. Abzuwarten, ob es sich legt, ist falsch; suchen Sie sofort ein Krankenhaus auf.',
+              'EIN WICHTIGER IRRTUM: Schmerzfreiheit bedeutet nicht Sicherheit. Eine langsam entstehende Stauung kann die Nierenfunktion ohne Schmerzen still vermindern. Eine Kontrolle wird deshalb nicht ausgelassen, weil „der Schmerz weg ist".',
+              'Unvermögen zu urinieren, eine Kolik bei Einzelniere und nicht beherrschbares Erbrechen gehören ebenfalls unverzüglich abgeklärt.'
+            ]
+          },
+          {
+            heading: 'Wie wird die Diagnose gestellt?',
+            paragraphs: [
+              'Am Anfang stehen Urinuntersuchung, Blutwerte einschließlich Nierenfunktion und Bildgebung. Der Ultraschall kommt ohne Strahlung aus und ist besonders in der Schwangerschaft und bei Kindern die erste Wahl.',
+              'Die native Computertomographie zeigt Lage, Größe und Dichte des Steins am klarsten; der Behandlungsplan stützt sich oft darauf. Eine CT ist jedoch nicht bei jeder Kontrolle nötig — die Strahlenbelastung wird nicht ohne Grund erhöht.',
+              'Vor der Behandlungsplanung muss die Urinkultur unauffällig sein. Ein Eingriff am Stein bei bestehender Infektion erhöht die Risiken deutlich.'
+            ]
+          },
+          {
+            heading: 'Grundlage der Vorbeugung: Flüssigkeit',
+            paragraphs: [
+              'Die wirksamste Einzelmaßnahme beim Steinleiden ist, so viel zu trinken, dass die Urinmenge steigt. Ziel ist ein deutlich höheres Tagesvolumen; praktisches Zeichen dafür ist heller Urin.',
+              'Wer in heißem Klima lebt, körperlich arbeitet oder stark schwitzt, braucht mehr. An jedem Tag, an dem der Verlust nicht ersetzt wird, konzentriert sich der Urin.',
+              'Auch die Nacht zählt: Im Schlaf konzentriert sich der Urin. Manchen Patienten wird geraten, nachts einmal aufzustehen und zu trinken.',
+              'Wasser durch gezuckerte Getränke zu ersetzen schützt nicht; zucker- und fruktosehaltige Getränke können das Risiko erhöhen.'
+            ]
+          },
+          {
+            heading: 'Was man in der Ernährung ändern sollte — und was nicht',
+            paragraphs: [
+              'SALZ: Zu viel Salz erhöht die mit dem Urin ausgeschiedene Calciummenge und erleichtert die Steinbildung. Salz zu reduzieren ist weit sinnvoller, als Calcium zu streichen.',
+              'TIERISCHES EIWEISS: Übermäßiger Fleischkonsum erhöht die Säurelast des Urins und das Risiko für Harnsäure- und Calciumsteine. Ziel ist nicht der Verzicht, sondern das Maß.',
+              'OXALAT: Spinat, Rote Bete, Nüsse, Schokolade und Tee sind oxalatreich. Ein vollständiges Verbot ist nicht nötig; sinnvoller sind maßvolle Mengen und der Verzehr zusammen mit einer CALCIUMHALTIGEN Mahlzeit.',
+              'CALCIUM — DER HÄUFIGSTE FEHLER: Viele Steinpatienten streichen Calcium. Das ist FALSCH und kann das Risiko ERHÖHEN. Mit der Nahrung aufgenommenes Calcium bindet Oxalat im Darm und vermindert dessen Aufnahme. Calcium sollte in normalen Mengen über die Nahrung kommen; Calciumpräparate nicht ohne ärztlichen Rat.',
+              'CITRAT: Zitronen und Zitrusfrüchte erhöhen das Citrat im Urin, und Citrat erschwert die Kristallbildung. Zitrone ins Wasser zu geben ist eine einfache und unschädliche Unterstützung.'
+            ]
+          },
+          {
+            heading: 'Steinanalyse und Stoffwechselabklärung',
+            paragraphs: [
+              'Eine ausführlichere Abklärung ist nötig bei wiederkehrenden Steinen, Einzelniere, Steinen im Kindesalter, familiärer Häufung oder ungewöhnlicher Steinart.',
+              'Dazu wird 24-Stunden-Urin gesammelt und auf Volumen, Calcium, Oxalat, Citrat, Harnsäure und weitere Parameter untersucht. Ziel ist herauszufinden, WARUM der Stein entstand, und die Vorbeugung individuell einzustellen.',
+              'Bei manchen Patienten kommt eine medikamentöse Therapie hinzu — etwa Mittel, die den Urin-pH anheben oder die Calciumausscheidung senken. Sie werden ärztlich begonnen und mit Blutwerten überwacht.'
+            ]
+          },
+          {
+            heading: 'Behandlungsoptionen bei vorhandenem Stein',
+            paragraphs: [
+              'Ein Teil der kleinen, günstig gelegenen Steine geht von selbst ab; in dieser Zeit kommen Schmerzbehandlung und bei manchen Patienten den Abgang erleichternde Medikamente zum Einsatz.',
+              'Bei Steinen, die nicht abgehen oder stauen, bestehen die Optionen Stoßwellenlithotripsie (ESWL), flexible Ureteroskopie über die Harnwege (RIRS) und der perkutane Zugang durch die Haut zur Niere (PCNL). Welche passt, hängt von Größe, Lage und Härte des Steins sowie von der Nierenanatomie ab.',
+              'Nach dem Eingriff kann vorübergehend eine Schiene (JJ) liegen. Mit liegender Schiene sind häufiges Wasserlassen, Drang und leichte Blutung üblich. WER die Schiene WO und WANN entfernt, muss vor dem Eingriff geplant sein — für Patienten aus dem Ausland besonders wichtig.'
+            ]
+          },
+          {
+            heading: 'Rückfälle verhindern',
+            paragraphs: [
+              'Das Steinleiden ist kein einmaliges Ereignis, sondern neigt zum Wiederauftreten. Wer einmal einen Stein abgegangen hat, bildet über die Jahre mit beachtlicher Wahrscheinlichkeit einen weiteren.',
+              'Die Behandlung endet deshalb nicht mit der Steinentfernung. Sie geht weiter mit Trinkmenge, Salz- und Eiweißmaß, Steinanalyse und bei Bedarf Stoffwechselabklärung.',
+              'Regelmäßige Kontrollen lassen einen stummen Stein erkennen, bevor er wächst und staut. Der Ultraschall genügt dafür meist und kommt ohne Strahlung aus.'
+            ]
+          },
+          {
+            heading: 'Häufige Irrtümer',
+            paragraphs: [
+              '„Kräutertees lösen Steine auf." Wirklich auflösbar ist nur die Gruppe der Harnsäuresteine, und zwar durch Anheben des Urin-pH unter ärztlicher Kontrolle. Ein Calciumoxalatstein löst sich durch keinen Tee; die Behandlung aufgrund dieser Behauptung hinauszuzögern kann die Niere schädigen.',
+              '„Der Stein ist abgegangen, damit ist es erledigt." Der Abgang beendet die Episode, nicht die Erkrankung. Ändern sich die Bedingungen nicht, entsteht ein neuer.',
+              '„Ich muss Calcium meiden." Nein. Nahrungscalcium zu streichen kann das Risiko erhöhen; zu reduzieren sind Salz und zu viel tierisches Eiweiß.',
+              '„Ohne Schmerzen habe ich keinen Stein." Es gibt stumme Steine, und eine langsam entstehende Stauung kann schmerzlos sein. Die Nierenfunktion kann unbemerkt abnehmen.',
+              '„Viel Wasser spült den Stein hinaus." Flüssigkeit ist die wirksamste Maßnahme gegen neue Steine; einen bereits eingeklemmten Stein kann Wasser jedoch nicht hinausdrücken, und bei bestehender Stauung kann viel Trinken die Schmerzen verstärken.'
+            ]
+          },
+          {
+            heading: 'Wichtiger Hinweis',
+            paragraphs: [
+              'Dieser Beitrag dient der allgemeinen Information und ersetzt keine ärztliche Beratung. Die Behandlung des Steinleidens ist individuell.',
+              'FLANKENSCHMERZ ZUSAMMEN MIT FIEBER ODER SCHÜTTELFROST IST EIN NOTFALL; suchen Sie unverzüglich ein Krankenhaus auf.'
             ]
           }
         ]
@@ -380,16 +1108,96 @@ export const blogPosts: BlogPost[] = [
         metaDescription: 'Информативное руководство о том, почему образуются камни в почках, о факторах риска, советах по питанию и методах лечения.',
         sections: [
           {
-            heading: 'Почему образуются камни в почках?',
+            heading: 'Как образуется камень в почке?',
             paragraphs: [
-              'Камни в почках образуются, когда некоторые минералы в моче концентрируются и кристаллизуются. Недостаточное потребление воды — один из главных факторов риска.'
+              'Моча переносит минералы, которые организму нужно вывести, в растворённом виде. Пока моча достаточно разведена, они остаются растворёнными. Когда она концентрируется, предел растворимости превышается: минералы сначала выпадают микроскопическими кристаллами, а затем эти кристаллы слипаются в камень.',
+              'Поэтому у мочекаменной болезни редко бывает один виновник. Недостаточное питьё, потеря жидкости с потом, избыток соли, избыток животного белка, некоторые лекарства, хроническая диарея и ряд обменных заболеваний разными путями ведут к одному результату.',
+              'Камень образуется не вдруг, а месяцами. Практический смысл прост: если после отхождения камня ничего не изменить, те же условия продолжат производить новые.'
             ]
           },
           {
-            heading: 'Советы по профилактике',
+            heading: 'Почему важен тип камня?',
             paragraphs: [
-              'Достаточное потребление воды, баланс соли и животного белка и регулярное наблюдение могут снизить риск образования камней.',
-              'Этот материал носит общий информационный характер. При повторяющихся камнях свяжитесь с нами для оценки.'
+              'Самый частый тип — оксалат кальция. Уратные камни, камни, связанные с инфекцией (струвитные), цистиновые и камни, вызванные некоторыми препаратами, встречаются реже.',
+              'Тип важен, потому что ОТ НЕГО ЗАВИСИТ ПРОФИЛАКТИКА. При уратных камнях ощелачивание мочи может способствовать растворению, при оксалатно-кальциевых подход иной. Инфекционный камень продолжает расти, пока не удалён полностью.',
+              'Поэтому НЕ ВЫБРАСЫВАЙТЕ отошедший или удалённый камень. Анализ камня — самое дешёвое исследование, определяющее план на годы вперёд.'
+            ]
+          },
+          {
+            heading: 'Симптомы — и ситуация, которая является неотложной',
+            paragraphs: [
+              'Типична сильная волнообразная боль из поясницы в пах (почечная колика). Могут присоединяться тошнота, рвота, кровь в моче и учащённое мочеиспускание.',
+              'ЭТО НЕОТЛОЖНО: боль в боку ВМЕСТЕ с лихорадкой или ознобом. Это может означать инфекцию в заблокированной почке, и за часы ситуация может стать тяжёлой. Ждать, пройдёт ли, неправильно: немедленно обращайтесь в больницу.',
+              'ВАЖНОЕ ЗАБЛУЖДЕНИЕ: отсутствие боли не означает безопасности. Медленно развивающаяся обструкция может тихо снижать функцию почки без боли. Поэтому контроль не пропускают из-за того, что «боль прошла».',
+              'Невозможность помочиться, колика у человека с единственной почкой и неукротимая рвота также требуют безотлагательной оценки.'
+            ]
+          },
+          {
+            heading: 'Как ставят диагноз?',
+            paragraphs: [
+              'На первом этапе — анализ мочи, анализы крови, включая функцию почек, и визуализация. УЗИ не несёт облучения и является первым выбором, особенно при беременности и у детей.',
+              'Компьютерная томография без контраста наиболее отчётливо показывает расположение, размер и плотность камня; план лечения чаще всего строится на ней. Однако КТ не нужна при каждом контроле — лучевую нагрузку не повышают без причины.',
+              'Перед планированием лечения посев мочи должен быть чистым. Вмешательство на камне при имеющейся инфекции заметно повышает риски.'
+            ]
+          },
+          {
+            heading: 'Основа профилактики — жидкость',
+            paragraphs: [
+              'Самая эффективная отдельная мера при мочекаменной болезни — пить столько, чтобы увеличился объём мочи. Цель — заметно больший суточный диурез; практический признак этого — светлая моча.',
+              'Если вы живёте в жарком климате, занимаетесь физическим трудом или сильно потеете, потребность выше. В каждый день, когда потери не восполнены, моча концентрируется.',
+              'Ночь тоже важна: во сне моча концентрируется. Некоторым пациентам советуют один раз встать ночью и выпить воды.',
+              'Замена воды сладкими напитками не защищает; напитки с сахаром и фруктозой могут повышать риск.'
+            ]
+          },
+          {
+            heading: 'Что менять в питании — и что не менять',
+            paragraphs: [
+              'СОЛЬ: избыток соли увеличивает выведение кальция с мочой и облегчает образование камней. Снизить соль куда правильнее, чем исключать кальций.',
+              'ЖИВОТНЫЙ БЕЛОК: избыток мяса повышает кислотность мочи и риск как уратных, так и кальциевых камней. Цель — не исключить белок, а не перебирать.',
+              'ОКСАЛАТЫ: шпинат, свёкла, орехи, шоколад и чай богаты оксалатами. Полный запрет не нужен; эффективнее умерить количество и принимать такие продукты вместе с едой, СОДЕРЖАЩЕЙ КАЛЬЦИЙ.',
+              'КАЛЬЦИЙ — САМАЯ ЧАСТАЯ ОШИБКА: многие с камнями исключают кальций. Это НЕВЕРНО и может ПОВЫСИТЬ риск. Кальций, поступающий с пищей, связывает оксалат в кишечнике и уменьшает его всасывание. Кальций следует получать с пищей в обычном количестве; добавки — только по совету врача.',
+              'ЦИТРАТ: лимон и цитрусовые повышают цитрат в моче, а цитрат затрудняет кристаллизацию. Выжать лимон в воду — простая и безвредная поддержка.'
+            ]
+          },
+          {
+            heading: 'Анализ камня и метаболическое обследование',
+            paragraphs: [
+              'Более подробное обследование нужно при повторных камнях, единственной почке, камнях с детства, семейном анамнезе или необычном типе камня.',
+              'Оно включает сбор суточной мочи с измерением объёма, кальция, оксалата, цитрата, мочевой кислоты и других показателей. Цель — выяснить, ПОЧЕМУ образовался камень, и подобрать профилактику индивидуально.',
+              'У части пациентов добавляют лекарственную терапию — например препараты, ощелачивающие мочу или снижающие выведение кальция. Их начинают под наблюдением врача и контролируют по анализам крови.'
+            ]
+          },
+          {
+            heading: 'Варианты лечения при наличии камня',
+            paragraphs: [
+              'Часть небольших и удачно расположенных камней отходит сама; в это время применяют обезболивание, а у части пациентов — препараты, облегчающие отхождение.',
+              'При камнях, которые не отходят или вызывают обструкцию, варианты таковы: дистанционная литотрипсия (ДЛТ), гибкая уретероскопия через мочевые пути (RIRS) и перкутанный доступ через кожу в почку (ПНЛ). Выбор зависит от размера, положения и плотности камня и от анатомии почки.',
+              'После вмешательства может временно остаться стент (JJ). При установленном стенте учащённое мочеиспускание, позывы и лёгкое кровотечение обычны. КТО удалит стент, ГДЕ и КОГДА, нужно спланировать до вмешательства — это особенно важно для пациентов, приезжающих из-за рубежа.'
+            ]
+          },
+          {
+            heading: 'Как предотвратить повторение',
+            paragraphs: [
+              'Мочекаменная болезнь — не одноразовое событие, а состояние со склонностью к повторению. У человека, однажды отошедшего камня, вероятность образовать новый за годы далеко не мала.',
+              'Поэтому лечение не заканчивается удалением камня. Оно продолжается питьевым режимом, балансом соли и белка, анализом камня и при необходимости метаболическим обследованием.',
+              'Регулярный контроль позволяет заметить молчаливый камень, прежде чем он вырастет и вызовет обструкцию. Для такого наблюдения чаще всего достаточно УЗИ, и оно не несёт облучения.'
+            ]
+          },
+          {
+            heading: 'Частые заблуждения',
+            paragraphs: [
+              '«Травяные чаи растворяют камни.» По-настоящему растворимы только уратные камни, и это делается ощелачиванием мочи под контролем врача. Оксалатно-кальциевый камень не растворяется никаким чаем; откладывать лечение, полагаясь на такое утверждение, может повредить почку.',
+              '«Камень отошёл — всё закончилось.» Отхождение завершает эпизод, а не болезнь. Если условия не изменятся, образуется новый.',
+              '«Мне нужно избегать кальция.» Нет. Исключение пищевого кальция может повысить риск; снижать нужно соль и избыток животного белка.',
+              '«Если нет боли, нет и камня.» Молчаливые камни существуют, а медленно развивающаяся обструкция может быть безболезненной. Функция почки может снижаться незаметно.',
+              '«Если много пить, камень выйдет.» Жидкость — самая действенная мера против новых камней, но вытолкнуть водой уже вклинившийся камень невозможно, а при обструкции обильное питьё может усилить боль.'
+            ]
+          },
+          {
+            heading: 'Важное замечание',
+            paragraphs: [
+              'Эта статья носит общий информационный характер и не заменяет врачебной консультации. Ведение мочекаменной болезни индивидуально.',
+              'БОЛЬ В БОКУ ВМЕСТЕ С ЛИХОРАДКОЙ ИЛИ ОЗНОБОМ — НЕОТЛОЖНОЕ СОСТОЯНИЕ; обращайтесь в больницу без промедления.'
             ]
           }
         ]
@@ -402,16 +1210,96 @@ export const blogPosts: BlogPost[] = [
           'Un guide informatif sur les causes de formation des calculs rénaux, les facteurs de risque, les conseils alimentaires et les méthodes de traitement.',
         sections: [
           {
-            heading: 'Pourquoi les calculs rénaux se forment-ils ?',
+            heading: 'Comment se forme un calcul rénal ?',
             paragraphs: [
-              'Les calculs rénaux se forment lorsque certains minéraux présents dans l’urine se concentrent et cristallisent. Un apport insuffisant en eau est l’un des principaux facteurs de risque.'
+              'L’urine transporte, dissous dans l’eau, les minéraux que le corps doit éliminer. Tant qu’elle reste assez diluée, ils demeurent dissous. Lorsqu’elle se concentre, la limite de solubilité est franchie : les minéraux précipitent d’abord en cristaux microscopiques, qui s’agrègent ensuite pour former un calcul.',
+              'C’est pourquoi la maladie lithiasique a rarement un seul coupable. Boire trop peu, perdre de l’eau par la transpiration, trop de sel, un excès de protéines animales, certains médicaments, une diarrhée chronique et quelques maladies métaboliques concourent au même résultat par des voies différentes.',
+              'Un calcul ne se forme pas d’un coup ; il se constitue en quelques mois. En pratique : si rien ne change après l’expulsion d’un calcul, les mêmes conditions continuent d’en produire.'
             ]
           },
           {
-            heading: 'Conseils de prévention',
+            heading: 'Pourquoi le type de calcul compte-t-il ?',
             paragraphs: [
-              'Boire suffisamment d’eau, équilibrer les apports en sel et en protéines animales et assurer un suivi régulier réduisent le risque de récidive.',
-              'Ce contenu est fourni à titre d’information générale. En cas de calculs récidivants, contactez-nous pour une évaluation.'
+              'Le type le plus fréquent est l’oxalate de calcium. Les calculs d’acide urique, les calculs liés à l’infection (struvite), les calculs de cystine et ceux dus à certains médicaments sont plus rares.',
+              'Le type importe parce que LA PRÉVENTION EN DÉPEND. Pour les calculs d’acide urique, alcaliniser les urines peut contribuer à les dissoudre ; pour l’oxalate de calcium, la démarche est différente. Un calcul d’infection continue de croître tant qu’il n’est pas entièrement éliminé.',
+              'NE JETEZ donc PAS le calcul expulsé ou retiré. L’analyse du calcul est l’examen le moins coûteux qui oriente le plan pour des années.'
+            ]
+          },
+          {
+            heading: 'Les symptômes — et la situation d’urgence',
+            paragraphs: [
+              'La plainte typique est une douleur intense, par vagues, de la fosse lombaire vers l’aine (colique néphrétique). Nausées, vomissements, sang dans les urines et pollakiurie peuvent s’y associer.',
+              'VOICI UNE URGENCE : une douleur lombaire ASSOCIÉE à de la fièvre ou des frissons. Cela peut signifier une infection sur un rein obstrué, qui peut devenir grave en quelques heures. Attendre de voir si cela passe est une erreur : rendez-vous immédiatement à l’hôpital.',
+              'UNE IDÉE FAUSSE IMPORTANTE : l’absence de douleur ne signifie pas que tout va bien. Une obstruction d’installation lente peut réduire silencieusement la fonction rénale. On ne saute donc pas un contrôle parce que « la douleur est passée ».',
+              'L’impossibilité d’uriner, une colique chez un patient à rein unique et des vomissements incontrôlables doivent également être évalués sans délai.'
+            ]
+          },
+          {
+            heading: 'Comment pose-t-on le diagnostic ?',
+            paragraphs: [
+              'En première intention : examen des urines, bilan sanguin avec la fonction rénale, et imagerie. L’échographie n’irradie pas et constitue le premier choix, notamment pendant la grossesse et chez l’enfant.',
+              'Le scanner sans injection montre le plus clairement la position, la taille et la densité du calcul ; le plan de traitement s’appuie souvent dessus. Un scanner n’est toutefois pas nécessaire à chaque contrôle : on n’augmente pas l’irradiation sans raison.',
+              'Avant de planifier un traitement, l’ECBU doit être négatif. Intervenir sur un calcul en présence d’une infection augmente nettement les risques.'
+            ]
+          },
+          {
+            heading: 'Le socle de la prévention : les liquides',
+            paragraphs: [
+              'La mesure isolée la plus efficace est de boire assez pour augmenter le volume d’urine. L’objectif est une diurèse nettement plus abondante ; le signe pratique en est une urine claire.',
+              'Si vous vivez sous un climat chaud, effectuez un travail physique ou transpirez beaucoup, vos besoins sont plus élevés. Chaque jour où vous ne compensez pas vos pertes, vos urines se concentrent.',
+              'La nuit compte aussi : l’urine se concentre pendant le sommeil. Chez certains patients, il est conseillé de se lever une fois la nuit pour boire.',
+              'Remplacer l’eau par des boissons sucrées ne protège pas ; les boissons sucrées et riches en fructose peuvent augmenter le risque.'
+            ]
+          },
+          {
+            heading: 'Ce qu’il faut changer dans l’alimentation — et ce qu’il ne faut pas',
+            paragraphs: [
+              'LE SEL : un excès de sel augmente le calcium éliminé dans les urines et facilite la formation des calculs. Réduire le sel est bien plus pertinent que supprimer le calcium.',
+              'LES PROTÉINES ANIMALES : un excès de viande acidifie les urines et augmente le risque de calculs d’acide urique comme de calcium. Le but n’est pas de supprimer les protéines mais d’éviter l’excès.',
+              'L’OXALATE : épinards, betterave, fruits à coque, chocolat et thé en sont riches. Les interdire totalement n’est pas nécessaire ; il est plus efficace d’en modérer la quantité et de les consommer au cours d’un repas CONTENANT DU CALCIUM.',
+              'LE CALCIUM — L’ERREUR LA PLUS FRÉQUENTE : beaucoup de patients lithiasiques suppriment le calcium. C’est FAUX et cela peut AUGMENTER le risque. Le calcium alimentaire se lie à l’oxalate dans l’intestin et en réduit l’absorption. Le calcium doit être apporté en quantité normale par l’alimentation ; les suppléments ne se prennent pas sans avis médical.',
+              'LE CITRATE : citrons et agrumes augmentent le citrate urinaire, et le citrate gêne la cristallisation. Presser un citron dans l’eau est un appoint simple et inoffensif.'
+            ]
+          },
+          {
+            heading: 'Analyse du calcul et bilan métabolique',
+            paragraphs: [
+              'Un bilan plus approfondi s’impose en cas de calculs récidivants, de rein unique, de calculs apparus dans l’enfance, d’antécédents familiaux ou de type inhabituel.',
+              'Ce bilan comporte un recueil des urines de 24 heures mesurant volume, calcium, oxalate, citrate, acide urique et d’autres paramètres. L’objectif est de comprendre POURQUOI le calcul s’est formé et d’adapter la prévention à la personne.',
+              'Chez certains patients, un traitement médicamenteux s’ajoute — par exemple des produits alcalinisant les urines ou réduisant l’excrétion de calcium. Ils sont instaurés sous contrôle médical et suivis par des bilans sanguins.'
+            ]
+          },
+          {
+            heading: 'Options thérapeutiques en présence d’un calcul',
+            paragraphs: [
+              'Une partie des petits calculs bien situés s’expulse spontanément ; on utilise alors des antalgiques et, chez certains patients, un traitement facilitant l’expulsion.',
+              'Pour les calculs qui ne s’expulsent pas ou qui obstruent, les options sont la lithotritie extracorporelle (LEOC), l’urétéroscopie souple par les voies naturelles (RIRS) et la voie percutanée à travers la peau jusqu’au rein (NLPC). Le choix dépend de la taille, du siège et de la dureté du calcul ainsi que de l’anatomie rénale.',
+              'Une sonde JJ peut être laissée temporairement après le geste. Avec une sonde en place, pollakiurie, urgences et saignement léger sont habituels. QUI retire la sonde, OÙ et QUAND doit être planifié avant l’intervention — point particulièrement important pour les patients venant de l’étranger.'
+            ]
+          },
+          {
+            heading: 'Prévenir la récidive',
+            paragraphs: [
+              'La lithiase n’est pas un événement isolé mais une affection qui tend à récidiver. Celui qui a expulsé un calcul a une probabilité non négligeable d’en former un autre au fil des ans.',
+              'Le traitement ne s’arrête donc pas au retrait du calcul. Il se poursuit par les apports hydriques, l’équilibre du sel et des protéines, l’analyse du calcul et, si nécessaire, un bilan métabolique.',
+              'Un suivi régulier permet de repérer un calcul silencieux avant qu’il ne grossisse et n’obstrue. L’échographie suffit le plus souvent et n’irradie pas.'
+            ]
+          },
+          {
+            heading: 'Idées reçues fréquentes',
+            paragraphs: [
+              '« Les tisanes dissolvent les calculs. » Le seul groupe réellement dissoluble est celui des calculs d’acide urique, par alcalinisation des urines sous contrôle médical. Un calcul d’oxalate de calcium ne se dissout avec aucune tisane ; retarder le traitement sur la foi de cette affirmation peut léser le rein.',
+              '« J’ai expulsé mon calcul, c’est terminé. » L’expulsion met fin à l’épisode, pas à la maladie. Si les conditions ne changent pas, un autre se formera.',
+              '« Je dois éviter le calcium. » Non. Supprimer le calcium alimentaire peut augmenter le risque ; ce qu’il faut réduire, c’est le sel et l’excès de protéines animales.',
+              '« Sans douleur, pas de calcul. » Il existe des calculs silencieux, et une obstruction d’installation lente peut être indolore. La fonction rénale peut décliner sans que l’on s’en aperçoive.',
+              '« Boire beaucoup d’eau fait sortir le calcul. » Les liquides sont la mesure la plus efficace contre les nouveaux calculs, mais l’eau ne peut pas chasser un calcul déjà enclavé, et en cas d’obstruction, boire beaucoup peut accroître la douleur.'
+            ]
+          },
+          {
+            heading: 'Note importante',
+            paragraphs: [
+              'Cet article est à visée d’information générale et ne remplace pas un avis médical. La prise en charge de la lithiase est individuelle.',
+              'UNE DOULEUR LOMBAIRE ASSOCIÉE À DE LA FIÈVRE OU À DES FRISSONS EST UNE URGENCE ; rendez-vous à l’hôpital sans délai.'
             ]
           }
         ]

@@ -12,6 +12,11 @@ export interface ConsultationStep {
   body: string;
 }
 
+export interface ConsultationSection {
+  heading: string;
+  paragraphs: string[];
+}
+
 export interface ConsultationCopy {
   navLabel: string;
   badge: string;
@@ -22,6 +27,10 @@ export interface ConsultationCopy {
   forWhom: string;
   howTitle: string;
   how: ConsultationStep[];
+  /** Ucret ayar dosyasinda 0 ise tutar yerine bu metin gosterilir. */
+  priceOnRequest: string;
+  /** Sayfanin genisletilmis bolumleri (ne konusulur, belgeler, mahremiyet, iptal). */
+  sections: ConsultationSection[];
   priceLabel: string;
   priceNote: string; // {duration} ile
   vatIncluded: string; // "KDV dahil" karşılığı
@@ -90,6 +99,44 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
       { title: '3. Havale ile ödeme', body: 'Randevu kodunuzu alın; IBAN’a havale yapın, açıklamaya kodu yazın.' },
       { title: '4. Dekontu WhatsApp’tan gönderin', body: 'Tek dokunuşla, kodunuz önceden yazılmış olarak WhatsApp açılır.' },
       { title: '5. Görüntülü görüşme', body: 'Dekont onaylanınca, randevu saatinizde sizi WhatsApp’tan görüntülü ararız.' }
+    ],
+    priceOnRequest:
+      'Görüşme ücreti randevu onayıyla birlikte size yazılı olarak bildirilir.',
+    sections: [
+      {
+        heading: 'Görüşmede neler konuşulur?',
+        paragraphs: [
+          'Görüşme, mevcut şikâyetinizin ve elinizdeki tetkiklerin birlikte değerlendirilmesi üzerine kuruludur. Hangi bulgunun ne anlama geldiği, hangi tetkikin eksik olduğu, önünüzdeki seçeneklerin neler olduğu ve bu seçeneklerin birbirinden hangi noktada ayrıldığı konuşulur.',
+          'Bir yöntem önerildiğinde, o yöntemin hangi durumda beklenen faydayı VERMEYECEĞİ de söylenir. Hiçbir görüşmede sonuç garantisi verilmez; verilen şey, kararınızı bilerek vermenizi sağlayacak bilgidir.',
+          'Görüşme bir muayene yerine geçmez. Elle muayene, görüntüleme ve bazı tetkikler yüz yüze yapılmak zorundadır. Bu nedenle görüşmenin sonunda çoğu zaman "şu tetkik yapılsın" ya da "yüz yüze değerlendirme gerekir" denir — bu bir eksiklik değil, doğru sıralamadır.',
+          'İkinci görüş almak için de kullanılabilir. Başka bir merkezde size önerilen bir planı, elinizdeki belgelerle birlikte değerlendirip farklı bir seçenek olup olmadığını konuşabilirsiniz.'
+        ]
+      },
+      {
+        heading: 'Görüşmeden önce hangi belgeleri hazırlayın?',
+        paragraphs: [
+          'Görüşmenin verimli geçmesi, elinizdeki belgelere bağlıdır. Belgesiz bir görüşmede ancak genel konuşulabilir.',
+          'Hazırlayın: son kan tahlilleriniz (varsa PSA, kreatinin, tam kan sayımı), idrar tahlili ve kültür sonucu, görüntüleme raporları ve mümkünse GÖRÜNTÜLERİN KENDİSİ (yalnızca rapor çoğu zaman yetmez), varsa patoloji sonucu, daha önce geçirdiğiniz ameliyatların notları ve kullandığınız TÜM ilaçların listesi.',
+          'Kan sulandırıcı kullanıyorsanız bunu ayrıca belirtin; pek çok planı doğrudan değiştirir. Prostatı küçülten bir ilaç kullanıyorsanız bu da PSA değerinizin yorumunu değiştirir.',
+          'Belgelerinizi görüşmeden ÖNCE iletin. Görüşme sırasında ilk kez açılan bir dosya için 20 dakika yetmez.'
+        ]
+      },
+      {
+        heading: 'Mahremiyet',
+        paragraphs: [
+          'Görüşme birebirdir; odada başka kimse bulunmaz. Kayıt alınmaz ve görüşme üçüncü kişilerle paylaşılmaz.',
+          'Paylaştığınız belgeler yalnızca değerlendirme amacıyla kullanılır. Görüşme öncesi gönderdiğiniz dosyalar, değerlendirme tamamlandıktan sonra saklama süreleri çerçevesinde işlenir; ayrıntılar KVKK aydınlatma metnindedir.',
+          'Bazı hastalar için bu hizmetin asıl değeri, kliniğe gelmeden ve çevresine görünmeden sorusunu sorabilmektir. Bu önceliği anlıyoruz ve hizmet buna göre kurgulanmıştır.'
+        ]
+      },
+      {
+        heading: 'İptal ve değişiklik koşulları',
+        paragraphs: [
+          'Randevunuzu değiştirmek veya iptal etmek isterseniz, randevu saatinden önce bize bildirin. İptal ve değişiklik koşulları randevu onayıyla birlikte size YAZILI olarak iletilir.',
+          'Teknik bir sorun nedeniyle görüşme yapılamazsa yeni bir randevu planlanır. Bağlantı sorunlarını azaltmak için görüşmeden birkaç dakika önce sessiz ve kapsama alanı iyi bir yerde hazır olun.',
+          'Görüşmeye katılamayacağınızı önceden bildirmezseniz randevu kullanılmış sayılabilir; bu nedenle planınız değişirse bize haber vermeniz önemlidir.'
+        ]
+      }
     ],
     priceLabel: 'Ücret',
     priceNote: '{duration} dakikalık birebir değerlendirme görüşmesi',
@@ -164,6 +211,44 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
       { title: '4. Send the receipt on WhatsApp', body: 'One tap opens WhatsApp with your code pre-filled.' },
       { title: '5. Video consultation', body: 'Once the receipt is confirmed, we call you on WhatsApp video at your appointment time.' }
     ],
+    priceOnRequest:
+      'The consultation fee is confirmed to you in writing together with your appointment.',
+    sections: [
+      {
+        heading: 'What is discussed in the consultation?',
+        paragraphs: [
+          'The consultation is built around reviewing your current symptoms together with the documents you already have. What each finding means, which test is missing, what the options are, and the point at which those options differ from one another — these are what is discussed.',
+          'When a method is suggested, you are also told in which situations it will NOT deliver the expected benefit. No consultation gives a guarantee of outcome; what it gives is the information you need to decide knowingly.',
+          'A consultation is not a substitute for an examination. Physical examination, imaging and some tests must be done in person. That is why a consultation often ends with "this test should be done" or "an in-person assessment is needed" — that is not a shortfall but the right order of things.',
+          'It can also be used for a second opinion. You can review a plan proposed at another centre, with your documents to hand, and discuss whether a different option exists.'
+        ]
+      },
+      {
+        heading: 'Which documents should you prepare?',
+        paragraphs: [
+          'How useful the consultation is depends on the documents you have. Without them, only general matters can be discussed.',
+          'Please prepare: your recent blood tests (PSA, creatinine, full blood count where relevant), urinalysis and culture, imaging reports and, if possible, THE IMAGES THEMSELVES (a report alone is often not enough), any pathology result, notes of previous operations, and a list of ALL your medications.',
+          'If you take blood thinners, say so separately; it changes many plans directly. If you take a drug that shrinks the prostate, that changes how your PSA is interpreted.',
+          'Send your documents BEFORE the consultation. Twenty minutes is not enough for a file opened for the first time during the call.'
+        ]
+      },
+      {
+        heading: 'Privacy',
+        paragraphs: [
+          'The consultation is one to one; no one else is in the room. It is not recorded and is not shared with third parties.',
+          'The documents you share are used only for assessment. Files sent before the consultation are processed within the stated retention periods once the assessment is complete; the details are in the privacy notice.',
+          'For some patients the real value of this service is being able to ask their question without coming to the clinic and without being seen doing so. We understand that priority, and the service is built around it.'
+        ]
+      },
+      {
+        heading: 'Cancellation and changes',
+        paragraphs: [
+          'If you want to change or cancel your appointment, tell us before the appointment time. The cancellation and change terms are sent to you IN WRITING together with your appointment confirmation.',
+          'If the consultation cannot take place because of a technical problem, a new appointment is arranged. To reduce connection problems, be ready a few minutes beforehand somewhere quiet with good coverage.',
+          'If you do not tell us in advance that you cannot attend, the appointment may be counted as used; so it matters that you let us know if your plans change.'
+        ]
+      }
+    ],
     priceLabel: 'Fee',
     priceNote: '{duration}-minute one-to-one assessment consultation',
     vatIncluded: 'incl. VAT',
@@ -236,6 +321,44 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
       { title: '3. الدفع عبر التحويل البنكي', body: 'احصل على رمز موعدك؛ حوّل إلى الـIBAN واكتب الرمز في خانة الوصف.' },
       { title: '4. أرسل الإيصال عبر WhatsApp', body: 'بضغطة واحدة يُفتح WhatsApp ورمزك مكتوب مسبقًا.' },
       { title: '5. مكالمة الفيديو', body: 'بعد تأكيد الإيصال، نتصل بك عبر فيديو WhatsApp في وقت موعدك.' }
+    ],
+    priceOnRequest:
+      'يُبلَّغ إليك مبلغ المقابلة كتابةً مع تأكيد الموعد.',
+    sections: [
+      {
+        heading: 'ما الذي يُناقَش في المقابلة؟',
+        paragraphs: [
+          'تقوم المقابلة على تقييم شكواك الحالية مع ما لديك من وثائق معًا. ما معنى كل نتيجة، وأي فحص ناقص، وما الخيارات المتاحة، وعند أي نقطة تفترق هذه الخيارات — هذا ما يُناقَش.',
+          'وحين تُقترَح طريقة يُقال لك أيضًا في أي الحالات لن تعطي الفائدة المرجوّة. ولا تمنح أي مقابلة ضمانًا للنتيجة؛ بل تمنحك المعلومة التي تقرر بها عن بيّنة.',
+          'والمقابلة لا تغني عن الفحص. فالفحص السريري والتصوير وبعض الاختبارات يجب أن تتم وجهًا لوجه. ولهذا تنتهي المقابلة كثيرًا بعبارة «ينبغي إجراء هذا الفحص» أو «يلزم تقييم وجهًا لوجه» — وهذا ليس نقصًا بل هو الترتيب الصحيح.',
+          'ويمكن استعمالها لرأي ثانٍ أيضًا. فيمكنك مراجعة خطة اقتُرحت عليك في مركز آخر، ووثائقك بين يديك، ومناقشة وجود خيار مختلف.'
+        ]
+      },
+      {
+        heading: 'ما الوثائق التي تُجهّزها قبل المقابلة؟',
+        paragraphs: [
+          'تتوقف فائدة المقابلة على ما لديك من وثائق. فمن دونها لا يمكن الحديث إلا في العموميات.',
+          'جهّز: تحاليل دمك الأخيرة (PSA والكرياتينين وتعداد الدم بحسب الحالة)، وتحليل البول وزرعه، وتقارير التصوير وإن أمكن الصور نفسها (فالتقرير وحده لا يكفي غالبًا)، ونتيجة الفحص المرضي إن وُجدت، وتقارير عملياتك السابقة، وقائمة بكل أدويتك.',
+          'وإن كنت تستعمل مميعات الدم فاذكر ذلك على حدة؛ فهو يغيّر خططًا كثيرة مباشرة. وإن كنت تستعمل دواءً يُصغّر البروستاتا فهذا يغيّر قراءة قيمة PSA لديك.',
+          'أرسل وثائقك قبل المقابلة. فعشرون دقيقة لا تكفي لملف يُفتَح أول مرة أثناء المكالمة.'
+        ]
+      },
+      {
+        heading: 'الخصوصية',
+        paragraphs: [
+          'المقابلة فردية؛ ولا يوجد أحد آخر في الغرفة. ولا تُسجَّل ولا تُشارَك مع أطراف ثالثة.',
+          'وتُستعمَل الوثائق التي تشاركها للتقييم فقط. والملفات المرسَلة قبل المقابلة تُعالَج بعد انتهاء التقييم ضمن مدد الحفظ المعلنة؛ والتفاصيل في إشعار الخصوصية.',
+          'وقيمة هذه الخدمة الحقيقية عند بعض المرضى أن يطرحوا سؤالهم من دون المجيء إلى العيادة ومن دون أن يراهم أحد. ونحن نفهم هذه الأولوية، والخدمة مبنية عليها.'
+        ]
+      },
+      {
+        heading: 'الإلغاء وتغيير الموعد',
+        paragraphs: [
+          'إن أردت تغيير موعدك أو إلغاءه فأخبرنا قبل وقت الموعد. وتُرسَل إليك شروط الإلغاء والتغيير كتابةً مع تأكيد الموعد.',
+          'وإن تعذّرت المقابلة بسبب مشكلة تقنية فيُحدَّد موعد جديد. ولتقليل مشكلات الاتصال كن مستعدًا قبل دقائق في مكان هادئ وبتغطية جيدة.',
+          'وإن لم تُخبرنا مسبقًا بعدم قدرتك على الحضور فقد يُحتسَب الموعد مستعمَلًا؛ ولذلك يهم أن تُعلمنا إذا تغيّرت خطتك.'
+        ]
+      }
     ],
     priceLabel: 'الرسوم',
     priceNote: 'جلسة تقييم فردية مدّتها {duration} دقيقة',
@@ -310,6 +433,44 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
       { title: '4. Beleg über WhatsApp senden', body: 'Ein Tippen öffnet WhatsApp mit vorausgefülltem Code.' },
       { title: '5. Videoberatung', body: 'Nach Bestätigung des Belegs rufen wir Sie zum Termin per WhatsApp-Video an.' }
     ],
+    priceOnRequest:
+      'Das Honorar für das Gespräch wird Ihnen zusammen mit der Terminbestätigung schriftlich mitgeteilt.',
+    sections: [
+      {
+        heading: 'Worüber wird im Gespräch gesprochen?',
+        paragraphs: [
+          'Das Gespräch beruht darauf, Ihre aktuellen Beschwerden gemeinsam mit den vorhandenen Unterlagen zu beurteilen. Was welcher Befund bedeutet, welche Untersuchung fehlt, welche Optionen bestehen und an welcher Stelle sich diese Optionen voneinander unterscheiden — darum geht es.',
+          'Wird ein Verfahren vorgeschlagen, wird auch gesagt, in welchen Fällen es den erwarteten Nutzen NICHT bringt. Kein Gespräch gibt eine Ergebnisgarantie; es gibt Ihnen die Information, um bewusst zu entscheiden.',
+          'Ein Gespräch ersetzt keine Untersuchung. Tastuntersuchung, Bildgebung und manche Tests müssen persönlich erfolgen. Deshalb endet ein Gespräch häufig mit „diese Untersuchung sollte gemacht werden" oder „eine persönliche Beurteilung ist nötig" — das ist kein Mangel, sondern die richtige Reihenfolge.',
+          'Es eignet sich auch für eine Zweitmeinung. Einen andernorts vorgeschlagenen Plan können Sie mit Ihren Unterlagen durchgehen und besprechen, ob es eine andere Option gibt.'
+        ]
+      },
+      {
+        heading: 'Welche Unterlagen sollten Sie vorbereiten?',
+        paragraphs: [
+          'Wie nützlich das Gespräch wird, hängt von Ihren Unterlagen ab. Ohne sie lässt sich nur Allgemeines besprechen.',
+          'Bitte bereiten Sie vor: aktuelle Blutwerte (gegebenenfalls PSA, Kreatinin, Blutbild), Urinbefund und Kultur, Bildgebungsbefunde und möglichst DIE BILDER SELBST (ein Bericht allein genügt oft nicht), einen etwaigen Pathologiebefund, Berichte früherer Operationen und eine Liste ALLER Medikamente.',
+          'Nehmen Sie Gerinnungshemmer, sagen Sie es gesondert; das ändert viele Pläne unmittelbar. Nehmen Sie ein Medikament, das die Prostata verkleinert, ändert das die Bewertung Ihres PSA-Werts.',
+          'Senden Sie die Unterlagen VOR dem Gespräch. Für eine erst im Gespräch geöffnete Akte reichen zwanzig Minuten nicht.'
+        ]
+      },
+      {
+        heading: 'Vertraulichkeit',
+        paragraphs: [
+          'Das Gespräch findet unter vier Augen statt; niemand sonst ist im Raum. Es wird nicht aufgezeichnet und nicht an Dritte weitergegeben.',
+          'Die von Ihnen geteilten Unterlagen werden ausschließlich zur Beurteilung verwendet. Vor dem Gespräch gesendete Dateien werden nach Abschluss der Beurteilung im Rahmen der angegebenen Aufbewahrungsfristen verarbeitet; Einzelheiten stehen in der Datenschutzerklärung.',
+          'Für manche Patienten liegt der eigentliche Wert dieses Angebots darin, ihre Frage stellen zu können, ohne in die Klinik zu kommen und ohne dabei gesehen zu werden. Wir verstehen diese Priorität; der Dienst ist darauf ausgelegt.'
+        ]
+      },
+      {
+        heading: 'Absage und Terminänderung',
+        paragraphs: [
+          'Möchten Sie Ihren Termin ändern oder absagen, teilen Sie es uns vor dem Termin mit. Die Bedingungen für Absage und Änderung erhalten Sie SCHRIFTLICH mit der Terminbestätigung.',
+          'Kann das Gespräch wegen eines technischen Problems nicht stattfinden, wird ein neuer Termin vereinbart. Um Verbindungsprobleme zu verringern, seien Sie einige Minuten vorher an einem ruhigen Ort mit gutem Empfang bereit.',
+          'Teilen Sie nicht vorher mit, dass Sie nicht teilnehmen können, kann der Termin als genutzt gelten; deshalb ist es wichtig, uns bei geänderten Plänen zu informieren.'
+        ]
+      }
+    ],
     priceLabel: 'Gebühr',
     priceNote: 'Eins-zu-eins-Beratungsgespräch von {duration} Minuten',
     vatIncluded: 'inkl. MwSt.',
@@ -383,6 +544,44 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
       { title: '4. Отправьте чек в WhatsApp', body: 'Одно нажатие открывает WhatsApp с заранее заполненным кодом.' },
       { title: '5. Видеоконсультация', body: 'После подтверждения чека мы звоним вам по видео WhatsApp во время записи.' }
     ],
+    priceOnRequest:
+      'Стоимость консультации сообщается вам письменно вместе с подтверждением записи.',
+    sections: [
+      {
+        heading: 'Что обсуждается на консультации?',
+        paragraphs: [
+          'Консультация строится на совместном разборе ваших текущих жалоб и имеющихся документов. Что означает каждая находка, какого исследования не хватает, какие есть варианты и в чём именно эти варианты расходятся — об этом и идёт речь.',
+          'Когда предлагается метод, вам также говорят, в каких случаях он НЕ даст ожидаемой пользы. Никакая консультация не даёт гарантии результата; она даёт сведения, нужные, чтобы решить осознанно.',
+          'Консультация не заменяет осмотр. Физикальный осмотр, визуализация и часть исследований должны проводиться очно. Поэтому консультация нередко заканчивается словами «нужно сделать это исследование» или «необходима очная оценка» — это не недостаток, а правильный порядок.',
+          'Её можно использовать и для второго мнения. Вы можете разобрать план, предложенный в другом центре, имея документы под рукой, и обсудить, существует ли другой вариант.'
+        ]
+      },
+      {
+        heading: 'Какие документы подготовить?',
+        paragraphs: [
+          'Насколько полезной окажется консультация, зависит от ваших документов. Без них можно обсуждать только общее.',
+          'Подготовьте: свежие анализы крови (ПСА, креатинин, общий анализ — по ситуации), анализ и посев мочи, заключения визуализации и по возможности САМИ СНИМКИ (одного заключения часто мало), результат гистологии, если он есть, протоколы перенесённых операций и список ВСЕХ принимаемых препаратов.',
+          'Если вы принимаете препараты, разжижающие кровь, скажите об этом отдельно: это напрямую меняет многие планы. Если вы принимаете препарат, уменьшающий простату, это меняет трактовку вашего ПСА.',
+          'Пришлите документы ДО консультации. Двадцати минут не хватит на дело, открытое впервые во время разговора.'
+        ]
+      },
+      {
+        heading: 'Конфиденциальность',
+        paragraphs: [
+          'Консультация проходит один на один; в кабинете никого больше нет. Она не записывается и не передаётся третьим лицам.',
+          'Переданные вами документы используются только для оценки. Файлы, присланные до консультации, после завершения оценки обрабатываются в рамках указанных сроков хранения; подробности — в уведомлении о конфиденциальности.',
+          'Для части пациентов настоящая ценность этой услуги в том, чтобы задать свой вопрос, не приходя в клинику и не будучи при этом замеченным. Мы понимаем этот приоритет; услуга построена именно так.'
+        ]
+      },
+      {
+        heading: 'Отмена и перенос',
+        paragraphs: [
+          'Если вы хотите перенести или отменить запись, сообщите нам до времени приёма. Условия отмены и переноса направляются вам ПИСЬМЕННО вместе с подтверждением записи.',
+          'Если консультация не состоится из-за технической проблемы, назначается новое время. Чтобы снизить вероятность проблем со связью, будьте готовы за несколько минут в тихом месте с хорошим покрытием.',
+          'Если вы заранее не сообщите, что не сможете участвовать, запись может быть сочтена использованной; поэтому важно предупредить нас при изменении планов.'
+        ]
+      }
+    ],
     priceLabel: 'Стоимость',
     priceNote: 'Индивидуальная оценочная консультация {duration} минут',
     vatIncluded: 'включая НДС',
@@ -455,6 +654,44 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
       { title: '3. Réglez par virement', body: 'Recevez votre code de rendez-vous ; virez le montant sur l’IBAN en indiquant le code en référence.' },
       { title: '4. Envoyez le reçu sur WhatsApp', body: 'Un seul clic ouvre WhatsApp avec votre code déjà renseigné.' },
       { title: '5. Consultation vidéo', body: 'Une fois le reçu confirmé, nous vous appelons en vidéo WhatsApp à l’heure convenue.' }
+    ],
+    priceOnRequest:
+      'Le montant de la consultation vous est confirmé par écrit en même temps que votre rendez-vous.',
+    sections: [
+      {
+        heading: 'De quoi parle-t-on pendant la consultation ?',
+        paragraphs: [
+          'La consultation repose sur l’examen conjoint de vos symptômes actuels et des documents dont vous disposez. Ce que signifie chaque constatation, quel examen manque, quelles sont les options et sur quel point elles diffèrent : voilà ce qui est abordé.',
+          'Lorsqu’une méthode est proposée, on vous dit aussi dans quelles situations elle n’apportera PAS le bénéfice attendu. Aucune consultation ne donne de garantie de résultat ; elle donne l’information nécessaire pour décider en connaissance de cause.',
+          'Une consultation ne remplace pas un examen. L’examen clinique, l’imagerie et certains tests doivent être faits en présentiel. C’est pourquoi elle se termine souvent par « cet examen doit être fait » ou « une évaluation en présentiel est nécessaire » : ce n’est pas une insuffisance, c’est le bon ordre des choses.',
+          'Elle peut aussi servir à un second avis. Vous pouvez reprendre un plan proposé ailleurs, documents en main, et discuter de l’existence d’une autre option.'
+        ]
+      },
+      {
+        heading: 'Quels documents préparer ?',
+        paragraphs: [
+          'L’utilité de la consultation dépend des documents dont vous disposez. Sans eux, seules des généralités peuvent être abordées.',
+          'Préparez : vos analyses sanguines récentes (PSA, créatinine, numération si pertinent), un ECBU, les comptes rendus d’imagerie et si possible LES IMAGES ELLES-MÊMES (le compte rendu seul ne suffit souvent pas), un éventuel résultat anatomopathologique, les comptes rendus de vos interventions antérieures et la liste de TOUS vos traitements.',
+          'Si vous prenez des anticoagulants, signalez-le à part : cela modifie directement de nombreux plans. Si vous prenez un médicament réduisant le volume prostatique, cela change l’interprétation de votre PSA.',
+          'Envoyez vos documents AVANT la consultation. Vingt minutes ne suffisent pas pour un dossier ouvert pour la première fois pendant l’appel.'
+        ]
+      },
+      {
+        heading: 'Confidentialité',
+        paragraphs: [
+          'La consultation est individuelle ; personne d’autre n’est présent. Elle n’est pas enregistrée et n’est pas partagée avec des tiers.',
+          'Les documents que vous transmettez ne servent qu’à l’évaluation. Les fichiers envoyés avant la consultation sont traités, une fois l’évaluation terminée, dans le cadre des durées de conservation indiquées ; le détail figure dans la notice de confidentialité.',
+          'Pour certains patients, la véritable valeur de ce service est de pouvoir poser leur question sans venir à la clinique et sans être vus. Nous comprenons cette priorité ; le service est pensé pour cela.'
+        ]
+      },
+      {
+        heading: 'Annulation et modification',
+        paragraphs: [
+          'Si vous souhaitez modifier ou annuler votre rendez-vous, prévenez-nous avant l’heure prévue. Les conditions d’annulation et de modification vous sont transmises PAR ÉCRIT avec la confirmation du rendez-vous.',
+          'Si la consultation ne peut avoir lieu en raison d’un problème technique, un nouveau rendez-vous est fixé. Pour limiter les problèmes de connexion, soyez prêt quelques minutes avant, dans un endroit calme et bien couvert.',
+          'Si vous ne prévenez pas à l’avance de votre absence, le rendez-vous peut être considéré comme utilisé ; il importe donc de nous informer si vos projets changent.'
+        ]
+      }
     ],
     priceLabel: 'Tarif',
     priceNote: 'Entretien d’évaluation individuel de {duration} minutes',

@@ -23,7 +23,11 @@
     "ureterRekon": "Üreter Rekonstrüksiyonu",
     "toggleSubmenu": "Alt menüyü aç/kapat",
     "glossary": "Üroloji Sözlüğü",
-    "insurance": "SGK ve Sigorta"
+    "insurance": "SGK ve Sigorta",
+    "androloji": "Androloji",
+    "uroonkoloji": "Üroonkoloji",
+    "kadinUrolojisi": "Kadın Ürolojisi",
+    "cocukUrolojisi": "Çocuk Ürolojisi"
   },
   "Common": {
     "whatsappCta": "Hemen WhatsApp'tan yaz",
@@ -34,6 +38,7 @@
     "allTreatments": "Tüm tedaviler",
     "backToTreatments": "Tedavilere dön",
     "skipToContent": "İçeriğe geç",
+    "logoAlt": "ME Urology Clinic logosu",
     "toggleTheme": "Temayı değiştir",
     "lightTheme": "Açık tema",
     "darkTheme": "Koyu tema",
@@ -47,6 +52,8 @@
     "positioning": "Uluslararası hastalar için ürolojik cerrahide güvenilir adres",
     "heroTitle": "Ürolojik cerrahide deneyim, şeffaflık ve uluslararası standart",
     "heroSubtitle": "Robotik ve minimal invaziv ürolojik cerrahi için tek noktadan koordinasyon: değerlendirme, tedavi, konaklama ve takip.",
+    "heroSpecialty": "Üroloji",
+    "heroDoctorPhotoAlt": "{name}, Üroloji Uzmanı — portre fotoğrafı",
     "heroPrimaryCta": "WhatsApp'tan ücretsiz değerlendirme",
     "heroSecondaryCta": "Tedavileri incele",
     "accreditationsTitle": "Akreditasyon ve güvence",
@@ -72,9 +79,7 @@
     "sliderLabel": "Öne çıkanlar",
     "sliderPrev": "Önceki slayt",
     "sliderNext": "Sonraki slayt",
-    "sliderGoTo": "Slayta git",
-    "seeAllReviews": "Tüm yorumları gör",
-    "trustReviewsLabel": "Google yorumları"
+    "sliderGoTo": "Slayta git"
   },
   "Treatment": {
     "sectionDefinition": "Durumun tanımı",
@@ -107,6 +112,7 @@
     "sectionTechnology": "Kullanılan teknoloji",
     "sectionRecovery": "İyileşme süreci",
     "sectionSources": "Bilimsel kaynaklar",
+    "sectionPublication": "Hekimimizin bu alandaki yayını",
     "quickFacts": {
       "duration": "İşlem süresi",
       "anesthesia": "Anestezi",
@@ -142,7 +148,10 @@
     "laserLabel": "Lazer platformu",
     "licenseLabel": "Sağlık turizmi yetki belgesi",
     "licenseHolder": "Belge sahibi: {holder} (T.C. Sağlık Bakanlığı tarafından düzenlenir)",
-    "licenseNo": "Belge no"
+    "licenseNo": "Belge no",
+    "centersTitle": "Ameliyatların yapıldığı merkezler",
+    "hospitalPhotoAlt": "{name} — hastane binası",
+    "mapLink": "Haritada göster"
   },
   "Process": {
     "title": "Uluslararası Hasta Süreci",
@@ -169,7 +178,14 @@
     "visaTitle": "Vize ve seyahat rehberi",
     "visaBody": "Birçok ülke vatandaşı Türkiye'ye vizesiz veya e-vize ile giriş yapabilir. Randevunuz onaylandığında, gerekirse davet mektubu ve seyahat belgeleri konusunda destek sağlarız.",
     "visaDisclaimer": "Vize bilgileri ülkeye göre değişir; güncel resmi kaynakları kontrol edin.",
-    "faqTitle": "Sık sorulan sorular"
+    "faqTitle": "Sık sorulan sorular",
+    "packageTableTitle": "Paketler ve başlangıç fiyatları",
+    "packageColTreatment": "Tedavi",
+    "packageColPrice": "Başlangıç aralığı",
+    "packageColStay": "Türkiye’de kalış",
+    "packageColIncludes": "Pakete dâhil",
+    "packageNights": "{count} gece",
+    "packageTableNote": "Buradaki tutarlar bir TEKLİF DEĞİLDİR; başlangıç aralığıdır. Kesin tutar, tetkikleriniz incelendikten sonra kalem kalem ayrılmış yazılı teklifle bildirilir."
   },
   "Experiences": {
     "title": "Hasta Deneyimleri",
@@ -240,8 +256,18 @@
     "treatmentPlaceholder": "Tedavi seçin",
     "message": "Mesajınız",
     "messagePlaceholder": "Şikâyetiniz veya sorularınız",
+    "attachments": "Belge ekleyin (isteğe bağlı)",
+    "attachmentsHint": "PDF, JPG veya PNG. En fazla 3 dosya, dosya başına en çok 10 MB.",
+    "attachmentsChoose": "Dosya seç",
+    "attachmentsNone": "Henüz dosya seçilmedi",
+    "attachmentsKvkk": "Yüklediğiniz belgeler sağlık verisi sayılır. Sunucuda saklanmaz; yalnızca başvurunuzu değerlendirebilmemiz için kliniğin e-posta kutusuna iletilir. Belgelerde yalnızca gerekli bilgilerin bulunmasına dikkat edin.",
+    "attachmentsSelected": "Seçilen dosyalar",
+    "attachmentsClear": "Seçimi temizle",
+    "validationTooManyFiles": "En fazla 3 dosya ekleyebilirsiniz.",
+    "validationFileTooLarge": "Her dosya en çok 10 MB olabilir.",
+    "validationFileType": "Yalnızca PDF, JPG ve PNG dosyaları eklenebilir.",
     "privacyLinksIntro": "Başvurmadan önce veri işleme bilgilerini okuyun:",
-    "consent": "Ön değerlendirme için paylaşmayı seçtiğim sağlık bilgilerimin işlenmesine açık rıza veriyorum.",
+    "consent": "Ön değerlendirme için paylaştığım sağlık bilgilerinin ve eklediğim belgelerin işlenmesine; bu kapsamda verilerimin yurt dışındaki hizmet sağlayıcılara aktarılmasına açık rıza veriyorum.",
     "consentRequired": "Devam etmek için açık rıza gereklidir.",
     "submit": "Formu gönder",
     "submitting": "Gönderiliyor...",

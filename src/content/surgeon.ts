@@ -43,6 +43,11 @@ export interface SurgeonProfile {
       {
         /** Akademik unvan + ad (ör. "Doç. Dr. Müslüm Ergün") — dile göre. */
         fullName: string;
+        /**
+         * YALNIZCA unvan (ör. "Doç. Dr."). schema.org Physician
+         * honorificPrefix alani icin: unvanin ad sanilmasini onler.
+         */
+        honorificPrefix: string;
         title: string; // meslek/uzmanlık alt başlığı
         /** Güncel akademik görev (ör. Üroloji Anabilim Dalı Başkanı) — opsiyonel. */
         role?: string;
@@ -64,7 +69,7 @@ export interface SurgeonProfile {
  */
 const publications: SurgeonPublication[] = [
   {
-    authors: 'Ergün M, Sağır S, Hacibey İ',
+    authors: 'Ergün M, Sağır S, Hacıbey İ',
     title:
       'ThuLEP technique for managing benign prostatic hyperplasia: Intraoperative and postoperative complications in a series of 42 consecutive cases',
     journal: 'Journal of Surgery and Medicine',
@@ -131,6 +136,7 @@ export const surgeon: SurgeonProfile = {
   i18n: {
     tr: {
       fullName: 'Doç. Dr. Müslüm Ergün',
+      honorificPrefix: 'Doç. Dr.',
       title: 'Üroloji Uzmanı',
       role: 'Üroloji Kliniği — Altınbaş Üniversitesi',
       bio: [
@@ -159,6 +165,7 @@ export const surgeon: SurgeonProfile = {
     },
     en: {
       fullName: 'Assoc. Prof. Dr. Müslüm Ergün',
+      honorificPrefix: 'Assoc. Prof. Dr.',
       title: 'Urologist',
       role: 'Department of Urology — Altınbaş Üniversitesi',
       bio: [
@@ -187,6 +194,7 @@ export const surgeon: SurgeonProfile = {
     },
     ar: {
       fullName: 'الأستاذ المشارك د. مسلم إرغن',
+      honorificPrefix: 'الأستاذ المشارك د.',
       title: 'أخصائي المسالك البولية',
       role: 'قسم المسالك البولية — Altınbaş Üniversitesi',
       bio: [
@@ -215,6 +223,7 @@ export const surgeon: SurgeonProfile = {
     },
     de: {
       fullName: 'Doz. Dr. Müslüm Ergün',
+      honorificPrefix: 'Doz. Dr.',
       title: 'Facharzt für Urologie',
       role: 'Urologische Klinik — Altınbaş Üniversitesi',
       bio: [
@@ -243,6 +252,7 @@ export const surgeon: SurgeonProfile = {
     },
     ru: {
       fullName: 'Доцент, д-р Мюслюм Эргюн',
+      honorificPrefix: 'Доцент, д-р',
       title: 'Врач-уролог',
       role: 'Клиника урологии — Altınbaş Üniversitesi',
       bio: [
@@ -271,6 +281,7 @@ export const surgeon: SurgeonProfile = {
     },
     fr: {
       fullName: 'Pr. ass. Dr Müslüm Ergün',
+      honorificPrefix: 'Pr. ass. Dr',
       title: 'Urologue',
       role: 'Service d’urologie — Altınbaş Üniversitesi',
       bio: [

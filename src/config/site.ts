@@ -101,14 +101,33 @@ export const siteConfig = {
       iban: 'TR45 0020 6001 2700 9285 8300 02'
     },
     /**
-     * Online konsültasyon ücreti — EURO.
-     * TL ve kur çevirisi kaldırıldı: yurt içi (tr) sayfalarda ücret hiç gösterilmez
-     * (yönetmelik), yabancı dil sayfalarında doğrudan € yazılır.
+     * ONLINE DANIŞMANLIK ÜCRETİ — EURO.
+     * TODO(Dr. Ergün): teyit edilecek.
+     * 0 BIRAKILIRSA sayfada tutar GÖSTERİLMEZ ve "görüşme randevusu
+     * sırasında bildirilir" metni korunur (ConsultationCopy.priceOnRequest).
      */
-    priceEUR: 200,
-    // Kartlı ödeme (iyzico/Stripe) entegrasyonu tamamlanınca true yapın.
+    consultationFeeEUR: 200,
+    /**
+     * ONLINE DANIŞMANLIK ÜCRETİ — TÜRK LİRASI.
+     * TODO(Dr. Ergün): teyit edilecek.
+     *
+     * UYARI: Bu alan doldurulsa bile TÜRKÇE sayfalarda HİÇBİR KOŞULDA
+     * render edilmez — Sağlık Bakanlığı tanıtım yönetmeliği yurt içine
+     * yönelik tanıtımda fiyat yazılmasını yasaklıyor (config/features.ts
+     * → prices). Alan, fatura ve iç kullanım için tutulur.
+     */
+    consultationFeeTRY: 0,
+    // Kartlı ödeme (iyzico/Stripe) API akışı tamamlanınca true yapın.
     // TODO-DOGRULA: ödeme altyapısı tercihi bildirilmedi.
-    cardPaymentEnabled: false
+    cardPaymentEnabled: false,
+    /**
+     * HARİCİ KARTLI ÖDEME BAĞLANTISI.
+     * Ödeme sağlayıcısının hazır ödeme sayfası (iyzico link, Stripe
+     * payment link vb.) NEXT_PUBLIC_CARD_PAYMENT_URL ile verilirse,
+     * havale akışının yanına "Kartla öde" düğmesi eklenir.
+     * Tanımlı değilse düğme HİÇ render edilmez.
+     */
+    cardPaymentUrl: process.env.NEXT_PUBLIC_CARD_PAYMENT_URL?.trim() ?? ''
   }
 } as const;
 

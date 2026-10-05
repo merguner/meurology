@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { buildAlternates } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
@@ -34,6 +35,7 @@ export default async function TreatmentsPage({
 
   return (
     <>
+      <BreadcrumbJsonLd locale={locale} items={[{ name: t('treatments'), href: '/tedaviler' }]} />
       <PageHero
         eyebrow={th('positioning')}
         title={t('treatments')}

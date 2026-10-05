@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { hospitals } from '@/config/hospitals';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import Image from 'next/image';
 import { buildAlternates, getPathname } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -85,14 +87,40 @@ export default async function SurgeonPage({
         }
       : undefined;
 
+  /*
+    PHYSICIAN ŞEMASI.
+    honorificPrefix akademik unvanı ayrı bir alan olarak taşır; name
+    içindeki "Doç. Dr." ifadesi arama motorunda ad sanılmasın diye bu
+    alan ayrıca verilir.
+    worksFor: ameliyatların yapıldığı İKİ hastane (config/hospitals.ts).
+    sameAs: yalnızca DOLU olan profiller — doğrulanmamış bir adres
+    yayımlamaktansa alanı hiç basmamak doğrudur.
+  */
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Physician',
     name: c.fullName,
+    honorificPrefix: c.honorificPrefix,
     jobTitle: c.title,
     medicalSpecialty: 'Urology',
     url: `${siteConfig.domain}${getPathname({ locale, href: '/cerrah' })}`,
     knowsLanguage: surgeon.languages,
+    worksFor: hospitals.map((h) => ({
+      '@type': 'Hospital',
+      name: h.name,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: siteConfig.address.addressLocality,
+        addressCountry: siteConfig.address.addressCountry
+      }
+    })),
+    sameAs: [
+      siteConfig.social.youtube,
+      siteConfig.social.instagram,
+      siteConfig.social.linkedin,
+      siteConfig.social.google,
+      ...Object.values(siteConfig.profiles)
+    ].filter((u) => u.length > 0),
     ...(surgeon.photo ? { image: `${siteConfig.domain}${surgeon.photo}` } : {}),
     ...(c.awards && c.awards.length ? { award: c.awards.map((a) => a.item) } : {})
   };
@@ -100,6 +128,7 @@ export default async function SurgeonPage({
   return (
     <>
       <JsonLd data={jsonLd} />
+      <BreadcrumbJsonLd locale={locale} items={[{ name: t('title'), href: '/cerrah' }]} />
       <PageHero
         eyebrow={t('title')}
         title={c.fullName}

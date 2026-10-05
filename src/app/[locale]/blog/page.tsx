@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { buildAlternates } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
@@ -35,6 +36,7 @@ export default async function BlogIndexPage({
 
   return (
     <>
+      <BreadcrumbJsonLd locale={locale} items={[{ name: t('title'), href: '/blog' }]} />
       <PageHero eyebrow={t('title')} title={t('title')} description={t('subtitle')} />
       <section className="container-content py-12">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

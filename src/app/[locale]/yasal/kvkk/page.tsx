@@ -27,5 +27,5 @@ export default async function KvkkPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Legal');
-  return <LegalDocView doc={kvkkDoc} title={t('kvkkTitle')} locale={locale} />;
+  return <LegalDocView doc={kvkkDoc} title={t('kvkkTitle')} locale={locale} href="/yasal/kvkk" />;
 }

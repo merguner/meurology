@@ -23,7 +23,11 @@
     "ureterRekon": "Ureteral Reconstruction",
     "toggleSubmenu": "Toggle submenu",
     "glossary": "Urology Glossary",
-    "insurance": "Insurance"
+    "insurance": "Insurance",
+    "androloji": "Andrology",
+    "uroonkoloji": "Urologic Oncology",
+    "kadinUrolojisi": "Female Urology",
+    "cocukUrolojisi": "Paediatric Urology"
   },
   "Common": {
     "whatsappCta": "Message us on WhatsApp",
@@ -34,6 +38,7 @@
     "allTreatments": "All treatments",
     "backToTreatments": "Back to treatments",
     "skipToContent": "Skip to content",
+    "logoAlt": "ME Urology Clinic logo",
     "toggleTheme": "Toggle theme",
     "lightTheme": "Light theme",
     "darkTheme": "Dark theme",
@@ -47,6 +52,8 @@
     "positioning": "A trusted address in urological surgery for international patients",
     "heroTitle": "Experience, transparency and international standards in urological surgery",
     "heroSubtitle": "Single-point coordination for robotic and minimally invasive urological surgery: assessment, treatment, accommodation and follow-up.",
+    "heroSpecialty": "Urology",
+    "heroDoctorPhotoAlt": "{name}, Urologist — portrait photograph",
     "heroPrimaryCta": "Free assessment on WhatsApp",
     "heroSecondaryCta": "Explore treatments",
     "accreditationsTitle": "Accreditation and assurance",
@@ -72,9 +79,7 @@
     "sliderLabel": "Highlights",
     "sliderPrev": "Previous slide",
     "sliderNext": "Next slide",
-    "sliderGoTo": "Go to slide",
-    "seeAllReviews": "See all reviews",
-    "trustReviewsLabel": "Google reviews"
+    "sliderGoTo": "Go to slide"
   },
   "Treatment": {
     "sectionDefinition": "About the condition",
@@ -107,6 +112,7 @@
     "sectionTechnology": "Technology used",
     "sectionRecovery": "Recovery",
     "sectionSources": "Scientific sources",
+    "sectionPublication": "Our surgeon’s own publication in this field",
     "quickFacts": {
       "duration": "Procedure time",
       "anesthesia": "Anesthesia",
@@ -142,7 +148,10 @@
     "laserLabel": "Laser platform",
     "licenseLabel": "Health tourism authorisation",
     "licenseHolder": "Certificate holder: {holder} (issued by the Ministry of Health)",
-    "licenseNo": "Certificate no"
+    "licenseNo": "Certificate no",
+    "centersTitle": "Where the operations take place",
+    "hospitalPhotoAlt": "{name} — hospital building",
+    "mapLink": "Show on the map"
   },
   "Process": {
     "title": "International Patient Journey",
@@ -169,7 +178,14 @@
     "visaTitle": "Visa & travel guide",
     "visaBody": "Citizens of many countries can enter Türkiye visa-free or with an e-visa. Once your appointment is confirmed, we support you with an invitation letter and travel documents if needed.",
     "visaDisclaimer": "Visa requirements vary by country; check current official sources.",
-    "faqTitle": "Frequently asked questions"
+    "faqTitle": "Frequently asked questions",
+    "packageTableTitle": "Packages and starting prices",
+    "packageColTreatment": "Treatment",
+    "packageColPrice": "Starting range",
+    "packageColStay": "Stay in Türkiye",
+    "packageColIncludes": "Included",
+    "packageNights": "{count} nights",
+    "packageTableNote": "These amounts are NOT A QUOTATION; they are a starting range. The final amount is given in an itemised written quotation once your tests have been reviewed."
   },
   "Experiences": {
     "title": "Patient Experiences",
@@ -240,8 +256,18 @@
     "treatmentPlaceholder": "Select a treatment",
     "message": "Your message",
     "messagePlaceholder": "Your symptoms or questions",
+    "attachments": "Attach documents (optional)",
+    "attachmentsHint": "PDF, JPG or PNG. Up to 3 files, 10 MB each.",
+    "attachmentsChoose": "Choose files",
+    "attachmentsNone": "No file selected yet",
+    "attachmentsKvkk": "The documents you upload count as health data. They are not stored on our servers; they are sent only to the clinic’s mailbox so that your enquiry can be assessed. Please make sure they contain only the information needed.",
+    "attachmentsSelected": "Selected files",
+    "attachmentsClear": "Clear selection",
+    "validationTooManyFiles": "You can attach at most 3 files.",
+    "validationFileTooLarge": "Each file may be at most 10 MB.",
+    "validationFileType": "Only PDF, JPG and PNG files can be attached.",
     "privacyLinksIntro": "Before submitting, read how your data is processed:",
-    "consent": "I explicitly consent to the processing of health information I choose to share for pre-assessment.",
+    "consent": "I explicitly consent to the processing of the health information I share and the documents I attach for pre-assessment, and to my data being transferred to service providers abroad for that purpose.",
     "consentRequired": "Explicit consent is required to continue.",
     "submit": "Send form",
     "submitting": "Sending...",

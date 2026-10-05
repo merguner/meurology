@@ -263,6 +263,78 @@ export const treatmentSlugMap = {
     fr: 'reconstruction-ureterale',
     ru: 'rekonstrukciya-mochetochnika',
     ar: 'ureteral-reconstruction'
+  },
+  'cocuk-urolojisi': {
+    tr: 'cocuk-urolojisi',
+    en: 'paediatric-urology',
+    de: 'kinderurologie',
+    fr: 'urologie-pediatrique',
+    ru: 'detskaya-urologiya',
+    ar: 'paediatric-urology'
+  },
+  'hipospadias-onarimi': {
+    tr: 'hipospadias-onarimi',
+    en: 'hypospadias-repair',
+    de: 'hypospadie-korrektur',
+    fr: 'cure-hypospadias',
+    ru: 'korrekciya-gipospadii',
+    ar: 'hypospadias-repair'
+  },
+  'vur-cerrahisi': {
+    tr: 'vezikoureteral-reflu-cerrahisi',
+    en: 'vesicoureteral-reflux-surgery',
+    de: 'vesikoureteraler-reflux-operation',
+    fr: 'chirurgie-reflux-vesico-ureteral',
+    ru: 'operaciya-pri-puzyrno-mochetochnikovom-reflyukse',
+    ar: 'vesicoureteral-reflux-surgery'
+  },
+  tot: {
+    tr: 'tot-aski-ameliyati',
+    en: 'tot-sling-surgery',
+    de: 'tot-schlingenoperation',
+    fr: 'bandelette-tot',
+    ru: 'tot-sling-operaciya',
+    ar: 'tot-sling-surgery'
+  },
+  pektopeksi: {
+    tr: 'pektopeksi',
+    en: 'pectopexy',
+    de: 'pektopexie',
+    fr: 'pectopexie',
+    ru: 'pektopeksiya',
+    ar: 'pectopexy'
+  },
+  'mesane-botoksu': {
+    tr: 'mesane-botoksu',
+    en: 'bladder-botox',
+    de: 'blasen-botox',
+    fr: 'botox-vesical',
+    ru: 'botoks-mochevogo-puzyrya',
+    ar: 'bladder-botox'
+  },
+  'yapay-idrar-sfinkteri': {
+    tr: 'yapay-idrar-sfinkteri',
+    en: 'artificial-urinary-sphincter',
+    de: 'kuenstlicher-schliessmuskel',
+    fr: 'sphincter-urinaire-artificiel',
+    ru: 'iskusstvennyy-sfinkter-mochevogo-puzyrya',
+    ar: 'artificial-urinary-sphincter'
+  },
+  tumt: {
+    tr: 'tumt-mikrodalga-tedavisi',
+    en: 'tumt-microwave-therapy',
+    de: 'tumt-mikrowellentherapie',
+    fr: 'tumt-thermotherapie-micro-ondes',
+    ru: 'tumt-mikrovolnovaya-terapiya',
+    ar: 'tumt-microwave-therapy'
+  },
+  'mikroskopik-varikoselektomi': {
+    tr: 'mikroskopik-varikoselektomi',
+    en: 'microsurgical-varicocelectomy',
+    de: 'mikrochirurgische-varikozelektomie',
+    fr: 'varicocelectomie-microchirurgicale',
+    ru: 'mikrohirurgicheskaya-varikocelektomiya',
+    ar: 'microsurgical-varicocelectomy'
   }
 } as const satisfies Record<string, Record<Locale, string>>;
 

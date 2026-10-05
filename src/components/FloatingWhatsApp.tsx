@@ -27,7 +27,7 @@ export async function FloatingWhatsApp() {
         grid öğelerinin örtük en küçük boyutu içerik genişliğidir ve bu olmadan
         sütunlar 1fr'ye sığmaz. `overflow-hidden` son güvenlik ağıdır.
       */}
-      <div className="fixed inset-x-0 bottom-0 z-40 grid w-full grid-cols-2 overflow-hidden border-t border-border bg-surface-1 md:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-40 grid w-full grid-cols-2 overflow-hidden border-t border-border bg-surface md:hidden">
         <a
           href={`tel:${siteConfig.phoneIntl}`}
           aria-label={tc('callCta')}

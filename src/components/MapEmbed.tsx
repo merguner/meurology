@@ -57,7 +57,7 @@ export function MapEmbed({ query, locale, title, loadLabel, notice }: MapEmbedPr
         <button
           type="button"
           onClick={() => setLoaded(true)}
-          className="rounded-lg border border-border bg-surface-1 px-4 py-2 text-sm font-medium text-fg transition-colors hover:bg-surface-2"
+          className="rounded-lg border border-border bg-surface px-4 py-2 text-sm font-medium text-fg transition-colors hover:bg-surface-2"
         >
           {loadLabel}
         </button>

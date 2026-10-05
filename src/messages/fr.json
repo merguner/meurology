@@ -23,7 +23,11 @@
     "ureterRekon": "Reconstruction urétérale",
     "toggleSubmenu": "Afficher le sous-menu",
     "glossary": "Glossaire d’urologie",
-    "insurance": "Assurance"
+    "insurance": "Assurance",
+    "androloji": "Andrologie",
+    "uroonkoloji": "Onco-urologie",
+    "kadinUrolojisi": "Urologie féminine",
+    "cocukUrolojisi": "Urologie pédiatrique"
   },
   "Common": {
     "whatsappCta": "Écrivez-nous sur WhatsApp",
@@ -34,6 +38,7 @@
     "allTreatments": "Tous les traitements",
     "backToTreatments": "Retour aux traitements",
     "skipToContent": "Aller au contenu",
+    "logoAlt": "Logo de ME Urology Clinic",
     "toggleTheme": "Changer de thème",
     "lightTheme": "Thème clair",
     "darkTheme": "Thème sombre",
@@ -47,6 +52,8 @@
     "positioning": "Une adresse de confiance en chirurgie urologique pour les patients internationaux",
     "heroTitle": "Expérience, transparence et normes internationales en chirurgie urologique",
     "heroSubtitle": "Une coordination unique pour la chirurgie urologique robotique et mini-invasive : évaluation, traitement, hébergement et suivi.",
+    "heroSpecialty": "Urologie",
+    "heroDoctorPhotoAlt": "{name}, urologue — photographie de portrait",
     "heroPrimaryCta": "Évaluation gratuite sur WhatsApp",
     "heroSecondaryCta": "Découvrir les traitements",
     "accreditationsTitle": "Accréditations et garanties",
@@ -72,9 +79,7 @@
     "sliderLabel": "À la une",
     "sliderPrev": "Diapositive précédente",
     "sliderNext": "Diapositive suivante",
-    "sliderGoTo": "Aller à la diapositive",
-    "seeAllReviews": "Voir tous les avis",
-    "trustReviewsLabel": "Avis Google"
+    "sliderGoTo": "Aller à la diapositive"
   },
   "Treatment": {
     "sectionDefinition": "À propos de la pathologie",
@@ -107,6 +112,7 @@
     "sectionTechnology": "Technologie utilisée",
     "sectionRecovery": "Récupération",
     "sectionSources": "Sources scientifiques",
+    "sectionPublication": "Publication de notre chirurgien dans ce domaine",
     "quickFacts": {
       "duration": "Durée de l’intervention",
       "anesthesia": "Anesthésie",
@@ -142,7 +148,10 @@
     "laserLabel": "Plateforme laser",
     "licenseLabel": "Autorisation de tourisme médical",
     "licenseHolder": "Titulaire du certificat : {holder} (délivré par le ministère de la Santé)",
-    "licenseNo": "N° de certificat"
+    "licenseNo": "N° de certificat",
+    "centersTitle": "Les établissements où ont lieu les interventions",
+    "hospitalPhotoAlt": "{name} — bâtiment de l’hôpital",
+    "mapLink": "Afficher sur la carte"
   },
   "Process": {
     "title": "Parcours du patient international",
@@ -169,7 +178,14 @@
     "visaTitle": "Guide visa et voyage",
     "visaBody": "Les ressortissants de nombreux pays peuvent entrer en Türkiye sans visa ou avec un e-visa. Une fois votre rendez-vous confirmé, nous vous aidons si besoin avec une lettre d'invitation et les documents de voyage.",
     "visaDisclaimer": "Les conditions de visa varient selon le pays ; consultez les sources officielles à jour.",
-    "faqTitle": "Questions fréquentes"
+    "faqTitle": "Questions fréquentes",
+    "packageTableTitle": "Forfaits et prix de départ",
+    "packageColTreatment": "Traitement",
+    "packageColPrice": "Fourchette de départ",
+    "packageColStay": "Séjour en Türkiye",
+    "packageColIncludes": "Inclus",
+    "packageNights": "{count} nuits",
+    "packageTableNote": "Ces montants NE SONT PAS UN DEVIS ; il s’agit d’une fourchette de départ. Le montant définitif est communiqué dans un devis écrit détaillé après examen de vos documents."
   },
   "Experiences": {
     "title": "Témoignages de patients",
@@ -240,8 +256,18 @@
     "treatmentPlaceholder": "Choisissez un traitement",
     "message": "Votre message",
     "messagePlaceholder": "Vos symptômes ou vos questions",
+    "attachments": "Joindre des documents (facultatif)",
+    "attachmentsHint": "PDF, JPG ou PNG. Trois fichiers au maximum, 10 Mo chacun.",
+    "attachmentsChoose": "Choisir des fichiers",
+    "attachmentsNone": "Aucun fichier sélectionné",
+    "attachmentsKvkk": "Les documents que vous téléversez sont des données de santé. Ils ne sont pas conservés sur nos serveurs : ils sont uniquement transmis à la boîte courriel de la clinique afin que votre demande puisse être évaluée. Veillez à ce qu’ils ne contiennent que les informations nécessaires.",
+    "attachmentsSelected": "Fichiers sélectionnés",
+    "attachmentsClear": "Effacer la sélection",
+    "validationTooManyFiles": "Vous pouvez joindre trois fichiers au maximum.",
+    "validationFileTooLarge": "Chaque fichier ne doit pas dépasser 10 Mo.",
+    "validationFileType": "Seuls les fichiers PDF, JPG et PNG peuvent être joints.",
     "privacyLinksIntro": "Avant d'envoyer, consultez le traitement de vos données :",
-    "consent": "Je consens expressément au traitement des informations de santé que je choisis de partager à des fins de pré-évaluation.",
+    "consent": "Je consens expressément au traitement des informations de santé que je partage et des documents que je joins à des fins de pré-évaluation, ainsi qu’au transfert de mes données, à cette fin, à des prestataires établis à l’étranger.",
     "consentRequired": "Le consentement explicite est requis pour continuer.",
     "submit": "Envoyer le formulaire",
     "submitting": "Envoi en cours...",
