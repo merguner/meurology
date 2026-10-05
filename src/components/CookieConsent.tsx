@@ -152,7 +152,7 @@ export function CookieConsent() {
   return (
     <section
       aria-labelledby="cookie-consent-title"
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-surface-1 shadow-lg"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-surface shadow-lg"
     >
       <div className="container-content flex flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
         <div className="max-w-2xl">

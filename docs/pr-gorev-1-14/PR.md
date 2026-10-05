@@ -295,14 +295,26 @@ yayınlanmamalı. **Değişiklik yapılmadı, rapor edildi.**
 sayfaları** saydığı için bu sayfaya dokunulmadı. Kaldırılması isteniyorsa
 ayrıca söylenmeli.
 
-### 5.6 Kapsam dışı bulunan hata
+### 5.6 Çalışma sırasında bulunan hata (düzeltildi)
 
 `bg-surface-1` sınıfı hiçbir yerde tanımlı değil (`tailwind.config.ts`'te
-yalnızca `surface` ve `surface-2` var). `FloatingWhatsApp` mobil alt
-çubuğu bu sınıfı kullandığı için çubuğun "Ara" yarısı saydam kalıyor ve
-arkasındaki içerik görünüyor — 3. ve 4. ekran görüntüsünde fark ediliyor.
-Bu paketin kapsamı dışında olduğu için **düzeltilmedi**, ayrı bir iş
-olarak işaretlendi.
+yalnızca `surface` ve `surface-2` var; `globals.css`'te de böyle bir
+yardımcı sınıf yok). Tanımsız sınıf hiçbir kurala karşılık gelmediği için
+onu kullanan üç öğe **arka plansız**, yani saydam kalıyordu:
+
+| Dosya | Etkisi |
+|---|---|
+| `CookieConsent.tsx` | **Çerez onay bandı** saydam — arkasındaki sayfa içeriği metnin içinden görünüyordu |
+| `FloatingWhatsApp.tsx` | Mobil alt çubuğun "Ara" yarısı saydam (3. ve 4. ekran görüntüsünde fark ediliyor) |
+| `MapEmbed.tsx` | "Haritayı yükle" düğmesi saydam |
+
+Üçü de `bg-surface` ile değiştirildi. Hata bu paketten önce de vardı;
+başlangıçta kapsam dışı bırakılmıştı, sonra bu dalda düzeltildi.
+
+Doğrulama: 375 px mobil, TR ve AR, açık ve koyu tema. Açık temada her iki
+sabit öğe de `rgb(255,255,255)`, koyu temada `rgb(17,28,43)` — ikisi de
+opak. Arapçada `dir="rtl"` korunuyor, yatay taşma yok, çerez bandındaki
+"Reddet" ve "Kabul et" düğmelerinin eşit görünürlüğü bozulmadı.
 
 ---
 
