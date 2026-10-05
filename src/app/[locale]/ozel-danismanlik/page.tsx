@@ -35,7 +35,16 @@ export default async function ConsultationPage({
   const cfg = siteConfig.consultation;
   // YÖNETMELİK: Türkçe sayfada ücret TUTARI yazılmaz; yalnızca "ücretlidir" bilgisi.
   const showPrice = features(locale).prices;
-  const price = `${formatEUR(cfg.priceEUR, locale)} (${c.vatIncluded})`;
+  /*
+    UCRET GOSTERIMI
+    - Turkce sayfada tutar HICBIR KOSULDA yazilmaz (yonetmelik).
+    - Ayar dosyasinda tutar 0 ise, diger dillerde de tutar yerine
+      "randevu onayiyla birlikte bildirilir" metni gosterilir.
+  */
+  const hasFee = cfg.consultationFeeEUR > 0;
+  const price = hasFee
+    ? `${formatEUR(cfg.consultationFeeEUR, locale)} (${c.vatIncluded})`
+    : c.priceOnRequest;
   const priceNote = c.priceNote.replace('{duration}', String(cfg.durationMinutes));
 
   return (
@@ -64,8 +73,10 @@ export default async function ConsultationPage({
           {/* Ücret — tutar yalnızca yabancı dil sayfalarında (sağlık turizmi istisnası) */}
           <div className="card p-5">
             <p className="label-mono">{c.priceLabel}</p>
-            {showPrice ? (
+            {showPrice && hasFee ? (
               <p className="mt-1 text-2xl font-bold text-primary">{price}</p>
+            ) : showPrice ? (
+              <p className="mt-1 font-semibold text-fg">{c.priceOnRequest}</p>
             ) : (
               <p className="mt-1 font-semibold text-fg">{c.priceDomesticNotice}</p>
             )}
@@ -84,6 +95,27 @@ export default async function ConsultationPage({
                 </li>
               ))}
             </ol>
+          </div>
+
+          {/*
+            GENISLETILMIS BOLUMLER (content/consultation.ts -> sections):
+            gorusmede neler konusulur, hangi belgeler hazirlanir,
+            mahremiyet, iptal ve degisiklik kosullari.
+            TODO(Dr. Ergun): iptal/degisiklik kosullarinin kesin metni
+            teyit edilecek; su an kosullarin randevu onayiyla yazili
+            olarak iletilecegi bildiriliyor.
+          */}
+          <div className="space-y-8">
+            {c.sections.map((sec) => (
+              <section key={sec.heading}>
+                <h2 className="mb-3 text-xl font-bold">{sec.heading}</h2>
+                <div className="prose-content space-y-3">
+                  {sec.paragraphs.map((p, i) => (
+                    <p key={i} className="text-muted">{p}</p>
+                  ))}
+                </div>
+              </section>
+            ))}
           </div>
         </div>
 

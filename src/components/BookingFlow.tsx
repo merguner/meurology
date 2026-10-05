@@ -56,7 +56,7 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
   const c = copy;
   const cfg = siteConfig.consultation;
   // Tam ücret ifadesi (ör. "200 € (KDV dahil)") — ödeme adımında ve WhatsApp mesajında.
-  const price = `${formatEUR(cfg.priceEUR, locale)} (${c.vatIncluded})`;
+  const price = `${formatEUR(cfg.consultationFeeEUR, locale)} (${c.vatIncluded})`;
 
 
   const [step, setStep] = useState<1 | 2 | 3>(1);
@@ -83,7 +83,7 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
       const res = await fetch('/api/odeme', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code, amountEUR: cfg.priceEUR, name, country })
+        body: JSON.stringify({ code, amountEUR: cfg.consultationFeeEUR, name, country })
       });
       const result = await res.json();
       if (result?.ok && result?.checkoutUrl) {
@@ -352,9 +352,37 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
             {c.whatsappReceiptCta}
           </a>
 
-          {/* Alternatif: Kartla öde. Entegrasyon (iyzico/Stripe) aktif değilken
-              buton ve uyarı metni HİÇ render edilmez — yayında yer tutucu olmaz.
-              TODO-DOGRULA: ödeme altyapısı seçilince cardPaymentEnabled: true. */}
+          {/*
+            ALTERNATIF: KARTLA ODE — HARICI BAGLANTI.
+            Odeme saglayicisinin hazir odeme sayfasi
+            NEXT_PUBLIC_CARD_PAYMENT_URL ile verilmisse, havale akisinin
+            yanina bu dugme eklenir. Tanimli degilse HIC render edilmez;
+            yayinda calismayan bir dugme gorunmez.
+            Randevu kodu baglantiya parametre olarak eklenir ki odeme
+            saglayicisindaki kayit randevuyla eslestirilebilsin.
+          */}
+          {cfg.cardPaymentUrl && (
+            <>
+              <div className="mt-3 flex items-center gap-3 text-xs text-muted">
+                <span className="h-px flex-1 bg-border" aria-hidden="true" />
+                {tp('orLabel')}
+                <span className="h-px flex-1 bg-border" aria-hidden="true" />
+              </div>
+              <a
+                href={`${cfg.cardPaymentUrl}${cfg.cardPaymentUrl.includes('?') ? '&' : '?'}ref=${encodeURIComponent(code)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline mt-3 w-full"
+              >
+                <Icon name="document" size={18} />
+                {tp('cardCta')}
+              </a>
+            </>
+          )}
+
+          {/* Alternatif: site ici kartli odeme akisi (API). Entegrasyon
+              aktif degilken buton ve uyari metni HIC render edilmez.
+              TODO-DOGRULA: odeme altyapisi secilince cardPaymentEnabled: true. */}
           {cfg.cardPaymentEnabled && (
           <>
           <div className="mt-3 flex items-center gap-3 text-xs text-muted">
