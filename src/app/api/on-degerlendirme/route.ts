@@ -1,6 +1,12 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
 import { siteConfig, whatsappLink } from '@/config/site';
+import { createMailTransport } from '@/lib/mailer';
+import {
+  MAX_ATTACHMENTS,
+  MAX_ATTACHMENT_BYTES,
+  validateAttachments,
+  type IncomingFile
+} from '@/lib/formAttachments';
 import { getTreatment } from '@/content/treatments';
 import { resolveContent } from '@/content/types';
 import type { Locale } from '@/i18n/routing';
@@ -26,9 +32,17 @@ export const runtime = 'nodejs';
  *  - SMTP_SECURE  ('true' → 465/SSL, 'false' → 587/STARTTLS)
  *  - SMTP_USER    (info@meurology.com)
  *  - SMTP_PASS    (mail hesabının şifresi)
- *  - LEAD_NOTIFICATION_EMAIL (opsiyonel — varsayılan: SMTP_USER)
+ *  - LEAD_NOTIFICATION_EMAIL (opsiyonel — varsayılan: siteConfig.email)
+ *  - MAIL_FAKE=1  (test/geliştirme — hiçbir e-posta GÖNDERİLMEZ)
+ *
+ * İSTEK BİÇİMİ: hem `application/json` hem de `multipart/form-data`
+ * kabul edilir. Dosya eki gönderilecekse multipart kullanılır; alanlar
+ * `payload` adlı JSON parçası, dosyalar `files` alanıdır.
  *
  * KVKK: PII yalnızca bildirim amacıyla, hastanın açık rızasıyla iletilir.
+ * YÜKLENEN BELGELER SUNUCUDA SAKLANMAZ — yalnızca bildirim e-postasına
+ * ek olarak iliştirilir ve istek bitince bellekten düşer. Hastaya giden
+ * otomatik yanıta ve CRM webhook'una EK GÖNDERİLMEZ.
  */
 
 export interface PreAssessmentPayload {
@@ -107,11 +121,52 @@ export async function POST(request: Request) {
     );
   }
 
+  /*
+    GÖVDE: JSON veya multipart.
+    Dosya eki olmayan istekler eskisi gibi düz JSON gönderebilir; forma
+    dosya eklendiğinde istemci multipart'a geçer. İki biçim de desteklenir
+    ki dışarıdan JSON ile çağıran bir entegrasyon kırılmasın.
+  */
   let data: Partial<PreAssessmentPayload>;
-  try {
-    data = await request.json();
-  } catch {
-    return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 });
+  let incomingFiles: IncomingFile[] = [];
+  const contentType = request.headers.get('content-type') ?? '';
+
+  if (contentType.includes('multipart/form-data')) {
+    try {
+      const form = await request.formData();
+      const raw = form.get('payload');
+      data = typeof raw === 'string' ? JSON.parse(raw) : {};
+      const entries = form.getAll('files').filter((v): v is File => v instanceof File);
+      // Sayı sınırını dosyaları belleğe almadan ÖNCE uygula.
+      if (entries.length > MAX_ATTACHMENTS) {
+        return NextResponse.json(
+          { ok: false, error: 'too_many_files', max: MAX_ATTACHMENTS },
+          { status: 422 }
+        );
+      }
+      for (const f of entries) {
+        if (f.size === 0) continue; // boş dosya alanı — yok say
+        if (f.size > MAX_ATTACHMENT_BYTES) {
+          return NextResponse.json(
+            { ok: false, error: 'file_too_large', maxBytes: MAX_ATTACHMENT_BYTES },
+            { status: 413 }
+          );
+        }
+        incomingFiles.push({
+          name: f.name,
+          type: f.type,
+          bytes: new Uint8Array(await f.arrayBuffer())
+        });
+      }
+    } catch {
+      return NextResponse.json({ ok: false, error: 'invalid_form' }, { status: 400 });
+    }
+  } else {
+    try {
+      data = await request.json();
+    } catch {
+      return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 });
+    }
   }
 
   // Honeypot: dolu geldiyse (bot) sessizce başarı döndür — botu bilgilendirme.
@@ -164,33 +219,35 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: 'consent_required' }, { status: 422 });
   }
 
+  /*
+    EKLERİN DOĞRULANMASI — uzantı ve tarayıcı MIME'ı yeterli sayılmaz;
+    dosyanın ilk baytlarına bakılarak gerçek türü belirlenir. Tanınmayan
+    içerik reddedilir ve kliniğin gelen kutusuna hiç ulaşmaz.
+  */
+  const attachmentResult = validateAttachments(incomingFiles);
+  if (!attachmentResult.ok) {
+    return NextResponse.json(
+      { ok: false, error: attachmentResult.error },
+      { status: attachmentResult.error === 'file_too_large' ? 413 : 422 }
+    );
+  }
+  const attachments = attachmentResult.attachments;
+
   const at = new Date().toISOString();
   const consentTextVersion = '2026-09-21';
 
-  // Sunucu logunda hasta kimliği ve iletişim bilgilerini tutma.
+  // Sunucu logunda hasta kimliği, iletişim bilgisi veya DOSYA ADI tutma:
+  // dosya adları ("ahmet-psa-raporu.pdf") kendi başına sağlık verisidir.
   console.info('[on-degerlendirme] Yeni başvuru alındı:', {
     hasEmail,
     hasPhone,
+    attachmentCount: attachments.length,
     at
   });
 
   // SMTP ile e-posta bildirimi.
   try {
-    const { SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS } = process.env;
-    if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
-      throw new Error('SMTP ortam değişkenleri (SMTP_HOST/SMTP_USER/SMTP_PASS) tanımlı değil');
-    }
-
-    const port = Number(SMTP_PORT) || 465;
-    // SMTP_SECURE açıkça 'false' değilse SSL (465) varsayılır.
-    const secure = SMTP_SECURE ? SMTP_SECURE === 'true' : port === 465;
-
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port,
-      secure,
-      auth: { user: SMTP_USER, pass: SMTP_PASS }
-    });
+    const { transport: transporter, from: mailFrom } = createMailTransport();
 
     // Bildirim alıcısı: kliniğin görünen e-postası (siteConfig.email = info@meurology.com).
     // SMTP_USER yalnızca gönderen/kimlik doğrulama hesabıdır (info@meurology.com).
@@ -261,6 +318,16 @@ export async function POST(request: Request) {
           data.message || '—'
         )}</div>
       </div>
+      ${
+        attachments.length
+          ? `<div style="margin-top:16px;">
+        <p style="margin:0 0 4px;color:#555;font-size:14px;">Hastanın eklediği belgeler (${attachments.length})</p>
+        <ul style="margin:0;padding-inline-start:18px;font-size:14px;">${attachments
+          .map((a) => `<li>${esc(a.filename)}</li>`)
+          .join('')}</ul>
+      </div>`
+          : ''
+      }
     </div>`;
 
     const textLines = [
@@ -276,15 +343,20 @@ export async function POST(request: Request) {
       `Başvuru zamanı: ${at}`,
       `Sağlık verisi rızası: Onaylandı (metin sürümü: ${consentTextVersion})`,
       '',
-      `Mesaj: ${data.message || '—'}`
+      `Mesaj: ${data.message || '—'}`,
+      attachments.length
+        ? `Ekler (${attachments.length}): ${attachments.map((a) => a.filename).join(', ')}`
+        : null
     ].filter(Boolean);
 
     await transporter.sendMail({
-      from: `"ME Urology Clinic" <${SMTP_USER}>`,
+      from: `"ME Urology Clinic" <${mailFrom}>`,
       to,
       subject,
       html,
       text: textLines.join('\n'),
+      // Belgeler YALNIZCA kliniğe giden bu bildirime iliştirilir.
+      ...(attachments.length ? { attachments } : {}),
       // "Yanıtla" doğrudan hastaya gitsin (e-posta verdiyse).
       ...(hasEmail ? { replyTo: data.email as string } : {})
     });
@@ -298,7 +370,7 @@ export async function POST(request: Request) {
         const dirAttr = rtl ? 'rtl' : 'ltr';
         const align = rtl ? 'right' : 'left';
         await transporter.sendMail({
-          from: `"ME Urology Clinic" <${SMTP_USER}>`,
+          from: `"ME Urology Clinic" <${mailFrom}>`,
           to: data.email as string,
           subject: c.subject,
           html: `
