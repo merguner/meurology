@@ -144,7 +144,10 @@
     "laserLabel": "Lazer platformu",
     "licenseLabel": "Sağlık turizmi yetki belgesi",
     "licenseHolder": "Belge sahibi: {holder} (T.C. Sağlık Bakanlığı tarafından düzenlenir)",
-    "licenseNo": "Belge no"
+    "licenseNo": "Belge no",
+    "centersTitle": "Ameliyatların yapıldığı merkezler",
+    "hospitalPhotoAlt": "{name} — hastane binası",
+    "mapLink": "Haritada göster"
   },
   "Process": {
     "title": "Uluslararası Hasta Süreci",

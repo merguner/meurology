@@ -13,3 +13,12 @@ Varlık denetimi: `src/lib/publicImage.ts`.
 
 Not: Cerrah sayfasında kullanılan portre hâlihazırda `public/dr-muslum-ergun.jpg`
 altındadır; istenirse bu dosya `dr-ergun-hero.jpg` adıyla buraya kopyalanabilir.
+
+## Hastane fotoğrafları
+
+| Dosya | Nerede kullanılır | Önerilen boyut |
+|---|---|---|
+| `hastane-medical-park-bahcelievler.jpg` | Hastane sayfası, merkez kartı | 1200×675 px (16:9) |
+| `hastane-liv-topkapi.jpg` | Hastane sayfası, merkez kartı | 1200×675 px (16:9) |
+
+Yolların tanımlandığı yer: `src/config/hospitals.ts`.

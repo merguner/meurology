@@ -144,7 +144,10 @@
     "laserLabel": "Laser platform",
     "licenseLabel": "Health tourism authorisation",
     "licenseHolder": "Certificate holder: {holder} (issued by the Ministry of Health)",
-    "licenseNo": "Certificate no"
+    "licenseNo": "Certificate no",
+    "centersTitle": "Where the operations take place",
+    "hospitalPhotoAlt": "{name} — hospital building",
+    "mapLink": "Show on the map"
   },
   "Process": {
     "title": "International Patient Journey",

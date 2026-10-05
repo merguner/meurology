@@ -19,32 +19,32 @@ export const accreditations: Accreditation[] = [
       tr: {
         name: 'JCI Akreditasyonu',
         explainer:
-          'Joint Commission International — hasta güvenliği ve bakım kalitesinde uluslararası altın standart belgesidir.'
+          'Joint Commission International — hasta güvenliği ve bakım kalitesi alanında uluslararası bir akreditasyon programıdır.'
       },
       en: {
         name: 'JCI Accreditation',
         explainer:
-          'Joint Commission International — the global gold standard for patient safety and quality of care.'
+          'Joint Commission International — an international accreditation programme for patient safety and quality of care.'
       },
       ar: {
         name: 'اعتماد JCI',
         explainer:
-          'اللجنة الدولية المشتركة (Joint Commission International) — المعيار الذهبي العالمي لسلامة المرضى وجودة الرعاية.'
+          'اللجنة الدولية المشتركة (Joint Commission International) — برنامج اعتماد دولي لسلامة المرضى وجودة الرعاية.'
       },
       fr: {
         name: 'Accréditation JCI',
         explainer:
-          'Norme internationale de qualité et de sécurité des soins (Joint Commission International).'
+          'Programme international d’accréditation pour la sécurité des patients et la qualité des soins (Joint Commission International).'
       },
       de: {
         name: 'JCI-Akkreditierung',
         explainer:
-          'Joint Commission International — der weltweite Goldstandard für Patientensicherheit und Versorgungsqualität.'
+          'Joint Commission International — ein internationales Akkreditierungsprogramm für Patientensicherheit und Versorgungsqualität.'
       },
       ru: {
         name: 'Аккредитация JCI',
         explainer:
-          'Joint Commission International — мировой золотой стандарт безопасности пациентов и качества медицинской помощи.'
+          'Joint Commission International — международная программа аккредитации по безопасности пациентов и качеству медицинской помощи.'
       }
     }
   },

@@ -144,7 +144,10 @@
     "laserLabel": "Laserplattform",
     "licenseLabel": "Zulassung Gesundheitstourismus",
     "licenseHolder": "Zulassungsinhaber: {holder} (ausgestellt vom Gesundheitsministerium)",
-    "licenseNo": "Zulassungsnummer"
+    "licenseNo": "Zulassungsnummer",
+    "centersTitle": "Wo die Eingriffe stattfinden",
+    "hospitalPhotoAlt": "{name} — Krankenhausgebäude",
+    "mapLink": "Auf der Karte zeigen"
   },
   "Process": {
     "title": "Ablauf für internationale Patienten",

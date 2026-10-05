@@ -144,7 +144,10 @@
     "laserLabel": "منصّة الليزر",
     "licenseLabel": "تصريح السياحة الصحية",
     "licenseHolder": "صاحب الشهادة: {holder} (صادرة عن وزارة الصحة)",
-    "licenseNo": "رقم الشهادة"
+    "licenseNo": "رقم الشهادة",
+    "centersTitle": "المراكز التي تُجرى فيها العمليات",
+    "hospitalPhotoAlt": "{name} — مبنى المستشفى",
+    "mapLink": "عرض على الخريطة"
   },
   "Process": {
     "title": "رحلة المريض الدولي",

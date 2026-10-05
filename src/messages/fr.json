@@ -144,7 +144,10 @@
     "laserLabel": "Plateforme laser",
     "licenseLabel": "Autorisation de tourisme médical",
     "licenseHolder": "Titulaire du certificat : {holder} (délivré par le ministère de la Santé)",
-    "licenseNo": "N° de certificat"
+    "licenseNo": "N° de certificat",
+    "centersTitle": "Les établissements où ont lieu les interventions",
+    "hospitalPhotoAlt": "{name} — bâtiment de l’hôpital",
+    "mapLink": "Afficher sur la carte"
   },
   "Process": {
     "title": "Parcours du patient international",
