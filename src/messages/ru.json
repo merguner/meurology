@@ -72,9 +72,7 @@
     "sliderLabel": "Главное",
     "sliderPrev": "Предыдущий слайд",
     "sliderNext": "Следующий слайд",
-    "sliderGoTo": "Перейти к слайду",
-    "seeAllReviews": "Смотреть все отзывы",
-    "trustReviewsLabel": "Отзывы Google"
+    "sliderGoTo": "Перейти к слайду"
   },
   "Treatment": {
     "sectionDefinition": "О состоянии",

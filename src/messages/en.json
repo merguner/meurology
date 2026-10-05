@@ -72,9 +72,7 @@
     "sliderLabel": "Highlights",
     "sliderPrev": "Previous slide",
     "sliderNext": "Next slide",
-    "sliderGoTo": "Go to slide",
-    "seeAllReviews": "See all reviews",
-    "trustReviewsLabel": "Google reviews"
+    "sliderGoTo": "Go to slide"
   },
   "Treatment": {
     "sectionDefinition": "About the condition",

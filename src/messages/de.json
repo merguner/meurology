@@ -72,9 +72,7 @@
     "sliderLabel": "Höhepunkte",
     "sliderPrev": "Vorherige Folie",
     "sliderNext": "Nächste Folie",
-    "sliderGoTo": "Zu Folie springen",
-    "seeAllReviews": "Alle Bewertungen ansehen",
-    "trustReviewsLabel": "Google-Bewertungen"
+    "sliderGoTo": "Zu Folie springen"
   },
   "Treatment": {
     "sectionDefinition": "Über den Zustand",

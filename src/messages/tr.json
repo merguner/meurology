@@ -72,9 +72,7 @@
     "sliderLabel": "Öne çıkanlar",
     "sliderPrev": "Önceki slayt",
     "sliderNext": "Sonraki slayt",
-    "sliderGoTo": "Slayta git",
-    "seeAllReviews": "Tüm yorumları gör",
-    "trustReviewsLabel": "Google yorumları"
+    "sliderGoTo": "Slayta git"
   },
   "Treatment": {
     "sectionDefinition": "Durumun tanımı",

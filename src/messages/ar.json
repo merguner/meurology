@@ -72,9 +72,7 @@
     "sliderLabel": "أبرز المحتوى",
     "sliderPrev": "الشريحة السابقة",
     "sliderNext": "الشريحة التالية",
-    "sliderGoTo": "الانتقال إلى الشريحة",
-    "seeAllReviews": "عرض كل التقييمات",
-    "trustReviewsLabel": "تقييمات Google"
+    "sliderGoTo": "الانتقال إلى الشريحة"
   },
   "Treatment": {
     "sectionDefinition": "عن الحالة",

@@ -8,7 +8,6 @@ import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { whatsappMessageFor } from '@/config/site';
 import { TreatmentCard } from '@/components/TreatmentCard';
 import { HeroSlider } from '@/components/HeroSlider';
-import { TrustStrip } from '@/components/TrustStrip';
 import { Icon, type IconName } from '@/components/Icon';
 
 export default async function HomePage({
@@ -38,9 +37,11 @@ export default async function HomePage({
     <>
       {/* HERO SLIDER — içerik src/content/heroSlides.ts'ten okunur (güncellenebilir) */}
       <HeroSlider />
-
-      {/* SABİT GÜVEN ŞERİDİ — kaymaz; yalnızca tr dışı dillerde Google yorumları */}
-      <TrustStrip locale={locale} />
+      {/* KALDIRILDI: ana sayfadaki Google yorumlari seridi (yildiz + hasta
+          alintilari). Gerekce: hasta yorumu ve yildiz gosterimi Saglik
+          Bakanligi tanitim yonetmeligi acisindan risklidir; bu bolum yalnizca
+          Turkce disi dillerde aciktir diye tutulmustu, simdi tum dillerden
+          kaldirildi. Footer'daki Google Isletme baglantisi (alintisiz) kalir. */}
 
       {/* KALDIRILDI: "Mesleki üyelik" bölümü (EAU rozeti).
           Gerekçe: Bölüm 0 → dernek üyeliği yok; doğrulanamayan üyelik beyanı
