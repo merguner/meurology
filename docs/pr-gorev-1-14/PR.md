@@ -60,14 +60,14 @@ yapay zekâ hasta asistanı.
 
 | | TR | AR (RTL) |
 |---|---|---|
-| Masaüstü | ![TR masaüstü](01-anasayfa-tr-masaustu.jpg) | ![AR masaüstü](02-anasayfa-ar-masaustu.jpg) |
-| Mobil (375 px) | ![TR mobil](03-anasayfa-tr-mobil.jpg) | ![AR mobil](04-anasayfa-ar-mobil.jpg) |
+| Masaüstü | ![TR masaüstü](https://raw.githubusercontent.com/merguner/meurology/gorev-paketi-1-14/docs/pr-gorev-1-14/01-anasayfa-tr-masaustu.jpg) | ![AR masaüstü](https://raw.githubusercontent.com/merguner/meurology/gorev-paketi-1-14/docs/pr-gorev-1-14/02-anasayfa-ar-masaustu.jpg) |
+| Mobil (375 px) | ![TR mobil](https://raw.githubusercontent.com/merguner/meurology/gorev-paketi-1-14/docs/pr-gorev-1-14/03-anasayfa-tr-mobil.jpg) | ![AR mobil](https://raw.githubusercontent.com/merguner/meurology/gorev-paketi-1-14/docs/pr-gorev-1-14/04-anasayfa-ar-mobil.jpg) |
 
 Yapay zekâ asistanı (anahtar tanımlıyken):
 
 | TR | AR (RTL) | DE (koyu tema) |
 |---|---|---|
-| ![asistan TR](05-asistan-tr.jpg) | ![asistan AR](06-asistan-ar-rtl.jpg) | ![asistan DE](07-asistan-de-koyu-tema.jpg) |
+| ![asistan TR](https://raw.githubusercontent.com/merguner/meurology/gorev-paketi-1-14/docs/pr-gorev-1-14/05-asistan-tr.jpg) | ![asistan AR](https://raw.githubusercontent.com/merguner/meurology/gorev-paketi-1-14/docs/pr-gorev-1-14/06-asistan-ar-rtl.jpg) | ![asistan DE](https://raw.githubusercontent.com/merguner/meurology/gorev-paketi-1-14/docs/pr-gorev-1-14/07-asistan-de-koyu-tema.jpg) |
 
 ---
 
