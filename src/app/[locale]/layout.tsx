@@ -13,6 +13,7 @@ import { SiteFooter } from '@/components/SiteFooter';
 import { CookieConsent } from '@/components/CookieConsent';
 import { AnalyticsEvents } from '@/components/AnalyticsEvents';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
+import { AssistantBubble } from '@/components/AssistantBubble';
 import { JsonLd } from '@/components/JsonLd';
 import { buildAlternates, getPathname } from '@/i18n/navigation';
 import '@/app/globals.css';
@@ -124,6 +125,12 @@ export default async function LocaleLayout({
           <main id="main">{children}</main>
           <SiteFooter />
           <FloatingWhatsApp />
+          {/*
+            Yapay zekâ sohbet balonu — WhatsApp düğmesinin ÜSTÜNDE durur
+            (AsistanSohbet → altBosluk). ANTHROPIC_API_KEY tanımlı
+            değilse hiç render edilmez.
+          */}
+          <AssistantBubble locale={locale as Locale} />
           <CookieConsent />
           {/* WhatsApp / telefon / e-posta tiklamalarini tek noktadan olcer. */}
           <AnalyticsEvents />
