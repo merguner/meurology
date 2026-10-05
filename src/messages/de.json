@@ -178,7 +178,14 @@
     "visaTitle": "Visum & Reiseführer",
     "visaBody": "Bürger vieler Länder können visumfrei oder mit E-Visum in die Türkei einreisen. Nach Bestätigung Ihres Termins unterstützen wir Sie bei Bedarf mit einem Einladungsschreiben und Reisedokumenten.",
     "visaDisclaimer": "Visabestimmungen variieren je nach Land; prüfen Sie aktuelle offizielle Quellen.",
-    "faqTitle": "Häufig gestellte Fragen"
+    "faqTitle": "Häufig gestellte Fragen",
+    "packageTableTitle": "Pakete und Startpreise",
+    "packageColTreatment": "Behandlung",
+    "packageColPrice": "Ab-Preisspanne",
+    "packageColStay": "Aufenthalt in der Türkei",
+    "packageColIncludes": "Enthalten",
+    "packageNights": "{count} Nächte",
+    "packageTableNote": "Diese Beträge sind KEIN ANGEBOT, sondern eine Ab-Preisspanne. Der endgültige Betrag folgt in einem detaillierten schriftlichen Angebot, sobald Ihre Befunde gesichtet sind."
   },
   "Experiences": {
     "title": "Patientenerfahrungen",

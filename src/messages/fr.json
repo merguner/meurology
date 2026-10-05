@@ -178,7 +178,14 @@
     "visaTitle": "Guide visa et voyage",
     "visaBody": "Les ressortissants de nombreux pays peuvent entrer en Türkiye sans visa ou avec un e-visa. Une fois votre rendez-vous confirmé, nous vous aidons si besoin avec une lettre d'invitation et les documents de voyage.",
     "visaDisclaimer": "Les conditions de visa varient selon le pays ; consultez les sources officielles à jour.",
-    "faqTitle": "Questions fréquentes"
+    "faqTitle": "Questions fréquentes",
+    "packageTableTitle": "Forfaits et prix de départ",
+    "packageColTreatment": "Traitement",
+    "packageColPrice": "Fourchette de départ",
+    "packageColStay": "Séjour en Türkiye",
+    "packageColIncludes": "Inclus",
+    "packageNights": "{count} nuits",
+    "packageTableNote": "Ces montants NE SONT PAS UN DEVIS ; il s’agit d’une fourchette de départ. Le montant définitif est communiqué dans un devis écrit détaillé après examen de vos documents."
   },
   "Experiences": {
     "title": "Témoignages de patients",

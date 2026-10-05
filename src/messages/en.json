@@ -178,7 +178,14 @@
     "visaTitle": "Visa & travel guide",
     "visaBody": "Citizens of many countries can enter Türkiye visa-free or with an e-visa. Once your appointment is confirmed, we support you with an invitation letter and travel documents if needed.",
     "visaDisclaimer": "Visa requirements vary by country; check current official sources.",
-    "faqTitle": "Frequently asked questions"
+    "faqTitle": "Frequently asked questions",
+    "packageTableTitle": "Packages and starting prices",
+    "packageColTreatment": "Treatment",
+    "packageColPrice": "Starting range",
+    "packageColStay": "Stay in Türkiye",
+    "packageColIncludes": "Included",
+    "packageNights": "{count} nights",
+    "packageTableNote": "These amounts are NOT A QUOTATION; they are a starting range. The final amount is given in an itemised written quotation once your tests have been reviewed."
   },
   "Experiences": {
     "title": "Patient Experiences",

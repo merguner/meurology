@@ -178,7 +178,14 @@
     "visaTitle": "Vize ve seyahat rehberi",
     "visaBody": "Birçok ülke vatandaşı Türkiye'ye vizesiz veya e-vize ile giriş yapabilir. Randevunuz onaylandığında, gerekirse davet mektubu ve seyahat belgeleri konusunda destek sağlarız.",
     "visaDisclaimer": "Vize bilgileri ülkeye göre değişir; güncel resmi kaynakları kontrol edin.",
-    "faqTitle": "Sık sorulan sorular"
+    "faqTitle": "Sık sorulan sorular",
+    "packageTableTitle": "Paketler ve başlangıç fiyatları",
+    "packageColTreatment": "Tedavi",
+    "packageColPrice": "Başlangıç aralığı",
+    "packageColStay": "Türkiye’de kalış",
+    "packageColIncludes": "Pakete dâhil",
+    "packageNights": "{count} gece",
+    "packageTableNote": "Buradaki tutarlar bir TEKLİF DEĞİLDİR; başlangıç aralığıdır. Kesin tutar, tetkikleriniz incelendikten sonra kalem kalem ayrılmış yazılı teklifle bildirilir."
   },
   "Experiences": {
     "title": "Hasta Deneyimleri",
