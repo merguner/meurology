@@ -267,7 +267,7 @@
     "validationFileTooLarge": "Chaque fichier ne doit pas dépasser 10 Mo.",
     "validationFileType": "Seuls les fichiers PDF, JPG et PNG peuvent être joints.",
     "privacyLinksIntro": "Avant d'envoyer, consultez le traitement de vos données :",
-    "consent": "Je consens expressément au traitement des informations de santé que je choisis de partager à des fins de pré-évaluation.",
+    "consent": "Je consens expressément au traitement des informations de santé que je partage et des documents que je joins à des fins de pré-évaluation, ainsi qu’au transfert de mes données, à cette fin, à des prestataires établis à l’étranger.",
     "consentRequired": "Le consentement explicite est requis pour continuer.",
     "submit": "Envoyer le formulaire",
     "submitting": "Envoi en cours...",

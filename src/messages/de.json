@@ -267,7 +267,7 @@
     "validationFileTooLarge": "Jede Datei darf höchstens 10 MB groß sein.",
     "validationFileType": "Es können nur PDF-, JPG- und PNG-Dateien angehängt werden.",
     "privacyLinksIntro": "Lesen Sie vor dem Absenden, wie Ihre Daten verarbeitet werden:",
-    "consent": "Ich willige ausdrücklich in die Verarbeitung der Gesundheitsangaben ein, die ich für die Vorabbewertung mitteile.",
+    "consent": "Ich willige ausdrücklich in die Verarbeitung der für die Vorabbewertung mitgeteilten Gesundheitsangaben und der beigefügten Dokumente sowie in die hierfür erforderliche Übermittlung meiner Daten an Dienstleister im Ausland ein.",
     "consentRequired": "Zum Fortfahren ist eine ausdrückliche Einwilligung erforderlich.",
     "submit": "Formular senden",
     "submitting": "Wird gesendet...",

@@ -10,15 +10,42 @@ export interface LegalSection {
 
 export interface LegalDoc {
   lastUpdated: string; // ISO
+  /**
+   * Hukukçu incelemesi durumu. SİTEDE GÖSTERİLMEZ; yalnızca içerik
+   * dosyasında taslak metinleri işaretlemek içindir. 'pending' ise metin
+   * avukat onayından geçmemiştir.
+   */
+  legalReview?: 'pending' | 'reviewed';
   i18n: Partial<Record<Locale, { intro: string; sections: LegalSection[] }>>;
 }
 
+/**
+ * AYDINLATMA METNİ (KVKK) — Görev 13 taslağı.
+ *
+ * DİKKAT: legalReview: 'pending'. Bu metin HUKUKÇU İNCELEMESİNDEN GEÇMEDİ.
+ * Taslak; sağlık verisi, WhatsApp, yapay zekâ asistanı, yurt dışına aktarım,
+ * saklama süreleri ve başvuru hakları başlıklarını kapsar.
+ *
+ * TODO(Dr. Ergün / hukuk müşaviri): aşağıdaki noktalar teyit edilmeli —
+ *  1. Tedavi ilişkisine dönüşmeyen başvurular için 24 aylık saklama süresi.
+ *  2. Yapay zekâ asistanı görüşme kayıtlarının saklama süresi ve hizmet
+ *     sağlayıcının ticari unvanının metinde açıkça anılıp anılmayacağı.
+ *  3. Yurt dışına aktarımın KVKK m.9 kapsamında hangi mekanizmaya
+ *     (taahhütname / standart sözleşme / açık rıza) dayandırılacağı.
+ *  4. WhatsApp üzerinden paylaşılan sağlık verisinde rızanın nasıl
+ *     belgeleneceği.
+ *  5. Hasta kayıtlarının asgari saklama süresinin, kayıtları tutan sağlık
+ *     kuruluşunun mevzuatı uyarınca sayıyla yazılıp yazılmayacağı.
+ *
+ * legalReview alanı SİTEDE GÖSTERİLMEZ; yalnızca içerik dosyasında durur.
+ */
 export const kvkkDoc: LegalDoc = {
-  lastUpdated: '2026-09-21',
+  lastUpdated: '2026-10-05',
+  legalReview: 'pending',
   i18n: {
     tr: {
       intro:
-        'Bu metin, web sitesindeki ön değerlendirme formuyla paylaştığınız bilgiler içindir. 6698 sayılı KVKK uygulanır; GDPR hakları, işleme faaliyetine uygulanabildiği ölçüde ayrıca geçerlidir.',
+        'Bu metin, web sitesi üzerinden paylaştığınız bilgiler içindir: ön değerlendirme formu, forma eklediğiniz belgeler, WhatsApp üzerinden kurduğunuz iletişim ve sitede sunulması hâlinde yapay zekâ destekli hasta asistanı. 6698 sayılı KVKK uygulanır; GDPR hakları, işleme faaliyetine uygulanabildiği ölçüde ayrıca geçerlidir.',
       sections: [
         {
           heading: 'Veri Sorumlusu',
@@ -29,45 +56,84 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'İşlenen Kişisel Veriler',
           paragraphs: [
-            'Form aracılığıyla adınızı, ülkenizi, e-posta adresinizi veya telefon numaranızı, tedavi seçiminizi ve isteğe bağlı mesajınızı doğrudan sizden toplarız. Mesajınıza sağlık bilgisi yazabilirsiniz; form dosya yüklemez. Başvuru site sunucusunda işlenir ve kliniğin e-posta adresine iletilir.',
-            'Tedavi seçimi ve mesajınız sağlık bilgisi içeriyorsa bu özel nitelikli veriler ayrı açık rızanıza dayanarak ön değerlendirme için işlenir.'
+            'Ön değerlendirme formu aracılığıyla adınızı, ülkenizi, e-posta adresinizi veya telefon numaranızı, tedavi seçiminizi ve isteğe bağlı mesajınızı doğrudan sizden toplarız.',
+            'Dilerseniz forma en fazla üç dosya (PDF, JPG veya PNG; dosya başına en çok 10 MB) ekleyebilirsiniz. Eklediğiniz belgeler tahlil sonucu, görüntüleme raporu veya epikriz gibi sağlık verisi içerebilir. Dosya yüklemek zorunlu değildir; yalnızca ön değerlendirme için gerekli gördüğünüz belgeleri ekleyin ve belgelerin üzerindeki kimlik numarası gibi bilgileri paylaşmak istemiyorsanız kapatabilirsiniz.',
+            'Başvuru site sunucusunda işlenir ve kliniğin e-posta adresine iletilir; eklediğiniz dosyalar yalnızca bu bildirim e-postasına eklenir. Size gönderilen otomatik yanıt e-postasına dosya eklenmez.',
+            'Ayrıca form kötüye kullanımını önlemek amacıyla IP adresiniz kısa süreliğine işlenir.'
           ]
         },
         {
           heading: 'İşleme Amaçları',
           paragraphs: [
-            'Başvurunuza yanıt verilmesi ve talebiniz doğrultusunda ön değerlendirme yapılması. Tedavi ve seyahat koordinasyonu, ancak bu yönde devam etmek istediğinizde yürütülür.'
+            'Başvurunuza yanıt verilmesi ve talebiniz doğrultusunda ön değerlendirme yapılması. Tedavi ve seyahat koordinasyonu, ancak bu yönde devam etmek istediğinizde yürütülür.',
+            'Form ve iletişim kanallarının güvenliğinin sağlanması, otomatik ve kötü niyetli gönderimlerin engellenmesi.'
           ]
         },
         {
           heading: 'Hukuki Sebep',
           paragraphs: [
-            'İletişim verileri, talebiniz üzerine olası sağlık hizmeti ilişkisini kurmaya yönelik adımlar için KVKK m.5/2-c kapsamında; sağlık bilgileri ayrı açık rızanızla KVKK m.6/3-a kapsamında işlenir. Uygulanabilir yasal yükümlülükler ayrıca ilgili kayıtların işlenmesini gerektirebilir.'
+            'İletişim verileri, talebiniz üzerine olası sağlık hizmeti ilişkisini kurmaya yönelik adımlar için KVKK m.5/2-c kapsamında; sağlık verileri ayrı açık rızanızla KVKK m.6/3-a kapsamında işlenir. Güvenlik amacıyla işlenen teknik kayıtlar meşru menfaat kapsamındadır. Uygulanabilir yasal yükümlülükler ayrıca ilgili kayıtların işlenmesini gerektirebilir.'
           ]
         },
         {
-          heading: 'Aktarım',
+          heading: 'Sağlık Verilerinin İşlenmesi',
           paragraphs: [
-            'Başvurular, teknik barındırma ve e-posta iletim hizmeti sağlayıcıları tarafından işlenebilir. Tedavi veya seyahat koordinasyonu talep ederseniz gerekli bilgiler ilgili sağlık kuruluşu veya hizmet sağlayıcısıyla paylaşılabilir. WhatsApp bağlantısını seçerseniz orada paylaştığınız bilgiler ayrı bir hizmet üzerinden iletilir; form WhatsApp ile gönderilmez.'
+            'Tedavi seçiminiz, mesajınız ve forma eklediğiniz belgeler sağlık verisi içerebilir. Sağlık verisi KVKK m.6 anlamında özel nitelikli kişisel veridir ve yalnızca ayrı açık rızanıza dayanılarak, ön değerlendirme amacıyla işlenir.',
+            'Sağlık verinizi paylaşmak zorunda değilsiniz. Form, sağlık verisi olmadan da gönderilebilir; bu durumda yalnızca genel bilgi verilebileceğini, kişiye özel bir değerlendirme yapılamayacağını belirtmek isteriz.',
+            'Web sitesi üzerinden yapılan ön değerlendirme tanı yerine geçmez; hekim muayenesinin ve gerekli tetkiklerin yerini tutmaz.',
+            'Sağlık verisi ölçümleme araçlarına GÖNDERİLMEZ. Şikâyetiniz, tedavi seçiminiz veya belgeleriniz analitik olay parametresi olarak aktarılmaz; ölçümlemeye yalnızca sayfa yolu ve kaynak etiketi gibi teknik bilgiler iletilir.'
           ]
         },
         {
-          heading: 'Saklama Süresi',
+          heading: 'WhatsApp Üzerinden İletişim',
           paragraphs: [
-            'Başvuru e-postaları talebinizi sonuçlandırmak ve varsa ilgili yasal yükümlülükleri karşılamak için gerekli olduğu sürece saklanır. Bu amaçlar sona erdiğinde silme veya anonimleştirme değerlendirilir.'
+            'Sitedeki WhatsApp bağlantılarına tıkladığınızda görüşme, Meta Platforms Ireland Limited tarafından işletilen WhatsApp üzerinden yürütülür. Bu görüşme ön değerlendirme formundan ayrıdır; form WhatsApp ile gönderilmez.',
+            'WhatsApp mesajlarının içeriği uçtan uca şifrelenir. Buna karşılık telefon numaranız, mesajlaşma zamanı ve kullanım bilgileri gibi veriler WhatsApp tarafından kendi koşulları kapsamında işlenir ve yurt dışındaki sunucularda tutulabilir. WhatsApp’ın kendi işleme faaliyetleri bakımından veri sorumlusu Doç. Dr. Müslüm Ergün değildir.',
+            'Bu kanal üzerinden sağlık verisi paylaşmak zorunda değilsiniz. Belgelerinizi daha korunaklı bir yolla iletmek isterseniz ön değerlendirme formunu veya info@meurology.com adresini kullanabilirsiniz.',
+            'WhatsApp yazışmaları, talebinizin takibi için gerekli olduğu sürece klinik telefonunda saklanır.'
           ]
         },
         {
-          heading: 'Haklarınız (KVKK m.11 / GDPR)',
+          heading: 'Yapay Zekâ Destekli Hasta Asistanı',
           paragraphs: [
-            'KVKK m.11 kapsamındaki haklarınız için info@meurology.com adresine başvurabilirsiniz. GDPR uygulanıyorsa ilgili erişim, düzeltme, silme, kısıtlama ve itiraz hakları da geçerli olabilir. Açık rızanızı aynı adrese yazarak geri çekebilirsiniz; bu, önceki hukuka uygun işlemleri etkilemez.'
+            'Sitede, sık sorulan konularda yol göstermek için yapay zekâ destekli bir hasta asistanı sunulabilir. Asistan yalnızca bilgilendirme amaçlıdır: tanı koymaz, ilaç veya tedavi önermez, hekim değerlendirmesinin yerine geçmez ve acil durumlarda kullanılmamalıdır.',
+            'Asistana yazdığınız mesajlar, yanıtın üretilebilmesi için yurt dışında yerleşik bir yapay zekâ hizmet sağlayıcısının sunucularında işlenir. Bu nedenle asistana kimlik numarası, tam adres, tahlil belgesi veya ayrıntılı sağlık geçmişi gibi bilgileri yazmamanızı öneririz.',
+            'Asistanla yapılan görüşmeler, hizmetin güvenliği ve kalitesi için sınırlı bir süre kayıt altında tutulabilir. Asistanın kullanımı tamamen isteğe bağlıdır; aynı soruları ön değerlendirme formu, telefon veya e-posta yoluyla da iletebilirsiniz.',
+            'Hakkınızda yalnızca otomatik sistemlerle analiz yapılarak bir karar verilmez; ön değerlendirme her hâlde hekim tarafından yapılır.'
+          ]
+        },
+        {
+          heading: 'Aktarım ve Yurt Dışına Aktarım',
+          paragraphs: [
+            'Başvurularınız; site barındırma, e-posta iletimi, bot koruması ve kullanılması hâlinde yapay zekâ asistanı hizmetlerini sağlayan tedarikçiler tarafından işlenebilir. Bu sağlayıcıların bir bölümü Türkiye dışında, özellikle Avrupa Birliği ve Amerika Birleşik Devletleri’nde yerleşiktir; verileriniz bu kapsamda yurt dışına aktarılabilir.',
+            'Yurt dışına aktarım, KVKK m.9 çerçevesinde mevzuatın öngördüğü şartlar sağlanarak ya da bu aktarıma ilişkin ayrı açık rızanıza dayanılarak yapılır. GDPR’ın uygulandığı hâllerde standart sözleşme hükümleri gibi uygun güvenceler esas alınır.',
+            'Tedavi veya seyahat koordinasyonu talep ederseniz gerekli bilgiler ilgili sağlık kuruluşu veya hizmet sağlayıcısıyla paylaşılabilir. Bu paylaşım yalnızca talebiniz doğrultusunda ve gereken kadarıyla yapılır.',
+            'Yetkili kamu kurum ve kuruluşlarının hukuka uygun talepleri saklıdır.'
+          ]
+        },
+        {
+          heading: 'Saklama Süreleri',
+          paragraphs: [
+            'Ön değerlendirme başvuruları ve forma eklediğiniz belgeler, talebinizi sonuçlandırmak için gerekli süre boyunca saklanır. Başvurunuz bir tedavi ilişkisine dönüşmezse bu süre en çok 24 aydır; süre sonunda kayıtlar silinir veya anonim hâle getirilir.',
+            'Tedavi ilişkisi kurulursa hasta kayıtları, sağlık mevzuatının öngördüğü asgari saklama süresi boyunca ilgili sağlık kuruluşunun kayıt düzeni içinde saklanır.',
+            'Güvenlik amacıyla işlenen IP adresi gibi teknik kayıtlar kısa süreli tutulur. Çerezler ve ölçümleme kayıtları, rıza vermeniz hâlinde çerez politikasında belirtilen süreler boyunca saklanır.',
+            'Yapay zekâ asistanı kullanılması hâlinde görüşme kayıtları, hizmetin güvenliği için sınırlı bir süre tutulur ve bu sürenin sonunda silinir.'
+          ]
+        },
+        {
+          heading: 'Haklarınız ve Başvuru Yolu',
+          paragraphs: [
+            'KVKK m.11 uyarınca; kişisel verinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini isteme, şartları oluştuğunda silinmesini veya yok edilmesini isteme, düzeltme ve silme işlemlerinin aktarım yapılan üçüncü kişilere bildirilmesini isteme, münhasıran otomatik sistemlerle analiz edilmesi sonucu aleyhinize bir sonucun ortaya çıkmasına itiraz etme ve kanuna aykırı işleme nedeniyle zarara uğramanız hâlinde zararın giderilmesini talep etme haklarına sahipsiniz.',
+            'Başvurunuzu info@meurology.com adresinden veya yukarıdaki klinik adresine yazılı olarak iletebilirsiniz. Başvuruda kimliğinizi tevsik edici bilgilerin ve talebinizin açıkça yer alması gerekir. Başvurular en geç otuz gün içinde sonuçlandırılır; işlemin ayrıca bir maliyet gerektirmesi hâlinde Kurulca belirlenen tarifedeki ücret alınabilir.',
+            'Başvurunuzun reddedilmesi, verilen yanıtı yetersiz bulmanız veya süresinde yanıt verilmemesi hâlinde Kişisel Verileri Koruma Kurulu’na şikâyette bulunabilirsiniz.',
+            'Açık rızanızı dilediğiniz zaman aynı iletişim kanallarından geri çekebilirsiniz; geri çekme, önceki hukuka uygun işlemeyi etkilemez. GDPR’ın uygulandığı hâllerde erişim, düzeltme, silme, işlemenin kısıtlanması, veri taşınabilirliği ve itiraz haklarınız ile ilgili denetim makamına şikâyet hakkınız da geçerli olabilir.'
           ]
         }
       ]
     },
     en: {
       intro:
-        'This notice covers information submitted through the website pre-assessment form. Turkish Law No. 6698 (KVKK) applies; GDPR rights also apply where the processing falls within its scope.',
+        'This notice covers information you share through the website: the pre-assessment form, any documents you attach to it, contact made over WhatsApp, and the AI-assisted patient assistant where it is offered. Turkish Law No. 6698 (KVKK) applies; GDPR rights also apply where the processing falls within its scope.',
       sections: [
         {
           heading: 'Data Controller',
@@ -78,94 +144,172 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'Personal Data Processed',
           paragraphs: [
-            'We collect directly from you through the form your name, country, email address or phone number, treatment selection and optional message. You may include health information in the message; the form does not upload files. The site server processes the submission and sends it to the clinic email inbox.',
-            'If your selection or message contains health data, this special-category data is used for pre-assessment on the basis of your separate explicit consent.'
+            'Through the pre-assessment form we collect directly from you your name, country, email address or phone number, treatment selection and optional message.',
+            'You may attach up to three files to the form (PDF, JPG or PNG; at most 10 MB each). Documents you attach may contain health data such as laboratory results, imaging reports or a discharge summary. Attaching files is not required; attach only the documents you consider necessary for a pre-assessment, and you may cover details such as identity numbers printed on them if you prefer not to share those.',
+            'The submission is processed on the site server and sent to the clinic email inbox; your attachments are included only in that notification email. No attachment is added to the automatic acknowledgement sent to you.',
+            'Your IP address is also processed briefly in order to prevent misuse of the form.'
           ]
         },
         {
           heading: 'Purposes of Processing',
           paragraphs: [
-            'Responding to your enquiry and carrying out a pre-assessment at your request. Treatment and travel coordination take place only if you choose to proceed.'
+            'Responding to your enquiry and carrying out a pre-assessment in line with your request. Treatment and travel coordination is carried out only if you wish to proceed on that basis.',
+            'Keeping the form and contact channels secure and preventing automated or malicious submissions.'
           ]
         },
         {
           heading: 'Legal Basis',
           paragraphs: [
-            'Contact details are processed to take steps toward a possible healthcare service relationship at your request (KVKK Art. 5(2)(c)); health data is processed on your separate explicit consent (KVKK Art. 6(3)(a)). Applicable legal obligations may also require processing of relevant records.'
+            'Contact details are processed under KVKK art. 5/2-c for steps taken at your request towards a possible healthcare relationship; health data is processed under KVKK art. 6/3-a on the basis of your separate explicit consent. Technical records kept for security rest on legitimate interest. Applicable legal obligations may additionally require relevant records to be processed.'
           ]
         },
         {
-          heading: 'Transfers',
+          heading: 'Processing of Health Data',
           paragraphs: [
-            'Technical hosting and email delivery providers may process submissions. If you request treatment or travel coordination, necessary information may be shared with the relevant healthcare institution or service provider. If you choose a WhatsApp link, information you send there is handled by that separate service; the form is not submitted through WhatsApp.'
+            'Your treatment selection, your message and the documents you attach may contain health data. Health data is special-category personal data under KVKK art. 6 and is processed for pre-assessment only on the basis of your separate explicit consent.',
+            'You are not obliged to share health data. The form can be sent without it; in that case we can give general information only and cannot make an individual assessment.',
+            'A pre-assessment made through the website is not a diagnosis and does not replace an examination by a doctor or the investigations that may be needed.',
+            'Health data is NOT sent to measurement tools. Your complaint, your treatment selection and your documents are never passed on as analytics event parameters; only technical information such as the page path and a source tag reaches measurement.'
           ]
         },
         {
-          heading: 'Retention Period',
+          heading: 'Contact over WhatsApp',
           paragraphs: [
-            'Enquiry emails are kept for as long as needed to conclude your request and meet any applicable legal obligations. When those purposes end, deletion or anonymisation is assessed.'
+            'When you click a WhatsApp link on the site, the conversation takes place over WhatsApp, operated by Meta Platforms Ireland Limited. That conversation is separate from the pre-assessment form; the form is not submitted through WhatsApp.',
+            'The content of WhatsApp messages is end-to-end encrypted. However, data such as your phone number, message timing and usage information is processed by WhatsApp under its own terms and may be held on servers outside Türkiye. Doç. Dr. Müslüm Ergün is not the data controller for WhatsApp’s own processing.',
+            'You are not obliged to share health data through this channel. If you would rather send documents by a more protected route, please use the pre-assessment form or info@meurology.com.',
+            'WhatsApp correspondence is kept on the clinic phone for as long as it is needed to follow up your request.'
           ]
         },
         {
-          heading: 'Your Rights (KVKK Art.11 / GDPR)',
+          heading: 'AI-Assisted Patient Assistant',
           paragraphs: [
-            'Contact info@meurology.com to exercise rights under KVKK Art. 11. If GDPR applies, relevant access, rectification, erasure, restriction and objection rights may also apply. You may withdraw explicit consent by writing to the same address; this does not affect earlier lawful processing.'
+            'The site may offer an AI-assisted patient assistant to help with frequently asked topics. The assistant is for information only: it does not diagnose, does not recommend medication or treatment, does not replace assessment by a doctor, and must not be used in an emergency.',
+            'Messages you write to the assistant are processed on the servers of an AI service provider established abroad in order to generate a reply. For that reason we advise you not to write information such as identity numbers, full address, test documents or a detailed medical history into the assistant.',
+            'Conversations with the assistant may be logged for a limited period for the security and quality of the service. Using the assistant is entirely optional; you can put the same questions through the pre-assessment form, by phone or by email.',
+            'No decision about you is taken solely by automated analysis; the pre-assessment is in every case made by a doctor.'
+          ]
+        },
+        {
+          heading: 'Transfers, Including Transfers Abroad',
+          paragraphs: [
+            'Your submissions may be processed by suppliers providing site hosting, email delivery, bot protection and, where used, the AI assistant service. Some of these providers are established outside Türkiye, in particular in the European Union and the United States; your data may therefore be transferred abroad.',
+            'Transfers abroad are made within the framework of KVKK art. 9, either by meeting the conditions the legislation sets out or on the basis of your separate explicit consent to that transfer. Where GDPR applies, appropriate safeguards such as standard contractual clauses are relied on.',
+            'If you request treatment or travel coordination, the necessary information may be shared with the relevant healthcare institution or service provider. Such sharing takes place only in line with your request and only to the extent needed.',
+            'Lawful requests from competent public authorities are reserved.'
+          ]
+        },
+        {
+          heading: 'Retention Periods',
+          paragraphs: [
+            'Pre-assessment submissions and the documents you attach are kept for as long as is needed to conclude your request. If your enquiry does not lead to a treatment relationship, that period is at most 24 months; at the end of it the records are deleted or anonymised.',
+            'If a treatment relationship is established, patient records are kept within the record-keeping system of the relevant healthcare institution for the minimum retention period required by health legislation.',
+            'Technical records processed for security, such as the IP address, are kept briefly. Cookies and measurement records are kept, where you have consented, for the periods set out in the cookie policy.',
+            'Where the AI assistant is used, conversation logs are kept for a limited period for the security of the service and deleted at the end of it.'
+          ]
+        },
+        {
+          heading: 'Your Rights and How to Apply',
+          paragraphs: [
+            'Under KVKK art. 11 you have the right to learn whether your personal data is being processed; to request information if it is; to learn the purpose of processing and whether the data is used in line with that purpose; to know the third parties to whom it is transferred in Türkiye or abroad; to request correction if it is incomplete or inaccurate; to request erasure or destruction where the conditions are met; to request that correction and erasure be notified to the third parties the data was transferred to; to object to a result adverse to you arising from analysis solely by automated systems; and to claim compensation for damage caused by unlawful processing.',
+            'You can apply by writing to info@meurology.com or in writing to the clinic address above. Your application must clearly set out your request and include information establishing your identity. Applications are concluded within thirty days at the latest; where the process entails a separate cost, the fee in the tariff set by the Board may be charged.',
+            'If your application is refused, if you find the response inadequate, or if no response is given in time, you may complain to the Turkish Personal Data Protection Board.',
+            'You may withdraw your explicit consent at any time through the same contact channels; withdrawal does not affect earlier lawful processing. Where GDPR applies, your rights of access, rectification, erasure, restriction of processing, data portability and objection, together with the right to complain to the relevant supervisory authority, may also apply.'
           ]
         }
       ]
     },
     ar: {
       intro:
-        'يتعلق هذا الإشعار بالمعلومات التي ترسلها عبر نموذج التقييم الأولي. ينطبق القانون التركي رقم 6698 (KVKK)، وتنطبق حقوق GDPR أيضاً إذا كانت المعالجة ضمن نطاقه.',
+        'يتناول هذا الإشعار المعلومات التي تشاركها عبر الموقع: نموذج التقييم الأولي، والمستندات التي ترفقها به، والتواصل عبر واتساب، ومساعد المرضى المدعوم بالذكاء الاصطناعي حيثما كان متاحًا. يُطبَّق القانون التركي رقم 6698 (KVKK)؛ كما تُطبَّق حقوق اللائحة الأوروبية (GDPR) بقدر ما تدخل المعالجة في نطاقها.',
       sections: [
         {
-          heading: 'المتحكم في البيانات',
+          heading: 'المسؤول عن البيانات',
           paragraphs: [
-            'المتحكم في البيانات هو Doç. Dr. Müslüm Ergün (ME Urology Clinic)، Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. للتواصل: info@meurology.com / 0532 063 09 69.'
+            'المسؤول عن البيانات هو Doç. Dr. Müslüm Ergün (ME Urology Clinic)، Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. للتواصل: info@meurology.com / 0532 063 09 69.'
           ]
         },
         {
           heading: 'البيانات الشخصية المعالَجة',
           paragraphs: [
-            'نجمع منك مباشرة عبر النموذج الاسم والبلد والبريد الإلكتروني أو الهاتف ومجال العلاج المختار والرسالة الاختيارية. قد تتضمن الرسالة بيانات صحية؛ ولا يتيح النموذج رفع ملفات. يعالج خادم الموقع الطلب ويرسله إلى بريد العيادة.',
-            'إذا احتوى اختيار العلاج أو الرسالة على بيانات صحية، تُستخدم هذه البيانات الخاصة للتقييم الأولي بناءً على موافقتك الصريحة المنفصلة.'
+            'نجمع منك مباشرة عبر نموذج التقييم الأولي الاسم والبلد والبريد الإلكتروني أو رقم الهاتف ومجال العلاج المختار والرسالة الاختيارية.',
+            'ويمكنك إرفاق ثلاثة ملفات على الأكثر بالنموذج (PDF أو JPG أو PNG؛ بحد أقصى 10 ميغابايت للملف). وقد تتضمن المستندات المرفقة بيانات صحية كنتائج التحاليل أو تقارير التصوير أو التقرير الطبي عند الخروج. والإرفاق غير إلزامي؛ أرفِق فقط ما تراه لازمًا للتقييم الأولي، ولك أن تُخفي ما على المستندات من بيانات كرقم الهوية إن لم ترغب في مشاركتها.',
+            'يُعالَج الطلب على خادم الموقع ويُرسَل إلى بريد العيادة؛ ولا تُرفَق ملفاتك إلا بهذه الرسالة الإشعارية. ولا يُرفَق أي ملف برسالة الإقرار التلقائي المرسَلة إليك.',
+            'كما يُعالَج عنوان IP الخاص بك لمدة وجيزة لمنع إساءة استعمال النموذج.'
           ]
         },
         {
           heading: 'أغراض المعالجة',
           paragraphs: [
-            'الرد على طلبك وإجراء تقييم أولي بناءً عليه. لا يبدأ تنسيق العلاج أو السفر إلا إذا اخترت متابعة الإجراءات.'
+            'الرد على طلبك وإجراء تقييم أولي بما يوافق ما طلبته. ولا تُجرى تنسيقات العلاج والسفر إلا إذا رغبت في المضي على هذا الأساس.',
+            'تأمين النموذج وقنوات التواصل ومنع الإرسالات الآلية أو المسيئة.'
           ]
         },
         {
           heading: 'الأساس القانوني',
           paragraphs: [
-            'تُعالج بيانات التواصل لاتخاذ خطوات نحو علاقة علاجية محتملة بناءً على طلبك (المادة 5/2-c من KVKK)، وتُعالج البيانات الصحية بناءً على موافقتك الصريحة المنفصلة (المادة 6/3-a). وقد تستلزم الالتزامات القانونية معالجة سجلات ذات صلة.'
+            'تُعالَج بيانات التواصل استنادًا إلى المادة 5/2-ج من KVKK للخطوات المتخذة بناءً على طلبك تمهيدًا لعلاقة رعاية صحية محتملة؛ وتُعالَج البيانات الصحية استنادًا إلى المادة 6/3-أ من KVKK بناءً على موافقتك الصريحة المنفصلة. وتستند السجلات التقنية المحفوظة لأغراض الأمن إلى المصلحة المشروعة. وقد تقتضي التزامات قانونية سارية معالجة سجلات أخرى ذات صلة.'
           ]
         },
         {
-          heading: 'نقل البيانات',
+          heading: 'معالجة البيانات الصحية',
           paragraphs: [
-            'قد يعالج مزودو الاستضافة والبريد الإلكتروني الطلبات لأغراض تقنية. وإذا طلبت تنسيق العلاج أو السفر، فقد تُشارك المعلومات اللازمة مع المؤسسة الصحية أو مقدم الخدمة المعني. وتخضع المعلومات التي ترسلها عبر رابط WhatsApp لذلك التطبيق المنفصل؛ ولا يُرسل النموذج عبر WhatsApp.'
+            'قد يتضمن مجال العلاج المختار ورسالتك والمستندات المرفقة بيانات صحية. والبيانات الصحية من الفئات الخاصة بمفهوم المادة 6 من KVKK، ولا تُعالَج لغرض التقييم الأولي إلا بناءً على موافقتك الصريحة المنفصلة.',
+            'ولست ملزمًا بمشاركة بياناتك الصحية. ويمكن إرسال النموذج من دونها؛ وفي هذه الحالة لا يمكننا تقديم سوى معلومات عامة من دون تقييم فردي.',
+            'والتقييم الأولي عبر الموقع ليس تشخيصًا، ولا يُغني عن فحص الطبيب ولا عن الفحوص اللازمة.',
+            'ولا تُرسَل البيانات الصحية إلى أدوات القياس. فلا تُمرَّر شكواك ولا اختيارك العلاجي ولا مستنداتك كمعاملات لأحداث التحليلات؛ ولا يصل إلى القياس سوى معلومات تقنية كمسار الصفحة ووسم المصدر.'
           ]
         },
         {
-          heading: 'مدة الاحتفاظ',
+          heading: 'التواصل عبر واتساب',
           paragraphs: [
-            'تُحتفظ رسائل الطلبات للمدة اللازمة لإنهاء طلبك والوفاء بأي التزامات قانونية واجبة التطبيق. وبعد انتهاء هذه الأغراض، يُنظر في حذفها أو إخفاء هويتها.'
+            'عند الضغط على رابط واتساب في الموقع تجري المحادثة عبر واتساب الذي تديره شركة Meta Platforms Ireland Limited. وهذه المحادثة منفصلة عن نموذج التقييم الأولي؛ فالنموذج لا يُرسَل عبر واتساب.',
+            'ومحتوى رسائل واتساب مشفَّر طرفًا إلى طرف. غير أن بيانات مثل رقم هاتفك وأوقات المراسلة ومعلومات الاستخدام يعالجها واتساب وفق شروطه الخاصة، وقد تُحفَظ على خوادم خارج تركيا. وليس Doç. Dr. Müslüm Ergün مسؤولًا عن المعالجة الخاصة بواتساب نفسه.',
+            'ولست ملزمًا بمشاركة بيانات صحية عبر هذه القناة. وإن فضّلت طريقًا أكثر حماية لإرسال مستنداتك فاستخدم نموذج التقييم الأولي أو العنوان info@meurology.com.',
+            'وتُحفَظ مراسلات واتساب على هاتف العيادة ما دامت لازمة لمتابعة طلبك.'
           ]
         },
         {
-          heading: 'حقوقك (المادة 11 من KVKK / GDPR)',
+          heading: 'مساعد المرضى المدعوم بالذكاء الاصطناعي',
           paragraphs: [
-            'يمكنك التواصل عبر info@meurology.com لممارسة حقوقك بموجب المادة 11 من KVKK. وإذا انطبق GDPR، فقد تنطبق أيضاً حقوق الوصول والتصحيح والمحو وتقييد المعالجة والاعتراض. ويمكنك سحب موافقتك الصريحة عبر العنوان نفسه دون التأثير في مشروعية المعالجة السابقة.'
+            'قد يُتاح في الموقع مساعد للمرضى مدعوم بالذكاء الاصطناعي للإرشاد في المواضيع الشائعة. وهذا المساعد للمعلومة فحسب: لا يشخّص، ولا يوصي بدواء أو علاج، ولا يحل محل تقييم الطبيب، ولا يجوز استعماله في الحالات الإسعافية.',
+            'وتُعالَج الرسائل التي تكتبها للمساعد على خوادم مزوّد خدمة ذكاء اصطناعي مقرّه خارج تركيا من أجل توليد الرد. ولذلك ننصحك بألا تكتب فيه بيانات كرقم الهوية أو العنوان الكامل أو مستندات الفحوص أو تاريخًا مرضيًا مفصّلًا.',
+            'وقد تُحفَظ المحادثات مع المساعد مدة محدودة لأمن الخدمة وجودتها. واستعماله اختياري تمامًا؛ ويمكنك طرح الأسئلة نفسها عبر النموذج أو الهاتف أو البريد الإلكتروني.',
+            'ولا يُتخذ بشأنك أي قرار بالاعتماد على التحليل الآلي وحده؛ فالتقييم الأولي يجريه طبيب في كل الأحوال.'
+          ]
+        },
+        {
+          heading: 'النقل والنقل إلى خارج تركيا',
+          paragraphs: [
+            'قد يعالج طلباتِك مزوّدون يقدمون استضافة الموقع وإرسال البريد الإلكتروني والحماية من الروبوتات، وخدمة المساعد الذكي عند استعمالها. وبعض هؤلاء المزوّدين مقرّهم خارج تركيا، ولا سيما في الاتحاد الأوروبي والولايات المتحدة؛ ومن ثَمّ قد تُنقَل بياناتك إلى الخارج.',
+            'ويجري النقل إلى الخارج في إطار المادة 9 من KVKK، إما باستيفاء الشروط التي تنص عليها التشريعات، وإما استنادًا إلى موافقتك الصريحة المنفصلة على هذا النقل. وحيثما تُطبَّق GDPR تُعتمد ضمانات ملائمة كالبنود التعاقدية النموذجية.',
+            'وإذا طلبت تنسيق العلاج أو السفر فقد تُشارَك المعلومات اللازمة مع المؤسسة الصحية أو مزوّد الخدمة المعني، وذلك وفق طلبك وبالقدر اللازم فقط.',
+            'وتبقى الطلبات المشروعة الصادرة عن الجهات العامة المختصة محفوظة.'
+          ]
+        },
+        {
+          heading: 'مدد الحفظ',
+          paragraphs: [
+            'تُحفَظ طلبات التقييم الأولي والمستندات المرفقة بها المدة اللازمة لإنهاء طلبك. وإذا لم يفضِ طلبك إلى علاقة علاجية فهذه المدة 24 شهرًا على الأكثر؛ وتُحذَف السجلات أو تُجهَّل في نهايتها.',
+            'وإذا قامت علاقة علاجية فتُحفَظ سجلات المريض ضمن نظام التوثيق لدى المؤسسة الصحية المعنية طوال المدة الدنيا التي تفرضها التشريعات الصحية.',
+            'وتُحفَظ السجلات التقنية المعالَجة لأغراض الأمن، كعنوان IP، مدة وجيزة. أما ملفات تعريف الارتباط وسجلات القياس فتُحفَظ، عند موافقتك، طوال المدد المبينة في سياسة ملفات تعريف الارتباط.',
+            'وعند استعمال المساعد الذكي تُحفَظ سجلات المحادثة مدة محدودة لأمن الخدمة ثم تُحذَف.'
+          ]
+        },
+        {
+          heading: 'حقوقك وطريقة التقدّم بطلب',
+          paragraphs: [
+            'بموجب المادة 11 من KVKK لك الحق في معرفة ما إذا كانت بياناتك الشخصية تُعالَج؛ وطلب معلومات عن ذلك؛ ومعرفة غرض المعالجة وما إذا كانت البيانات تُستعمَل وفقه؛ ومعرفة الأطراف الثالثة التي نُقِلت إليها داخل تركيا أو خارجها؛ وطلب تصحيحها إن كانت ناقصة أو غير صحيحة؛ وطلب محوها أو إتلافها عند تحقق الشروط؛ وطلب إبلاغ الأطراف المنقول إليها بالتصحيح والمحو؛ والاعتراض على نتيجة في غير مصلحتك ناشئة عن تحليل آلي محض؛ والمطالبة بالتعويض عن ضرر ناجم عن معالجة غير مشروعة.',
+            'ويمكنك تقديم طلبك إلى info@meurology.com أو كتابةً إلى عنوان العيادة المذكور أعلاه. وينبغي أن يبيّن الطلب مطلبك بوضوح وأن يتضمن ما يثبت هويتك. وتُنجَز الطلبات خلال ثلاثين يومًا على الأكثر؛ وإذا اقتضى الإجراء كلفة مستقلة فقد يُستوفى الرسم المقرر في التعرفة التي تحددها الهيئة.',
+            'وإذا رُفض طلبك أو رأيت الرد غير كافٍ أو لم يصلك رد في المدة المقررة فلك التظلّم أمام الهيئة التركية لحماية البيانات الشخصية.',
+            'ولك سحب موافقتك الصريحة في أي وقت عبر القنوات نفسها؛ ولا يؤثر السحب في مشروعية المعالجة السابقة. وحيثما تُطبَّق GDPR قد تَسري أيضًا حقوق الوصول والتصحيح والمحو وتقييد المعالجة وقابلية النقل والاعتراض، وكذلك حق التظلّم أمام سلطة الرقابة المختصة.'
           ]
         }
       ]
     },
     de: {
       intro:
-        'Diese Information betrifft Angaben im Vorabbewertungsformular der Website. Es gilt das türkische Datenschutzgesetz Nr. 6698 (KVKK); Rechte nach der DSGVO gelten zusätzlich, soweit deren Anwendungsbereich eröffnet ist.',
+        'Dieser Hinweis betrifft Angaben, die Sie über die Website mitteilen: das Vorabbewertungsformular, die dort angehängten Dokumente, den Kontakt über WhatsApp und, sofern angeboten, den KI-gestützten Patientenassistenten. Es gilt das türkische Gesetz Nr. 6698 (KVKK); DSGVO-Rechte gelten zusätzlich, soweit die Verarbeitung in ihren Anwendungsbereich fällt.',
       sections: [
         {
           heading: 'Verantwortlicher',
@@ -176,94 +320,172 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'Verarbeitete personenbezogene Daten',
           paragraphs: [
-            'Über das Formular erheben wir direkt von Ihnen Name, Land, E-Mail-Adresse oder Telefonnummer, ausgewählten Behandlungsbereich und eine freiwillige Nachricht. Die Nachricht kann Gesundheitsangaben enthalten; ein Datei-Upload ist nicht möglich. Der Server sendet die Anfrage an das E-Mail-Postfach der Klinik.',
-            'Gesundheitsangaben in Behandlungsauswahl oder Nachricht werden nur zur Vorabbewertung auf Grundlage Ihrer gesonderten ausdrücklichen Einwilligung verarbeitet.'
+            'Über das Vorabbewertungsformular erheben wir direkt von Ihnen Name, Land, E-Mail-Adresse oder Telefonnummer, ausgewählten Behandlungsbereich und eine freiwillige Nachricht.',
+            'Sie können dem Formular bis zu drei Dateien beifügen (PDF, JPG oder PNG; je höchstens 10 MB). Beigefügte Dokumente können Gesundheitsdaten enthalten, etwa Laborbefunde, Bildgebungsberichte oder einen Arztbrief. Ein Upload ist nicht erforderlich; fügen Sie nur die Unterlagen bei, die Sie für die Vorabbewertung als nötig ansehen, und Sie können Angaben wie Ausweisnummern darauf abdecken, wenn Sie diese nicht mitteilen möchten.',
+            'Die Anfrage wird auf dem Server der Website verarbeitet und an das E-Mail-Postfach der Klinik gesendet; Ihre Anhänge gehen ausschließlich an diese Benachrichtigungs-E-Mail. Der automatischen Eingangsbestätigung an Sie wird keine Datei beigefügt.',
+            'Zur Verhinderung von Missbrauch des Formulars wird außerdem Ihre IP-Adresse kurzzeitig verarbeitet.'
           ]
         },
         {
-          heading: 'Verarbeitungszwecke',
+          heading: 'Zwecke der Verarbeitung',
           paragraphs: [
-            'Beantwortung Ihrer Anfrage und Vorabbewertung auf Ihren Wunsch. Eine Behandlungs- oder Reisekoordination erfolgt erst, wenn Sie das Verfahren fortsetzen möchten.'
+            'Beantwortung Ihrer Anfrage und Durchführung einer Vorabbewertung entsprechend Ihrem Anliegen. Behandlungs- und Reisekoordination erfolgt nur, wenn Sie auf dieser Grundlage fortfahren möchten.',
+            'Sicherheit von Formular und Kontaktwegen sowie Abwehr automatisierter und missbräuchlicher Übermittlungen.'
           ]
         },
         {
           heading: 'Rechtsgrundlage',
           paragraphs: [
-            'Kontaktdaten werden zur Vorbereitung eines möglichen Behandlungsverhältnisses auf Ihre Anfrage verarbeitet (KVKK Art. 5 Abs. 2 lit. c); Gesundheitsangaben auf Grundlage Ihrer gesonderten ausdrücklichen Einwilligung (KVKK Art. 6 Abs. 3 lit. a). Gesetzliche Pflichten können die Verarbeitung relevanter Aufzeichnungen erfordern.'
+            'Kontaktdaten werden nach Art. 5/2-c KVKK für Schritte auf Ihre Anfrage hin zur Anbahnung eines möglichen Behandlungsverhältnisses verarbeitet; Gesundheitsdaten nach Art. 6/3-a KVKK auf Grundlage Ihrer gesonderten ausdrücklichen Einwilligung. Technische Sicherheitsprotokolle beruhen auf berechtigtem Interesse. Anwendbare gesetzliche Pflichten können die Verarbeitung weiterer Aufzeichnungen erfordern.'
           ]
         },
         {
-          heading: 'Übermittlung',
+          heading: 'Verarbeitung von Gesundheitsdaten',
           paragraphs: [
-            'Technische Hosting- und E-Mail-Dienstleister können Anfragen verarbeiten. Wenn Sie eine Behandlungs- oder Reisekoordination wünschen, können dafür erforderliche Angaben an die betreffende Gesundheitseinrichtung oder Dienstleister weitergegeben werden. Angaben, die Sie über einen WhatsApp-Link senden, betreffen diesen separaten Dienst; das Formular wird nicht über WhatsApp versandt.'
+            'Ihre Behandlungsauswahl, Ihre Nachricht und die beigefügten Dokumente können Gesundheitsdaten enthalten. Gesundheitsdaten sind besondere Kategorien personenbezogener Daten im Sinne von Art. 6 KVKK und werden ausschließlich auf Grundlage Ihrer gesonderten ausdrücklichen Einwilligung zum Zweck der Vorabbewertung verarbeitet.',
+            'Sie sind nicht verpflichtet, Gesundheitsdaten mitzuteilen. Das Formular kann auch ohne sie abgesendet werden; in diesem Fall können wir nur allgemeine Informationen geben und keine individuelle Einschätzung vornehmen.',
+            'Eine Vorabbewertung über die Website ist keine Diagnose und ersetzt weder die ärztliche Untersuchung noch erforderliche Abklärungen.',
+            'Gesundheitsdaten werden NICHT an Messwerkzeuge übermittelt. Beschwerden, Behandlungsauswahl und Dokumente werden niemals als Analyse-Ereignisparameter weitergegeben; an die Messung gelangen nur technische Angaben wie Seitenpfad und Quellkennzeichen.'
           ]
         },
         {
-          heading: 'Speicherdauer',
+          heading: 'Kontakt über WhatsApp',
           paragraphs: [
-            'Anfrage-E-Mails werden aufbewahrt, solange dies zur Bearbeitung der Anfrage und zur Erfüllung etwaiger gesetzlicher Pflichten erforderlich ist. Danach wird ihre Löschung oder Anonymisierung geprüft.'
+            'Wenn Sie auf der Website einen WhatsApp-Link anklicken, findet das Gespräch über WhatsApp statt, betrieben von Meta Platforms Ireland Limited. Dieses Gespräch ist vom Vorabbewertungsformular getrennt; das Formular wird nicht über WhatsApp übermittelt.',
+            'Die Inhalte von WhatsApp-Nachrichten sind Ende-zu-Ende verschlüsselt. Daten wie Ihre Rufnummer, Zeitpunkte des Nachrichtenaustauschs und Nutzungsinformationen verarbeitet WhatsApp jedoch nach eigenen Bedingungen; sie können auf Servern außerhalb der Türkei liegen. Für die eigene Verarbeitung durch WhatsApp ist Doç. Dr. Müslüm Ergün nicht Verantwortlicher.',
+            'Sie sind nicht verpflichtet, über diesen Kanal Gesundheitsdaten mitzuteilen. Möchten Sie Unterlagen auf einem geschützteren Weg senden, nutzen Sie bitte das Vorabbewertungsformular oder info@meurology.com.',
+            'WhatsApp-Korrespondenz bleibt auf dem Klinik-Telefon gespeichert, solange sie zur Bearbeitung Ihres Anliegens erforderlich ist.'
           ]
         },
         {
-          heading: 'Ihre Rechte (KVKK Art. 11 / DSGVO)',
+          heading: 'KI-gestützter Patientenassistent',
           paragraphs: [
-            'Für Rechte nach KVKK Art. 11 wenden Sie sich an info@meurology.com. Soweit die DSGVO gilt, können auch Auskunfts-, Berichtigungs-, Löschungs-, Einschränkungs- und Widerspruchsrechte bestehen. Ihre Einwilligung können Sie an dieselbe Adresse widerrufen; frühere rechtmäßige Verarbeitungen bleiben davon unberührt.'
+            'Die Website kann einen KI-gestützten Patientenassistenten für häufige Fragen anbieten. Der Assistent dient ausschließlich der Information: Er stellt keine Diagnose, empfiehlt keine Medikamente oder Behandlungen, ersetzt keine ärztliche Beurteilung und darf im Notfall nicht verwendet werden.',
+            'Ihre Nachrichten an den Assistenten werden zur Erzeugung einer Antwort auf Servern eines im Ausland ansässigen KI-Dienstleisters verarbeitet. Wir empfehlen deshalb, dort keine Angaben wie Ausweisnummern, vollständige Anschrift, Befunddokumente oder eine ausführliche Krankengeschichte einzugeben.',
+            'Gespräche mit dem Assistenten können zur Sicherheit und Qualität des Dienstes für begrenzte Zeit protokolliert werden. Die Nutzung ist vollständig freiwillig; dieselben Fragen können Sie auch über das Formular, telefonisch oder per E-Mail stellen.',
+            'Über Sie wird keine Entscheidung allein durch automatisierte Analyse getroffen; die Vorabbewertung nimmt in jedem Fall ein Arzt vor.'
+          ]
+        },
+        {
+          heading: 'Weitergabe und Übermittlung ins Ausland',
+          paragraphs: [
+            'Ihre Anfragen können von Dienstleistern verarbeitet werden, die Hosting, E-Mail-Versand, Bot-Schutz und, soweit genutzt, den KI-Assistenten bereitstellen. Ein Teil dieser Anbieter ist außerhalb der Türkei ansässig, insbesondere in der Europäischen Union und den Vereinigten Staaten; Ihre Daten können daher ins Ausland übermittelt werden.',
+            'Übermittlungen ins Ausland erfolgen im Rahmen von Art. 9 KVKK, entweder unter Einhaltung der gesetzlich vorgesehenen Voraussetzungen oder auf Grundlage Ihrer gesonderten ausdrücklichen Einwilligung. Soweit die DSGVO gilt, werden geeignete Garantien wie Standardvertragsklauseln zugrunde gelegt.',
+            'Wenn Sie Behandlungs- oder Reisekoordination wünschen, können die erforderlichen Angaben an die betreffende Gesundheitseinrichtung oder den Dienstleister weitergegeben werden — nur entsprechend Ihrem Wunsch und nur im erforderlichen Umfang.',
+            'Rechtmäßige Auskunftsersuchen zuständiger Behörden bleiben vorbehalten.'
+          ]
+        },
+        {
+          heading: 'Speicherfristen',
+          paragraphs: [
+            'Anfragen zur Vorabbewertung und die beigefügten Dokumente werden so lange gespeichert, wie es zur Erledigung Ihres Anliegens erforderlich ist. Führt Ihre Anfrage zu keinem Behandlungsverhältnis, beträgt diese Frist höchstens 24 Monate; danach werden die Aufzeichnungen gelöscht oder anonymisiert.',
+            'Kommt ein Behandlungsverhältnis zustande, werden Patientenunterlagen im Dokumentationssystem der jeweiligen Gesundheitseinrichtung für die gesetzlich vorgeschriebene Mindestdauer aufbewahrt.',
+            'Zu Sicherheitszwecken verarbeitete technische Aufzeichnungen wie die IP-Adresse werden nur kurz gespeichert. Cookies und Messdaten werden bei erteilter Einwilligung für die in der Cookie-Richtlinie genannten Fristen gespeichert.',
+            'Wird der KI-Assistent genutzt, werden Gesprächsprotokolle aus Sicherheitsgründen für begrenzte Zeit aufbewahrt und danach gelöscht.'
+          ]
+        },
+        {
+          heading: 'Ihre Rechte und der Weg zur Antragstellung',
+          paragraphs: [
+            'Nach Art. 11 KVKK haben Sie das Recht zu erfahren, ob Ihre personenbezogenen Daten verarbeitet werden; Auskunft darüber zu verlangen; den Zweck der Verarbeitung und die zweckgemäße Verwendung zu erfahren; die Empfänger im In- und Ausland zu kennen; Berichtigung unvollständiger oder unrichtiger Daten zu verlangen; unter den gesetzlichen Voraussetzungen Löschung oder Vernichtung zu verlangen; die Mitteilung von Berichtigung und Löschung an die Empfänger zu verlangen; einem Sie benachteiligenden Ergebnis ausschließlich automatisierter Analyse zu widersprechen; und bei rechtswidriger Verarbeitung Schadensersatz zu verlangen.',
+            'Ihren Antrag können Sie an info@meurology.com oder schriftlich an die oben genannte Klinikanschrift richten. Der Antrag muss Ihr Anliegen klar benennen und Angaben zur Feststellung Ihrer Identität enthalten. Anträge werden spätestens innerhalb von dreißig Tagen beantwortet; verursacht die Bearbeitung gesonderte Kosten, kann die von der Behörde festgelegte Gebühr erhoben werden.',
+            'Wird Ihr Antrag abgelehnt, finden Sie die Antwort unzureichend oder bleibt eine fristgerechte Antwort aus, können Sie sich bei der türkischen Datenschutzbehörde (KVKK-Behörde) beschweren.',
+            'Ihre ausdrückliche Einwilligung können Sie jederzeit über dieselben Kontaktwege widerrufen; der Widerruf berührt die bis dahin rechtmäßige Verarbeitung nicht. Soweit die DSGVO gilt, können zusätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch sowie das Beschwerderecht bei der zuständigen Aufsichtsbehörde bestehen.'
           ]
         }
       ]
     },
     ru: {
       intro:
-        'Это уведомление касается данных, отправленных через форму предварительной оценки на сайте. Применяется турецкий закон № 6698 (KVKK); права по GDPR также действуют, если обработка входит в сферу его применения.',
+        'Это уведомление касается сведений, которые вы передаёте через сайт: форма предварительной оценки, приложенные к ней документы, обращение через WhatsApp и, если он предлагается, помощник для пациентов на основе искусственного интеллекта. Применяется закон Турции № 6698 (KVKK); права по GDPR действуют дополнительно в той мере, в какой обработка подпадает под его действие.',
       sections: [
         {
           heading: 'Оператор данных',
           paragraphs: [
-            'Оператор данных — Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. Контакт: info@meurology.com / 0532 063 09 69.'
+            'Оператор данных — Doç. Dr. Müslüm Ergün (ME Urology Clinic), Bahçelievler Mahallesi, E-5 Karayolu / Kültür Sok No:1, 34180 Bahçelievler/İstanbul. Контакты: info@meurology.com / 0532 063 09 69.'
           ]
         },
         {
           heading: 'Обрабатываемые персональные данные',
           paragraphs: [
-            'Через форму мы получаем непосредственно от вас имя, страну, адрес электронной почты или телефон, выбранное направление лечения и необязательное сообщение. Сообщение может содержать сведения о здоровье; загрузка файлов недоступна. Сервер отправляет заявку на почту клиники.',
-            'Сведения о здоровье в выбранном направлении или сообщении используются для предварительной оценки на основании вашего отдельного явного согласия.'
+            'Через форму предварительной оценки мы получаем непосредственно от вас имя, страну, адрес электронной почты или телефон, выбранное направление лечения и необязательное сообщение.',
+            'К форме можно приложить до трёх файлов (PDF, JPG или PNG; не более 10 МБ каждый). Приложенные документы могут содержать сведения о здоровье — результаты анализов, заключения по снимкам или выписной эпикриз. Прикладывать файлы необязательно; добавляйте только те документы, которые считаете нужными для предварительной оценки, и вы можете закрыть на них такие сведения, как номер удостоверения личности, если не хотите их передавать.',
+            'Заявка обрабатывается на сервере сайта и направляется на почту клиники; ваши вложения попадают только в это уведомительное письмо. К автоматическому подтверждению, которое приходит вам, файлы не прикладываются.',
+            'Кроме того, для предотвращения злоупотреблений формой кратковременно обрабатывается ваш IP-адрес.'
           ]
         },
         {
           heading: 'Цели обработки',
           paragraphs: [
-            'Ответ на ваш запрос и проведение предварительной оценки по вашему желанию. Координация лечения или поездки начинается только если вы решите продолжить.'
+            'Ответ на ваше обращение и проведение предварительной оценки в соответствии с вашим запросом. Координация лечения и поездки осуществляется только если вы хотите продолжить на этой основе.',
+            'Обеспечение безопасности формы и каналов связи, предотвращение автоматических и злонамеренных отправок.'
           ]
         },
         {
           heading: 'Правовое основание',
           paragraphs: [
-            'Контактные данные обрабатываются для подготовки возможного оказания медицинских услуг по вашему запросу (KVKK, ст. 5/2-c); сведения о здоровье — на основании отдельного явного согласия (KVKK, ст. 6/3-a). Применимые юридические обязанности могут требовать обработки соответствующих записей.'
+            'Контактные данные обрабатываются на основании ст. 5/2-c KVKK — для шагов, предпринимаемых по вашему запросу в связи с возможными отношениями по оказанию медицинской помощи; сведения о здоровье — на основании ст. 6/3-a KVKK, по вашему отдельному явному согласию. Технические записи, ведущиеся в целях безопасности, опираются на законный интерес. Применимые правовые обязанности могут дополнительно требовать обработки соответствующих записей.'
           ]
         },
         {
-          heading: 'Передача данных',
+          heading: 'Обработка сведений о здоровье',
           paragraphs: [
-            'Технические поставщики хостинга и электронной почты могут обрабатывать заявки. При запросе координации лечения или поездки необходимые сведения могут передаваться соответствующей клинике или поставщику услуг. Информация, отправленная вами через ссылку WhatsApp, обрабатывается этим отдельным сервисом; форма через WhatsApp не отправляется.'
+            'Выбранное направление лечения, ваше сообщение и приложенные документы могут содержать сведения о здоровье. Такие сведения относятся к особым категориям персональных данных по ст. 6 KVKK и обрабатываются для предварительной оценки только на основании вашего отдельного явного согласия.',
+            'Вы не обязаны сообщать сведения о здоровье. Форму можно отправить и без них; в этом случае мы сможем дать только общую информацию и не сможем сделать индивидуальную оценку.',
+            'Предварительная оценка через сайт не является диагнозом и не заменяет осмотра врачом и необходимых обследований.',
+            'Сведения о здоровье НЕ передаются в средства измерения. Ваши жалобы, выбранное направление лечения и ваши документы никогда не отправляются как параметры аналитических событий; в аналитику попадают только технические данные, такие как путь страницы и метка источника.'
           ]
         },
         {
-          heading: 'Срок хранения',
+          heading: 'Общение через WhatsApp',
           paragraphs: [
-            'Письма с заявками хранятся столько, сколько нужно для завершения запроса и выполнения применимых юридических обязанностей. Затем рассматривается удаление или обезличивание.'
+            'Когда вы нажимаете ссылку WhatsApp на сайте, переписка идёт через WhatsApp, которым управляет Meta Platforms Ireland Limited. Эта переписка отделена от формы предварительной оценки; форма не отправляется через WhatsApp.',
+            'Содержимое сообщений WhatsApp защищено сквозным шифрованием. Однако такие данные, как ваш номер телефона, время переписки и сведения об использовании, обрабатываются самим WhatsApp на его собственных условиях и могут храниться на серверах за пределами Турции. В отношении собственной обработки WhatsApp оператором данных Doç. Dr. Müslüm Ergün не является.',
+            'Вы не обязаны передавать сведения о здоровье по этому каналу. Если вы предпочитаете более защищённый путь для документов, воспользуйтесь формой предварительной оценки или адресом info@meurology.com.',
+            'Переписка в WhatsApp хранится на телефоне клиники столько, сколько необходимо для работы по вашему обращению.'
           ]
         },
         {
-          heading: 'Ваши права (ст. 11 KVKK / GDPR)',
+          heading: 'Помощник для пациентов на основе ИИ',
           paragraphs: [
-            'Для реализации прав по ст. 11 KVKK пишите на info@meurology.com. Если применяется GDPR, могут действовать права доступа, исправления, удаления, ограничения обработки и возражения. Явное согласие можно отозвать по тому же адресу; это не влияет на законность предыдущей обработки.'
+            'На сайте может предлагаться помощник для пациентов на основе искусственного интеллекта по часто задаваемым темам. Помощник носит исключительно информационный характер: он не ставит диагноз, не рекомендует лекарства или лечение, не заменяет врачебную оценку и не предназначен для неотложных ситуаций.',
+            'Сообщения, которые вы пишете помощнику, обрабатываются для формирования ответа на серверах поставщика услуг ИИ, расположенного за рубежом. Поэтому мы советуем не вводить в помощник такие данные, как номер удостоверения личности, полный адрес, документы обследований или подробный медицинский анамнез.',
+            'Переписка с помощником может сохраняться ограниченное время в целях безопасности и качества сервиса. Использование помощника полностью добровольно; те же вопросы можно задать через форму, по телефону или по электронной почте.',
+            'Решение в отношении вас не принимается исключительно автоматизированным анализом; предварительную оценку в любом случае делает врач.'
+          ]
+        },
+        {
+          heading: 'Передача данных, в том числе за рубеж',
+          paragraphs: [
+            'Ваши обращения могут обрабатываться поставщиками услуг хостинга сайта, доставки электронной почты, защиты от ботов и, при использовании, сервиса ИИ-помощника. Часть этих поставщиков расположена за пределами Турции, в частности в Европейском союзе и Соединённых Штатах; соответственно ваши данные могут передаваться за рубеж.',
+            'Передача за рубеж осуществляется в рамках ст. 9 KVKK — либо при соблюдении условий, предусмотренных законодательством, либо на основании вашего отдельного явного согласия на такую передачу. Там, где применяется GDPR, используются надлежащие гарантии, например стандартные договорные положения.',
+            'Если вы просите о координации лечения или поездки, необходимые сведения могут быть переданы соответствующему медицинскому учреждению или поставщику услуг — только в соответствии с вашим запросом и в необходимом объёме.',
+            'Правомерные запросы уполномоченных государственных органов сохраняются.'
+          ]
+        },
+        {
+          heading: 'Сроки хранения',
+          paragraphs: [
+            'Обращения по предварительной оценке и приложенные документы хранятся столько, сколько необходимо для завершения работы по вашему запросу. Если обращение не приводит к отношениям по лечению, этот срок составляет не более 24 месяцев; по его истечении записи удаляются или обезличиваются.',
+            'Если отношения по лечению установлены, медицинская документация хранится в системе учёта соответствующего медицинского учреждения в течение минимального срока, предусмотренного законодательством о здравоохранении.',
+            'Технические записи, обрабатываемые в целях безопасности, например IP-адрес, хранятся недолго. Файлы cookie и записи измерений при наличии вашего согласия хранятся в течение сроков, указанных в политике использования файлов cookie.',
+            'При использовании ИИ-помощника журналы переписки хранятся ограниченное время в целях безопасности сервиса и затем удаляются.'
+          ]
+        },
+        {
+          heading: 'Ваши права и порядок обращения',
+          paragraphs: [
+            'В соответствии со ст. 11 KVKK вы вправе узнать, обрабатываются ли ваши персональные данные; запросить сведения о такой обработке; узнать цель обработки и используются ли данные в соответствии с ней; знать третьих лиц в стране и за рубежом, которым данные переданы; требовать исправления неполных или неточных данных; требовать удаления или уничтожения при наличии оснований; требовать уведомления получателей об исправлении и удалении; возражать против неблагоприятного для вас результата, полученного исключительно автоматизированным анализом; и требовать возмещения вреда, причинённого незаконной обработкой.',
+            'Обращение можно направить на info@meurology.com или письменно по указанному выше адресу клиники. В обращении должны быть ясно изложены ваше требование и сведения, подтверждающие вашу личность. Обращения рассматриваются не позднее тридцати дней; если обработка запроса влечёт отдельные расходы, может взиматься плата по тарифу, установленному уполномоченным органом.',
+            'Если в удовлетворении обращения отказано, ответ представляется вам недостаточным или ответ не дан в срок, вы можете подать жалобу в турецкий орган по защите персональных данных.',
+            'Вы можете в любой момент отозвать явное согласие по тем же каналам связи; отзыв не влияет на законность предыдущей обработки. Там, где применяется GDPR, могут действовать также права на доступ, исправление, удаление, ограничение обработки, переносимость данных и возражение, а также право подать жалобу в компетентный надзорный орган.'
           ]
         }
       ]
     },
     fr: {
       intro:
-        'Le présent avis couvre les informations transmises via le formulaire de pré-évaluation du site. La loi turque n° 6698 (KVKK) s’applique ; les droits issus du RGPD s’appliquent également lorsque le traitement entre dans son champ.',
+        'Cet avis concerne les informations que vous partagez via le site : le formulaire de pré-évaluation, les documents que vous y joignez, les échanges par WhatsApp et, lorsqu’il est proposé, l’assistant patient assisté par IA. La loi turque n° 6698 (KVKK) s’applique ; les droits issus du RGPD s’appliquent également lorsque le traitement entre dans son champ.',
       sections: [
         {
           heading: 'Responsable du traitement',
@@ -274,38 +496,77 @@ export const kvkkDoc: LegalDoc = {
         {
           heading: 'Données personnelles traitées',
           paragraphs: [
-            'Nous recueillons directement auprès de vous, via le formulaire, vos nom et prénom, pays, adresse e-mail ou numéro de téléphone, le traitement sélectionné et un message facultatif. Vous pouvez mentionner des informations de santé dans ce message ; le formulaire ne permet pas d’envoyer de fichiers. Le serveur du site traite l’envoi et le transmet à la boîte e-mail de la clinique.',
-            'Si votre sélection ou votre message contient des données de santé, ces données sensibles sont utilisées à des fins de pré-évaluation sur le fondement de votre consentement explicite distinct.'
+            'Via le formulaire de pré-évaluation, nous recueillons directement auprès de vous vos nom et prénom, votre pays, votre adresse e-mail ou votre numéro de téléphone, le traitement sélectionné et un message facultatif.',
+            'Vous pouvez joindre au formulaire jusqu’à trois fichiers (PDF, JPG ou PNG ; 10 Mo au maximum chacun). Les documents joints peuvent contenir des données de santé : résultats d’analyses, comptes rendus d’imagerie ou compte rendu d’hospitalisation. Joindre des fichiers n’est pas obligatoire ; n’ajoutez que les documents que vous jugez nécessaires à une pré-évaluation, et vous pouvez masquer les mentions telles qu’un numéro d’identité si vous préférez ne pas les communiquer.',
+            'La demande est traitée sur le serveur du site puis transmise à la boîte e-mail de la clinique ; vos pièces jointes ne figurent que dans cet e-mail de notification. Aucun fichier n’est joint à l’accusé de réception automatique qui vous est adressé.',
+            'Votre adresse IP est par ailleurs traitée brièvement afin de prévenir les usages abusifs du formulaire.'
           ]
         },
         {
           heading: 'Finalités du traitement',
           paragraphs: [
-            'Répondre à votre demande et réaliser une pré-évaluation à votre demande. La coordination du traitement et du voyage n’intervient que si vous décidez de poursuivre.'
+            'Répondre à votre demande et réaliser une pré-évaluation conforme à votre sollicitation. La coordination des soins et du voyage n’est engagée que si vous souhaitez poursuivre sur cette base.',
+            'Assurer la sécurité du formulaire et des canaux de contact et empêcher les envois automatisés ou malveillants.'
           ]
         },
         {
           heading: 'Base légale',
           paragraphs: [
-            'Les coordonnées sont traitées pour prendre, à votre demande, des mesures préalables à une éventuelle relation de soins (art. 5(2)(c) KVKK) ; les données de santé sont traitées sur la base de votre consentement explicite distinct (art. 6(3)(a) KVKK). Des obligations légales applicables peuvent également imposer le traitement de certains enregistrements.'
+            'Les coordonnées sont traitées au titre de l’art. 5/2-c de la KVKK pour les démarches entreprises à votre demande en vue d’une éventuelle relation de soins ; les données de santé le sont au titre de l’art. 6/3-a de la KVKK, sur le fondement de votre consentement explicite distinct. Les journaux techniques conservés pour la sécurité reposent sur l’intérêt légitime. Des obligations légales applicables peuvent en outre imposer le traitement de certains enregistrements.'
           ]
         },
         {
-          heading: 'Transferts',
+          heading: 'Traitement des données de santé',
           paragraphs: [
-            'Les prestataires d’hébergement technique et d’acheminement des e-mails peuvent traiter les envois. Si vous demandez une coordination du traitement ou du voyage, les informations nécessaires peuvent être communiquées à l’établissement de santé ou au prestataire concerné. Si vous utilisez un lien WhatsApp, les informations que vous y envoyez relèvent de ce service distinct ; le formulaire n’est pas transmis via WhatsApp.'
+            'Le traitement sélectionné, votre message et les documents joints peuvent contenir des données de santé. Ces données relèvent des catégories particulières au sens de l’art. 6 de la KVKK et ne sont traitées à des fins de pré-évaluation que sur le fondement de votre consentement explicite distinct.',
+            'Vous n’êtes pas tenu de communiquer des données de santé. Le formulaire peut être envoyé sans elles ; dans ce cas, nous ne pouvons donner que des informations générales et non une appréciation individuelle.',
+            'Une pré-évaluation réalisée via le site ne constitue pas un diagnostic et ne remplace ni l’examen par un médecin ni les explorations nécessaires.',
+            'Les données de santé NE SONT PAS transmises aux outils de mesure. Vos symptômes, le traitement sélectionné et vos documents ne sont jamais envoyés comme paramètres d’événement analytique ; seules des informations techniques telles que le chemin de la page et une étiquette de source parviennent à la mesure.'
           ]
         },
         {
-          heading: 'Durée de conservation',
+          heading: 'Échanges par WhatsApp',
           paragraphs: [
-            'Les e-mails de demande sont conservés aussi longtemps que nécessaire pour traiter votre demande et satisfaire aux obligations légales applicables. Lorsque ces finalités prennent fin, la suppression ou l’anonymisation est évaluée.'
+            'Lorsque vous cliquez sur un lien WhatsApp du site, la conversation se déroule sur WhatsApp, exploité par Meta Platforms Ireland Limited. Cette conversation est distincte du formulaire de pré-évaluation ; le formulaire n’est pas transmis via WhatsApp.',
+            'Le contenu des messages WhatsApp est chiffré de bout en bout. En revanche, des données telles que votre numéro, l’horodatage des messages et des informations d’usage sont traitées par WhatsApp selon ses propres conditions et peuvent être hébergées sur des serveurs hors de Türkiye. Le Doç. Dr. Müslüm Ergün n’est pas responsable du traitement propre à WhatsApp.',
+            'Vous n’êtes pas tenu de partager des données de santé par ce canal. Si vous préférez une voie plus protégée pour vos documents, utilisez le formulaire de pré-évaluation ou info@meurology.com.',
+            'Les échanges WhatsApp sont conservés sur le téléphone de la clinique aussi longtemps qu’ils sont nécessaires au suivi de votre demande.'
           ]
         },
         {
-          heading: 'Vos droits (art. 11 KVKK / RGPD)',
+          heading: 'Assistant patient assisté par IA',
           paragraphs: [
-            'Écrivez à info@meurology.com pour exercer vos droits au titre de l’article 11 de la KVKK. Si le RGPD s’applique, les droits d’accès, de rectification, d’effacement, de limitation et d’opposition peuvent également s’appliquer. Vous pouvez retirer votre consentement explicite à la même adresse ; ce retrait n’affecte pas la licéité du traitement antérieur.'
+            'Le site peut proposer un assistant patient assisté par IA pour les questions fréquentes. Cet assistant est purement informatif : il ne pose pas de diagnostic, ne recommande ni médicament ni traitement, ne remplace pas l’appréciation d’un médecin et ne doit pas être utilisé en urgence.',
+            'Les messages que vous lui adressez sont traités, pour produire une réponse, sur les serveurs d’un prestataire d’IA établi à l’étranger. Nous vous conseillons donc de ne pas y saisir de numéro d’identité, d’adresse complète, de compte rendu d’examen ou d’antécédents médicaux détaillés.',
+            'Les conversations avec l’assistant peuvent être journalisées pendant une durée limitée pour la sécurité et la qualité du service. Son usage est entièrement facultatif ; vous pouvez poser les mêmes questions via le formulaire, par téléphone ou par e-mail.',
+            'Aucune décision vous concernant n’est prise sur le seul fondement d’une analyse automatisée ; la pré-évaluation est dans tous les cas réalisée par un médecin.'
+          ]
+        },
+        {
+          heading: 'Communication et transferts hors de Türkiye',
+          paragraphs: [
+            'Vos demandes peuvent être traitées par des prestataires assurant l’hébergement du site, l’acheminement des e-mails, la protection contre les robots et, le cas échéant, le service d’assistant IA. Certains de ces prestataires sont établis hors de Türkiye, notamment dans l’Union européenne et aux États-Unis ; vos données peuvent donc être transférées à l’étranger.',
+            'Les transferts hors de Türkiye s’effectuent dans le cadre de l’art. 9 de la KVKK, soit en respectant les conditions prévues par la réglementation, soit sur le fondement de votre consentement explicite distinct à ce transfert. Lorsque le RGPD s’applique, des garanties appropriées telles que les clauses contractuelles types sont mises en œuvre.',
+            'Si vous demandez une coordination des soins ou du voyage, les informations nécessaires peuvent être partagées avec l’établissement de santé ou le prestataire concerné, uniquement conformément à votre demande et dans la limite du nécessaire.',
+            'Les demandes licites des autorités publiques compétentes sont réservées.'
+          ]
+        },
+        {
+          heading: 'Durées de conservation',
+          paragraphs: [
+            'Les demandes de pré-évaluation et les documents joints sont conservés le temps nécessaire au traitement de votre demande. Si votre demande ne débouche pas sur une relation de soins, cette durée est de 24 mois au maximum ; à son terme, les enregistrements sont supprimés ou anonymisés.',
+            'Si une relation de soins est établie, les dossiers patients sont conservés dans le système documentaire de l’établissement de santé concerné pendant la durée minimale imposée par la réglementation sanitaire.',
+            'Les journaux techniques traités à des fins de sécurité, comme l’adresse IP, sont conservés brièvement. Les cookies et les données de mesure sont conservés, en cas de consentement, pendant les durées indiquées dans la politique de cookies.',
+            'Si l’assistant IA est utilisé, les journaux de conversation sont conservés pendant une durée limitée pour la sécurité du service, puis supprimés.'
+          ]
+        },
+        {
+          heading: 'Vos droits et les modalités de demande',
+          paragraphs: [
+            'En vertu de l’art. 11 de la KVKK, vous avez le droit de savoir si vos données personnelles font l’objet d’un traitement ; d’en demander communication ; de connaître la finalité du traitement et si les données sont utilisées conformément à celle-ci ; de connaître les tiers destinataires en Türkiye ou à l’étranger ; de demander la rectification de données incomplètes ou inexactes ; d’en demander l’effacement ou la destruction lorsque les conditions sont réunies ; de demander que rectification et effacement soient notifiés aux destinataires ; de vous opposer à un résultat qui vous serait défavorable issu d’une analyse exclusivement automatisée ; et de demander réparation du préjudice causé par un traitement illicite.',
+            'Vous pouvez adresser votre demande à info@meurology.com ou par écrit à l’adresse de la clinique indiquée ci-dessus. La demande doit exposer clairement son objet et comporter les éléments permettant d’établir votre identité. Les demandes reçoivent une réponse dans un délai maximal de trente jours ; si le traitement de la demande entraîne un coût distinct, la redevance fixée par l’autorité peut être appliquée.',
+            'En cas de rejet de votre demande, de réponse que vous jugez insuffisante ou d’absence de réponse dans le délai, vous pouvez saisir l’autorité turque de protection des données personnelles.',
+            'Vous pouvez retirer votre consentement explicite à tout moment par les mêmes canaux ; ce retrait n’affecte pas la licéité du traitement antérieur. Lorsque le RGPD s’applique, les droits d’accès, de rectification, d’effacement, de limitation du traitement, de portabilité et d’opposition, ainsi que le droit de réclamation auprès de l’autorité de contrôle compétente, peuvent également s’appliquer.'
           ]
         }
       ]
@@ -313,89 +574,258 @@ export const kvkkDoc: LegalDoc = {
   }
 };
 
+/**
+ * AÇIK RIZA METNİ — Görev 13 taslağı. legalReview: 'pending'.
+ *
+ * Aydınlatma metninden ayrıdır. Başlıklar ayrı ayrı geri çekilebilecek
+ * şekilde kurgulanmıştır: sağlık verisi / yurt dışına aktarım / WhatsApp /
+ * yapay zekâ asistanı.
+ *
+ * TODO(Dr. Ergün / hukuk müşaviri): formdaki tek onay kutusunun bu dört
+ * başlığı birlikte karşılayıp karşılamadığı, yoksa ayrı onay kutularına
+ * geçilip geçilmeyeceği değerlendirilmeli.
+ */
 export const consentDoc: LegalDoc = {
-  lastUpdated: '2026-09-21',
+  lastUpdated: '2026-10-05',
+  legalReview: 'pending',
   i18n: {
     tr: {
       intro:
-        'Bu açık rıza, ön değerlendirme formunda paylaşmayı seçtiğiniz sağlık bilgileri içindir; aydınlatma metninden ayrıdır.',
+        'Bu açık rıza, web sitesi üzerinden paylaşmayı seçtiğiniz sağlık verileri ve bu verilerin işlenme biçimleri içindir; aydınlatma metninden ayrıdır. Aşağıdaki başlıkların her biri için rızanızı ayrı ayrı geri çekebilirsiniz.',
       sections: [
         {
-          heading: 'Açık Rıza Beyanı',
+          heading: 'Sağlık Verilerinin İşlenmesi',
           paragraphs: [
-            'Formdaki tedavi seçimi ve isteğe bağlı mesajımda yer alan sağlık bilgilerinin, Doç. Dr. Müslüm Ergün tarafından ön değerlendirme amacıyla işlenmesine açık rıza veriyorum.',
-            'Bu rızayı info@meurology.com adresine yazarak geri çekebileceğimi biliyorum. Geri çekme, önceki hukuka uygun işlemleri etkilemez.'
+            'Ön değerlendirme formundaki tedavi seçimi, isteğe bağlı mesajım ve forma eklediğim belgelerde yer alan sağlık verilerinin, Doç. Dr. Müslüm Ergün tarafından ön değerlendirme amacıyla işlenmesine açık rıza veriyorum.',
+            'Bu verileri paylaşmak zorunda olmadığımı; paylaşmadığım takdirde yalnızca genel bilgi alabileceğimi biliyorum.'
+          ]
+        },
+        {
+          heading: 'Yurt Dışına Aktarım',
+          paragraphs: [
+            'Kişisel verilerimin ve paylaştığım sağlık verilerinin, hizmetin sağlanması için gerekli olduğu ölçüde, yurt dışında yerleşik barındırma, e-posta iletimi ve güvenlik hizmeti sağlayıcılarına aktarılmasına açık rıza veriyorum.'
+          ]
+        },
+        {
+          heading: 'WhatsApp Üzerinden İletişim',
+          paragraphs: [
+            'Benimle WhatsApp üzerinden iletişime geçilmesini tercih etmem hâlinde, bu kanal üzerinden paylaştığım bilgilerin ön değerlendirme ve randevu koordinasyonu amacıyla işlenmesine açık rıza veriyorum.',
+            'Bu kanalın Meta Platforms Ireland Limited tarafından işletildiğini ve ilgili verilerin yurt dışında işlenebileceğini biliyorum.'
+          ]
+        },
+        {
+          heading: 'Yapay Zekâ Destekli Hasta Asistanı',
+          paragraphs: [
+            'Sitede sunulan yapay zekâ destekli hasta asistanını kullanmam hâlinde, asistana yazdığım mesajların yanıt üretilmesi amacıyla yurt dışında yerleşik bir yapay zekâ hizmet sağlayıcısı tarafından işlenmesine açık rıza veriyorum.',
+            'Asistanın yalnızca bilgilendirme amaçlı olduğunu; tanı koymadığını, tedavi önermediğini ve hekim değerlendirmesinin yerine geçmediğini biliyorum.'
+          ]
+        },
+        {
+          heading: 'Rızanın Geri Çekilmesi',
+          paragraphs: [
+            'Rızamı info@meurology.com adresine yazarak dilediğim zaman, tümüyle veya yukarıdaki başlıklardan biri bakımından geri çekebileceğimi biliyorum. Geri çekme, o tarihe kadarki hukuka uygun işlemeyi etkilemez.'
           ]
         }
       ]
     },
     en: {
       intro:
-        'This consent concerns health information you choose to share in the pre-assessment form; it is separate from the privacy notice.',
+        'This consent concerns the health data you choose to share through the website and the ways that data is processed; it is separate from the privacy notice. You can withdraw your consent separately for each of the headings below.',
       sections: [
         {
-          heading: 'Explicit Consent Statement',
+          heading: 'Processing of Health Data',
           paragraphs: [
-            'I explicitly consent to Doç. Dr. Müslüm Ergün processing health information in my treatment selection and optional message for pre-assessment.',
-            'I can withdraw this consent by writing to info@meurology.com. Withdrawal does not affect earlier lawful processing.'
+            'I explicitly consent to Doç. Dr. Müslüm Ergün processing, for the purpose of pre-assessment, the health data contained in my treatment selection, my optional message and the documents I attach to the pre-assessment form.',
+            'I understand that I am not obliged to share this data and that, if I do not, I can receive general information only.'
+          ]
+        },
+        {
+          heading: 'Transfer Abroad',
+          paragraphs: [
+            'I explicitly consent to my personal data and the health data I share being transferred, to the extent necessary to provide the service, to hosting, email delivery and security service providers established abroad.'
+          ]
+        },
+        {
+          heading: 'Contact over WhatsApp',
+          paragraphs: [
+            'If I choose to be contacted over WhatsApp, I explicitly consent to the information I share through that channel being processed for pre-assessment and appointment coordination.',
+            'I understand that this channel is operated by Meta Platforms Ireland Limited and that the relevant data may be processed abroad.'
+          ]
+        },
+        {
+          heading: 'AI-Assisted Patient Assistant',
+          paragraphs: [
+            'If I use the AI-assisted patient assistant offered on the site, I explicitly consent to the messages I write to it being processed by an AI service provider established abroad in order to generate a reply.',
+            'I understand that the assistant is for information only, that it does not diagnose, does not recommend treatment and does not replace assessment by a doctor.'
+          ]
+        },
+        {
+          heading: 'Withdrawing Consent',
+          paragraphs: [
+            'I understand that I may withdraw my consent at any time, in whole or for any one of the headings above, by writing to info@meurology.com. Withdrawal does not affect processing that was lawful up to that date.'
           ]
         }
       ]
     },
     ar: {
       intro:
-        'تتعلق هذه الموافقة بالمعلومات الصحية التي تختار مشاركتها في نموذج التقييم الأولي، وهي منفصلة عن إشعار الخصوصية.',
+        'تتعلق هذه الموافقة بالبيانات الصحية التي تختار مشاركتها عبر الموقع وبطرائق معالجتها، وهي منفصلة عن إشعار الخصوصية. ويمكنك سحب موافقتك على نحو مستقل عن كل بند من البنود الآتية.',
       sections: [
         {
-          heading: 'إقرار الموافقة الصريحة',
+          heading: 'معالجة البيانات الصحية',
           paragraphs: [
-            'أوافق صراحةً على معالجة المعلومات الصحية الواردة في اختيار العلاج والرسالة الاختيارية بواسطة Doç. Dr. Müslüm Ergün لغرض التقييم الأولي.',
-            'يمكنني سحب هذه الموافقة بالكتابة إلى info@meurology.com، ولا يؤثر السحب في مشروعية المعالجة السابقة.'
+            'أوافق صراحةً على أن يعالج Doç. Dr. Müslüm Ergün، لغرض التقييم الأولي، البيانات الصحية الواردة في اختياري العلاجي ورسالتي الاختيارية والمستندات التي أرفقها بنموذج التقييم الأولي.',
+            'وأعلم أنني غير ملزم بمشاركة هذه البيانات، وأنني من دونها لا أتلقى سوى معلومات عامة.'
+          ]
+        },
+        {
+          heading: 'النقل إلى خارج تركيا',
+          paragraphs: [
+            'أوافق صراحةً على نقل بياناتي الشخصية والبيانات الصحية التي أشاركها، بالقدر اللازم لتقديم الخدمة، إلى مزوّدي خدمات الاستضافة وإرسال البريد الإلكتروني والأمن المقيمين خارج تركيا.'
+          ]
+        },
+        {
+          heading: 'التواصل عبر واتساب',
+          paragraphs: [
+            'إذا اخترت التواصل عبر واتساب فإنني أوافق صراحةً على معالجة ما أشاركه عبر هذه القناة لغرض التقييم الأولي وتنسيق المواعيد.',
+            'وأعلم أن هذه القناة تديرها شركة Meta Platforms Ireland Limited وأن البيانات المعنية قد تُعالَج خارج تركيا.'
+          ]
+        },
+        {
+          heading: 'مساعد المرضى المدعوم بالذكاء الاصطناعي',
+          paragraphs: [
+            'إذا استعملت مساعد المرضى المدعوم بالذكاء الاصطناعي المتاح في الموقع فإنني أوافق صراحةً على أن يعالج مزوّد خدمة ذكاء اصطناعي مقرّه خارج تركيا الرسائل التي أكتبها إليه من أجل توليد الرد.',
+            'وأعلم أن المساعد للمعلومة فحسب، وأنه لا يشخّص ولا يوصي بعلاج ولا يحل محل تقييم الطبيب.'
+          ]
+        },
+        {
+          heading: 'سحب الموافقة',
+          paragraphs: [
+            'أعلم أنه يمكنني سحب موافقتي في أي وقت، كليًا أو بشأن أي بند من البنود أعلاه، بالكتابة إلى info@meurology.com. ولا يؤثر السحب في مشروعية المعالجة حتى ذلك التاريخ.'
           ]
         }
       ]
     },
     de: {
       intro:
-        'Diese Einwilligung betrifft Gesundheitsangaben, die Sie im Vorabbewertungsformular mitteilen; sie ist von der Datenschutzerklärung getrennt.',
+        'Diese Einwilligung betrifft die Gesundheitsdaten, die Sie über die Website mitteilen möchten, und die Art ihrer Verarbeitung; sie ist von der Datenschutzerklärung getrennt. Sie können Ihre Einwilligung für jede der folgenden Rubriken gesondert widerrufen.',
       sections: [
         {
-          heading: 'Erklärung der ausdrücklichen Einwilligung',
+          heading: 'Verarbeitung von Gesundheitsdaten',
           paragraphs: [
-            'Ich willige ausdrücklich ein, dass Doç. Dr. Müslüm Ergün Gesundheitsangaben in meiner Behandlungsauswahl und freiwilligen Nachricht zur Vorabbewertung verarbeitet.',
-            'Ich kann diese Einwilligung über info@meurology.com widerrufen. Der Widerruf berührt eine frühere rechtmäßige Verarbeitung nicht.'
+            'Ich willige ausdrücklich ein, dass Doç. Dr. Müslüm Ergün die Gesundheitsdaten in meiner Behandlungsauswahl, meiner freiwilligen Nachricht und den dem Formular beigefügten Dokumenten zum Zweck der Vorabbewertung verarbeitet.',
+            'Mir ist bekannt, dass ich diese Daten nicht mitteilen muss und dass ich ohne sie nur allgemeine Informationen erhalten kann.'
+          ]
+        },
+        {
+          heading: 'Übermittlung ins Ausland',
+          paragraphs: [
+            'Ich willige ausdrücklich ein, dass meine personenbezogenen Daten und die mitgeteilten Gesundheitsdaten, soweit zur Erbringung der Leistung erforderlich, an im Ausland ansässige Anbieter für Hosting, E-Mail-Versand und Sicherheit übermittelt werden.'
+          ]
+        },
+        {
+          heading: 'Kontakt über WhatsApp',
+          paragraphs: [
+            'Falls ich den Kontakt über WhatsApp wähle, willige ich ausdrücklich ein, dass die über diesen Kanal mitgeteilten Angaben zur Vorabbewertung und Terminkoordination verarbeitet werden.',
+            'Mir ist bekannt, dass dieser Kanal von Meta Platforms Ireland Limited betrieben wird und die betreffenden Daten im Ausland verarbeitet werden können.'
+          ]
+        },
+        {
+          heading: 'KI-gestützter Patientenassistent',
+          paragraphs: [
+            'Falls ich den auf der Website angebotenen KI-gestützten Patientenassistenten nutze, willige ich ausdrücklich ein, dass meine Nachrichten an ihn zur Erzeugung einer Antwort von einem im Ausland ansässigen KI-Dienstleister verarbeitet werden.',
+            'Mir ist bekannt, dass der Assistent nur der Information dient, keine Diagnose stellt, keine Behandlung empfiehlt und keine ärztliche Beurteilung ersetzt.'
+          ]
+        },
+        {
+          heading: 'Widerruf der Einwilligung',
+          paragraphs: [
+            'Mir ist bekannt, dass ich meine Einwilligung jederzeit insgesamt oder für eine der oben genannten Rubriken durch eine Nachricht an info@meurology.com widerrufen kann. Der Widerruf berührt die bis dahin rechtmäßige Verarbeitung nicht.'
           ]
         }
       ]
     },
     ru: {
       intro:
-        'Это согласие касается сведений о здоровье, которые вы решите указать в форме предварительной оценки; оно отдельно от уведомления о конфиденциальности.',
+        'Это согласие касается сведений о здоровье, которые вы решите передать через сайт, и способов их обработки; оно отдельно от уведомления о конфиденциальности. Согласие по каждому из приведённых ниже пунктов можно отозвать отдельно.',
       sections: [
         {
-          heading: 'Заявление о явном согласии',
+          heading: 'Обработка сведений о здоровье',
           paragraphs: [
-            'Я явно соглашаюсь на обработку Doç. Dr. Müslüm Ergün сведений о здоровье в выбранном направлении лечения и необязательном сообщении для предварительной оценки.',
-            'Я могу отозвать согласие, написав на info@meurology.com. Отзыв не влияет на законность предыдущей обработки.'
+            'Я явно соглашаюсь на обработку Doç. Dr. Müslüm Ergün сведений о здоровье, содержащихся в выбранном мною направлении лечения, в необязательном сообщении и в документах, приложенных к форме предварительной оценки, для целей предварительной оценки.',
+            'Я понимаю, что не обязан сообщать эти сведения и что без них смогу получить только общую информацию.'
+          ]
+        },
+        {
+          heading: 'Передача за рубеж',
+          paragraphs: [
+            'Я явно соглашаюсь на передачу моих персональных данных и передаваемых мной сведений о здоровье — в объёме, необходимом для оказания услуги, — поставщикам услуг хостинга, доставки электронной почты и безопасности, расположенным за рубежом.'
+          ]
+        },
+        {
+          heading: 'Общение через WhatsApp',
+          paragraphs: [
+            'Если я выберу общение через WhatsApp, я явно соглашаюсь на обработку переданных по этому каналу сведений для целей предварительной оценки и координации приёма.',
+            'Я понимаю, что этим каналом управляет Meta Platforms Ireland Limited и что соответствующие данные могут обрабатываться за рубежом.'
+          ]
+        },
+        {
+          heading: 'Помощник для пациентов на основе ИИ',
+          paragraphs: [
+            'Если я воспользуюсь предлагаемым на сайте помощником на основе искусственного интеллекта, я явно соглашаюсь на обработку написанных ему сообщений поставщиком услуг ИИ, расположенным за рубежом, для формирования ответа.',
+            'Я понимаю, что помощник носит только информационный характер, не ставит диагноз, не рекомендует лечение и не заменяет врачебную оценку.'
+          ]
+        },
+        {
+          heading: 'Отзыв согласия',
+          paragraphs: [
+            'Я понимаю, что могу в любой момент отозвать согласие полностью или по любому из приведённых выше пунктов, написав на info@meurology.com. Отзыв не влияет на законность обработки до этой даты.'
           ]
         }
       ]
     },
     fr: {
       intro:
-        'Ce consentement porte sur les informations de santé que vous choisissez de partager dans le formulaire de pré-évaluation ; il est distinct de l’avis de confidentialité.',
+        'Ce consentement porte sur les données de santé que vous choisissez de partager via le site et sur la manière dont elles sont traitées ; il est distinct de l’avis de confidentialité. Vous pouvez retirer votre consentement séparément pour chacune des rubriques ci-dessous.',
       sections: [
         {
-          heading: 'Déclaration de consentement explicite',
+          heading: 'Traitement des données de santé',
           paragraphs: [
-            'Je consens expressément à ce que le Doç. Dr. Müslüm Ergün traite, à des fins de pré-évaluation, les informations de santé figurant dans le traitement que j’ai sélectionné et dans mon message facultatif.',
-            'Je peux retirer ce consentement en écrivant à info@meurology.com. Ce retrait n’affecte pas la licéité du traitement antérieur.'
+            'Je consens expressément à ce que le Doç. Dr. Müslüm Ergün traite, à des fins de pré-évaluation, les données de santé figurant dans le traitement que j’ai sélectionné, dans mon message facultatif et dans les documents que je joins au formulaire.',
+            'Je comprends que je ne suis pas tenu de communiquer ces données et que, à défaut, je ne peux recevoir que des informations générales.'
+          ]
+        },
+        {
+          heading: 'Transfert hors de Türkiye',
+          paragraphs: [
+            'Je consens expressément à ce que mes données personnelles et les données de santé que je partage soient transférées, dans la mesure nécessaire à la fourniture du service, à des prestataires d’hébergement, d’acheminement d’e-mails et de sécurité établis à l’étranger.'
+          ]
+        },
+        {
+          heading: 'Échanges par WhatsApp',
+          paragraphs: [
+            'Si je choisis d’être contacté par WhatsApp, je consens expressément à ce que les informations partagées par ce canal soient traitées à des fins de pré-évaluation et de coordination des rendez-vous.',
+            'Je comprends que ce canal est exploité par Meta Platforms Ireland Limited et que les données concernées peuvent être traitées à l’étranger.'
+          ]
+        },
+        {
+          heading: 'Assistant patient assisté par IA',
+          paragraphs: [
+            'Si j’utilise l’assistant patient assisté par IA proposé sur le site, je consens expressément à ce que les messages que je lui adresse soient traités par un prestataire d’IA établi à l’étranger afin de produire une réponse.',
+            'Je comprends que cet assistant est purement informatif, qu’il ne pose pas de diagnostic, ne recommande pas de traitement et ne remplace pas l’appréciation d’un médecin.'
+          ]
+        },
+        {
+          heading: 'Retrait du consentement',
+          paragraphs: [
+            'Je comprends que je peux retirer mon consentement à tout moment, en totalité ou pour l’une des rubriques ci-dessus, en écrivant à info@meurology.com. Ce retrait n’affecte pas le traitement licite antérieur.'
           ]
         }
       ]
     }
   }
 };
+
 
 /**
  * ÇEREZ POLİTİKASI (prompt m.4.1 — yasal/cerez-politikasi).
