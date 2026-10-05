@@ -7,6 +7,7 @@ import type { Locale } from '@/i18n/routing';
 import { Icon } from './Icon';
 import { TurnstileWidget } from './TurnstileWidget';
 import { CountrySelect } from './CountrySelect';
+import { track } from '@/lib/analytics';
 import {
   ALLOWED_ATTACHMENT_ACCEPT,
   MAX_ATTACHMENTS,
@@ -171,6 +172,12 @@ export function PreAssessmentForm({
         throw new Error('request_failed');
       }
       setStatus('success');
+      /*
+        OLCUM: yalnizca formun gonderildigi bilgisi gider.
+        Secilen tedavi, sikayet metni, ad, e-posta ve telefon
+        BILEREK gonderilmez — bunlar saglik/kisisel veridir.
+      */
+      track('form_submit');
       form.reset();
       clearFiles();
     } catch {

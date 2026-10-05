@@ -11,6 +11,7 @@ import { ThemeScript } from '@/components/ThemeScript';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 import { CookieConsent } from '@/components/CookieConsent';
+import { AnalyticsEvents } from '@/components/AnalyticsEvents';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { JsonLd } from '@/components/JsonLd';
 import { buildAlternates, getPathname } from '@/i18n/navigation';
@@ -124,6 +125,8 @@ export default async function LocaleLayout({
           <SiteFooter />
           <FloatingWhatsApp />
           <CookieConsent />
+          {/* WhatsApp / telefon / e-posta tiklamalarini tek noktadan olcer. */}
+          <AnalyticsEvents />
         </NextIntlClientProvider>
       </body>
     </html>

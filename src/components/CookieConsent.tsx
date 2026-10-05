@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { analyticsConfig } from '@/config/analytics';
+import { analyticsConfig, analyticsEnabled } from '@/config/analytics';
 
 type Choice = 'granted' | 'denied';
 
@@ -83,6 +83,28 @@ gtag('config', ${JSON.stringify(gaId)}, { anonymize_ip: true });
 }
 
 /**
+ * META (FACEBOOK) PIXEL — yalnizca onaydan sonra.
+ * GA ile ayni kural: onay verilmeden tek bir ag cagrisi yapilmaz.
+ * Otomatik sayfa gorunumu (PageView) gonderilir; saglik verisi iceren
+ * hicbir parametre eklenmez (bkz. lib/analytics).
+ */
+function loadMetaPixel(pixelId: string) {
+  if (document.getElementById('meta-pixel-init')) return;
+  const init = document.createElement('script');
+  init.id = 'meta-pixel-init';
+  init.text = `
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', ${JSON.stringify(pixelId)});
+fbq('track', 'PageView');
+`.trim();
+  document.head.appendChild(init);
+}
+
+/**
  * ÇEREZ ONAY BANDI (prompt m.5.3 — Consent Mode v2).
  * Yalnızca GA4 kimliği yapılandırılmışsa görünür; aksi halde sitede zorunlu
  * çerez dışında bir şey yoktur ve bant gösterilmez. Bu davranış çerez
@@ -91,13 +113,17 @@ gtag('config', ${JSON.stringify(gaId)}, { anonymize_ip: true });
 export function CookieConsent() {
   const t = useTranslations('Consent');
   const [open, setOpen] = useState(false);
-  const gaId = analyticsConfig.gaId;
+  const { gaId, metaPixelId } = analyticsConfig;
+  const enabled = analyticsEnabled();
 
   useEffect(() => {
-    if (!gaId) return;
+    if (!enabled) return;
     const stored = readConsent();
     if (stored) {
-      if (stored.choice === 'granted') loadAnalytics(gaId);
+      if (stored.choice === 'granted') {
+        if (gaId) loadAnalytics(gaId);
+        if (metaPixelId) loadMetaPixel(metaPixelId);
+      }
     } else {
       setOpen(true);
     }
@@ -105,22 +131,23 @@ export function CookieConsent() {
     return () => {
       delete window.meOpenCookiePrefs;
     };
-  }, [gaId]);
+  }, [enabled, gaId, metaPixelId]);
 
   const choose = useCallback(
     (choice: Choice) => {
       writeConsent(choice);
       setOpen(false);
-      if (choice === 'granted' && gaId) {
-        loadAnalytics(gaId);
-      } else if (choice === 'denied' && typeof window.gtag === 'function') {
+      if (choice === 'granted') {
+        if (gaId) loadAnalytics(gaId);
+        if (metaPixelId) loadMetaPixel(metaPixelId);
+      } else if (typeof window.gtag === 'function') {
         window.gtag('consent', 'update', { analytics_storage: 'denied' });
       }
     },
-    [gaId]
+    [gaId, metaPixelId]
   );
 
-  if (!gaId || !open) return null;
+  if (!enabled || !open) return null;
 
   return (
     <section
@@ -143,17 +170,24 @@ export function CookieConsent() {
           </p>
         </div>
         <div className="flex shrink-0 gap-2">
+          {/*
+            İKİ DÜĞME EŞİT GÖRÜNÜRLÜKTE.
+            "Kabul et" daha dolgun/renkli, "Reddet" soluk bir düğme olduğunda
+            kullanıcı yönlendirilmiş olur; bu, geçerli bir rıza sayılmaz.
+            Bu yüzden iki düğme aynı boyutta, aynı çerçevede ve aynı yazı
+            ağırlığındadır; yalnızca yazı rengiyle ayrışırlar.
+          */}
           <button
             type="button"
             onClick={() => choose('denied')}
-            className="rounded-lg border border-border px-4 py-2 text-sm font-medium text-fg transition-colors hover:bg-surface-2"
+            className="min-w-[7.5rem] rounded-lg border border-border bg-surface px-4 py-2 text-sm font-medium text-fg transition-colors hover:bg-surface-2"
           >
             {t('reject')}
           </button>
           <button
             type="button"
             onClick={() => choose('granted')}
-            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-fg transition-opacity hover:opacity-90"
+            className="min-w-[7.5rem] rounded-lg border border-border bg-surface px-4 py-2 text-sm font-medium text-fg transition-colors hover:bg-surface-2"
           >
             {t('accept')}
           </button>
@@ -167,7 +201,7 @@ export function CookieConsent() {
 export function CookiePrefsButton({ label }: { label: string }) {
   const [available, setAvailable] = useState(false);
   useEffect(() => {
-    setAvailable(Boolean(analyticsConfig.gaId));
+    setAvailable(analyticsEnabled());
   }, []);
   if (!available) return null;
   return (

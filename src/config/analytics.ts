@@ -20,15 +20,25 @@
  * için betik yalnızca onaydan sonra enjekte edilir.
  */
 export const analyticsConfig = {
-  /** GA4 ölçüm kimliği (G-...). Boşsa analitik tamamen kapalıdır. */
+  /** GA4 ölçüm kimliği (G-...). Boşsa GA tamamen kapalıdır. */
   gaId: process.env.NEXT_PUBLIC_GA_ID?.trim() ?? '',
+  /**
+   * Meta (Facebook) Pixel kimliği. Boşsa pixel hiç yüklenmez.
+   * GA ile AYNI kurala tabidir: onay verilmeden tek bir ağ çağrısı yapılmaz.
+   */
+  metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID?.trim() ?? '',
   /** Onay tercihinin tarayıcıda saklandığı anahtar. */
   storageKey: 'me-cookie-consent',
   /** Tercihin geçerli sayılacağı süre (gün). Sonrasında yeniden sorulur. */
   consentMaxAgeDays: 180
 } as const;
 
-/** Analitik yapılandırılmış mı? Bant ve gtag yalnızca bu doğruysa devreye girer. */
+/**
+ * Ölçüm araçlarından EN AZ BİRİ yapılandırılmış mı?
+ * Bant ve betikler yalnızca bu doğruysa devreye girer; hiçbiri
+ * tanımlı değilse sitede zorunlu çerez dışında bir şey yoktur ve
+ * onay bandı da gösterilmez.
+ */
 export function analyticsEnabled(): boolean {
-  return analyticsConfig.gaId.length > 0;
+  return analyticsConfig.gaId.length > 0 || analyticsConfig.metaPixelId.length > 0;
 }

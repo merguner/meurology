@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { track } from '@/lib/analytics';
 import { useTranslations } from 'next-intl';
 import type { Locale } from '@/i18n/routing';
 import type { ConsultationCopy } from '@/content/consultation';
@@ -202,7 +203,11 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
                   <button
                     key={s}
                     type="button"
-                    onClick={() => setTime(s)}
+                    onClick={() => {
+                      setTime(s);
+                      // Olcum: saat ve tarih GONDERILMEZ; yalnizca secim yapildigi bilgisi.
+                      track('consultation_slot_selected', { source: 'ozel-danismanlik' });
+                    }}
                     aria-pressed={active}
                     className={`rounded-lg border px-2 py-2 text-sm transition-colors ${
                       active
