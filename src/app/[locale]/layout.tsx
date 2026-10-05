@@ -6,6 +6,7 @@ import { routing, rtlLocales, type Locale } from '@/i18n/routing';
 import { fontVariablesFor } from '@/app/fonts';
 import { siteConfig } from '@/config/site';
 import { robotsMeta } from '@/config/seo';
+import { ogImages, ogImagePath } from '@/config/ogImage';
 import { ThemeScript } from '@/components/ThemeScript';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
@@ -40,7 +41,13 @@ export async function generateMetadata({
       title: t('defaultTitle'),
       description: t('defaultDescription'),
       locale,
-      images: [{ url: '/brand/og.svg', width: 1200, height: 630, alt: t('siteName') }]
+      images: ogImages(locale, t('defaultTitle'))
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('defaultTitle'),
+      description: t('defaultDescription'),
+      images: [ogImagePath(locale)]
     },
     // Geçici dağıtım adresinde (*.vercel.app) noindex — bkz. config/seo.ts
     robots: robotsMeta()
@@ -73,7 +80,7 @@ export default async function LocaleLayout({
     url: `${siteConfig.domain}/${locale}`,
     email: siteConfig.email,
     telephone: siteConfig.phoneIntl,
-    image: `${siteConfig.domain}/brand/og.svg`,
+    image: `${siteConfig.domain}${ogImagePath(locale as Locale)}`,
     medicalSpecialty: 'Urology',
     address: {
       '@type': 'PostalAddress',

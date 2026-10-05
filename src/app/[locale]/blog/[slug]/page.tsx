@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ogImages, ogImagePath } from '@/config/ogImage';
 import { buildAlternates, getPathname, treatmentHref } from '@/i18n/navigation';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -60,7 +61,18 @@ export async function generateMetadata({
     title: c.metaTitle,
     description: c.metaDescription,
     alternates: blogAlternates(post, locale),
-    openGraph: { title: c.metaTitle, description: c.metaDescription, type: 'article' }
+    openGraph: {
+      title: c.metaTitle,
+      description: c.metaDescription,
+      type: 'article',
+      images: ogImages(locale, c.metaTitle)
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: c.metaTitle,
+      description: c.metaDescription,
+      images: [ogImagePath(locale)]
+    }
   };
 }
 

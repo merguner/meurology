@@ -14,6 +14,7 @@ export async function SiteFooter() {
   const t = await getTranslations('Footer');
   const tn = await getTranslations('Nav');
   const tc = await getTranslations('Contact');
+  const tcom = await getTranslations('Common');
   const locale = (await getLocale()) as Locale;
   const consult = resolveConsultation(locale);
   const navItems = navItemsFor(locale);
@@ -25,7 +26,17 @@ export async function SiteFooter() {
         <div className="md:col-span-2">
           <div className="flex items-center gap-2.5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/emblem.svg" alt="" width={32} height={32} className="h-8 w-8" />
+            {/* Alt metin DİLE GÖRE: bu amblem bir bağlantının içinde değil,
+                dolayısıyla kendi erişilebilir adına ihtiyaç duyar.
+                (Başlıktaki amblem bunun tersidir — oradaki bağlantının zaten
+                aria-label'ı var, bu yüzden orada alt="" doğrudur.) */}
+            <img
+              src="/brand/emblem.svg"
+              alt={tcom('logoAlt')}
+              width={32}
+              height={32}
+              className="h-8 w-8"
+            />
             <span translate="no" className="whitespace-nowrap font-brand text-lg font-semibold tracking-tight text-primary">
               Urology Clinic
             </span>

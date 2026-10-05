@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ogImages, ogImagePath } from '@/config/ogImage';
 import { buildAlternates, getPathname } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
@@ -23,7 +24,18 @@ export async function generateMetadata({
     title: c.title,
     description: c.intro[0],
     alternates: buildAlternates(locale, '/rekonstruktif-uroloji'),
-    openGraph: { title: c.title, description: c.intro[0], type: 'website' }
+    openGraph: {
+      title: c.title,
+      description: c.intro[0],
+      type: 'website',
+      images: ogImages(locale, c.title)
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: c.title,
+      description: c.intro[0],
+      images: [ogImagePath(locale)]
+    }
   };
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ogImages, ogImagePath } from '@/config/ogImage';
 import { buildTreatmentAlternates, treatmentHref, getPathname } from '@/i18n/navigation';
 import { canonicalSlug, localizedSlug } from '@/i18n/slugs';
 import { notFound } from 'next/navigation';
@@ -46,7 +47,21 @@ export async function generateMetadata({
     title: c.metaTitle,
     description: c.metaDescription,
     alternates: buildTreatmentAlternates(locale, canonical),
-    openGraph: { title: c.metaTitle, description: c.metaDescription, type: 'article' }
+    // openGraph/twitter MIRAS ALINMAZ: kok layout'ta tanimli olsa bile bir
+    // sayfa kendi openGraph'ini verdiginde ust nesnenin tamami gecersiz olur.
+    // Bu yuzden gorseller her sayfada yeniden bildirilir.
+    openGraph: {
+      title: c.metaTitle,
+      description: c.metaDescription,
+      type: 'article',
+      images: ogImages(locale, c.metaTitle)
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: c.metaTitle,
+      description: c.metaDescription,
+      images: [ogImagePath(locale)]
+    }
   };
 }
 
