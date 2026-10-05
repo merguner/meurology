@@ -64,7 +64,7 @@ export interface SurgeonProfile {
  */
 const publications: SurgeonPublication[] = [
   {
-    authors: 'Ergün M, Sağır S, Hacibey İ',
+    authors: 'Ergün M, Sağır S, Hacıbey İ',
     title:
       'ThuLEP technique for managing benign prostatic hyperplasia: Intraoperative and postoperative complications in a series of 42 consecutive cases',
     journal: 'Journal of Surgery and Medicine',

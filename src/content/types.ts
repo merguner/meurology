@@ -119,6 +119,27 @@ export interface TreatmentContent {
   recovery?: RecoveryStep[];
   /** Bilimsel kaynaklar (EAU kılavuzu, cerrahın yayınları). */
   sources?: ContentSource[];
+  /**
+   * SAYFANIN EN ÜSTÜNDEKİ KISA KLİNİK NOT — opsiyonel.
+   * Örn. "Kliniğimizde enükleasyon yöntemi olarak öncelikle ThuLEP
+   * uygulanmaktadır." Boşken hiç render edilmez.
+   * linkSlug verilirse notun sonunda ilgili tedavi sayfasına bağlantı çıkar
+   * (slug KANONİK yazılır; dile göre çevrilmiş adrese dönüştürülür).
+   */
+  topNote?: { body: string; linkSlug?: string; linkLabel?: string };
+  /**
+   * HEKİMİN BU ALANDAKİ KENDİ YAYINI — opsiyonel.
+   * YALNIZCA atıf yapılır. Yayından başarı oranı, yüzde veya vaka sayısı
+   * ÇIKARILMAZ; tanıtım yönetmeliği açısından bu bir sonuç iddiası olurdu.
+   * Boşken bölüm hiç render edilmez.
+   */
+  surgeonPublication?: {
+    /** Kutunun içindeki kısa giriş cümlesi (dile göre). */
+    intro: string;
+    /** Tam atıf — kaynak biçiminde, çevrilmez. */
+    citation: string;
+    url?: string;
+  };
   /** Bu prosedürde cerrah deneyimi — PLACEHOLDER sayılar. */
   surgeonExperience: {
     caseVolume: string; // ör. "1.500+ vaka" — doğrulanana kadar boş bırakılır

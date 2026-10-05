@@ -245,6 +245,29 @@ export default async function TreatmentPage({
         </div>
       </div>
 
+      {/* SAYFA ÜSTÜ KLİNİK NOT (opsiyonel).
+          Hastanın yöntem seçimini etkileyen, sayfanın en başında okunması
+          gereken kısa bilgi için. İçerik boşsa hiç basılmaz. */}
+      {c.topNote && (
+        <div className="container-content pt-6">
+          <p className="rounded-xl border border-primary/25 bg-primary-soft/50 px-5 py-4 text-sm text-fg">
+            <Icon name="shield" size={16} className="me-2 inline align-[-2px] text-primary" />
+            {c.topNote.body}
+            {c.topNote.linkSlug && c.topNote.linkLabel && (
+              <>
+                {' '}
+                <Link
+                  href={treatmentHref(c.topNote.linkSlug, locale)}
+                  className="font-semibold text-primary underline underline-offset-2"
+                >
+                  {c.topNote.linkLabel}
+                </Link>
+              </>
+            )}
+          </p>
+        </div>
+      )}
+
       {/* ÜCRETLİ ÖZEL GÖRÜŞME — yalnızca offersConsultation olan tedavilerde (androloji).
           Ücretsiz WhatsApp/form CTA'larından görsel olarak ayrışır. */}
       {treatment.offersConsultation &&
@@ -309,6 +332,35 @@ export default async function TreatmentPage({
               ))}
             </div>
           </section>
+
+          {/*
+            HEKİMİN BU ALANDAKİ KENDİ YAYINI.
+            Yalnızca ATIF yapılır. Yayındaki başarı oranı/yüzde bilinçli
+            olarak alınmamıştır: tanıtımda sonuç iddiası yasaktır
+            (Sağlık Bakanlığı tanıtım yönetmeliği).
+          */}
+          {c.surgeonPublication && (
+            <section>
+              <SectionHeading title={t('sectionPublication')} />
+              <div className="rounded-xl border border-border bg-surface p-5">
+                <p className="text-sm text-muted">{c.surgeonPublication.intro}</p>
+                <p className="mt-3 text-sm font-medium text-fg">
+                  {c.surgeonPublication.url ? (
+                    <a
+                      href={c.surgeonPublication.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-2 hover:text-primary"
+                    >
+                      {c.surgeonPublication.citation}
+                    </a>
+                  ) : (
+                    c.surgeonPublication.citation
+                  )}
+                </p>
+              </div>
+            </section>
+          )}
 
           {/* Kimlere uygundur / uygun değildir */}
           {c.eligibility && (
