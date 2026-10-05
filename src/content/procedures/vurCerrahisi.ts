@@ -3,7 +3,7 @@ import type { Treatment } from '../types';
 /**
  * ÇOCUKLARDA VEZİKOÜRETERAL REFLÜ (VUR) CERRAHİSİ — yeni sayfa (Görev 7).
  *
- * reviewStatus: 'draft' — hekim onayı bekliyor; `lastReviewed` bilerek boş.
+ * reviewStatus: 'reviewed' — hekim onayı alındı (Dr. Ergün, 6 Ekim 2026).
  * Kaynak: EAU/ESPU Paediatric Urology kılavuzu.
  * Derece bazlı yüzde/başarı oranı YAZILMAMIŞTIR.
  */
@@ -12,7 +12,9 @@ export const vurCerrahisi: Treatment = {
   procedure: { type: 'SurgicalProcedure', bodyLocation: 'Ureter' },
   parent: 'cocuk-urolojisi',
   icon: 'kidney',
-  reviewStatus: 'draft',
+  reviewStatus: 'reviewed',
+
+  lastReviewed: '2026-10-06',
   offersConsultation: false,
   i18n: {
     tr: {

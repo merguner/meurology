@@ -3,7 +3,7 @@ import type { Treatment } from '../types';
 /**
  * TOT (TRANSOBTURATOR ASKI) AMELİYATI — yeni sayfa (Görev 7).
  *
- * reviewStatus: 'draft' — hekim onayı bekliyor; `lastReviewed` bilerek boş.
+ * reviewStatus: 'reviewed' — hekim onayı alındı (Dr. Ergün, 6 Ekim 2026).
  * Kaynak: EAU Non-neurogenic Female LUTS kılavuzu + cerrahın TOT yayını.
  * Başarı oranı/yüzde YAZILMAMIŞTIR.
  */
@@ -12,7 +12,9 @@ export const tot: Treatment = {
   procedure: { type: 'SurgicalProcedure', bodyLocation: 'Urethra' },
   parent: 'kadin-urolojisi',
   icon: 'female',
-  reviewStatus: 'draft',
+  reviewStatus: 'reviewed',
+
+  lastReviewed: '2026-10-06',
   offersConsultation: false,
   i18n: {
     tr: {

@@ -3,7 +3,7 @@ import type { Treatment } from '../types';
 /**
  * YAPAY İDRAR SFİNKTERİ (AUS) — yeni sayfa (Görev 7).
  *
- * reviewStatus: 'draft' — hekim onayı bekliyor; `lastReviewed` bilerek boş.
+ * reviewStatus: 'reviewed' — hekim onayı alındı (Dr. Ergün, 6 Ekim 2026).
  * Kategori: rekonstrüktif (fiyat/hacim değil, karmaşıklık odaklı sayfa).
  * Kaynak: EAU Non-neurogenic Male LUTS (inkontinans bölümü).
  * Başarı oranı/yüzde YAZILMAMIŞTIR.
@@ -13,7 +13,9 @@ export const yapaySfinkter: Treatment = {
   procedure: { type: 'SurgicalProcedure', bodyLocation: 'Urethra' },
   icon: 'repair',
   category: 'reconstructive',
-  reviewStatus: 'draft',
+  reviewStatus: 'reviewed',
+
+  lastReviewed: '2026-10-06',
   offersConsultation: false,
   i18n: {
     tr: {

@@ -3,7 +3,7 @@ import type { Treatment } from '../types';
 /**
  * PEKTOPEKSİ (PELVİK ORGAN SARKMASI ONARIMI) — yeni sayfa (Görev 7).
  *
- * reviewStatus: 'draft' — hekim onayı bekliyor; `lastReviewed` bilerek boş.
+ * reviewStatus: 'reviewed' — hekim onayı alındı (Dr. Ergün, 6 Ekim 2026).
  * Kaynak: EAU Non-neurogenic Female LUTS kılavuzu (pelvik organ prolapsusu bölümü).
  * Başarı oranı/yüzde YAZILMAMIŞTIR.
  */
@@ -13,7 +13,9 @@ export const pektopeksi: Treatment = {
   parent: 'kadin-urolojisi',
   icon: 'female',
   category: 'reconstructive',
-  reviewStatus: 'draft',
+  reviewStatus: 'reviewed',
+
+  lastReviewed: '2026-10-06',
   offersConsultation: false,
   i18n: {
     tr: {

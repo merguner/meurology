@@ -3,7 +3,7 @@ import type { Treatment } from '../types';
 /**
  * MESANE BOTOKSU (İNTRADETRUSÖR BOTULİNUM TOKSİNİ) — yeni sayfa (Görev 7).
  *
- * reviewStatus: 'draft' — hekim onayı bekliyor; `lastReviewed` bilerek boş.
+ * reviewStatus: 'reviewed' — hekim onayı alındı (Dr. Ergün, 6 Ekim 2026).
  * Kaynak: EAU Non-neurogenic Female LUTS + Neuro-urology kılavuzları.
  * Başarı oranı/yüzde YAZILMAMIŞTIR. Kendi kendine sonda takma ihtimali
  * BİLEREK öne çıkarılmıştır: hastanın buna istekli olması şarttır.
@@ -13,7 +13,9 @@ export const mesaneBotoksu: Treatment = {
   procedure: { type: 'TherapeuticProcedure', bodyLocation: 'Urinary bladder' },
   parent: 'kadin-urolojisi',
   icon: 'female',
-  reviewStatus: 'draft',
+  reviewStatus: 'reviewed',
+
+  lastReviewed: '2026-10-06',
   offersConsultation: false,
   i18n: {
     tr: {
