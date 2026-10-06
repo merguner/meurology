@@ -48,7 +48,29 @@ const nextConfig = {
    * esleme ilkesi orada aciklandi.
    */
   async redirects() {
-    return legacyRedirects;
+    return [
+      /*
+       * APEX -> WWW (kalici).
+       * Kanonik adres www.meurology.com (bkz. config/site.ts). Apex de
+       * Vercel'e baglandiginda ayni icerigi ikinci bir adreste sunmamak
+       * icin tum istekler www'ya tasinir; yol ve sorgu korunur.
+       *
+       * host kosulu TAM 'meurology.com' oldugundan www kendini
+       * yonlendirmez, dolayisiyla dongu olusmaz.
+       *
+       * NOT: Apex DNS kaydi hala eski hostingi gosterdigi surece bu
+       * kural hic tetiklenmez; apex Vercel'e cevrildigi an devreye
+       * girer. Onceden eklenmesi bilincli — DNS degisimi ile kod
+       * degisimi ayni ana denk gelmesin diye.
+       */
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'meurology.com' }],
+        destination: 'https://www.meurology.com/:path*',
+        permanent: true
+      },
+      ...legacyRedirects
+    ];
   },
   async headers() {
     return [
