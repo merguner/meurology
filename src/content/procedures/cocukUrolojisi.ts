@@ -3,8 +3,8 @@ import type { Treatment } from '../types';
 /**
  * ÇOCUK ÜROLOJİSİ — kategori (hub) sayfası (Görev 7).
  *
- * reviewStatus: 'draft' — hekim onayı bekliyor; bu yüzden `lastReviewed`
- * bilerek boş bırakıldı (bkz. content/types.ts).
+ * reviewStatus: 'reviewed' — hekim onayı alındı (Dr. Ergün, 6 Ekim 2026);
+ * `lastReviewed` o tarihle dolduruldu (bkz. content/types.ts).
  *
  * Alt sayfalar: hipospadias-onarimi, vur-cerrahisi.
  * Kaynak: EAU/ESPU Paediatric Urology kılavuzu.
@@ -12,7 +12,9 @@ import type { Treatment } from '../types';
 export const cocukUrolojisi: Treatment = {
   slug: 'cocuk-urolojisi',
   icon: 'urethra',
-  reviewStatus: 'draft',
+  reviewStatus: 'reviewed',
+
+  lastReviewed: '2026-10-06',
   offersConsultation: false,
   i18n: {
     tr: {

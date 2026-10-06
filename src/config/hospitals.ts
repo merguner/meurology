@@ -5,33 +5,31 @@
  * hastane için AYRI AYRI buradan açılıp kapanır. Bir rozet yalnızca
  * karşılığındaki alan `true` ise gösterilir.
  *
- * !!! TODO(Dr. Ergün): TEYİT EDİLECEK !!!
- * Aşağıdaki değerler sitenin BUGÜNKÜ beyanıyla aynı bırakıldı (site
- * genelinde JCI ve ISO 9001 rozetleri zaten gösteriliyordu). Hangi
- * belgenin hangi hastaneye ait olduğu DOĞRULANMADI. Teyit edilene kadar
- * bu dosyadaki değerler bir iddia değil, yalnızca mevcut durumun
- * taşınmış hâlidir. Doğrulama sonrası:
- *   - geçerli olmayanı `false` yapın (rozet kendiliğinden kaybolur),
- *   - belge numarasını `tourismLicenseNo` alanına yazın.
+ * TEYİT EDİLDİ — Doç. Dr. Müslüm Ergün, 6 Ekim 2026.
+ * Aşağıdaki akreditasyon değerleri hekim tarafından doğrulanmıştır;
+ * mevcut durumun taşınmış hâli değil, teyit edilmiş beyandır.
+ * Durum değişirse ilgili alanı `false` yapın — rozet kendiliğinden
+ * kaybolur. Belge numarası `tourismLicenseNo` alanına yazılır.
  *
  * Belge numarası BOŞKEN sayfada numara satırı HİÇ render edilmez;
  * doğrulanmamış bir numara yayımlamaktansa alanı hiç basmamak doğrudur.
  */
 
 export interface HospitalAccreditation {
-  /** Joint Commission International. TODO(Dr. Ergün): teyit edilecek. */
+  /** Joint Commission International. Teyit: Dr. Ergün, 6 Eki 2026. */
   jci: boolean;
-  /** ISO 9001 kalite yönetim sistemi. TODO(Dr. Ergün): teyit edilecek. */
+  /** ISO 9001 kalite yönetim sistemi. Teyit: Dr. Ergün, 6 Eki 2026. */
   iso9001: boolean;
   /**
    * T.C. Sağlık Bakanlığı Uluslararası Sağlık Turizmi Yetki Belgesi
    * bu hastanede var mı. false iken belge satırı HİÇ gösterilmez.
-   * TODO(Dr. Ergün): teyit edilecek.
+   * Teyit: Dr. Ergün, 6 Eki 2026.
    */
   tourismLicense: boolean;
   /**
    * T.C. Sağlık Bakanlığı Uluslararası Sağlık Turizmi Yetki Belgesi no.
-   * TODO(Dr. Ergün): teyit edilecek. Boşken satır gösterilmez.
+   * Belge VAR (teyit: Dr. Ergün, 6 Eki 2026); NUMARA bekleniyor.
+   * Boşken satır gösterilmez.
    */
   tourismLicenseNo: string;
 }
@@ -57,12 +55,12 @@ export const hospitals: HospitalEntry[] = [
     photo: '/photos/hastane-medical-park-bahcelievler.jpg',
     mapsLink: '',
     accreditation: {
-      jci: true, // TODO(Dr. Ergün): teyit edilecek
-      iso9001: true, // TODO(Dr. Ergün): teyit edilecek
+      jci: true, // teyit: Dr. Ergün, 6 Eki 2026
+      iso9001: true, // teyit: Dr. Ergün, 6 Eki 2026
       // config/contact.ts bugün belge sahibi olarak YALNIZCA bu hastaneyi
       // belirtiyor; mevcut beyan korundu.
-      tourismLicense: true, // TODO(Dr. Ergün): teyit edilecek
-      tourismLicenseNo: '' // TODO(Dr. Ergün): teyit edilecek
+      tourismLicense: true, // teyit: Dr. Ergün, 6 Eki 2026
+      tourismLicenseNo: '' // TODO: belge numarası alınacak
     }
   },
   {
@@ -71,13 +69,13 @@ export const hospitals: HospitalEntry[] = [
     photo: '/photos/hastane-liv-topkapi.jpg',
     mapsLink: '',
     accreditation: {
-      jci: true, // TODO(Dr. Ergün): teyit edilecek
-      iso9001: true, // TODO(Dr. Ergün): teyit edilecek
+      jci: true, // teyit: Dr. Ergün, 6 Eki 2026
+      iso9001: true, // teyit: Dr. Ergün, 6 Eki 2026
       // BİLEREK false: sitenin bugünkü beyanında belge sahibi olarak
       // yalnızca Medical Park Bahçelievler geçiyor. Doğrulanmamış bir
       // belge iddiası eklemek yerine satır hiç gösterilmiyor.
-      tourismLicense: false, // TODO(Dr. Ergün): teyit edilecek
-      tourismLicenseNo: '' // TODO(Dr. Ergün): teyit edilecek
+      tourismLicense: false, // TODO: LİV Topkapı için teyit bekleniyor
+      tourismLicenseNo: '' // TODO: belge numarası alınacak
     }
   }
 ];

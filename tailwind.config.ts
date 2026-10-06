@@ -22,6 +22,7 @@ const config: Config = {
         'primary-strong': 'rgb(var(--c-primary-strong) / <alpha-value>)',
         'primary-fg': 'rgb(var(--c-primary-fg) / <alpha-value>)',
         'primary-soft': 'rgb(var(--c-primary-soft) / <alpha-value>)',
+        brand: 'rgb(var(--c-brand) / <alpha-value>)',
         accent: 'rgb(var(--c-accent) / <alpha-value>)',
         'accent-fg': 'rgb(var(--c-accent-fg) / <alpha-value>)',
         ring: 'rgb(var(--c-ring) / <alpha-value>)',

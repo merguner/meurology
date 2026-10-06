@@ -1,4 +1,5 @@
 import createNextIntlPlugin from 'next-intl/plugin';
+import { legacyRedirects } from './src/config/legacy-redirects.mjs';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
@@ -40,6 +41,14 @@ const nextConfig = {
       // Görsel CDN'i eklendiğinde buraya tanımlayın (ör. Sanity, Cloudinary).
       { protocol: 'https', hostname: 'images.unsplash.com' }
     ]
+  },
+  /**
+   * Eski WordPress sitesinin adreslerinden 301 yonlendirmeleri.
+   * Kurallar src/config/legacy-redirects.mjs icinde; gerekcesi ve
+   * esleme ilkesi orada aciklandi.
+   */
+  async redirects() {
+    return legacyRedirects;
   },
   async headers() {
     return [

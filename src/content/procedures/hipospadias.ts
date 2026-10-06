@@ -3,10 +3,9 @@ import type { Treatment } from '../types';
 /**
  * HİPOSPADİAS ONARIMI — yeni sayfa (Görev 7).
  *
- * reviewStatus: 'draft' — metin hazırdır ancak HEKİM ONAYI BEKLİYOR.
- * Bu nedenle `lastReviewed` BİLEREK boş bırakıldı: onaylanmamış bir metnin
- * altına "Son tıbbi gözden geçirme — Doç. Dr. Müslüm Ergün" yazmak
- * yanıltıcı olurdu. Onaydan sonra reviewStatus 'reviewed' yapılıp tarih girilir.
+ * reviewStatus: 'reviewed' — hekim onayı alındı (Dr. Ergün, 6 Ekim 2026).
+ * `lastReviewed` o tarihle dolduruldu; sayfada "Son tıbbi gözden geçirme"
+ * satırı ve JSON-LD'de reviewedBy artık basılır.
  *
  * Kaynak: EAU/ESPU Paediatric Urology kılavuzu.
  * Kaynaksız oran, yüzde veya başarı iddiası YAZILMAMIŞTIR.
@@ -17,7 +16,9 @@ export const hipospadias: Treatment = {
   parent: 'cocuk-urolojisi',
   icon: 'urethra',
   category: 'reconstructive',
-  reviewStatus: 'draft',
+  reviewStatus: 'reviewed',
+
+  lastReviewed: '2026-10-06',
   offersConsultation: false,
   i18n: {
     tr: {

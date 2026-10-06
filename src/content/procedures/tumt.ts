@@ -3,7 +3,7 @@ import type { Treatment } from '../types';
 /**
  * TUMT (TRANSÜRETRAL MİKRODALGA TERMOTERAPİSİ) — yeni sayfa (Görev 7).
  *
- * reviewStatus: 'draft' — hekim onayı bekliyor; `lastReviewed` bilerek boş.
+ * reviewStatus: 'reviewed' — hekim onayı alındı (Dr. Ergün, 6 Ekim 2026).
  * Kaynak: EAU non-neurogenic male LUTS kılavuzu.
  * Başarı oranı/yüzde YAZILMAMIŞTIR. Yöntemin sınırları (gecikmeli etki,
  * yeniden girişim olasılığı, patoloji incelemesinin olmaması) açıkça yazılıdır.
@@ -13,7 +13,9 @@ export const tumt: Treatment = {
   procedure: { type: 'TherapeuticProcedure', bodyLocation: 'Prostate' },
   parent: 'bph-prostat-buyumesi',
   icon: 'prostate',
-  reviewStatus: 'draft',
+  reviewStatus: 'reviewed',
+
+  lastReviewed: '2026-10-06',
   offersConsultation: false,
   i18n: {
     tr: {

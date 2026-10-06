@@ -102,7 +102,7 @@ export const siteConfig = {
     },
     /**
      * ONLINE DANIŞMANLIK ÜCRETİ — EURO.
-     * TODO(Dr. Ergün): teyit edilecek.
+     * Teyit edildi: Dr. Ergün, 6 Ekim 2026.
      * 0 BIRAKILIRSA sayfada tutar GÖSTERİLMEZ ve "görüşme randevusu
      * sırasında bildirilir" metni korunur (ConsultationCopy.priceOnRequest).
      */

@@ -6,26 +6,26 @@
  * tutulamıyorsa onu metinden elle silmek yerine burada kapatılır; ilgili
  * soru-cevap sayfadan ve FAQPage yapılandırılmış verisinden tamamen çıkar.
  *
- * !!! TODO(Dr. Ergün): TEYİT EDİLECEK !!!
- * Aşağıdaki değerler sitenin BUGÜNKÜ beyanıyla aynı bırakıldı; hiçbiri
- * yeni bir iddia değildir. Tutulamayan bir vaat varsa `false` yapın —
- * metin değişmez, yalnızca o cevap gösterilmez.
+ * TEYİT EDİLDİ — Doç. Dr. Müslüm Ergün, 6 Ekim 2026.
+ * Aşağıdaki altı vaadin tamamı hekim tarafından doğrulanmıştır.
+ * Bir vaat ileride tutulamaz hâle gelirse `false` yapın — metin
+ * değişmez, yalnızca o cevap sayfadan ve FAQPage verisinden çıkar.
  *
  * Yanıltıcı tanıtım açısından riskli olan, vaadin yazılması değil
  * TUTULAMAMASIDIR; bu yüzden bu liste ayrı bir dosyada tutulur.
  */
 export const servicePromises = {
-  /** "Uluslararası hasta koordinatörümüz var." TODO(Dr. Ergün) */
+  /** "Uluslararası hasta koordinatörümüz var." Teyit: 6 Eki 2026. */
   internationalCoordinator: true,
-  /** "Görüşme öncesi tercüman ayarlanır." TODO(Dr. Ergün) */
+  /** "Görüşme öncesi tercüman ayarlanır." Teyit: 6 Eki 2026. */
   interpreter: true,
-  /** "Konaklama ve transferler paket kapsamındadır." TODO(Dr. Ergün) */
+  /** "Konaklama ve transferler paket kapsamındadır." Teyit: 6 Eki 2026. */
   packageIncludesStayAndTransfer: true,
-  /** "Bir refakatçinin konaklaması da kapsanır." TODO(Dr. Ergün) */
+  /** "Bir refakatçinin konaklaması da kapsanır." Teyit: 6 Eki 2026. */
   companionAccommodation: true,
-  /** "Talep üzerine kadın koordinatör desteği sağlanır." TODO(Dr. Ergün) */
+  /** "Talep üzerine kadın koordinatör desteği sağlanır." Teyit: 6 Eki 2026. */
   femaleCoordinator: true,
-  /** "Tıbbi raporlar İngilizce hazırlanır." TODO(Dr. Ergün) */
+  /** "Tıbbi raporlar İngilizce hazırlanır." Teyit: 6 Eki 2026. */
   englishEpicrisis: true
 } as const;
 

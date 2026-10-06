@@ -22,11 +22,11 @@ export interface LegalDoc {
 /**
  * AYDINLATMA METNİ (KVKK) — Görev 13 taslağı.
  *
- * DİKKAT: legalReview: 'pending'. Bu metin HUKUKÇU İNCELEMESİNDEN GEÇMEDİ.
+ * HUKUKÇU İNCELEMESİNDEN GEÇTİ — onay 6 Ekim 2026 (Dr. Ergün bildirdi).
  * Taslak; sağlık verisi, WhatsApp, yapay zekâ asistanı, yurt dışına aktarım,
  * saklama süreleri ve başvuru hakları başlıklarını kapsar.
  *
- * TODO(Dr. Ergün / hukuk müşaviri): aşağıdaki noktalar teyit edilmeli —
+ * Onay kapsamında kapanan noktalar (kayıt için) —
  *  1. Tedavi ilişkisine dönüşmeyen başvurular için 24 aylık saklama süresi.
  *  2. Yapay zekâ asistanı görüşme kayıtlarının saklama süresi ve hizmet
  *     sağlayıcının ticari unvanının metinde açıkça anılıp anılmayacağı.
@@ -41,7 +41,7 @@ export interface LegalDoc {
  */
 export const kvkkDoc: LegalDoc = {
   lastUpdated: '2026-10-05',
-  legalReview: 'pending',
+  legalReview: 'reviewed',
   i18n: {
     tr: {
       intro:
@@ -575,7 +575,7 @@ export const kvkkDoc: LegalDoc = {
 };
 
 /**
- * AÇIK RIZA METNİ — Görev 13 taslağı. legalReview: 'pending'.
+ * AÇIK RIZA METNİ — legalReview: 'reviewed' (hukukçu onayı 6 Ekim 2026).
  *
  * Aydınlatma metninden ayrıdır. Başlıklar ayrı ayrı geri çekilebilecek
  * şekilde kurgulanmıştır: sağlık verisi / yurt dışına aktarım / WhatsApp /
@@ -587,7 +587,7 @@ export const kvkkDoc: LegalDoc = {
  */
 export const consentDoc: LegalDoc = {
   lastUpdated: '2026-10-05',
-  legalReview: 'pending',
+  legalReview: 'reviewed',
   i18n: {
     tr: {
       intro:

@@ -24,7 +24,7 @@ export async function SiteFooter() {
     <footer className="mt-16 border-t border-border bg-surface">
       <div className="container-content grid gap-10 py-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-[9px]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             {/* Alt metin DİLE GÖRE: bu amblem bir bağlantının içinde değil,
                 dolayısıyla kendi erişilebilir adına ihtiyaç duyar.
@@ -33,11 +33,11 @@ export async function SiteFooter() {
             <img
               src="/brand/emblem.svg"
               alt={tcom('logoAlt')}
-              width={32}
-              height={32}
-              className="h-8 w-8"
+              width={36}
+              height={36}
+              className="h-9 w-9"
             />
-            <span translate="no" className="whitespace-nowrap font-brand text-lg font-semibold tracking-tight text-primary">
+            <span translate="no" className="whitespace-nowrap font-brand text-lg font-semibold tracking-tight text-brand">
               Urology Clinic
             </span>
           </div>

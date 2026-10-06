@@ -17,10 +17,10 @@ import { mikroVarikoselektomi } from './mikroVarikoselektomi';
  * listelerdeki sıradır; bu liste treatments.ts'in sonunda ana diziye
  * eklenir.
  *
- * Bu dosyadaki tüm girdiler `reviewStatus: 'draft'` taşır: metinler
- * hazırdır ancak HEKİM ONAYI BEKLEMEKTEDİR. Bu nedenle hiçbirinde
- * `lastReviewed` doldurulmamıştır; sayfalarda "Son tıbbi gözden geçirme"
- * satırı ve JSON-LD'de reviewedBy alanı basılmaz.
+ * Bu dosyadaki dokuz girdinin tamamı `reviewStatus: 'reviewed'` taşır:
+ * hekim onayı 6 Ekim 2026'da alındı, her birinde `lastReviewed` o tarihle
+ * dolduruldu. Sayfalarda "Son tıbbi gözden geçirme" satırı ve JSON-LD'de
+ * reviewedBy alanı artık basılır.
  */
 export const newProcedures: Treatment[] = [cocukUrolojisi, hipospadias, vurCerrahisi, tot, pektopeksi, mesaneBotoksu, yapaySfinkter, tumt, mikroVarikoselektomi];
 

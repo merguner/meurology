@@ -3,7 +3,7 @@ import type { Treatment } from '../types';
 /**
  * MİKROSKOPİK VARİKOSELEKTOMİ — yeni sayfa (Görev 7).
  *
- * reviewStatus: 'draft' — hekim onayı bekliyor; `lastReviewed` bilerek boş.
+ * reviewStatus: 'reviewed' — hekim onayı alındı (Dr. Ergün, 6 Ekim 2026).
  * Mevcut 'varikosel' sayfasıyla ÇAPRAZ BAĞLANTILIDIR: bu sayfa yöntemi,
  * diğeri hastalığı anlatır. topNote ile varikosel sayfasına yönlendirilir.
  * Kaynak: EAU Sexual and Reproductive Health kılavuzu.
@@ -14,7 +14,9 @@ export const mikroVarikoselektomi: Treatment = {
   procedure: { type: 'SurgicalProcedure', bodyLocation: 'Spermatic cord' },
   parent: 'androloji',
   icon: 'andrology',
-  reviewStatus: 'draft',
+  reviewStatus: 'reviewed',
+
+  lastReviewed: '2026-10-06',
   offersConsultation: true,
   i18n: {
     tr: {

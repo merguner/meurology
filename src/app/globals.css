@@ -19,6 +19,10 @@
   --c-primary-strong: 8 71 130; /* ~%18 koyu — hover/aktif */
   --c-primary-fg: 255 255 255;
   --c-primary-soft: 224 237 248;
+  /* Marka mavisi — YALNIZCA logo kilidi (amblem + "Urology Clinic").
+     Canva ana logosundaki #2E6FE0'in acik zeminde WCAG AA geçen tonu.
+     Arayuz mavisi --c-primary'dir; bu token onun yerine KULLANILMAZ. */
+  --c-brand: 45 109 220;
   --c-accent: 202 128 26; /* sıcak amber — CTA maviden ayrışsın */
   --c-accent-fg: 33 18 3;
   --c-accent-ink: 140 86 12; /* açık zeminde metin için koyu amber (AA 4.5:1) */
