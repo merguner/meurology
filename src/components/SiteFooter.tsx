@@ -3,6 +3,7 @@ import { Link } from '@/i18n/navigation';
 import { navItemsFor } from '@/config/nav';
 import { siteConfig } from '@/config/site';
 import { contactConfig } from '@/config/contact';
+import { tourismLicenseHolders } from '@/config/hospitals';
 import { SocialLinks } from './SocialLinks';
 import { CookiePrefsButton } from './CookieConsent';
 import { Icon } from './Icon';
@@ -51,7 +52,7 @@ export async function SiteFooter() {
             <div className="flex flex-wrap gap-x-1.5">
               <dt>{t('licenseLabel')}:</dt>
               <dd className="text-fg">
-                {contactConfig.healthTourism.licenseHolder}
+                {tourismLicenseHolders().join(' · ')}
                 {contactConfig.healthTourism.licenseNo
                   ? ` · ${contactConfig.healthTourism.licenseNo}`
                   : ''}

@@ -57,10 +57,8 @@ export const hospitals: HospitalEntry[] = [
     accreditation: {
       jci: true, // teyit: Dr. Ergün, 6 Eki 2026
       iso9001: true, // teyit: Dr. Ergün, 6 Eki 2026
-      // config/contact.ts bugün belge sahibi olarak YALNIZCA bu hastaneyi
-      // belirtiyor; mevcut beyan korundu.
       tourismLicense: true, // teyit: Dr. Ergün, 6 Eki 2026
-      tourismLicenseNo: '' // TODO: belge numarası alınacak
+      tourismLicenseNo: '' // numara yayımlanmayacak (Dr. Ergün, 7 Eki 2026)
     }
   },
   {
@@ -71,14 +69,21 @@ export const hospitals: HospitalEntry[] = [
     accreditation: {
       jci: true, // teyit: Dr. Ergün, 6 Eki 2026
       iso9001: true, // teyit: Dr. Ergün, 6 Eki 2026
-      // BİLEREK false: sitenin bugünkü beyanında belge sahibi olarak
-      // yalnızca Medical Park Bahçelievler geçiyor. Doğrulanmamış bir
-      // belge iddiası eklemek yerine satır hiç gösterilmiyor.
-      tourismLicense: false, // TODO: LİV Topkapı için teyit bekleniyor
-      tourismLicenseNo: '' // TODO: belge numarası alınacak
+      tourismLicense: true, // teyit: Dr. Ergün, 7 Eki 2026
+      tourismLicenseNo: '' // numara yayımlanmayacak (Dr. Ergün, 7 Eki 2026)
     }
   }
 ];
+
+/**
+ * Sağlık turizmi yetki belgesi OLAN hastanelerin adları.
+ * Alt bilgi ve hastane sayfasındaki "Belge sahibi" satırı buradan okunur;
+ * böylece bir hastanenin durumu değiştiğinde metin kendiliğinden düzelir
+ * ve iki ayrı yerde elle güncelleme gerekmez.
+ */
+export function tourismLicenseHolders(): string[] {
+  return hospitals.filter((h) => h.accreditation.tourismLicense).map((h) => h.name);
+}
 
 /** Site genelindeki rozet şeridi için: en az bir hastanede var mı? */
 export function anyHospitalHas(key: keyof Omit<HospitalAccreditation, 'tourismLicenseNo'>): boolean {

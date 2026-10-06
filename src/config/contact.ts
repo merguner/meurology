@@ -44,9 +44,18 @@ export const contactConfig = {
    * TODO-DOGRULA: belge numarası alınacak. Boşken numara satırı render EDİLMEZ.
    */
   healthTourism: {
-    /** Belge sahibi kurum. */
-    licenseHolder: 'Medical Park Bahçelievler',
-    /** TODO-DOGRULA: Yetki belgesi numarası. */
+    /**
+     * BELGE SAHİBİ KURUM ARTIK BURADA TUTULMUYOR.
+     * Hangi hastanenin yetki belgesi olduğu config/hospitals.ts içindeki
+     * `tourismLicense` alanlarından okunur (bkz. tourismLicenseHolders()).
+     * Tek kaynak olsun diye buradaki sabit isim kaldırıldı: 7 Eki 2026'da
+     * LİV Topkapı'nın da belgesi olduğu teyit edilince, iki ayrı yerde
+     * güncelleme gerektiren bu alan yanıltıcı hale gelmişti.
+     */
+    /**
+     * Yetki belgesi numarası. Dr. Ergün 7 Eki 2026'da numaranın
+     * YAYIMLANMAYACAĞINI bildirdi. Boşken numara satırı render EDİLMEZ.
+     */
     licenseNo: ''
   },
 

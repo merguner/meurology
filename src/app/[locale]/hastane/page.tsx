@@ -6,7 +6,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
 import { hospital } from '@/content/trust';
 import { resolveHospitalDetails } from '@/content/hospitalDetails';
-import { hospitals } from '@/config/hospitals';
+import { hospitals, tourismLicenseHolders } from '@/config/hospitals';
 import { contactConfig } from '@/config/contact';
 import { isPlaceholder } from '@/content/types';
 import { publicImage } from '@/lib/publicImage';
@@ -186,7 +186,7 @@ export default async function HospitalPage({
               T.C. Sağlık Bakanlığı verir ve sahibi hekim değil hastanedir. */}
           <p className="mt-4 text-sm text-muted">
             {t('licenseLabel')}:{' '}
-            {t('licenseHolder', { holder: contactConfig.healthTourism.licenseHolder })}
+            {t('licenseHolder', { holder: tourismLicenseHolders().join(' · ') })}
           </p>
         </section>
       </div>
