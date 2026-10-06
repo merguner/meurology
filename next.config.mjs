@@ -26,8 +26,24 @@ const csp = [
   "font-src 'self' data:",
   "style-src 'self' 'unsafe-inline'",
   // Prod'da eval gerekmez; dev sunucusu (HMR) için gevşetilir.
-  `script-src 'self' 'unsafe-inline'${isProd ? '' : " 'unsafe-eval'"}`,
-  "connect-src 'self'",
+  /*
+   * ONAYA BAGLI OLCUM ARACLARI — 7 Eki 2026'da eklendi.
+   * GA4 canliya alindiginda her sayfada su hata veriliyordu:
+   *   "Loading the script 'https://www.googletagmanager.com/gtag/js'
+   *    violates ... script-src 'self' 'unsafe-inline'. Blocked."
+   * Yani ziyaretci onay veriyor, betik DOM'a ekleniyor, tarayici
+   * engelliyordu; GA4'e tek bir olay bile ulasmiyordu. Sessiz bir
+   * arizaydi: sitede hicbir sey bozuk gorunmuyor, yalniz veri gelmiyor.
+   *
+   * connect-src de gerekli: gtag olculeri /g/collect ucuna XHR/beacon
+   * ile gonderir, 'self' ile engellenir.
+   *
+   * Meta Pixel kimligi henuz tanimli degil ama kod onu da destekliyor;
+   * ayni tuzaga dusmemek icin facebook alan adlari da simdiden eklendi.
+   * Izin verilenler YALNIZCA bu aracların alan adlaridir.
+   */
+  `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net${isProd ? '' : " 'unsafe-eval'"}`,
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.facebook.com",
   'frame-src https://www.google.com https://maps.google.com https://www.youtube-nocookie.com https://www.youtube.com',
   'upgrade-insecure-requests'
 ].join('; ');
