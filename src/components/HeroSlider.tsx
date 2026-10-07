@@ -206,9 +206,12 @@ export function HeroSlider({ doctor }: { doctor?: HeroDoctor }) {
         </>
       )}
 
-      {/* Nokta göstergeleri */}
+      {/* Nokta göstergeleri.
+          Dokunma hedefi 24x24 (WCAG 2.5.8): görünen nokta küçük kalır,
+          tıklanabilir alan büyür. bottom değeri, daha uzun düğme yüzünden
+          noktanın ekrandaki konumu kaymasın diye 5'ten 3'e çekildi. */}
       {count > 1 && (
-        <div className="absolute inset-x-0 bottom-5 flex justify-center gap-2.5">
+        <div className="absolute inset-x-0 bottom-3 flex justify-center gap-1">
           {heroSlides.map((slide, i) => (
             <button
               key={slide.id}
@@ -219,10 +222,15 @@ export function HeroSlider({ doctor }: { doctor?: HeroDoctor }) {
                 stopAuto();
                 go(i);
               }}
-              className={`h-2.5 rounded-full transition-all ${
-                i === index ? 'w-7 bg-primary' : 'w-2.5 bg-border hover:bg-muted'
-              }`}
-            />
+              className="grid h-6 min-w-6 place-items-center rounded-full px-1"
+            >
+              <span
+                aria-hidden="true"
+                className={`block h-2.5 rounded-full transition-all ${
+                  i === index ? 'w-7 bg-primary' : 'w-2.5 bg-border'
+                }`}
+              />
+            </button>
           ))}
         </div>
       )}
