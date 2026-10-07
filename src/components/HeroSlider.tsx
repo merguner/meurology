@@ -81,7 +81,13 @@ export function HeroSlider({ doctor }: { doctor?: HeroDoctor }) {
       onTouchEnd={onTouchEnd}
       tabIndex={0}
     >
-      <div className="relative min-h-[460px] md:min-h-[540px]">
+      {/* GRID YIGINI — slaytlar ayni hucreye konur, bu yuzden kapsayicinin
+          yuksekligi EN UZUN slayta gore belirlenir. Onceden slaytlar
+          `absolute` idi; kapsayici icerikten yukseklik almadigi icin uzun
+          cevirilerde (de/en/fr/ru) WhatsApp dugmesi overflow-hidden ile
+          KESILIYORDU — Almanca mobilde dugmenin gorunen yuksekligi 0'di.
+          min-h artik yalnizca taban. */}
+      <div className="relative grid min-h-[460px] md:min-h-[540px]">
         {heroSlides.map((slide, i) => {
           // Eksik çeviride İngilizce'ye düşer (Türkçe'ye değil): yabancı dildeki
           // ziyaretçiye Türkçe metin göstermek kabul edilemez.
@@ -101,7 +107,7 @@ export function HeroSlider({ doctor }: { doctor?: HeroDoctor }) {
               aria-roledescription="slide"
               aria-label={`${i + 1} / ${count}`}
               aria-hidden={!active}
-              className={`absolute inset-0 transition-opacity duration-700 ${slide.bg} ${
+              className={`relative col-start-1 row-start-1 transition-opacity duration-700 ${slide.bg} ${
                 active ? 'opacity-100' : 'pointer-events-none opacity-0'
               }`}
             >
