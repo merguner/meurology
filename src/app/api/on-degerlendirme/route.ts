@@ -417,13 +417,33 @@ export async function POST(request: Request) {
   const webhook = process.env.CRM_WEBHOOK_URL;
   if (webhook) {
     try {
+      /**
+       * Authorization başlığı YALNIZCA jeton ASCII ise eklenir.
+       *
+       * 8 Eki 2026'da Türkçe karakter içeren bir jetonla şu hata alındı:
+       *   "Cannot convert argument to a ByteString because the character at
+       *    index 79 has a value of 305" — 305, 'ı' harfinin kodu.
+       * HTTP başlık değerleri latin-1 taşır; 'ı', 'ş', 'ğ' gibi harfler
+       * fetch'i daha istek gönderilmeden patlatır. Sonuç sessizdi: başvuru
+       * ve e-posta sorunsuz gidiyor, yalnızca CRM kaydı hiç oluşmuyordu.
+       *
+       * Jeton gövdede de gönderildiği için (aşağıda) başlığın atlanması
+       * Apps Script tarafında hiçbir şeyi bozmaz — o zaten başlıkları
+       * okuyamıyor. Başlık bekleyen gerçek CRM'ler ASCII jeton kullanır.
+       */
+      const jeton = process.env.CRM_WEBHOOK_TOKEN;
+      const jetonAsciiMi = jeton ? /^[\x20-\x7E]*$/.test(jeton) : false;
+      if (jeton && !jetonAsciiMi) {
+        console.warn(
+          '[on-degerlendirme] CRM jetonu ASCII değil; Authorization başlığı atlandı, jeton gövdede gönderiliyor.'
+        );
+      }
+
       const res = await fetch(webhook, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          ...(process.env.CRM_WEBHOOK_TOKEN
-            ? { Authorization: `Bearer ${process.env.CRM_WEBHOOK_TOKEN}` }
-            : {})
+          ...(jeton && jetonAsciiMi ? { Authorization: `Bearer ${jeton}` } : {})
         },
         body: JSON.stringify({
           at,
@@ -442,10 +462,12 @@ export async function POST(request: Request) {
            * web uygulamasının adresi herkese açık olduğundan, jeton olmadan adresi
            * ele geçiren biri tabloya sahte satır yazabilirdi.
            *
-           * Başlık yine de gönderiliyor: gerçek CRM'ler (Airtable, HubSpot) onu
-           * bekler. Alıcı hangisini okuyabiliyorsa onu kullanır.
+           * Başlık ASCII jetonlarda ayrıca gönderilir (yukarıya bakın): gerçek
+           * CRM'ler (Airtable, HubSpot) onu bekler. Alıcı hangisini
+           * okuyabiliyorsa onu kullanır. Gövdedeki jeton JSON içinde gittiği
+           * için Türkçe karakter sorunu yaşamaz.
            */
-          ...(process.env.CRM_WEBHOOK_TOKEN ? { token: process.env.CRM_WEBHOOK_TOKEN } : {})
+          ...(jeton ? { token: jeton } : {})
         }),
         signal: AbortSignal.timeout(5000)
       });
