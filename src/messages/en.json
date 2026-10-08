@@ -3,7 +3,9 @@
     "siteName": "ME Urology Clinic",
     "defaultTitle": "ME Urology Clinic — International Urological Surgery",
     "defaultDescription": "Urological surgery and health tourism for international patients: robotic prostatectomy, kidney stones, BPH, andrology and uro-oncology.",
-    "titleTemplate": "{page} — ME Urology Clinic"
+    "titleTemplate": "{page} — ME Urology Clinic",
+    "treatmentsDescription": "Forty urology treatment pages — robotic prostatectomy, kidney stones, BPH, andrology, uro-oncology — each with procedure, risks and realistic expectations.",
+    "hospitalDescription": "Surgery in Istanbul at Medical Park Bahçelievler and LİV Hospital Topkapı: da Vinci robotic system, Quanta laser, full theatre and intensive care."
   },
   "Nav": {
     "home": "Home",

@@ -18,7 +18,9 @@ export async function generateMetadata({
   const tm = await getTranslations({ locale, namespace: 'Meta' });
   return {
     title: t('treatments'),
-    description: tm('defaultDescription'),
+    // Site geneli açıklama BİLEREK kullanılmıyor: 8 Eki 2026'da /tr'de 8 sayfa
+    // aynı meta açıklamayı paylaşıyordu. Bu sayfanın kendi özeti var.
+    description: tm('treatmentsDescription'),
     alternates: buildAlternates(locale, '/tedaviler')
   };
 }

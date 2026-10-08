@@ -3,7 +3,9 @@
     "siteName": "ME Urology Clinic",
     "defaultTitle": "ME Urology Clinic — Internationale urologische Chirurgie",
     "defaultDescription": "Urologische Chirurgie und Gesundheitstourismus für internationale Patienten: robotische Prostatektomie, Nierensteine, BPH, Andrologie und Uroonkologie.",
-    "titleTemplate": "{page} — ME Urology Clinic"
+    "titleTemplate": "{page} — ME Urology Clinic",
+    "treatmentsDescription": "Vierzig urologische Behandlungsseiten – robotische Prostatektomie, Nierensteine, BPH, Andrologie, Uro-Onkologie – mit Ablauf, Risiken und Erwartungen.",
+    "hospitalDescription": "Operiert wird in Istanbul im Medical Park Bahçelievler und im LİV Hospital Topkapı: da-Vinci-System, Quanta-Laser, OP- und Intensivinfrastruktur."
   },
   "Nav": {
     "home": "Startseite",

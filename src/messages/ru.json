@@ -3,7 +3,9 @@
     "siteName": "ME Urology Clinic",
     "defaultTitle": "ME Urology Clinic — Международная урологическая хирургия",
     "defaultDescription": "Урологическая хирургия и медицинский туризм для иностранных пациентов: роботизированная простатэктомия, камни в почках, ДГПЖ, андрология и уроонкология.",
-    "titleTemplate": "{page} — ME Urology Clinic"
+    "titleTemplate": "{page} — ME Urology Clinic",
+    "treatmentsDescription": "Сорок страниц лечения: роботическая простатэктомия, камни почек, ДГПЖ, андрология и онкоурология — ход операции, риски и реалистичные ожидания.",
+    "hospitalDescription": "Операции проводятся в Стамбуле: Medical Park Bahçelievler и LİV Hospital Topkapı — система da Vinci, лазер Quanta, операционные и реанимация."
   },
   "Nav": {
     "home": "Главная",

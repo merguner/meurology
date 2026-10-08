@@ -3,7 +3,9 @@
     "siteName": "ME Urology Clinic",
     "defaultTitle": "ME Urology Clinic — Chirurgie urologique internationale",
     "defaultDescription": "Chirurgie urologique et tourisme médical pour patients internationaux : prostatectomie robotique, calculs rénaux, HBP, andrologie et uro-oncologie.",
-    "titleTemplate": "{page} — ME Urology Clinic"
+    "titleTemplate": "{page} — ME Urology Clinic",
+    "treatmentsDescription": "Quarante pages de traitements urologiques — prostatectomie robotique, calculs rénaux, HBP, andrologie, uro-oncologie — déroulement, risques, attentes.",
+    "hospitalDescription": "Opérations à Istanbul, au Medical Park Bahçelievler et au LİV Hospital Topkapı : système robotique da Vinci, laser Quanta, blocs et soins intensifs."
   },
   "Nav": {
     "home": "Accueil",

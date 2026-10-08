@@ -24,12 +24,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/sozluk',
     '/sgk-ve-sigorta',
     '/blog',
-    '/iletisim',
-    '/yasal/kvkk',
-    '/yasal/acik-riza',
-    '/yasal/cerez-politikasi',
-    '/yasal/kullanim-kosullari',
-    '/yasal/tibbi-sorumluluk-reddi'
+    '/iletisim'
+    /**
+     * HUKUKİ SAYFALAR (/yasal/*) BİLEREK YOK.
+     *
+     * Beşi de generateMetadata içinde robots: { index: false } taşıyor ve
+     * canlıda "noindex, follow" veriyor. Sitemap "şunları dizine al" demek
+     * olduğu için noindex bir adresi oraya koymak kendiyle çelişir; Google
+     * bunu Search Console'da "noindex işaretli gönderilmiş URL" hatası
+     * olarak raporlar. 8 Eki 2026'da 6 dilde 30 adres bu durumdaydı.
+     *
+     * Sayfalar erişilebilir ve bağlantılıdır (follow); yalnızca sitemap'ten
+     * çıkarıldılar. Birine dizin açılırsa buraya geri eklenmelidir.
+     */
   ] as const;
 
   const dynamicHrefs = [

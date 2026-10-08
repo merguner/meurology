@@ -3,7 +3,9 @@
     "siteName": "ME Urology Clinic",
     "defaultTitle": "ME Urology Clinic — Uluslararası Ürolojik Cerrahi",
     "defaultDescription": "Robotik prostatektomi, böbrek taşı, BPH, androloji ve üroonkoloji alanlarında uluslararası hastalara yönelik ürolojik cerrahi ve sağlık turizmi hizmetleri.",
-    "titleTemplate": "{page} — ME Urology Clinic"
+    "titleTemplate": "{page} — ME Urology Clinic",
+    "treatmentsDescription": "Robotik prostatektomi, böbrek taşı, BPH, androloji ve üroonkoloji dahil 40 tedavi sayfası; her biri süreç, risk ve gerçekçi beklentilerle.",
+    "hospitalDescription": "Ameliyatlar Medical Park Bahçelievler ve LİV Hospital Topkapı’da yapılır: da Vinci robotik sistem, Quanta lazer, ameliyathane ve yoğun bakım."
   },
   "Nav": {
     "home": "Ana Sayfa",

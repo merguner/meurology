@@ -104,6 +104,8 @@ export default async function BlogPostPage({
    * Article + yazar olarak Physician (prompt m.3.4).
    * Tıbbi içerikte yazar kimliği (E-E-A-T) arama görünürlüğü için belirleyicidir.
    */
+  const articleUrl = `${siteConfig.domain}${getPathname({ locale, href: { pathname: '/blog/[slug]', params: { slug } } })}`;
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -112,14 +114,22 @@ export default async function BlogPostPage({
     inLanguage: locale,
     datePublished: post.date,
     dateModified: post.updated ?? post.date,
+    /**
+     * Google'ın makale zengin sonucu görselsiz gösterilmiyor; 8 Eki 2026'da
+     * canlıda bu alanın hiç olmadığı görüldü. Blog yazılarının kendi kapak
+     * görseli yok, bu yüzden o dilin paylaşım görseli kullanılıyor: 1200×630,
+     * yani Google'ın istediği en az 1200 px genişlik şartını karşılıyor.
+     */
+    image: `${siteConfig.domain}${ogImagePath(locale)}`,
     author: {
       '@type': 'Physician',
       name: author,
       medicalSpecialty: 'Urology',
       url: `${siteConfig.domain}${getPathname({ locale, href: '/cerrah' })}`
     },
-    url: `${siteConfig.domain}${getPathname({ locale, href: { pathname: '/blog/[slug]', params: { slug } } })}`,
-    publisher: { '@type': 'Organization', name: siteConfig.name }
+    url: articleUrl,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
+    publisher: { '@type': 'Organization', name: siteConfig.name, url: siteConfig.domain }
   };
 
   return (

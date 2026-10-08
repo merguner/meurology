@@ -21,8 +21,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Hospital' });
+  const tm = await getTranslations({ locale, namespace: 'Meta' });
   return {
     title: t('title'),
+    // Açıklama olmadan sayfa site geneli varsayılana düşüyordu; 8 Eki 2026'da
+    // /tr'de 8 sayfa aynı meta açıklamayı paylaşıyordu.
+    description: tm('hospitalDescription'),
     alternates: buildAlternates(locale, '/hastane')
   };
 }
