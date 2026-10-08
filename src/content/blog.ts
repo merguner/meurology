@@ -3724,7 +3724,6 @@ export const blogPosts: BlogPost[] = [
     category: 'bph',
     languages: ['ru'],
     treatmentSlug: 'holep',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Management of Non-Neurogenic Male LUTS — European Association of Urology', url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts' }
     ],
@@ -3804,7 +3803,6 @@ export const blogPosts: BlogPost[] = [
     category: 'andrology',
     languages: ['fr'],
     treatmentSlug: 'penil-protez',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
     ],
@@ -3885,7 +3883,6 @@ export const blogPosts: BlogPost[] = [
     category: 'andrology',
     languages: ['ru'],
     treatmentSlug: 'penil-protez',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
     ],
@@ -3966,7 +3963,6 @@ export const blogPosts: BlogPost[] = [
     category: 'stones',
     languages: ['ru'],
     treatmentSlug: 'rirs',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Urolithiasis — European Association of Urology', url: 'https://uroweb.org/guidelines/urolithiasis' }
     ],
@@ -4053,7 +4049,6 @@ export const blogPosts: BlogPost[] = [
     category: 'oncology',
     languages: ['ru'],
     treatmentSlug: 'prostat-kanseri',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
     ],
@@ -4128,7 +4123,6 @@ export const blogPosts: BlogPost[] = [
     category: 'bph',
     languages: ['fr'],
     treatmentSlug: 'holep',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Management of Non-Neurogenic Male LUTS — European Association of Urology', url: 'https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts' }
     ],
@@ -4208,7 +4202,6 @@ export const blogPosts: BlogPost[] = [
     category: 'oncology',
     languages: ['fr'],
     treatmentSlug: 'prostat-kanseri',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
     ],
