@@ -42,9 +42,24 @@ const csp = [
    * ayni tuzaga dusmemek icin facebook alan adlari da simdiden eklendi.
    * Izin verilenler YALNIZCA bu aracların alan adlaridir.
    */
-  `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net${isProd ? '' : " 'unsafe-eval'"}`,
+  /*
+   * TURNSTILE (bot korumasi) — 8 Eki 2026'da anahtarlar EKLENMEDEN ONCE
+   * izin verildi. Sebebi onemli: GA4'teki sessiz arizanin aksine, burada
+   * eksik CSP formu TAMAMEN KAPATIRDI.
+   *
+   * Zincir soyle isliyordu: site anahtari tanimlaninca widget render
+   * ediliyor -> tarayici challenges.cloudflare.com betigini CSP yuzunden
+   * engelliyor -> jeton uretilemiyor -> gizli anahtar tanimli oldugu icin
+   * verifyTurnstile() false donuyor -> /api/on-degerlendirme her basvuruyu
+   * 403 captcha_failed ile reddediyor. Yani tek bir hasta basvurusu bile
+   * ulasmazdi ve sitede hicbir sey bozuk gorunmezdi.
+   *
+   * Widget bir iframe icinde cizildigi icin frame-src de gerekli; yalnizca
+   * script-src yetmez.
+   */
+  `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net https://challenges.cloudflare.com${isProd ? '' : " 'unsafe-eval'"}`,
   "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.facebook.com",
-  'frame-src https://www.google.com https://maps.google.com https://www.youtube-nocookie.com https://www.youtube.com',
+  'frame-src https://www.google.com https://maps.google.com https://www.youtube-nocookie.com https://www.youtube.com https://challenges.cloudflare.com',
   'upgrade-insecure-requests'
 ].join('; ');
 
