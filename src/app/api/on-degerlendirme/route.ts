@@ -434,7 +434,18 @@ export async function POST(request: Request) {
           treatment: data.treatment ?? '',
           message: data.message ?? '',
           locale: data.locale ?? 'tr',
-          consentTextVersion
+          consentTextVersion,
+          /**
+           * Jeton GÖVDEDE de gönderilir — yalnızca Authorization başlığı yetmiyor.
+           * Google Apps Script'in doPost(e) fonksiyonu istek BAŞLIKLARINI okuyamaz;
+           * alıcı Apps Script ise başlıktaki jeton ona hiç ulaşmaz. Apps Script
+           * web uygulamasının adresi herkese açık olduğundan, jeton olmadan adresi
+           * ele geçiren biri tabloya sahte satır yazabilirdi.
+           *
+           * Başlık yine de gönderiliyor: gerçek CRM'ler (Airtable, HubSpot) onu
+           * bekler. Alıcı hangisini okuyabiliyorsa onu kullanır.
+           */
+          ...(process.env.CRM_WEBHOOK_TOKEN ? { token: process.env.CRM_WEBHOOK_TOKEN } : {})
         }),
         signal: AbortSignal.timeout(5000)
       });
