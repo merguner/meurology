@@ -56,7 +56,12 @@ export const sansCyrillic = Montserrat({
 export const sansArabic = IBM_Plex_Sans_Arabic({
   subsets: ['arabic'],
   display: 'swap',
-  preload: false,
+  // ON YUKLU KALMALI. 8 Eki 2026 olcumu: preload kapatildiginda /ar sayfasinda
+  // CLS 0,000 -> 0,139 (uc kosuda da ayni) cikti. Arap alfabesinin olculeri
+  // Latin yedeginden cok farkli oldugu icin next/font olcu uyumlu yedegi burada
+  // yetmiyor; font gec gelince metin yeniden akip sayfayi kaydiriyor. Ayni testte
+  // Montserrat icin ayni risk yok (/ru CLS 0,023), o yuzden yalnizca bu aile
+  // on yuklu birakildi. Bedeli: Latin sayfalar bu aileyi de indirir.
   variable: '--font-sans-arabic',
   weight: ['400', '500', '600', '700']
 });
@@ -73,11 +78,15 @@ export const sansArabic = IBM_Plex_Sans_Arabic({
  * <link rel="preload"> etiketlerini DERLEME anında, modül grafiğine göre
  * üretir; hangi dilin hangi değişkeni aldığına bakmaz. 8 Eki 2026 ölçümünde
  * /tr, /ru ve /ar sayfalarının ÜÇÜNDE de aynı 16 woff2 dosyası (~274 KB) ön
- * yükleniyordu. Ayrımı sağlayan tek şey yukarıdaki preload bayrağıdır:
- * yalnızca Poppins preload:true, diğerleri preload:false. Böylece Montserrat
- * ve Arapça aile Latin sayfalarda hiç istenmez; kendi dillerinde ise CSS
- * çözümlendikten hemen sonra inerler (display:swap + next/font ölçü uyumlu
- * yedeği sayesinde kayma oluşturmadan).
+ * yükleniyordu. Ayrımı sağlayan tek şey her ailenin preload bayrağıdır.
+ *
+ * Bugünkü dağılım ve neden böyle olduğu:
+ *  - Poppins ve IBM Plex Sans Arabic ÖN YÜKLÜ. İkisi de gövde metni taşıyor;
+ *    geç geldiklerinde metin yeniden akıyor ve sayfa kayıyor.
+ *  - Montserrat ve mono ÖN YÜKLÜ DEĞİL. Ölçümde /ru CLS 0,023 çıktı (eşik
+ *    0,1), mono ise hiçbir sayfada LCP ögesi değil.
+ *
+ * Ölçülen sonuç: /tr 274 KB -> 74 KB, /de 64 KB, ikisinde de CLS 0,000.
  *
  * NOT: bu ayrım YEREL Windows derlemesinde doğrulanamaz; next-font-manifest
  * orada boş üretildiği için yerelde hiçbir font ön yüklenmiyor görünür.
