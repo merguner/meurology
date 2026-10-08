@@ -67,8 +67,14 @@ function doPost(e) {
       sayfa.setFrozenRows(1);
     }
 
+    // Tarih sütunu okunabilir görünsün. Her çağrıda uygulanır; maliyeti yok
+    // ve tablo elle değiştirilse bile biçim geri gelir.
+    sayfa.getRange('A2:A').setNumberFormat('dd.MM.yyyy HH:mm');
+
     sayfa.appendRow([
-      veri.at || new Date().toISOString(),
+      // METİN DEĞİL, GERÇEK TARİH yazılır. Böylece sütun sıralanabilir ve
+      // tarihe göre filtrelenebilir olur; metin olsaydı ikisi de çalışmazdı.
+      veri.at ? new Date(veri.at) : new Date(),
       veri.name || '',
       veri.country || '',
       veri.email || '',
@@ -153,5 +159,17 @@ geldiğini hem de tabloya düştüğünü doğrularım.
 filtre açarsanız (Veri → Filtre görünümü) yalnızca `Yeni` olanları görüp
 takip edebilirsiniz.
 
-Betiği değiştirirseniz **yeni bir dağıtım** yapmanız gerekir; yalnızca
-kaydetmek yayındaki sürümü güncellemez.
+## Betiği sonradan değiştirirseniz
+
+Yalnızca kaydetmek yayındaki sürümü güncellemez — yeniden dağıtmanız gerekir.
+Ama **"Yeni dağıtım" DEMEYİN:** o, size yeni bir adres verir ve Vercel'deki
+`CRM_WEBHOOK_URL` eskide kalır; CRM sessizce durur, hiçbir hata görmezsiniz.
+
+Doğrusu, var olan dağıtımı güncellemektir:
+
+1. **Dağıt** → **Dağıtımları yönet**
+2. Listedeki dağıtımın sağındaki **kalem (düzenle) simgesine** tıklayın
+3. **Sürüm** açılır menüsünden **"Yeni sürüm"** seçin
+4. **Dağıt** deyin
+
+Adres aynı kalır, Vercel'de hiçbir şey değiştirmeniz gerekmez.
