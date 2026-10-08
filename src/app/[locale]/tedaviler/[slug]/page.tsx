@@ -345,7 +345,7 @@ export default async function TreatmentPage({
         </div>
       )}
 
-      <div className="container-content grid gap-10 py-12 lg:grid-cols-3">
+      <div className="container-content grid gap-10 py-12 lg:grid-cols-3 [&>*]:min-w-0">
         {/* ANA İÇERİK */}
         {/*
           min-w-0 ZORUNLU: bu bir grid öğesidir ve grid öğelerinin örtük

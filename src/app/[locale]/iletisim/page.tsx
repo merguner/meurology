@@ -48,7 +48,7 @@ export default async function ContactPage({
       <BreadcrumbJsonLd locale={locale} items={[{ name: t('title'), href: '/iletisim' }]} />
       <PageHero eyebrow={t('title')} title={t('title')} description={t('subtitle')} />
 
-      <div className="container-content grid gap-10 py-12 lg:grid-cols-5">
+      <div className="container-content grid gap-10 py-12 lg:grid-cols-5 [&>*]:min-w-0">
         {/* Form */}
         <div className="lg:col-span-3">
           <div className="card p-6 md:p-8">

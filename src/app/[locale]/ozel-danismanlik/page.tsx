@@ -52,7 +52,7 @@ export default async function ConsultationPage({
       <BreadcrumbJsonLd locale={locale} items={[{ name: c.title, href: '/ozel-danismanlik' }]} />
       <PageHero eyebrow={c.eyebrow} title={c.title} description={c.summary} />
 
-      <div className="container-content grid gap-10 py-12 lg:grid-cols-2">
+      <div className="container-content grid gap-10 py-12 lg:grid-cols-2 [&>*]:min-w-0">
         {/* Sol: anlatım */}
         <div className="space-y-8">
           <span className="chip border-accent/40 bg-accent/10 text-accent">

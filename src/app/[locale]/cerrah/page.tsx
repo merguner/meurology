@@ -135,7 +135,7 @@ export default async function SurgeonPage({
         description={c.role ? `${c.title} · ${c.role}` : c.title}
       />
 
-      <div className="container-content grid gap-10 py-12 lg:grid-cols-3">
+      <div className="container-content grid gap-10 py-12 lg:grid-cols-3 [&>*]:min-w-0">
         <div className="space-y-10 lg:col-span-2">
           {/* Bio */}
           <section className="prose-content space-y-3">

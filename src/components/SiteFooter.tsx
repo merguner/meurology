@@ -23,7 +23,7 @@ export async function SiteFooter() {
 
   return (
     <footer className="mt-16 border-t border-border bg-surface">
-      <div className="container-content grid gap-10 py-12 md:grid-cols-4">
+      <div className="container-content grid gap-10 py-12 md:grid-cols-4 [&>*]:min-w-0">
         <div className="md:col-span-2">
           <div className="flex items-center gap-[9px]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
