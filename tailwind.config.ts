@@ -2,10 +2,23 @@ import type { Config } from 'tailwindcss';
 
 const config: Config = {
   darkMode: ['class', '[data-theme="dark"]'],
+  /*
+   * TARAMA YOLLARI — config/ ve content/ TS dosyalari da DAHIL olmali.
+   *
+   * 8 Eki 2026'da iki sessiz ariza bu eksiklikten cikti:
+   *  1. config/nav.ts icine tasinan 'min-[1200px]:block' gibi siniflar hic
+   *     uretilmedi; masaustu menusu tum dillerde gizli kaldi.
+   *  2. content/heroSlides.ts icindeki 'via-bg' hic uretilmedi; hero
+   *     gradyaninin orta renk duragi uygulanmiyordu.
+   *
+   * KURAL: Tailwind sinifi iceren HER dosya burada listelenmeli. Sinif
+   * adlari TAM METIN yazilmali; birlestirilmis siniflar taranamaz.
+   */
   content: [
     './src/app/**/*.{ts,tsx,mdx}',
     './src/components/**/*.{ts,tsx}',
-    './src/content/**/*.{md,mdx}'
+    './src/config/**/*.{ts,tsx}',
+    './src/content/**/*.{ts,tsx,md,mdx}'
   ],
   theme: {
     extend: {

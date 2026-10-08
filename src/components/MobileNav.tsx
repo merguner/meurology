@@ -4,13 +4,14 @@ import { useState, useEffect } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import type { Locale } from '@/i18n/routing';
 import { Link, usePathname, treatmentHref } from '@/i18n/navigation';
-import { navItemsFor } from '@/config/nav';
+import { navItemsFor, navBreakpoint } from '@/config/nav';
 import { SocialLinks } from './SocialLinks';
 
 export function MobileNav() {
   const t = useTranslations('Nav');
   const locale = useLocale() as Locale;
   const navItems = navItemsFor(locale);
+  const bp = navBreakpoint(locale);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -35,7 +36,7 @@ export function MobileNav() {
   }, [open]);
 
   return (
-    <div className="min-[1200px]:hidden">
+    <div className={bp.mobilde}>
       <button
         type="button"
         onClick={() => setOpen(true)}

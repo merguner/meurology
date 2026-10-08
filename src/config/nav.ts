@@ -62,3 +62,30 @@ export function navItemsFor(locale: Locale | string): NavItem[] {
   const f = features(locale);
   return navItems.filter((i) => !i.requiresTestimonials || f.testimonials);
 }
+
+/**
+ * MASAÜSTÜ MENÜSÜNÜN AÇILDIĞI GENİŞLİK — DİLE GÖRE.
+ *
+ * Menü etiketleri dilden dile ciddi biçimde uzuyor. 8 Eki 2026'da ölçüldü
+ * (1280 px, /{dil}/iletişim): menü genişliği tr 807 · ar 732 · en 945 ·
+ * ru 949 · de 963 · fr 977 px. Menü dışı öğeler (logo + dil/tema/menü
+ * düğmeleri) ~328 px yer kaplıyor.
+ *
+ * Tek bir kırılma noktası kullanmak iki kötü sonuçtan birini veriyordu:
+ * 1200 px'te tr sığıyor ama en/de/fr/ru TAŞIYOR (sayfa yatay kayıyordu),
+ * hepsini 1320'ye çekmek ise tr/ar kullanıcısını gereksiz yere hamburger
+ * menüye düşürüyordu. Bu yüzden eşik dile göre belirlenir.
+ *
+ * Sınıflar TAM METİN olarak yazılmalıdır; Tailwind kaynak koddaki
+ * dizgileri tarar, birleştirilmiş (`min-[${x}px]`) sınıf üretilmez.
+ *
+ * YENİ MENÜ ÖĞESİ VEYA UZUN ETİKET EKLERKEN: 1280 px'te fr ve de ile
+ * kontrol edin; `document.documentElement.scrollWidth - clientWidth`
+ * sıfır olmalı.
+ */
+export function navBreakpoint(locale: Locale | string) {
+  const kisaEtiketli = locale === 'tr' || locale === 'ar';
+  return kisaEtiketli
+    ? { masaustu: 'hidden min-[1200px]:block', mobilde: 'min-[1200px]:hidden', wordmark: 'min-[1200px]:text-base' }
+    : { masaustu: 'hidden min-[1320px]:block', mobilde: 'min-[1320px]:hidden', wordmark: 'min-[1320px]:text-base' };
+}

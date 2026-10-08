@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { navItemsFor } from '@/config/nav';
+import { navItemsFor, navBreakpoint } from '@/config/nav';
 import { siteConfig } from '@/config/site';
 import { ThemeToggle } from './ThemeToggle';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -10,7 +10,9 @@ import { NavDropdown } from './NavDropdown';
 export async function SiteHeader() {
   const t = await getTranslations('Nav');
   // Yasal filtre: /tr menüsünde "Hasta Deneyimleri" yer almaz.
-  const navItems = navItemsFor(await getLocale());
+  const locale = await getLocale();
+  const navItems = navItemsFor(locale);
+  const bp = navBreakpoint(locale);
 
   return (
     <header className="sticky top-0 z-30 border-b border-border/80 bg-bg/85 backdrop-blur supports-[backdrop-filter]:bg-bg/70">
@@ -28,7 +30,7 @@ export async function SiteHeader() {
           {/* Wordmark — marka adı; çevrilmesin (translate="no") ve satır bölünmesin */}
           <span
             translate="no"
-            className="hidden whitespace-nowrap font-brand text-lg font-semibold leading-none tracking-tight text-brand sm:inline min-[1200px]:text-base"
+            className={`hidden whitespace-nowrap font-brand text-lg font-semibold leading-none tracking-tight text-brand sm:inline ${bp.wordmark}`}
           >
             Urology Clinic
           </span>
@@ -37,7 +39,7 @@ export async function SiteHeader() {
         {/* Masaüstü menü — xl+ (1280px). Altında hamburger.
             "Ana Sayfa" logoya bağlı olduğundan masaüstü menüde tekrarlanmaz.
             Kompakt aralık/padding ile 1280px'e sığacak biçimde. */}
-        <nav aria-label="Ana menü" className="hidden min-[1200px]:block">
+        <nav aria-label="Ana menü" className={bp.masaustu}>
           <ul className="flex items-center gap-0">
             {navItems
               .filter((item) => item.href !== '/')
@@ -66,7 +68,7 @@ export async function SiteHeader() {
           <MobileNav />
         </div>
       </div>
-      <nav aria-label="Ana menü" className="border-t border-border/80 min-[1200px]:hidden">
+      <nav aria-label="Ana menü" className={`border-t border-border/80 ${bp.mobilde}`}>
         <ul className="mx-auto flex max-w-[1600px] items-center gap-1 overflow-x-auto px-3 py-2 sm:px-5">
           {navItems
             .filter((item) => item.href !== '/')
