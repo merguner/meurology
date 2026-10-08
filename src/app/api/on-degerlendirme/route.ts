@@ -471,8 +471,21 @@ export async function POST(request: Request) {
         }),
         signal: AbortSignal.timeout(5000)
       });
+      /**
+       * YANIT GÖVDESİ DE OKUNUR — yalnızca HTTP durumuna bakmak yetmiyor.
+       *
+       * Google Apps Script hata durumlarında da HTTP 200 döner; hatayı gövdede
+       * bildirir (ör. {"ok":false,"error":"yetkisiz"}). 8 Eki 2026'da bu yüzden
+       * sessiz bir arıza yaşandı: jeton uyuşmadığı için hiçbir satır yazılmıyordu
+       * ama günlükte tek bir hata satırı bile yoktu, çünkü res.ok true idi.
+       */
+      const govde = (await res.text()).slice(0, 300);
       if (!res.ok) {
-        console.error('[on-degerlendirme] CRM webhook yanıtı başarısız:', res.status);
+        console.error('[on-degerlendirme] CRM webhook yanıtı başarısız:', res.status, govde);
+      } else if (!/"ok"\s*:\s*true/.test(govde)) {
+        console.error('[on-degerlendirme] CRM webhook 200 döndü ama kayıt YAZILMADI:', govde);
+      } else {
+        console.info('[on-degerlendirme] CRM kaydı yazıldı.');
       }
     } catch (err) {
       console.error('[on-degerlendirme] CRM webhook çağrılamadı (başvuru yine de geçerli):', err);
