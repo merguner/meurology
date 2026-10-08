@@ -1,6 +1,6 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { navItemsFor, navBreakpoint } from '@/config/nav';
+import { navItemsFor, navNeedsWideBreakpoint } from '@/config/nav';
 import { siteConfig } from '@/config/site';
 import { ThemeToggle } from './ThemeToggle';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -12,7 +12,12 @@ export async function SiteHeader() {
   // Yasal filtre: /tr menüsünde "Hasta Deneyimleri" yer almaz.
   const locale = await getLocale();
   const navItems = navItemsFor(locale);
-  const bp = navBreakpoint(locale);
+  // Sınıf metinleri BURADA (bileşende) durmalı — Tailwind yalnızca
+  // content listesindeki dosyaları tarar, bkz. config/nav.ts yorumu.
+  const genis = navNeedsWideBreakpoint(locale);
+  const bp = genis
+    ? { masaustu: 'hidden min-[1320px]:block', mobilde: 'min-[1320px]:hidden', wordmark: 'min-[1320px]:text-base' }
+    : { masaustu: 'hidden min-[1200px]:block', mobilde: 'min-[1200px]:hidden', wordmark: 'min-[1200px]:text-base' };
 
   return (
     <header className="sticky top-0 z-30 border-b border-border/80 bg-bg/85 backdrop-blur supports-[backdrop-filter]:bg-bg/70">

@@ -5,7 +5,11 @@ const config: Config = {
   /*
    * TARAMA YOLLARI — config/ ve content/ TS dosyalari da DAHIL olmali.
    *
-   * 8 Eki 2026'da iki sessiz ariza bu eksiklikten cikti:
+   * 8 Eki 2026: config/ EKLENIP SONRA CIKARILDI — eklenince CSS iki ayri
+   * render engelleyen dosyaya bolundu ve mobil LCP 2,9 -> 3,1 sn oldu.
+   * Sinif metinleri artik bilesenlerde durur.
+   *
+   * Daha once yasanan ariza:
    *  1. config/nav.ts icine tasinan 'min-[1200px]:block' gibi siniflar hic
    *     uretilmedi; masaustu menusu tum dillerde gizli kaldi.
    *  2. content/heroSlides.ts icindeki 'via-bg' hic uretilmedi; hero
@@ -17,8 +21,13 @@ const config: Config = {
   content: [
     './src/app/**/*.{ts,tsx,mdx}',
     './src/components/**/*.{ts,tsx}',
-    './src/config/**/*.{ts,tsx}',
-    './src/content/**/*.{ts,tsx,md,mdx}'
+    // content/ altinda Tailwind sinifi tasiyan TEK dosya heroSlides.ts.
+    // Toptan `content/**/*.ts` taramasi da denendi: CSS boyutunu anlamli
+    // DEGISTIRMEDI (63.059 -> 62.732 bayt), yani 3,4 MB'lik treatments.ts
+    // bir sorun cikarmiyordu — ama taranmasinin da faydasi yok, bu yuzden
+    // dar tutuldu. Sinif tasiyan yeni bir dosya eklenirse buraya yazin.
+    './src/content/heroSlides.ts',
+    './src/content/**/*.{md,mdx}'
   ],
   theme: {
     extend: {

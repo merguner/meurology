@@ -76,16 +76,16 @@ export function navItemsFor(locale: Locale | string): NavItem[] {
  * hepsini 1320'ye çekmek ise tr/ar kullanıcısını gereksiz yere hamburger
  * menüye düşürüyordu. Bu yüzden eşik dile göre belirlenir.
  *
- * Sınıflar TAM METİN olarak yazılmalıdır; Tailwind kaynak koddaki
- * dizgileri tarar, birleştirilmiş (`min-[${x}px]`) sınıf üretilmez.
+ * SINIF METİNLERİ BİLEREK BURADA DEĞİL, SiteHeader/MobileNav içinde.
+ * Tailwind'in content listesine src/config/** eklemek CSS'i iki ayrı
+ * render engelleyen dosyaya böldü ve mobil LCP'yi 2,9 → 3,1 sn yavaşlattı
+ * (8 Eki 2026 ölçümü). Bu fonksiyon yalnızca KARARI döndürür.
  *
  * YENİ MENÜ ÖĞESİ VEYA UZUN ETİKET EKLERKEN: 1280 px'te fr ve de ile
  * kontrol edin; `document.documentElement.scrollWidth - clientWidth`
  * sıfır olmalı.
  */
-export function navBreakpoint(locale: Locale | string) {
-  const kisaEtiketli = locale === 'tr' || locale === 'ar';
-  return kisaEtiketli
-    ? { masaustu: 'hidden min-[1200px]:block', mobilde: 'min-[1200px]:hidden', wordmark: 'min-[1200px]:text-base' }
-    : { masaustu: 'hidden min-[1320px]:block', mobilde: 'min-[1320px]:hidden', wordmark: 'min-[1320px]:text-base' };
+export function navNeedsWideBreakpoint(locale: Locale | string): boolean {
+  // tr ve ar kısa etiketlidir ve 1200 px'te sığar; diğerleri 1320 ister.
+  return !(locale === 'tr' || locale === 'ar');
 }

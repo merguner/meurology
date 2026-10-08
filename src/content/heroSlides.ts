@@ -19,6 +19,12 @@ export interface HeroSlide {
   bg: string;
   image?: string;
   cta: { type: 'whatsapp' | 'internal'; href?: StaticPathname };
+  /**
+   * İKİNCİL CTA — opsiyonel, birincil düğmenin yanında gösterilir.
+   * 8 Eki 2026'da eklendi: ikinci slayt (androloji online danışmanlık)
+   * kaldırılırken o slaytın çağrısı kaybolmasın diye buraya taşındı.
+   */
+  secondaryCta?: { type: 'internal'; href: StaticPathname };
   i18n: Partial<
     Record<
       Locale,
@@ -26,6 +32,8 @@ export interface HeroSlide {
         title: string;
         subtitle: string;
         ctaLabel: string;
+        /** İkincil düğmenin etiketi (secondaryCta tanımlıysa gereklidir). */
+        secondaryCtaLabel?: string;
         /** WhatsApp ön-dolu mesajında geçecek KONU (slayt başlığı değil). */
         ctaTopic?: string;
       }
@@ -38,91 +46,55 @@ export const heroSlides: HeroSlide[] = [
     id: 'genel',
     bg: 'bg-gradient-to-br from-primary-soft via-bg to-bg',
     cta: { type: 'whatsapp' },
+    secondaryCta: { type: 'internal', href: '/ozel-danismanlik' },
     i18n: {
       tr: {
         title: 'Ürolojik Cerrahide Deneyim, Şeffaflık ve Uluslararası Standart',
         subtitle:
           'Robotik ve minimal invaziv ürolojik cerrahi için tek noktadan koordinasyon: değerlendirme, tedavi, konaklama ve takip.',
         ctaLabel: 'Hemen WhatsApp’tan yazın',
-        ctaTopic: 'ürolojik tedavi seçenekleri'
+        ctaTopic: 'ürolojik tedavi seçenekleri',
+        secondaryCtaLabel: 'Online danışmanlık randevusu'
       },
       en: {
         title: 'Experience, Transparency and International Standards in Urological Surgery',
         subtitle:
           'Single-point coordination for robotic and minimally invasive urological surgery: assessment, treatment, accommodation and follow-up.',
         ctaLabel: 'Message us on WhatsApp',
-        ctaTopic: 'urological treatment options'
+        ctaTopic: 'urological treatment options',
+        secondaryCtaLabel: 'Book an online consultation'
       },
       de: {
         title: 'Erfahrung, Transparenz und internationaler Standard in der urologischen Chirurgie',
         subtitle:
           'Koordination aus einer Hand für robotische und minimalinvasive urologische Chirurgie: Bewertung, Behandlung, Unterkunft und Nachsorge.',
         ctaLabel: 'Schreiben Sie uns auf WhatsApp',
-        ctaTopic: 'urologische Behandlungsmöglichkeiten'
+        ctaTopic: 'urologische Behandlungsmöglichkeiten',
+        secondaryCtaLabel: 'Online-Beratung buchen'
       },
       ru: {
         title: 'Опыт, прозрачность и международный стандарт в урологической хирургии',
         subtitle:
           'Координация в одном месте для роботической и малоинвазивной урологической хирургии: оценка, лечение, проживание и наблюдение.',
         ctaLabel: 'Напишите нам в WhatsApp',
-        ctaTopic: 'варианты урологического лечения'
+        ctaTopic: 'варианты урологического лечения',
+        secondaryCtaLabel: 'Записаться на онлайн-консультацию'
       },
       ar: {
         title: 'الخبرة والشفافية والمعايير الدولية في جراحة المسالك البولية',
         subtitle:
           'تنسيق من نقطة واحدة للجراحة الروبوتية والطفيفة التوغل: التقييم والعلاج والإقامة والمتابعة.',
         ctaLabel: 'راسلنا على واتساب',
-        ctaTopic: 'خيارات علاج المسالك البولية'
+        ctaTopic: 'خيارات علاج المسالك البولية',
+        secondaryCtaLabel: 'احجز استشارة عبر الإنترنت'
       },
       fr: {
         title: 'Expérience, transparence et normes internationales en chirurgie urologique',
         subtitle:
           'Une coordination unique pour la chirurgie urologique robotique et mini-invasive : évaluation, traitement, hébergement et suivi.',
         ctaLabel: 'Écrivez-nous sur WhatsApp',
-        ctaTopic: 'les options de traitement urologique'
-      }
-    }
-  },
-  {
-    id: 'androloji-danismanlik',
-    bg: 'bg-gradient-to-br from-accent/15 via-bg to-bg',
-    cta: { type: 'internal', href: '/ozel-danismanlik' },
-    i18n: {
-      tr: {
-        title: 'Androloji Online Danışmanlık',
-        subtitle:
-          'Mahremiyetinize saygılı, birebir ve gizli online görüşme. Randevunuzu güvenle planlayın.',
-        ctaLabel: 'Online danışmanlık randevusu'
-      },
-      en: {
-        title: 'Andrology Online Consultation',
-        subtitle:
-          'A private, one-to-one online consultation that respects your confidentiality. Book your appointment with confidence.',
-        ctaLabel: 'Book an online consultation'
-      },
-      de: {
-        title: 'Andrologie – Online-Beratung',
-        subtitle:
-          'Eine private Einzelberatung online, die Ihre Vertraulichkeit wahrt. Buchen Sie Ihren Termin mit Vertrauen.',
-        ctaLabel: 'Online-Beratung buchen'
-      },
-      ru: {
-        title: 'Андрология: онлайн-консультация',
-        subtitle:
-          'Конфиденциальная индивидуальная онлайн-консультация с уважением к вашей приватности. Запишитесь с уверенностью.',
-        ctaLabel: 'Записаться на онлайн-консультацию'
-      },
-      ar: {
-        title: 'استشارة الذكورة عبر الإنترنت',
-        subtitle:
-          'استشارة فردية خاصة عبر الإنترنت تحترم خصوصيتك. احجز موعدك بثقة.',
-        ctaLabel: 'احجز استشارة عبر الإنترنت'
-      },
-      fr: {
-        title: 'Consultation d’andrologie en ligne',
-        subtitle:
-          'Une consultation en ligne individuelle et confidentielle, respectueuse de votre intimité. Réservez votre rendez-vous en toute sérénité.',
-        ctaLabel: 'Réserver une consultation en ligne'
+        ctaTopic: 'les options de traitement urologique',
+        secondaryCtaLabel: 'Réserver une consultation en ligne'
       }
     }
   }

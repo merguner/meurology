@@ -4,14 +4,15 @@ import { useState, useEffect } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import type { Locale } from '@/i18n/routing';
 import { Link, usePathname, treatmentHref } from '@/i18n/navigation';
-import { navItemsFor, navBreakpoint } from '@/config/nav';
+import { navItemsFor, navNeedsWideBreakpoint } from '@/config/nav';
 import { SocialLinks } from './SocialLinks';
 
 export function MobileNav() {
   const t = useTranslations('Nav');
   const locale = useLocale() as Locale;
   const navItems = navItemsFor(locale);
-  const bp = navBreakpoint(locale);
+  // Sınıf metinleri bileşende (bkz. config/nav.ts yorumu).
+  const bp = { mobilde: navNeedsWideBreakpoint(locale) ? 'min-[1320px]:hidden' : 'min-[1200px]:hidden' };
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 

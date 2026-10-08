@@ -71,10 +71,14 @@ export function HeroSlider({ doctor }: { doctor?: HeroDoctor }) {
     touchX.current = null;
   };
 
+  // TEK SLAYT = KARUSEL DEĞİL. Ekran okuyucuya karusel olarak duyurmak
+  // yanıltıcıdır; karusel/slayt ARIA'sı yalnızca birden fazla slayt
+  // varken basılır. (8 Eki 2026: hero tek sabit mesaja indirildi.)
   return (
     <section
-      aria-roledescription="carousel"
-      aria-label={t('sliderLabel')}
+      {...(count > 1
+        ? { 'aria-roledescription': 'carousel', 'aria-label': t('sliderLabel') }
+        : {})}
       className="relative overflow-hidden border-b border-border"
       onKeyDown={onKeyDown}
       onTouchStart={onTouchStart}
@@ -103,10 +107,14 @@ export function HeroSlider({ doctor }: { doctor?: HeroDoctor }) {
           return (
             <div
               key={slide.id}
-              role="group"
-              aria-roledescription="slide"
-              aria-label={`${i + 1} / ${count}`}
-              aria-hidden={!active}
+              {...(count > 1
+                ? {
+                    role: 'group',
+                    'aria-roledescription': 'slide',
+                    'aria-label': `${i + 1} / ${count}`,
+                    'aria-hidden': !active
+                  }
+                : {})}
               className={`relative col-start-1 row-start-1 transition-opacity duration-700 ${slide.bg} ${
                 active ? 'opacity-100' : 'pointer-events-none opacity-0'
               }`}
@@ -155,7 +163,9 @@ export function HeroSlider({ doctor }: { doctor?: HeroDoctor }) {
                   {c.title}
                 </Heading>
                 <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">{c.subtitle}</p>
-                <div className="mt-8">
+                {/* CTA alanı — birincil + (varsa) ikincil düğme yan yana.
+                    Dar ekranda alt alta sarar. */}
+                <div className="mt-8 flex flex-wrap items-center gap-3">
                   {slide.cta.type === 'whatsapp' ? (
                     <a
                       href={href}
@@ -177,6 +187,16 @@ export function HeroSlider({ doctor }: { doctor?: HeroDoctor }) {
                       {c.ctaLabel}
                     </Link>
                   )}
+                  {slide.secondaryCta && c.secondaryCtaLabel ? (
+                    <Link
+                      href={slide.secondaryCta.href}
+                      tabIndex={active ? 0 : -1}
+                      className="btn border border-accent/40 bg-accent/10 text-accent-ink hover:bg-accent/20"
+                    >
+                      <Icon name="video" size={20} />
+                      {c.secondaryCtaLabel}
+                    </Link>
+                  ) : null}
                 </div>
               </div>
             </div>
