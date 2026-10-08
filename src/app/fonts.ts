@@ -1,12 +1,15 @@
-import { Poppins, IBM_Plex_Mono, IBM_Plex_Sans_Arabic } from 'next/font/google';
+import { Poppins, IBM_Plex_Mono, IBM_Plex_Sans_Arabic, Montserrat } from 'next/font/google';
 
 /**
  * Marka fontu: Poppins (logo wordmark'ıyla birebir uyumlu, yuvarlak hatlı
  * geometrik). Başlık + gövde + wordmark tek font ailesinden gelir; veri/etiket
  * alanları için mono korunur.
  *
- * Poppins latin + latin-ext + Kiril kapsar (tr/en/de/fr/ru).
- * Arapça için ayrı bir aile gerekir → IBM Plex Sans Arabic (aşağıda).
+ * Poppins latin + latin-ext kapsar (tr/en/de/fr).
+ * KİRİL KAPSAMAZ — 8 Eki 2026'da üretilen CSS'te Poppins'in 12 yüzünün
+ * hiçbirinde Kiril unicode-range'i olmadığı doğrulandı; /ru sayfaları
+ * sessizce sistem yedeğine (Georgia) düşüyordu. Rusça için Montserrat,
+ * Arapça için IBM Plex Sans Arabic eklendi (ikisi de aşağıda).
  */
 export const sans = Poppins({
   subsets: ['latin', 'latin-ext'],
@@ -24,6 +27,21 @@ export const mono = IBM_Plex_Mono({
   // (dogrulanmis bilgi degerleri) agirliklariyla kullaniliyor. Kullanilmayan
   // her agirlik mobilde ek bir font dosyasi indirmesi demektir.
   weight: ['400', '600']
+});
+
+/**
+ * RUSÇA (KİRİL) GÖVDE FONTU.
+ * Poppins Kiril alfabesini kapsamaz; <html lang="ru"> olduğunda gövde
+ * fontu Montserrat'a geçer (globals.css). Montserrat da geometrik sans
+ * olduğu için Poppins'le görsel olarak uyumludur ve Kiril + Kiril-Ext
+ * kapsar. Latin alt kümesi de yüklenir, çünkü Rusça sayfada marka adı,
+ * "WhatsApp" ve rakamlar Latin harflidir.
+ */
+export const sansCyrillic = Montserrat({
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
+  variable: '--font-sans-cyrillic',
+  weight: ['400', '500', '600', '700']
 });
 
 /**
@@ -54,8 +72,14 @@ export const sansArabic = IBM_Plex_Sans_Arabic({
  * adı ve rakamlar hâlâ Latin harflidir.
  */
 export function fontVariablesFor(locale: string): string {
-  const base = `${sans.variable} ${mono.variable}`;
-  return locale === 'ar' ? `${base} ${sansArabic.variable}` : base;
+  // POPPINS, ar ve ru'da BILEREK YOK.
+  // globals.css'teki :root:lang(ar) / :root:lang(ru) kurallari --font-sans'i
+  // tamamen digerine devrediyor; Poppins o sayfalarda hicbir yerde
+  // kullanilmiyor. Degiskeni yine de basmak next/font'un onu ON YUKLEMESINE
+  // yol aciyordu: olcumde /ar ve /ru'da 8 Poppins dosyasi bosa iniyordu.
+  if (locale === 'ar') return `${mono.variable} ${sansArabic.variable}`;
+  if (locale === 'ru') return `${mono.variable} ${sansCyrillic.variable}`;
+  return `${sans.variable} ${mono.variable}`;
 }
 
 /** Geriye dönük uyumluluk için: tüm aileler. */
