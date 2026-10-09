@@ -16,7 +16,7 @@ function countryName(code: string, locale: string): string {
 
 /**
  * PERFORMANS NOTU — treatments.ts'i BURADAN IMPORT ETMEYİN (bkz. PreAssessmentForm).
- * İstemci bileşeni olduğu için import edilirse 6 dildeki tüm tedavi metni
+ * İstemci bileşeni olduğu için import edilirse üç dildeki tüm tedavi metni
  * tarayıcıya gönderilir. Başlıklar sunucuda çözülüp prop olarak geçilir.
  */
 export function ExperiencesList({

@@ -44,16 +44,6 @@
   --font-serif: var(--font-sans-arabic);
 }
 
-/*
- * RUSÇA: Poppins Kiril kapsamaz (bkz. app/fonts.ts). <html lang="ru">
- * olduğunda gövde fontu Montserrat'a geçer. Arapçadaki kurguyla aynıdır.
- * Mono (rakam/etiket) değişmez.
- */
-:root:lang(ru) {
-  --font-sans: var(--font-sans-cyrillic);
-  --font-serif: var(--font-sans-cyrillic);
-}
-
 /* Sistem koyu tercihi — kullanıcı manuel açık seçmediyse uygulanır (JS'siz de çalışır). */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {

@@ -72,7 +72,8 @@ export function navItemsFor(locale: Locale | string): NavItem[] {
  * düğmeleri) ~328 px yer kaplıyor.
  *
  * Tek bir kırılma noktası kullanmak iki kötü sonuçtan birini veriyordu:
- * 1200 px'te tr sığıyor ama en/de/fr/ru TAŞIYOR (sayfa yatay kayıyordu),
+ * 1200 px'te tr sığıyor ama en TAŞIYOR (sayfa yatay kayıyordu; site 6
+ * dilliyken de/fr/ru da taşıyordu),
  * hepsini 1320'ye çekmek ise tr/ar kullanıcısını gereksiz yere hamburger
  * menüye düşürüyordu. Bu yüzden eşik dile göre belirlenir.
  *
@@ -81,11 +82,11 @@ export function navItemsFor(locale: Locale | string): NavItem[] {
  * render engelleyen dosyaya böldü ve mobil LCP'yi 2,9 → 3,1 sn yavaşlattı
  * (8 Eki 2026 ölçümü). Bu fonksiyon yalnızca KARARI döndürür.
  *
- * YENİ MENÜ ÖĞESİ VEYA UZUN ETİKET EKLERKEN: 1280 px'te fr ve de ile
+ * YENİ MENÜ ÖĞESİ VEYA UZUN ETİKET EKLERKEN: 1280 px'te en ile
  * kontrol edin; `document.documentElement.scrollWidth - clientWidth`
  * sıfır olmalı.
  */
 export function navNeedsWideBreakpoint(locale: Locale | string): boolean {
-  // tr ve ar kısa etiketlidir ve 1200 px'te sığar; diğerleri 1320 ister.
+  // tr ve ar kısa etiketlidir ve 1200 px'te sığar; en 1320 ister.
   return !(locale === 'tr' || locale === 'ar');
 }

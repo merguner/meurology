@@ -5,7 +5,8 @@
  *
  * Uyarlamalar:
  *  - Kaynak bileşen yalnızca tr/en/ar biliyordu ve diğer diller Türkçeye
- *    düşüyordu. Site 6 dilli olduğu için de/ru/fr metinleri eklendi.
+ *    düşüyordu. Site 6 dilliyken de/ru/fr metinleri eklenmişti; 9 Eki
+ *    2026'da site tr/en/ar'a indirilince onlar da kaldırıldı.
  *  - Sabit renkler yerine sitenin tasarım değişkenleri kullanılır; böylece
  *    koyu temada da doğru görünür.
  *  - Konum mantıksal (inset-inline-end) verilir: RTL'de balon, WhatsApp
@@ -18,10 +19,10 @@
  */
 import { useEffect, useRef, useState } from 'react';
 
-type Dil = 'tr' | 'en' | 'ar' | 'de' | 'ru' | 'fr';
+type Dil = 'tr' | 'en' | 'ar';
 type Mesaj = { role: 'user' | 'assistant'; content: string };
 
-const DILLER: Dil[] = ['tr', 'en', 'ar', 'de', 'ru', 'fr'];
+const DILLER: Dil[] = ['tr', 'en', 'ar',];
 
 const METIN: Record<Dil, Record<string, string>> = {
   tr: {
@@ -63,45 +64,6 @@ const METIN: Record<Dil, Record<string, string>> = {
     kapat: 'إغلاق المحادثة',
     yaziyor: 'يكتب…'
   },
-  de: {
-    baslik: 'ME Urology Assistent',
-    alt: 'KI-Assistent · antwortet meist sofort',
-    selam:
-      'Hallo, ich bin der KI-Assistent von ME Urology. Ich helfe Ihnen zu den Behandlungen von Assoc. Prof. Dr. Müslüm Ergün, zu Terminen und zur Online-Beratung. Wie kann ich helfen?',
-    yer: 'Ihre Nachricht…',
-    gonder: 'Senden',
-    not: 'KI-Assistent, stellt keine Diagnose. Im Notfall rufen Sie den örtlichen Notruf. Bitte keine Ausweisnummern oder ausführliche Krankengeschichte eingeben.',
-    gizlilik: 'Datenschutz',
-    ac: 'Frage stellen',
-    kapat: 'Chat schließen',
-    yaziyor: 'Schreibt…'
-  },
-  ru: {
-    baslik: 'Ассистент ME Urology',
-    alt: 'ИИ-ассистент · обычно отвечает сразу',
-    selam:
-      'Здравствуйте, я ИИ-ассистент ME Urology. Помогу с вопросами о лечении у Assoc. Prof. Dr. Müslüm Ergün, о записи и об онлайн-консультации. Чем могу помочь?',
-    yer: 'Напишите сообщение…',
-    gonder: 'Отправить',
-    not: 'ИИ-ассистент, диагноз не ставит. В экстренном случае звоните в местную службу скорой помощи. Пожалуйста, не вводите номера документов и подробный анамнез.',
-    gizlilik: 'Конфиденциальность',
-    ac: 'Задать вопрос',
-    kapat: 'Закрыть чат',
-    yaziyor: 'Печатает…'
-  },
-  fr: {
-    baslik: 'Assistant ME Urology',
-    alt: 'Assistant IA · répond généralement aussitôt',
-    selam:
-      'Bonjour, je suis l’assistant IA de ME Urology. Je peux vous renseigner sur les traitements du Assoc. Prof. Dr. Müslüm Ergün, les rendez-vous et la consultation en ligne. Comment puis-je vous aider ?',
-    yer: 'Écrivez votre message…',
-    gonder: 'Envoyer',
-    not: 'Assistant IA, ne pose pas de diagnostic. En urgence, appelez le numéro d’urgence local. Merci de ne pas saisir de numéro d’identité ni d’antécédents détaillés.',
-    gizlilik: 'Confidentialité',
-    ac: 'Poser une question',
-    kapat: 'Fermer la discussion',
-    yaziyor: 'Écrit…'
-  }
 };
 
 export default function AsistanSohbet({

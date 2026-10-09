@@ -25,7 +25,7 @@ export interface TreatmentOption {
 /**
  * PERFORMANS NOTU — treatments.ts'i BURADAN IMPORT ETMEYİN.
  *
- * Bu bir istemci bileşenidir. `@/content/treatments` dosyası 6 dilde tüm
+ * Bu bir istemci bileşenidir. `@/content/treatments` dosyası üç dilde tüm
  * tedavi metinlerini içerir (~2 MB kaynak). Buradan import edilirse paketleyici
  * dosyanın TAMAMINI tarayıcıya gönderir; ölçümde tek bir 506 KB'lık JS yığını
  * ve mobilde 3,3 sn LCP olarak görüldü. Oysa listenin ihtiyacı yalnızca

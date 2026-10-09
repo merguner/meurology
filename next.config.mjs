@@ -1,5 +1,6 @@
 import createNextIntlPlugin from 'next-intl/plugin';
 import { legacyRedirects } from './src/config/legacy-redirects.mjs';
+import { removedLocaleRedirects, removedLocaleCatchAll } from './src/config/removed-locale-redirects.mjs';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
@@ -100,7 +101,11 @@ const nextConfig = {
         destination: 'https://www.meurology.com/:path*',
         permanent: true
       },
-      ...legacyRedirects
+      ...legacyRedirects,
+      // Kaldirilan diller (de/ru/fr) -> Ingilizce karsiliklari. Genel kural
+      // EN SONDA olmali: once belirli 196 kural eslesir, kalanlar ana sayfaya.
+      ...removedLocaleRedirects,
+      ...removedLocaleCatchAll
     ];
   },
   async headers() {

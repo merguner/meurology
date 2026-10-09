@@ -31,21 +31,6 @@ export const accreditations: Accreditation[] = [
         explainer:
           'اللجنة الدولية المشتركة (Joint Commission International) — برنامج اعتماد دولي لسلامة المرضى وجودة الرعاية.'
       },
-      fr: {
-        name: 'Accréditation JCI',
-        explainer:
-          'Programme international d’accréditation pour la sécurité des patients et la qualité des soins (Joint Commission International).'
-      },
-      de: {
-        name: 'JCI-Akkreditierung',
-        explainer:
-          'Joint Commission International — ein internationales Akkreditierungsprogramm für Patientensicherheit und Versorgungsqualität.'
-      },
-      ru: {
-        name: 'Аккредитация JCI',
-        explainer:
-          'Joint Commission International — международная программа аккредитации по безопасности пациентов и качеству медицинской помощи.'
-      }
     }
   },
   {
@@ -72,21 +57,6 @@ export const accreditations: Accreditation[] = [
         explainer:
           'المستشفى الذي تُجرى فيه العمليات حاصل على شهادة تصريح السياحة الصحية الدولية الصادرة عن وزارة الصحة التركية.'
       },
-      fr: {
-        name: 'Autorisation de tourisme médical',
-        explainer:
-          'L’hôpital où sont réalisées les interventions est titulaire du certificat d’autorisation de tourisme médical international délivré par le ministère de la Santé de la République de Türkiye.'
-      },
-      de: {
-        name: 'Zulassung Gesundheitstourismus',
-        explainer:
-          'Das Krankenhaus, in dem die Eingriffe durchgeführt werden, besitzt die vom türkischen Gesundheitsministerium ausgestellte Zulassung für internationalen Gesundheitstourismus.'
-      },
-      ru: {
-        name: 'Разрешение на медицинский туризм',
-        explainer:
-          'Больница, где проводятся операции, имеет свидетельство о праве на международный медицинский туризм, выданное Министерством здравоохранения Турции.'
-      }
     }
   },
   {
@@ -104,19 +74,6 @@ export const accreditations: Accreditation[] = [
         name: 'ISO 9001',
         explainer: 'شهادة نظام إدارة الجودة — عمليات خدمة موحّدة وقابلة للتتبّع.'
       },
-      fr: {
-        name: 'ISO 9001',
-        explainer:
-          'Certification du management de la qualité — des processus de service normalisés et traçables.'
-      },
-      de: {
-        name: 'ISO 9001',
-        explainer: 'Zertifizierung des Qualitätsmanagements — standardisierte, nachvollziehbare Serviceprozesse.'
-      },
-      ru: {
-        name: 'ISO 9001',
-        explainer: 'Сертификация системы менеджмента качества — стандартизированные и прослеживаемые процессы обслуживания.'
-      }
     }
   }
   // KALDIRILDI: "EAU Üyeliği" rozeti.
@@ -175,44 +132,5 @@ export const hospital = {
         'وحدة المرضى الدوليين وخدمة الترجمة'
       ]
     },
-    fr: {
-      name: 'Medical Park Bahçelievler · LİV Hospital Topkapı',
-      intro: [
-        'Les interventions de ME Urology Clinic sont réalisées à l’hôpital Medical Park Bahçelievler et au LİV Hospital Topkapı, à Istanbul.',
-        'Ces deux établissements privés à service complet offrent une infrastructure chirurgicale moderne, des soins intensifs et des services dédiés aux patients internationaux.'
-      ],
-      features: [
-        'Système de chirurgie robotique da Vinci',
-        'Plateforme laser Quanta (HoLEP / ThuLEP)',
-        'Soins intensifs et infrastructure complète de blocs opératoires',
-        'Unité patients internationaux et service d’interprétariat'
-      ]
-    },
-    de: {
-      name: 'Medical Park Bahçelievler · LİV Hospital Topkapı',
-      intro: [
-        'Die Eingriffe der ME Urology Clinic werden im Medical Park Bahçelievler und im LİV Hospital Topkapı in Istanbul durchgeführt.',
-        'Beide sind Privatkrankenhäuser der Vollversorgung mit moderner chirurgischer Infrastruktur, Intensivmedizin und Diensten für internationale Patienten.'
-      ],
-      features: [
-        'da Vinci Robotik-Chirurgiesystem',
-        'Quanta Laserplattform (HoLEP / ThuLEP)',
-        'Intensivmedizin und vollständige OP-Infrastruktur',
-        'Abteilung für internationale Patienten und Dolmetscherdienst'
-      ]
-    },
-    ru: {
-      name: 'Medical Park Bahçelievler · LİV Hospital Topkapı',
-      intro: [
-        'Операции ME Urology Clinic проводятся в больницах Medical Park Bahçelievler и LİV Hospital Topkapı в Стамбуле.',
-        'Обе — частные больницы полного цикла с современной хирургической инфраструктурой, интенсивной терапией и услугами для иностранных пациентов.'
-      ],
-      features: [
-        'Роботическая хирургическая система da Vinci',
-        'Лазерная платформа Quanta (HoLEP / ThuLEP)',
-        'Интенсивная терапия и полностью оснащённые операционные',
-        'Отделение для иностранных пациентов и услуга переводчика'
-      ]
-    }
   } as Partial<Record<Locale, { name: string; intro: string[]; features: string[] }>>
 };

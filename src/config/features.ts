@@ -52,20 +52,6 @@ const FEATURES: Record<Locale, ContentFeatures> = {
     superlatives: false,
     caseNumbers: false
   },
-  de: {
-    prices: true,
-    testimonials: true,
-    patientPhotos: false,
-    superlatives: false,
-    caseNumbers: false
-  },
-  ru: {
-    prices: true,
-    testimonials: true,
-    patientPhotos: false,
-    superlatives: false,
-    caseNumbers: false
-  },
   ar: {
     prices: true,
     testimonials: true,
@@ -73,13 +59,6 @@ const FEATURES: Record<Locale, ContentFeatures> = {
     superlatives: false,
     caseNumbers: false
   },
-  fr: {
-    prices: true,
-    testimonials: true,
-    patientPhotos: false,
-    superlatives: false,
-    caseNumbers: false
-  }
 };
 
 /** Bilinmeyen locale'de en kısıtlayıcı (yurt içi) profile düşer. */

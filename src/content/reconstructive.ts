@@ -3,7 +3,7 @@ import type { Locale } from '@/i18n/routing';
 /**
  * REKONSTRÜKTİF ÜROLOJİ KATEGORİ SAYFASI İÇERİĞİ
  * Fiyat/hacim değil; vaka karmaşıklığı, redo deneyimi ve uzun dönem başarı odaklı.
- * tr/en dolu; ar/de/ru render'da en'e düşer (çeviriler ayrı adımda).
+ * tr/en dolu; ar render'da en'e düşer (çeviriler ayrı adımda).
  */
 export interface ReconstructiveWhy {
   title: string;
@@ -100,84 +100,6 @@ const content: Partial<Record<Locale, ReconstructiveContent>> = {
     ctaTitle: 'دع الجرّاح يقيّم ملفك أولًا',
     ctaBody: 'شارك صورك (تصوير الإحليل، التصوير المقطعي بالصبغة، التصوير النووي، إلخ) وملاحظات عملياتك السابقة؛ وسنُعدّ تقييمًا وخطة خاصة بحالتك. في هذه الفئة، لا يتّضح السعر إلا بعد تقييم الملف.'
   },
-  fr: {
-    eyebrow: 'Des cas complexes qui exigent une expertise',
-    title: 'Urologie reconstructrice',
-    intro: [
-      'L’urologie reconstructrice est un domaine chirurgical avancé qui rétablit la structure des voies urinaires lorsqu’elle est altérée par une sténose, un traumatisme ou une fistule. Ces cas se distinguent des catégories de traitement standard : les patients ne viennent pas pour un avantage tarifaire, mais pour accéder à l’un des rares centres capables de réaliser cette chirurgie en toute sécurité.',
-      'Ce qui compte ici n’est donc ni le prix ni le volume d’interventions, mais la complexité des cas, l’expérience permettant de reprendre des tentatives ayant échoué ailleurs (redo), les techniques avancées employées et la réussite à long terme. Chaque dossier est d’abord évalué par le chirurgien.'
-    ],
-    whyTitle: 'Pourquoi les patients viennent ici',
-    why: [
-      {
-        title: 'Cas complexes et rares',
-        body: 'Des situations adressées aux centres expérimentés : sténose étendue, fistule multifocale ou variantes anatomiques.'
-      },
-      {
-        title: 'Expérience de la chirurgie de reprise (redo)',
-        body: 'Réparation malgré le tissu cicatriciel, après des tentatives infructueuses dans un autre centre.'
-      },
-      {
-        title: 'Réussite et suivi à long terme',
-        body: 'Le succès de ces chirurgies ne se mesure pas à court terme mais à la perméabilité et à la fonction durables ; le protocole de suivi est déterminant.'
-      }
-    ],
-    treatmentsTitle: 'Interventions de ce domaine',
-    ctaTitle: 'Laissez d’abord le chirurgien évaluer votre dossier',
-    ctaBody: 'Partagez votre imagerie (urétrographie, uro-scanner, scintigraphie rénale, etc.) et vos comptes rendus opératoires antérieurs ; nous établirons une évaluation et une feuille de route propres à votre cas. Dans cette catégorie, le prix n’est précisé qu’après l’évaluation du dossier.'
-  },
-  de: {
-    eyebrow: 'Komplexe Fälle, die Expertise erfordern',
-    title: 'Rekonstruktive Urologie',
-    intro: [
-      'Die rekonstruktive Urologie ist ein fortgeschrittenes chirurgisches Fachgebiet, das die Struktur des Harntrakts wiederaufbaut, wenn sie durch Striktur, Verletzung oder Fistel geschädigt ist. Diese Fälle unterscheiden sich von Standard-Behandlungskategorien: Patienten kommen nicht wegen eines Preisvorteils, sondern um eines der wenigen Zentren zu erreichen, die diese Chirurgie sicher durchführen können.',
-      'Entscheidend ist hier daher nicht Preis oder Fallzahl, sondern die Fallkomplexität, die Erfahrung, andernorts zuvor gescheiterte Versuche zu lösen (Redo), die verwendeten fortgeschrittenen Techniken und der langfristige Erfolg. Jeder Fall wird zunächst vom Chirurgen anhand der Akte bewertet.'
-    ],
-    whyTitle: 'Warum Patienten hierherkommen',
-    why: [
-      {
-        title: 'Komplexe und seltene Fälle',
-        body: 'Fälle, die an erfahrene Zentren überwiesen werden, etwa langstreckige Striktur, multifokale Fistel oder anatomische Varianten.'
-      },
-      {
-        title: 'Redo-Erfahrung (Wiederholungseingriff)',
-        body: 'Reparatur trotz Narbengewebe, nach andernorts zuvor gescheiterten Versuchen.'
-      },
-      {
-        title: 'Langfristiger Erfolg und Nachsorge',
-        body: 'Der Erfolg dieser Eingriffe bemisst sich nicht kurzfristig, sondern an langfristiger Durchgängigkeit und Funktion; das Nachsorgeprotokoll ist entscheidend.'
-      }
-    ],
-    treatmentsTitle: 'Eingriffe in diesem Bereich',
-    ctaTitle: 'Lassen Sie zuerst den Chirurgen Ihre Akte bewerten',
-    ctaBody: 'Teilen Sie Ihre Bildgebung (Urethrogramm, CT-Urographie, Szintigraphie usw.) und frühere OP-Berichte; wir erstellen eine fallspezifische Bewertung und einen Fahrplan. In dieser Kategorie wird der Preis erst nach einer Aktenprüfung klar.'
-  },
-  ru: {
-    eyebrow: 'Сложные случаи, требующие экспертизы',
-    title: 'Реконструктивная урология',
-    intro: [
-      'Реконструктивная урология — продвинутая хирургическая область, которая восстанавливает структуру мочевыводящих путей, повреждённую стриктурой, травмой или свищом. Эти случаи отличаются от стандартных категорий лечения: пациенты приходят не ради ценового преимущества, а чтобы попасть в один из немногих центров, способных выполнить такую операцию безопасно.',
-      'Поэтому здесь важна не цена и не число операций, а сложность случая, опыт решения ранее неудавшихся в другом месте попыток (redo), применяемые продвинутые методики и долгосрочный успех. Каждый случай сначала оценивает хирург на основании документов.'
-    ],
-    whyTitle: 'Почему пациенты приезжают сюда',
-    why: [
-      {
-        title: 'Сложные и редкие случаи',
-        body: 'Случаи, направляемые в опытные центры: протяжённая стриктура, многоочаговый свищ или анатомические варианты.'
-      },
-      {
-        title: 'Опыт повторных операций (redo)',
-        body: 'Восстановление несмотря на рубцовую ткань, после ранее неудавшихся в другом месте попыток.'
-      },
-      {
-        title: 'Долгосрочный успех и наблюдение',
-        body: 'Успех этих операций измеряется не в краткосрочной перспективе, а долгосрочной проходимостью и функцией; протокол наблюдения критически важен.'
-      }
-    ],
-    treatmentsTitle: 'Операции в этой области',
-    ctaTitle: 'Пусть хирург сначала оценит ваши документы',
-    ctaBody: 'Поделитесь снимками (уретрограмма, КТ-урография, сцинтиграфия и т. д.) и записями предыдущих операций; мы подготовим индивидуальную оценку и план. В этой категории цена становится ясна только после оценки документов.'
-  }
 };
 
 export function resolveReconstructive(locale: Locale): ReconstructiveContent {

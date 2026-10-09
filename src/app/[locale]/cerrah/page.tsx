@@ -20,8 +20,6 @@ const LANG_NAMES: Record<string, string> = {
   tr: 'Türkçe',
   en: 'English',
   ar: 'العربية',
-  de: 'Deutsch',
-  ru: 'Русский'
 };
 
 export async function generateMetadata({

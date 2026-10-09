@@ -15,20 +15,14 @@ const PAD = 86;
 const HEADING = {
   tr: 'Uluslararası Ürolojik Cerrahi',
   en: 'International Urological Surgery',
-  ar: 'جراحة المسالك البولية الدولية',
-  de: 'Internationale urologische Chirurgie',
-  ru: 'Международная урологическая хирургия',
-  fr: 'Chirurgie urologique internationale'
+  ar: 'جراحة المسالك البولية الدولية'
 };
 
 // content/surgeon.ts fullName + Home.heroSpecialty ile ayni.
 const DOCTOR = {
   tr: 'Doç. Dr. Müslüm Ergün · Üroloji',
   en: 'Assoc. Prof. Dr. Müslüm Ergün · Urology',
-  ar: 'الأستاذ المشارك د. مسلم إرغن · المسالك البولية',
-  de: 'Doz. Dr. Müslüm Ergün · Urologie',
-  ru: 'Доцент, д-р Мюслюм Эргюн · Урология',
-  fr: 'Pr. ass. Dr Müslüm Ergün · Urologie'
+  ar: 'الأستاذ المشارك د. مسلم إرغن · المسالك البولية'
 };
 
 const FONT = "Segoe UI, Noto Sans, DejaVu Sans, Arial, sans-serif";

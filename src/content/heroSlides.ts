@@ -64,22 +64,6 @@ export const heroSlides: HeroSlide[] = [
         ctaTopic: 'urological treatment options',
         secondaryCtaLabel: 'Book an online consultation'
       },
-      de: {
-        title: 'Erfahrung, Transparenz und internationaler Standard in der urologischen Chirurgie',
-        subtitle:
-          'Koordination aus einer Hand für robotische und minimalinvasive urologische Chirurgie: Bewertung, Behandlung, Unterkunft und Nachsorge.',
-        ctaLabel: 'Schreiben Sie uns auf WhatsApp',
-        ctaTopic: 'urologische Behandlungsmöglichkeiten',
-        secondaryCtaLabel: 'Online-Beratung buchen'
-      },
-      ru: {
-        title: 'Опыт, прозрачность и международный стандарт в урологической хирургии',
-        subtitle:
-          'Координация в одном месте для роботической и малоинвазивной урологической хирургии: оценка, лечение, проживание и наблюдение.',
-        ctaLabel: 'Напишите нам в WhatsApp',
-        ctaTopic: 'варианты урологического лечения',
-        secondaryCtaLabel: 'Записаться на онлайн-консультацию'
-      },
       ar: {
         title: 'الخبرة والشفافية والمعايير الدولية في جراحة المسالك البولية',
         subtitle:
@@ -88,14 +72,6 @@ export const heroSlides: HeroSlide[] = [
         ctaTopic: 'خيارات علاج المسالك البولية',
         secondaryCtaLabel: 'احجز استشارة عبر الإنترنت'
       },
-      fr: {
-        title: 'Expérience, transparence et normes internationales en chirurgie urologique',
-        subtitle:
-          'Une coordination unique pour la chirurgie urologique robotique et mini-invasive : évaluation, traitement, hébergement et suivi.',
-        ctaLabel: 'Écrivez-nous sur WhatsApp',
-        ctaTopic: 'les options de traitement urologique',
-        secondaryCtaLabel: 'Réserver une consultation en ligne'
-      }
     }
   }
 ];

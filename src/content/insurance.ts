@@ -27,20 +27,6 @@ export const insuranceInfo: Partial<Record<Locale, InsuranceInfo>> = {
       'For domestic patients, SGK or private insurance coverage may vary by procedure; please contact us for details.'
     ]
   },
-  de: {
-    title: 'Versicherung / Kostenübernahme',
-    body: [
-      'Für internationale Patienten werden die Eingriffe im Rahmen des Gesundheitstourismus angeboten und nicht von der türkischen Sozialversicherung (SGK) übernommen.',
-      'Bei inländischen Patienten kann die SGK- oder Privatversicherungsübernahme je nach Eingriff variieren; bitte kontaktieren Sie uns.'
-    ]
-  },
-  ru: {
-    title: 'Страхование / Покрытие',
-    body: [
-      'Для иностранных пациентов процедуры предоставляются в рамках медицинского туризма и не покрываются турецким соцстрахованием (SGK).',
-      'Для местных пациентов покрытие SGK или частной страховки может зависеть от процедуры; свяжитесь с нами для уточнения.'
-    ]
-  },
   ar: {
     title: 'التأمين / التغطية',
     body: [
@@ -48,13 +34,6 @@ export const insuranceInfo: Partial<Record<Locale, InsuranceInfo>> = {
       'أما المرضى المحليون فقد تختلف تغطية SGK أو التأمين الخاص حسب الإجراء؛ يُرجى التواصل معنا للتفاصيل.'
     ]
   },
-  fr: {
-    title: 'Assurance / Prise en charge',
-    body: [
-      'Pour les patients internationaux, les interventions relèvent du tourisme médical et ne sont pas prises en charge par la sécurité sociale turque (SGK).',
-      'Pour les patients résidant en Türkiye, la prise en charge par la SGK ou une assurance privée varie selon l’intervention ; contactez-nous pour en savoir plus.'
-    ]
-  }
 };
 
 /** İlgili dildeki sigorta bilgisini döndürür; içerik boşsa null (blok gizlenir). */

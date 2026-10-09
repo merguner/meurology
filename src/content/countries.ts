@@ -321,28 +321,8 @@ export const countries: Country[] = [
   {
     slug: 'senegal',
     iso: 'SN',
-    locales: ['fr', 'en'],
+    locales: [ 'en'],
     i18n: {
-      fr: {
-        title: 'Patients du Sénégal : chirurgie urologique à Istanbul',
-        summary: 'Vol direct depuis Dakar et consultation en français avec interprète. Cette page présente les aspects pratiques qui vous concernent.',
-        metaTitle: 'Chirurgie urologique en Turquie pour les patients du Sénégal',
-        metaDescription: 'Vols du Sénégal vers Istanbul, langue de la consultation, paiement, durée de séjour, documents à apporter et suivi après le retour.',
-        flightTime: 'Environ 6 à 7 heures en vol direct depuis Dakar',
-        routes: 'Des vols directs relient Dakar à Istanbul, avec également des options en correspondance. Les correspondances allongent sensiblement le trajet ; après une intervention, privilégiez l’itinéraire le plus court plutôt que le moins cher.',
-        language: 'La consultation médicale se tient en français, avec un interprète organisé avant le rendez-vous. La coordinatrice des patients internationaux travaille en anglais ; la correspondance écrite peut donc se faire en anglais ou en français selon ce qui vous convient.',
-        payment: 'Le règlement se fait généralement en euros. Le franc CFA n’a pas cours en Turquie. Prévenez votre banque de votre voyage et vérifiez les plafonds applicables aux opérations internationales avant de partir.',
-        sections: [
-          { heading: 'Faire travailler l’évaluation à distance', body: 'Avant d’acheter un billet, faites examiner votre dossier à distance. Envoyez les analyses, l’imagerie et, le cas échéant, le compte rendu d’anatomopathologie. Trois réponses sont possibles : le déplacement est justifié et le plan est clair ; des examens complémentaires sont nécessaires et peuvent être faits au Sénégal ; ou l’intervention envisagée ne s’impose pas. Ces trois réponses vous font gagner du temps et de l’argent.' },
-          { heading: 'Apporter les images, pas seulement le compte rendu', body: 'Beaucoup de patients arrivent avec un compte rendu imprimé mais sans l’examen lui-même. Une description écrite ne suffit pas à planifier une intervention : le chirurgien doit voir les images. Demandez à votre hôpital le scanner ou l’IRM sur disque ou sous forme de fichier numérique avant de partir ; cette seule démarche évite souvent une journée perdue et le coût d’un examen refait.' },
-          { heading: 'Le vol fait partie du plan médical', body: 'Un vol long ne relève pas que de la logistique. Après certaines interventions, voyager trop tôt augmente le risque de caillots dans les jambes. L’autorisation de vol est donc donnée sous forme de date, et nous restons plus prudents pour les longs trajets que les durées indiquées sur les pages de traitement. Un billet modifiable est recommandé.' }
-        ],
-        faqs: [
-          { q: 'Ai-je besoin d’un visa ?', a: 'Les règles varient selon le type de passeport et évoluent ; nous ne les indiquons donc pas ici. Vérifiez votre situation auprès de la source officielle turque avant de réserver.' },
-          { q: 'La consultation peut-elle se faire en français ?', a: 'Oui. Un interprète est organisé avant le rendez-vous. Nous ne promettons pas une permanence francophone permanente : elle est mise en place pour votre consultation.' },
-          { q: 'Qui assure le suivi après mon retour ?', a: 'Le suivi se fait à distance, et les comptes rendus sont rédigés pour qu’un médecin au Sénégal puisse poursuivre la prise en charge sans nous consulter à chaque étape.' }
-        ]
-      },
       en: {
         title: 'Patients from Senegal: urological surgery in Istanbul',
         summary: 'A direct flight from Dakar and a consultation in French with an interpreter. This page sets out the practical points.',
@@ -369,28 +349,8 @@ export const countries: Country[] = [
   {
     slug: 'germany',
     iso: 'DE',
-    locales: ['de', 'en'],
+    locales: [ 'en'],
     i18n: {
-      de: {
-        title: 'Patientinnen und Patienten aus Deutschland: Urologische Chirurgie in Istanbul',
-        summary: 'Kurze Flugzeit, Beratung auf Deutsch und oft deutlich kürzere Wartezeiten. Diese Seite erklärt, worauf es bei Ihnen ankommt.',
-        metaTitle: 'Urologische Operation in der Türkei für Patienten aus Deutschland',
-        metaDescription: 'Flüge aus Deutschland nach Istanbul, Beratung auf Deutsch, Zahlung, Wartezeiten, Kostenerstattung und Nachsorge nach der Rückkehr.',
-        flightTime: 'Etwa 3–3,5 Stunden im Direktflug',
-        routes: 'Direktflüge nach Istanbul bestehen aus nahezu allen größeren deutschen Flughäfen, darunter Frankfurt, München, Düsseldorf, Berlin, Hamburg und Stuttgart — meist mehrmals täglich. Das erleichtert es, den Rückflug nach dem Heilungsverlauf zu legen.',
-        language: 'Das ärztliche Gespräch wird auf Deutsch geführt; dafür wird vor dem Termin ein Dolmetscher organisiert. Die Koordinatorin für internationale Patienten arbeitet auf Englisch.',
-        payment: 'Die Abrechnung erfolgt in Euro. Informieren Sie Ihre Bank über die Reise, damit Kartenzahlungen nicht aus Sicherheitsgründen abgelehnt werden.',
-        sections: [
-          { heading: 'Wartezeit ist ein medizinisches Argument, kein reines Komfortargument', body: 'Viele Patientinnen und Patienten kommen, weil ein Termin erst in einigen Monaten frei ist. Bei manchen Erkrankungen ist das unproblematisch; bei anderen nicht. Ein Harnleiterstein, der die Niere staut, oder ein Tumor mit ungünstiger Biologie verträgt kein langes Warten. Wir sagen Ihnen offen, in welche Kategorie Ihr Befund fällt — auch dann, wenn Abwarten die richtige Antwort ist.' },
-          { heading: 'Kostenerstattung und Unterlagen', body: 'Eine Erstattung durch gesetzliche oder private Kassen ist im Voraus zu klären und hängt von Ihrem Versicherungsvertrag ab; wir können dazu keine Zusage machen. Was wir leisten können: eine Rechnung mit nachvollziehbarer Leistungsaufstellung sowie Operations- und Befundberichte. Klären Sie vor der Reise mit Ihrer Kasse, welche Unterlagen sie verlangt, damit diese vor Ihrer Abreise ausgestellt werden können.' },
-          { heading: 'Nachsorge in Deutschland', body: 'Die Nachsorge übernimmt in der Regel Ihre Urologin oder Ihr Urologe vor Ort. Die Berichte werden deshalb so geschrieben, dass sie ohne Rückfragen weiterbehandeln können: was genau gemacht wurde, welche Werte wann zu kontrollieren sind und welche Warnzeichen sofortiges Handeln erfordern. Für Routinekontrollen bitten wir Sie nicht zurückzufliegen.' }
-        ],
-        faqs: [
-          { q: 'Brauche ich ein Visum?', a: 'Die Regeln hängen von der Art des Reisepasses ab und ändern sich; wir nennen sie hier deshalb nicht. Prüfen Sie Ihre Lage vor der Buchung bei der offiziellen türkischen Quelle.' },
-          { q: 'Übernimmt meine Krankenkasse die Kosten?', a: 'Das richtet sich nach Ihrem Vertrag und ist vorab mit der Kasse zu klären. Wir stellen die Unterlagen bereit, können aber keine Erstattung zusagen.' },
-          { q: 'Wie schnell darf ich zurückfliegen?', a: 'Das hängt vom Eingriff ab und steht auf der jeweiligen Behandlungsseite. Die Freigabe wird als Datum erteilt, nicht geschätzt — ein zu früher Flug erhöht das Thromboserisiko.' }
-        ]
-      },
       en: {
         title: 'Patients from Germany: urological surgery in Istanbul',
         summary: 'A short flight, consultation in German and often much shorter waiting times. This page explains what matters in your case.',
@@ -471,28 +431,8 @@ export const countries: Country[] = [
   {
     slug: 'russia',
     iso: 'RU',
-    locales: ['ru', 'en'],
+    locales: [ 'en'],
     i18n: {
-      ru: {
-        title: 'Пациенты из России: урологическая хирургия в Стамбуле',
-        summary: 'Прямые рейсы из многих городов и консультация на русском через переводчика. Здесь — то, что касается именно вас.',
-        metaTitle: 'Урологическая операция в Турции для пациентов из России',
-        metaDescription: 'Перелёты из России в Стамбул, язык консультации, оплата, срок пребывания, что взять с собой и наблюдение после возвращения.',
-        flightTime: 'Около 3–4,5 часа прямым рейсом в зависимости от города вылета',
-        routes: 'Прямые рейсы в Стамбул выполняются из Москвы, Санкт-Петербурга, Казани, Екатеринбурга и ряда других городов. Расписание меняется, поэтому уточните рейс у авиакомпании до назначения даты операции.',
-        language: 'Консультация проводится на русском языке, переводчик организуется до приёма. Координатор международных пациентов работает на английском.',
-        payment: 'Расчёт обычно в евро или долларах. Международные карты и переводы из России могут работать с ограничениями, поэтому решите вопрос оплаты заранее, а не в день госпитализации. Уточните у нас доступные варианты до поездки.',
-        sections: [
-          { heading: 'Оплату решайте до вылета, а не на месте', body: 'Это самый частый источник трудностей у пациентов из России, и он не медицинский. Возможности международных платежей менялись в последние годы, и то, что работало полгода назад, может не работать сейчас. Напишите нам заранее и уточните, какой способ расчёта действует на момент вашей поездки. Решать это в день госпитализации — худший вариант.' },
-          { heading: 'Привезите снимки, а не только заключение', body: 'Пациенты из России обычно приезжают с хорошо оформленными документами, и это преимущество. Но заключение рентгенолога не заменяет сами снимки: для планирования операции хирургу нужно смотреть изображения. Возьмите компьютерную томографию или МРТ на диске либо в виде файлов. Это часто экономит день и стоимость повторного исследования.' },
-          { heading: 'Наблюдение после возвращения', body: 'Наблюдение ведётся дистанционно: вы присылаете результаты анализов, их оценивают и назначают следующий контроль. Заключения пишутся так, чтобы врач в России мог продолжить ведение без обращения к нам на каждом шаге: что именно выполнено, что контролировать и в какие сроки. Ради рутинного контроля прилетать не нужно.' }
-        ],
-        faqs: [
-          { q: 'Нужна ли виза?', a: 'Правила зависят от типа паспорта и время от времени меняются, поэтому мы их здесь не приводим. Проверьте свою ситуацию в официальном турецком источнике до бронирования.' },
-          { q: 'Как оплатить лечение?', a: 'Уточните это у нас до поездки: доступные способы расчёта меняются. Планируйте оплату заранее, а не в день поступления в больницу.' },
-          { q: 'Будут ли документы на русском языке?', a: 'Медицинские заключения готовятся на английском — это общий язык между врачами, — а их содержание разбирается с вами на русском на приёме. Если нужен перевод, скажите до выписки.' }
-        ]
-      },
       en: {
         title: 'Patients from Russia: urological surgery in Istanbul',
         summary: 'Direct flights from many cities and a consultation in Russian through an interpreter. This page covers what applies to you.',
@@ -518,28 +458,8 @@ export const countries: Country[] = [
   {
     slug: 'azerbaijan',
     iso: 'AZ',
-    locales: ['ru', 'en'],
+    locales: [ 'en'],
     i18n: {
-      ru: {
-        title: 'Пациенты из Азербайджана: урологическая хирургия в Стамбуле',
-        summary: 'Короткий перелёт из Баку и несколько рейсов в день. Это позволяет планировать поездку гибко.',
-        metaTitle: 'Урологическая операция в Турции для пациентов из Азербайджана',
-        metaDescription: 'Перелёты из Азербайджана в Стамбул, язык консультации, оплата, короткое пребывание и наблюдение после возвращения.',
-        flightTime: 'Около 3 часов прямым рейсом из Баку',
-        routes: 'Прямые рейсы Баку — Стамбул выполняются несколько раз в день. Частое сообщение позволяет взять билет с возможностью изменения и назначить дату возвращения уже по ходу восстановления.',
-        language: 'Консультация может проходить на русском или на турецком — многие пациенты из Азербайджана понимают турецкий без переводчика. Скажите заранее, что вам удобнее.',
-        payment: 'Расчёт в евро, долларах или турецких лирах. Предупредите банк о поездке, чтобы операция по карте не была отклонена автоматически.',
-        sections: [
-          { heading: 'Близость меняет план поездки', body: 'Трёхчасовой перелёт означает, что не нужно бронировать длительное пребывание заранее. Разумнее приехать на день обследования, получить результаты и только затем назначить дату операции — иногда вторым, отдельным приездом. Для пациентов из более далёких стран такой вариант неудобен, для вас он вполне реален.' },
-          { heading: 'Повторные операции и ранее начатое лечение', body: 'Если вам уже делали операцию, принесите выписку. Повторное вмешательство отличается от первого: рубцовая ткань меняет анатомию и риски. Если документа нет, сообщите хотя бы название больницы, дату и вид доступа — эти сведения действительно меняют план.' },
-          { heading: 'Наблюдение после возвращения', body: 'Наблюдение ведётся дистанционно, а заключения пишутся так, чтобы врач в Азербайджане мог продолжить ведение. Благодаря короткому перелёту приехать на очный контроль при необходимости тоже несложно — но ради рутинной проверки мы об этом не просим.' }
-        ],
-        faqs: [
-          { q: 'Нужна ли виза?', a: 'Правила зависят от типа паспорта и меняются; мы их здесь не приводим. Проверьте свою ситуацию в официальном турецком источнике.' },
-          { q: 'Можно ли говорить по-турецки?', a: 'Да. Многим пациентам из Азербайджана переводчик не нужен. Скажите заранее, на каком языке вам удобнее вести приём.' },
-          { q: 'Можно ли приехать дважды — на обследование и на операцию?', a: 'Да, и при коротком перелёте это часто разумнее, чем долго ждать на месте между этапами.' }
-        ]
-      },
       en: {
         title: 'Patients from Azerbaijan: urological surgery in Istanbul',
         summary: 'A short flight from Baku with several departures a day, which makes planning flexible.',
@@ -565,28 +485,8 @@ export const countries: Country[] = [
   {
     slug: 'kazakhstan',
     iso: 'KZ',
-    locales: ['ru', 'en'],
+    locales: [ 'en'],
     i18n: {
-      ru: {
-        title: 'Пациенты из Казахстана: урологическая хирургия в Стамбуле',
-        summary: 'Прямые рейсы из Алматы и Астаны, консультация на русском. Здесь — практическая сторона поездки.',
-        metaTitle: 'Урологическая операция в Турции для пациентов из Казахстана',
-        metaDescription: 'Перелёты из Казахстана в Стамбул, язык консультации, оплата, срок пребывания, что взять с собой и наблюдение после возвращения.',
-        flightTime: 'Около 5,5–6,5 часа прямым рейсом',
-        routes: 'Прямые рейсы в Стамбул выполняются из Алматы, Астаны и ряда других городов, но реже, чем на коротких направлениях. Планируя дату операции, закладывайте запас в один день с каждой стороны.',
-        language: 'Консультация проводится на русском языке, переводчик организуется до приёма. Координатор международных пациентов работает на английском.',
-        payment: 'Расчёт обычно в евро или долларах. Международные переводы могут занять несколько рабочих дней, поэтому начинайте финансовые вопросы заранее.',
-        sections: [
-          { heading: 'Одна поездка — один план', body: 'Из-за длительности перелёта цель — по возможности завершить обследование и лечение за одну поездку, если это оправдано с медицинской точки зрения. Для этого пришлите документы заранее, чтобы нужные исследования были записаны на день прилёта, а не выяснялись уже на месте. Если состояние действительно требует поэтапного лечения, мы скажем об этом до покупки билета.' },
-          { heading: 'Перелёт — часть медицинского плана', body: 'Длительный перелёт имеет медицинское значение. После ряда операций слишком ранний полёт повышает риск тромбоза вен ног. Поэтому разрешение на перелёт даётся как дата, а для дальних маршрутов мы осторожнее, чем указано на страницах о лечении. Билет с возможностью изменения здесь особенно полезен.' },
-          { heading: 'Наблюдение после возвращения', body: 'Наблюдение ведётся дистанционно. Заключения пишутся так, чтобы врач в Казахстане мог продолжить ведение: что выполнено, что контролировать и в какие сроки, какие признаки требуют немедленного обращения на месте.' }
-        ],
-        faqs: [
-          { q: 'Нужна ли виза?', a: 'Правила зависят от типа паспорта и меняются, поэтому мы их здесь не приводим. Проверьте свою ситуацию в официальном турецком источнике до бронирования.' },
-          { q: 'Сколько планировать пребывание?', a: 'Это зависит от вмешательства: несколько дней при эндоскопическом лечении камней, дольше при радикальной операции на простате из-за катетера. Срок определяют после разбора документов.' },
-          { q: 'Можно ли сначала получить заключение дистанционно?', a: 'Да, и при дальнем перелёте это разумно. Разбор снимков и заключений показывает, оправдана ли поездка вообще.' }
-        ]
-      },
       en: {
         title: 'Patients from Kazakhstan: urological surgery in Istanbul',
         summary: 'Direct flights from Almaty and Astana, with the consultation held in Russian. This page covers the practical side.',

@@ -28,22 +28,10 @@ export const translationStatus: Record<Locale, TranslationStatus> = {
     reviewed: false,
     note: 'Tıbbi çevirmen kontrolü bekliyor.'
   },
-  de: {
-    reviewed: false,
-    note: 'Tıbbi çevirmen kontrolü bekliyor.'
-  },
-  ru: {
-    reviewed: false,
-    note: 'Anadil konuşan tıbbi çevirmen kontrolü bekliyor (Kiril).'
-  },
   ar: {
     reviewed: false,
     note: 'Anadil konuşan tıbbi çevirmen kontrolü bekliyor (RTL + Körfez terminolojisi).'
   },
-  fr: {
-    reviewed: false,
-    note: 'Faz 2’de eklendi. Anadil konuşan tıbbi çevirmen kontrolü bekliyor; Batı/Kuzey Afrika pazarı hedefli.'
-  }
 };
 
 /** Henüz doğrulanmamış diller — rapor ve kontrol listeleri için. */

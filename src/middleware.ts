@@ -9,39 +9,31 @@ const intlMiddleware = createMiddleware(routing);
 /**
  * Eski Türkçe slug → yeni lokalize slug eşlemesi (yalnızca TR dışı diller).
  * Anahtar: Türkçe iç yol (locale'siz). Değer: locale'e göre yeni yol.
- * AR/RU İngilizce slug kullanır (routing.ts ile aynı).
+ * AR İngilizce slug kullanır (routing.ts ile aynı).
  */
 const LOCALIZED: Record<string, Record<string, string>> = {
-  tedaviler: { en: 'treatments', de: 'behandlungen', ru: 'treatments', ar: 'treatments', fr: 'traitements' },
+  tedaviler: { en: 'treatments', ar: 'treatments', },
   'rekonstruktif-uroloji': {
     en: 'reconstructive-urology',
-    de: 'rekonstruktive-urologie',
-    ru: 'reconstructive-urology',
-    ar: 'reconstructive-urology', fr: 'urologie-reconstructrice'
+    ar: 'reconstructive-urology',
   },
-  cerrah: { en: 'surgeon', de: 'chirurg', ru: 'surgeon', ar: 'surgeon', fr: 'chirurgien' },
-  hastane: { en: 'hospital', de: 'krankenhaus', ru: 'hospital', ar: 'hospital', fr: 'hopital' },
+  cerrah: { en: 'surgeon', ar: 'surgeon', },
+  hastane: { en: 'hospital', ar: 'hospital', },
   'uluslararasi-hasta': {
     en: 'international-patients',
-    de: 'internationale-patienten',
-    ru: 'international-patients',
-    ar: 'international-patients', fr: 'patients-internationaux'
+    ar: 'international-patients',
   },
-  deneyimler: { en: 'experiences', de: 'erfahrungen', ru: 'experiences', ar: 'experiences', fr: 'temoignages' },
+  deneyimler: { en: 'experiences', ar: 'experiences', },
   'ozel-danismanlik': {
     en: 'online-consultation',
-    de: 'online-beratung',
-    ru: 'online-consultation',
-    ar: 'online-consultation', fr: 'consultation-en-ligne'
+    ar: 'online-consultation',
   },
-  sozluk: { en: 'glossary', de: 'glossar', ru: 'glossary', ar: 'glossary', fr: 'glossaire' },
-  iletisim: { en: 'contact', de: 'kontakt', ru: 'contact', ar: 'contact', fr: 'contact' },
-  'yasal/kvkk': { en: 'legal/privacy', de: 'rechtliches/datenschutz', ru: 'legal/privacy', ar: 'legal/privacy', fr: 'mentions-legales/confidentialite' },
+  sozluk: { en: 'glossary', ar: 'glossary', },
+  iletisim: { en: 'contact', ar: 'contact', },
+  'yasal/kvkk': { en: 'legal/privacy', ar: 'legal/privacy', },
   'yasal/acik-riza': {
     en: 'legal/consent',
-    de: 'rechtliches/einwilligung',
-    ru: 'legal/consent',
-    ar: 'legal/consent', fr: 'mentions-legales/consentement'
+    ar: 'legal/consent',
   }
 };
 
@@ -49,7 +41,7 @@ const LOCALIZED: Record<string, Record<string, string>> = {
 function resolveLegacyRedirect(pathname: string): string | null {
   const segments = pathname.split('/').filter(Boolean);
   const locale = segments[0];
-  if (!locale || !(locale in LOCALIZED.tedaviler)) return null; // yalnızca en/de/ru/ar
+  if (!locale || !(locale in LOCALIZED.tedaviler)) return null; // yalnızca en/ar
   const rest = segments.slice(1).join('/');
   if (!rest) return null;
 
