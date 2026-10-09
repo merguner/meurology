@@ -98,7 +98,12 @@ export default async function TreatmentPage({
       : null;
   const isReconstructive = treatmentCategory(treatment) === 'reconstructive';
   // Sayfaya özel WhatsApp ön-dolu mesajı + kaynak takip kodu (ör. [TR-BOBREK-TASI]).
-  const waMessage = whatsappMessageFor(tc('whatsappTopicMessage', { topic: c.title }), locale, slug);
+  const waMessage = whatsappMessageFor(
+    tc('whatsappTopicMessage', { topic: c.title }),
+    locale,
+    slug,
+    tc('whatsappCountryPrompt')
+  );
 
   /**
    * Hızlı bilgi kutusu satırları — yalnızca DOLU alanlar.

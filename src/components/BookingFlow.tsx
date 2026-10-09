@@ -128,6 +128,12 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
       return;
     }
     setCode(makeCode(date));
+    /*
+      OLCUM: randevu akışı TAMAMLANDI (referans kodu üretildi). Daha önce
+      yalnızca 1. adımdaki saat seçimi ölçülüyordu; asıl dönüşüm görünmüyordu.
+      Ad, ülke ve tarih BİLEREK gönderilmez.
+    */
+    track('consultation_booked', { source: 'ozel-danismanlik' });
     setStep(3);
   }
 

@@ -100,7 +100,7 @@ export function HeroSlider({ doctor }: { doctor?: HeroDoctor }) {
           // Ön-dolu mesaj: slayt BAŞLIĞI değil, anlaşılır bir soru + kaynak kodu.
           const href =
             slide.cta.type === 'whatsapp'
-              ? whatsappLink(whatsappMessageFor(tc('whatsappTopicMessage', { topic: c.ctaTopic ?? c.title }), locale, slide.id))
+              ? whatsappLink(whatsappMessageFor(tc('whatsappTopicMessage', { topic: c.ctaTopic ?? c.title }), locale, slide.id, tc('whatsappCountryPrompt')))
               : slide.cta.href ?? '/';
           // SEO: sayfada tek <h1> — yalnızca ilk slide h1, diğerleri h2 (görsel olarak aynı).
           const Heading = i === 0 ? 'h1' : 'h2';

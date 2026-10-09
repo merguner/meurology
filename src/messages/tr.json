@@ -48,7 +48,9 @@
     "verified": "Doğrulanabilir bilgi",
     "placeholderNotice": "Örnek/placeholder içerik",
     "fileEvalCta": "Dosya/görüntüleme gönder",
-    "whatsappTopicMessage": "Merhaba, {topic} hakkında bilgi almak istiyorum. Ülkem:"
+    "whatsappTopicMessage": "Merhaba, {topic} hakkında bilgi almak istiyorum.",
+    "whatsappCountryPrompt": "Ülkem:",
+    "whatsappGeneralTopic": "ürolojik tedavi seçenekleri"
   },
   "Home": {
     "positioning": "Uluslararası hastalar için ürolojik cerrahide güvenilir adres",

@@ -8,6 +8,7 @@ import { Icon } from './Icon';
 import { TurnstileWidget } from './TurnstileWidget';
 import { CountrySelect } from './CountrySelect';
 import { track } from '@/lib/analytics';
+import { autoReplyCopy } from '@/content/autoReply';
 import {
   ALLOWED_ATTACHMENT_ACCEPT,
   MAX_ATTACHMENTS,
@@ -362,6 +363,13 @@ export function PreAssessmentForm({
       <button type="submit" className="btn-primary w-full sm:w-auto" disabled={status === 'submitting'}>
         {status === 'submitting' ? t('submitting') : t('submit')}
       </button>
+      {/*
+        CEVAP SÜRESİ — otomatik yanıt e-postasındaki sözün AYNISI, aynı kaynaktan.
+        Hasta göndermeden önce ne zaman cevap alacağını bilmiyordu; söz yalnızca
+        gönderimden sonra gelen e-postada yazıyordu. Metin ayrı yazılmadı ki
+        sayfadaki söz ile e-postadaki söz hiçbir zaman birbirinden ayrışmasın.
+      */}
+      <p className="text-xs text-muted">{autoReplyCopy(locale).timing}</p>
     </form>
   );
 }

@@ -25,6 +25,7 @@ export type TrackedEvent =
   | 'email_click'
   | 'form_submit'
   | 'consultation_slot_selected'
+  | 'consultation_booked'
   | 'language_switch';
 
 export interface TrackParams {
@@ -50,6 +51,25 @@ function safeTag(v: string): string {
     .slice(0, 48);
 }
 
+/**
+ * META STANDART OLAYLARI.
+ *
+ * Meta reklamları yalnızca STANDART olaylara göre optimize edilebilir: bir
+ * kampanyayı "başvuru getir" diye hedeflemek için Pixel'in `Lead` görmesi
+ * gerekir. 9 Eki 2026'ya kadar her olay `trackCustom` ile gidiyordu, yani
+ * reklam verildiğinde hiçbir dönüşüm optimizasyon hedefi olarak seçilemezdi.
+ *
+ * Eşlemede olmayanlar (dil değişimi, saat seçimi) özel olay olarak kalır;
+ * onlar dönüşüm değil, ara adım.
+ */
+const META_STANDARD: Partial<Record<TrackedEvent, string>> = {
+  form_submit: 'Lead',
+  whatsapp_click: 'Contact',
+  phone_click: 'Contact',
+  email_click: 'Contact',
+  consultation_booked: 'Schedule'
+};
+
 export function track(event: TrackedEvent, params: TrackParams = {}): void {
   if (typeof window === 'undefined') return;
 
@@ -65,8 +85,14 @@ export function track(event: TrackedEvent, params: TrackParams = {}): void {
     /* ölçüm hatası kullanıcıyı etkilemez */
   }
   try {
-    // Meta Pixel'de bu olaylar standart değil; özel olay olarak gönderilir.
-    window.fbq?.('trackCustom', event, payload);
+    const standart = META_STANDARD[event];
+    if (standart) {
+      // Asıl olay adı parametrede kalır: WhatsApp, telefon ve e-posta üçü de
+      // "Contact" olarak gider ama Events Manager'da birbirinden ayrılabilir.
+      window.fbq?.('track', standart, { ...payload, event_name: event });
+    } else {
+      window.fbq?.('trackCustom', event, payload);
+    }
   } catch {
     /* ölçüm hatası kullanıcıyı etkilemez */
   }
@@ -82,7 +108,9 @@ export function whatsappSourceFromHref(href: string): string | undefined {
     const url = new URL(href, window.location.origin);
     const text = url.searchParams.get('text');
     if (!text) return undefined;
-    const m = text.match(/\[([A-Z0-9-]+)\]\s*$/);
+    // Kod artık mesajın sonunda değil, ilk satırın sonunda (ülke sorusu en
+    // altta). Bu yüzden ifade satır sonuna bağlanmaz; ilk etiket alınır.
+    const m = text.match(/\[([A-Z0-9-]+)\]/);
     return m ? m[1] : undefined;
   } catch {
     return undefined;

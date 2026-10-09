@@ -48,7 +48,9 @@
     "verified": "Verifiable information",
     "placeholderNotice": "Sample/placeholder content",
     "fileEvalCta": "Send file/imaging",
-    "whatsappTopicMessage": "Hello, I would like information about {topic}. My country:"
+    "whatsappTopicMessage": "Hello, I would like information about {topic}.",
+    "whatsappCountryPrompt": "My country:",
+    "whatsappGeneralTopic": "urological treatment options"
   },
   "Home": {
     "positioning": "A trusted address in urological surgery for international patients",

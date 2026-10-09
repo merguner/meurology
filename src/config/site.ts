@@ -189,24 +189,35 @@ export function whatsappLink(prefilledMessage?: string): string {
 /**
  * SAYFAYA ÖZEL WHATSAPP MESAJI + KAYNAK TAKİP KODU.
  *
- * Örnek çıktı:
- *   "Merhaba, Robotik Prostatektomi hakkında bilgi almak istiyorum. Ülkem:  [TR-ROBOTIK-PROSTATEKTOMI]"
+ * Örnek çıktı (iki satır):
+ *   Merhaba, Robotik Prostatektomi hakkında bilgi almak istiyorum. [TR-ROBOTIK-PROSTATEKTOMI]
+ *   Ülkem:
  *
  * Kaynak kodu ([DİL-KONU]) hangi sayfadan gelindiğini WhatsApp kutusunda
  * görünür kılar; kampanya/sayfa performansı elle izlenebilir.
  *
- * @param message   next-intl ile {topic} doldurulmuş hazır mesaj.
- * @param locale    Kaynak kodundaki dil ön eki.
- * @param sourceKey Kaynak kodundaki konu anahtarı (ör. tedavi slug'ı).
+ * ÜLKE SORUSU AYRI SATIRDA VE EN SONDA. 9 Eki 2026'ya kadar kod mesajın en
+ * sonuna, "Ülkem:" ifadesinin hemen ardına ekleniyordu. Hasta kendi mesajında
+ * "My country: [EN-ANASAYFA]" görüyordu: kod ülke yerine okunuyor, iç terimler
+ * (ANASAYFA, GENEL) İngilizce/Arapça hastaya ülke gibi görünüyor ve personel
+ * hastanın ülkesini öğrenemiyordu. Ayrıca WhatsApp imleci mesajın SONUNA
+ * koyar; ülke sorusu en sonda olunca hasta doğrudan ülkesini yazar.
+ *
+ * @param message        next-intl ile {topic} doldurulmuş hazır mesaj.
+ * @param locale         Kaynak kodundaki dil ön eki.
+ * @param sourceKey      Kaynak kodundaki konu anahtarı (ör. tedavi slug'ı).
+ * @param countryPrompt  Son satırdaki ülke sorusu (Common.whatsappCountryPrompt).
  */
 export function whatsappMessageFor(
   message: string,
   locale: string,
-  sourceKey: string
+  sourceKey: string,
+  countryPrompt?: string
 ): string {
   const code = `${locale}-${sourceKey}`
     .toUpperCase()
     .replace(/[^A-Z0-9-]/g, '-')
     .replace(/-+/g, '-');
-  return `${message} [${code}]`;
+  const ilkSatir = `${message} [${code}]`;
+  return countryPrompt ? `${ilkSatir}\n${countryPrompt} ` : ilkSatir;
 }

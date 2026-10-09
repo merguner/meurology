@@ -48,7 +48,9 @@
     "verified": "معلومات قابلة للتحقق",
     "placeholderNotice": "محتوى تجريبي/عنصر نائب",
     "fileEvalCta": "إرسال الملف/الصور",
-    "whatsappTopicMessage": "مرحبًا، أودّ الحصول على معلومات حول {topic}. بلدي:"
+    "whatsappTopicMessage": "مرحبًا، أودّ الحصول على معلومات حول {topic}.",
+    "whatsappCountryPrompt": "بلدي:",
+    "whatsappGeneralTopic": "خيارات علاج المسالك البولية"
   },
   "Home": {
     "positioning": "عنوان موثوق لجراحة المسالك البولية للمرضى الدوليين",

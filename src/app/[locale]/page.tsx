@@ -24,9 +24,12 @@ export default async function HomePage({
   const tc = await getTranslations('Common');
   // Ana sayfa CTA'sı için ön-dolu WhatsApp mesajı (bölüm başlığı değil) + kaynak kodu.
   const waMessage = whatsappMessageFor(
-    tc('whatsappTopicMessage', { topic: t('treatmentsTitle') }),
+    // Konu bölüm başlığından ALINMAZ: "Treatment areas" cümle içinde büyük
+    // harfle okunuyordu ("information about Treatment areas").
+    tc('whatsappTopicMessage', { topic: tc('whatsappGeneralTopic') }),
     locale,
-    'anasayfa'
+    'anasayfa',
+    tc('whatsappCountryPrompt')
   );
 
   /**
