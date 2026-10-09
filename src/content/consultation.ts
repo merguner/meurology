@@ -1,7 +1,7 @@
 import type { Locale } from '@/i18n/routing';
 
 /**
- * ÖZEL ONLINE DANIŞMANLIK — metin içeriği (tr/en dolu; ar en'e düşer).
+ * ÖZEL ONLINE DANIŞMANLIK — metin içeriği (tr/en/ar üçü de dolu).
  * Tüm UI kopyası burada tutulur (mesaj anahtarı dağılmasın); IBAN/fiyat site.ts'te.
  *
  * TODO (HUKUK): Aşağıdaki hukuki/onay metinleri taslaktır; yayına almadan önce

@@ -3,7 +3,7 @@ import type { Locale } from '@/i18n/routing';
 /**
  * REKONSTRÜKTİF ÜROLOJİ KATEGORİ SAYFASI İÇERİĞİ
  * Fiyat/hacim değil; vaka karmaşıklığı, redo deneyimi ve uzun dönem başarı odaklı.
- * tr/en dolu; ar render'da en'e düşer (çeviriler ayrı adımda).
+ * tr/en/ar üçü de dolu.
  */
 export interface ReconstructiveWhy {
   title: string;
