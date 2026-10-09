@@ -3005,7 +3005,6 @@ export const blogPosts: BlogPost[] = [
     category: 'andrology',
     languages: ['en'],
     treatmentSlug: 'varikosel',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Sexual and Reproductive Health — European Association of Urology', url: 'https://uroweb.org/guidelines/sexual-and-reproductive-health' }
     ],
@@ -3086,7 +3085,6 @@ export const blogPosts: BlogPost[] = [
     category: 'prostate',
     languages: ['en'],
     treatmentSlug: 'robotik-prostatektomi',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Prostate Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/prostate-cancer' }
     ],
