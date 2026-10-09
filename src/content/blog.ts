@@ -20,6 +20,7 @@ export type BlogCategory =
   | 'stones'
   | 'oncology'
   | 'femaleUrology'
+  | 'reconstructive'
   | 'healthTourism';
 
 /** Kaynakça maddesi. */
@@ -1429,7 +1430,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'uretra-darliginda-neden-urethrotomi-yetmez',
     date: '2026-10-04',
-    category: 'bph',
+    category: 'reconstructive',
     languages: ['tr'],
     treatmentSlug: 'uretroplasti',
     sources: [
@@ -1832,7 +1833,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'redo-urethroplasty-after-a-failed-repair',
     date: '2026-10-04',
-    category: 'healthTourism',
+    category: 'reconstructive',
     languages: ['en'],
     treatmentSlug: 'uretroplasti',
     sources: [
@@ -2739,7 +2740,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'tadayuq-al-ihlil-limatha-la-yakfi-al-shaqq-al-dakhili',
     date: '2026-10-09',
-    category: 'healthTourism',
+    category: 'reconstructive',
     languages: ['ar'],
     treatmentSlug: 'uretroplasti',
     sources: [
