@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import type { Locale } from '@/i18n/routing';
 import type { ConsultationCopy } from '@/content/consultation';
 import { siteConfig, whatsappLink, formatEUR } from '@/config/site';
+import { features } from '@/config/features';
 import { Icon } from './Icon';
 import { CountrySelect } from './CountrySelect';
 
@@ -33,11 +34,18 @@ function toDateStr(d: Date): string {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 }
 
-/** Bugünden itibaren yalnızca izin verilen hafta içi günlerini döndürür. */
+/**
+ * YARINDAN itibaren yalnızca izin verilen hafta içi günlerini döndürür.
+ *
+ * 9 Eki 2026'ya kadar liste BUGÜNDEN başlıyordu: akşam saatlerinde girilen
+ * hasta, saati çoktan geçmiş bir slotu (ör. 22:00'de 16:20) seçebiliyordu.
+ * Talep zaten WhatsApp'tan onaylandığı için aynı gün randevu pratikte yok.
+ */
 function nextAvailableDates(weekdays: readonly number[], count: number): string[] {
   const out: string[] = [];
   const d = new Date();
   d.setHours(0, 0, 0, 0);
+  d.setDate(d.getDate() + 1);
   let guard = 0;
   while (out.length < count && guard < 180) {
     if (weekdays.includes(d.getDay())) out.push(toDateStr(d));
@@ -55,8 +63,20 @@ function makeCode(dateStr: string): string {
 export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: Locale }) {
   const c = copy;
   const cfg = siteConfig.consultation;
-  // Tam ücret ifadesi (ör. "200 € (KDV dahil)") — ödeme adımında ve WhatsApp mesajında.
-  const price = `${formatEUR(cfg.consultationFeeEUR, locale)} (${c.vatIncluded})`;
+  /*
+    ÜCRET
+    - feeActive false (9 Eki 2026'dan beri): tutar, havale kutusu, kartla ödeme
+      ve havaleye dair uluslararası not HİÇ çizilmez; son adım bir talep kodu
+      ve WhatsApp onay düğmesinden ibarettir.
+    - Türkçe sayfada tutar HİÇBİR KOŞULDA yazılmaz (yönetmelik). 9 Eki 2026'ya
+      kadar bu bileşen dil ayrımı yapmıyor, Türkçe son adımda da "200 €"
+      gösteriyordu; sayfanın üst kısmı ise doğru biçimde gizliyordu.
+  */
+  const feeActive = cfg.feeActive;
+  const showAmount = features(locale).prices && cfg.consultationFeeEUR > 0;
+  const price = showAmount
+    ? `${formatEUR(cfg.consultationFeeEUR, locale)} (${c.vatIncluded})`
+    : c.priceDomesticNotice;
 
 
   const [step, setStep] = useState<1 | 2 | 3>(1);
@@ -309,15 +329,18 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
               <dt className="label-mono">{c.codeLabel}</dt>
               <dd className="mt-0.5 font-mono text-base font-bold text-primary">{code}</dd>
             </div>
-            <div className="sm:col-span-2 border-t border-border pt-3">
-              <dt className="label-mono">{c.amountLabel}</dt>
-              <dd className="mt-0.5 text-base font-bold">
-                {price}
-              </dd>
-            </div>
+            {feeActive && (
+              <div className="sm:col-span-2 border-t border-border pt-3">
+                <dt className="label-mono">{c.amountLabel}</dt>
+                <dd className="mt-0.5 text-base font-bold">
+                  {price}
+                </dd>
+              </div>
+            )}
           </dl>
 
-          {/* Havale bilgileri */}
+          {/* Havale bilgileri — yalnızca ücret aktifken */}
+          {feeActive && (
           <div className="mt-4 rounded-lg border border-primary/25 bg-primary-soft/50 p-4">
             <p className="mb-3 flex items-center gap-2 font-semibold">
               <Icon name="shield" size={18} className="text-primary" /> {c.bankTitle}
@@ -346,8 +369,10 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
             </dl>
             <p className="mt-3 text-xs text-muted">{c.instructions}</p>
           </div>
+          )}
 
-          {/* WhatsApp dekont butonu — kod önceden yazılmış */}
+          {/* WhatsApp düğmesi — kod önceden yazılmış (ücret aktifken dekont,
+              pasifken randevu talebinin onayı için) */}
           <a
             href={whatsappLink(waMessage)}
             target="_blank"
@@ -367,7 +392,7 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
             Randevu kodu baglantiya parametre olarak eklenir ki odeme
             saglayicisindaki kayit randevuyla eslestirilebilsin.
           */}
-          {cfg.cardPaymentUrl && (
+          {feeActive && cfg.cardPaymentUrl && (
             <>
               <div className="mt-3 flex items-center gap-3 text-xs text-muted">
                 <span className="h-px flex-1 bg-border" aria-hidden="true" />
@@ -389,7 +414,7 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
           {/* Alternatif: site ici kartli odeme akisi (API). Entegrasyon
               aktif degilken buton ve uyari metni HIC render edilmez.
               TODO-DOGRULA: odeme altyapisi secilince cardPaymentEnabled: true. */}
-          {cfg.cardPaymentEnabled && (
+          {feeActive && cfg.cardPaymentEnabled && (
           <>
           <div className="mt-3 flex items-center gap-3 text-xs text-muted">
             <span className="h-px flex-1 bg-border" aria-hidden="true" />
@@ -419,10 +444,14 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
           )}
 
           {/* Döviz/kur notu (yabancı hasta) + uluslararası hasta notu */}
-          {c.fxNote && <p className="mt-4 text-xs text-muted">{c.fxNote}</p>}
-          <p className="mt-2 rounded-lg border border-border bg-surface-2 p-3 text-xs text-muted">
-            {c.internationalNote}
-          </p>
+          {feeActive && (
+            <>
+              {c.fxNote && <p className="mt-4 text-xs text-muted">{c.fxNote}</p>}
+              <p className="mt-2 rounded-lg border border-border bg-surface-2 p-3 text-xs text-muted">
+                {c.internationalNote}
+              </p>
+            </>
+          )}
 
           {/* Bekleyiş mesajı */}
           <div className="mt-4 rounded-lg border border-success/40 bg-success/10 p-4">

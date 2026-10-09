@@ -108,6 +108,22 @@ export const siteConfig = {
      */
     consultationFeeEUR: 200,
     /**
+     * ÜCRET ŞİMDİLİK PASİF — Dr. Ergün, 9 Ekim 2026.
+     *
+     * false iken HİÇBİR dilde tutar, "ücretli" etiketi, havale/IBAN bilgisi,
+     * dekont adımı veya kartla ödeme gösterilmez; randevu akışı bir talep
+     * kodu üretir ve hasta kodu WhatsApp'tan gönderip onay bekler.
+     * Tutar (consultationFeeEUR) ve banka bilgileri SİLİNMEDİ: true yapıldığında
+     * her şey eski hâline döner. Metin karşılıkları consultation.ts → withoutFee.
+     */
+    feeActive: false,
+    /**
+     * BLOK TÜM TEDAVİ SAYFALARINDA — Dr. Ergün, 9 Ekim 2026.
+     * Önceden yalnızca offersConsultation: true olan 4 androloji sayfasındaydı.
+     * false yapılırsa eski davranışa (yalnız offersConsultation) dönülür.
+     */
+    showOnAllTreatments: true,
+    /**
      * ONLINE DANIŞMANLIK ÜCRETİ — TÜRK LİRASI.
      * TODO(Dr. Ergün): teyit edilecek.
      *

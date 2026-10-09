@@ -1,4 +1,5 @@
 import type { Locale } from '@/i18n/routing';
+import { siteConfig } from '@/config/site';
 
 /**
  * ÖZEL ONLINE DANIŞMANLIK — metin içeriği (tr/en/ar üçü de dolu).
@@ -76,6 +77,21 @@ export interface ConsultationCopy {
   whatsappMessage: string; // {code} {amount} ile
   waitingTitle: string;
   waitingBody: string;
+  /**
+   * ÜCRET PASİFKEN (siteConfig.consultation.feeActive === false) yukarıdaki
+   * alanların yerine geçen metinler. Ücret, havale ve dekont geçmez.
+   * resolveConsultation() bunları otomatik uygular; bileşenler ayrıca
+   * bakmak zorunda değil (yalnızca tutar/havale kutularını gizlerler).
+   */
+  withoutFee: {
+    badge: string;
+    heroDescription: string[];
+    how: ConsultationStep[];
+    step3Title: string;
+    whatsappReceiptCta: string;
+    whatsappMessage: string; // {code} ile
+    waitingBody: string;
+  };
 }
 
 const content: Partial<Record<Locale, ConsultationCopy>> = {
@@ -188,7 +204,26 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
       'Merhaba, randevu kodum {code} için ödeme dekontumu gönderiyorum. Tutar: {amount}.',
     waitingTitle: 'Sıradaki adım',
     waitingBody:
-      'Randevunuz alındı. Ödemenizi yaptıktan sonra dekontu WhatsApp’tan gönderin. Ekibimiz dekontu onayladıktan sonra, randevu saatinizde sizi WhatsApp’tan görüntülü olarak arayacaktır.'
+      'Randevunuz alındı. Ödemenizi yaptıktan sonra dekontu WhatsApp’tan gönderin. Ekibimiz dekontu onayladıktan sonra, randevu saatinizde sizi WhatsApp’tan görüntülü olarak arayacaktır.',
+    withoutFee: {
+      badge: 'Randevulu özel görüşme',
+      heroDescription: [
+        'Özel Online Danışmanlık; kliniğe gelmeden, önceden randevu alarak cerrahla birebir yapılan bir video görüşmesidir. WhatsApp ve ön değerlendirme formu akışından ayrı ve bağımsızdır.',
+        'Görüşme WhatsApp görüntülü arama ile yapılır; ayrı bir video platformu (Zoom/Meet vb.) gerekmez. Randevu saatinizde WhatsApp’a erişiminizin olması yeterlidir.'
+      ],
+      how: [
+        { title: '1. Randevu alın', body: 'Uygun gün ve saati seçin (saatler İstanbul saatiyle gösterilir).' },
+        { title: '2. Kısa bilgi', body: 'Ad, ülke ve kısa bir not — yalnızca gerekli minimum bilgi.' },
+        { title: '3. Kodunuzu WhatsApp’tan gönderin', body: 'Randevu kodunuz oluşur; tek dokunuşla, kodunuz önceden yazılmış olarak WhatsApp açılır.' },
+        { title: '4. Randevu onayı', body: 'Ekibimiz uygunluğu kontrol eder ve randevunuzu WhatsApp’tan yazılı olarak onaylar.' },
+        { title: '5. Görüntülü görüşme', body: 'Randevu saatinizde sizi WhatsApp’tan görüntülü ararız.' }
+      ],
+      step3Title: 'Randevu talebiniz oluşturuldu',
+      whatsappReceiptCta: 'Talebi WhatsApp’tan gönder',
+      whatsappMessage: 'Merhaba, {code} kodlu özel online danışmanlık randevu talebimi onaylatmak istiyorum.',
+      waitingBody:
+        'Randevu talebiniz oluşturuldu. Kodunuzu WhatsApp’tan gönderin; ekibimiz talebinizi yazılı olarak onaylar ve randevu saatinizde sizi WhatsApp’tan görüntülü arar.'
+    }
   },
   en: {
     navLabel: 'Private Online Consultation',
@@ -299,7 +334,26 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
       'Hello, I am sending my payment receipt for appointment code {code}. Amount: {amount}.',
     waitingTitle: 'Next step',
     waitingBody:
-      'Your appointment is booked. After making your payment, send the receipt on WhatsApp. Once our team confirms the receipt, we will call you on WhatsApp video at your appointment time.'
+      'Your appointment is booked. After making your payment, send the receipt on WhatsApp. Once our team confirms the receipt, we will call you on WhatsApp video at your appointment time.',
+    withoutFee: {
+      badge: 'Private session by appointment',
+      heroDescription: [
+        'The Private Online Consultation is a one-to-one video consultation with the surgeon, booked in advance, without visiting the clinic. It is separate and independent from the WhatsApp and pre-assessment form flow.',
+        'The consultation takes place over a WhatsApp video call; no separate video platform (Zoom/Meet, etc.) is needed. You only need access to WhatsApp at your appointment time.'
+      ],
+      how: [
+        { title: '1. Book an appointment', body: 'Choose a suitable day and time (times are shown in Istanbul time).' },
+        { title: '2. Brief details', body: 'Name, country and a short note — only the minimum needed.' },
+        { title: '3. Send your code on WhatsApp', body: 'Your appointment code is created; one tap opens WhatsApp with the code pre-filled.' },
+        { title: '4. Confirmation', body: 'Our team checks availability and confirms your appointment in writing on WhatsApp.' },
+        { title: '5. Video consultation', body: 'We call you on WhatsApp video at your appointment time.' }
+      ],
+      step3Title: 'Your appointment request has been created',
+      whatsappReceiptCta: 'Send the request on WhatsApp',
+      whatsappMessage: 'Hello, I would like to confirm my private online consultation request, code {code}.',
+      waitingBody:
+        'Your appointment request has been created. Send your code on WhatsApp; our team will confirm your request in writing and call you on WhatsApp video at your appointment time.'
+    }
   },
   ar: {
     navLabel: 'استشارة أونلاين خاصة',
@@ -410,10 +464,34 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
     whatsappMessage: 'مرحبًا، أرسل إيصال الدفع الخاص برمز الموعد {code}. المبلغ: {amount}.',
     waitingTitle: 'الخطوة التالية',
     waitingBody:
-      'تم حجز موعدك. بعد إتمام الدفع، أرسل الإيصال عبر WhatsApp. وبعد أن يؤكّد فريقنا الإيصال، سنتصل بك عبر فيديو WhatsApp في وقت موعدك.'
+      'تم حجز موعدك. بعد إتمام الدفع، أرسل الإيصال عبر WhatsApp. وبعد أن يؤكّد فريقنا الإيصال، سنتصل بك عبر فيديو WhatsApp في وقت موعدك.',
+    withoutFee: {
+      badge: 'جلسة خاصة بموعد مسبق',
+      heroDescription: [
+        'الاستشارة الأونلاين الخاصة هي استشارة فيديو فردية مع الجرّاح، تُحجَز مسبقًا، دون الحضور إلى العيادة. وهي منفصلة ومستقلة عن مسار WhatsApp ونموذج التقييم الأولي.',
+        'تُجرى الاستشارة عبر مكالمة فيديو على WhatsApp؛ ولا حاجة إلى منصّة فيديو منفصلة (Zoom/Meet وغيرها). يكفي أن يكون لديك وصول إلى WhatsApp في وقت موعدك.'
+      ],
+      how: [
+        { title: '1. احجز موعدًا', body: 'اختر اليوم والوقت المناسبين (تُعرض الأوقات بتوقيت إسطنبول).' },
+        { title: '2. معلومات موجزة', body: 'الاسم والدولة وملاحظة قصيرة — الحدّ الأدنى اللازم فقط.' },
+        { title: '3. أرسل رمزك عبر WhatsApp', body: 'يُنشأ رمز موعدك؛ وبضغطة واحدة يُفتح WhatsApp والرمز مكتوب مسبقًا.' },
+        { title: '4. تأكيد الموعد', body: 'يتحقّق فريقنا من التوفّر ويؤكّد موعدك كتابةً عبر WhatsApp.' },
+        { title: '5. مكالمة الفيديو', body: 'نتصل بك عبر فيديو WhatsApp في وقت موعدك.' }
+      ],
+      step3Title: 'تم إنشاء طلب موعدك',
+      whatsappReceiptCta: 'أرسل الطلب عبر WhatsApp',
+      whatsappMessage: 'مرحبًا، أودّ تأكيد طلب الاستشارة الأونلاين الخاصة برمز {code}.',
+      waitingBody:
+        'تم إنشاء طلب موعدك. أرسل رمزك عبر WhatsApp؛ وسيؤكّد فريقنا طلبك كتابةً ويتصل بك عبر فيديو WhatsApp في وقت موعدك.'
+    }
   },
 };
 
 export function resolveConsultation(locale: Locale): ConsultationCopy {
-  return content[locale] ?? content.en ?? content.tr!;
+  const copy = content[locale] ?? content.en ?? content.tr!;
+  // Ücret pasifken etiket, anlatım, adımlar ve son adım metinleri ücretsiz
+  // karşılıklarıyla değişir. Ana sayfa, tedavi sayfası ve alt bilgi aynı
+  // fonksiyonu kullandığı için "ücretli" etiketi hiçbir yerde kalmaz.
+  if (siteConfig.consultation.feeActive) return copy;
+  return { ...copy, ...copy.withoutFee };
 }

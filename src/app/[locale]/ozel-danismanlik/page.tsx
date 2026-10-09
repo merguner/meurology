@@ -70,7 +70,9 @@ export default async function ConsultationPage({
             {c.forWhom}
           </p>
 
-          {/* Ücret — tutar yalnızca yabancı dil sayfalarında (sağlık turizmi istisnası) */}
+          {/* Ücret — tutar yalnızca yabancı dil sayfalarında (sağlık turizmi istisnası).
+              Ücret pasifken (site.ts → feeActive) kutu hiç çizilmez. */}
+          {cfg.feeActive && (
           <div className="card p-5">
             <p className="label-mono">{c.priceLabel}</p>
             {showPrice && hasFee ? (
@@ -82,6 +84,7 @@ export default async function ConsultationPage({
             )}
             <p className="mt-1 text-sm text-muted">{priceNote}</p>
           </div>
+          )}
 
           {/* Nasıl işliyor */}
           <div>

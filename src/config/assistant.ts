@@ -73,7 +73,9 @@ export const assistantPrices: AssistantPrice[] = [
  * yabancı dillerde gösteriyor (Görev 10). Asistan da aynı kaynaktan
  * okur ki iki yerde farklı rakam çıkmasın. 0 ise söylenmez.
  */
-export const assistantConsultationFeeEUR = siteConfig.consultation.consultationFeeEUR;
+export const assistantConsultationFeeEUR = siteConfig.consultation.feeActive
+  ? siteConfig.consultation.consultationFeeEUR
+  : 0; // ücret pasifken asistan da tutar söylemez
 
 /**
  * Hastane adları site ayarından gelir; asistanın ağzında sitede

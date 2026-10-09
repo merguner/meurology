@@ -305,9 +305,12 @@ export default async function TreatmentPage({
         </div>
       )}
 
-      {/* ÜCRETLİ ÖZEL GÖRÜŞME — yalnızca offersConsultation olan tedavilerde (androloji).
-          Ücretsiz WhatsApp/form CTA'larından görsel olarak ayrışır. */}
-      {treatment.offersConsultation &&
+      {/* ÖZEL ONLINE DANIŞMANLIK — 9 Eki 2026'dan beri TÜM tedavi sayfalarında
+          (site.ts → showOnAllTreatments). Önceden yalnızca offersConsultation
+          olan 4 androloji sayfasındaydı. WhatsApp/form CTA'larından görsel olarak
+          ayrışır. Etiket metni resolveConsultation()'dan gelir (ücret pasifken
+          "ücretli" geçmez). */}
+      {(siteConfig.consultation.showOnAllTreatments || treatment.offersConsultation) &&
         (() => {
           const consult = resolveConsultation(locale);
           return (
