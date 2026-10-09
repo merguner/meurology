@@ -87,7 +87,9 @@ export async function SiteFooter() {
             </li>
             <li className="flex items-center gap-2.5">
               <Icon name="phone" size={16} className="shrink-0 text-primary" />
-              <a href={`tel:${siteConfig.phoneIntl}`} className="text-muted transition-colors hover:text-primary">
+              {/* dir="ltr": Arapça sayfada boşlukla ayrılmış rakam grupları ters
+                  sıraya diziliyordu ("69 09 063 0532"). Numara her dilde soldan sağa. */}
+              <a href={`tel:${siteConfig.phoneIntl}`} dir="ltr" className="text-muted transition-colors hover:text-primary">
                 {siteConfig.phone}
               </a>
             </li>

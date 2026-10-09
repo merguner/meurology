@@ -10,7 +10,6 @@ import { getTreatment, publishedTreatments, childTreatments } from '@/content/tr
 import { resolveContent, treatmentCategory, isPlaceholder } from '@/content/types';
 import { resolveConsultation } from '@/content/consultation';
 import { siteConfig, formatPriceRangeEUR, whatsappMessageFor } from '@/config/site';
-import { contactConfig } from '@/config/contact';
 import { surgeon, surgeonFullName } from '@/content/surgeon';
 import { SectionHeading } from '@/components/PageHero';
 import { Icon } from '@/components/Icon';
@@ -24,6 +23,7 @@ import { InsuranceInfo } from '@/components/InsuranceInfo';
 import { MapEmbed } from '@/components/MapEmbed';
 import { storiesForTreatment } from '@/content/experiences';
 import { features } from '@/config/features';
+import { physicianJsonLd, physicianId } from '@/lib/physicianJsonLd';
 
 // Tüm dil + slug kombinasyonlarını statik üret (hız için).
 export function generateStaticParams() {
@@ -186,17 +186,13 @@ export default async function TreatmentPage({
         ...(treatment.lastReviewed
           ? {
               lastReviewed: treatment.lastReviewed,
-              reviewedBy: { '@type': 'Physician', name: surgeonFullName(locale) }
+              // Aynı grafikteki hekim düğümüne referans (tam kopya değil)
+              reviewedBy: { '@id': physicianId(locale) }
             }
           : {})
       },
-      {
-        '@type': 'Physician',
-        name: surgeonFullName(locale),
-        medicalSpecialty: 'Urology',
-        knowsLanguage: [...contactConfig.surgeonLanguages],
-        url: `${siteConfig.domain}${getPathname({ locale, href: '/cerrah' })}`
-      },
+      // Hekim düğümü — telefon/adres/görsel dahil (lib/physicianJsonLd.ts)
+      physicianJsonLd(locale),
       {
         // Ekmek kırıntısı — arama sonuçlarında hiyerarşi gösterir (prompt m.3.4).
         '@type': 'BreadcrumbList',

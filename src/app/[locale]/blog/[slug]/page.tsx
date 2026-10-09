@@ -18,6 +18,7 @@ import { getTreatment } from '@/content/treatments';
 import { resolveContent } from '@/content/types';
 import { siteConfig } from '@/config/site';
 import { surgeonFullName } from '@/content/surgeon';
+import { physicianJsonLd } from '@/lib/physicianJsonLd';
 import { Icon } from '@/components/Icon';
 import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { JsonLd } from '@/components/JsonLd';
@@ -112,8 +113,13 @@ export default async function BlogPostPage({
     headline: c.title,
     description: c.metaDescription,
     inLanguage: locale,
-    datePublished: post.date,
-    dateModified: post.updated ?? post.date,
+    /*
+      Saat ve saat dilimi eklenir: yalnızca gün ("2026-10-04") Google'ın
+      Zengin Sonuçlar Testi'nde "geçersiz datetime / zaman dilimi eksik"
+      uyarısı veriyordu (9 Eki 2026). Saat bilinmediği için İstanbul öğlesi.
+    */
+    datePublished: `${post.date}T12:00:00+03:00`,
+    dateModified: `${post.updated ?? post.date}T12:00:00+03:00`,
     /**
      * Google'ın makale zengin sonucu görselsiz gösterilmiyor; 8 Eki 2026'da
      * canlıda bu alanın hiç olmadığı görüldü. Blog yazılarının kendi kapak
@@ -121,12 +127,8 @@ export default async function BlogPostPage({
      * yani Google'ın istediği en az 1200 px genişlik şartını karşılıyor.
      */
     image: `${siteConfig.domain}${ogImagePath(locale)}`,
-    author: {
-      '@type': 'Physician',
-      name: author,
-      medicalSpecialty: 'Urology',
-      url: `${siteConfig.domain}${getPathname({ locale, href: '/cerrah' })}`
-    },
+    // Yazar: tam hekim düğümü (telefon/adres/görsel dahil) — lib/physicianJsonLd.ts
+    author: physicianJsonLd(locale),
     url: articleUrl,
     mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
     publisher: { '@type': 'Organization', name: siteConfig.name, url: siteConfig.domain }

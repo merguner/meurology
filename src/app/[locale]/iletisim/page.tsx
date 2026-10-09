@@ -93,7 +93,8 @@ export default async function ContactPage({
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-3">
                 <Icon name="phone" size={18} className="shrink-0 text-primary" />
-                <a href={`tel:${siteConfig.phoneIntl}`} className="hover:text-primary">
+                {/* dir="ltr": Arapça sayfada rakam grupları ters sıraya diziliyordu. */}
+                <a href={`tel:${siteConfig.phoneIntl}`} dir="ltr" className="hover:text-primary">
                   {siteConfig.phone}
                 </a>
               </li>
