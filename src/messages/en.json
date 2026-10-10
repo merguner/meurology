@@ -142,7 +142,8 @@
     "reconstructiveTitle": "Reconstructive urology experience",
     "reconstructiveLink": "Go to the reconstructive urology page",
     "coursesTitle": "Courses & Certificates",
-    "awardsTitle": "Awards"
+    "awardsTitle": "Awards",
+    "metaDescription": "{name}, urologist in Istanbul. Training and career, publications, areas of practice and the hospitals where operations take place: Medical Park Bahçelievler and LİV Hospital Topkapı."
   },
   "Hospital": {
     "title": "Hospital & Technology",
@@ -244,7 +245,8 @@
     "mapTitle": "Clinic location — map",
     "mapLoad": "Load the map",
     "mapNotice": "The map is provided by Google. Once you load it, certain data including your IP address may be sent to Google.",
-    "callCta": "Call"
+    "callCta": "Call",
+    "metaDescription": "{center}, Kültür Sok. No:1, Bahçelievler, Istanbul. Phone and WhatsApp: {phone}. Email: {email}. Pre-assessment form and directions."
   },
   "Form": {
     "title": "Pre-assessment form",

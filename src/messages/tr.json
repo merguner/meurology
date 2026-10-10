@@ -1,8 +1,8 @@
 {
   "Meta": {
     "siteName": "ME Urology Clinic",
-    "defaultTitle": "ME Urology Clinic — Uluslararası Ürolojik Cerrahi",
-    "defaultDescription": "Robotik prostatektomi, böbrek taşı, BPH, androloji ve üroonkoloji alanlarında uluslararası hastalara yönelik ürolojik cerrahi ve sağlık turizmi hizmetleri.",
+    "defaultTitle": "Doç. Dr. Müslüm Ergün — Üroloji Uzmanı, İstanbul | ME Urology",
+    "defaultDescription": "Doç. Dr. Müslüm Ergün: prostat (ThuLEP, robotik cerrahi), böbrek taşı, androloji, kadın ve rekonstrüktif üroloji. Medical Park Bahçelievler, İstanbul.",
     "titleTemplate": "{page} — ME Urology Clinic",
     "treatmentsDescription": "Robotik prostatektomi, böbrek taşı, BPH, androloji ve üroonkoloji dahil 40 tedavi sayfası; her biri süreç, risk ve gerçekçi beklentilerle.",
     "hospitalDescription": "Ameliyatlar Medical Park Bahçelievler ve LİV Hospital Topkapı’da yapılır: da Vinci robotik sistem, Quanta lazer, ameliyathane ve yoğun bakım."
@@ -142,7 +142,8 @@
     "reconstructiveTitle": "Rekonstrüktif üroloji deneyimi",
     "reconstructiveLink": "Rekonstrüktif üroloji sayfasına git",
     "coursesTitle": "Kurslar ve Sertifikalar",
-    "awardsTitle": "Ödüller"
+    "awardsTitle": "Ödüller",
+    "metaDescription": "{name}, İstanbul’da üroloji uzmanı. Eğitim ve kariyer, yayınlar, çalışma alanları ve ameliyatların yapıldığı hastaneler: Medical Park Bahçelievler ve LİV Hospital Topkapı."
   },
   "Hospital": {
     "title": "Hastane & Teknoloji",
@@ -244,7 +245,8 @@
     "mapTitle": "Klinik konumu — harita",
     "mapLoad": "Haritayı yükle",
     "mapNotice": "Harita Google tarafından sağlanır. Yüklediğinizde IP adresiniz dâhil bazı veriler Google’a iletilebilir.",
-    "callCta": "Ara"
+    "callCta": "Ara",
+    "metaDescription": "{center}, Kültür Sok. No:1, Bahçelievler/İstanbul. Telefon ve WhatsApp: {phone}. E-posta: {email}. Ön değerlendirme formu ve yol tarifi."
   },
   "Form": {
     "title": "Ön değerlendirme formu",

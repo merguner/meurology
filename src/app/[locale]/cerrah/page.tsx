@@ -15,6 +15,7 @@ import { LiteYouTube } from '@/components/LiteYouTube';
 import { WhatsAppCta } from '@/components/WhatsAppCta';
 import { Icon } from '@/components/Icon';
 import { JsonLd } from '@/components/JsonLd';
+import { physicianJsonLd } from '@/lib/physicianJsonLd';
 
 const LANG_NAMES: Record<string, string> = {
   tr: 'Türkçe',
@@ -31,8 +32,9 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'Surgeon' });
   const c = surgeon.i18n[locale] ?? surgeon.i18n.en!;
   return {
-    title: c.fullName,
-    description: `${c.fullName} — ${c.title}`,
+    // Unvan + uzmanlık başlıkta: isimle yapılan aramalarda ne olduğunu söyler.
+    title: `${c.fullName}${locale === 'ar' ? '، ' : ', '}${c.title}`,
+    description: t('metaDescription', { name: c.fullName }),
     alternates: buildAlternates(locale, '/cerrah')
   };
 }
@@ -96,7 +98,9 @@ export default async function SurgeonPage({
   */
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Physician',
+    // Ortak hekim düğümü (@id, telefon, adres) + bu sayfaya özgü alanlar.
+    // Aynı @id blog yazarı ve tedavi sayfalarında da kullanılır.
+    ...physicianJsonLd(locale),
     name: c.fullName,
     honorificPrefix: c.honorificPrefix,
     jobTitle: c.title,

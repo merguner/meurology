@@ -15,6 +15,7 @@ import { AnalyticsEvents } from '@/components/AnalyticsEvents';
 import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import { AssistantBubble } from '@/components/AssistantBubble';
 import { JsonLd } from '@/components/JsonLd';
+import { physicianId } from '@/lib/physicianJsonLd';
 import { buildAlternates, getPathname } from '@/i18n/navigation';
 import '@/app/globals.css';
 
@@ -84,6 +85,8 @@ export default async function LocaleLayout({
     telephone: siteConfig.phoneIntl,
     image: `${siteConfig.domain}${ogImagePath(locale as Locale)}`,
     medicalSpecialty: 'Urology',
+    // Kliniği hekime bağlar (aynı @id cerrah sayfasındaki tam düğümde).
+    employee: { '@id': physicianId(locale as Locale) },
     address: {
       '@type': 'PostalAddress',
       streetAddress: siteConfig.address.streetAddress,

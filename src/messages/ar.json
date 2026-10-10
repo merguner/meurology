@@ -142,7 +142,8 @@
     "reconstructiveTitle": "خبرة في المسالك البولية الترميمية",
     "reconstructiveLink": "انتقل إلى صفحة المسالك البولية الترميمية",
     "coursesTitle": "الدورات والشهادات",
-    "awardsTitle": "الجوائز"
+    "awardsTitle": "الجوائز",
+    "metaDescription": "{name}، أخصائي المسالك البولية في إسطنبول. التعليم والمسيرة المهنية والأبحاث المنشورة ومجالات العمل والمستشفيات التي تُجرى فيها العمليات: Medical Park Bahçelievler وLİV Hospital Topkapı."
   },
   "Hospital": {
     "title": "المستشفى والتقنية",
@@ -244,7 +245,8 @@
     "mapTitle": "موقع العيادة — خريطة",
     "mapLoad": "تحميل الخريطة",
     "mapNotice": "الخريطة مقدَّمة من Google. وبعد تحميلها قد تُرسَل بعض البيانات ومنها عنوان IP الخاص بك إلى Google.",
-    "callCta": "اتصل"
+    "callCta": "اتصل",
+    "metaDescription": "{center}، Kültür Sok. No:1، Bahçelievler، إسطنبول. الهاتف وواتساب: {phone}. البريد الإلكتروني: {email}. نموذج التقييم الأولي وطريقة الوصول."
   },
   "Form": {
     "title": "نموذج التقييم الأولي",

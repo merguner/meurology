@@ -23,7 +23,13 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'Contact' });
   return {
     title: t('title'),
-    description: t('subtitle'),
+    // Adres ve telefon açıklamada: "ürolog Bahçelievler" gibi yerel aramalarda
+    // arama sonucunun kendisi gerekli bilgiyi verir.
+    description: t('metaDescription', {
+      center: siteConfig.address.center,
+      phone: siteConfig.phone,
+      email: siteConfig.email
+    }),
     alternates: buildAlternates(locale, '/iletisim')
   };
 }
