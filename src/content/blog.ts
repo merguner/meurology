@@ -3541,7 +3541,6 @@ export const blogPosts: BlogPost[] = [
     category: 'oncology',
     languages: ['en'],
     treatmentSlug: 'mesane-kanseri',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Non-muscle-invasive Bladder Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/non-muscle-invasive-bladder-cancer' }
     ],
@@ -3623,7 +3622,6 @@ export const blogPosts: BlogPost[] = [
     category: 'femaleUrology',
     languages: ['en'],
     treatmentSlug: 'mesane-botoksu',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Non-neurogenic Female LUTS — European Association of Urology', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' },
       { label: 'EAU Guidelines on Neuro-urology — European Association of Urology', url: 'https://uroweb.org/guidelines/neuro-urology' }
@@ -3705,7 +3703,6 @@ export const blogPosts: BlogPost[] = [
     category: 'femaleUrology',
     languages: ['en'],
     treatmentSlug: 'pektopeksi',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Non-neurogenic Female LUTS — European Association of Urology', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
     ],
@@ -3785,7 +3782,6 @@ export const blogPosts: BlogPost[] = [
     category: 'reconstructive',
     languages: ['en'],
     treatmentSlug: 'hipospadias-onarimi',
-    draft: true,
     sources: [
       { label: 'EAU/ESPU Guidelines on Paediatric Urology — European Association of Urology', url: 'https://uroweb.org/guidelines/paediatric-urology' }
     ],
@@ -3860,7 +3856,6 @@ export const blogPosts: BlogPost[] = [
     category: 'oncology',
     languages: ['en'],
     treatmentSlug: 'bobrek-kanseri',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Renal Cell Carcinoma — European Association of Urology', url: 'https://uroweb.org/guidelines/renal-cell-carcinoma' }
     ],
@@ -3942,7 +3937,6 @@ export const blogPosts: BlogPost[] = [
     category: 'oncology',
     languages: ['ar'],
     treatmentSlug: 'mesane-kanseri',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Non-muscle-invasive Bladder Cancer — European Association of Urology', url: 'https://uroweb.org/guidelines/non-muscle-invasive-bladder-cancer' }
     ],
@@ -4024,7 +4018,6 @@ export const blogPosts: BlogPost[] = [
     category: 'femaleUrology',
     languages: ['ar'],
     treatmentSlug: 'mesane-botoksu',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Non-neurogenic Female LUTS — European Association of Urology', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' },
       { label: 'EAU Guidelines on Neuro-urology — European Association of Urology', url: 'https://uroweb.org/guidelines/neuro-urology' }
@@ -4106,7 +4099,6 @@ export const blogPosts: BlogPost[] = [
     category: 'femaleUrology',
     languages: ['ar'],
     treatmentSlug: 'pektopeksi',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Non-neurogenic Female LUTS — European Association of Urology', url: 'https://uroweb.org/guidelines/non-neurogenic-female-luts' }
     ],
@@ -4186,7 +4178,6 @@ export const blogPosts: BlogPost[] = [
     category: 'reconstructive',
     languages: ['ar'],
     treatmentSlug: 'hipospadias-onarimi',
-    draft: true,
     sources: [
       { label: 'EAU/ESPU Guidelines on Paediatric Urology — European Association of Urology', url: 'https://uroweb.org/guidelines/paediatric-urology' }
     ],
@@ -4261,7 +4252,6 @@ export const blogPosts: BlogPost[] = [
     category: 'oncology',
     languages: ['ar'],
     treatmentSlug: 'bobrek-kanseri',
-    draft: true,
     sources: [
       { label: 'EAU Guidelines on Renal Cell Carcinoma — European Association of Urology', url: 'https://uroweb.org/guidelines/renal-cell-carcinoma' }
     ],
