@@ -29,25 +29,18 @@ const FONT = "Segoe UI, Noto Sans, DejaVu Sans, Arial, sans-serif";
 const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 /**
- * Amblem: beyaz yuvarlatilmis kare + altin cerceve + marka mavisi ME.
+ * Logo: public/brand/me-urology.svg (scripts/build-logo.js) olduğu gibi gömülür.
  *
- * KOYU ZEMINDE BEYAZ KUTU BILEREK KORUNDU ("ters logo"): OG gorselinin
- * zemini koyu lacivert; Canva'daki siyah kutulu mark bu zeminde ayrismiyor.
- * 8 Eki 2026'da yalnizca ME harflerinin rengi sitenin logosuyla ayni tona
- * (#2D6DDC) cekildi; onceden #0A5CA8 idi ve ayni markanin iki farkli
- * mavisi olusuyordu.
+ * 11 Eki 2026'ya kadar burada koyu zeminde ayrışsın diye beyaz kutulu,
+ * altın çerçeveli ayrı bir "ters logo" çiziliyordu. Yeni logonun ince mavi
+ * iç çizgisi lacivert zeminde de kutuyu belli ettiği için artık sitedeki
+ * logoyla birebir aynı görsel kullanılıyor.
  */
+const LOGO = fs.readFileSync(path.join('public', 'brand', 'me-urology.svg'), 'utf8');
+const LOGO_IC = LOGO.slice(LOGO.indexOf('>') + 1, LOGO.lastIndexOf('</svg>'));
+const LOGO_VB = LOGO.match(/viewBox="([^"]+)"/)[1];
 function emblem(x, y, size) {
-  const s = (size * 0.74) / 132; // amblem viewBox 132x132
-  const inner = size * 0.74;
-  const ox = x + (size - inner) / 2;
-  const oy = y + (size - inner) / 2;
-  return `
-  <rect x="${x}" y="${y}" width="${size}" height="${size}" rx="${size * 0.22}" fill="#FFFFFF" stroke="#E0A542" stroke-width="4"/>
-  <g transform="translate(${ox},${oy}) scale(${s}) translate(15.73,12.423)" fill="#2D6DDC">
-    <path transform="translate(6.304958,73.194123)" d="M 4.703125 -39.234375 L 14.015625 -39.234375 L 24.328125 -22.640625 L 34.640625 -39.234375 L 43.9375 -39.234375 L 43.9375 0 L 35.359375 0 L 35.359375 -25.609375 L 24.328125 -8.859375 L 24.09375 -8.859375 L 13.171875 -25.453125 L 13.171875 0 L 4.703125 0 Z"/>
-    <path transform="translate(54.953542,73.194123)" d="M 4.703125 -39.234375 L 34.296875 -39.234375 L 34.296875 -31.546875 L 13.28125 -31.546875 L 13.28125 -23.59375 L 31.78125 -23.59375 L 31.78125 -15.921875 L 13.28125 -15.921875 L 13.28125 -7.671875 L 34.578125 -7.671875 L 34.578125 0 L 4.703125 0 Z"/>
-  </g>`;
+  return `<svg x="${x}" y="${y}" width="${size}" height="${size}" viewBox="${LOGO_VB}">${LOGO_IC}</svg>`;
 }
 
 function svgFor(loc) {

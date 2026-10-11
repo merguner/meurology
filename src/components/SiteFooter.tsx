@@ -32,15 +32,12 @@ export async function SiteFooter() {
                 (Başlıktaki amblem bunun tersidir — oradaki bağlantının zaten
                 aria-label'ı var, bu yüzden orada alt="" doğrudur.) */}
             <img
-              src="/brand/emblem.svg"
+              src="/brand/me-urology.svg"
               alt={tcom('logoAlt')}
-              width={36}
-              height={36}
-              className="h-9 w-9"
+              width={72}
+              height={72}
+              className="h-[72px] w-[72px]"
             />
-            <span translate="no" className="whitespace-nowrap font-brand text-lg font-semibold tracking-tight text-brand">
-              Urology Clinic
-            </span>
           </div>
           <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
             {t('tagline')}

@@ -1,13 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-15.73 -12.423 132 132" role="img" aria-label="ME Urology">
-  <!--
-    Marka amblemi (Canva "claudelogo" setindeki ana logo ile aynı renkler):
-    siyah zemin, #2D6DDC çerçeve ve "ME" harfleri.
-    Favicon 16-32 px'te okunmadığı için ana logodaki "UROLOGY" satırı
-    BİLEREK yok; tam logo apple-icon.png içinde.
-  -->
-  <rect x="-12.73" y="-9.423" width="126" height="126" rx="28" fill="#000000" stroke="#2D6DDC" stroke-width="6"/>
-  <g fill="#2D6DDC">
-    <path transform="translate(6.304958,73.194123)" d="M 4.703125 -39.234375 L 14.015625 -39.234375 L 24.328125 -22.640625 L 34.640625 -39.234375 L 43.9375 -39.234375 L 43.9375 0 L 35.359375 0 L 35.359375 -25.609375 L 24.328125 -8.859375 L 24.09375 -8.859375 L 13.171875 -25.453125 L 13.171875 0 L 4.703125 0 Z"/>
-    <path transform="translate(54.953542,73.194123)" d="M 4.703125 -39.234375 L 34.296875 -39.234375 L 34.296875 -31.546875 L 13.28125 -31.546875 L 13.28125 -23.59375 L 31.78125 -23.59375 L 31.78125 -15.921875 L 13.28125 -15.921875 L 13.28125 -7.671875 L 34.578125 -7.671875 L 34.578125 0 L 4.703125 0 Z"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="ME Urology">
+  <!-- scripts/build-logo.js ile üretildi; elle düzenlemeyin. -->
+  <rect width="512" height="512" rx="71.7" fill="#000000"/>
+  <rect x="32" y="32" width="448" height="448" rx="51.2" fill="none" stroke="#2868E0" stroke-width="23.04"/>
+  <path fill="#2868E0" transform="translate(60.56 347.96)" d="M171.86-183.92L224.52-183.92L224.52 0L179.72 0L179.72-110.30L138.59 0L102.44 0L61.04-110.56L61.04 0L16.24 0L16.24-183.92L69.16-183.92L120.78-56.59L171.86-183.92ZM374.64-148.02L306.79-148.02L306.79-110.82L366.78-110.82L366.78-76.24L306.79-76.24L306.79-35.89L374.64-35.89L374.64 0L261.99 0L261.99-183.92L374.64-183.92L374.64-148.02Z"/>
 </svg>

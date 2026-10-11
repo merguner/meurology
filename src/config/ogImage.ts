@@ -22,7 +22,7 @@ import type { Locale } from '@/i18n/routing';
  * Sorgu parametresi adresi değiştirdiği için platformlar görseli yeni
  * sayar ve yeniden indirir.
  */
-const OG_SURUM = 2;
+const OG_SURUM = 3; // 3: 11 Eki 2026 yeni ME UROLOGY logosu
 
 export function ogImagePath(locale: Locale): string {
   return `/brand/og-${locale}.png?v=${OG_SURUM}`;

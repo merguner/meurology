@@ -16,29 +16,25 @@ export async function SiteHeader() {
   // content listesindeki dosyaları tarar, bkz. config/nav.ts yorumu.
   const genis = navNeedsWideBreakpoint(locale);
   const bp = genis
-    ? { masaustu: 'hidden min-[1320px]:block', mobilde: 'min-[1320px]:hidden', wordmark: 'min-[1320px]:text-base' }
-    : { masaustu: 'hidden min-[1200px]:block', mobilde: 'min-[1200px]:hidden', wordmark: 'min-[1200px]:text-base' };
+    ? { masaustu: 'hidden min-[1320px]:block', mobilde: 'min-[1320px]:hidden' }
+    : { masaustu: 'hidden min-[1200px]:block', mobilde: 'min-[1200px]:hidden' };
 
   return (
     <header className="sticky top-0 z-30 border-b border-border/80 bg-bg/85 backdrop-blur supports-[backdrop-filter]:bg-bg/70">
       <div className="mx-auto flex h-16 w-full max-w-[1600px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex shrink-0 items-center gap-[9px]" aria-label={siteConfig.name}>
-          {/* Amblem (ME) — mobil ve masaüstünde görünür */}
+        <Link href="/" className="flex shrink-0 items-center" aria-label={siteConfig.name}>
+          {/* Logo (ME + UROLOGY) tek başına — 11 Eki 2026, Dr. Ergün'ün seçimi.
+              Logonun içinde UROLOGY yazdığı için yanındaki "Urology Clinic"
+              yazısı kaldırıldı. 64 px'lik başlıkta 52 px: UROLOGY satırı ancak
+              bu boyutta okunuyor. Kaynak: scripts/build-logo.js */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/brand/emblem.svg"
+            src="/brand/me-urology.svg"
             alt=""
-            width={36}
-            height={36}
-            className="h-9 w-9"
+            width={52}
+            height={52}
+            className="h-[52px] w-[52px]"
           />
-          {/* Wordmark — marka adı; çevrilmesin (translate="no") ve satır bölünmesin */}
-          <span
-            translate="no"
-            className={`hidden whitespace-nowrap font-brand text-lg font-semibold leading-none tracking-tight text-brand sm:inline ${bp.wordmark}`}
-          >
-            Urology Clinic
-          </span>
         </Link>
 
         {/* Masaüstü menü — xl+ (1280px). Altında hamburger.
