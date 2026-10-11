@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageTitle } from '@/lib/pageTitle';
 import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { buildAlternates, redirect } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -22,8 +23,8 @@ export async function generateMetadata({
     return { title: t('title'), robots: { index: false, follow: false } };
   }
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title: pageTitle(t('title')),
+    description: t('metaDescription'),
     // Yalnızca hasta yorumu yayımlanabilen diller (Türkçe hariç — yönetmelik)
     alternates: buildAlternates(
       locale,

@@ -4232,7 +4232,7 @@ const baseTreatments: Treatment[] = [
           'Enlargement of the veins around the testicle is common, but not every varicocele needs an operation. The real question is this: is this varicocele doing you harm?',
         metaTitle: 'What Is a Varicocele? Who Needs Surgery?',
         metaDescription:
-          'What a varicocele is, its relationship with infertility, which men need surgery, the microsurgical method, the risks, and the fact that surgery offers no guarantee of pregnancy.',
+          'What a varicocele is, its link with infertility, which men need surgery, the microsurgical method, the risks, and why surgery cannot guarantee pregnancy.',
         quickFacts: {
           duration: '45–90 minutes',
           anesthesia: 'General or spinal anaesthesia',
@@ -4870,7 +4870,7 @@ const baseTreatments: Treatment[] = [
           'Difficulty with erections is often not a sexual complaint on its own but a warning sign. Finding the right cause also determines which treatment will work.',
         metaTitle: 'Erectile Dysfunction: Causes and Treatment',
         metaDescription:
-          'The causes of erectile dysfunction, its link with cardiovascular disease, which investigations are done, the steps of treatment from tablets to a prosthesis, and methods whose evidence is still disputed.',
+          'Causes of erectile dysfunction, its link with heart disease, the tests done, treatment steps from tablets to a prosthesis, and methods with disputed evidence.',
         quickFacts: {
           duration: 'Assessment 30–45 minutes',
           anesthesia: 'Not needed at the diagnostic stage',
@@ -7374,7 +7374,7 @@ const baseTreatments: Treatment[] = [
           'The reference method used for many years in benign prostate enlargement. No incision; the prostate tissue is shaved away through the urinary passage. Who is it suitable for, how does it go and what should you watch for?',
         metaTitle: 'TURP Surgery: What Is Transurethral Prostate Resection?',
         metaDescription:
-          'Who TURP is suitable for, the difference between monopolar and bipolar, the recovery process, the risks including retrograde ejaculation, and how it compares with HoLEP and Rezūm.',
+          'Who TURP suits, monopolar versus bipolar resection, recovery, the risks including retrograde ejaculation, and how it compares with other prostate procedures.',
         quickFacts: {
           duration: '45–75 minutes',
           anesthesia: 'Spinal or general anaesthesia',
@@ -12140,7 +12140,7 @@ const baseTreatments: Treatment[] = [
           'Prostat kanserinde prostat bezinin tamamının robot yardımıyla alınması. Amaç kanseri kontrol altına almak; mümkün olduğunda idrar tutma ve cinsel işlevi koruyan teknikleri uygulamaktır — ama bu sıra hiçbir zaman tersine çevrilmez.',
         metaTitle: 'Robotik Prostatektomi: Süreç, Riskler ve Gerçekçi Beklentiler',
         metaDescription:
-          'Robot destekli radikal prostatektomide ameliyatın nasıl yapıldığı, sinir koruyucu tekniğin kimlere uygulanabildiği, idrar kaçırmanın gerçek seyri, patoloji sonucu ve PSA takibi.',
+          'Robotik radikal prostatektomi nasıl yapılır, sinir koruyucu teknik kimlere uygulanabilir, idrar kaçırmanın gerçek seyri, patoloji sonucu ve PSA takibi.',
         quickFacts: {
           duration: '2–4 saat',
           anesthesia: 'Genel anestezi',
@@ -12333,7 +12333,7 @@ const baseTreatments: Treatment[] = [
           'Complete removal of the prostate with robotic assistance. The aim is to control the cancer and, where it can be done safely, to preserve continence and sexual function — but that order is never reversed.',
         metaTitle: 'Robotic Prostatectomy: Procedure, Risks and Realistic Expectations',
         metaDescription:
-          'How robot-assisted radical prostatectomy is performed, who can have nerve-sparing surgery, the real course of urinary leakage, what the pathology report can change, and PSA follow-up.',
+          'How robotic radical prostatectomy is done, who can have nerve-sparing surgery, the real course of leakage, what pathology can change, and PSA follow-up.',
         quickFacts: {
           duration: '2–4 hours',
           anesthesia: 'General anaesthesia',
@@ -12727,7 +12727,7 @@ const baseTreatments: Treatment[] = [
           'Her taş ameliyat gerektirmez ve her bekleme güvenli değildir. Yöntem; taşın boyutu, sertliği, yerleşimi ve böbreğin durumuna göre seçilir — taşın temizlenmesi ise tedavinin yalnızca yarısıdır.',
         metaTitle: 'Böbrek Taşı Tedavisi: RIRS, PCNL ve ESWL Nasıl Seçilir',
         metaDescription:
-          'Böbrek taşında hangi yöntemin neden seçildiği, ateşle birlikte ağrının neden acil olduğu, stentin yarattığı şikâyetler, riskler ve taşın tekrarlamasını önlemek için yapılması gerekenler.',
+          'Böbrek taşında yöntem neye göre seçilir, ateşle birlikte ağrı neden acildir, stentin yarattığı şikâyetler, riskler ve taşın tekrarlamaması için yapılacaklar.',
         quickFacts: {
           duration: '30–90 dakika (yönteme göre)',
           anesthesia: 'Genel veya spinal; ESWL’de genellikle sedasyon',
@@ -12864,7 +12864,7 @@ const baseTreatments: Treatment[] = [
           'Not every stone needs an operation, and not every wait is safe. The method is chosen from the stone\'s size, density and position — and removing the stone is only half the treatment.',
         metaTitle: 'Kidney Stone Treatment: How RIRS, PCNL and ESWL Are Chosen',
         metaDescription:
-          'Why a particular stone treatment is chosen, why pain with fever is an emergency, the discomfort a ureteric stent causes, the risks, and how to stop stones coming back.',
+          'Why a stone treatment is chosen, why pain with fever is an emergency, the discomfort a ureteric stent causes, the risks, and how to stop stones coming back.',
         quickFacts: {
           duration: '30–90 minutes depending on method',
           anesthesia: 'General or spinal; usually sedation for ESWL',
@@ -13146,7 +13146,7 @@ const baseTreatments: Treatment[] = [
           'Prostatın büyümüş olması tek başına tedavi gerekçesi değildir. Asıl soru şikâyetlerin günlük yaşamı ne kadar kısıttığı ve mesaneye zarar verip vermediğidir — yöntem bundan sonra seçilir.',
         metaTitle: 'BPH Tedavisi: ThuLEP, Rezūm ve TUMT Arasında Nasıl Seçim Yapılır',
         metaDescription:
-          'İyi huylu prostat büyümesinde ilaç tedavisinin sınırları, hangi durumda beklenmez, ThuLEP/Rezūm/TUMT karşılaştırması, retrograd boşalma ve geçici idrar kaçırma konusunda dürüst beklentiler.',
+          'Prostat büyümesinde ilaç tedavisinin sınırları, ne zaman beklenmemeli, ThuLEP, Rezūm ve TUMT karşılaştırması, boşalma ve geçici kaçırmada gerçekçi beklentiler.',
         quickFacts: {
           duration: '30–90 dakika (yönteme göre)',
           anesthesia: 'Genel veya spinal; Rezūm’de genellikle sedasyon',
@@ -13294,7 +13294,7 @@ const baseTreatments: Treatment[] = [
           'An enlarged prostate is not in itself a reason for treatment. What matters is how much the symptoms restrict daily life and whether the bladder is being harmed — the method is chosen after that.',
         metaTitle: 'BPH Treatment: Choosing Between ThuLEP, Rezūm and TUMT',
         metaDescription:
-          'The limits of drug treatment for benign prostate enlargement, when waiting is not safe, how ThuLEP, Rezūm and TUMT compare, and honest expectations about ejaculation and temporary leakage.',
+          'The limits of drug treatment for an enlarged prostate, when waiting is unsafe, how ThuLEP, Rezūm and TUMT compare, and honest expectations about ejaculation.',
         quickFacts: {
           duration: '30–90 minutes depending on method',
           anesthesia: 'General or spinal; usually sedation for Rezūm',
@@ -13598,7 +13598,7 @@ const baseTreatments: Treatment[] = [
           'Erkek cinsel ve üreme sağlığı. Bu alandaki şikâyetlerin çoğu konuşulmadığı için gecikir — oysa bazıları başka bir hastalığın ilk işaretidir ve bazılarının zamanı sınırlıdır.',
         metaTitle: 'Androloji: Hangi Şikâyet Hangi Tedaviye Gider',
         metaDescription:
-          'Erektil disfonksiyon, varikosel, erkek infertilitesi, Peyronie ve penil protez. Hangi şikâyetin hangi değerlendirmeyi gerektirdiği, basamaklı tedavi mantığı ve mahremiyet.',
+          'Erektil disfonksiyon, varikosel, erkek infertilitesi, Peyronie ve penil protez: hangi şikâyet hangi değerlendirmeyi gerektirir, basamaklı tedavi ve mahremiyet.',
         quickFacts: {
           duration: 'İlk değerlendirme 30–45 dakika',
           anesthesia: 'Değerlendirme için gerekmez',
@@ -13732,7 +13732,7 @@ const baseTreatments: Treatment[] = [
           'Male sexual and reproductive health. Most complaints in this field are delayed because they go unspoken — yet some are the first sign of another illness, and for others time is limited.',
         metaTitle: 'Andrology: Which Complaint Leads to Which Assessment',
         metaDescription:
-          'Erectile dysfunction, varicocele, male infertility, Peyronie\'s disease and penile implants: what each complaint requires, the stepwise logic of treatment, and privacy.',
+          'Erectile dysfunction, varicocele, male infertility, Peyronie\'s disease and penile implants: what each complaint requires, stepwise treatment and privacy.',
         quickFacts: {
           duration: 'Initial assessment 30–45 minutes',
           anesthesia: 'Not required for assessment',
@@ -14007,7 +14007,7 @@ const baseTreatments: Treatment[] = [
           'Üriner sistem ve erkek üreme organları kanserlerinin cerrahi tedavisi. Bu alanda en önemli iki şey şudur: tek bir uyarı belirtisini atlamamak ve tedavi kararını aceleyle vermemek.',
         metaTitle: 'Üroonkoloji: Hangi Belirti Neyi Gösterir, Tedavi Nasıl Seçilir',
         metaDescription:
-          'Prostat, mesane, böbrek ve testis kanserlerinde uyarı belirtileri, idrarda kanın neden mutlaka araştırılması gerektiği, organ koruyucu cerrahi ve tedavi kararının nasıl verildiği.',
+          'Prostat, mesane, böbrek ve testis kanserinde uyarı belirtileri, idrarda kan neden mutlaka araştırılmalı, organ koruyucu cerrahi ve tedavi kararı.',
         quickFacts: {
           duration: 'İlk değerlendirme 30–45 dakika',
           anesthesia: 'Değerlendirme için gerekmez',
@@ -14141,7 +14141,7 @@ const baseTreatments: Treatment[] = [
           'Surgical treatment of cancers of the urinary tract and male reproductive organs. Two things matter most here: not missing a single warning sign, and not making the treatment decision in a hurry.',
         metaTitle: 'Uro-oncology: What the Warning Signs Mean and How Treatment Is Chosen',
         metaDescription:
-          'Warning signs in prostate, bladder, kidney and testicular cancer, why blood in the urine must always be investigated, organ-sparing surgery and how the treatment decision is made.',
+          'Warning signs of prostate, bladder, kidney and testicular cancer, why blood in the urine must be investigated, organ-sparing surgery and treatment decisions.',
         quickFacts: {
           duration: 'Initial assessment 30–45 minutes',
           anesthesia: 'Not required for assessment',
@@ -14838,7 +14838,7 @@ const baseTreatments: Treatment[] = [
           'Üretral darlıkta kalıcı onarım. İçeriden kesme işlemleri kısa sürede rahatlatır ama darlık tekrarlar; her tekrar bir sonraki onarımı zorlaştırır. Bu sayfa, bu döngünün nasıl kırıldığını anlatır.',
         metaTitle: 'Üretroplasti: Üretral Darlıkta Kalıcı Onarım (Bulber, Penil, Redo)',
         metaDescription:
-          'Üretral darlıkta neden üretrotomi yetmediği, tekrarlayan girişimlerin zararı, yanak mukozası grefti ile onarım, tek ve çok aşamalı cerrahi ve redo vakalarda gerçekçi beklentiler.',
+          'Üretra darlığında üretrotomi neden yetmez, tekrarlayan girişimlerin zararı, yanak mukozası grefti, tek ve çok aşamalı cerrahi, redo vakalarda beklentiler.',
         quickFacts: {
           duration: '2–4 saat (darlığın uzunluğuna göre)',
           anesthesia: 'Genel anestezi',
@@ -14982,7 +14982,7 @@ const baseTreatments: Treatment[] = [
           'Definitive repair of a urethral stricture. Cutting the stricture from inside brings quick relief but it comes back — and every repeat makes the next repair harder. This page explains how that cycle is broken.',
         metaTitle: 'Urethroplasty: Definitive Repair of Urethral Stricture (Bulbar, Penile, Redo)',
         metaDescription:
-          'Why urethrotomy is not enough, the harm of repeated endoscopic treatment, buccal mucosa graft repair, single and staged surgery, and realistic expectations in redo cases.',
+          'Why urethrotomy is not enough, the harm of repeated endoscopic treatment, buccal mucosa graft repair, single and staged surgery, and expectations in redo cases.',
         quickFacts: {
           duration: '2–4 hours depending on stricture length',
           anesthesia: 'General anaesthesia',
@@ -15279,7 +15279,7 @@ const baseTreatments: Treatment[] = [
           'Böbrek çıkışındaki darlığın onarımı. Bu darlığın en tehlikeli yanı ağrı yapmadan ilerleyebilmesidir: böbrek sessizce genişler ve işlev kaybeder. Amaç böbreği korumaktır.',
         metaTitle: 'Piyeloplasti: UPJ Darlığında Böbrek Koruyucu Onarım',
         metaDescription:
-          'Üreteropelvik bileşke darlığında ameliyat kararının nasıl verildiği, sintigrafinin neden belirleyici olduğu, robotik ve açık yöntem karşılaştırması, stent süreci ve redo vakalar.',
+          'Üreteropelvik bileşke darlığında ameliyat kararı, sintigrafinin belirleyici rolü, robotik ve açık yöntem karşılaştırması, stent süreci ve redo vakalar.',
         quickFacts: {
           duration: '2–4 saat',
           anesthesia: 'Genel anestezi',
@@ -16134,7 +16134,7 @@ const baseTreatments: Treatment[] = [
           'Uzun üreter darlıklarında böbreği kurtarmaya yönelik ileri onarım. Bu hastaların çoğuna daha önce "yapılamaz" denmiştir; oysa darlığın uzunluğu tek başına onarımın mümkün olmadığı anlamına gelmez.',
         metaTitle: 'Üreter Rekonstrüksiyonu: Uzun Segment Darlıkta Böbrek Koruyucu Onarım',
         metaDescription:
-          'Uzun üreter darlığında onarım seçenekleri, yanak mukozası grefti ve bağırsak segmentiyle köprüleme, nefrostomi ve kalıcı stentin sınırları, redo vakalar ve gerçekçi beklentiler.',
+          'Uzun üreter darlığında onarım: yanak mukozası grefti, bağırsak segmentiyle köprüleme, nefrostomi ve kalıcı stentin sınırları, redo vakalar ve beklentiler.',
         quickFacts: {
           duration: '3–6 saat (tekniğe göre)',
           anesthesia: 'Genel anestezi',
@@ -16277,7 +16277,7 @@ const baseTreatments: Treatment[] = [
           'Advanced repair to save the kidney in long ureteric strictures. Most of these patients have been told it cannot be done — yet the length of the stricture alone does not mean repair is impossible.',
         metaTitle: 'Ureteric Reconstruction: Kidney-Preserving Repair of Long Strictures',
         metaDescription:
-          'Options for long ureteric strictures, buccal mucosa graft and bowel interposition, the limits of nephrostomy and permanent stents, redo cases and realistic expectations.',
+          'Options for long ureteric strictures: buccal mucosa graft, bowel interposition, the limits of nephrostomy and permanent stents, redo cases and expectations.',
         quickFacts: {
           duration: '3–6 hours depending on technique',
           anesthesia: 'General anaesthesia',

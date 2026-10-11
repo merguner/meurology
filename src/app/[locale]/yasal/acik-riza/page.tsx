@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageTitle } from '@/lib/pageTitle';
 import { buildAlternates } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
@@ -13,7 +14,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Legal' });
   return {
-    title: t('consentTitle'),
+    title: pageTitle(t('consentTitle')),
     robots: { index: false, follow: true },
     alternates: buildAlternates(locale, '/yasal/acik-riza')
   };

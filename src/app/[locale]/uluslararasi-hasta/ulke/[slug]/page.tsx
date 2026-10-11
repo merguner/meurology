@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageTitle } from '@/lib/pageTitle';
 import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -57,7 +58,7 @@ export async function generateMetadata({
   if (!country) return {};
   const c = country.i18n[locale]!;
   return {
-    title: c.metaTitle,
+    title: pageTitle(c.metaTitle),
     description: c.metaDescription,
     alternates: alternatesFor(country, locale)
   };

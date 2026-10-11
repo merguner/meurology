@@ -27,7 +27,7 @@ export const hipospadias: Treatment = {
         'İdrar deliğinin penisin ucunda değil, alt yüzünde açıldığı doğuştan gelen durumun cerrahi onarımı. Amaç önce işlev — düzgün bir idrar akımı ve düz bir penis — sonra görünümdür.',
       metaTitle: 'Hipospadias Onarımı: Ameliyat Yaşı, Teknikler ve İyileşme',
       metaDescription:
-        'Çocuklarda hipospadias onarımı: hangi yaşta yapılır, neden sünnet önceden yapılmamalıdır, tek seans ve iki seans onarım, fistül ve darlık riski, iyileşme süreci ve dürüst beklentiler.',
+        'Hipospadias onarımı: hangi yaşta yapılır, sünnet neden önceden yapılmamalı, tek ve iki seanslı onarım, fistül ve darlık riski, iyileşme ve beklentiler.',
       quickFacts: {
         duration: '1–3 saat (tipe göre)',
         anesthesia: 'Genel anestezi (çocukta kaudal blok eklenebilir)',
@@ -192,7 +192,7 @@ export const hipospadias: Treatment = {
         'Surgical repair of a congenital condition in which the urinary opening lies on the underside of the penis rather than at the tip. Function comes first — a straight stream and a straight penis — and appearance after that.',
       metaTitle: 'Hypospadias Repair: Age at Surgery, Techniques and Recovery',
       metaDescription:
-        'Hypospadias repair in children: when it is done, why circumcision must not be performed beforehand, single-stage and two-stage repair, the risk of fistula and stricture, recovery and honest expectations.',
+        'Hypospadias repair in children: the right age, why circumcision must wait, single and two-stage repair, fistula and stricture risk, recovery and expectations.',
       quickFacts: {
         duration: '1–3 hours depending on the type',
         anesthesia: 'General anaesthesia, often with a caudal block',

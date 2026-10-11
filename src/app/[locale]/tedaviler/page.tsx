@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageTitle } from '@/lib/pageTitle';
 import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { buildAlternates } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -17,7 +18,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'Nav' });
   const tm = await getTranslations({ locale, namespace: 'Meta' });
   return {
-    title: t('treatments'),
+    title: pageTitle(t('treatments')),
     // Site geneli açıklama BİLEREK kullanılmıyor: 8 Eki 2026'da /tr'de 8 sayfa
     // aynı meta açıklamayı paylaşıyordu. Bu sayfanın kendi özeti var.
     description: tm('treatmentsDescription'),

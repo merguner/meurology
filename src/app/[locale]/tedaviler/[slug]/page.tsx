@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageTitle } from '@/lib/pageTitle';
 import { ogImages, ogImagePath } from '@/config/ogImage';
 import { buildTreatmentAlternates, treatmentHref, getPathname } from '@/i18n/navigation';
 import { canonicalSlug, localizedSlug } from '@/i18n/slugs';
@@ -45,7 +46,7 @@ export async function generateMetadata({
   if (!treatment || !canonical) return {};
   const c = resolveContent(treatment, locale);
   return {
-    title: c.metaTitle,
+    title: pageTitle(c.metaTitle),
     description: c.metaDescription,
     alternates: buildTreatmentAlternates(locale, canonical),
     // openGraph/twitter MIRAS ALINMAZ: kok layout'ta tanimli olsa bile bir

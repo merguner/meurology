@@ -144,7 +144,7 @@
     "reconstructiveLink": "Go to the reconstructive urology page",
     "coursesTitle": "Courses & Certificates",
     "awardsTitle": "Awards",
-    "metaDescription": "{name}, urologist in Istanbul. Training and career, publications, areas of practice and the hospitals where operations take place: Medical Park Bahçelievler and LİV Hospital Topkapı."
+    "metaDescription": "{name}, urologist in Istanbul: training, publications, practice areas and surgery at Medical Park Bahçelievler and LİV Hospital Topkapı."
   },
   "Hospital": {
     "title": "Hospital & Technology",
@@ -162,6 +162,7 @@
   "Process": {
     "title": "International Patient Journey",
     "subtitle": "We are with you at every step, from application to discharge.",
+    "metaDescription": "From your first message to follow-up at home: how assessment, travel planning, surgery, the hospital stay and aftercare work for international patients.",
     "stepsTitle": "How to apply",
     "steps": {
       "s1Title": "1. Get in touch",
@@ -196,6 +197,7 @@
   "Experiences": {
     "title": "Patient Experiences",
     "subtitle": "Experiences of our patients from different countries.",
+    "metaDescription": "Experiences of patients from different countries who travelled to Istanbul for urological treatment, shared in their own words.",
     "filterByCountry": "Filter by country",
     "allCountries": "All countries",
     "videoTag": "Video interview",
@@ -211,6 +213,7 @@
   "Blog": {
     "title": "Knowledge Center",
     "subtitle": "Informative content on urological health and treatments.",
+    "metaDescription": "Guides on prostate, kidney stones, incontinence, men’s health and urological surgery in Turkey, written in plain language with their sources.",
     "readingTime": "read",
     "relatedTreatment": "Related treatment",
     "backToBlog": "Back to Knowledge Center",
@@ -247,7 +250,7 @@
     "mapLoad": "Load the map",
     "mapNotice": "The map is provided by Google. Once you load it, certain data including your IP address may be sent to Google.",
     "callCta": "Call",
-    "metaDescription": "{center}, Kültür Sok. No:1, Bahçelievler, Istanbul. Phone and WhatsApp: {phone}. Email: {email}. Pre-assessment form and directions."
+    "metaDescription": "{center}, Kültür Sok. No:1, Bahçelievler, Istanbul. Phone and WhatsApp: {phone}. Email: {email}. Directions."
   },
   "Form": {
     "title": "Pre-assessment form",
@@ -329,6 +332,7 @@
   "Glossary": {
     "title": "Urology Glossary",
     "subtitle": "Plain-language explanations of the terms you meet in your reports or consultation.",
+    "metaDescription": "Plain-language explanations of the terms you meet in your reports or consultation.",
     "jumpTo": "Jump to category",
     "relatedLink": "Related treatment",
     "disclaimer": "This glossary is for general information only and is not a substitute for medical advice. Diagnosis and treatment require examination by a physician.",
@@ -369,6 +373,6 @@
   "Insurance": {
     "title": "Insurance and Reimbursement",
     "metaTitle": "Insurance and Reimbursement for Treatment in Turkey",
-    "metaDescription": "How reimbursement works for planned treatment in Turkey: why the Turkish state scheme does not apply, prior authorisation, and what to obtain in writing before you travel."
+    "metaDescription": "How reimbursement works for planned treatment in Turkey: why the Turkish state scheme does not apply, prior authorisation and what to get in writing first."
   }
 }

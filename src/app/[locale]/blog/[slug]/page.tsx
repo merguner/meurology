@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageTitle } from '@/lib/pageTitle';
 import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { ogImages, ogImagePath } from '@/config/ogImage';
 import { buildAlternates, getPathname, treatmentHref } from '@/i18n/navigation';
@@ -60,7 +61,7 @@ export async function generateMetadata({
   if (!post || !isPostInLocale(post, locale)) return {};
   const c = post.i18n[locale] ?? post.i18n.en ?? post.i18n.tr!;
   return {
-    title: c.metaTitle,
+    title: pageTitle(c.metaTitle),
     description: c.metaDescription,
     alternates: blogAlternates(post, locale),
     openGraph: {

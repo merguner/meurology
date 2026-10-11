@@ -174,7 +174,7 @@ export const mikroVarikoselektomi: Treatment = {
         'Varicocele surgery performed under the operating microscope: the dilated veins are separated one by one, while the testicular artery and the lymphatic vessels are preserved.',
       metaTitle: 'Microsurgical Varicocelectomy: The Subinguinal Microsurgical Technique',
       metaDescription:
-        'Microsurgical varicocelectomy: who it suits, how it differs from laparoscopic and conventional surgery, the risk of recurrence and hydrocele, recovery and honest expectations.',
+        'Microsurgical varicocelectomy: who it suits, how it differs from laparoscopic and open surgery, recurrence and hydrocele risk, recovery and expectations.',
       topNote: {
         body: 'This page describes the OPERATION. Varicocele itself, who needs treatment and the non-surgical options are covered on a separate page.',
         linkSlug: 'varikosel',

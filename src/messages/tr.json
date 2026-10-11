@@ -144,7 +144,7 @@
     "reconstructiveLink": "Rekonstrüktif üroloji sayfasına git",
     "coursesTitle": "Kurslar ve Sertifikalar",
     "awardsTitle": "Ödüller",
-    "metaDescription": "{name}, İstanbul’da üroloji uzmanı. Eğitim ve kariyer, yayınlar, çalışma alanları ve ameliyatların yapıldığı hastaneler: Medical Park Bahçelievler ve LİV Hospital Topkapı."
+    "metaDescription": "{name}, İstanbul’da üroloji uzmanı: eğitim, yayınlar, çalışma alanları ve ameliyat ettiği Medical Park Bahçelievler ile LİV Hospital Topkapı."
   },
   "Hospital": {
     "title": "Hastane & Teknoloji",
@@ -162,6 +162,7 @@
   "Process": {
     "title": "Uluslararası Hasta Süreci",
     "subtitle": "Başvurudan taburculuğa kadar her adımda yanınızdayız.",
+    "metaDescription": "Yurt dışından gelen hastalar için süreç: başvuru, ön değerlendirme, seyahat planı, ameliyat, hastanede kalış ve ülkenize döndükten sonra takip.",
     "stepsTitle": "Nasıl başvurulur?",
     "steps": {
       "s1Title": "1. İletişime geçin",
@@ -196,6 +197,7 @@
   "Experiences": {
     "title": "Hasta Deneyimleri",
     "subtitle": "Farklı ülkelerden hastalarımızın deneyimleri.",
+    "metaDescription": "Farklı ülkelerden İstanbul’a üroloji tedavisi için gelen hastaların, kendi anlatımlarıyla deneyimleri.",
     "filterByCountry": "Ülkeye göre filtrele",
     "allCountries": "Tüm ülkeler",
     "videoTag": "Video röportaj",
@@ -211,6 +213,7 @@
   "Blog": {
     "title": "Bilgi Merkezi",
     "subtitle": "Ürolojik sağlık ve tedaviler üzerine bilgilendirici içerikler.",
+    "metaDescription": "Prostat, böbrek taşı, idrar kaçırma, erkek sağlığı ve üroloji ameliyatları üzerine kaynak gösterilerek hazırlanmış bilgilendirici yazılar.",
     "readingTime": "okuma",
     "relatedTreatment": "İlgili tedavi",
     "backToBlog": "Bilgi Merkezi'ne dön",
@@ -247,7 +250,7 @@
     "mapLoad": "Haritayı yükle",
     "mapNotice": "Harita Google tarafından sağlanır. Yüklediğinizde IP adresiniz dâhil bazı veriler Google’a iletilebilir.",
     "callCta": "Ara",
-    "metaDescription": "{center}, Kültür Sok. No:1, Bahçelievler/İstanbul. Telefon ve WhatsApp: {phone}. E-posta: {email}. Ön değerlendirme formu ve yol tarifi."
+    "metaDescription": "{center}, Kültür Sok. No:1, Bahçelievler/İstanbul. Telefon ve WhatsApp: {phone}. E-posta: {email}. Yol tarifi."
   },
   "Form": {
     "title": "Ön değerlendirme formu",
@@ -329,6 +332,7 @@
   "Glossary": {
     "title": "Üroloji Sözlüğü",
     "subtitle": "Raporunuzda veya muayenede karşılaştığınız terimlerin sade dille açıklaması.",
+    "metaDescription": "Raporunuzda veya muayenede karşılaştığınız terimlerin sade dille açıklaması.",
     "jumpTo": "Kategoriye git",
     "relatedLink": "İlgili tedavi",
     "disclaimer": "Bu sözlük genel bilgilendirme amaçlıdır ve tıbbi tavsiye yerine geçmez. Tanı ve tedavi için hekim muayenesi gerekir.",
@@ -369,6 +373,6 @@
   "Insurance": {
     "title": "SGK ve Özel Sigorta",
     "metaTitle": "SGK ve Özel Sigorta Durumu",
-    "metaDescription": "Tedavi masrafının SGK veya özel sağlık sigortanız tarafından karşılanıp karşılanmayacağını nasıl öğrenirsiniz: sözleşmeli kurum, ön onay ve önceden sorulması gereken sorular."
+    "metaDescription": "Tedavi masrafınızın SGK veya özel sağlık sigortanızca karşılanıp karşılanmayacağını öğrenmek için: sözleşmeli kurum, ön onay ve sorulacak sorular."
   }
 }

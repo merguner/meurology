@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageTitle } from '@/lib/pageTitle';
 import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { buildAlternates } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -22,7 +23,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Contact' });
   return {
-    title: t('title'),
+    title: pageTitle(t('title')),
     // Adres ve telefon açıklamada: "ürolog Bahçelievler" gibi yerel aramalarda
     // arama sonucunun kendisi gerekli bilgiyi verir.
     description: t('metaDescription', {

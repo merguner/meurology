@@ -1521,7 +1521,7 @@ export const blogPosts: BlogPost[] = [
           'A headline figure tells you very little. What matters is what the figure includes, what it excludes, and which of the excluded items are likely to apply to you.',
         metaTitle: 'Robotic Prostatectomy Cost in Turkey: What Is Included',
         metaDescription:
-          'How robotic prostatectomy pricing works for international patients in Turkey, what a quote should include, the costs that are commonly left out, and the questions to ask before you commit.',
+          'How robotic prostatectomy pricing works in Turkey for international patients, what a quote should include, costs often left out and questions to ask first.',
         sections: [
           {
             heading: 'Why a single number is not an answer',
@@ -1765,7 +1765,7 @@ export const blogPosts: BlogPost[] = [
           'The honest answer is longer than most patients expect, and the reason is the catheter. Booking a return flight too early is the most common planning mistake.',
         metaTitle: 'How Long to Stay in Turkey After Prostate Surgery',
         metaDescription:
-          'Planning your stay after prostate surgery in Turkey: the catheter period, when flying is safe, clot risk, what to do if plans change, and how follow-up works at home.',
+          'Planning your stay after prostate surgery in Turkey: the catheter period, when flying is safe, clot risk, changed plans and how follow-up works at home.',
         sections: [
           {
             heading: 'Why the catheter sets the timetable',
@@ -1928,7 +1928,7 @@ export const blogPosts: BlogPost[] = [
           'Both are keyhole procedures and both are good operations. The question is which one suits your stone — and whether you can realistically complete treatment in a single trip.',
         metaTitle: 'RIRS vs PCNL: Choosing Kidney Stone Treatment Abroad',
         metaDescription:
-          'How RIRS and PCNL differ, how stone size, density and position decide the choice, stent discomfort, the risk of needing a second session, and planning treatment abroad.',
+          'How RIRS and PCNL differ, how stone size, density and position decide the choice, stent discomfort, second sessions and planning treatment abroad.',
         sections: [
           {
             heading: 'Two routes into the same kidney',
@@ -2098,7 +2098,7 @@ export const blogPosts: BlogPost[] = [
           'Travelling for surgery can be entirely reasonable or genuinely risky, and the difference is mostly in how the care is organised rather than where it happens.',
         metaTitle: 'Is Urological Surgery Abroad Safe? A Practical Checklist',
         metaDescription:
-          'How to assess a clinic abroad: verifying the surgeon, hospital facilities, who handles complications, follow-up arrangements, consent, data protection and warning signs.',
+          'How to assess a clinic abroad: verifying the surgeon and hospital, who handles complications, follow-up, consent, data protection and warning signs.',
         sections: [
           {
             heading: 'What actually makes it risky',
@@ -3015,7 +3015,7 @@ export const blogPosts: BlogPost[] = [
           'Not every man with a varicocele needs an operation, and not every man who has one will become a father. The useful question is which couples surgery can genuinely make a difference for.',
         metaTitle: 'Varicocele and Male Infertility: When Surgery Helps and When It Does Not',
         metaDescription:
-          'What a varicocele is, who needs surgery, why both partners must be assessed, microsurgical versus other techniques, when results appear, and what surgery cannot guarantee.',
+          'What a varicocele is, who needs surgery, why both partners are assessed, microsurgical versus other techniques, when results appear and what it cannot promise.',
         sections: [
           {
             heading: 'What a varicocele is, and why it matters',
@@ -3095,7 +3095,7 @@ export const blogPosts: BlogPost[] = [
           'Leaking urine in the first days after the catheter comes out is expected. The real questions are how long it lasts, what helps it recover, and at what point it needs a further look.',
         metaTitle: 'Incontinence After Robotic Prostatectomy: A Week-by-Week Guide',
         metaDescription:
-          'Why leakage happens after prostate removal, what the first days and weeks look like, recovery from three to twelve months, pelvic floor exercises, recovering at home, and when to seek further assessment.',
+          'Why leakage happens after prostate removal, the first weeks, recovery from three to twelve months, pelvic floor exercises and when to seek further assessment.',
         sections: [
           {
             heading: 'Why it happens',

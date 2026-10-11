@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageTitle } from '@/lib/pageTitle';
 import { servicePromises } from '@/config/promises';
 import { publishablePackages } from '@/config/packages';
 import { publishedTreatments } from '@/content/treatments';
@@ -25,8 +26,8 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Process' });
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title: pageTitle(t('title')),
+    description: t('metaDescription'),
     alternates: buildAlternates(locale, '/uluslararasi-hasta')
   };
 }

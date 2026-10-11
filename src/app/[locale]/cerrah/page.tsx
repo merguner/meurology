@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageTitle } from '@/lib/pageTitle';
 import { hospitals } from '@/config/hospitals';
 import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import Image from 'next/image';
@@ -33,7 +34,7 @@ export async function generateMetadata({
   const c = surgeon.i18n[locale] ?? surgeon.i18n.en!;
   return {
     // Unvan + uzmanlık başlıkta: isimle yapılan aramalarda ne olduğunu söyler.
-    title: `${c.fullName}${locale === 'ar' ? '، ' : ', '}${c.title}`,
+    title: pageTitle(`${c.fullName}${locale === 'ar' ? '، ' : ', '}${c.title}`),
     description: t('metaDescription', { name: c.fullName }),
     alternates: buildAlternates(locale, '/cerrah')
   };

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageTitle } from '@/lib/pageTitle';
 import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { buildAlternates } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -16,8 +17,8 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Blog' });
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title: pageTitle(t('title')),
+    description: t('metaDescription'),
     alternates: buildAlternates(locale, '/blog')
   };
 }

@@ -175,7 +175,7 @@ export const yapaySfinkter: Treatment = {
         'For significant incontinence persisting after prostate surgery, a device operation in which a cuff around the urethra and a pump in the scrotum restore control.',
       metaTitle: 'Artificial Urinary Sphincter: A Solution for Post-Prostatectomy Leakage',
       metaDescription:
-        'The artificial urinary sphincter (AUS): who it suits, how it works, how it differs from a male sling, the lifespan of the device and the chance of revision, risks and honest expectations.',
+        'The artificial urinary sphincter: who it suits, how it works, how it differs from a male sling, device lifespan and revision, risks and honest expectations.',
       quickFacts: {
         duration: '60–120 minutes',
         anesthesia: 'General or spinal anaesthesia',

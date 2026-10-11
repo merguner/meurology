@@ -23,7 +23,7 @@ export const vurCerrahisi: Treatment = {
         'İdrarın mesaneden böbreğe geri kaçması olan reflüde asıl amaç reflüyü "kapatmak" değil, böbreği korumaktır. Çocukların önemli bir bölümünde reflü büyümeyle kendiliğinden düzelir; cerrahi, bunu bekleyemeyeceğimiz durumlar içindir.',
       metaTitle: 'Vezikoüreteral Reflü Cerrahisi: Ne Zaman Gerekir',
       metaDescription:
-        'Çocuklarda vezikoüreteral reflü: hangi derecede izlenir, hangi durumda ameliyat gerekir, endoskopik enjeksiyon ile açık reimplantasyon farkı, riskler ve iyileşme süreci.',
+        'Çocuklarda vezikoüreteral reflü: hangi derece izlenir, ne zaman ameliyat gerekir, endoskopik enjeksiyon ve açık reimplantasyon farkı, riskler ve iyileşme.',
       quickFacts: {
         duration: '20–40 dakika (endoskopik) / 60–120 dakika (açık)',
         anesthesia: 'Genel anestezi',

@@ -23,7 +23,7 @@ export const cocukUrolojisi: Treatment = {
         'Çocuğun idrar yolları ve genital organlarıyla ilgili durumlar erişkinin küçültülmüş hâli değildir. Çoğu bulgu gelişimle ilgilidir ve bir kısmı kendiliğinden düzelir; bu yüzden ilk soru "ameliyat ne zaman" değil, "ameliyat gerçekten gerekli mi" sorusudur.',
       metaTitle: 'Çocuk Ürolojisi: Hangi Durumda Ameliyat Gerekir',
       metaDescription:
-        'Çocuklarda hipospadias, vezikoüreteral reflü, inmemiş testis, sünnet derisi sorunları ve idrar yolu enfeksiyonu: hangi bulgu izlenir, hangisi ameliyat gerektirir ve karar nasıl verilir.',
+        'Çocuklarda hipospadias, reflü, inmemiş testis, sünnet derisi sorunları ve idrar yolu enfeksiyonu: hangi bulgu izlenir, hangisi ameliyat gerektirir?',
       quickFacts: {
         duration: 'İşleme göre değişir',
         anesthesia: 'Genel anestezi (çocuğa göre planlanır)',
@@ -148,7 +148,7 @@ export const cocukUrolojisi: Treatment = {
         'Urinary and genital conditions in children are not a smaller version of adult urology. Most findings relate to development and some resolve on their own, so the first question is not "when do we operate" but "is an operation actually needed".',
       metaTitle: 'Paediatric Urology: When Surgery Is Actually Needed',
       metaDescription:
-        'Hypospadias, vesicoureteral reflux, undescended testis, foreskin problems and urinary infections in children: which findings are watched, which need surgery, and how the decision is made.',
+        'Hypospadias, reflux, undescended testis, foreskin problems and urinary infections in children: which findings are watched and which need surgery.',
       quickFacts: {
         duration: 'Varies with the procedure',
         anesthesia: 'General anaesthesia, planned for the child',

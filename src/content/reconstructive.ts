@@ -14,6 +14,8 @@ export interface ReconstructiveContent {
   eyebrow: string;
   title: string;
   intro: string[];
+  /** Arama sonucu açıklaması (70–160 karakter). intro[0] 270–320 karakterdi (11 Eki 2026). */
+  metaDescription: string;
   whyTitle: string;
   why: ReconstructiveWhy[];
   treatmentsTitle: string;
@@ -25,6 +27,8 @@ const content: Partial<Record<Locale, ReconstructiveContent>> = {
   tr: {
     eyebrow: 'Uzmanlık gerektiren, karmaşık vakalar',
     title: 'Rekonstrüktif Üroloji',
+    metaDescription:
+      'Rekonstrüktif üroloji: üretra ve üreter darlığı, fistül, yaralanma ve başarısız önceki ameliyatlardan sonra idrar yolunun onarımı; hangi duruma hangi cerrahi.',
     intro: [
       'Rekonstrüktif üroloji, üriner sistemin darlık, hasar veya fistül nedeniyle bozulan yapısının yeniden onarıldığı ileri bir cerrahi alandır. Bu vakalar standart tedavi kategorilerinden farklıdır: hasta bir fiyat avantajı için değil, bu cerrahiyi güvenle yapabilecek az sayıda merkezden birine ulaşmak için gelir.',
       'Bu nedenle burada öne çıkan şey fiyat ya da vaka hacmi değil; vaka karmaşıklığı, daha önce başka merkezde başarısız olmuş girişimleri (redo) çözebilme deneyimi, kullanılan ileri teknikler ve uzun dönem başarıdır. Her vaka önce dosya bazında cerrah tarafından değerlendirilir.'
@@ -51,6 +55,8 @@ const content: Partial<Record<Locale, ReconstructiveContent>> = {
   en: {
     eyebrow: 'Complex cases that demand expertise',
     title: 'Reconstructive Urology',
+    metaDescription:
+      'Reconstructive urology: rebuilding the urinary tract after stricture, injury, fistula or failed earlier surgery, and which condition needs which operation.',
     intro: [
       'Reconstructive urology is an advanced surgical field that rebuilds the structure of the urinary tract when it is damaged by stricture, injury or fistula. These cases differ from standard treatment categories: patients come not for a price advantage but to reach one of the few centers that can perform this surgery safely.',
       'What matters here is therefore not price or case volume, but case complexity, the experience to solve attempts that previously failed elsewhere (redo), the advanced techniques used and long-term success. Every case is first assessed by the surgeon on a file basis.'
@@ -77,6 +83,8 @@ const content: Partial<Record<Locale, ReconstructiveContent>> = {
   ar: {
     eyebrow: 'حالات معقّدة تتطلب خبرة متخصصة',
     title: 'المسالك البولية الترميمية',
+    metaDescription:
+      'المسالك البولية الترميمية: إعادة بناء المجرى البولي بعد التضيّق أو الإصابة أو الناسور أو جراحة سابقة لم تنجح، وأي عملية تناسب كل حالة.',
     intro: [
       'المسالك البولية الترميمية مجال جراحي متقدّم يُعاد فيه بناء بنية الجهاز البولي المتضرّرة بسبب التضيّق أو الإصابة أو الناسور. تختلف هذه الحالات عن فئات العلاج القياسية: لا يأتي المريض بحثًا عن ميزة سعرية، بل للوصول إلى أحد المراكز القليلة القادرة على إجراء هذه الجراحة بأمان.',
       'لذلك ما يتصدّر هنا ليس السعر أو عدد الحالات، بل تعقيد الحالة، والخبرة في حلّ محاولات فشلت سابقًا في مكان آخر (redo)، والتقنيات المتقدّمة المستخدمة، والنجاح طويل الأمد. تُقيَّم كل حالة أولًا من قِبل الجرّاح على أساس الملف.'

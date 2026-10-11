@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageTitle } from '@/lib/pageTitle';
 import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import Image from 'next/image';
 import { buildAlternates } from '@/i18n/navigation';
@@ -23,7 +24,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'Hospital' });
   const tm = await getTranslations({ locale, namespace: 'Meta' });
   return {
-    title: t('title'),
+    title: pageTitle(t('title')),
     // Açıklama olmadan sayfa site geneli varsayılana düşüyordu; 8 Eki 2026'da
     // /tr'de 8 sayfa aynı meta açıklamayı paylaşıyordu.
     description: tm('hospitalDescription'),

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageTitle } from '@/lib/pageTitle';
 import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { ogImages, ogImagePath } from '@/config/ogImage';
 import { buildAlternates, getPathname } from '@/i18n/navigation';
@@ -22,19 +23,19 @@ export async function generateMetadata({
   const { locale } = await params;
   const c = resolveReconstructive(locale);
   return {
-    title: c.title,
-    description: c.intro[0],
+    title: pageTitle(c.title),
+    description: c.metaDescription,
     alternates: buildAlternates(locale, '/rekonstruktif-uroloji'),
     openGraph: {
       title: c.title,
-      description: c.intro[0],
+      description: c.metaDescription,
       type: 'website',
       images: ogImages(locale, c.title)
     },
     twitter: {
       card: 'summary_large_image',
       title: c.title,
-      description: c.intro[0],
+      description: c.metaDescription,
       images: [ogImagePath(locale)]
     }
   };
