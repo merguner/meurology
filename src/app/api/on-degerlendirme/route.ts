@@ -13,6 +13,7 @@ import type { Locale } from '@/i18n/routing';
 import { autoReplyCopy, isRtlLocale } from '@/content/autoReply';
 import { parsePhoneNumberFromString, type CountryCode } from 'libphonenumber-js';
 import { verifyTurnstile } from '@/config/turnstile';
+import { esc, isValidEmail, clientIp, createRateLimiter, postToCrm } from '@/lib/leadDelivery';
 
 // nodemailer Node.js API'leri (net/tls) kullanır — Edge değil, Node runtime gerekir.
 export const runtime = 'nodejs';
@@ -60,54 +61,11 @@ export interface PreAssessmentPayload {
   company?: string;
 }
 
-function isValidEmail(email: string): boolean {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-/** HTML enjeksiyonunu önlemek için kaçış. */
-function esc(v: unknown): string {
-  return String(v ?? '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
 /**
- * BASİT IP BAZLI HIZ SINIRLAMA (sabit pencere).
- * Honeypot'u aşan spam/flood trafiğini de azaltır.
- * NOT: Bellek-içi (Map) — tek sunucu süreci için çalışır. Vercel/serverless veya
- * çok örnekli dağıtımda örnekler arası paylaşılmaz; o durumda Upstash Redis vb.
- * merkezî bir depo gerekir (aşağıdaki mantığı oraya taşıyın).
+ * IP BAZLI HIZ SINIRI — dakikada 5 istek. Uygulama lib/leadDelivery.ts'te;
+ * Vercel'de örnekler arası paylaşılmadığına dair not oradadır.
  */
-const RATE_LIMIT_MAX = 5; // pencere başına izinli istek
-const RATE_LIMIT_WINDOW_MS = 60_000; // 1 dakika
-const rateHits = new Map<string, { count: number; resetAt: number }>();
-
-function checkRateLimit(ip: string): { ok: boolean; retryAfter: number } {
-  const now = Date.now();
-  // Sızıntıyı önlemek için ara sıra süresi geçmiş kayıtları temizle.
-  if (rateHits.size > 5000) {
-    for (const [k, v] of rateHits) if (now > v.resetAt) rateHits.delete(k);
-  }
-  const entry = rateHits.get(ip);
-  if (!entry || now > entry.resetAt) {
-    rateHits.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
-    return { ok: true, retryAfter: 0 };
-  }
-  if (entry.count >= RATE_LIMIT_MAX) {
-    return { ok: false, retryAfter: Math.ceil((entry.resetAt - now) / 1000) };
-  }
-  entry.count++;
-  return { ok: true, retryAfter: 0 };
-}
-
-/** İstemci IP'sini proxy başlıklarından çıkarır (yoksa 'unknown'). */
-function clientIp(request: Request): string {
-  const xff = request.headers.get('x-forwarded-for');
-  if (xff) return xff.split(',')[0].trim();
-  return request.headers.get('x-real-ip') || 'unknown';
-}
+const checkRateLimit = createRateLimiter(5, 60_000);
 
 export async function POST(request: Request) {
   // Hız sınırı — ağır işlemden ve gövde ayrıştırmadan ÖNCE, ucuzca reddet.
@@ -411,86 +369,22 @@ export async function POST(request: Request) {
   }
 
   // ---- CRM kaydı (prompt m.5.1) -----------------------------------------
-  // CRM_WEBHOOK_URL tanımlıysa başvuru oraya da POST edilir (Google Sheets /
-  // Airtable / Zapier webhook'u fark etmez). Başarısız olursa başvuru yine
-  // geçerlidir; e-posta bildirimi birincil kanaldır.
-  const webhook = process.env.CRM_WEBHOOK_URL;
-  if (webhook) {
-    try {
-      /**
-       * Authorization başlığı YALNIZCA jeton ASCII ise eklenir.
-       *
-       * 8 Eki 2026'da Türkçe karakter içeren bir jetonla şu hata alındı:
-       *   "Cannot convert argument to a ByteString because the character at
-       *    index 79 has a value of 305" — 305, 'ı' harfinin kodu.
-       * HTTP başlık değerleri latin-1 taşır; 'ı', 'ş', 'ğ' gibi harfler
-       * fetch'i daha istek gönderilmeden patlatır. Sonuç sessizdi: başvuru
-       * ve e-posta sorunsuz gidiyor, yalnızca CRM kaydı hiç oluşmuyordu.
-       *
-       * Jeton gövdede de gönderildiği için (aşağıda) başlığın atlanması
-       * Apps Script tarafında hiçbir şeyi bozmaz — o zaten başlıkları
-       * okuyamıyor. Başlık bekleyen gerçek CRM'ler ASCII jeton kullanır.
-       */
-      const jeton = process.env.CRM_WEBHOOK_TOKEN;
-      const jetonAsciiMi = jeton ? /^[\x20-\x7E]*$/.test(jeton) : false;
-      if (jeton && !jetonAsciiMi) {
-        console.warn(
-          '[on-degerlendirme] CRM jetonu ASCII değil; Authorization başlığı atlandı, jeton gövdede gönderiliyor.'
-        );
-      }
-
-      const res = await fetch(webhook, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          ...(jeton && jetonAsciiMi ? { Authorization: `Bearer ${jeton}` } : {})
-        },
-        body: JSON.stringify({
-          at,
-          name: data.name,
-          country: data.country ?? '',
-          email: data.email ?? '',
-          phone: data.phone ?? '',
-          treatment: data.treatment ?? '',
-          message: data.message ?? '',
-          locale: data.locale ?? 'tr',
-          consentTextVersion,
-          /**
-           * Jeton GÖVDEDE de gönderilir — yalnızca Authorization başlığı yetmiyor.
-           * Google Apps Script'in doPost(e) fonksiyonu istek BAŞLIKLARINI okuyamaz;
-           * alıcı Apps Script ise başlıktaki jeton ona hiç ulaşmaz. Apps Script
-           * web uygulamasının adresi herkese açık olduğundan, jeton olmadan adresi
-           * ele geçiren biri tabloya sahte satır yazabilirdi.
-           *
-           * Başlık ASCII jetonlarda ayrıca gönderilir (yukarıya bakın): gerçek
-           * CRM'ler (Airtable, HubSpot) onu bekler. Alıcı hangisini
-           * okuyabiliyorsa onu kullanır. Gövdedeki jeton JSON içinde gittiği
-           * için Türkçe karakter sorunu yaşamaz.
-           */
-          ...(jeton ? { token: jeton } : {})
-        }),
-        signal: AbortSignal.timeout(5000)
-      });
-      /**
-       * YANIT GÖVDESİ DE OKUNUR — yalnızca HTTP durumuna bakmak yetmiyor.
-       *
-       * Google Apps Script hata durumlarında da HTTP 200 döner; hatayı gövdede
-       * bildirir (ör. {"ok":false,"error":"yetkisiz"}). 8 Eki 2026'da bu yüzden
-       * sessiz bir arıza yaşandı: jeton uyuşmadığı için hiçbir satır yazılmıyordu
-       * ama günlükte tek bir hata satırı bile yoktu, çünkü res.ok true idi.
-       */
-      const govde = (await res.text()).slice(0, 300);
-      if (!res.ok) {
-        console.error('[on-degerlendirme] CRM webhook yanıtı başarısız:', res.status, govde);
-      } else if (!/"ok"\s*:\s*true/.test(govde)) {
-        console.error('[on-degerlendirme] CRM webhook 200 döndü ama kayıt YAZILMADI:', govde);
-      } else {
-        console.info('[on-degerlendirme] CRM kaydı yazıldı.');
-      }
-    } catch (err) {
-      console.error('[on-degerlendirme] CRM webhook çağrılamadı (başvuru yine de geçerli):', err);
-    }
-  }
+  // CRM_WEBHOOK_URL tanımlıysa başvuru oraya da yazılır (lib/leadDelivery.ts).
+  // Başarısız olursa başvuru yine geçerlidir; e-posta birincil kanaldır.
+  await postToCrm(
+    {
+      at,
+      name: data.name,
+      country: data.country ?? '',
+      email: data.email ?? '',
+      phone: data.phone ?? '',
+      treatment: data.treatment ?? '',
+      message: data.message ?? '',
+      locale: data.locale ?? 'tr',
+      consentTextVersion
+    },
+    '[on-degerlendirme]'
+  );
 
   return NextResponse.json({ ok: true });
 }

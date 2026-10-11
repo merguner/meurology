@@ -77,6 +77,14 @@ export interface ConsultationCopy {
   whatsappMessage: string; // {code} {amount} ile
   waitingTitle: string;
   waitingBody: string;
+  /** Telefon alanının altındaki kısa not (görüşme WhatsApp'tan yapılır). */
+  contactHint: string;
+  /** "opsiyonel" — e-posta alanı etiketine eklenir. */
+  optional: string;
+  /** Talep sunucuya iletilemezse son adımda gösterilen not (WhatsApp'a yönlendirir). */
+  deliveryFailed: string;
+  /** E-posta girildiyse ve biçimi hatalıysa. */
+  validationEmail: string;
   /**
    * ÜCRET PASİFKEN (siteConfig.consultation.feeActive === false) yukarıdaki
    * alanların yerine geçen metinler. Ücret, havale ve dekont geçmez.
@@ -179,7 +187,7 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
     legalText: [
       'Bu görüşme bir uzaktan ÖN DANIŞMANLIKTIR; yüz yüze muayene, kesin teşhis, tedavi veya reçete yerine geçmez. Gerektiğinde yüz yüze muayene önerilebilir.',
       'Görüşme WhatsApp görüntülü arama ile yapılır; randevu saatinizde WhatsApp’a erişiminizin olması gerekir.',
-      'KVKK/GDPR: Paylaştığınız bilgiler yalnızca bu danışmanlık amacıyla işlenir. Görüşme KAYDEDİLMEZ.'
+      'KVKK/GDPR: Paylaştığınız bilgiler (not alanına yazdığınız sağlık bilgileri dahil) yalnızca bu danışmanlığı planlamak için işlenir; e-postayla ekibimize iletilir ve başvuru kaydımızda saklanır. Bu kayıt yurt dışındaki bir hizmet sağlayıcıda (Google) barındırılır. Görüşme KAYDEDİLMEZ.'
     ],
     consentLabel: 'Yukarıdaki bilgilendirmeyi okudum ve kabul ediyorum.',
     consentRequired: 'Devam etmek için bilgilendirmeyi onaylayın.',
@@ -205,6 +213,11 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
     waitingTitle: 'Sıradaki adım',
     waitingBody:
       'Randevunuz alındı. Ödemenizi yaptıktan sonra dekontu WhatsApp’tan gönderin. Ekibimiz dekontu onayladıktan sonra, randevu saatinizde sizi WhatsApp’tan görüntülü olarak arayacaktır.',
+    contactHint: 'Görüşme WhatsApp üzerinden yapılacağı için WhatsApp kullandığınız numarayı ülke koduyla yazın.',
+    optional: 'opsiyonel',
+    deliveryFailed:
+      'Talebiniz şu an bize iletilemedi. Lütfen aşağıdaki düğmeyle kodunuzu WhatsApp’tan gönderin; talebiniz böylece bize ulaşır.',
+    validationEmail: 'E-posta adresi geçerli görünmüyor.',
     withoutFee: {
       badge: 'Randevulu özel görüşme',
       heroDescription: [
@@ -214,15 +227,15 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
       how: [
         { title: '1. Randevu alın', body: 'Uygun gün ve saati seçin (saatler İstanbul saatiyle gösterilir).' },
         { title: '2. Kısa bilgi', body: 'Ad, ülke ve kısa bir not — yalnızca gerekli minimum bilgi.' },
-        { title: '3. Kodunuzu WhatsApp’tan gönderin', body: 'Randevu kodunuz oluşur; tek dokunuşla, kodunuz önceden yazılmış olarak WhatsApp açılır.' },
+        { title: '3. Talebiniz bize ulaşır', body: 'Randevu kodunuz oluşur ve talebiniz ekibimize iletilir. İsterseniz kodunuzu WhatsApp’tan da gönderebilirsiniz.' },
         { title: '4. Randevu onayı', body: 'Ekibimiz uygunluğu kontrol eder ve randevunuzu WhatsApp’tan yazılı olarak onaylar.' },
         { title: '5. Görüntülü görüşme', body: 'Randevu saatinizde sizi WhatsApp’tan görüntülü ararız.' }
       ],
       step3Title: 'Randevu talebiniz oluşturuldu',
-      whatsappReceiptCta: 'Talebi WhatsApp’tan gönder',
+      whatsappReceiptCta: 'WhatsApp’tan yazın',
       whatsappMessage: 'Merhaba, {code} kodlu özel online danışmanlık randevu talebimi onaylatmak istiyorum.',
       waitingBody:
-        'Randevu talebiniz oluşturuldu. Kodunuzu WhatsApp’tan gönderin; ekibimiz talebinizi yazılı olarak onaylar ve randevu saatinizde sizi WhatsApp’tan görüntülü arar.'
+        'Talebiniz ekibimize ulaştı. Ekibimiz uygunluğu kontrol edip randevunuzu WhatsApp’tan yazılı olarak onaylar ve randevu saatinizde sizi WhatsApp’tan görüntülü arar.'
     }
   },
   en: {
@@ -309,7 +322,7 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
     legalText: [
       'This consultation is a remote PRE-CONSULTATION; it is not a substitute for an in-person examination, definitive diagnosis, treatment or prescription. An in-person examination may be recommended if needed.',
       'The consultation takes place over a WhatsApp video call; you must have access to WhatsApp at your appointment time.',
-      'KVKK/GDPR: The information you share is processed only for this consultation. The session is NOT recorded.'
+      'KVKK/GDPR: The information you share (including any health information you write in the note) is processed only to arrange this consultation; it is sent to our team by email and kept in our request records, which are hosted by a service provider outside Türkiye (Google). The session is NOT recorded.'
     ],
     consentLabel: 'I have read and accept the information above.',
     consentRequired: 'Please accept the information to continue.',
@@ -335,6 +348,11 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
     waitingTitle: 'Next step',
     waitingBody:
       'Your appointment is booked. After making your payment, send the receipt on WhatsApp. Once our team confirms the receipt, we will call you on WhatsApp video at your appointment time.',
+    contactHint: 'The consultation takes place on WhatsApp, so enter the number you use for WhatsApp, with your country code.',
+    optional: 'optional',
+    deliveryFailed:
+      'Your request could not be sent to us just now. Please send your code on WhatsApp with the button below so that it reaches us.',
+    validationEmail: 'The email address does not look valid.',
     withoutFee: {
       badge: 'Private session by appointment',
       heroDescription: [
@@ -344,15 +362,15 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
       how: [
         { title: '1. Book an appointment', body: 'Choose a suitable day and time (times are shown in Istanbul time).' },
         { title: '2. Brief details', body: 'Name, country and a short note — only the minimum needed.' },
-        { title: '3. Send your code on WhatsApp', body: 'Your appointment code is created; one tap opens WhatsApp with the code pre-filled.' },
+        { title: '3. Your request reaches us', body: 'Your appointment code is created and your request is sent to our team. You can also send your code on WhatsApp if you wish.' },
         { title: '4. Confirmation', body: 'Our team checks availability and confirms your appointment in writing on WhatsApp.' },
         { title: '5. Video consultation', body: 'We call you on WhatsApp video at your appointment time.' }
       ],
       step3Title: 'Your appointment request has been created',
-      whatsappReceiptCta: 'Send the request on WhatsApp',
+      whatsappReceiptCta: 'Message us on WhatsApp',
       whatsappMessage: 'Hello, I would like to confirm my private online consultation request, code {code}.',
       waitingBody:
-        'Your appointment request has been created. Send your code on WhatsApp; our team will confirm your request in writing and call you on WhatsApp video at your appointment time.'
+        'Your request has reached our team. We will check availability, confirm your appointment in writing on WhatsApp and call you on WhatsApp video at your appointment time.'
     }
   },
   ar: {
@@ -440,7 +458,7 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
       'هذه الترجمة لأغراض التوعية فقط؛ ويجب أن يعتمد محامٍ النصّ الساري وفقًا للقانون التركي/اللائحة العامة لحماية البيانات (GDPR).',
       'هذه الاستشارة استشارة أولية عن بُعد؛ ولا تُغني عن الفحص الحضوري أو التشخيص النهائي أو العلاج أو وصف الدواء. وقد يُوصى بفحص حضوري عند الحاجة.',
       'تُجرى الاستشارة عبر مكالمة فيديو على WhatsApp؛ ويجب أن يكون لديك وصول إلى WhatsApp في وقت موعدك.',
-      'KVKK/GDPR: تُعالَج المعلومات التي تشاركها لغرض هذه الاستشارة فقط. ولا تُسجَّل الجلسة.'
+      'KVKK/GDPR: تُعالَج المعلومات التي تشاركها (بما فيها أي معلومات صحية تكتبها في الملاحظة) لغرض ترتيب هذه الاستشارة فقط؛ وتُرسَل إلى فريقنا بالبريد الإلكتروني وتُحفَظ في سجل الطلبات لدينا، المستضاف لدى مزوّد خدمة خارج تركيا (Google). ولا تُسجَّل الجلسة.'
     ],
     consentLabel: 'قرأت المعلومات أعلاه وأوافق عليها.',
     consentRequired: 'يرجى الموافقة على المعلومات للمتابعة.',
@@ -465,6 +483,11 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
     waitingTitle: 'الخطوة التالية',
     waitingBody:
       'تم حجز موعدك. بعد إتمام الدفع، أرسل الإيصال عبر WhatsApp. وبعد أن يؤكّد فريقنا الإيصال، سنتصل بك عبر فيديو WhatsApp في وقت موعدك.',
+    contactHint: 'تُجرى الاستشارة عبر WhatsApp، لذا اكتب الرقم الذي تستخدمه في WhatsApp مع رمز الدولة.',
+    optional: 'اختياري',
+    deliveryFailed:
+      'تعذّر إرسال طلبك إلينا الآن. يُرجى إرسال رمزك عبر WhatsApp بالزر أدناه حتى يصل إلينا.',
+    validationEmail: 'لا يبدو عنوان البريد الإلكتروني صحيحًا.',
     withoutFee: {
       badge: 'جلسة خاصة بموعد مسبق',
       heroDescription: [
@@ -474,15 +497,15 @@ const content: Partial<Record<Locale, ConsultationCopy>> = {
       how: [
         { title: '1. احجز موعدًا', body: 'اختر اليوم والوقت المناسبين (تُعرض الأوقات بتوقيت إسطنبول).' },
         { title: '2. معلومات موجزة', body: 'الاسم والدولة وملاحظة قصيرة — الحدّ الأدنى اللازم فقط.' },
-        { title: '3. أرسل رمزك عبر WhatsApp', body: 'يُنشأ رمز موعدك؛ وبضغطة واحدة يُفتح WhatsApp والرمز مكتوب مسبقًا.' },
+        { title: '3. يصل طلبك إلينا', body: 'يُنشأ رمز موعدك ويُرسَل طلبك إلى فريقنا. ويمكنك أيضًا إرسال رمزك عبر WhatsApp إن شئت.' },
         { title: '4. تأكيد الموعد', body: 'يتحقّق فريقنا من التوفّر ويؤكّد موعدك كتابةً عبر WhatsApp.' },
         { title: '5. مكالمة الفيديو', body: 'نتصل بك عبر فيديو WhatsApp في وقت موعدك.' }
       ],
       step3Title: 'تم إنشاء طلب موعدك',
-      whatsappReceiptCta: 'أرسل الطلب عبر WhatsApp',
+      whatsappReceiptCta: 'راسلنا عبر WhatsApp',
       whatsappMessage: 'مرحبًا، أودّ تأكيد طلب الاستشارة الأونلاين الخاصة برمز {code}.',
       waitingBody:
-        'تم إنشاء طلب موعدك. أرسل رمزك عبر WhatsApp؛ وسيؤكّد فريقنا طلبك كتابةً ويتصل بك عبر فيديو WhatsApp في وقت موعدك.'
+        'وصل طلبك إلى فريقنا. سنتحقق من التوفّر ونؤكّد موعدك كتابةً عبر WhatsApp، ثم نتصل بك عبر فيديو WhatsApp في وقت موعدك.'
     }
   },
 };

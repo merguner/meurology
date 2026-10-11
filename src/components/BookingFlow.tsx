@@ -9,6 +9,7 @@ import { siteConfig, whatsappLink, formatEUR } from '@/config/site';
 import { features } from '@/config/features';
 import { Icon } from './Icon';
 import { CountrySelect } from './CountrySelect';
+import { TurnstileWidget } from './TurnstileWidget';
 
 /** Klinik saatini (Europe/Istanbul, kalıcı UTC+3) hasta saat dilimine çevirir. */
 function slotToLocal(dateStr: string, hhmm: string, tz: string, locale: string): string {
@@ -90,8 +91,17 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
   const [consent, setConsent] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [code, setCode] = useState('');
+  // İletişim: telefon ZORUNLU (görüşme WhatsApp'tan yapılır), e-posta opsiyonel.
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [company, setCompany] = useState(''); // bot tuzağı
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const [sending, setSending] = useState(false);
+  const [deliveryFailed, setDeliveryFailed] = useState(false);
   const [cardStatus, setCardStatus] = useState<'idle' | 'loading' | 'unavailable' | 'error'>('idle');
   const tp = useTranslations('Payment');
+  // Telefon/e-posta etiketleri ve doğrulama metinleri ön değerlendirme formuyla ortak.
+  const tf = useTranslations('Form');
 
   /**
    * KARTLI ÖDEME — placeholder akış. /api/odeme'ye istek atar; entegrasyon
@@ -137,23 +147,83 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
     setStep(2);
   }
 
-  function create() {
+  /**
+   * TALEBİ OLUŞTUR VE KLİNİĞE GÖNDER (11 Eki 2026).
+   * Önceden kod yalnızca burada üretiliyor, sunucuya hiçbir şey gitmiyordu:
+   * hasta WhatsApp düğmesine basmazsa klinik talepten habersiz kalıyordu.
+   * Artık /api/danismanlik-talebi kliniğe e-posta atar ve tabloya yazar.
+   * Gönderim başarısız olursa hasta yine 3. adıma geçer ve WhatsApp'a
+   * yönlendirilir — talep hiçbir durumda sessizce kaybolmaz.
+   */
+  async function create() {
     setError(null);
     if (name.trim().length < 2) {
       setError(c.validationName);
+      return;
+    }
+    // Kaba ön kontrol; asıl doğrulama sunucuda (libphonenumber, ülkeye göre).
+    if (phone.replace(/\D/g, '').length < 7) {
+      setError(tf('validationPhone'));
+      return;
+    }
+    if (email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+      setError(c.validationEmail);
       return;
     }
     if (!consent) {
       setError(c.consentRequired);
       return;
     }
-    setCode(makeCode(date));
+    const newCode = makeCode(date);
+    setSending(true);
+    let delivered = false;
+    try {
+      const res = await fetch('/api/danismanlik-talebi', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          code: newCode,
+          date,
+          time,
+          timeZone: tz,
+          name: name.trim(),
+          country,
+          phone: phone.trim(),
+          email: email.trim(),
+          note: note.trim(),
+          consent,
+          locale,
+          turnstileToken,
+          company
+        })
+      });
+      const result = await res.json().catch(() => ({}));
+      // Düzeltilebilir hatalarda 2. adımda kalınır ve hasta uyarılır.
+      if (result?.error === 'invalid_phone') {
+        setError(tf('validationPhone'));
+        setSending(false);
+        return;
+      }
+      if (result?.error === 'invalid_email') {
+        setError(c.validationEmail);
+        setSending(false);
+        return;
+      }
+      delivered = res.ok && result?.ok === true;
+    } catch {
+      delivered = false;
+    }
+    setSending(false);
+    setCode(newCode);
+    setDeliveryFailed(!delivered);
     /*
-      OLCUM: randevu akışı TAMAMLANDI (referans kodu üretildi). Daha önce
-      yalnızca 1. adımdaki saat seçimi ölçülüyordu; asıl dönüşüm görünmüyordu.
-      Ad, ülke ve tarih BİLEREK gönderilmez.
+      OLCUM: yalnızca talep kliniğe ULAŞTIYSA "randevu" sayılır. 11 Eki 2026'ya
+      kadar sunucuya hiçbir şey gitmeden sayılıyordu; GA4'teki sayı klinikte
+      olmayan talepleri de içeriyordu. İletilemediyse hasta WhatsApp'a
+      yönlendirilir; o tıklama whatsapp_click olarak ayrıca ölçülür.
+      Ad, ülke, tarih ve iletişim bilgisi BİLEREK gönderilmez.
     */
-    track('consultation_booked', { source: 'ozel-danismanlik' });
+    if (delivered) track('consultation_booked', { source: 'ozel-danismanlik' });
     setStep(3);
   }
 
@@ -278,9 +348,33 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
               <CountrySelect id="cal-country" value={country} onChange={setCountry} placeholder={c.countryPlaceholder} />
             </div>
           </div>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            <div>
+              <label htmlFor="cal-phone" className="mb-1.5 block text-sm font-medium">
+                {tf('phone')} <span className="text-danger">*</span>
+              </label>
+              {/* dir="ltr": Arapça sayfada da numara soldan sağa yazılır */}
+              <input id="cal-phone" type="tel" inputMode="tel" autoComplete="tel" dir="ltr" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={tf('phonePlaceholder')} className="form-input" />
+              <p className="mt-1 text-xs text-muted">{c.contactHint}</p>
+            </div>
+            <div>
+              <label htmlFor="cal-email" className="mb-1.5 block text-sm font-medium">
+                {tf('email')} <span className="font-normal text-muted">({c.optional})</span>
+              </label>
+              <input id="cal-email" type="email" autoComplete="email" dir="ltr" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={tf('emailPlaceholder')} className="form-input" />
+            </div>
+          </div>
           <div className="mt-4">
             <label htmlFor="cal-note" className="mb-1.5 block text-sm font-medium">{c.noteLabel}</label>
             <textarea id="cal-note" rows={3} value={note} onChange={(e) => setNote(e.target.value)} placeholder={c.notePlaceholder} className="form-input resize-y" />
+          </div>
+          {/* Bot tuzağı — ön değerlendirme formuyla aynı, yön bağımsız gizleme */}
+          <div
+            aria-hidden="true"
+            style={{ position: 'absolute', width: '1px', height: '1px', margin: '-1px', padding: 0, border: 0, overflow: 'hidden', clipPath: 'inset(50%)', whiteSpace: 'nowrap' }}
+          >
+            <label htmlFor="cal-company">Company (leave empty)</label>
+            <input id="cal-company" type="text" tabIndex={-1} autoComplete="off" value={company} onChange={(e) => setCompany(e.target.value)} />
           </div>
 
           {/* Bilgilendirme + onay */}
@@ -297,6 +391,11 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
             <span className="text-muted">{c.consentLabel} <span className="text-danger">*</span></span>
           </label>
 
+          {/* Bot koruması — site anahtarı yoksa hiç çizilmez */}
+          <div className="mt-4">
+            <TurnstileWidget locale={locale} onToken={setTurnstileToken} />
+          </div>
+
           {error && <p role="alert" className="mt-4 text-sm text-danger">{error}</p>}
 
           <div className="mt-6 flex flex-col gap-2.5 sm:flex-row">
@@ -304,7 +403,9 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
               <Icon name="arrow" size={18} className="rotate-180 rtl:rotate-0" />
               {c.back}
             </button>
-            <button type="button" onClick={create} className="btn-primary">{c.create}</button>
+            <button type="button" onClick={create} disabled={sending} className="btn-primary">
+              {sending ? tf('submitting') : c.create}
+            </button>
           </div>
         </div>
       )}
@@ -369,6 +470,13 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
             </dl>
             <p className="mt-3 text-xs text-muted">{c.instructions}</p>
           </div>
+          )}
+
+          {/* Talep kliniğe iletilemediyse: hasta WhatsApp'a yönlendirilir */}
+          {deliveryFailed && (
+            <p role="alert" className="mt-4 rounded-lg border border-danger/40 bg-danger/10 p-3 text-sm text-fg">
+              {c.deliveryFailed}
+            </p>
           )}
 
           {/* WhatsApp düğmesi — kod önceden yazılmış (ücret aktifken dekont,
@@ -453,11 +561,13 @@ export function BookingFlow({ copy, locale }: { copy: ConsultationCopy; locale: 
             </>
           )}
 
-          {/* Bekleyiş mesajı */}
-          <div className="mt-4 rounded-lg border border-success/40 bg-success/10 p-4">
-            <p className="mb-1 text-sm font-semibold text-fg">{c.waitingTitle}</p>
-            <p className="text-sm text-muted">{c.waitingBody}</p>
-          </div>
+          {/* Bekleyiş mesajı — yalnızca talep kliniğe ulaştıysa */}
+          {!deliveryFailed && (
+            <div className="mt-4 rounded-lg border border-success/40 bg-success/10 p-4">
+              <p className="mb-1 text-sm font-semibold text-fg">{c.waitingTitle}</p>
+              <p className="text-sm text-muted">{c.waitingBody}</p>
+            </div>
+          )}
         </div>
       )}
     </div>

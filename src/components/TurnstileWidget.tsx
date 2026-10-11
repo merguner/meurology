@@ -17,11 +17,15 @@ const SCRIPT_ID = 'cf-turnstile-script';
 /**
  * Turnstile widget'ı. Site anahtarı yoksa HİÇ render edilmez (yer tutucu yok).
  * Çözülen jeton gizli bir input'a yazılır; form onu gövdeye ekler.
+ * <form> kullanmayan akışlar (online danışmanlık randevusu) jetonu onToken ile alır.
  */
-export function TurnstileWidget({ locale }: { locale: string }) {
+export function TurnstileWidget({ locale, onToken }: { locale: string; onToken?: (token: string) => void }) {
   const boxRef = useRef<HTMLDivElement>(null);
   const [token, setToken] = useState('');
   const siteKey = turnstileConfig.siteKey;
+  // Etki yeniden çalışmasın diye geri çağrı ref'te tutulur (her render'da yeni fonksiyon gelebilir).
+  const onTokenRef = useRef(onToken);
+  onTokenRef.current = onToken;
 
   useEffect(() => {
     if (!siteKey || !boxRef.current) return;
@@ -33,9 +37,9 @@ export function TurnstileWidget({ locale }: { locale: string }) {
       widgetId = window.turnstile.render(el, {
         sitekey: siteKey,
         language: locale,
-        callback: (t: string) => setToken(t),
-        'expired-callback': () => setToken(''),
-        'error-callback': () => setToken('')
+        callback: (t: string) => { setToken(t); onTokenRef.current?.(t); },
+        'expired-callback': () => { setToken(''); onTokenRef.current?.(''); },
+        'error-callback': () => { setToken(''); onTokenRef.current?.(''); }
       });
     }
 
