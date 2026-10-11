@@ -24,6 +24,7 @@ import { MapEmbed } from '@/components/MapEmbed';
 import { storiesForTreatment } from '@/content/experiences';
 import { features } from '@/config/features';
 import { physicianJsonLd, physicianId } from '@/lib/physicianJsonLd';
+import { postsForLocale, readingMinutes } from '@/content/blog';
 
 // Tüm dil + slug kombinasyonlarını statik üret (hız için).
 export function generateStaticParams() {
@@ -89,6 +90,38 @@ export default async function TreatmentPage({
   const tf = await getTranslations('Form');
   const te = await getTranslations('Experiences');
   const tcontact = await getTranslations('Contact');
+  const tb = await getTranslations('Blog');
+
+  /*
+    BU KONUDAKİ YAZILAR (11 Eki 2026 denetimi). Blog yazıları tedavi sayfasına
+    bağlanıyordu ama tedavi sayfaları yazılara bağlanmıyordu; yazıların çoğuna
+    sitede tek bir iç bağlantı (blog listesi) gidiyordu. Sıra: doğrudan bu
+    tedaviye bağlı yazılar, sonra alt tedavilerinin, sonra üst kategorisinin,
+    sonra aynı üst kategorideki kardeş tedavilerin (ör. TUMT için ThuLEP, Rezüm)
+    yazıları; her grupta en yenisi önce. Yalnızca bu dilde yayında olanlar.
+  */
+  const altTedaviler = childTreatments(treatment.slug).map((x) => x.slug);
+  const kardesTedaviler = treatment.parent
+    ? childTreatments(treatment.parent).map((x) => x.slug).filter((x) => x !== treatment.slug)
+    : [];
+  const ilgiliYazilar = postsForLocale(locale)
+    .map((p) => ({
+      p,
+      sira:
+        p.treatmentSlug === treatment.slug
+          ? 0
+          : p.treatmentSlug && altTedaviler.includes(p.treatmentSlug)
+            ? 1
+            : p.treatmentSlug && p.treatmentSlug === treatment.parent
+              ? 2
+              : p.treatmentSlug && kardesTedaviler.includes(p.treatmentSlug)
+                ? 3
+                : 9
+    }))
+    .filter((x) => x.sira < 9)
+    .sort((a, b) => a.sira - b.sira)
+    .slice(0, 4)
+    .map((x) => x.p);
 
   // EURO fiyat aralığı — YÖNETMELİK: yurt içi (tr) sayfalarda fiyat gösterilmez;
   // yalnızca yabancı dil (sağlık turizmi) sayfalarında gösterilir. TL kullanılmaz.
@@ -638,6 +671,33 @@ export default async function TreatmentPage({
               ))}
             </div>
           </section>
+
+          {/* Bu konudaki yazılar — blog ile tedavi sayfası arasında iç bağlantı */}
+          {ilgiliYazilar.length > 0 && (
+            <section>
+              <SectionHeading title={t('sectionRelatedPosts')} />
+              <div className="grid gap-4 sm:grid-cols-2">
+                {ilgiliYazilar.map((post) => {
+                  const pc = post.i18n[locale]!;
+                  return (
+                    <Link
+                      key={post.slug}
+                      href={{ pathname: '/blog/[slug]', params: { slug: post.slug } }}
+                      className="card group flex flex-col p-5 transition-colors hover:border-primary/40"
+                    >
+                      <span className="label-mono">{tb(`categories.${post.category}` as never)}</span>
+                      <span className="mt-2 font-semibold leading-snug">{pc.title}</span>
+                      <span className="mt-2 flex-1 text-sm leading-relaxed text-muted">{pc.excerpt}</span>
+                      <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
+                        {readingMinutes(post, locale)} {tb('readingTime')}
+                        <Icon name="arrow" size={16} className="rtl:rotate-180" />
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
+            </section>
+          )}
 
           {/* Bilimsel kaynaklar */}
           {c.sources && c.sources.length > 0 && (

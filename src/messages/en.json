@@ -99,6 +99,7 @@
     "packageIncludes": "Included in the package",
     "sectionVideo": "Patient experience video",
     "sectionFaq": "Frequently asked questions",
+    "sectionRelatedPosts": "Articles on this topic",
     "ctaTitle": "Let's talk about this treatment",
     "ctaBody": "Message us on WhatsApp with your questions or fill in the pre-assessment form.",
     "medicalDisclaimer": "This page is for general information only and is not a substitute for medical advice.",
@@ -285,7 +286,8 @@
     "validationName": "Please enter your name.",
     "validationContact": "Please enter an email or phone number.",
     "requiredMark": "required",
-    "validationPhone": "That phone number does not look valid. Please include the country code (e.g. +90 532 063 09 69) or select your country."
+    "validationPhone": "That phone number does not look valid. Please include the country code (e.g. +90 532 063 09 69) or select your country.",
+    "validationCaptcha": "The security check has not finished yet. Please wait a few seconds and send again; if the problem continues, message us on WhatsApp."
   },
   "Legal": {
     "kvkkTitle": "KVKK / GDPR Privacy Notice",

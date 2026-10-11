@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 import { Icon } from './Icon';
 import { TurnstileWidget } from './TurnstileWidget';
+import { turnstileEnabled } from '@/config/turnstile';
 import { CountrySelect } from './CountrySelect';
 import { track } from '@/lib/analytics';
 import { autoReplyCopy } from '@/content/autoReply';
@@ -111,6 +112,12 @@ export function PreAssessmentForm({
       setClientError(t('consentRequired'));
       return;
     }
+    // Güvenlik doğrulaması tembel yüklenir; jeton henüz hazır değilse
+    // sunucuya boş gönderip genel hata göstermek yerine hastayı bekletiriz.
+    if (turnstileEnabled() && !String(fd.get('turnstileToken') ?? '')) {
+      setClientError(t('validationCaptcha'));
+      return;
+    }
 
     submitting.current = true;
     setStatus('submitting');
@@ -160,6 +167,7 @@ export function PreAssessmentForm({
         }
         const fieldErrors: Record<string, string> = {
           invalid_phone: t('validationPhone'),
+          captcha_failed: t('validationCaptcha'),
           too_many_files: t('validationTooManyFiles'),
           file_too_large: t('validationFileTooLarge'),
           file_type_not_allowed: t('validationFileType'),

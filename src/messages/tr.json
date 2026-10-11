@@ -99,6 +99,7 @@
     "packageIncludes": "Pakete dahil olanlar",
     "sectionVideo": "Hasta deneyimi videosu",
     "sectionFaq": "Sık sorulan sorular",
+    "sectionRelatedPosts": "Bu konudaki yazılar",
     "ctaTitle": "Bu tedavi hakkında konuşalım",
     "ctaBody": "Sorularınız için WhatsApp'tan yazın veya ön değerlendirme formunu doldurun.",
     "medicalDisclaimer": "Bu sayfa genel bilgilendirme amaçlıdır ve tıbbi tavsiye yerine geçmez.",
@@ -285,7 +286,8 @@
     "validationName": "Lütfen adınızı girin.",
     "validationContact": "Lütfen e-posta veya telefon bilgisi girin.",
     "requiredMark": "zorunlu",
-    "validationPhone": "Telefon numarası geçerli görünmüyor. Lütfen ülke kodunu da içerecek şekilde yazın (ör. +90 532 063 09 69) veya ülkenizi seçin."
+    "validationPhone": "Telefon numarası geçerli görünmüyor. Lütfen ülke kodunu da içerecek şekilde yazın (ör. +90 532 063 09 69) veya ülkenizi seçin.",
+    "validationCaptcha": "Güvenlik doğrulaması henüz tamamlanmadı. Birkaç saniye bekleyip yeniden gönderin; sorun sürerse WhatsApp’tan bize yazın."
   },
   "Legal": {
     "kvkkTitle": "KVKK / GDPR Aydınlatma Metni",
