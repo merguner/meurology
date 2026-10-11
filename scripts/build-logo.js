@@ -1,6 +1,7 @@
 /*
  * ME UROLOGY LOGOSU — tek kaynaktan üç dosya üretir (11 Eki 2026, Dr. Ergün'ün tarifi):
  *   public/brand/me-urology.svg  tam logo (ME + çizgi + UROLOGY) — başlık, alt bilgi, OG
+ *   public/brand/me-urology.png  aynısı 1024x1024 PNG — Canva sosyal medya şablonları
  *   public/brand/emblem.svg      yalnız ME — küçük boyutlar için
  *   src/app/icon.svg             tarayıcı sekmesi simgesi (= emblem.svg)
  *   src/app/apple-icon.png       telefon ana ekran simgesi, 180x180 (tam logo, köşesiz)
@@ -110,6 +111,9 @@ const APPLE = logo({ tam: true, kose: 0, icPay: 0.07, cizgi: 0.018, icKose: 0.15
   yaz('public/brand/me-urology.svg', TAM);
   yaz('public/brand/emblem.svg', AMBLEM);
   yaz('src/app/icon.svg', AMBLEM);
+  // PNG kopya: Canva görsel değiştirmede yalnızca raster kabul ediyor (sosyal medya şablonları).
+  await sharp(Buffer.from(TAM), { density: 300 }).resize(1024, 1024).png({ compressionLevel: 9 }).toFile('public/brand/me-urology.png');
+  console.log('public/brand/me-urology.png  1024x1024');
   await sharp(Buffer.from(APPLE), { density: 144 }).resize(180, 180).png({ compressionLevel: 9 }).toFile('src/app/apple-icon.png');
   console.log('src/app/apple-icon.png  180x180');
 })();
