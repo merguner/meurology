@@ -55,7 +55,7 @@ export default async function ConsultationPage({
       <div className="container-content grid gap-10 py-12 lg:grid-cols-2 [&>*]:min-w-0">
         {/* Sol: anlatım */}
         <div className="space-y-8">
-          <span className="chip border-accent/40 bg-accent/10 text-accent">
+          <span className="chip border-accent/40 bg-accent/10 text-accent-ink">
             <Icon name="video" size={14} />
             {c.badge}
           </span>

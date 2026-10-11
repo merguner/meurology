@@ -139,7 +139,7 @@ export default async function HomePage({
             <div className="overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-br from-accent/10 to-transparent p-6 md:p-10">
               <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
                 <div className="max-w-2xl">
-                  <span className="chip border-accent/40 bg-accent/15 text-accent">
+                  <span className="chip border-accent/40 bg-accent/15 text-accent-ink">
                     <Icon name="video" size={14} />
                     {consult.badge}
                   </span>

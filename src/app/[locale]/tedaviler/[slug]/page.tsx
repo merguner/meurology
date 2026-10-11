@@ -317,7 +317,7 @@ export default async function TreatmentPage({
                     <Icon name="video" size={24} />
                   </span>
                   <div>
-                    <span className="chip border-accent/40 bg-accent/15 text-accent">{consult.badge}</span>
+                    <span className="chip border-accent/40 bg-accent/15 text-accent-ink">{consult.badge}</span>
                     <h2 className="mt-2 text-lg font-bold">{consult.title}</h2>
                     <p className="mt-1 max-w-xl text-sm text-muted">{consult.summary}</p>
                   </div>
@@ -494,7 +494,14 @@ export default async function TreatmentPage({
           {c.comparison && (
             <section>
               <SectionHeading title={t('sectionComparison')} />
-              <div className="overflow-x-auto rounded-xl border border-border">
+              {/* tabIndex + role: dar ekranda yatay kayan tablo klavyeyle de
+                  kaydırılabilsin (WCAG 2.1.1, axe: scrollable-region-focusable) */}
+              <div
+                className="overflow-x-auto rounded-xl border border-border"
+                tabIndex={0}
+                role="region"
+                aria-label={c.comparison.title}
+              >
                 <table className="w-full border-collapse text-sm">
                   <caption className="sr-only">{c.comparison.title}</caption>
                   <thead>

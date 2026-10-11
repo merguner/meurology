@@ -47,6 +47,9 @@ const config: Config = {
         brand: 'rgb(var(--c-brand) / <alpha-value>)',
         accent: 'rgb(var(--c-accent) / <alpha-value>)',
         'accent-fg': 'rgb(var(--c-accent-fg) / <alpha-value>)',
+        // Açık zeminde amber METİN (AA 4.5:1). 11 Eki 2026'ya kadar tanımsızdı:
+        // HeroSlider'daki text-accent-ink sınıfı hiç üretilmiyordu.
+        'accent-ink': 'rgb(var(--c-accent-ink) / <alpha-value>)',
         ring: 'rgb(var(--c-ring) / <alpha-value>)',
         success: 'rgb(var(--c-success) / <alpha-value>)',
         danger: 'rgb(var(--c-danger) / <alpha-value>)'

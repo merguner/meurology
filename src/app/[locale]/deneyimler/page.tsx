@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { BreadcrumbJsonLd } from '@/components/BreadcrumbJsonLd';
 import { buildAlternates, redirect } from '@/i18n/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import type { Locale } from '@/i18n/routing';
+import { routing, type Locale } from '@/i18n/routing';
 import { PageHero } from '@/components/PageHero';
 import { ExperiencesList } from '@/components/ExperiencesList';
 import { publishedTreatments } from '@/content/treatments';
@@ -24,7 +24,12 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('subtitle'),
-    alternates: buildAlternates(locale, '/deneyimler')
+    // Yalnızca hasta yorumu yayımlanabilen diller (Türkçe hariç — yönetmelik)
+    alternates: buildAlternates(
+      locale,
+      '/deneyimler',
+      routing.locales.filter((l) => features(l).testimonials)
+    )
   };
 }
 

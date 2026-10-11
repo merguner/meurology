@@ -23,13 +23,22 @@ type Href = Parameters<typeof getPathname>[0]['href'];
  *
  * href: static route anahtarı (ör. '/cerrah') veya {pathname:'/tedaviler/[slug]', params}.
  */
-export function buildAlternates(locale: Locale, href: Href) {
+/**
+ * canonical + hreflang. `only` verilirse yalnızca o dillerin karşılığı listelenir.
+ *
+ * 11 Eki 2026 denetimi: İngilizce ve Arapça deneyimler sayfası Google'a
+ * "Türkçesi /tr/deneyimler" diyordu; o sayfa yasal nedenle (Türkçede hasta
+ * yorumu yok) hiç üretilmiyor. Sayfası olmayan bir dile hreflang vermek
+ * Search Console'da hata sayılır.
+ */
+export function buildAlternates(locale: Locale, href: Href, only?: readonly Locale[]) {
+  const diller = only ?? locales;
   return {
     canonical: getPathname({ locale, href }),
     languages: {
       ...(Object.fromEntries(
-        locales.map((l) => [l, getPathname({ locale: l, href })])
-      ) as Record<Locale, string>),
+        diller.map((l) => [l, getPathname({ locale: l, href })])
+      ) as Partial<Record<Locale, string>>),
       'x-default': getPathname({ locale: 'en', href })
     }
   };
