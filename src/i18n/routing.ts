@@ -129,5 +129,12 @@ export const routing = defineRouting({
   defaultLocale,
   // Her dil kendi ön ekiyle: /tr, /en, /ar ... (varsayılan dahil).
   localePrefix: 'always',
-  pathnames
+  pathnames,
+  // Middleware'in HTTP `Link` başlığına hreflang basmasını KAPATIR.
+  // next-intl bu başlığı yalnızca rota şablonundan üretir; tedavi ve blog
+  // slug'larının dile göre değiştiğini bilmez. 12 Eki 2026 taramasında
+  // 223 sayfanın 181'inde başlık sayfa içindeki hreflang ile çelişiyordu
+  // (277 bağlantı: 116'sı 404'e, 161'i yönlendirmeye). Doğru hreflang
+  // HTML'de generateMetadata → buildAlternates ile zaten basılıyor.
+  alternateLinks: false
 });
