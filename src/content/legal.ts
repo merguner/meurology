@@ -451,9 +451,17 @@ export const consentDoc: LegalDoc = {
  * Metin SİTENİN GERÇEK DAVRANIŞINI anlatır: analitik yalnızca onaydan sonra
  * çalışır, Google Haritalar tıklanana kadar yüklenmez. Davranış değişirse
  * bu metin de güncellenmelidir.
+ *
+ * 12 Eki 2026: Meta Pixel 7 Ekim'den beri canlıydı ama metin "pazarlama
+ * çerezi kullanılmıyor" diyordu. Pazarlama grubu yazıldı, bant iki ayrı
+ * onaya ayrıldı (CookieConsent.tsx). legalReview 'pending' — bu sürüm
+ * avukat onayından GEÇMEDİ. Avukata sorulacak: Pixel sayfa adresini
+ * (hangi tedavi sayfasının okunduğunu) Meta'ya iletir; bu, sağlık verisi
+ * çıkarımı sayılır mı ve Pixel tedavi sayfalarında hiç çalışmamalı mı?
  */
 export const cookiesDoc: LegalDoc = {
-  lastUpdated: '2026-10-04',
+  lastUpdated: '2026-10-12',
+  legalReview: 'pending',
   i18n: {
     tr: {
       intro:
@@ -469,8 +477,9 @@ export const cookiesDoc: LegalDoc = {
           heading: 'Bu sitede kullanılan çerezler',
           paragraphs: [
             'Zorunlu çerezler: Sitenin çalışması için gereklidir ve onay gerektirmez. Dil tercihinizi hatırlayan çerez bu gruptadır. Koyu/açık tema tercihiniz ise tarayıcınızın yerel depolamasında tutulur ve sunucuya gönderilmez.',
-            'Analitik çerezler: Hangi sayfaların ne kadar görüntülendiğini anlamak için kullanılır. Bu çerezler yalnızca siz onay verdikten sonra çalışır. Onay vermez ya da reddederseniz hiçbir analitik çağrısı yapılmaz.',
-            'Pazarlama çerezleri: Şu anda kullanılmamaktadır. İleride kullanılması hâlinde bu metin güncellenir ve ayrıca onayınız istenir.'
+            'İstatistik çerezleri (Google Analytics): Hangi sayfaların ne kadar görüntülendiğini anlamak için Google Ireland Limited’in Google Analytics aracını kullanırız. Bu çerezler yalnızca siz onay verdikten sonra çalışır. Onay vermez ya da reddederseniz hiçbir istatistik çağrısı yapılmaz.',
+            'Pazarlama çerezleri (Meta Pixel): Facebook ve Instagram’dan siteye gelen ziyaretleri ve bu ziyaretlerin iletişime ya da başvuruya dönüşüp dönüşmediğini ölçmek için Meta Platforms Ireland Limited’in Meta Pixel aracını kullanırız. Pixel yalnızca bu grup için ayrıca onay verdiğinizde çalışır; istatistik çerezlerine verdiğiniz onay Pixel’i çalıştırmaz.',
+            'Pazarlama çerezlerine onay verirseniz Meta’ya ziyaret ettiğiniz sayfanın adresi (örneğin hangi tedavi sayfasını okuduğunuz), tarayıcı ve cihaz bilgileri, IP adresiniz ve WhatsApp, telefon veya e-posta bağlantısına tıklama ya da form gönderme gibi olaylar iletilir. Formda yazdıklarınız ve yüklediğiniz belgeler gönderilmez. Meta bu bilgileri ölçüm hizmeti sunmak ve kendi platformlarında gösterilecek reklamları belirlemek için kullanabilir; veriler ABD dâhil yurt dışında işlenebilir.'
           ]
         },
         {
@@ -483,14 +492,14 @@ export const cookiesDoc: LegalDoc = {
         {
           heading: 'Seçiminizi nasıl yönetirsiniz?',
           paragraphs: [
-            'Siteye ilk girişinizde seçim yapmanız istenir. Seçiminizi daha sonra sayfanın altındaki çerez tercihleri bağlantısından değiştirebilirsiniz.',
+            'Siteye ilk girişinizde istatistik ve pazarlama çerezleri için ayrı ayrı seçim yapabilirsiniz. Seçiminizi daha sonra sayfanın altındaki çerez tercihleri bağlantısından değiştirebilirsiniz; onayınızı geri çektiğinizde ilgili çerezler tarayıcınızdan silinir.',
             'Çerezleri tarayıcı ayarlarınızdan da silebilir veya engelleyebilirsiniz. Zorunlu çerezleri engellerseniz sitenin bazı bölümleri düzgün çalışmayabilir.'
           ]
         },
         {
           heading: 'Saklama süreleri',
           paragraphs: [
-            'Dil tercihi çerezi en çok bir yıl saklanır. Çerez tercihiniz, yeniden sorulmaması için tarayıcınızda tutulur. Analitik çerezler, yalnızca onay verdiyseniz ve sağlayıcının belirlediği süre boyunca (genellikle en çok 24 ay) saklanır.'
+            'Dil tercihi çerezi en çok bir yıl saklanır. Çerez tercihiniz tarayıcınızda tutulur ve 180 gün sonra yeniden sorulur. İstatistik çerezleri, yalnızca onay verdiyseniz ve sağlayıcının belirlediği süre boyunca (genellikle en çok 24 ay) saklanır. Meta Pixel çerezleri (_fbp, _fbc) yalnızca pazarlama onayı verdiyseniz ve en çok 90 gün saklanır.'
           ]
         },
         {
@@ -515,8 +524,9 @@ export const cookiesDoc: LegalDoc = {
           heading: 'Cookies used on this site',
           paragraphs: [
             'Strictly necessary cookies: required for the site to work and set without consent. The cookie that remembers your language choice belongs to this group. Your light/dark theme preference is held in your browser’s local storage and is not sent to the server.',
-            'Analytics cookies: used to understand which pages are viewed and how often. These run only after you have given consent. If you decline or make no choice, no analytics request is sent at all.',
-            'Marketing cookies: none are currently in use. If they are introduced, this notice will be updated and your consent will be sought separately.'
+            'Statistics cookies (Google Analytics): we use Google Analytics, provided by Google Ireland Limited, to understand which pages are viewed and how often. These run only after you have given consent. If you decline or make no choice, no statistics request is sent at all.',
+            'Marketing cookies (Meta Pixel): we use Meta Pixel, provided by Meta Platforms Ireland Limited, to measure visits that reach the site from Facebook and Instagram and whether they lead to a contact or an enquiry. The Pixel runs only if you give separate consent for this group; consenting to statistics cookies does not switch it on.',
+            'If you consent to marketing cookies, Meta receives the address of the page you visit (for example, which treatment page you are reading), browser and device information, your IP address, and events such as clicking a WhatsApp, phone or email link or submitting the form. What you write in the form and the documents you upload are not sent. Meta may use this information to provide measurement services and to decide which ads to show on its own platforms; the data may be processed outside Türkiye, including in the United States.'
           ]
         },
         {
@@ -529,14 +539,14 @@ export const cookiesDoc: LegalDoc = {
         {
           heading: 'Managing your choice',
           paragraphs: [
-            'You are asked to choose on your first visit. You can change that choice at any time from the cookie preferences link at the bottom of the page.',
+            'On your first visit you can choose separately for statistics and marketing cookies. You can change that choice at any time from the cookie preferences link at the bottom of the page; when you withdraw consent, the related cookies are deleted from your browser.',
             'You can also delete or block cookies in your browser settings. If you block strictly necessary cookies, parts of the site may not work properly.'
           ]
         },
         {
           heading: 'Retention periods',
           paragraphs: [
-            'The language preference cookie is kept for at most one year. Your cookie choice is stored in your browser so that you are not asked again. Analytics cookies are kept only if you have consented, for the period set by the provider (usually no more than 24 months).'
+            'The language preference cookie is kept for at most one year. Your cookie choice is stored in your browser and you are asked again after 180 days. Statistics cookies are kept only if you have consented, for the period set by the provider (usually no more than 24 months). Meta Pixel cookies (_fbp, _fbc) are kept only if you have given marketing consent, for no more than 90 days.'
           ]
         },
         {
@@ -561,8 +571,9 @@ export const cookiesDoc: LegalDoc = {
           heading: 'الملفات المستخدمة في هذا الموقع',
           paragraphs: [
             'الملفات الضرورية: لازمة لعمل الموقع وتُوضَع من دون موافقة. ومنها الملف الذي يتذكر لغتك المختارة. أما تفضيلك للمظهر الفاتح أو الداكن فيُحفَظ في التخزين المحلي للمتصفح ولا يُرسَل إلى الخادم.',
-            'ملفات التحليلات: تُستخدم لمعرفة الصفحات التي تُشاهَد وعدد مشاهداتها. ولا تعمل إلا بعد موافقتك. فإن رفضت أو لم تختر شيئًا فلن يُرسَل أي طلب تحليلي على الإطلاق.',
-            'ملفات التسويق: غير مستخدمة حاليًا. وإن استُخدمت مستقبلًا فسيُحدَّث هذا النص وتُطلَب موافقتك على نحو منفصل.'
+            'ملفات الإحصاءات (Google Analytics): نستخدم أداة Google Analytics التي تقدّمها شركة Google Ireland Limited لمعرفة الصفحات التي تُشاهَد وعدد مشاهداتها. ولا تعمل إلا بعد موافقتك. فإن رفضت أو لم تختر شيئًا فلن يُرسَل أي طلب إحصائي على الإطلاق.',
+            'ملفات التسويق (Meta Pixel): نستخدم أداة Meta Pixel التي تقدّمها شركة Meta Platforms Ireland Limited لقياس الزيارات التي تصل إلى الموقع من فيسبوك وإنستغرام، ومعرفة ما إذا كانت تنتهي بتواصل أو بطلب. ولا تعمل هذه الأداة إلا إذا أعطيت موافقة مستقلة لهذه الفئة؛ فموافقتك على ملفات الإحصاءات لا تشغّلها.',
+            'إذا وافقت على ملفات التسويق، تتلقى Meta عنوان الصفحة التي تزورها (مثل صفحة العلاج التي تقرؤها)، ومعلومات المتصفح والجهاز، وعنوان IP الخاص بك، وأحداثًا مثل النقر على رابط واتساب أو الهاتف أو البريد الإلكتروني أو إرسال النموذج. أما ما تكتبه في النموذج والمستندات التي ترفعها فلا تُرسَل. وقد تستخدم Meta هذه المعلومات لتقديم خدمات القياس ولتحديد الإعلانات التي تُعرَض على منصاتها؛ وقد تُعالَج البيانات خارج تركيا، بما في ذلك في الولايات المتحدة.'
           ]
         },
         {
@@ -575,14 +586,14 @@ export const cookiesDoc: LegalDoc = {
         {
           heading: 'كيف تدير اختيارك',
           paragraphs: [
-            'يُطلَب منك الاختيار عند أول زيارة. ويمكنك تغييره في أي وقت من رابط تفضيلات ملفات تعريف الارتباط أسفل الصفحة.',
+            'عند أول زيارة يمكنك الاختيار بشكل منفصل لملفات الإحصاءات وملفات التسويق. ويمكنك تغيير اختيارك في أي وقت من رابط تفضيلات ملفات تعريف الارتباط أسفل الصفحة؛ وعند سحب موافقتك تُحذَف الملفات المعنية من متصفحك.',
             'كما يمكنك حذف الملفات أو حظرها من إعدادات متصفحك. وإذا حظرت الملفات الضرورية فقد لا تعمل بعض أجزاء الموقع على نحو سليم.'
           ]
         },
         {
           heading: 'مدد الحفظ',
           paragraphs: [
-            'يُحفَظ ملف تفضيل اللغة سنة واحدة على الأكثر. ويُحفَظ اختيارك بشأن ملفات تعريف الارتباط في متصفحك حتى لا يتكرر السؤال. أما ملفات التحليلات فتُحفَظ فقط عند وجود موافقة وللمدة التي يحددها المزوّد (24 شهرًا على الأكثر عادةً).'
+            'يُحفَظ ملف تفضيل اللغة سنة واحدة على الأكثر. ويُحفَظ اختيارك بشأن ملفات تعريف الارتباط في متصفحك، ويُطرَح السؤال من جديد بعد 180 يومًا. أما ملفات الإحصاءات فتُحفَظ فقط عند وجود موافقة وللمدة التي يحددها المزوّد (24 شهرًا على الأكثر عادةً). وتُحفَظ ملفات Meta Pixel (_fbp و_fbc) فقط عند وجود موافقة على التسويق، ولمدة 90 يومًا على الأكثر.'
           ]
         },
         {

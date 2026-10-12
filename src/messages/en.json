@@ -348,10 +348,19 @@
   },
   "Consent": {
     "title": "Your cookie choice",
-    "body": "Besides the cookies needed for the site to work, we would like to use analytics cookies only to measure visit statistics. If you decline, no analytics request is sent at all.",
+    "intro": "Apart from the cookies the site needs to work, cookies run only with your consent.",
+    "analyticsLine": "Statistics cookies (Google Analytics) measure which pages are read and how often.",
+    "marketingLine": "Marketing cookies (Meta Pixel) measure visits coming from Facebook and Instagram; this information is shared with Meta.",
+    "formNotSent": "What you write in the form and the documents you upload are never sent to these tools.",
     "policyLink": "Cookie Policy",
-    "accept": "Accept",
-    "reject": "Decline"
+    "optionsLegend": "Cookie groups",
+    "necessary": "Strictly necessary (always on)",
+    "analytics": "Statistics (Google Analytics)",
+    "marketing": "Marketing (Meta Pixel)",
+    "reject": "Decline",
+    "customize": "Options",
+    "save": "Save choice",
+    "accept": "Accept all"
   },
   "Country": {
     "quickFacts": "Quick facts",

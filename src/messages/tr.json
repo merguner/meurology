@@ -348,10 +348,19 @@
   },
   "Consent": {
     "title": "Çerez tercihiniz",
-    "body": "Sitenin çalışması için gereken çerezler dışında, yalnızca ziyaret istatistiklerini ölçmek için analitik çerez kullanmak istiyoruz. Reddederseniz hiçbir analitik çağrısı yapılmaz.",
+    "intro": "Sitenin çalışması için gereken çerezler dışındakiler yalnızca onayınızla çalışır.",
+    "analyticsLine": "İstatistik çerezleriyle (Google Analytics) hangi sayfaların ne kadar okunduğunu ölçeriz.",
+    "marketingLine": "Pazarlama çerezleriyle (Meta Pixel) Facebook ve Instagram'dan gelen ziyaretleri ölçeriz; bu bilgiler Meta ile paylaşılır.",
+    "formNotSent": "Formda yazdıklarınız ve yüklediğiniz belgeler bu araçlara gönderilmez.",
     "policyLink": "Çerez Politikası",
-    "accept": "Kabul et",
-    "reject": "Reddet"
+    "optionsLegend": "Çerez grupları",
+    "necessary": "Zorunlu (her zaman açık)",
+    "analytics": "İstatistik (Google Analytics)",
+    "marketing": "Pazarlama (Meta Pixel)",
+    "reject": "Reddet",
+    "customize": "Seçenekler",
+    "save": "Seçimi kaydet",
+    "accept": "Tümünü kabul et"
   },
   "Country": {
     "quickFacts": "Hızlı bilgiler",
