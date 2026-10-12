@@ -454,14 +454,16 @@ export const consentDoc: LegalDoc = {
  *
  * 12 Eki 2026: Meta Pixel 7 Ekim'den beri canlıydı ama metin "pazarlama
  * çerezi kullanılmıyor" diyordu. Pazarlama grubu yazıldı, bant iki ayrı
- * onaya ayrıldı (CookieConsent.tsx). legalReview 'pending' — bu sürüm
- * avukat onayından GEÇMEDİ. Avukata sorulacak: Pixel sayfa adresini
- * (hangi tedavi sayfasının okunduğunu) Meta'ya iletir; bu, sağlık verisi
- * çıkarımı sayılır mı ve Pixel tedavi sayfalarında hiç çalışmamalı mı?
+ * onaya ayrıldı (CookieConsent.tsx). legalReview 'reviewed' — hukuki
+ * uygunluk onayı 12 Ekim 2026 (Dr. Ergün iletti). Onaylanan metin,
+ * pazarlama onayında Pixel'in okunan sayfanın adresini (hangi tedavi
+ * sayfası olduğunu) Meta'ya ilettiğini açıkça yazar; Pixel bu nedenle
+ * tedavi sayfalarında da çalışmaya devam eder. Bu davranış değişirse
+ * (ör. Pixel bazı sayfalarda kapatılırsa) metin de güncellenmelidir.
  */
 export const cookiesDoc: LegalDoc = {
   lastUpdated: '2026-10-12',
-  legalReview: 'pending',
+  legalReview: 'reviewed',
   i18n: {
     tr: {
       intro:
