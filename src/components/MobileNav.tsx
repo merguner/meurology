@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useLocale, useTranslations } from 'next-intl';
 import type { Locale } from '@/i18n/routing';
 import { Link, usePathname, treatmentHref } from '@/i18n/navigation';
@@ -49,7 +50,17 @@ export function MobileNav() {
         </svg>
       </button>
 
-      {open && (
+      {/*
+        PORTAL ŞART: SiteHeader'da `backdrop-blur` (backdrop-filter) var.
+        backdrop-filter, transform ve filter, içindeki `position: fixed`
+        öğeler için yeni bir kapsayıcı blok oluşturur; çekmece doğrudan
+        başlığın içinde render edilince `fixed inset-0` ekranı değil
+        BAŞLIĞI kaplıyordu — menü ~115 px yükseklikte açılıp ilk
+        öğeden sonrası kesiliyordu (13 Eki 2026, iPhone'da görüldü).
+        Çekmece bu yüzden <body>'ye taşınır. `open` yalnızca tıklamayla
+        true olur, yani document her zaman mevcuttur.
+      */}
+      {open && createPortal(
         <div className="fixed inset-0 z-50">
           <div
             className="absolute inset-0 bg-black/50"
@@ -104,7 +115,8 @@ export function MobileNav() {
               <SocialLinks />
             </div>
           </nav>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
